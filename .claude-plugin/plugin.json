@@ -1,0 +1,21 @@
+{
+  "name": "insightfulpipe-paid-media",
+  "displayName": "InsightfulPipe Paid Media Skills",
+  "description": "29 free Claude skills for paid media beyond Google and Meta: TikTok, Pinterest, Snapchat, X, Microsoft and ChatGPT Ads, media plans, benchmarks, and CTV, programmatic, native and audio ads.",
+  "version": "2026.10.3107",
+  "author": {
+    "name": "InsightfulPipe",
+    "url": "https://insightfulpipe.com"
+  },
+  "homepage": "https://insightfulpipe.com/marketing-claude-skills",
+  "repository": "https://github.com/Insightful-Pipe/paid-media-skills",
+  "license": "MIT",
+  "keywords": [
+    "tiktok-ads",
+    "microsoft-ads",
+    "pinterest-ads",
+    "paid-media",
+    "claude-skills",
+    "marketing"
+  ]
+}

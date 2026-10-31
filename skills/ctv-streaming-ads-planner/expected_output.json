@@ -1,0 +1,342 @@
+{
+  "header": {
+    "business": "Marlobrook Pet Kitchen",
+    "currency": "USD",
+    "target_cost_per_new_customer": 110.0,
+    "budget": 48000.0,
+    "flight": "2026-09-14 to 2026-10-11 (4 weeks), read window to 2026-10-25 (6 weeks)",
+    "test_regions": [
+      "Tennessee",
+      "Kentucky"
+    ],
+    "control_regions": [
+      "Kansas",
+      "Oklahoma"
+    ],
+    "target_households": 400000,
+    "sources": [
+      "pasted quotes and the streaming app's delivery export",
+      "Google Ads (gaql)",
+      "GA4 (get_report)",
+      "Search Console (search_analytics)"
+    ]
+  },
+  "youtube_on_tv_screens_today": {
+    "tv_screen_share_of_impressions_pct": 20.3,
+    "tv_screen_share_of_cost_pct": 31.5,
+    "tv_screen_cpm": 22.4,
+    "other_devices_cpm": 12.42,
+    "tv_screen_completion_rate": 0.91,
+    "other_devices_completion_rate_weighted": 0.39,
+    "finding": "TV screens already take 20.3% of the always-on campaign's impressions at a $22.40 CPM, and 91% of those plays finish against 39% on other devices. R1 is priced from this CPM instead of a guess."
+  },
+  "routes": [
+    {
+      "route": "R1",
+      "label": "YouTube on TV screens (Google Ads Video reach campaign, TV screens only)",
+      "media_cpm": 22.4,
+      "effective_cpm": 22.4,
+      "qualified": true,
+      "reason": "targets TN and KY only, has a frequency cap, reports reach, frequency and region"
+    },
+    {
+      "route": "R2",
+      "label": "Streaming app A, self-serve ads tool",
+      "media_cpm": 32.0,
+      "effective_cpm": 36.0,
+      "qualified": true,
+      "reason": "targets TN and KY only, has a frequency cap, reports reach, frequency and region"
+    },
+    {
+      "route": "R3",
+      "label": "DSP B, programmatic CTV",
+      "media_cpm": 24.0,
+      "effective_cpm": 32.45,
+      "qualified": false,
+      "reason": "minimum spend $25,000 is above the $24,000 line cap"
+    },
+    {
+      "route": "R4",
+      "label": "FAST channel network C",
+      "media_cpm": 14.0,
+      "effective_cpm": 14.0,
+      "qualified": false,
+      "reason": "can't limit delivery to the test states; no reach, frequency or region report"
+    }
+  ],
+  "budget_plan": {
+    "lines": [
+      {
+        "route": "R1",
+        "effective_cpm": 22.4,
+        "budget": 23296.0,
+        "limited_by": "reach ceiling",
+        "cost_of_useful_impressions": 23296.0,
+        "planned_impressions": 1040000,
+        "planned_household_reach": 130000,
+        "reach_share_of_route_audience_pct": 50.0,
+        "reach_share_of_target_households_pct": 32.5,
+        "frequency": 8,
+        "weekly_cap": 4,
+        "status": "funded"
+      },
+      {
+        "route": "R2",
+        "effective_cpm": 36.0,
+        "budget": 24000.0,
+        "limited_by": "line cap",
+        "cost_of_useful_impressions": 25920.0,
+        "planned_impressions": 666667,
+        "planned_household_reach": 83333,
+        "reach_share_of_route_audience_pct": 46.3,
+        "reach_share_of_target_households_pct": 20.8,
+        "frequency": 8,
+        "weekly_cap": 4,
+        "status": "funded"
+      }
+    ],
+    "planned_spend": 47296.0,
+    "not_placed": 704.0,
+    "not_placed_note": "$704.00 is left because R1 stops at its reach ceiling, R2 at the line cap, R3 fails its minimum spend and R4 can't be measured. Keep it as reserve, or raise the line cap after R2's first week delivers."
+  },
+  "combined_household_plan": {
+    "combined_household_reach": 186250,
+    "combined_reach_share_pct": 46.6,
+    "households_reached_by_two_routes": 27083,
+    "share_of_reached_households_hit_by_two_routes_pct": 14.5,
+    "combined_average_frequency": 9.16,
+    "planned_frequency_per_route": 8,
+    "most_a_household_can_see": 16,
+    "flagged": true,
+    "flag": "Each route caps only its own delivery. About 14.5% of reached homes are reached by both routes and can see up to 16 ads over the flight, so the combined average is 9.16 against the planned 8."
+  },
+  "creative": {
+    "cuts": [
+      {
+        "length": "30s",
+        "where": "R2, and R1 as the 30-second non-skippable format on TV screens"
+      },
+      {
+        "length": "15s",
+        "where": "R1 non-skippable and R2"
+      }
+    ],
+    "frame": "16:9, 1920 x 1080, sound on; check each seller's spec sheet for file type and loudness",
+    "opening": "brand name said and shown in the first 3 seconds, the dog bowl shot before the first cut",
+    "qr": {
+      "per_route": {
+        "R1": "https://www.marlobrookpet.example/tv?utm_source=youtube_tv&utm_medium=ctv&utm_campaign=tn_ky_sep26",
+        "R2": "https://www.marlobrookpet.example/tv?utm_source=streaming_app_a&utm_medium=ctv&utm_campaign=tn_ky_sep26"
+      },
+      "on_screen": "last 8 seconds of the 30s and last 5 seconds of the 15s",
+      "size": "at least 180 px tall on the 1080-line frame, inside the centre 90%, dark on light with a clear border",
+      "test": "scan from 3 m (10 feet) off a living-room TV before upload"
+    },
+    "short_url": {
+      "shown": "marlobrookpet.example/tv",
+      "said": "once in the 30s, shown in both cuts",
+      "page": "a real page, not a redirect, so GA4 reports it as the landing page"
+    },
+    "script_handoff": "video-ad-script-writer, if installed"
+  },
+  "measurement_plan": {
+    "unit": "state (GA4 region); Google Ads by segments.geo_target_region",
+    "control_screen": [
+      {
+        "region": "Indiana",
+        "kept": false,
+        "reason": "shares the Louisville (KY and IN) DMA with a test state"
+      },
+      {
+        "region": "Ohio",
+        "kept": false,
+        "reason": "shares the Cincinnati (OH and KY) DMA with a test state"
+      },
+      {
+        "region": "Virginia",
+        "kept": false,
+        "reason": "shares the Tri-Cities (TN and VA) DMA with a test state"
+      },
+      {
+        "region": "Missouri",
+        "kept": false,
+        "reason": "shares the Paducah-Cape Girardeau-Harrisburg (KY, MO, IL and TN) DMA with a test state"
+      },
+      {
+        "region": "Iowa",
+        "kept": false,
+        "reason": "65.6 new customers a week, under half of the smallest test state's 153.9"
+      },
+      {
+        "region": "Kansas",
+        "kept": true,
+        "cv_of_weekly_ratio_pct": 3.41,
+        "reason": "lowest CV"
+      },
+      {
+        "region": "Oklahoma",
+        "kept": true,
+        "cv_of_weekly_ratio_pct": 3.48,
+        "reason": "lowest CV"
+      },
+      {
+        "region": "Michigan",
+        "kept": false,
+        "cv_of_weekly_ratio_pct": 3.96,
+        "reason": "higher CV than the chosen controls"
+      },
+      {
+        "region": "Wisconsin",
+        "kept": false,
+        "cv_of_weekly_ratio_pct": 5.28,
+        "reason": "higher CV than the chosen controls"
+      },
+      {
+        "region": "Louisiana",
+        "kept": false,
+        "cv_of_weekly_ratio_pct": 14.39,
+        "reason": "higher CV than the chosen controls"
+      }
+    ],
+    "baseline_weeks": "2026-07-13 to 2026-09-06 (8 weeks)",
+    "metrics": {
+      "new_customers": {
+        "test_weekly_mean": 409.8,
+        "control_weekly_mean": 236.2,
+        "baseline_ratio": 1.7344,
+        "cv_weekly_ratio_pct": 2.62,
+        "noise_floor_pct": 2.1
+      },
+      "direct_new_users": {
+        "test_weekly_mean": 3042.2,
+        "control_weekly_mean": 1785.6,
+        "baseline_ratio": 1.7037,
+        "cv_weekly_ratio_pct": 4.43,
+        "noise_floor_pct": 3.6
+      },
+      "brand_impressions": {
+        "test_weekly_mean": 2137.2,
+        "control_weekly_mean": 1246,
+        "baseline_ratio": 1.7153,
+        "cv_weekly_ratio_pct": 2.62,
+        "noise_floor_pct": 2.1
+      }
+    },
+    "brand_impressions_valid": true,
+    "brand_impressions_note": "Brand campaign search impression share stayed at 95% or more every baseline week, so its impressions track branded searches. Keep its bids and budget unchanged through the read window.",
+    "predicted_new_customers_in_read_window": 2458.8,
+    "new_customers_needed_to_break_even": 430.0,
+    "break_even_lift_pct": 17.5,
+    "readable": true,
+    "readable_note": "Break-even lift 17.5% is above the new-customer noise floor of 2.1%, so a flight that pays back will show.",
+    "rule": {
+      "scale": "new-customer lift above 2.1% and cost per incremental new customer at or under $110",
+      "retest": "new-customer lift above its floor at up to $165 per incremental new customer, or new-customer lift at or below its floor while Direct new-user or branded-search lift is above its own",
+      "stop": "every other case"
+    },
+    "handoffs": [
+      "incrementality-test-designer, if installed, for a stricter holdout design",
+      "offline-media-lift-analyst, if installed, for the full readout with intervals and a placebo check"
+    ]
+  },
+  "readout": {
+    "delivery": [
+      {
+        "route": "R1",
+        "planned_impressions": 1040000,
+        "delivered_impressions": 1054400,
+        "delivered_pct_of_plan": 101.4,
+        "households_reached": 127500,
+        "household_frequency": 8.27,
+        "completion_rate": 0.92,
+        "spend": 23580.4,
+        "impressions_outside_test_states_pct": 0.39,
+        "flags": [
+          "none"
+        ]
+      },
+      {
+        "route": "R2",
+        "planned_impressions": 666667,
+        "delivered_impressions": 568800,
+        "delivered_pct_of_plan": 85.3,
+        "households_reached": 52400,
+        "household_frequency": 10.85,
+        "completion_rate": 0.97,
+        "spend": 20476.8,
+        "impressions_outside_test_states_pct": 0.0,
+        "flags": [
+          "under-delivered (85.3% of plan)",
+          "frequency 10.85 above 10.0"
+        ]
+      }
+    ],
+    "delivered_spend": 44057.2,
+    "qr_and_short_url": [
+      {
+        "route": "R1",
+        "utm_source": "youtube_tv",
+        "sessions_in_test_states": 393,
+        "sessions_elsewhere": 6,
+        "mobile_share_pct": 93.5,
+        "cost_per_qr_session_in_test_states": 60.0
+      },
+      {
+        "route": "R2",
+        "utm_source": "streaming_app_a",
+        "sessions_in_test_states": 498,
+        "sessions_elsewhere": 3,
+        "mobile_share_pct": 93.4,
+        "cost_per_qr_session_in_test_states": 41.12
+      }
+    ],
+    "lift": {
+      "new_customers": {
+        "actual_test": 2925,
+        "control": 1509,
+        "expected_test": 2617.2,
+        "incremental": 307.8,
+        "lift_pct": 11.8,
+        "noise_floor_pct": 2.1,
+        "above_floor": true
+      },
+      "direct_new_users": {
+        "actual_test": 23011,
+        "control": 11306,
+        "expected_test": 19262.5,
+        "incremental": 3748.5,
+        "lift_pct": 19.5,
+        "noise_floor_pct": 3.6,
+        "above_floor": true
+      },
+      "brand_impressions": {
+        "actual_test": 16875,
+        "control": 7756,
+        "expected_test": 13303.8,
+        "incremental": 3571.2,
+        "lift_pct": 26.8,
+        "noise_floor_pct": 2.1,
+        "above_floor": true
+      }
+    },
+    "cost_per_incremental_new_customer": 143.13,
+    "cross_check": "891 QR sessions in the test states against 308 incremental new customers. A scan is a visit, not a buyer, and viewers who type the name or search for it never scan, so neither count stands in for the other; the lift against control is the result.",
+    "search_console_brand_clicks_context": {
+      "baseline_weekly_mean": 1250.9,
+      "flight_weekly_mean": 1471,
+      "change_pct": 17.6,
+      "note": "national, context only; Search Console has no state"
+    },
+    "verdict": "retest",
+    "verdict_reason": "New-customer lift 11.8% is above its 2.1% floor, at $143.13 per incremental new customer against the $110 target (retest band up to $165).",
+    "next_flight_changes": [
+      "R2 reached 52,400 homes against 83,333 planned, at 10.85 ads per home: its segment is smaller than the tool estimated. Lower R2's weekly cap from 4 to 3 and plan it on the delivered reach, and move the spend it can't use to R1, which delivered 101.4% of plan at 8.27 per home.",
+      "The plan already put homes reached by both routes above 8 (combined average 9.16), and no seller can see the other's delivery. Next time plan each route on a different audience segment where the tools allow it, or lower each route's frequency until the combined average lands on 8.",
+      "Keep Kansas and Oklahoma held out and the brand campaign unchanged through the retest."
+    ]
+  },
+  "unknowns": [
+    "R3 and R4 were not funded, so their delivery was not read.",
+    "Reach from Google Ads counts people, which the plan treats as households; the combined reach is an estimate that assumes the routes overlap at random."
+  ]
+}

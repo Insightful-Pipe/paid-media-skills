@@ -1,0 +1,936 @@
+{
+  "note": "Example data: an invented online booking software company with invented accounts, not a real business. Every number in expected_output.json follows from this input.",
+  "request": "Hey Claude, I just added the \"tiktok-ads-campaign-builder\" skill. Build a TikTok campaign that sends US salon and spa owners to our deposits page to sign up, $300 a day. The pixel's sign-up event is Complete Registration. Then tell me which ads to pause and which ad groups to scale.",
+  "run_date": "2026-10-28",
+  "account": {
+    "name": "Example Booking Software (TikTok ad account)",
+    "advertiser_id": "7000000000000000001",
+    "currency": "USD",
+    "display_timezone": "America/New_York",
+    "country": "US"
+  },
+  "brief": {
+    "product": "Example Booking Software is an online booking app for small service businesses. Its new feature takes a deposit when a client books, straight from the business's booking page, and every booking already gets an automatic SMS and email reminder.",
+    "audience": "owners of hair salons, nail and beauty salons and day spas in the United States",
+    "landing_page": "https://www.example.com/features/payments/",
+    "goal": "sign-ups",
+    "pixel_event": "the sign-up thank-you page fires the pixel's Complete Registration event (ON_WEB_REGISTER); you confirmed it in Events Manager",
+    "daily_budget": 300,
+    "countries": [
+      "United States"
+    ],
+    "facts_allowed": "only the product description above and the account's own past ads",
+    "target_cost_per_result": "not given"
+  },
+  "date_ranges": {
+    "last_7_days": "2026-10-21 to 2026-10-27",
+    "prior_7_days": "2026-10-14 to 2026-10-20",
+    "last_30_days": "2026-09-28 to 2026-10-27",
+    "lifetime": "query_lifetime"
+  },
+  "data_pulled": {
+    "advertisers_metadata": {
+      "advertiser_id": "7000000000000000001",
+      "name": "Example Booking Software (TikTok ad account)",
+      "currency": "USD",
+      "timezone": "America/New_York",
+      "display_timezone": "America/New_York",
+      "country": "US",
+      "status": "STATUS_ENABLE",
+      "balance": "1840.00"
+    },
+    "campaigns_metadata": [
+      {
+        "campaign_id": "1800000000000211",
+        "campaign_name": "Sign-ups | Salons and barbers | Broad",
+        "objective_type": "CONVERSIONS",
+        "budget": 0,
+        "budget_mode": "BUDGET_MODE_INFINITE",
+        "operation_status": "ENABLE",
+        "create_time": "2026-08-25 14:00:00"
+      },
+      {
+        "campaign_id": "1800000000000212",
+        "campaign_name": "Sign-ups | Clinics and physio",
+        "objective_type": "CONVERSIONS",
+        "budget": 150,
+        "budget_mode": "BUDGET_MODE_DAY",
+        "operation_status": "ENABLE",
+        "create_time": "2026-09-10 14:00:00"
+      },
+      {
+        "campaign_id": "1800000000000213",
+        "campaign_name": "Traffic | Blog | Reduce no-shows",
+        "objective_type": "TRAFFIC",
+        "budget": 0,
+        "budget_mode": "BUDGET_MODE_INFINITE",
+        "operation_status": "ENABLE",
+        "create_time": "2026-08-25 14:00:00"
+      },
+      {
+        "campaign_id": "1800000000000214",
+        "campaign_name": "Sign-ups | Fitness studios | Spring",
+        "objective_type": "CONVERSIONS",
+        "budget": 0,
+        "budget_mode": "BUDGET_MODE_INFINITE",
+        "operation_status": "DISABLE",
+        "create_time": "2026-03-30 14:00:00"
+      },
+      {
+        "campaign_id": "1800000000000215",
+        "campaign_name": "TEST | QA build | do not run",
+        "objective_type": "TRAFFIC",
+        "budget": 0,
+        "budget_mode": "BUDGET_MODE_INFINITE",
+        "operation_status": "DISABLE",
+        "create_time": "2026-09-02 14:00:00"
+      }
+    ],
+    "adgroups_metadata": [
+      {
+        "adgroup_id": "1810000000000311",
+        "adgroup_name": "US | Salon owners 25-54 | Broad",
+        "campaign_id": "1800000000000211",
+        "budget": 250,
+        "budget_mode": "BUDGET_MODE_DAY",
+        "bid_type": "BID_TYPE_NO_BID",
+        "optimization_goal": "CONVERT",
+        "billing_event": "OCPM",
+        "promotion_type": "WEBSITE",
+        "placement_type": "PLACEMENT_TYPE_NORMAL",
+        "placements": [
+          "PLACEMENT_TIKTOK"
+        ],
+        "location_ids": [
+          "6252001"
+        ],
+        "age_groups": [
+          "AGE_25_34",
+          "AGE_35_44",
+          "AGE_45_54"
+        ],
+        "gender": "GENDER_UNLIMITED",
+        "pixel_id": "7300000000000000011",
+        "operation_status": "ENABLE"
+      },
+      {
+        "adgroup_id": "1810000000000312",
+        "adgroup_name": "US | Barbers | Interest",
+        "campaign_id": "1800000000000211",
+        "budget": 90,
+        "budget_mode": "BUDGET_MODE_DAY",
+        "bid_type": "BID_TYPE_NO_BID",
+        "optimization_goal": "CONVERT",
+        "billing_event": "OCPM",
+        "promotion_type": "WEBSITE",
+        "placement_type": "PLACEMENT_TYPE_NORMAL",
+        "placements": [
+          "PLACEMENT_TIKTOK"
+        ],
+        "location_ids": [
+          "6252001"
+        ],
+        "age_groups": [
+          "AGE_25_34",
+          "AGE_35_44",
+          "AGE_45_54"
+        ],
+        "gender": "GENDER_UNLIMITED",
+        "pixel_id": "7300000000000000011",
+        "operation_status": "ENABLE"
+      },
+      {
+        "adgroup_id": "1810000000000313",
+        "adgroup_name": "US | Clinic managers | Broad",
+        "campaign_id": "1800000000000212",
+        "budget": 0,
+        "budget_mode": "BUDGET_MODE_INFINITE",
+        "bid_type": "BID_TYPE_NO_BID",
+        "optimization_goal": "CONVERT",
+        "billing_event": "OCPM",
+        "promotion_type": "WEBSITE",
+        "placement_type": "PLACEMENT_TYPE_NORMAL",
+        "placements": [
+          "PLACEMENT_TIKTOK"
+        ],
+        "location_ids": [
+          "6252001"
+        ],
+        "age_groups": [
+          "AGE_25_34",
+          "AGE_35_44",
+          "AGE_45_54"
+        ],
+        "gender": "GENDER_UNLIMITED",
+        "pixel_id": "7300000000000000011",
+        "operation_status": "ENABLE"
+      },
+      {
+        "adgroup_id": "1810000000000314",
+        "adgroup_name": "US | Blog readers | Clicks",
+        "campaign_id": "1800000000000213",
+        "budget": 40,
+        "budget_mode": "BUDGET_MODE_DAY",
+        "bid_type": "BID_TYPE_NO_BID",
+        "optimization_goal": "CLICK",
+        "billing_event": "CPC",
+        "promotion_type": "WEBSITE",
+        "placement_type": "PLACEMENT_TYPE_NORMAL",
+        "placements": [
+          "PLACEMENT_TIKTOK"
+        ],
+        "location_ids": [
+          "6252001"
+        ],
+        "age_groups": [
+          "AGE_25_34",
+          "AGE_35_44",
+          "AGE_45_54"
+        ],
+        "gender": "GENDER_UNLIMITED",
+        "pixel_id": null,
+        "operation_status": "ENABLE"
+      },
+      {
+        "adgroup_id": "1810000000000315",
+        "adgroup_name": "US | Studio owners | Spring",
+        "campaign_id": "1800000000000214",
+        "budget": 70,
+        "budget_mode": "BUDGET_MODE_DAY",
+        "bid_type": "BID_TYPE_NO_BID",
+        "optimization_goal": "CONVERT",
+        "billing_event": "OCPM",
+        "promotion_type": "WEBSITE",
+        "placement_type": "PLACEMENT_TYPE_NORMAL",
+        "placements": [
+          "PLACEMENT_TIKTOK"
+        ],
+        "location_ids": [
+          "6252001"
+        ],
+        "age_groups": [
+          "AGE_25_34",
+          "AGE_35_44",
+          "AGE_45_54"
+        ],
+        "gender": "GENDER_UNLIMITED",
+        "pixel_id": "7300000000000000011",
+        "operation_status": "DISABLE"
+      },
+      {
+        "adgroup_id": "1810000000000316",
+        "adgroup_name": "QA | do not run",
+        "campaign_id": "1800000000000215",
+        "budget": 20,
+        "budget_mode": "BUDGET_MODE_DAY",
+        "bid_type": "BID_TYPE_NO_BID",
+        "optimization_goal": "CLICK",
+        "billing_event": "CPC",
+        "promotion_type": "WEBSITE",
+        "placement_type": "PLACEMENT_TYPE_NORMAL",
+        "placements": [
+          "PLACEMENT_TIKTOK"
+        ],
+        "location_ids": [
+          "6252001"
+        ],
+        "age_groups": [],
+        "gender": "GENDER_UNLIMITED",
+        "pixel_id": null,
+        "operation_status": "DISABLE"
+      }
+    ],
+    "ads_metadata": [
+      {
+        "ad_id": "1820000000000411",
+        "ad_name": "Testimonial | Salon owner books from bed",
+        "adgroup_id": "1810000000000311",
+        "campaign_id": "1800000000000211",
+        "ad_format": "SINGLE_VIDEO",
+        "ad_text": "My clients book themselves now, even at midnight.",
+        "ad_texts": null,
+        "call_to_action": "SIGN_UP",
+        "identity_type": "TT_USER",
+        "identity_id": "5b0e7c2a-1111-4c6e-9d3f-0000000000a1",
+        "video_id": "v20000000000000000000000000000001",
+        "image_ids": [
+          "example-cover-0001"
+        ],
+        "tiktok_item_id": "7430000000000000001",
+        "landing_page_url": "https://www.example.com/industries/salons/?utm_source=tiktok&utm_medium=paid&utm_id=__CAMPAIGN_ID__&utm_campaign=__CAMPAIGN_NAME__",
+        "operation_status": "ENABLE",
+        "create_time": "2026-08-25 15:00:00"
+      },
+      {
+        "ad_id": "1820000000000412",
+        "ad_name": "Demo | Booking page in 20 seconds",
+        "adgroup_id": "1810000000000311",
+        "campaign_id": "1800000000000211",
+        "ad_format": "SINGLE_VIDEO",
+        "ad_text": "Your own booking page, set up before your next client walks in.",
+        "ad_texts": null,
+        "call_to_action": "SIGN_UP",
+        "identity_type": "TT_USER",
+        "identity_id": "5b0e7c2a-1111-4c6e-9d3f-0000000000a1",
+        "video_id": "v20000000000000000000000000000002",
+        "image_ids": [
+          "example-cover-0002"
+        ],
+        "tiktok_item_id": "7430000000000000002",
+        "landing_page_url": "https://www.example.com/industries/salons/?utm_source=tiktok&utm_medium=paid&utm_id=__CAMPAIGN_ID__&utm_campaign=__CAMPAIGN_NAME__",
+        "operation_status": "ENABLE",
+        "create_time": "2026-08-25 15:00:00"
+      },
+      {
+        "ad_id": "1820000000000413",
+        "ad_name": "Question | Who books your Saturday?",
+        "adgroup_id": "1810000000000311",
+        "campaign_id": "1800000000000211",
+        "ad_format": "SINGLE_VIDEO",
+        "ad_text": null,
+        "ad_texts": [
+          "Who answers your booking texts on a Saturday?",
+          "Still answering booking texts on a Saturday?"
+        ],
+        "call_to_action": "SIGN_UP",
+        "identity_type": "TT_USER",
+        "identity_id": "5b0e7c2a-1111-4c6e-9d3f-0000000000a1",
+        "video_id": "v20000000000000000000000000000003",
+        "image_ids": [
+          "example-cover-0003"
+        ],
+        "tiktok_item_id": "7430000000000000003",
+        "landing_page_url": "https://www.example.com/industries/salons/?utm_source=tiktok&utm_medium=paid&utm_id=__CAMPAIGN_ID__&utm_campaign=__CAMPAIGN_NAME__",
+        "operation_status": "ENABLE",
+        "create_time": "2026-09-15 15:00:00"
+      },
+      {
+        "ad_id": "1820000000000414",
+        "ad_name": "Barber | Chair always full",
+        "adgroup_id": "1810000000000312",
+        "campaign_id": "1800000000000211",
+        "ad_format": "SINGLE_VIDEO",
+        "ad_text": "Barbers: let clients grab the next open chair online.",
+        "ad_texts": null,
+        "call_to_action": "SIGN_UP",
+        "identity_type": "TT_USER",
+        "identity_id": "5b0e7c2a-1111-4c6e-9d3f-0000000000a1",
+        "video_id": "v20000000000000000000000000000004",
+        "image_ids": [
+          "example-cover-0004"
+        ],
+        "tiktok_item_id": "7430000000000000004",
+        "landing_page_url": "https://www.example.com/industries/salons/?utm_source=tiktok&utm_medium=paid&utm_id=__CAMPAIGN_ID__&utm_campaign=__CAMPAIGN_NAME__",
+        "operation_status": "ENABLE",
+        "create_time": "2026-08-25 15:00:00"
+      },
+      {
+        "ad_id": "1820000000000415",
+        "ad_name": "Barber | Walk-ins vs bookings",
+        "adgroup_id": "1810000000000312",
+        "campaign_id": "1800000000000211",
+        "ad_format": "SINGLE_VIDEO",
+        "ad_text": "Walk-ins are great. Booked chairs pay the rent.",
+        "ad_texts": null,
+        "call_to_action": "SIGN_UP",
+        "identity_type": "TT_USER",
+        "identity_id": "5b0e7c2a-1111-4c6e-9d3f-0000000000a1",
+        "video_id": "v20000000000000000000000000000004",
+        "image_ids": [
+          "example-cover-0004"
+        ],
+        "tiktok_item_id": "7430000000000000005",
+        "landing_page_url": "https://www.example.com/industries/salons/?utm_source=tiktok&utm_medium=paid&utm_id=__CAMPAIGN_ID__&utm_campaign=__CAMPAIGN_NAME__",
+        "operation_status": "DISABLE",
+        "create_time": "2026-08-25 15:00:00"
+      },
+      {
+        "ad_id": "1820000000000416",
+        "ad_name": "Clinic | Reminders do the chasing",
+        "adgroup_id": "1810000000000313",
+        "campaign_id": "1800000000000212",
+        "ad_format": "SINGLE_VIDEO",
+        "ad_text": "Patients get a reminder before every visit. Your front desk gets a break.",
+        "ad_texts": null,
+        "call_to_action": "SIGN_UP",
+        "identity_type": "TT_USER",
+        "identity_id": "5b0e7c2a-1111-4c6e-9d3f-0000000000a1",
+        "video_id": "v20000000000000000000000000000005",
+        "image_ids": [
+          "example-cover-0005"
+        ],
+        "tiktok_item_id": "7430000000000000006",
+        "landing_page_url": "https://www.example.com/industries/clinics/?utm_source=tiktok&utm_medium=paid&utm_id=__CAMPAIGN_ID__&utm_campaign=__CAMPAIGN_NAME__",
+        "operation_status": "ENABLE",
+        "create_time": "2026-09-10 15:00:00"
+      },
+      {
+        "ad_id": "1820000000000417",
+        "ad_name": "Clinic | Online intake forms",
+        "adgroup_id": "1810000000000313",
+        "campaign_id": "1800000000000212",
+        "ad_format": "SINGLE_VIDEO",
+        "ad_text": "New patients book and fill in their details before they arrive.",
+        "ad_texts": null,
+        "call_to_action": "SIGN_UP",
+        "identity_type": "TT_USER",
+        "identity_id": "5b0e7c2a-1111-4c6e-9d3f-0000000000a1",
+        "video_id": "v20000000000000000000000000000006",
+        "image_ids": [
+          "example-cover-0006"
+        ],
+        "tiktok_item_id": "7430000000000000007",
+        "landing_page_url": "https://www.example.com/industries/clinics/?utm_source=tiktok&utm_medium=paid&utm_id=__CAMPAIGN_ID__&utm_campaign=__CAMPAIGN_NAME__",
+        "operation_status": "ENABLE",
+        "create_time": "2026-10-21 15:00:00"
+      },
+      {
+        "ad_id": "1820000000000418",
+        "ad_name": "Blog | 9 tactics for no-shows",
+        "adgroup_id": "1810000000000314",
+        "campaign_id": "1800000000000213",
+        "ad_format": "SINGLE_VIDEO",
+        "ad_text": "No-shows eating your week? Nine tactics salons and clinics use.",
+        "ad_texts": null,
+        "call_to_action": "LEARN_MORE",
+        "identity_type": "TT_USER",
+        "identity_id": "5b0e7c2a-1111-4c6e-9d3f-0000000000a1",
+        "video_id": "v20000000000000000000000000000007",
+        "image_ids": [
+          "example-cover-0007"
+        ],
+        "tiktok_item_id": "7430000000000000008",
+        "landing_page_url": "https://www.example.com/blog/reduce-no-shows/?utm_source=tiktok&utm_medium=paid&utm_id=__CAMPAIGN_ID__&utm_campaign=__CAMPAIGN_NAME__",
+        "operation_status": "ENABLE",
+        "create_time": "2026-08-25 15:00:00"
+      },
+      {
+        "ad_id": "1820000000000419",
+        "ad_name": "Studio | Class waitlists",
+        "adgroup_id": "1810000000000315",
+        "campaign_id": "1800000000000214",
+        "ad_format": "SINGLE_VIDEO",
+        "ad_text": "Class full? Your waitlist fills the spot when someone cancels.",
+        "ad_texts": null,
+        "call_to_action": "SIGN_UP",
+        "identity_type": "TT_USER",
+        "identity_id": "5b0e7c2a-1111-4c6e-9d3f-0000000000a1",
+        "video_id": "v20000000000000000000000000000008",
+        "image_ids": [
+          "example-cover-0008"
+        ],
+        "tiktok_item_id": "7430000000000000009",
+        "landing_page_url": "https://www.example.com/industries/salons/?utm_source=tiktok&utm_medium=paid&utm_id=__CAMPAIGN_ID__&utm_campaign=__CAMPAIGN_NAME__",
+        "operation_status": "DISABLE",
+        "create_time": "2026-03-30 15:00:00"
+      },
+      {
+        "ad_id": "1820000000000420",
+        "ad_name": "QA | placeholder",
+        "adgroup_id": "1810000000000316",
+        "campaign_id": "1800000000000215",
+        "ad_format": "SINGLE_VIDEO",
+        "ad_text": "QA placeholder caption, not for delivery.",
+        "ad_texts": null,
+        "call_to_action": "",
+        "identity_type": "TT_USER",
+        "identity_id": "5b0e7c2a-1111-4c6e-9d3f-0000000000a1",
+        "video_id": "v20000000000000000000000000000009",
+        "image_ids": [
+          "example-cover-0009"
+        ],
+        "tiktok_item_id": "7430000000000000010",
+        "landing_page_url": "https://www.example.com/industries/salons/?utm_source=tiktok&utm_medium=paid&utm_id=__CAMPAIGN_ID__&utm_campaign=__CAMPAIGN_NAME__",
+        "operation_status": "DISABLE",
+        "create_time": "2026-09-02 15:00:00"
+      }
+    ],
+    "integrated_report_basic_ad_lifetime": [
+      {
+        "ad_id": "1820000000000411",
+        "campaign_id": "1800000000000211",
+        "adgroup_id": "1810000000000311",
+        "spend": "8712.04",
+        "impressions": "885675",
+        "clicks": "11306",
+        "ctr": "1.28",
+        "result": "337",
+        "cost_per_result": "25.85",
+        "conversion": "337",
+        "video_watched_2s": "318535",
+        "video_watched_6s": "146494"
+      },
+      {
+        "ad_id": "1820000000000412",
+        "campaign_id": "1800000000000211",
+        "adgroup_id": "1810000000000311",
+        "spend": "3676.05",
+        "impressions": "380400",
+        "clicks": "4815",
+        "ctr": "1.27",
+        "result": "115",
+        "cost_per_result": "31.97",
+        "conversion": "115",
+        "video_watched_2s": "122282",
+        "video_watched_6s": "56220"
+      },
+      {
+        "ad_id": "1820000000000413",
+        "campaign_id": "1800000000000211",
+        "adgroup_id": "1810000000000311",
+        "spend": "1876.13",
+        "impressions": "186310",
+        "clicks": "2182",
+        "ctr": "1.17",
+        "result": "50",
+        "cost_per_result": "37.52",
+        "conversion": "50",
+        "video_watched_2s": "63089",
+        "video_watched_6s": "29001"
+      },
+      {
+        "ad_id": "1820000000000414",
+        "campaign_id": "1800000000000211",
+        "adgroup_id": "1810000000000312",
+        "spend": "5356.59",
+        "impressions": "485982",
+        "clicks": "5510",
+        "ctr": "1.13",
+        "result": "121",
+        "cost_per_result": "44.27",
+        "conversion": "121",
+        "video_watched_2s": "146162",
+        "video_watched_6s": "67199"
+      },
+      {
+        "ad_id": "1820000000000415",
+        "campaign_id": "1800000000000211",
+        "adgroup_id": "1810000000000312",
+        "spend": "931.38",
+        "impressions": "81435",
+        "clicks": "757",
+        "ctr": "0.93",
+        "result": "19",
+        "cost_per_result": "49.02",
+        "conversion": "19",
+        "video_watched_2s": "21980",
+        "video_watched_6s": "10100"
+      },
+      {
+        "ad_id": "1820000000000416",
+        "campaign_id": "1800000000000212",
+        "adgroup_id": "1810000000000313",
+        "spend": "4693.67",
+        "impressions": "520080",
+        "clicks": "7077",
+        "ctr": "1.36",
+        "result": "181",
+        "cost_per_result": "25.93",
+        "conversion": "181",
+        "video_watched_2s": "178278",
+        "video_watched_6s": "81986"
+      },
+      {
+        "ad_id": "1820000000000417",
+        "campaign_id": "1800000000000212",
+        "adgroup_id": "1810000000000313",
+        "spend": "166.72",
+        "impressions": "17751",
+        "clicks": "215",
+        "ctr": "1.21",
+        "result": "7",
+        "cost_per_result": "23.82",
+        "conversion": "7",
+        "video_watched_2s": "5793",
+        "video_watched_6s": "2663"
+      },
+      {
+        "ad_id": "1820000000000418",
+        "campaign_id": "1800000000000213",
+        "adgroup_id": "1810000000000314",
+        "spend": "1905.90",
+        "impressions": "313357",
+        "clicks": "4991",
+        "ctr": "1.59",
+        "result": "4991",
+        "cost_per_result": "0.38",
+        "conversion": "0",
+        "video_watched_2s": "90823",
+        "video_watched_6s": "41751"
+      },
+      {
+        "ad_id": "1820000000000419",
+        "campaign_id": "1800000000000214",
+        "adgroup_id": "1810000000000315",
+        "spend": "2939.40",
+        "impressions": "339604",
+        "clicks": "3660",
+        "ctr": "1.08",
+        "result": "74",
+        "cost_per_result": "39.72",
+        "conversion": "74",
+        "video_watched_2s": "101781",
+        "video_watched_6s": "46795"
+      },
+      {
+        "ad_id": "1820000000000420",
+        "campaign_id": "1800000000000215",
+        "adgroup_id": "1810000000000316",
+        "spend": "0.00",
+        "impressions": "0",
+        "clicks": "0",
+        "ctr": "0.00",
+        "result": "0",
+        "cost_per_result": "0.00",
+        "conversion": "0",
+        "video_watched_2s": "0",
+        "video_watched_6s": "0"
+      }
+    ],
+    "tool_targeting_search_united_states": [
+      {
+        "name": "United States",
+        "geo_id": "6252001",
+        "geo_type": "COUNTRY",
+        "region_code": "US"
+      },
+      {
+        "name": "United States Minor Outlying Islands",
+        "geo_id": "5854968",
+        "geo_type": "COUNTRY",
+        "region_code": "UM"
+      }
+    ],
+    "tool_targeting_info": [
+      {
+        "name": "United States",
+        "geo": {
+          "geo_id": "6252001",
+          "geo_type": "COUNTRY",
+          "region_code": "US"
+        },
+        "status_info": {
+          "status": "ENABLED"
+        }
+      }
+    ],
+    "tool_targeting_category_recommend_us": [
+      {
+        "interest_category_id": "14",
+        "interest_category_name": "Beauty & Personal Care"
+      },
+      {
+        "interest_category_id": "17",
+        "interest_category_name": "Apparel & Accessories"
+      },
+      {
+        "interest_category_id": "22",
+        "interest_category_name": "Sports & Outdoors"
+      },
+      {
+        "interest_category_id": "14102",
+        "interest_category_name": "Hair Care"
+      },
+      {
+        "interest_category_id": "14103",
+        "interest_category_name": "Skin Care"
+      },
+      {
+        "interest_category_id": "14104",
+        "interest_category_name": "Makeup"
+      },
+      {
+        "interest_category_id": "14106",
+        "interest_category_name": "Nail Care"
+      },
+      {
+        "interest_category_id": "22101",
+        "interest_category_name": "Fitness"
+      },
+      {
+        "interest_category_id": "17101",
+        "interest_category_name": "Women's Clothing"
+      }
+    ],
+    "ads_metadata_delivering_now": [
+      "1820000000000411",
+      "1820000000000412",
+      "1820000000000413",
+      "1820000000000414",
+      "1820000000000416",
+      "1820000000000417",
+      "1820000000000418"
+    ],
+    "integrated_report_basic_ad_last_7_days": [
+      {
+        "ad_id": "1820000000000411",
+        "adgroup_id": "1810000000000311",
+        "spend": "963.82",
+        "impressions": "98127",
+        "clicks": "1252",
+        "ctr": "1.28",
+        "result": "40",
+        "cost_per_result": "24.10",
+        "frequency": "1.80",
+        "video_watched_2s": "35249"
+      },
+      {
+        "ad_id": "1820000000000412",
+        "adgroup_id": "1810000000000311",
+        "spend": "422.87",
+        "impressions": "39344",
+        "clicks": "343",
+        "ctr": "0.87",
+        "result": "7",
+        "cost_per_result": "60.41",
+        "frequency": "3.40",
+        "video_watched_2s": "9518"
+      },
+      {
+        "ad_id": "1820000000000413",
+        "adgroup_id": "1810000000000311",
+        "spend": "307.85",
+        "impressions": "30803",
+        "clicks": "356",
+        "ctr": "1.16",
+        "result": "9",
+        "cost_per_result": "34.21",
+        "frequency": "1.70",
+        "video_watched_2s": "10099"
+      },
+      {
+        "ad_id": "1820000000000414",
+        "adgroup_id": "1810000000000312",
+        "spend": "587.70",
+        "impressions": "51396",
+        "clicks": "426",
+        "ctr": "0.83",
+        "result": "7",
+        "cost_per_result": "83.96",
+        "frequency": "3.90",
+        "video_watched_2s": "11898"
+      },
+      {
+        "ad_id": "1820000000000416",
+        "adgroup_id": "1810000000000313",
+        "spend": "688.21",
+        "impressions": "75129",
+        "clicks": "737",
+        "ctr": "0.98",
+        "result": "24",
+        "cost_per_result": "28.68",
+        "frequency": "2.60",
+        "video_watched_2s": "22600"
+      },
+      {
+        "ad_id": "1820000000000417",
+        "adgroup_id": "1810000000000313",
+        "spend": "166.72",
+        "impressions": "17751",
+        "clicks": "215",
+        "ctr": "1.21",
+        "result": "7",
+        "cost_per_result": "23.82",
+        "frequency": "1.30",
+        "video_watched_2s": "5793"
+      },
+      {
+        "ad_id": "1820000000000418",
+        "adgroup_id": "1810000000000314",
+        "spend": "208.29",
+        "impressions": "34360",
+        "clicks": "542",
+        "ctr": "1.58",
+        "result": "542",
+        "cost_per_result": "0.38",
+        "frequency": "1.90",
+        "video_watched_2s": "9926"
+      }
+    ],
+    "integrated_report_basic_ad_prior_7_days": [
+      {
+        "ad_id": "1820000000000411",
+        "adgroup_id": "1810000000000311",
+        "spend": "951.64",
+        "impressions": "96776",
+        "clicks": "1253",
+        "ctr": "1.29",
+        "result": "36",
+        "cost_per_result": "26.43",
+        "frequency": "1.70",
+        "video_watched_2s": "34897"
+      },
+      {
+        "ad_id": "1820000000000412",
+        "adgroup_id": "1810000000000311",
+        "spend": "393.24",
+        "impressions": "41250",
+        "clicks": "529",
+        "ctr": "1.28",
+        "result": "14",
+        "cost_per_result": "28.09",
+        "frequency": "2.20",
+        "video_watched_2s": "13656"
+      },
+      {
+        "ad_id": "1820000000000413",
+        "adgroup_id": "1810000000000311",
+        "spend": "307.55",
+        "impressions": "30367",
+        "clicks": "363",
+        "ctr": "1.20",
+        "result": "7",
+        "cost_per_result": "43.94",
+        "frequency": "1.60",
+        "video_watched_2s": "10423"
+      },
+      {
+        "ad_id": "1820000000000414",
+        "adgroup_id": "1810000000000312",
+        "spend": "595.19",
+        "impressions": "53952",
+        "clicks": "623",
+        "ctr": "1.15",
+        "result": "14",
+        "cost_per_result": "42.51",
+        "frequency": "2.40",
+        "video_watched_2s": "16690"
+      },
+      {
+        "ad_id": "1820000000000416",
+        "adgroup_id": "1810000000000313",
+        "spend": "695.54",
+        "impressions": "77655",
+        "clicks": "1112",
+        "ctr": "1.43",
+        "result": "27",
+        "cost_per_result": "25.76",
+        "frequency": "1.90",
+        "video_watched_2s": "27093"
+      },
+      {
+        "ad_id": "1820000000000417",
+        "adgroup_id": "1810000000000313",
+        "spend": "0.00",
+        "impressions": "0",
+        "clicks": "0",
+        "ctr": "0.00",
+        "result": "0",
+        "cost_per_result": "0.00",
+        "frequency": "0.00",
+        "video_watched_2s": "0"
+      },
+      {
+        "ad_id": "1820000000000418",
+        "adgroup_id": "1810000000000314",
+        "spend": "209.03",
+        "impressions": "34058",
+        "clicks": "535",
+        "ctr": "1.57",
+        "result": "535",
+        "cost_per_result": "0.39",
+        "frequency": "1.80",
+        "video_watched_2s": "9928"
+      }
+    ],
+    "adgroups_metadata_delivering_now": [
+      "1810000000000311",
+      "1810000000000312",
+      "1810000000000313",
+      "1810000000000314"
+    ],
+    "integrated_report_basic_adgroup_last_30_days": [
+      {
+        "adgroup_id": "1810000000000311",
+        "campaign_id": "1800000000000211",
+        "spend": "7107.39",
+        "impressions": "718470",
+        "clicks": "8912",
+        "ctr": "1.24",
+        "result": "244",
+        "cost_per_result": "29.13",
+        "frequency": "1.89"
+      },
+      {
+        "adgroup_id": "1810000000000312",
+        "campaign_id": "1800000000000211",
+        "spend": "2502.96",
+        "impressions": "225098",
+        "clicks": "2448",
+        "ctr": "1.09",
+        "result": "53",
+        "cost_per_result": "47.23",
+        "frequency": "2.74"
+      },
+      {
+        "adgroup_id": "1810000000000313",
+        "campaign_id": "1800000000000212",
+        "spend": "3117.76",
+        "impressions": "345220",
+        "clicks": "4532",
+        "ctr": "1.31",
+        "result": "120",
+        "cost_per_result": "25.98",
+        "frequency": "2.02"
+      },
+      {
+        "adgroup_id": "1810000000000314",
+        "campaign_id": "1800000000000213",
+        "spend": "893.89",
+        "impressions": "146371",
+        "clicks": "2318",
+        "ctr": "1.58",
+        "result": "2318",
+        "cost_per_result": "0.39",
+        "frequency": "1.82"
+      }
+    ],
+    "integrated_report_basic_adgroup_last_7_days": [
+      {
+        "adgroup_id": "1810000000000311",
+        "campaign_id": "1800000000000211",
+        "spend": "1694.54",
+        "impressions": "168274",
+        "clicks": "1951",
+        "ctr": "1.16",
+        "result": "56",
+        "cost_per_result": "30.26",
+        "frequency": "2.16"
+      },
+      {
+        "adgroup_id": "1810000000000312",
+        "campaign_id": "1800000000000211",
+        "spend": "587.70",
+        "impressions": "51396",
+        "clicks": "426",
+        "ctr": "0.83",
+        "result": "7",
+        "cost_per_result": "83.96",
+        "frequency": "3.90"
+      },
+      {
+        "adgroup_id": "1810000000000313",
+        "campaign_id": "1800000000000212",
+        "spend": "854.93",
+        "impressions": "92880",
+        "clicks": "952",
+        "ctr": "1.02",
+        "result": "31",
+        "cost_per_result": "27.58",
+        "frequency": "2.35"
+      },
+      {
+        "adgroup_id": "1810000000000314",
+        "campaign_id": "1800000000000213",
+        "spend": "208.29",
+        "impressions": "34360",
+        "clicks": "542",
+        "ctr": "1.58",
+        "result": "542",
+        "cost_per_result": "0.38",
+        "frequency": "1.90"
+      }
+    ]
+  },
+  "calls": "14 read-only calls, all returned success; nothing created or changed"
+}

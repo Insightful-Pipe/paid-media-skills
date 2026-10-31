@@ -1,0 +1,1038 @@
+{
+  "note": "Example data: an invented online store selling standing desks and ergonomic chairs, with invented newsletters, podcasts and accounts, not real businesses. Every number in expected_output.json follows from this input.",
+  "request": "Hey Claude, I just added the \"newsletter-podcast-ads-planner\" skill. Read out our three September sponsor tests and tell me which to book again, then compare these five November quotes. Our target cost per order is $120 and the November budget is $6,500.",
+  "business": {
+    "name": "Ridgeline Desk Co.",
+    "site": "https://www.ridgelinedesk.example",
+    "sells": "standing desks and ergonomic chairs, average order about $650",
+    "buyer": "US remote and hybrid workers furnishing a home office, and founders furnishing a small office",
+    "currency": "USD",
+    "time_zone": "America/Denver"
+  },
+  "run_date": "2026-10-28",
+  "targets": {
+    "target_cpa": 120.0,
+    "november_budget": 6500.0,
+    "call_close_rate": 0.35,
+    "qualified_call_seconds": 60,
+    "match_floor": "default: half the median matched share of the quotes"
+  },
+  "facts_ledger": [
+    {
+      "id": "F1",
+      "fact": "Desks ship in 2 business days from US warehouses",
+      "source": "user"
+    },
+    {
+      "id": "F2",
+      "fact": "100-night return window on every desk, return shipping paid",
+      "source": "user"
+    },
+    {
+      "id": "F3",
+      "fact": "10-year warranty on the desk frame",
+      "source": "user"
+    },
+    {
+      "id": "F4",
+      "fact": "Assembles in about 10 minutes with the included tool",
+      "source": "user"
+    },
+    {
+      "id": "F5",
+      "fact": "Volume pricing for 5 or more desks through the office sales line",
+      "source": "user"
+    },
+    {
+      "id": "F6",
+      "fact": "10% off a first order with a sponsor code, November placements only",
+      "source": "user"
+    }
+  ],
+  "past_placements": [
+    {
+      "id": "S1",
+      "publication": "The Remote Desk",
+      "type": "newsletter",
+      "slot": "primary",
+      "drop_date": "2026-09-02",
+      "price": 1900,
+      "sends": 1,
+      "publisher_reported_clicks": 410,
+      "delivery_confirmed": true,
+      "tracking": {
+        "utm_source": "theremotedesk",
+        "utm_medium": "newsletter",
+        "utm_campaign": "sponsor-2026-09",
+        "utm_content": "primary-2026-09-02",
+        "code": "REMOTEDESK",
+        "vanity_path": null,
+        "callrail_tracker": null
+      }
+    },
+    {
+      "id": "S2",
+      "publication": "Desk Setup Radio",
+      "type": "podcast",
+      "slot": "mid-roll, host-read",
+      "drop_date": "2026-09-16",
+      "price": 1200,
+      "episodes": 1,
+      "proven_downloads_30d": 21000,
+      "matched_share": 0.42,
+      "delivery_confirmed": true,
+      "tracking": {
+        "utm_source": "desksetupradio",
+        "utm_medium": "podcast",
+        "utm_campaign": "sponsor-2026-09",
+        "utm_content": "midroll-2026-09-16",
+        "code": "DESKRADIO",
+        "vanity_path": "/desksetup",
+        "callrail_tracker": "Desk Setup Radio line"
+      }
+    },
+    {
+      "id": "S3",
+      "publication": "Office Hours Digest",
+      "type": "newsletter",
+      "slot": "primary",
+      "drop_date": "2026-09-30",
+      "price": 2200,
+      "sends": 1,
+      "publisher_reported_clicks": 1150,
+      "delivery_confirmed": true,
+      "tracking": {
+        "utm_source": "officehoursdigest",
+        "utm_medium": "newsletter",
+        "utm_campaign": "sponsor-2026-09",
+        "utm_content": "primary-2026-09-30",
+        "code": "OFFICEHOURS",
+        "vanity_path": null,
+        "callrail_tracker": null
+      }
+    }
+  ],
+  "quotes": [
+    {
+      "id": "N1",
+      "publication": "The Remote Desk",
+      "type": "newsletter",
+      "slot": "primary",
+      "price_per_unit": 1850,
+      "units": 2,
+      "subscribers": 48000,
+      "claimed_open_rate": 0.61,
+      "claimed_clicks_per_slot": 420,
+      "proof": {
+        "sponsor_clicks_last_sends": [
+          380,
+          410,
+          290,
+          450,
+          360
+        ],
+        "source": "screenshots of the last 5 sponsor slots"
+      },
+      "audience": {
+        "us_share": 0.78,
+        "match_share": 0.55,
+        "match_definition": "remote or hybrid workers who buy their own setup"
+      },
+      "make_good": true,
+      "spec": {
+        "words_min": 90,
+        "words_max": 120
+      },
+      "dates_offered": [
+        "2026-11-10",
+        "2026-11-24"
+      ]
+    },
+    {
+      "id": "N2",
+      "publication": "Founder Ops Weekly",
+      "type": "newsletter",
+      "slot": "primary",
+      "price_per_unit": 1100,
+      "units": 1,
+      "subscribers": 22000,
+      "claimed_open_rate": 0.52,
+      "claimed_clicks_per_slot": 260,
+      "proof": {
+        "sponsor_clicks_last_sends": [
+          240,
+          210,
+          260
+        ],
+        "source": "ESP report export, last 3 sponsor slots"
+      },
+      "audience": {
+        "us_share": 0.7,
+        "match_share": 0.6,
+        "match_definition": "founders and operations leads who furnish an office"
+      },
+      "make_good": true,
+      "spec": {
+        "words_min": 60,
+        "words_max": 90
+      },
+      "dates_offered": [
+        "2026-11-18"
+      ]
+    },
+    {
+      "id": "N3",
+      "publication": "Gadget Drop Daily",
+      "type": "newsletter",
+      "slot": "primary",
+      "price_per_unit": 4500,
+      "units": 1,
+      "subscribers": 210000,
+      "claimed_open_rate": 0.68,
+      "claimed_clicks_per_slot": 1500,
+      "proof": null,
+      "audience": {
+        "us_share": 0.55,
+        "match_share": 0.2,
+        "match_definition": "readers who say they work from home"
+      },
+      "make_good": false,
+      "spec": {
+        "words_min": 50,
+        "words_max": 80
+      },
+      "dates_offered": [
+        "2026-11-12"
+      ]
+    },
+    {
+      "id": "P1",
+      "publication": "Hybrid Hours",
+      "type": "podcast",
+      "slot": "mid-roll, host-read",
+      "cpm": 25,
+      "units": 4,
+      "claimed_downloads_30d": 18000,
+      "proof": {
+        "downloads_30d_last_episodes": [
+          15200,
+          14100,
+          16800,
+          13900,
+          15500,
+          14700
+        ],
+        "source": "host dashboard screenshot, IAB-certified hosting"
+      },
+      "audience": {
+        "us_share": 0.8,
+        "match_share": 0.5,
+        "match_definition": "listeners who work from home at least 2 days a week"
+      },
+      "make_good": true,
+      "spec": {
+        "read_seconds": 60
+      },
+      "dates_offered": [
+        "2026-11-04",
+        "2026-11-11",
+        "2026-11-18",
+        "2026-11-25"
+      ]
+    },
+    {
+      "id": "P2",
+      "publication": "Teamwright Hour",
+      "type": "video podcast",
+      "slot": "mid-roll, host-read",
+      "price_per_unit": 2400,
+      "units": 2,
+      "claimed_downloads_30d": 40000,
+      "claim_basis": "audio downloads plus YouTube views per episode",
+      "proof": null,
+      "youtube_channel_title": "Teamwright Hour",
+      "youtube_channel_id": "UCexampleTeamwrightHr001",
+      "audience": {
+        "us_share": 0.65,
+        "match_share": 0.45,
+        "match_definition": "team leads and founders"
+      },
+      "make_good": false,
+      "spec": {
+        "read_seconds": 60
+      },
+      "dates_offered": [
+        "2026-11-06",
+        "2026-11-20"
+      ]
+    }
+  ],
+  "data_pulled": {
+    "google_analytics_get_report_tagged": [
+      {
+        "sessionSource": "theremotedesk",
+        "sessionMedium": "newsletter",
+        "sessionCampaignName": "sponsor-2026-09",
+        "window": [
+          "2026-09-02",
+          "2026-09-08"
+        ],
+        "sessions": 336,
+        "purchases": 11
+      },
+      {
+        "sessionSource": "desksetupradio",
+        "sessionMedium": "podcast",
+        "sessionCampaignName": "sponsor-2026-09",
+        "window": [
+          "2026-09-16",
+          "2026-10-15"
+        ],
+        "sessions": 148,
+        "purchases": 3
+      },
+      {
+        "landingPage": "/desksetup",
+        "window": [
+          "2026-09-16",
+          "2026-10-15"
+        ],
+        "sessions": 162,
+        "purchases": 3
+      },
+      {
+        "sessionSource": "officehoursdigest",
+        "sessionMedium": "newsletter",
+        "sessionCampaignName": "sponsor-2026-09",
+        "window": [
+          "2026-09-30",
+          "2026-10-06"
+        ],
+        "sessions": 297,
+        "purchases": 4
+      }
+    ],
+    "shopify_get_orders_with_codes_or_tags": [
+      {
+        "order": "#5101",
+        "created_at": "2026-09-04",
+        "total": 749,
+        "discount_codes": [
+          "REMOTEDESK"
+        ],
+        "landing_site": "/"
+      },
+      {
+        "order": "#5102",
+        "created_at": "2026-09-02",
+        "total": 689,
+        "discount_codes": [
+          "REMOTEDESK"
+        ],
+        "landing_site": "/"
+      },
+      {
+        "order": "#5103",
+        "created_at": "2026-09-02",
+        "total": 749,
+        "discount_codes": [
+          "REMOTEDESK"
+        ],
+        "landing_site": "/"
+      },
+      {
+        "order": "#5104",
+        "created_at": "2026-09-04",
+        "total": 629,
+        "discount_codes": [
+          "REMOTEDESK"
+        ],
+        "landing_site": "/"
+      },
+      {
+        "order": "#5105",
+        "created_at": "2026-09-04",
+        "total": 489,
+        "discount_codes": [
+          "REMOTEDESK"
+        ],
+        "landing_site": "/"
+      },
+      {
+        "order": "#5106",
+        "created_at": "2026-09-02",
+        "total": 689,
+        "discount_codes": [
+          "REMOTEDESK"
+        ],
+        "landing_site": "/"
+      },
+      {
+        "order": "#5107",
+        "created_at": "2026-09-02",
+        "total": 1290,
+        "discount_codes": [],
+        "landing_site": "/?utm_source=theremotedesk&utm_medium=newsletter&utm_campaign=sponsor-2026-09"
+      },
+      {
+        "order": "#5108",
+        "created_at": "2026-09-02",
+        "total": 489,
+        "discount_codes": [],
+        "landing_site": "/?utm_source=theremotedesk&utm_medium=newsletter&utm_campaign=sponsor-2026-09"
+      },
+      {
+        "order": "#5109",
+        "created_at": "2026-09-02",
+        "total": 549,
+        "discount_codes": [],
+        "landing_site": "/?utm_source=theremotedesk&utm_medium=newsletter&utm_campaign=sponsor-2026-09"
+      },
+      {
+        "order": "#5110",
+        "created_at": "2026-09-05",
+        "total": 1290,
+        "discount_codes": [],
+        "landing_site": "/?utm_source=theremotedesk&utm_medium=newsletter&utm_campaign=sponsor-2026-09"
+      },
+      {
+        "order": "#5111",
+        "created_at": "2026-09-03",
+        "total": 689,
+        "discount_codes": [],
+        "landing_site": "/?utm_source=theremotedesk&utm_medium=newsletter&utm_campaign=sponsor-2026-09"
+      },
+      {
+        "order": "#5112",
+        "created_at": "2026-09-07",
+        "total": 489,
+        "discount_codes": [],
+        "landing_site": "/?utm_source=theremotedesk&utm_medium=newsletter&utm_campaign=sponsor-2026-09"
+      },
+      {
+        "order": "#5113",
+        "created_at": "2026-09-08",
+        "total": 689,
+        "discount_codes": [],
+        "landing_site": "/?utm_source=theremotedesk&utm_medium=newsletter&utm_campaign=sponsor-2026-09"
+      },
+      {
+        "order": "#5114",
+        "created_at": "2026-09-02",
+        "total": 689,
+        "discount_codes": [],
+        "landing_site": "/?utm_source=theremotedesk&utm_medium=newsletter&utm_campaign=sponsor-2026-09"
+      },
+      {
+        "order": "#5115",
+        "created_at": "2026-09-02",
+        "total": 749,
+        "discount_codes": [],
+        "landing_site": "/?utm_source=theremotedesk&utm_medium=newsletter&utm_campaign=sponsor-2026-09"
+      },
+      {
+        "order": "#5116",
+        "created_at": "2026-09-02",
+        "total": 1290,
+        "discount_codes": [
+          "REMOTEDESK"
+        ],
+        "landing_site": "/?utm_source=theremotedesk&utm_medium=newsletter&utm_campaign=sponsor-2026-09"
+      },
+      {
+        "order": "#5117",
+        "created_at": "2026-09-07",
+        "total": 689,
+        "discount_codes": [
+          "REMOTEDESK"
+        ],
+        "landing_site": "/?utm_source=theremotedesk&utm_medium=newsletter&utm_campaign=sponsor-2026-09"
+      },
+      {
+        "order": "#5118",
+        "created_at": "2026-09-25",
+        "total": 549,
+        "discount_codes": [
+          "DESKRADIO"
+        ],
+        "landing_site": "/"
+      },
+      {
+        "order": "#5119",
+        "created_at": "2026-09-28",
+        "total": 489,
+        "discount_codes": [
+          "DESKRADIO"
+        ],
+        "landing_site": "/desksetup"
+      },
+      {
+        "order": "#5120",
+        "created_at": "2026-09-16",
+        "total": 749,
+        "discount_codes": [
+          "DESKRADIO"
+        ],
+        "landing_site": "/desksetup"
+      },
+      {
+        "order": "#5121",
+        "created_at": "2026-10-06",
+        "total": 749,
+        "discount_codes": [
+          "DESKRADIO"
+        ],
+        "landing_site": "/"
+      },
+      {
+        "order": "#5122",
+        "created_at": "2026-09-30",
+        "total": 689,
+        "discount_codes": [
+          "DESKRADIO"
+        ],
+        "landing_site": "/desksetup"
+      },
+      {
+        "order": "#5123",
+        "created_at": "2026-09-17",
+        "total": 689,
+        "discount_codes": [],
+        "landing_site": "/?utm_source=desksetupradio&utm_medium=podcast&utm_campaign=sponsor-2026-09"
+      },
+      {
+        "order": "#5124",
+        "created_at": "2026-09-20",
+        "total": 749,
+        "discount_codes": [],
+        "landing_site": "/?utm_source=desksetupradio&utm_medium=podcast&utm_campaign=sponsor-2026-09"
+      },
+      {
+        "order": "#5125",
+        "created_at": "2026-09-16",
+        "total": 549,
+        "discount_codes": [
+          "DESKRADIO"
+        ],
+        "landing_site": "/?utm_source=desksetupradio&utm_medium=podcast&utm_campaign=sponsor-2026-09"
+      },
+      {
+        "order": "#5126",
+        "created_at": "2026-09-30",
+        "total": 489,
+        "discount_codes": [
+          "OFFICEHOURS"
+        ],
+        "landing_site": "/"
+      },
+      {
+        "order": "#5127",
+        "created_at": "2026-10-01",
+        "total": 1290,
+        "discount_codes": [],
+        "landing_site": "/?utm_source=officehoursdigest&utm_medium=newsletter&utm_campaign=sponsor-2026-09"
+      },
+      {
+        "order": "#5128",
+        "created_at": "2026-10-06",
+        "total": 489,
+        "discount_codes": [],
+        "landing_site": "/?utm_source=officehoursdigest&utm_medium=newsletter&utm_campaign=sponsor-2026-09"
+      },
+      {
+        "order": "#5129",
+        "created_at": "2026-10-03",
+        "total": 1290,
+        "discount_codes": [],
+        "landing_site": "/?utm_source=officehoursdigest&utm_medium=newsletter&utm_campaign=sponsor-2026-09"
+      },
+      {
+        "order": "#5130",
+        "created_at": "2026-09-30",
+        "total": 689,
+        "discount_codes": [
+          "OFFICEHOURS"
+        ],
+        "landing_site": "/?utm_source=officehoursdigest&utm_medium=newsletter&utm_campaign=sponsor-2026-09"
+      }
+    ],
+    "callrail_get_calls": [
+      {
+        "tracker": "Desk Setup Radio line",
+        "start_time": "2026-09-16",
+        "duration": 212
+      },
+      {
+        "tracker": "Desk Setup Radio line",
+        "start_time": "2026-09-17",
+        "duration": 34
+      },
+      {
+        "tracker": "Desk Setup Radio line",
+        "start_time": "2026-09-18",
+        "duration": 486
+      },
+      {
+        "tracker": "Desk Setup Radio line",
+        "start_time": "2026-09-22",
+        "duration": 95
+      },
+      {
+        "tracker": "Desk Setup Radio line",
+        "start_time": "2026-09-29",
+        "duration": 18
+      },
+      {
+        "tracker": "Desk Setup Radio line",
+        "start_time": "2026-10-03",
+        "duration": 301
+      },
+      {
+        "tracker": "Desk Setup Radio line",
+        "start_time": "2026-10-09",
+        "duration": 140
+      }
+    ],
+    "brand_clicks_daily": {
+      "sources": [
+        "google-search-console search_analytics (queries containing 'ridgeline')",
+        "google-ads gaql (campaign 'Brand | Search', segments.date)"
+      ],
+      "rows": [
+        {
+          "date": "2026-08-19",
+          "gsc_brand_clicks": 46,
+          "ads_brand_clicks": 29
+        },
+        {
+          "date": "2026-08-20",
+          "gsc_brand_clicks": 47,
+          "ads_brand_clicks": 28
+        },
+        {
+          "date": "2026-08-21",
+          "gsc_brand_clicks": 46,
+          "ads_brand_clicks": 32
+        },
+        {
+          "date": "2026-08-22",
+          "gsc_brand_clicks": 40,
+          "ads_brand_clicks": 30
+        },
+        {
+          "date": "2026-08-23",
+          "gsc_brand_clicks": 44,
+          "ads_brand_clicks": 26
+        },
+        {
+          "date": "2026-08-24",
+          "gsc_brand_clicks": 45,
+          "ads_brand_clicks": 32
+        },
+        {
+          "date": "2026-08-25",
+          "gsc_brand_clicks": 50,
+          "ads_brand_clicks": 28
+        },
+        {
+          "date": "2026-08-26",
+          "gsc_brand_clicks": 46,
+          "ads_brand_clicks": 30
+        },
+        {
+          "date": "2026-08-27",
+          "gsc_brand_clicks": 44,
+          "ads_brand_clicks": 33
+        },
+        {
+          "date": "2026-08-28",
+          "gsc_brand_clicks": 43,
+          "ads_brand_clicks": 28
+        },
+        {
+          "date": "2026-08-29",
+          "gsc_brand_clicks": 41,
+          "ads_brand_clicks": 27
+        },
+        {
+          "date": "2026-08-30",
+          "gsc_brand_clicks": 43,
+          "ads_brand_clicks": 25
+        },
+        {
+          "date": "2026-08-31",
+          "gsc_brand_clicks": 47,
+          "ads_brand_clicks": 34
+        },
+        {
+          "date": "2026-09-01",
+          "gsc_brand_clicks": 42,
+          "ads_brand_clicks": 28
+        },
+        {
+          "date": "2026-09-02",
+          "gsc_brand_clicks": 52,
+          "ads_brand_clicks": 37
+        },
+        {
+          "date": "2026-09-03",
+          "gsc_brand_clicks": 48,
+          "ads_brand_clicks": 35
+        },
+        {
+          "date": "2026-09-04",
+          "gsc_brand_clicks": 48,
+          "ads_brand_clicks": 34
+        },
+        {
+          "date": "2026-09-05",
+          "gsc_brand_clicks": 43,
+          "ads_brand_clicks": 24
+        },
+        {
+          "date": "2026-09-06",
+          "gsc_brand_clicks": 41,
+          "ads_brand_clicks": 30
+        },
+        {
+          "date": "2026-09-07",
+          "gsc_brand_clicks": 47,
+          "ads_brand_clicks": 29
+        },
+        {
+          "date": "2026-09-08",
+          "gsc_brand_clicks": 45,
+          "ads_brand_clicks": 31
+        },
+        {
+          "date": "2026-09-09",
+          "gsc_brand_clicks": 44,
+          "ads_brand_clicks": 33
+        },
+        {
+          "date": "2026-09-10",
+          "gsc_brand_clicks": 43,
+          "ads_brand_clicks": 29
+        },
+        {
+          "date": "2026-09-11",
+          "gsc_brand_clicks": 43,
+          "ads_brand_clicks": 30
+        },
+        {
+          "date": "2026-09-12",
+          "gsc_brand_clicks": 40,
+          "ads_brand_clicks": 27
+        },
+        {
+          "date": "2026-09-13",
+          "gsc_brand_clicks": 38,
+          "ads_brand_clicks": 26
+        },
+        {
+          "date": "2026-09-14",
+          "gsc_brand_clicks": 47,
+          "ads_brand_clicks": 34
+        },
+        {
+          "date": "2026-09-15",
+          "gsc_brand_clicks": 45,
+          "ads_brand_clicks": 31
+        },
+        {
+          "date": "2026-09-16",
+          "gsc_brand_clicks": 64,
+          "ads_brand_clicks": 45
+        },
+        {
+          "date": "2026-09-17",
+          "gsc_brand_clicks": 62,
+          "ads_brand_clicks": 44
+        },
+        {
+          "date": "2026-09-18",
+          "gsc_brand_clicks": 59,
+          "ads_brand_clicks": 36
+        },
+        {
+          "date": "2026-09-19",
+          "gsc_brand_clicks": 47,
+          "ads_brand_clicks": 31
+        },
+        {
+          "date": "2026-09-20",
+          "gsc_brand_clicks": 48,
+          "ads_brand_clicks": 34
+        },
+        {
+          "date": "2026-09-21",
+          "gsc_brand_clicks": 47,
+          "ads_brand_clicks": 35
+        },
+        {
+          "date": "2026-09-22",
+          "gsc_brand_clicks": 51,
+          "ads_brand_clicks": 35
+        },
+        {
+          "date": "2026-09-23",
+          "gsc_brand_clicks": 46,
+          "ads_brand_clicks": 29
+        },
+        {
+          "date": "2026-09-24",
+          "gsc_brand_clicks": 49,
+          "ads_brand_clicks": 29
+        },
+        {
+          "date": "2026-09-25",
+          "gsc_brand_clicks": 47,
+          "ads_brand_clicks": 29
+        },
+        {
+          "date": "2026-09-26",
+          "gsc_brand_clicks": 40,
+          "ads_brand_clicks": 25
+        },
+        {
+          "date": "2026-09-27",
+          "gsc_brand_clicks": 37,
+          "ads_brand_clicks": 24
+        },
+        {
+          "date": "2026-09-28",
+          "gsc_brand_clicks": 48,
+          "ads_brand_clicks": 28
+        },
+        {
+          "date": "2026-09-29",
+          "gsc_brand_clicks": 42,
+          "ads_brand_clicks": 32
+        },
+        {
+          "date": "2026-09-30",
+          "gsc_brand_clicks": 47,
+          "ads_brand_clicks": 30
+        },
+        {
+          "date": "2026-10-01",
+          "gsc_brand_clicks": 45,
+          "ads_brand_clicks": 28
+        },
+        {
+          "date": "2026-10-02",
+          "gsc_brand_clicks": 45,
+          "ads_brand_clicks": 34
+        },
+        {
+          "date": "2026-10-03",
+          "gsc_brand_clicks": 38,
+          "ads_brand_clicks": 24
+        },
+        {
+          "date": "2026-10-04",
+          "gsc_brand_clicks": 37,
+          "ads_brand_clicks": 24
+        },
+        {
+          "date": "2026-10-05",
+          "gsc_brand_clicks": 44,
+          "ads_brand_clicks": 33
+        },
+        {
+          "date": "2026-10-06",
+          "gsc_brand_clicks": 44,
+          "ads_brand_clicks": 31
+        }
+      ]
+    },
+    "google_ads_brand_campaign": {
+      "campaign": "Brand | Search",
+      "window": [
+        "2026-08-19",
+        "2026-10-06"
+      ],
+      "clicks": 1500,
+      "conversions": 93
+    },
+    "google_ads_rsa_assets": {
+      "window": "last 30 days",
+      "rows": [
+        {
+          "text": "Desk Up in 10 Minutes",
+          "field": "HEADLINE",
+          "impressions": 41200,
+          "clicks": 2390,
+          "conversions": 61,
+          "fact": "F4",
+          "conv_per_1k_impr": 1.48
+        },
+        {
+          "text": "100 Nights to Decide",
+          "field": "HEADLINE",
+          "impressions": 38900,
+          "clicks": 2140,
+          "conversions": 55,
+          "fact": "F2",
+          "conv_per_1k_impr": 1.41
+        },
+        {
+          "text": "Ships in 2 Days",
+          "field": "HEADLINE",
+          "impressions": 35100,
+          "clicks": 1720,
+          "conversions": 38,
+          "fact": "F1",
+          "conv_per_1k_impr": 1.08
+        },
+        {
+          "text": "The Last Desk You Will Buy",
+          "field": "HEADLINE",
+          "impressions": 29800,
+          "clicks": 1250,
+          "conversions": 22,
+          "fact": null,
+          "conv_per_1k_impr": 0.74
+        },
+        {
+          "text": "Standing Desks Made Simple",
+          "field": "HEADLINE",
+          "impressions": 6100,
+          "clicks": 410,
+          "conversions": 14,
+          "fact": null,
+          "conv_per_1k_impr": 2.3
+        },
+        {
+          "text": "A 10-year frame warranty, because a desk should outlast your job.",
+          "field": "DESCRIPTION",
+          "impressions": 33400,
+          "clicks": 1810,
+          "conversions": 41,
+          "fact": "F3",
+          "conv_per_1k_impr": 1.23
+        },
+        {
+          "text": "Award-winning standing desks for every home office.",
+          "field": "DESCRIPTION",
+          "impressions": 30700,
+          "clicks": 1290,
+          "conversions": 19,
+          "fact": null,
+          "conv_per_1k_impr": 0.62
+        }
+      ]
+    },
+    "meta_ads_by_ad": {
+      "window": "last 90 days",
+      "rows": [
+        {
+          "ad": "Video | 10-minute build",
+          "spend": 3120,
+          "purchases": 31,
+          "body": "Unbox it, build it in about 10 minutes, and stand up before your next meeting.",
+          "fact": "F4"
+        },
+        {
+          "ad": "Static | 100 nights",
+          "spend": 2480,
+          "purchases": 22,
+          "body": "Try it at home for 100 nights. If it is not for you, we pay the return shipping.",
+          "fact": "F2"
+        },
+        {
+          "ad": "Carousel | Colors",
+          "spend": 2210,
+          "purchases": 9,
+          "body": "Six desktop finishes for every room.",
+          "fact": null
+        }
+      ]
+    },
+    "youtube_data_uploads": {
+      "channel_id": "UCexampleTeamwrightHr001",
+      "channel_title": "Teamwright Hour",
+      "looked_up_by": "get_channels with the channel id from the quote, no name search",
+      "uploads": [
+        {
+          "video": "Episode 90",
+          "published": "2026-10-08",
+          "minutes": 58,
+          "views": 6100
+        },
+        {
+          "video": "Clip: the hiring mistake",
+          "published": "2026-10-02",
+          "minutes": 1,
+          "views": 21400
+        },
+        {
+          "video": "Episode 89",
+          "published": "2026-10-01",
+          "minutes": 61,
+          "views": 7900
+        },
+        {
+          "video": "Episode 88",
+          "published": "2026-09-24",
+          "minutes": 55,
+          "views": 11400
+        },
+        {
+          "video": "Episode 87",
+          "published": "2026-09-17",
+          "minutes": 63,
+          "views": 9100
+        },
+        {
+          "video": "Clip: remote rituals",
+          "published": "2026-09-12",
+          "minutes": 2,
+          "views": 18700
+        },
+        {
+          "video": "Episode 86",
+          "published": "2026-09-10",
+          "minutes": 57,
+          "views": 8700
+        },
+        {
+          "video": "Episode 85",
+          "published": "2026-09-03",
+          "minutes": 60,
+          "views": 10200
+        },
+        {
+          "video": "Episode 84",
+          "published": "2026-08-27",
+          "minutes": 52,
+          "views": 9600
+        },
+        {
+          "video": "Episode 83",
+          "published": "2026-08-20",
+          "minutes": 59,
+          "views": 12900
+        },
+        {
+          "video": "Episode 82",
+          "published": "2026-08-13",
+          "minutes": 62,
+          "views": 8200
+        },
+        {
+          "video": "Episode 81",
+          "published": "2026-08-06",
+          "minutes": 56,
+          "views": 10000
+        },
+        {
+          "video": "Episode 80",
+          "published": "2026-07-30",
+          "minutes": 58,
+          "views": 11800
+        }
+      ]
+    }
+  }
+}

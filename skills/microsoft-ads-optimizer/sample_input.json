@@ -1,0 +1,1571 @@
+{
+  "note": "Example data: an invented online booking software company with invented accounts, not a real business. Every number in expected_output.json follows from this input.",
+  "request": "Hey Claude, I just added the \"microsoft-ads-optimizer\" skill. Find what to fix in my Microsoft Ads account. We're also launching a page for pet groomers: draft a new search campaign for it at $30 a day and copy the locations from my Generic campaign. My target CPA is $60. Don't change anything yet; show me the changes.",
+  "account": {
+    "name": "Example Booking Software",
+    "id": "150000001",
+    "currency": "USD",
+    "time_zone": "EasternTimeUSCanada",
+    "access_level": "full"
+  },
+  "window": {
+    "asked": "Last30Days",
+    "used": "2026-09-28 to 2026-10-27",
+    "result": "every live campaign served in the window, so no widening"
+  },
+  "target_cpa": {
+    "value": 60.0,
+    "source": "given by the user"
+  },
+  "what_they_sell": "online booking, reminders and payments software for salons, clinics, studios, trainers and other small service businesses",
+  "brief": {
+    "offer": "booking software for dog groomers and pet salons (a new industry page)",
+    "landing_page": "https://www.example.com/industries/pet-groomers/",
+    "daily_budget": 30,
+    "locations": "copy the Generic - Booking software campaign"
+  },
+  "data_pulled": {
+    "campaigns": [
+      {
+        "Id": "410000001",
+        "Name": "Brand",
+        "Status": "Active",
+        "CampaignType": "Search",
+        "BudgetId": null,
+        "DailyBudget": 20,
+        "BudgetType": "DailyBudgetStandard",
+        "TimeZone": "EasternTimeUSCanada",
+        "BiddingScheme": "EnhancedCpc"
+      },
+      {
+        "Id": "410000002",
+        "Name": "Generic - Booking software",
+        "Status": "Active",
+        "CampaignType": "Search",
+        "BudgetId": null,
+        "DailyBudget": 90,
+        "BudgetType": "DailyBudgetStandard",
+        "TimeZone": "EasternTimeUSCanada",
+        "BiddingScheme": "EnhancedCpc"
+      },
+      {
+        "Id": "410000003",
+        "Name": "Industries - Salons and fitness",
+        "Status": "Active",
+        "CampaignType": "Search",
+        "BudgetId": "9100000000001",
+        "DailyBudget": 80,
+        "BudgetType": "DailyBudgetStandard",
+        "TimeZone": "EasternTimeUSCanada",
+        "BiddingScheme": "EnhancedCpc"
+      },
+      {
+        "Id": "410000004",
+        "Name": "Features - Reminders and payments",
+        "Status": "Active",
+        "CampaignType": "Search",
+        "BudgetId": "9100000000001",
+        "DailyBudget": 80,
+        "BudgetType": "DailyBudgetStandard",
+        "TimeZone": "EasternTimeUSCanada",
+        "BiddingScheme": "EnhancedCpc"
+      }
+    ],
+    "budgets": [
+      {
+        "Id": "9100000000001",
+        "Name": "Industries and features",
+        "Amount": 80,
+        "BudgetType": "DailyBudgetStandard",
+        "AssociationCount": 2
+      },
+      {
+        "Id": "9100000000002",
+        "Name": "Holiday promo 2025",
+        "Amount": 15,
+        "BudgetType": "DailyBudgetStandard",
+        "AssociationCount": 0
+      }
+    ],
+    "ad_groups": [
+      {
+        "Id": "1310000000011",
+        "CampaignId": "410000001",
+        "Name": "Brand terms",
+        "Status": "Active",
+        "CpcBid": 1.5
+      },
+      {
+        "Id": "1310000000021",
+        "CampaignId": "410000002",
+        "Name": "Booking software",
+        "Status": "Active",
+        "CpcBid": 2.6
+      },
+      {
+        "Id": "1310000000022",
+        "CampaignId": "410000002",
+        "Name": "Appointment scheduling",
+        "Status": "Active",
+        "CpcBid": 2.75
+      },
+      {
+        "Id": "1310000000031",
+        "CampaignId": "410000003",
+        "Name": "Salons",
+        "Status": "Active",
+        "CpcBid": 2.45
+      },
+      {
+        "Id": "1310000000032",
+        "CampaignId": "410000003",
+        "Name": "Fitness",
+        "Status": "Active",
+        "CpcBid": 2.2
+      },
+      {
+        "Id": "1310000000041",
+        "CampaignId": "410000004",
+        "Name": "Reminders",
+        "Status": "Active",
+        "CpcBid": 2.0
+      },
+      {
+        "Id": "1310000000042",
+        "CampaignId": "410000004",
+        "Name": "Payments",
+        "Status": "Active",
+        "CpcBid": 2.0
+      }
+    ],
+    "keywords": [
+      {
+        "Id": "8100000000001",
+        "AdGroupId": "1310000000011",
+        "Text": "example booking software",
+        "MatchType": "Phrase",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": null
+      },
+      {
+        "Id": "8100000000002",
+        "AdGroupId": "1310000000011",
+        "Text": "example booking",
+        "MatchType": "Exact",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": null
+      },
+      {
+        "Id": "8100000000003",
+        "AdGroupId": "1310000000011",
+        "Text": "example booking login",
+        "MatchType": "Exact",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": null
+      },
+      {
+        "Id": "8100000000004",
+        "AdGroupId": "1310000000021",
+        "Text": "online booking software",
+        "MatchType": "Phrase",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": 2.9
+      },
+      {
+        "Id": "8100000000005",
+        "AdGroupId": "1310000000021",
+        "Text": "booking software for small business",
+        "MatchType": "Phrase",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": null
+      },
+      {
+        "Id": "8100000000006",
+        "AdGroupId": "1310000000021",
+        "Text": "booking app",
+        "MatchType": "Broad",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": null
+      },
+      {
+        "Id": "8100000000007",
+        "AdGroupId": "1310000000021",
+        "Text": "online calendar",
+        "MatchType": "Broad",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": null
+      },
+      {
+        "Id": "8100000000008",
+        "AdGroupId": "1310000000022",
+        "Text": "appointment scheduling software",
+        "MatchType": "Phrase",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": 3.0
+      },
+      {
+        "Id": "8100000000009",
+        "AdGroupId": "1310000000022",
+        "Text": "appointment scheduling app",
+        "MatchType": "Phrase",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": null
+      },
+      {
+        "Id": "8100000000010",
+        "AdGroupId": "1310000000022",
+        "Text": "staff scheduling",
+        "MatchType": "Broad",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": null
+      },
+      {
+        "Id": "8100000000011",
+        "AdGroupId": "1310000000022",
+        "Text": "schedule appointments online",
+        "MatchType": "Phrase",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": null
+      },
+      {
+        "Id": "8100000000012",
+        "AdGroupId": "1310000000022",
+        "Text": "booking page builder",
+        "MatchType": "Exact",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": null
+      },
+      {
+        "Id": "8100000000013",
+        "AdGroupId": "1310000000031",
+        "Text": "salon booking software",
+        "MatchType": "Phrase",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": null
+      },
+      {
+        "Id": "8100000000014",
+        "AdGroupId": "1310000000031",
+        "Text": "salon booking system",
+        "MatchType": "Phrase",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": null
+      },
+      {
+        "Id": "8100000000015",
+        "AdGroupId": "1310000000031",
+        "Text": "salon appointment",
+        "MatchType": "Broad",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": null
+      },
+      {
+        "Id": "8100000000016",
+        "AdGroupId": "1310000000031",
+        "Text": "booking calendar for salons",
+        "MatchType": "Phrase",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": null
+      },
+      {
+        "Id": "8100000000017",
+        "AdGroupId": "1310000000032",
+        "Text": "fitness class booking software",
+        "MatchType": "Phrase",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": null
+      },
+      {
+        "Id": "8100000000018",
+        "AdGroupId": "1310000000032",
+        "Text": "gym booking system",
+        "MatchType": "Phrase",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": null
+      },
+      {
+        "Id": "8100000000019",
+        "AdGroupId": "1310000000032",
+        "Text": "class schedule",
+        "MatchType": "Broad",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": null
+      },
+      {
+        "Id": "8100000000020",
+        "AdGroupId": "1310000000041",
+        "Text": "appointment reminder software",
+        "MatchType": "Phrase",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": null
+      },
+      {
+        "Id": "8100000000021",
+        "AdGroupId": "1310000000041",
+        "Text": "sms appointment reminders",
+        "MatchType": "Phrase",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": null
+      },
+      {
+        "Id": "8100000000022",
+        "AdGroupId": "1310000000041",
+        "Text": "appointment reminder",
+        "MatchType": "Broad",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": null
+      },
+      {
+        "Id": "8100000000023",
+        "AdGroupId": "1310000000042",
+        "Text": "deposit booking software",
+        "MatchType": "Phrase",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": null
+      },
+      {
+        "Id": "8100000000024",
+        "AdGroupId": "1310000000042",
+        "Text": "online booking with payments",
+        "MatchType": "Phrase",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": null
+      },
+      {
+        "Id": "8100000000025",
+        "AdGroupId": "1310000000042",
+        "Text": "no show fee software",
+        "MatchType": "Exact",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "Bid": null
+      }
+    ],
+    "responsive_search_ads": [
+      {
+        "Id": "7100000000011",
+        "AdGroupId": "1310000000011",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "headlines": 12,
+        "descriptions": 4,
+        "labels": {
+          "Best": 3,
+          "Good": 9,
+          "Unrated": 4
+        },
+        "keyword_insertion": [],
+        "low": []
+      },
+      {
+        "Id": "7100000000021",
+        "AdGroupId": "1310000000021",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "headlines": 15,
+        "descriptions": 4,
+        "labels": {
+          "Best": 2,
+          "Good": 15,
+          "Unrated": 2
+        },
+        "keyword_insertion": [
+          "{KeyWord:Online Booking Software}"
+        ],
+        "low": []
+      },
+      {
+        "Id": "7100000000022",
+        "AdGroupId": "1310000000022",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "headlines": 15,
+        "descriptions": 4,
+        "labels": {
+          "Best": 1,
+          "Good": 16,
+          "Unrated": 2
+        },
+        "keyword_insertion": [
+          "{KeyWord:Scheduling Software}"
+        ],
+        "low": []
+      },
+      {
+        "Id": "7100000000031",
+        "AdGroupId": "1310000000031",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "headlines": 14,
+        "descriptions": 3,
+        "labels": {
+          "Good": 15,
+          "Unrated": 2
+        },
+        "keyword_insertion": [],
+        "low": []
+      },
+      {
+        "Id": "7100000000032",
+        "AdGroupId": "1310000000032",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "headlines": 11,
+        "descriptions": 2,
+        "labels": {
+          "Good": 9,
+          "Low": 2,
+          "Unrated": 2
+        },
+        "keyword_insertion": [],
+        "low": [
+          "Gym Software Since 2019",
+          "The Smart Choice for Studios"
+        ]
+      },
+      {
+        "Id": "7100000000041",
+        "AdGroupId": "1310000000041",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "headlines": 15,
+        "descriptions": 4,
+        "labels": {
+          "Good": 17,
+          "Unrated": 2
+        },
+        "keyword_insertion": [],
+        "low": []
+      },
+      {
+        "Id": "7100000000042",
+        "AdGroupId": "1310000000042",
+        "Status": "Active",
+        "EditorialStatus": "Active",
+        "headlines": 15,
+        "descriptions": 4,
+        "labels": {
+          "Good": 12,
+          "Unrated": 7
+        },
+        "keyword_insertion": [],
+        "low": []
+      }
+    ],
+    "conversion_goals": [
+      {
+        "Id": "6200000110",
+        "Name": "Account created",
+        "Type": "Url",
+        "Status": "Active",
+        "TrackingStatus": "RecordingConversions",
+        "UrlExpression": "example.com/signup/welcome"
+      },
+      {
+        "Id": "6200000120",
+        "Name": "Demo booked",
+        "Type": "Event",
+        "Status": "Active",
+        "TrackingStatus": "RecordingConversions"
+      },
+      {
+        "Id": "6200000130",
+        "Name": "Newsletter signup (old)",
+        "Type": "Url",
+        "Status": "Paused",
+        "TrackingStatus": "TagInactive",
+        "UrlExpression": "example.com/newsletter/thanks"
+      }
+    ],
+    "campaign_report": [
+      {
+        "CampaignId": "410000001",
+        "CampaignName": "Brand",
+        "CampaignStatus": "Active",
+        "CurrencyCode": "USD",
+        "Impressions": 3300,
+        "Clicks": 760,
+        "Spend": 551.2,
+        "Conversions": 45,
+        "AverageCpc": 0.73,
+        "ImpressionSharePercent": 92.4,
+        "ImpressionLostToBudgetPercent": 0.0,
+        "ImpressionLostToRankAggPercent": 7.6
+      },
+      {
+        "CampaignId": "410000002",
+        "CampaignName": "Generic - Booking software",
+        "CampaignStatus": "Active",
+        "CurrencyCode": "USD",
+        "Impressions": 26000,
+        "Clicks": 1049,
+        "Spend": 2650.4,
+        "Conversions": 53,
+        "AverageCpc": 2.53,
+        "ImpressionSharePercent": 41.3,
+        "ImpressionLostToBudgetPercent": 22.4,
+        "ImpressionLostToRankAggPercent": 36.3
+      },
+      {
+        "CampaignId": "410000003",
+        "CampaignName": "Industries - Salons and fitness",
+        "CampaignStatus": "Active",
+        "CurrencyCode": "USD",
+        "Impressions": 20000,
+        "Clicks": 671,
+        "Spend": 1361.9,
+        "Conversions": 14,
+        "AverageCpc": 2.03,
+        "ImpressionSharePercent": 37.8,
+        "ImpressionLostToBudgetPercent": 6.1,
+        "ImpressionLostToRankAggPercent": 56.1
+      },
+      {
+        "CampaignId": "410000004",
+        "CampaignName": "Features - Reminders and payments",
+        "CampaignStatus": "Active",
+        "CurrencyCode": "USD",
+        "Impressions": 8000,
+        "Clicks": 263,
+        "Spend": 489.4,
+        "Conversions": 12,
+        "AverageCpc": 1.86,
+        "ImpressionSharePercent": 33.2,
+        "ImpressionLostToBudgetPercent": 8.4,
+        "ImpressionLostToRankAggPercent": 58.4
+      }
+    ],
+    "keyword_report": [
+      {
+        "CampaignId": "410000001",
+        "AdGroupId": "1310000000011",
+        "KeywordId": "8100000000001",
+        "Keyword": "example booking software",
+        "KeywordStatus": "Active",
+        "BidMatchType": "Phrase",
+        "CurrentMaxCpc": 1.5,
+        "Impressions": 1800,
+        "Clicks": 410,
+        "Spend": 287.0,
+        "Conversions": 31,
+        "QualityScore": "10"
+      },
+      {
+        "CampaignId": "410000001",
+        "AdGroupId": "1310000000011",
+        "KeywordId": "8100000000002",
+        "Keyword": "example booking",
+        "KeywordStatus": "Active",
+        "BidMatchType": "Exact",
+        "CurrentMaxCpc": 1.5,
+        "Impressions": 900,
+        "Clicks": 190,
+        "Spend": 133.0,
+        "Conversions": 14,
+        "QualityScore": "10"
+      },
+      {
+        "CampaignId": "410000001",
+        "AdGroupId": "1310000000011",
+        "KeywordId": "8100000000003",
+        "Keyword": "example booking login",
+        "KeywordStatus": "Active",
+        "BidMatchType": "Exact",
+        "CurrentMaxCpc": 1.5,
+        "Impressions": 600,
+        "Clicks": 160,
+        "Spend": 131.2,
+        "Conversions": 0,
+        "QualityScore": "9"
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000021",
+        "KeywordId": "8100000000004",
+        "Keyword": "online booking software",
+        "KeywordStatus": "Active",
+        "BidMatchType": "Phrase",
+        "CurrentMaxCpc": 2.9,
+        "Impressions": 5200,
+        "Clicks": 260,
+        "Spend": 702.0,
+        "Conversions": 17,
+        "QualityScore": "7"
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000021",
+        "KeywordId": "8100000000005",
+        "Keyword": "booking software for small business",
+        "KeywordStatus": "Active",
+        "BidMatchType": "Phrase",
+        "CurrentMaxCpc": 2.6,
+        "Impressions": 2100,
+        "Clicks": 118,
+        "Spend": 330.4,
+        "Conversions": 9,
+        "QualityScore": "8"
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000021",
+        "KeywordId": "8100000000006",
+        "Keyword": "booking app",
+        "KeywordStatus": "Active",
+        "BidMatchType": "Broad",
+        "CurrentMaxCpc": 2.6,
+        "Impressions": 6400,
+        "Clicks": 240,
+        "Spend": 528.0,
+        "Conversions": 8,
+        "QualityScore": "6"
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000021",
+        "KeywordId": "8100000000007",
+        "Keyword": "online calendar",
+        "KeywordStatus": "Active",
+        "BidMatchType": "Broad",
+        "CurrentMaxCpc": 2.6,
+        "Impressions": 3900,
+        "Clicks": 95,
+        "Spend": 209.0,
+        "Conversions": 1,
+        "QualityScore": "5"
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000022",
+        "KeywordId": "8100000000008",
+        "Keyword": "appointment scheduling software",
+        "KeywordStatus": "Active",
+        "BidMatchType": "Phrase",
+        "CurrentMaxCpc": 3.0,
+        "Impressions": 4300,
+        "Clicks": 205,
+        "Spend": 553.5,
+        "Conversions": 14,
+        "QualityScore": "8"
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000022",
+        "KeywordId": "8100000000009",
+        "Keyword": "appointment scheduling app",
+        "KeywordStatus": "Active",
+        "BidMatchType": "Phrase",
+        "CurrentMaxCpc": 2.75,
+        "Impressions": 1500,
+        "Clicks": 70,
+        "Spend": 175.0,
+        "Conversions": 4,
+        "QualityScore": "7"
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000022",
+        "KeywordId": "8100000000010",
+        "Keyword": "staff scheduling",
+        "KeywordStatus": "Active",
+        "BidMatchType": "Broad",
+        "CurrentMaxCpc": 2.75,
+        "Impressions": 2600,
+        "Clicks": 61,
+        "Spend": 152.5,
+        "Conversions": 0,
+        "QualityScore": "5"
+      },
+      {
+        "CampaignId": "410000003",
+        "AdGroupId": "1310000000031",
+        "KeywordId": "8100000000013",
+        "Keyword": "salon booking software",
+        "KeywordStatus": "Active",
+        "BidMatchType": "Phrase",
+        "CurrentMaxCpc": 2.45,
+        "Impressions": 2900,
+        "Clicks": 150,
+        "Spend": 405.0,
+        "Conversions": 7,
+        "QualityScore": "8"
+      },
+      {
+        "CampaignId": "410000003",
+        "AdGroupId": "1310000000031",
+        "KeywordId": "8100000000014",
+        "Keyword": "salon booking system",
+        "KeywordStatus": "Active",
+        "BidMatchType": "Phrase",
+        "CurrentMaxCpc": 2.45,
+        "Impressions": 1200,
+        "Clicks": 52,
+        "Spend": 135.2,
+        "Conversions": 1,
+        "QualityScore": "7"
+      },
+      {
+        "CampaignId": "410000003",
+        "AdGroupId": "1310000000031",
+        "KeywordId": "8100000000015",
+        "Keyword": "salon appointment",
+        "KeywordStatus": "Active",
+        "BidMatchType": "Broad",
+        "CurrentMaxCpc": 2.45,
+        "Impressions": 7800,
+        "Clicks": 230,
+        "Spend": 398.0,
+        "Conversions": 0,
+        "QualityScore": "4"
+      },
+      {
+        "CampaignId": "410000003",
+        "AdGroupId": "1310000000032",
+        "KeywordId": "8100000000017",
+        "Keyword": "fitness class booking software",
+        "KeywordStatus": "Active",
+        "BidMatchType": "Phrase",
+        "CurrentMaxCpc": 2.2,
+        "Impressions": 1100,
+        "Clicks": 58,
+        "Spend": 133.4,
+        "Conversions": 3,
+        "QualityScore": "8"
+      },
+      {
+        "CampaignId": "410000003",
+        "AdGroupId": "1310000000032",
+        "KeywordId": "8100000000018",
+        "Keyword": "gym booking system",
+        "KeywordStatus": "Active",
+        "BidMatchType": "Phrase",
+        "CurrentMaxCpc": 2.2,
+        "Impressions": 900,
+        "Clicks": 41,
+        "Spend": 94.3,
+        "Conversions": 2,
+        "QualityScore": "7"
+      },
+      {
+        "CampaignId": "410000003",
+        "AdGroupId": "1310000000032",
+        "KeywordId": "8100000000019",
+        "Keyword": "class schedule",
+        "KeywordStatus": "Active",
+        "BidMatchType": "Broad",
+        "CurrentMaxCpc": 2.2,
+        "Impressions": 6100,
+        "Clicks": 140,
+        "Spend": 196.0,
+        "Conversions": 1,
+        "QualityScore": "4"
+      },
+      {
+        "CampaignId": "410000004",
+        "AdGroupId": "1310000000041",
+        "KeywordId": "8100000000020",
+        "Keyword": "appointment reminder software",
+        "KeywordStatus": "Active",
+        "BidMatchType": "Phrase",
+        "CurrentMaxCpc": 2.0,
+        "Impressions": 1600,
+        "Clicks": 66,
+        "Spend": 145.2,
+        "Conversions": 4,
+        "QualityScore": "7"
+      },
+      {
+        "CampaignId": "410000004",
+        "AdGroupId": "1310000000041",
+        "KeywordId": "8100000000021",
+        "Keyword": "sms appointment reminders",
+        "KeywordStatus": "Active",
+        "BidMatchType": "Phrase",
+        "CurrentMaxCpc": 2.0,
+        "Impressions": 1300,
+        "Clicks": 52,
+        "Spend": 98.8,
+        "Conversions": 2,
+        "QualityScore": "6"
+      },
+      {
+        "CampaignId": "410000004",
+        "AdGroupId": "1310000000041",
+        "KeywordId": "8100000000022",
+        "Keyword": "appointment reminder",
+        "KeywordStatus": "Active",
+        "BidMatchType": "Broad",
+        "CurrentMaxCpc": 2.0,
+        "Impressions": 3400,
+        "Clicks": 70,
+        "Spend": 91.0,
+        "Conversions": 1,
+        "QualityScore": "5"
+      },
+      {
+        "CampaignId": "410000004",
+        "AdGroupId": "1310000000042",
+        "KeywordId": "8100000000023",
+        "Keyword": "deposit booking software",
+        "KeywordStatus": "Active",
+        "BidMatchType": "Phrase",
+        "CurrentMaxCpc": 2.0,
+        "Impressions": 700,
+        "Clicks": 31,
+        "Spend": 62.0,
+        "Conversions": 2,
+        "QualityScore": "7"
+      },
+      {
+        "CampaignId": "410000004",
+        "AdGroupId": "1310000000042",
+        "KeywordId": "8100000000024",
+        "Keyword": "online booking with payments",
+        "KeywordStatus": "Active",
+        "BidMatchType": "Phrase",
+        "CurrentMaxCpc": 2.0,
+        "Impressions": 1000,
+        "Clicks": 44,
+        "Spend": 92.4,
+        "Conversions": 3,
+        "QualityScore": "7"
+      }
+    ],
+    "search_query_report": [
+      {
+        "CampaignId": "410000001",
+        "AdGroupId": "1310000000011",
+        "SearchQuery": "example booking software",
+        "Keyword": "example booking software",
+        "KeywordId": "8100000000001",
+        "DeliveredMatchType": "Exact",
+        "Impressions": 1100,
+        "Clicks": 262,
+        "Spend": 183.4,
+        "Conversions": 22
+      },
+      {
+        "CampaignId": "410000001",
+        "AdGroupId": "1310000000011",
+        "SearchQuery": "example booking software pricing",
+        "Keyword": "example booking software",
+        "KeywordId": "8100000000001",
+        "DeliveredMatchType": "Phrase",
+        "Impressions": 310,
+        "Clicks": 78,
+        "Spend": 54.6,
+        "Conversions": 6
+      },
+      {
+        "CampaignId": "410000001",
+        "AdGroupId": "1310000000011",
+        "SearchQuery": "example booking",
+        "Keyword": "example booking",
+        "KeywordId": "8100000000002",
+        "DeliveredMatchType": "Exact",
+        "Impressions": 840,
+        "Clicks": 178,
+        "Spend": 124.6,
+        "Conversions": 13
+      },
+      {
+        "CampaignId": "410000001",
+        "AdGroupId": "1310000000011",
+        "SearchQuery": "example booking login",
+        "Keyword": "example booking login",
+        "KeywordId": "8100000000003",
+        "DeliveredMatchType": "Exact",
+        "Impressions": 600,
+        "Clicks": 160,
+        "Spend": 131.2,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000021",
+        "SearchQuery": "online booking software",
+        "Keyword": "online booking software",
+        "KeywordId": "8100000000004",
+        "DeliveredMatchType": "Exact",
+        "Impressions": 2600,
+        "Clicks": 128,
+        "Spend": 345.6,
+        "Conversions": 9
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000021",
+        "SearchQuery": "online booking software for small business",
+        "Keyword": "online booking software",
+        "KeywordId": "8100000000004",
+        "DeliveredMatchType": "Phrase",
+        "Impressions": 900,
+        "Clicks": 41,
+        "Spend": 110.7,
+        "Conversions": 3
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000021",
+        "SearchQuery": "best online booking software",
+        "Keyword": "online booking software",
+        "KeywordId": "8100000000004",
+        "DeliveredMatchType": "Phrase",
+        "Impressions": 640,
+        "Clicks": 33,
+        "Spend": 89.1,
+        "Conversions": 2
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000021",
+        "SearchQuery": "online booking software reviews",
+        "Keyword": "online booking software",
+        "KeywordId": "8100000000004",
+        "DeliveredMatchType": "Phrase",
+        "Impressions": 35,
+        "Clicks": 0,
+        "Spend": 0.0,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000021",
+        "SearchQuery": "booking software for small business",
+        "Keyword": "booking software for small business",
+        "KeywordId": "8100000000005",
+        "DeliveredMatchType": "Exact",
+        "Impressions": 1500,
+        "Clicks": 84,
+        "Spend": 235.2,
+        "Conversions": 7
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000021",
+        "SearchQuery": "booking app",
+        "Keyword": "booking app",
+        "KeywordId": "8100000000006",
+        "DeliveredMatchType": "Exact",
+        "Impressions": 1400,
+        "Clicks": 62,
+        "Spend": 136.4,
+        "Conversions": 2
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000021",
+        "SearchQuery": "dog grooming booking app",
+        "Keyword": "booking app",
+        "KeywordId": "8100000000006",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 520,
+        "Clicks": 31,
+        "Spend": 86.8,
+        "Conversions": 4
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000021",
+        "SearchQuery": "booking app for dog groomers",
+        "Keyword": "booking app",
+        "KeywordId": "8100000000006",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 380,
+        "Clicks": 15,
+        "Spend": 41.25,
+        "Conversions": 2
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000021",
+        "SearchQuery": "restaurant reservation system",
+        "Keyword": "booking app",
+        "KeywordId": "8100000000006",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 900,
+        "Clicks": 9,
+        "Spend": 38.7,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000021",
+        "SearchQuery": "physio booking system",
+        "Keyword": "booking app",
+        "KeywordId": "8100000000006",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 260,
+        "Clicks": 11,
+        "Spend": 31.9,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000021",
+        "SearchQuery": "hotel booking software",
+        "Keyword": "booking app",
+        "KeywordId": "8100000000006",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 700,
+        "Clicks": 7,
+        "Spend": 29.4,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000021",
+        "SearchQuery": "printable appointment book",
+        "Keyword": "booking app",
+        "KeywordId": "8100000000006",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 650,
+        "Clicks": 12,
+        "Spend": 19.2,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000021",
+        "SearchQuery": "bookfinch pricing",
+        "Keyword": "booking app",
+        "KeywordId": "8100000000006",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 120,
+        "Clicks": 4,
+        "Spend": 14.4,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000021",
+        "SearchQuery": "slotmoth login",
+        "Keyword": "booking app",
+        "KeywordId": "8100000000006",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 90,
+        "Clicks": 3,
+        "Spend": 6.6,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000021",
+        "SearchQuery": "online calendar booking",
+        "Keyword": "online calendar",
+        "KeywordId": "8100000000007",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 900,
+        "Clicks": 26,
+        "Spend": 62.4,
+        "Conversions": 1
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000021",
+        "SearchQuery": "online appointment calendar",
+        "Keyword": "online calendar",
+        "KeywordId": "8100000000007",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 700,
+        "Clicks": 20,
+        "Spend": 48.0,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000021",
+        "SearchQuery": "shared online calendar",
+        "Keyword": "online calendar",
+        "KeywordId": "8100000000007",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 1100,
+        "Clicks": 17,
+        "Spend": 40.8,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000022",
+        "SearchQuery": "appointment scheduling software",
+        "Keyword": "appointment scheduling software",
+        "KeywordId": "8100000000008",
+        "DeliveredMatchType": "Exact",
+        "Impressions": 2200,
+        "Clicks": 104,
+        "Spend": 280.8,
+        "Conversions": 7
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000022",
+        "SearchQuery": "appointment scheduling software for clinics",
+        "Keyword": "appointment scheduling software",
+        "KeywordId": "8100000000008",
+        "DeliveredMatchType": "Phrase",
+        "Impressions": 600,
+        "Clicks": 30,
+        "Spend": 81.0,
+        "Conversions": 2
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000022",
+        "SearchQuery": "pet grooming appointment scheduling software",
+        "Keyword": "appointment scheduling software",
+        "KeywordId": "8100000000008",
+        "DeliveredMatchType": "Phrase",
+        "Impressions": 410,
+        "Clicks": 22,
+        "Spend": 58.3,
+        "Conversions": 3
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000022",
+        "SearchQuery": "appointment scheduling app",
+        "Keyword": "appointment scheduling app",
+        "KeywordId": "8100000000009",
+        "DeliveredMatchType": "Exact",
+        "Impressions": 1100,
+        "Clicks": 52,
+        "Spend": 130.0,
+        "Conversions": 3
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000022",
+        "SearchQuery": "employee scheduling software",
+        "Keyword": "staff scheduling",
+        "KeywordId": "8100000000010",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 900,
+        "Clicks": 21,
+        "Spend": 52.5,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000022",
+        "SearchQuery": "shift scheduling app",
+        "Keyword": "staff scheduling",
+        "KeywordId": "8100000000010",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 700,
+        "Clicks": 16,
+        "Spend": 40.0,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000022",
+        "SearchQuery": "staff rota app",
+        "Keyword": "staff scheduling",
+        "KeywordId": "8100000000010",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 500,
+        "Clicks": 12,
+        "Spend": 30.0,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000002",
+        "AdGroupId": "1310000000022",
+        "SearchQuery": "staff scheduling and client booking",
+        "Keyword": "staff scheduling",
+        "KeywordId": "8100000000010",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 150,
+        "Clicks": 3,
+        "Spend": 7.5,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000003",
+        "AdGroupId": "1310000000031",
+        "SearchQuery": "salon booking software",
+        "Keyword": "salon booking software",
+        "KeywordId": "8100000000013",
+        "DeliveredMatchType": "Exact",
+        "Impressions": 1800,
+        "Clicks": 96,
+        "Spend": 259.2,
+        "Conversions": 5
+      },
+      {
+        "CampaignId": "410000003",
+        "AdGroupId": "1310000000031",
+        "SearchQuery": "hair salon booking software",
+        "Keyword": "salon booking software",
+        "KeywordId": "8100000000013",
+        "DeliveredMatchType": "Phrase",
+        "Impressions": 600,
+        "Clicks": 29,
+        "Spend": 78.3,
+        "Conversions": 2
+      },
+      {
+        "CampaignId": "410000003",
+        "AdGroupId": "1310000000031",
+        "SearchQuery": "salon booking system",
+        "Keyword": "salon booking system",
+        "KeywordId": "8100000000014",
+        "DeliveredMatchType": "Exact",
+        "Impressions": 900,
+        "Clicks": 40,
+        "Spend": 104.0,
+        "Conversions": 1
+      },
+      {
+        "CampaignId": "410000003",
+        "AdGroupId": "1310000000031",
+        "SearchQuery": "book salon appointment near me",
+        "Keyword": "salon appointment",
+        "KeywordId": "8100000000015",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 2900,
+        "Clicks": 74,
+        "Spend": 118.4,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000003",
+        "AdGroupId": "1310000000031",
+        "SearchQuery": "hair salon appointment online",
+        "Keyword": "salon appointment",
+        "KeywordId": "8100000000015",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 2100,
+        "Clicks": 61,
+        "Spend": 97.6,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000003",
+        "AdGroupId": "1310000000031",
+        "SearchQuery": "nail salon appointment",
+        "Keyword": "salon appointment",
+        "KeywordId": "8100000000015",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 1400,
+        "Clicks": 45,
+        "Spend": 72.0,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000003",
+        "AdGroupId": "1310000000031",
+        "SearchQuery": "salon appointment app",
+        "Keyword": "salon appointment",
+        "KeywordId": "8100000000015",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 600,
+        "Clicks": 22,
+        "Spend": 35.2,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000003",
+        "AdGroupId": "1310000000031",
+        "SearchQuery": "massage appointment near me",
+        "Keyword": "salon appointment",
+        "KeywordId": "8100000000015",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 40,
+        "Clicks": 0,
+        "Spend": 0.0,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000003",
+        "AdGroupId": "1310000000032",
+        "SearchQuery": "fitness class booking software",
+        "Keyword": "fitness class booking software",
+        "KeywordId": "8100000000017",
+        "DeliveredMatchType": "Exact",
+        "Impressions": 800,
+        "Clicks": 44,
+        "Spend": 101.2,
+        "Conversions": 3
+      },
+      {
+        "CampaignId": "410000003",
+        "AdGroupId": "1310000000032",
+        "SearchQuery": "gym booking system",
+        "Keyword": "gym booking system",
+        "KeywordId": "8100000000018",
+        "DeliveredMatchType": "Exact",
+        "Impressions": 700,
+        "Clicks": 33,
+        "Spend": 75.9,
+        "Conversions": 2
+      },
+      {
+        "CampaignId": "410000003",
+        "AdGroupId": "1310000000032",
+        "SearchQuery": "yoga class schedule near me",
+        "Keyword": "class schedule",
+        "KeywordId": "8100000000019",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 2400,
+        "Clicks": 46,
+        "Spend": 64.4,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000003",
+        "AdGroupId": "1310000000032",
+        "SearchQuery": "gym class schedule",
+        "Keyword": "class schedule",
+        "KeywordId": "8100000000019",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 1900,
+        "Clicks": 38,
+        "Spend": 53.2,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000003",
+        "AdGroupId": "1310000000032",
+        "SearchQuery": "spin class schedule today",
+        "Keyword": "class schedule",
+        "KeywordId": "8100000000019",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 1100,
+        "Clicks": 24,
+        "Spend": 33.6,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000003",
+        "AdGroupId": "1310000000032",
+        "SearchQuery": "class schedule app for studios",
+        "Keyword": "class schedule",
+        "KeywordId": "8100000000019",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 400,
+        "Clicks": 9,
+        "Spend": 21.6,
+        "Conversions": 1
+      },
+      {
+        "CampaignId": "410000004",
+        "AdGroupId": "1310000000041",
+        "SearchQuery": "appointment reminder software",
+        "Keyword": "appointment reminder software",
+        "KeywordId": "8100000000020",
+        "DeliveredMatchType": "Exact",
+        "Impressions": 1200,
+        "Clicks": 50,
+        "Spend": 110.0,
+        "Conversions": 3
+      },
+      {
+        "CampaignId": "410000004",
+        "AdGroupId": "1310000000041",
+        "SearchQuery": "sms appointment reminders",
+        "Keyword": "sms appointment reminders",
+        "KeywordId": "8100000000021",
+        "DeliveredMatchType": "Exact",
+        "Impressions": 1000,
+        "Clicks": 40,
+        "Spend": 76.0,
+        "Conversions": 2
+      },
+      {
+        "CampaignId": "410000004",
+        "AdGroupId": "1310000000041",
+        "SearchQuery": "appointment reminder card template",
+        "Keyword": "appointment reminder",
+        "KeywordId": "8100000000022",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 1200,
+        "Clicks": 27,
+        "Spend": 35.1,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000004",
+        "AdGroupId": "1310000000041",
+        "SearchQuery": "appointment reminder system",
+        "Keyword": "appointment reminder",
+        "KeywordId": "8100000000022",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 500,
+        "Clicks": 15,
+        "Spend": 19.5,
+        "Conversions": 1
+      },
+      {
+        "CampaignId": "410000004",
+        "AdGroupId": "1310000000041",
+        "SearchQuery": "doctor appointment reminder app",
+        "Keyword": "appointment reminder",
+        "KeywordId": "8100000000022",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 600,
+        "Clicks": 12,
+        "Spend": 15.6,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000004",
+        "AdGroupId": "1310000000041",
+        "SearchQuery": "appointment reminder text template",
+        "Keyword": "appointment reminder",
+        "KeywordId": "8100000000022",
+        "DeliveredMatchType": "Broad",
+        "Impressions": 300,
+        "Clicks": 6,
+        "Spend": 8.4,
+        "Conversions": 0
+      },
+      {
+        "CampaignId": "410000004",
+        "AdGroupId": "1310000000042",
+        "SearchQuery": "deposit booking software",
+        "Keyword": "deposit booking software",
+        "KeywordId": "8100000000023",
+        "DeliveredMatchType": "Exact",
+        "Impressions": 600,
+        "Clicks": 27,
+        "Spend": 54.0,
+        "Conversions": 2
+      },
+      {
+        "CampaignId": "410000004",
+        "AdGroupId": "1310000000042",
+        "SearchQuery": "online booking with payments",
+        "Keyword": "online booking with payments",
+        "KeywordId": "8100000000024",
+        "DeliveredMatchType": "Exact",
+        "Impressions": 800,
+        "Clicks": 36,
+        "Spend": 75.6,
+        "Conversions": 3
+      }
+    ],
+    "campaign_negatives": [
+      {
+        "campaign_id": "410000001",
+        "text": "jobs",
+        "match_type": "Phrase"
+      },
+      {
+        "campaign_id": "410000002",
+        "text": "jobs",
+        "match_type": "Phrase"
+      },
+      {
+        "campaign_id": "410000002",
+        "text": "receptionist",
+        "match_type": "Phrase"
+      },
+      {
+        "campaign_id": "410000002",
+        "text": "template",
+        "match_type": "Phrase"
+      },
+      {
+        "campaign_id": "410000003",
+        "text": "jobs",
+        "match_type": "Phrase"
+      },
+      {
+        "campaign_id": "410000003",
+        "text": "course",
+        "match_type": "Phrase"
+      },
+      {
+        "campaign_id": "410000003",
+        "text": "calendar",
+        "match_type": "Phrase"
+      },
+      {
+        "campaign_id": "410000004",
+        "text": "jobs",
+        "match_type": "Phrase"
+      }
+    ],
+    "ad_group_negatives": "error: entity_type AdGroup isn't supported through this connection",
+    "shared_negative_lists": [
+      {
+        "Id": "9200000000001",
+        "Name": "Account negatives",
+        "attached_to": [
+          "410000002",
+          "410000003",
+          "410000004"
+        ],
+        "items": [
+          {
+            "Text": "careers",
+            "MatchType": "Phrase"
+          },
+          {
+            "Text": "salary",
+            "MatchType": "Phrase"
+          },
+          {
+            "Text": "training",
+            "MatchType": "Phrase"
+          }
+        ]
+      }
+    ],
+    "location_criterions": {
+      "campaign_id": "410000002",
+      "locations": [
+        {
+          "LocationId": "190",
+          "Name": "United States",
+          "Multiplier": 0
+        },
+        {
+          "LocationId": "32",
+          "Name": "Canada",
+          "Multiplier": -10
+        }
+      ]
+    },
+    "landing_page": {
+      "url": "https://www.example.com/industries/pet-groomers/",
+      "title": "Booking software for pet groomers | Example Booking Software",
+      "meta_description": "Online booking, reminders and deposits for dog groomers and pet salons. Plans from $19 a month.",
+      "h1": "Booking software for pet groomers",
+      "lines": [
+        "Let clients book grooming appointments online, day or night.",
+        "Automatic SMS and email reminders cut no-shows.",
+        "Take a deposit when clients book.",
+        "Two-way calendar sync.",
+        "Works for grooming salons and mobile groomers.",
+        "Set up your booking page in minutes."
+      ],
+      "button": "Create your account"
+    }
+  }
+}

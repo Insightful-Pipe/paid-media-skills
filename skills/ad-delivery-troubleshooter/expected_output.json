@@ -1,0 +1,294 @@
+{
+  "header": {
+    "business": "Example Booking Software",
+    "platforms": [
+      "LinkedIn Ads",
+      "TikTok Ads",
+      "Microsoft Ads"
+    ],
+    "accounts": {
+      "linkedin-ads": "500000001",
+      "tiktok-ads": "7000000000000000001",
+      "microsoft-ads": "180000001"
+    },
+    "window": "2026-10-26 to 2026-10-29",
+    "days": 4,
+    "run_date": "2026-10-30",
+    "total_daily_budget": 220.0,
+    "average_daily_spend": 29.25,
+    "spend_share_of_budget_pct": 13.3
+  },
+  "verdicts": [
+    {
+      "platform": "LinkedIn Ads",
+      "campaign": "LI | Front desk managers | US | Sponsored Content",
+      "daily_budget": 80.0,
+      "average_daily_spend": 6.05,
+      "share_pct": 7.6,
+      "state": "throttled",
+      "reason": "Serving, but the bid is under the suggested range."
+    },
+    {
+      "platform": "TikTok Ads",
+      "campaign": "TT | Salon owners | Web conversions",
+      "daily_budget": 100.0,
+      "average_daily_spend": 9.2,
+      "share_pct": 9.2,
+      "state": "throttled",
+      "reason": "One ad group hasn't started; the other spends 13.1% of its budget under a low cost cap.",
+      "ad_groups": [
+        {
+          "ad_group": "Salon owners 25 to 44 | US",
+          "daily_budget": 70.0,
+          "average_daily_spend": 9.2,
+          "share_pct": 13.1,
+          "state": "throttled"
+        },
+        {
+          "ad_group": "Clinic front desk | US",
+          "daily_budget": 30.0,
+          "average_daily_spend": 0.0,
+          "share_pct": 0.0,
+          "state": "stopped"
+        }
+      ]
+    },
+    {
+      "platform": "Microsoft Ads",
+      "campaign": "MS | Booking software | Search",
+      "daily_budget": 40.0,
+      "average_daily_spend": 14.0,
+      "share_pct": 35.0,
+      "state": "throttled",
+      "reason": "One of the two ad groups can't serve because all its ads are disapproved.",
+      "ad_groups": [
+        {
+          "ad_group": "Online booking software",
+          "average_daily_spend": 0.0,
+          "impressions": 0,
+          "state": "stopped"
+        },
+        {
+          "ad_group": "Appointment scheduling app",
+          "average_daily_spend": 14.0,
+          "impressions": 908,
+          "state": "serving"
+        }
+      ]
+    }
+  ],
+  "ranked_causes": [
+    {
+      "rank": 1,
+      "platform": "Microsoft Ads",
+      "entity": "Ad group 'Online booking software' in 'MS | Booking software | Search'",
+      "cause": "All 3 ads in the ad group are disapproved, so the group can't serve",
+      "confidence": "confirmed",
+      "daily_budget_affected": 40.0,
+      "evidence": "get_ads: EditorialStatus Disapproved on 3 of 3 ads; report: 0 impressions on this ad group every day of 2026-10-26 to 2026-10-29. Keywords are fine: 9 of 9 have EditorialStatus Active.",
+      "fix": "Open the ads in Microsoft Advertising, read the reason in the Editorial column, edit the flagged text or request an exception, and resubmit. The bid on this group is checked after the ads are approved.",
+      "who": "do this in Microsoft Advertising"
+    },
+    {
+      "rank": 2,
+      "platform": "TikTok Ads",
+      "entity": "Ad group 'Clinic front desk | US'",
+      "cause": "The ad group is scheduled to start on 2026-11-02, so it hasn't served yet",
+      "confidence": "confirmed",
+      "daily_budget_affected": 30.0,
+      "evidence": "adgroups_metadata: secondary_status ADGROUP_STATUS_NOT_START, schedule_start_time 2026-11-02 00:00:00; report: 0 impressions in 2026-10-26 to 2026-10-29.",
+      "fix": "If 2026-11-02 was intended, nothing to do. If it was meant to launch with the rest, move schedule_start_time to today.",
+      "who": "I can do this after you confirm"
+    },
+    {
+      "rank": 3,
+      "platform": "TikTok Ads",
+      "entity": "Ad 'Salon | Before and after calendar | 20s' in 'Salon owners 25 to 44 | US'",
+      "cause": "1 of 3 ads was rejected in review; the other 2 are approved and serving, so the group keeps running with less creative to rotate",
+      "confidence": "confirmed",
+      "daily_budget_affected": 70.0,
+      "evidence": "ads_metadata: secondary_status AD_STATUS_AUDIT_DENY on ad 1800000000000503; AD_STATUS_DELIVERY_OK on the other 2.",
+      "fix": "Read the rejection reason on the ad in TikTok Ads Manager, then edit and resubmit it or replace it with a new ad.",
+      "who": "do this in TikTok Ads Manager"
+    },
+    {
+      "rank": 4,
+      "platform": "LinkedIn Ads",
+      "entity": "Campaign 'LI | Front desk managers | US | Sponsored Content'",
+      "cause": "The manual CPM bid of $38.00 is under LinkedIn's suggested range of $52.00 to $138.90 for this audience, so it wins few auctions",
+      "confidence": "likely",
+      "daily_budget_affected": 80.0,
+      "evidence": "get_campaigns: costType CPM, unitCost 38.00; get_budget_pricing for the same targeting: suggestedBid min 52.00, default 71.40, max 138.90; the bid is above the floor of 2.50, so LinkedIn accepts it but rarely picks it. Spend is 7.6% of budget.",
+      "fix": "Raise unitCost to $52.00, the low end of the suggested range.",
+      "who": "I can do this after you confirm"
+    },
+    {
+      "rank": 5,
+      "platform": "TikTok Ads",
+      "entity": "Ad group 'Salon owners 25 to 44 | US'",
+      "cause": "The cost cap of $6.00 per conversion is under TikTok's recommended bid of $14.50 for this objective and location",
+      "confidence": "likely",
+      "daily_budget_affected": 70.0,
+      "evidence": "adgroups_metadata: bid_type BID_TYPE_CUSTOM, conversion_bid_price 6.00; tool_bid_recommend (WEB_CONVERSIONS, United States): bid 14.50. The group spends 13.1% of its $70 budget.",
+      "fix": "Raise conversion_bid_price to $14.50, or switch the group to the lowest-cost bid strategy while it gathers its first conversions.",
+      "who": "I can do this after you confirm"
+    },
+    {
+      "rank": 6,
+      "platform": "LinkedIn Ads",
+      "entity": "Campaign 'LI | Front desk managers | US | Sponsored Content'",
+      "cause": "The audience of about 38,000 members is legal but under the 50,000 LinkedIn suggests for Sponsored Content, with audience expansion off",
+      "confidence": "possible",
+      "daily_budget_affected": 80.0,
+      "evidence": "Screenshot of the targeting panel: forecasted audience 38,000; get_campaigns: audienceExpansionEnabled false. No hold: servingStatuses RUNNABLE, so it isn't under the 300-member minimum.",
+      "fix": "Fix the bid first. If spend stays under half of budget after 48 hours, widen the targeting (add job titles or company sizes) or turn on audience expansion.",
+      "who": "do this in LinkedIn Campaign Manager",
+      "settles_it": "Spend after the bid change: if it reaches half of budget, this cause is ruled out."
+    },
+    {
+      "rank": 7,
+      "platform": "TikTok Ads",
+      "entity": "Ad group 'Salon owners 25 to 44 | US'",
+      "cause": "The group optimises for conversions but has recorded 0 since launch from 97 clicks, so the pixel event may not be firing",
+      "confidence": "possible",
+      "daily_budget_affected": 70.0,
+      "evidence": "adgroups_metadata: optimization_goal CONVERT; integrated_report_basic: conversion 0 over 2026-10-26 to 2026-10-29.",
+      "fix": "Check the event in TikTok Events Manager. If it has never fired, fix the pixel or switch the optimisation event to one that fires.",
+      "who": "do this in TikTok Events Manager",
+      "settles_it": "A screenshot of the event's status and last-received time in Events Manager."
+    }
+  ],
+  "ruled_out": [
+    {
+      "platform": "LinkedIn Ads",
+      "gate": "Account and billing",
+      "cleared_by": "get_accounts: status ACTIVE, servingStatuses RUNNABLE; billing screenshot shows a card on file and no failed payments."
+    },
+    {
+      "platform": "LinkedIn Ads",
+      "gate": "Campaign status and dates",
+      "cleared_by": "get_campaigns: status ACTIVE, servingStatuses RUNNABLE, runSchedule start 2026-10-26, no end date."
+    },
+    {
+      "platform": "LinkedIn Ads",
+      "gate": "Ads and review",
+      "cleared_by": "get_creatives: 3 of 3 APPROVED, isServing true, no servingHoldReasons."
+    },
+    {
+      "platform": "LinkedIn Ads",
+      "gate": "Budget floor",
+      "cleared_by": "dailyBudget 80.00 is above the live minimum of 10.00 from get_budget_pricing."
+    },
+    {
+      "platform": "TikTok Ads",
+      "gate": "Account and billing",
+      "cleared_by": "advertisers_metadata: status STATUS_ENABLE."
+    },
+    {
+      "platform": "TikTok Ads",
+      "gate": "Campaign status",
+      "cleared_by": "campaigns_metadata: operation_status ENABLE, secondary_status CAMPAIGN_STATUS_ENABLE."
+    },
+    {
+      "platform": "TikTok Ads",
+      "gate": "Budget floor",
+      "cleared_by": "Campaign daily budget 100 is over the 50 minimum; ad group budgets 70 and 30 are over the 20 minimum; the campaign budget is not lower than either ad group budget."
+    },
+    {
+      "platform": "TikTok Ads",
+      "gate": "Your own ad groups competing",
+      "cleared_by": "Only 'Salon owners 25 to 44 | US' is live, so nothing in the account competes with it this week."
+    },
+    {
+      "platform": "Microsoft Ads",
+      "gate": "Account and billing",
+      "cleared_by": "search_accounts: AccountLifeCycleStatus Active, no PauseReason."
+    },
+    {
+      "platform": "Microsoft Ads",
+      "gate": "Campaign and ad group status",
+      "cleared_by": "get_campaigns: Status Active; get_ad_groups: both Active, StartDate 2026-10-26, no EndDate."
+    },
+    {
+      "platform": "Microsoft Ads",
+      "gate": "Keywords",
+      "cleared_by": "get_keywords: all 16 keywords Active with EditorialStatus Active."
+    }
+  ],
+  "check_after_hold_cleared": [
+    {
+      "platform": "Microsoft Ads",
+      "entity": "Online booking software",
+      "check": "CpcBid 3.20 against the CPCs 'Appointment scheduling app' pays, once the ads are approved. Microsoft returns no suggested range through the connector."
+    }
+  ],
+  "what_i_still_need": [
+    "The disapproval reason from the Editorial column hover text on the 3 Microsoft Ads ads in 'Online booking software'.",
+    "The rejection reason shown on 'Salon | Before and after calendar | 20s' in TikTok Ads Manager.",
+    "A screenshot of the conversion event's status and last-received time in TikTok Events Manager."
+  ],
+  "next_check": {
+    "when": "2026-11-02, 48 hours after any bid change, and the day the clinic ad group starts",
+    "watch": [
+      "LinkedIn average daily spend moving from $6.05 toward at least $40.00 (half of the $80 budget)",
+      "TikTok 'Salon owners 25 to 44 | US' spend moving from $9.20 toward at least $35.00 a day, and its first conversions",
+      "Microsoft 'Online booking software' impressions above 0 after the ads are approved"
+    ]
+  },
+  "fixes_offered_not_run": [
+    {
+      "fix": "Raise the LinkedIn CPM bid to the low end of the suggested range",
+      "action": "update_campaign",
+      "platform": "linkedin-ads",
+      "payload": {
+        "action": "update_campaign",
+        "ad_account_id": "500000001",
+        "campaign_id": "300000101",
+        "unitCost": {
+          "amount": "52.00",
+          "currencyCode": "USD"
+        }
+      },
+      "status": "not run, waiting for your yes"
+    },
+    {
+      "fix": "Raise the TikTok cost cap to the recommended bid",
+      "action": "adgroup_update",
+      "platform": "tiktok-ads",
+      "payload": {
+        "action": "adgroup/update/",
+        "method": "POST",
+        "advertiser_id": "7000000000000000001",
+        "adgroup_id": "1800000000000401",
+        "conversion_bid_price": 14.5
+      },
+      "status": "not run, waiting for your yes"
+    },
+    {
+      "fix": "Only if the clinic ad group was meant to launch already: start it today",
+      "action": "adgroup_update",
+      "platform": "tiktok-ads",
+      "payload": {
+        "action": "adgroup/update/",
+        "method": "POST",
+        "advertiser_id": "7000000000000000001",
+        "adgroup_id": "1800000000000402",
+        "schedule_start_time": "2026-10-30 00:00:00"
+      },
+      "status": "not run, waiting for your yes"
+    }
+  ],
+  "not_changed_by_this_skill": "The disapproved Microsoft ads and the rejected TikTok ad need edits in each platform's own editor; this skill doesn't rewrite ads to get past review or switch rejected items on.",
+  "go_deeper": [
+    {
+      "situation": "Full LinkedIn account review after delivery recovers",
+      "skill": "linkedin-ads-auditor",
+      "if_installed": true
+    },
+    {
+      "situation": "Checking the clinic ad group before it starts",
+      "skill": "campaign-launch-preflight",
+      "if_installed": true
+    }
+  ]
+}

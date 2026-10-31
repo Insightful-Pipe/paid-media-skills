@@ -1,0 +1,760 @@
+{
+  "header": {
+    "business": "Example Kitchen & Bath Remodeling (invented example)",
+    "accounts": [
+      "Google Ads",
+      "Microsoft Ads",
+      "Meta",
+      "Pinterest Ads"
+    ],
+    "check_month": "2026-09",
+    "baseline_months": "2026-03 to 2026-08",
+    "currency": "USD",
+    "industry": "Home & Home Improvement",
+    "main_market": "US, several metro areas (not one city)",
+    "benchmark_table_checked": "2026-10-30"
+  },
+  "answer": "Non-brand Google search costs $137 per lead against $91 for Home & Home Improvement (S1), because the conversion rate fell; Meta prospecting leads cost more than the published figure and than this account's own median; Microsoft search is ahead of the market on cost.",
+  "segments": [
+    {
+      "platform": "Google Ads",
+      "segment": "Brand search",
+      "audience": "prospecting",
+      "campaigns": [
+        "Brand | Search"
+      ],
+      "check_month_totals": {
+        "spend": 4261,
+        "impressions": 9122,
+        "clicks": 2138,
+        "leads": 442
+      },
+      "metrics": [
+        {
+          "metric": "CTR",
+          "value": "23.44%",
+          "own_median": "23.75%",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "declined": "brand"
+        },
+        {
+          "metric": "CPC",
+          "value": "$1.99",
+          "own_median": "$1.95",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "declined": "brand"
+        },
+        {
+          "metric": "conversion rate",
+          "value": "20.67%",
+          "own_median": "20.32%",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "declined": "brand"
+        },
+        {
+          "metric": "cost per lead",
+          "value": "$9.64",
+          "own_median": "$9.37",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "declined": "brand"
+        }
+      ]
+    },
+    {
+      "platform": "Google Ads",
+      "segment": "Non-brand search",
+      "audience": "prospecting",
+      "campaigns": [
+        "Kitchen Remodel | Search",
+        "Bathroom Remodel | Search"
+      ],
+      "check_month_totals": {
+        "spend": 19318,
+        "impressions": 35846,
+        "clicks": 2482,
+        "leads": 141
+      },
+      "metrics": [
+        {
+          "metric": "CTR",
+          "value": "6.92%",
+          "own_median": "6.84%",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "published": {
+            "source": "S1",
+            "row": "Home & Home Improvement",
+            "value": "6.47%",
+            "definition": "matches"
+          },
+          "vs_published": "in line",
+          "vs_published_pct": 7.02
+        },
+        {
+          "metric": "CPC",
+          "value": "$7.78",
+          "own_median": "$8.02",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "published": {
+            "source": "S1",
+            "row": "Home & Home Improvement",
+            "value": "$8.33",
+            "definition": "matches"
+          },
+          "vs_published": "in line",
+          "vs_published_pct": -6.56
+        },
+        {
+          "metric": "conversion rate",
+          "value": "5.68%",
+          "own_median": "7.57%",
+          "baseline_months_used": 6,
+          "own_status": "slipping",
+          "published": {
+            "source": "S1",
+            "row": "Home & Home Improvement",
+            "value": "8.05%",
+            "definition": "matches"
+          },
+          "vs_published": "behind",
+          "vs_published_pct": -29.43
+        },
+        {
+          "metric": "cost per lead",
+          "value": "$137",
+          "own_median": "$109",
+          "baseline_months_used": 6,
+          "own_status": "slipping",
+          "published": {
+            "source": "S1",
+            "row": "Home & Home Improvement",
+            "value": "$91",
+            "definition": "matches"
+          },
+          "vs_published": "behind",
+          "vs_published_pct": 50.69
+        }
+      ],
+      "brand_share_of_search_term_clicks": {
+        "Kitchen Remodel | Search": {
+          "brand_clicks": 61,
+          "search_term_clicks": 1369,
+          "brand_share_pct": 4.46
+        },
+        "Bathroom Remodel | Search": {
+          "brand_clicks": 33,
+          "search_term_clicks": 1113,
+          "brand_share_pct": 2.96
+        }
+      }
+    },
+    {
+      "platform": "Google Ads",
+      "segment": "Display remarketing",
+      "audience": "retargeting",
+      "campaigns": [
+        "Remarketing | Display"
+      ],
+      "check_month_totals": {
+        "spend": 675,
+        "impressions": 152809,
+        "clicks": 613,
+        "leads": 16
+      },
+      "metrics": [
+        {
+          "metric": "CTR",
+          "value": "0.40%",
+          "own_median": "0.42%",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "declined": "audience"
+        },
+        {
+          "metric": "CPC",
+          "value": "$1.10",
+          "own_median": "$1.13",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "declined": "audience"
+        },
+        {
+          "metric": "CPM",
+          "value": "$4.42",
+          "own_median": "$4.76",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "declined": "audience"
+        },
+        {
+          "metric": "conversion rate",
+          "value": "2.61%",
+          "own_median": "4.08%",
+          "baseline_months_used": 6,
+          "own_status": "slipping",
+          "declined": "audience"
+        },
+        {
+          "metric": "cost per lead",
+          "value": "$42",
+          "own_median": "$29",
+          "baseline_months_used": 6,
+          "own_status": "slipping",
+          "declined": "audience"
+        }
+      ]
+    },
+    {
+      "platform": "Microsoft Ads",
+      "segment": "Non-brand search",
+      "audience": "prospecting",
+      "campaigns": [
+        "Kitchen Remodel | Search",
+        "Bathroom Remodel | Search"
+      ],
+      "check_month_totals": {
+        "spend": 2983,
+        "impressions": 15356,
+        "clicks": 619,
+        "leads": 54
+      },
+      "metrics": [
+        {
+          "metric": "CTR",
+          "value": "4.03%",
+          "own_median": "4.06%",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "published": {
+            "source": "S1",
+            "row": "Home & Home Improvement",
+            "value": "6.47%",
+            "definition": "matches"
+          },
+          "vs_published": "behind",
+          "vs_published_pct": -37.7
+        },
+        {
+          "metric": "CPC",
+          "value": "$4.82",
+          "own_median": "$5.06",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "published": {
+            "source": "S1",
+            "row": "Home & Home Improvement",
+            "value": "$8.33",
+            "definition": "matches"
+          },
+          "vs_published": "ahead",
+          "vs_published_pct": -42.15
+        },
+        {
+          "metric": "conversion rate",
+          "value": "8.72%",
+          "own_median": "9.25%",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "published": {
+            "source": "S1",
+            "row": "Home & Home Improvement",
+            "value": "8.05%",
+            "definition": "matches"
+          },
+          "vs_published": "in line",
+          "vs_published_pct": 8.37
+        },
+        {
+          "metric": "cost per lead",
+          "value": "$55",
+          "own_median": "$53",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "published": {
+            "source": "S1",
+            "row": "Home & Home Improvement",
+            "value": "$91",
+            "definition": "matches"
+          },
+          "vs_published": "ahead",
+          "vs_published_pct": -39.25
+        }
+      ]
+    },
+    {
+      "platform": "Meta",
+      "segment": "Leads objective, prospecting",
+      "audience": "prospecting",
+      "campaigns": [
+        "Leads | Prospecting | Instant form"
+      ],
+      "check_month_totals": {
+        "spend": 4634,
+        "impressions": 193405,
+        "clicks": 5394,
+        "link_clicks": 1826,
+        "leads": 84
+      },
+      "metrics": [
+        {
+          "metric": "link CTR",
+          "value": "0.94%",
+          "own_median": "0.98%",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "published": {
+            "source": "S2",
+            "row": "Leads objective, all industries",
+            "value": "2.70%",
+            "definition": "not stated"
+          },
+          "vs_published": "behind",
+          "vs_published_pct": -65.03
+        },
+        {
+          "metric": "all-click CTR",
+          "value": "2.79%",
+          "own_median": "2.85%",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "published": {
+            "source": "S2",
+            "row": "Leads objective, all industries",
+            "value": "2.70%",
+            "definition": "not stated"
+          },
+          "vs_published": "in line",
+          "vs_published_pct": 3.3
+        },
+        {
+          "metric": "link CPC",
+          "value": "$2.54",
+          "own_median": "$1.86",
+          "baseline_months_used": 6,
+          "own_status": "slipping",
+          "published": {
+            "source": "S2",
+            "row": "Leads objective, Home & Home Improvement",
+            "value": "$2.18",
+            "definition": "not stated"
+          },
+          "vs_published": "in line",
+          "vs_published_pct": 16.41
+        },
+        {
+          "metric": "all-click CPC",
+          "value": "$0.86",
+          "own_median": "$0.64",
+          "baseline_months_used": 6,
+          "own_status": "slipping",
+          "published": {
+            "source": "S2",
+            "row": "Leads objective, Home & Home Improvement",
+            "value": "$2.18",
+            "definition": "not stated"
+          },
+          "vs_published": "ahead",
+          "vs_published_pct": -60.59
+        },
+        {
+          "metric": "CPM",
+          "value": "$24",
+          "own_median": "$18",
+          "baseline_months_used": 6,
+          "own_status": "slipping",
+          "declined": "no source"
+        },
+        {
+          "metric": "leads per link click",
+          "value": "4.60%",
+          "own_median": "4.60%",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "published": {
+            "source": "S2",
+            "row": "Leads objective, Home & Home Improvement",
+            "value": "5.32%",
+            "definition": "not stated"
+          },
+          "vs_published": "in line",
+          "vs_published_pct": -13.53
+        },
+        {
+          "metric": "leads per click",
+          "value": "1.56%",
+          "own_median": "1.57%",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "published": {
+            "source": "S2",
+            "row": "Leads objective, Home & Home Improvement",
+            "value": "5.32%",
+            "definition": "not stated"
+          },
+          "vs_published": "behind",
+          "vs_published_pct": -70.73
+        },
+        {
+          "metric": "cost per lead",
+          "value": "$55",
+          "own_median": "$41",
+          "baseline_months_used": 6,
+          "own_status": "slipping",
+          "published": {
+            "source": "S2",
+            "row": "Leads objective, Home & Home Improvement",
+            "value": "$43",
+            "definition": "matches"
+          },
+          "vs_published": "behind",
+          "vs_published_pct": 28.44
+        }
+      ]
+    },
+    {
+      "platform": "Meta",
+      "segment": "Leads objective, retargeting",
+      "audience": "retargeting",
+      "campaigns": [
+        "Leads | Retargeting | Site visitors"
+      ],
+      "check_month_totals": {
+        "spend": 987,
+        "impressions": 41110,
+        "clicks": 1331,
+        "link_clicks": 521,
+        "leads": 42
+      },
+      "metrics": [
+        {
+          "metric": "link CTR",
+          "value": "1.27%",
+          "own_median": "1.21%",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "declined": "audience"
+        },
+        {
+          "metric": "all-click CTR",
+          "value": "3.24%",
+          "own_median": "3.21%",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "declined": "audience"
+        },
+        {
+          "metric": "link CPC",
+          "value": "$1.90",
+          "own_median": "$1.81",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "declined": "audience"
+        },
+        {
+          "metric": "all-click CPC",
+          "value": "$0.74",
+          "own_median": "$0.70",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "declined": "audience"
+        },
+        {
+          "metric": "CPM",
+          "value": "$24",
+          "own_median": "$22",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "declined": "audience"
+        },
+        {
+          "metric": "leads per link click",
+          "value": "8.06%",
+          "own_median": "7.89%",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "declined": "audience"
+        },
+        {
+          "metric": "leads per click",
+          "value": "3.16%",
+          "own_median": "3.00%",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "declined": "audience"
+        },
+        {
+          "metric": "cost per lead",
+          "value": "$24",
+          "own_median": "$23",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "declined": "audience"
+        }
+      ]
+    },
+    {
+      "platform": "Meta",
+      "segment": "Traffic objective, prospecting",
+      "audience": "prospecting",
+      "campaigns": [
+        "Traffic | Project gallery"
+      ],
+      "check_month_totals": {
+        "spend": 1192,
+        "impressions": 124527,
+        "clicks": 3781,
+        "link_clicks": 1576
+      },
+      "metrics": [
+        {
+          "metric": "link CTR",
+          "value": "1.27%",
+          "own_median": "1.18%",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "published": {
+            "source": "S2",
+            "row": "Traffic objective, all industries",
+            "value": "1.93%",
+            "definition": "not stated"
+          },
+          "vs_published": "behind",
+          "vs_published_pct": -34.43
+        },
+        {
+          "metric": "all-click CTR",
+          "value": "3.04%",
+          "own_median": "2.84%",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "published": {
+            "source": "S2",
+            "row": "Traffic objective, all industries",
+            "value": "1.93%",
+            "definition": "not stated"
+          },
+          "vs_published": "ahead",
+          "vs_published_pct": 57.32
+        },
+        {
+          "metric": "link CPC",
+          "value": "$0.76",
+          "own_median": "$0.75",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "published": {
+            "source": "S2",
+            "row": "Traffic objective, all industries",
+            "value": "$0.60",
+            "definition": "not stated"
+          },
+          "vs_published": "behind",
+          "vs_published_pct": 26.11
+        },
+        {
+          "metric": "all-click CPC",
+          "value": "$0.32",
+          "own_median": "$0.31",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "published": {
+            "source": "S2",
+            "row": "Traffic objective, all industries",
+            "value": "$0.60",
+            "definition": "not stated"
+          },
+          "vs_published": "ahead",
+          "vs_published_pct": -47.44
+        },
+        {
+          "metric": "CPM",
+          "value": "$9.58",
+          "own_median": "$8.96",
+          "baseline_months_used": 6,
+          "own_status": "steady",
+          "declined": "no source"
+        }
+      ]
+    },
+    {
+      "platform": "Pinterest Ads",
+      "segment": "Whole account",
+      "audience": "prospecting",
+      "campaigns": [
+        "Kitchen ideas | Consideration (the account's only campaign)"
+      ],
+      "check_month_totals": {
+        "spend": 564,
+        "impressions": 85520,
+        "clicks": 541
+      },
+      "metrics": [
+        {
+          "metric": "CTR",
+          "value": "0.63%",
+          "baseline_2026_08": "0.69%",
+          "own_status": "short history (one month, not graded)"
+        },
+        {
+          "metric": "CPC",
+          "value": "$1.04",
+          "baseline_2026_08": "$1.05",
+          "own_status": "short history (one month, not graded)"
+        },
+        {
+          "metric": "CPM",
+          "value": "$6.60",
+          "baseline_2026_08": "$7.23",
+          "own_status": "short history (one month, not graded)"
+        }
+      ],
+      "note": "Pinterest analytics reach back 90 days, so the baseline is August alone: shown, not graded, because a median needs 3 months"
+    }
+  ],
+  "gaps": [
+    {
+      "rank": 1,
+      "segment": "Google Ads: Non-brand search",
+      "kind": "behind the market",
+      "metric": "cost per lead",
+      "value": "$137",
+      "compared_with": "$91",
+      "comparison": "S1 Home & Home Improvement",
+      "money_at_stake_check_month": 6498,
+      "how_estimated": "141 leads x ($137.01 - $90.92); an estimate that assumes the same volume at the comparison figure",
+      "driver": "conversion rate",
+      "driver_detail": {
+        "cpc_vs_published": 0.93,
+        "conversion_rate_worse_by_factor": 1.42,
+        "why": "CPC is $7.78 against $8.33 (in line), conversion rate is 5.68% against 8.05% (behind)"
+      },
+      "fix_with": [
+        "ad-landing-page-match-scorer",
+        "landing-page-auditor"
+      ]
+    },
+    {
+      "rank": 2,
+      "segment": "Meta: Leads objective, prospecting",
+      "kind": "behind the market",
+      "metric": "cost per lead",
+      "value": "$55",
+      "compared_with": "$43",
+      "comparison": "S2 Leads objective, Home & Home Improvement",
+      "money_at_stake_check_month": 1026,
+      "how_estimated": "84 leads x ($55.17 - $42.95); an estimate that assumes the same volume at the comparison figure",
+      "driver": "CPM",
+      "driver_detail": {
+        "against_own_median_pct": {
+          "CPM": 33.41,
+          "link CTR": -3.86,
+          "leads per link click": -0.03
+        },
+        "why": "the published CTR, CPC and conversion rate don't state their click type, so the driver is found against the account's own median"
+      },
+      "fix_with": [
+        "ad-creative-fatigue-detector",
+        "meta-ads-creative-ranker"
+      ]
+    },
+    {
+      "rank": 3,
+      "segment": "Google Ads: Display remarketing",
+      "kind": "slipping",
+      "metric": "cost per lead",
+      "value": "$42",
+      "compared_with": "$29",
+      "comparison": "own 6-month median",
+      "money_at_stake_check_month": 215,
+      "how_estimated": "16 leads x ($42.21 - $28.74); an estimate that assumes the same volume at the comparison figure",
+      "driver": "conversion rate",
+      "driver_detail": {
+        "against_own_median_pct": {
+          "CPC": -2.75,
+          "conversion rate": -35.99
+        }
+      },
+      "fix_with": [
+        "retargeting-sequence-designer"
+      ]
+    }
+  ],
+  "smaller_gaps": [],
+  "rate_rows_not_ranked": [
+    {
+      "segment": "Microsoft Ads: Non-brand search",
+      "metric": "CTR",
+      "value": "4.03%",
+      "published": "6.47%",
+      "note": "behind the published figure, but CPC is $4.82 against $8.33 (ahead), so it costs no money here; not ranked"
+    }
+  ],
+  "not_compared": [
+    {
+      "segment": "Google Ads: Brand search",
+      "reason": "brand",
+      "detail": "brand search: no source in the table covers brand-only search, so it is compared with its own median only"
+    },
+    {
+      "segment": "Google Ads: Display remarketing",
+      "reason": "audience",
+      "detail": "retargeting: no source in the table separates retargeting audiences"
+    },
+    {
+      "segment": "Meta: Leads objective, retargeting",
+      "reason": "audience",
+      "detail": "retargeting: no source in the table separates retargeting audiences"
+    },
+    {
+      "segment": "Pinterest Ads: Whole account",
+      "reason": "no source",
+      "detail": "no source in the table covers Pinterest Ads"
+    },
+    {
+      "segment": "Meta: Traffic objective, prospecting",
+      "reason": "objective",
+      "detail": "a traffic campaign isn't aiming for leads, so it is compared on CTR, CPC and CPM only; S2 has no conversion rate or cost per result for the traffic objective"
+    },
+    {
+      "segment": "Meta: Leads objective, prospecting",
+      "metric": "CPM",
+      "reason": "no source",
+      "detail": "S2 has no CPM figure"
+    },
+    {
+      "segment": "Meta: Traffic objective, prospecting",
+      "metric": "CPM",
+      "reason": "no source",
+      "detail": "S2 has no CPM figure"
+    }
+  ],
+  "too_small_to_grade": [],
+  "sources": [
+    {
+      "id": "S1",
+      "publisher": "WordStream by LocaliQ",
+      "report": "Google Ads Benchmarks 2026",
+      "period": "Apr 2025 to Mar 2026",
+      "sample": "13,474 US search campaigns (at least 52 per industry)",
+      "statistic": "median",
+      "country": "US",
+      "url": "https://www.wordstream.com/blog/2026-google-ads-benchmarks"
+    },
+    {
+      "id": "S2",
+      "publisher": "WordStream by LocaliQ",
+      "report": "Facebook Ads Benchmarks 2026",
+      "period": "Apr 2025 to Jun 2026",
+      "sample": "1,892 US social advertising campaigns",
+      "statistic": "median",
+      "country": "US",
+      "url": "https://www.wordstream.com/wp-content/uploads/2026/09/ws-guide-facebook-ads-benchmarks-2026.pdf"
+    }
+  ],
+  "reminder": "A median is the middle advertiser, not a target. Whether a cost per lead is affordable depends on how many leads become jobs and what a job is worth."
+}

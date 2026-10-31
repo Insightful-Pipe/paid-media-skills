@@ -1,0 +1,4619 @@
+{
+  "note": "Example data: an invented online store for linen bedding and home textiles with invented accounts, not a real business. Every number in expected_output.json follows from this input. Pinterest Trends series are invented too. Every payload is a draft marked 'not run'.",
+  "request": "Hey Claude, I just added the \"pinterest-ads-manager\" skill. Review my Pinterest Ads account for the last 30 days. My target is $0.70 per outbound click, and 3.0 ROAS on the shopping campaign. Plan the next few months from Pinterest Trends for linen, duvet, throw blanket and bedding (interest: home_decor), rewrite my best ad's title and description, and draft a paused campaign for winter bedding and throws at $40 a day. Don't run anything yet.",
+  "account": {
+    "name": "Larkmoor Home",
+    "business": "an online store for linen bedding, throws and table linen (invented example)",
+    "ad_account_id": "549200000101",
+    "currency": "USD",
+    "country": "US",
+    "pinterest_pages_user_id": "830000000000000101",
+    "other_ad_accounts": "none"
+  },
+  "inputs": {
+    "target_cost_per_outbound_click": 0.7,
+    "target_roas_shopping": 3.0,
+    "topic_words": [
+      "linen",
+      "duvet",
+      "throw blanket",
+      "bedding"
+    ],
+    "interests": [
+      "home_decor"
+    ],
+    "brief": {
+      "goal": "sales",
+      "products": "winter bedding and linen throws",
+      "daily_budget": 40.0,
+      "landing_page": "https://www.larkmoor.example/collections/throws",
+      "audience": "US, same as the account"
+    }
+  },
+  "date_range": {
+    "window": "2026-09-28 to 2026-10-27 (last 30 complete days)",
+    "previous_period": "2026-08-29 to 2026-09-27",
+    "trend_range": "2026-07-30 to 2026-10-27 (90 days)",
+    "run_date": "2026-10-28",
+    "attribution": {
+      "click_window_days": 30,
+      "engagement_window_days": 30,
+      "view_window_days": 1
+    }
+  },
+  "data_pulled": [
+    "get_ad_account",
+    "get_campaigns (4)",
+    "get_ad_groups (6)",
+    "get_ads (8)",
+    "get_keywords per ad group (16 keywords, all in 1 ad group)",
+    "get_conversion_tags (1)",
+    "get_audiences (4)",
+    "get_customer_lists (1)",
+    "get_catalogs (1)",
+    "get_catalog_feeds (1)",
+    "pinterest-pages get_pin (7 pins)",
+    "get_ad_account_analytics: window and previous period",
+    "get_campaign_analytics daily, 90 days (303 rows)",
+    "get_ad_group_analytics (window)",
+    "get_ad_analytics (window)",
+    "get_targeting_analytics (window)",
+    "get_trending_keywords yearly and seasonal, interest home_decor (18 keywords)"
+  ],
+  "calls": {
+    "get_ad_account": {
+      "id": "549200000101",
+      "name": "Larkmoor Home",
+      "currency": "USD",
+      "country": "US"
+    },
+    "get_campaigns": [
+      {
+        "id": "626700000011",
+        "name": "Evergreen | Linen bedding | Conversions",
+        "objective_type": "WEB_CONVERSION",
+        "status": "ACTIVE",
+        "summary_status": "RUNNING",
+        "daily_spend_cap": 70000000,
+        "lifetime_spend_cap": null,
+        "start_time": "2026-06-15",
+        "end_time": null,
+        "is_flexible_daily_budgets": true,
+        "is_automated_campaign": false,
+        "updated_time": "2026-09-29"
+      },
+      {
+        "id": "626700000012",
+        "name": "Shopping | Catalog | All products",
+        "objective_type": "CATALOG_SALES",
+        "status": "ACTIVE",
+        "summary_status": "RUNNING",
+        "daily_spend_cap": 40000000,
+        "lifetime_spend_cap": null,
+        "start_time": "2026-06-15",
+        "end_time": null,
+        "is_flexible_daily_budgets": false,
+        "is_automated_campaign": false,
+        "updated_time": "2026-07-02"
+      },
+      {
+        "id": "626700000013",
+        "name": "Retargeting | Site visitors 30 days",
+        "objective_type": "WEB_CONVERSION",
+        "status": "ACTIVE",
+        "summary_status": "RUNNING",
+        "daily_spend_cap": 15000000,
+        "lifetime_spend_cap": null,
+        "start_time": "2026-07-01",
+        "end_time": null,
+        "is_flexible_daily_budgets": false,
+        "is_automated_campaign": false,
+        "updated_time": "2026-07-01"
+      },
+      {
+        "id": "626700000009",
+        "name": "Summer sale | Table linen",
+        "objective_type": "CONSIDERATION",
+        "status": "ACTIVE",
+        "summary_status": "COMPLETED",
+        "daily_spend_cap": 25000000,
+        "lifetime_spend_cap": null,
+        "start_time": "2026-07-15",
+        "end_time": "2026-08-31",
+        "is_flexible_daily_budgets": false,
+        "is_automated_campaign": false,
+        "updated_time": "2026-07-15"
+      }
+    ],
+    "get_ad_groups": [
+      {
+        "id": "2680000000101",
+        "campaign_id": "626700000011",
+        "name": "Keywords | Linen bedding",
+        "status": "ACTIVE",
+        "summary_status": "RUNNING",
+        "billable_event": "IMPRESSION",
+        "budget_type": "CBO_ADGROUP",
+        "budget_in_micro_currency": null,
+        "targeting_spec": {
+          "LOCATION": [
+            "US"
+          ],
+          "AGE_BUCKET": [
+            "25-34",
+            "35-44",
+            "45-49"
+          ]
+        },
+        "auto_targeting_enabled": false
+      },
+      {
+        "id": "2680000000102",
+        "campaign_id": "626700000011",
+        "name": "Interests | Home decor",
+        "status": "ACTIVE",
+        "summary_status": "RUNNING",
+        "billable_event": "IMPRESSION",
+        "budget_type": "CBO_ADGROUP",
+        "budget_in_micro_currency": null,
+        "targeting_spec": {
+          "LOCATION": [
+            "US"
+          ],
+          "INTEREST": [
+            "924000000001",
+            "924000000002",
+            "924000000003",
+            "924000000004",
+            "924000000005"
+          ]
+        },
+        "auto_targeting_enabled": false
+      },
+      {
+        "id": "2680000000103",
+        "campaign_id": "626700000011",
+        "name": "Actalike 1% | Past buyers",
+        "status": "ACTIVE",
+        "summary_status": "RUNNING",
+        "billable_event": "IMPRESSION",
+        "budget_type": "CBO_ADGROUP",
+        "budget_in_micro_currency": null,
+        "targeting_spec": {
+          "LOCATION": [
+            "US"
+          ],
+          "AUDIENCE_INCLUDE": [
+            "2542000000013"
+          ]
+        },
+        "auto_targeting_enabled": false
+      },
+      {
+        "id": "2680000000104",
+        "campaign_id": "626700000012",
+        "name": "Shopping | All products",
+        "status": "ACTIVE",
+        "summary_status": "RUNNING",
+        "billable_event": "IMPRESSION",
+        "budget_type": "CBO_ADGROUP",
+        "budget_in_micro_currency": null,
+        "targeting_spec": {
+          "LOCATION": [
+            "US"
+          ]
+        },
+        "auto_targeting_enabled": true
+      },
+      {
+        "id": "2680000000105",
+        "campaign_id": "626700000013",
+        "name": "Retargeting | Site visitors 30 days",
+        "status": "ACTIVE",
+        "summary_status": "RUNNING",
+        "billable_event": "IMPRESSION",
+        "budget_type": "CBO_ADGROUP",
+        "budget_in_micro_currency": null,
+        "targeting_spec": {
+          "LOCATION": [
+            "US"
+          ],
+          "AUDIENCE_INCLUDE": [
+            "2542000000011"
+          ],
+          "AUDIENCE_EXCLUDE": [
+            "2542000000014"
+          ]
+        },
+        "auto_targeting_enabled": false
+      },
+      {
+        "id": "2680000000099",
+        "campaign_id": "626700000009",
+        "name": "Summer sale | Table linen | Interests",
+        "status": "ACTIVE",
+        "summary_status": "COMPLETED",
+        "billable_event": "CLICKTHROUGH",
+        "budget_type": "CBO_ADGROUP",
+        "budget_in_micro_currency": null,
+        "targeting_spec": {
+          "LOCATION": [
+            "US"
+          ],
+          "INTEREST": [
+            "924000000006"
+          ]
+        },
+        "auto_targeting_enabled": false
+      }
+    ],
+    "get_ads": [
+      {
+        "id": "687000000201",
+        "ad_group_id": "2680000000101",
+        "campaign_id": "626700000011",
+        "name": "Static | Stonewashed duvet set",
+        "status": "ACTIVE",
+        "summary_status": "RUNNING",
+        "review_status": "APPROVED",
+        "creative_type": "REGULAR",
+        "pin_id": "860000000000000101",
+        "destination_url": "https://www.larkmoor.example/collections/duvet-covers",
+        "created_time": "2026-06-15"
+      },
+      {
+        "id": "687000000202",
+        "ad_group_id": "2680000000101",
+        "campaign_id": "626700000011",
+        "name": "Video | Linen duvet set (keywords)",
+        "status": "ACTIVE",
+        "summary_status": "RUNNING",
+        "review_status": "APPROVED",
+        "creative_type": "VIDEO",
+        "pin_id": "860000000000000102",
+        "destination_url": "https://www.larkmoor.example/collections/duvet-covers",
+        "created_time": "2026-09-29"
+      },
+      {
+        "id": "687000000203",
+        "ad_group_id": "2680000000102",
+        "campaign_id": "626700000011",
+        "name": "Static | Linen throw",
+        "status": "ACTIVE",
+        "summary_status": "RUNNING",
+        "review_status": "APPROVED",
+        "creative_type": "REGULAR",
+        "pin_id": "860000000000000103",
+        "destination_url": "https://www.larkmoor.example/collections/throws",
+        "created_time": "2026-06-15"
+      },
+      {
+        "id": "687000000204",
+        "ad_group_id": "2680000000102",
+        "campaign_id": "626700000011",
+        "name": "Video | Linen duvet set (interests)",
+        "status": "ACTIVE",
+        "summary_status": "RUNNING",
+        "review_status": "APPROVED",
+        "creative_type": "VIDEO",
+        "pin_id": "860000000000000102",
+        "destination_url": "https://www.larkmoor.example/collections/duvet-covers",
+        "created_time": "2026-09-29"
+      },
+      {
+        "id": "687000000205",
+        "ad_group_id": "2680000000103",
+        "campaign_id": "626700000011",
+        "name": "Carousel | Bedroom colour palettes",
+        "status": "ACTIVE",
+        "summary_status": "RUNNING",
+        "review_status": "APPROVED",
+        "creative_type": "CAROUSEL",
+        "pin_id": "860000000000000104",
+        "destination_url": "https://www.larkmoor.example/inspiration/bedroom-colours",
+        "created_time": "2026-06-15"
+      },
+      {
+        "id": "687000000206",
+        "ad_group_id": "2680000000104",
+        "campaign_id": "626700000012",
+        "name": "Shopping | Catalog product pins",
+        "status": "ACTIVE",
+        "summary_status": "RUNNING",
+        "review_status": "APPROVED",
+        "creative_type": "SHOPPING",
+        "pin_id": "860000000000000106",
+        "destination_url": "https://www.larkmoor.example/products/linen-duvet-cover-sage-queen",
+        "created_time": "2026-06-15"
+      },
+      {
+        "id": "687000000207",
+        "ad_group_id": "2680000000105",
+        "campaign_id": "626700000013",
+        "name": "Static | Free shipping reminder",
+        "status": "ACTIVE",
+        "summary_status": "RUNNING",
+        "review_status": "APPROVED",
+        "creative_type": "REGULAR",
+        "pin_id": "860000000000000105",
+        "destination_url": "https://www.larkmoor.example/collections/bedding",
+        "created_time": "2026-07-01"
+      },
+      {
+        "id": "687000000199",
+        "ad_group_id": "2680000000099",
+        "campaign_id": "626700000009",
+        "name": "Summer sale | Tablecloths",
+        "status": "ACTIVE",
+        "summary_status": "COMPLETED",
+        "review_status": "APPROVED",
+        "creative_type": "REGULAR",
+        "pin_id": "860000000000000107",
+        "destination_url": "https://www.larkmoor.example/collections/table-linen",
+        "created_time": "2026-07-15"
+      }
+    ],
+    "get_keywords": [
+      {
+        "id": "382000000001",
+        "ad_group_id": "2680000000101",
+        "value": "linen duvet cover",
+        "match_type": "PHRASE",
+        "archived": false
+      },
+      {
+        "id": "382000000002",
+        "ad_group_id": "2680000000101",
+        "value": "linen bedding",
+        "match_type": "BROAD",
+        "archived": false
+      },
+      {
+        "id": "382000000003",
+        "ad_group_id": "2680000000101",
+        "value": "stonewashed linen",
+        "match_type": "PHRASE",
+        "archived": false
+      },
+      {
+        "id": "382000000004",
+        "ad_group_id": "2680000000101",
+        "value": "linen sheets",
+        "match_type": "BROAD",
+        "archived": false
+      },
+      {
+        "id": "382000000005",
+        "ad_group_id": "2680000000101",
+        "value": "linen pillowcases",
+        "match_type": "BROAD",
+        "archived": false
+      },
+      {
+        "id": "382000000006",
+        "ad_group_id": "2680000000101",
+        "value": "flax linen bedding",
+        "match_type": "PHRASE",
+        "archived": false
+      },
+      {
+        "id": "382000000007",
+        "ad_group_id": "2680000000101",
+        "value": "linen duvet cover queen",
+        "match_type": "EXACT",
+        "archived": false
+      },
+      {
+        "id": "382000000008",
+        "ad_group_id": "2680000000101",
+        "value": "linen duvet cover king",
+        "match_type": "EXACT",
+        "archived": false
+      },
+      {
+        "id": "382000000009",
+        "ad_group_id": "2680000000101",
+        "value": "neutral bedding",
+        "match_type": "BROAD",
+        "archived": false
+      },
+      {
+        "id": "382000000010",
+        "ad_group_id": "2680000000101",
+        "value": "earthy bedroom",
+        "match_type": "BROAD",
+        "archived": false
+      },
+      {
+        "id": "382000000011",
+        "ad_group_id": "2680000000101",
+        "value": "linen bed set",
+        "match_type": "BROAD",
+        "archived": false
+      },
+      {
+        "id": "382000000012",
+        "ad_group_id": "2680000000101",
+        "value": "washed linen bedding",
+        "match_type": "PHRASE",
+        "archived": false
+      },
+      {
+        "id": "382000000013",
+        "ad_group_id": "2680000000101",
+        "value": "bedding sets queen",
+        "match_type": "BROAD",
+        "archived": false
+      },
+      {
+        "id": "382000000014",
+        "ad_group_id": "2680000000101",
+        "value": "cozy bedding",
+        "match_type": "BROAD",
+        "archived": false
+      },
+      {
+        "id": "382000000015",
+        "ad_group_id": "2680000000101",
+        "value": "duvet cover",
+        "match_type": "BROAD",
+        "archived": false
+      },
+      {
+        "id": "382000000016",
+        "ad_group_id": "2680000000101",
+        "value": "cheap bedding",
+        "match_type": "BROAD_NEGATIVE",
+        "archived": false
+      }
+    ],
+    "get_conversion_tags": [
+      {
+        "id": "2612000000041",
+        "name": "Larkmoor Home tag",
+        "status": "ACTIVE",
+        "last_fired_time_ms": 1793139240000,
+        "enhanced_match_status": "VALIDATED",
+        "events_seen": [
+          "PAGE_VISIT",
+          "ADD_TO_CART",
+          "CHECKOUT",
+          "SIGNUP"
+        ]
+      }
+    ],
+    "get_audiences": [
+      {
+        "id": "2542000000011",
+        "name": "Site visitors 30 days",
+        "audience_type": "VISITOR",
+        "size": 21000,
+        "status": "READY"
+      },
+      {
+        "id": "2542000000012",
+        "name": "Pin engagers 60 days",
+        "audience_type": "ENGAGEMENT",
+        "size": 48000,
+        "status": "READY"
+      },
+      {
+        "id": "2542000000013",
+        "name": "Actalike 1% | Past buyers",
+        "audience_type": "ACTALIKE",
+        "size": 1900000,
+        "status": "READY",
+        "seed": "Past buyers (customer list)"
+      },
+      {
+        "id": "2542000000014",
+        "name": "Past buyers",
+        "audience_type": "CUSTOMER_LIST",
+        "size": 2400,
+        "status": "READY"
+      }
+    ],
+    "get_customer_lists": [
+      {
+        "id": "1180000000021",
+        "name": "Past buyers",
+        "num_uploaded_user_records": 3100,
+        "status": "READY"
+      }
+    ],
+    "get_catalogs": [
+      {
+        "id": "4720000000031",
+        "name": "Larkmoor Home products",
+        "catalog_type": "RETAIL"
+      }
+    ],
+    "get_catalog_feeds": [
+      {
+        "id": "4720000000032",
+        "catalog_id": "4720000000031",
+        "status": "ACTIVE",
+        "format": "CSV",
+        "products": 214,
+        "last_processed": "2026-10-27"
+      }
+    ],
+    "pinterest_pages_get_pin": [
+      {
+        "media_type": "image",
+        "width": 1000,
+        "height": 1500,
+        "duration_ms": null,
+        "title": "Stonewashed Linen Duvet Cover Set | Larkmoor Home",
+        "description": "Our stonewashed linen duvet cover set comes with two matching pillowcases, in 12 colours and sizes from twin to king. Pre-washed, so it feels soft from the first night, with free returns for 30 days.",
+        "link": "https://www.larkmoor.example/collections/duvet-covers",
+        "id": "860000000000000101",
+        "is_pin_deleted": false,
+        "board_id": "830000000000000201"
+      },
+      {
+        "media_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "duration_ms": 30000,
+        "title": "Make Your Bed With Larkmoor Home Linen: Watch the Duvet Cover Set Go On",
+        "description": "A real bed, made in one take with our stonewashed linen duvet cover set and two matching pillowcases. 12 colours, twin to king.",
+        "link": "https://www.larkmoor.example/collections/duvet-covers",
+        "id": "860000000000000102",
+        "is_pin_deleted": false,
+        "board_id": "830000000000000201"
+      },
+      {
+        "media_type": "image",
+        "width": 1000,
+        "height": 1500,
+        "duration_ms": null,
+        "title": "Larkmoor Home Linen Throw Blanket | 9 Colours",
+        "description": "A lightweight linen throw blanket with fringed edges, in 9 colours. Stonewashed and pre-washed, so it drapes soft from day one.",
+        "link": "https://www.larkmoor.example/collections/throws",
+        "id": "860000000000000103",
+        "is_pin_deleted": false,
+        "board_id": "830000000000000201"
+      },
+      {
+        "media_type": "multiple_images",
+        "width": 1000,
+        "height": 1000,
+        "duration_ms": null,
+        "title": "5 Bedroom Colour Palettes in Linen | Larkmoor Home",
+        "description": "Five bedroom colour palettes built from our linen bedding: sage and oat, clay and white, charcoal and stone, blush and sand, ink and natural.",
+        "link": "https://www.larkmoor.example/inspiration/bedroom-colours",
+        "id": "860000000000000104",
+        "is_pin_deleted": false,
+        "board_id": "830000000000000201"
+      },
+      {
+        "media_type": "image",
+        "width": 1000,
+        "height": 1500,
+        "duration_ms": null,
+        "title": "Free Shipping Over $100 on All Linen Bedding | Larkmoor Home",
+        "description": "Still thinking about it? Your linen bedding ships free on orders over $75, and returns are free for 30 days.",
+        "link": "https://www.larkmoor.example/collections/bedding",
+        "id": "860000000000000105",
+        "is_pin_deleted": false,
+        "board_id": "830000000000000201"
+      },
+      {
+        "media_type": "image",
+        "width": 1000,
+        "height": 1000,
+        "duration_ms": null,
+        "title": "Linen Duvet Cover, Sage, Queen",
+        "description": "Stonewashed linen duvet cover in sage, queen size.",
+        "link": "https://www.larkmoor.example/products/linen-duvet-cover-sage-queen",
+        "id": "860000000000000106",
+        "is_pin_deleted": false,
+        "board_id": "830000000000000201"
+      },
+      {
+        "media_type": "image",
+        "width": 1000,
+        "height": 1500,
+        "duration_ms": null,
+        "title": "Linen Tablecloths for Summer Dinners | Larkmoor Home",
+        "description": "Washed linen tablecloths and napkins for long summer dinners outside.",
+        "link": "https://www.larkmoor.example/collections/table-linen",
+        "id": "860000000000000107",
+        "is_pin_deleted": false,
+        "board_id": "830000000000000201"
+      }
+    ],
+    "get_ad_account_analytics": {
+      "window": {
+        "SPEND_IN_DOLLAR": 3135.65,
+        "IMPRESSION_1": 378880,
+        "CLICKTHROUGH_1": 7837,
+        "OUTBOUND_CLICK_1": 4779,
+        "OUTBOUND_CTR_1": 0.012613,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.66,
+        "CPM_IN_DOLLAR": 8.28,
+        "REPIN_1": 909,
+        "TOTAL_IMPRESSION_USER": 164017,
+        "TOTAL_IMPRESSION_FREQUENCY": 2.31,
+        "TOTAL_CONVERSIONS": 146,
+        "TOTAL_PAGE_VISIT": 3966,
+        "TOTAL_SIGNUP": 27,
+        "TOTAL_LEAD": 0,
+        "TOTAL_CLICK_ADD_TO_CART": 379,
+        "TOTAL_CHECKOUT": 114,
+        "TOTAL_CHECKOUT_VALUE_IN_MICRO_DOLLAR": 13537680000
+      },
+      "previous_period": {
+        "SPEND_IN_DOLLAR": 3196.23,
+        "IMPRESSION_1": 416635,
+        "CLICKTHROUGH_1": 10589,
+        "OUTBOUND_CLICK_1": 6457,
+        "OUTBOUND_CTR_1": 0.015498,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.5,
+        "CPM_IN_DOLLAR": 7.67,
+        "REPIN_1": 999,
+        "TOTAL_IMPRESSION_USER": 191116,
+        "TOTAL_IMPRESSION_FREQUENCY": 2.18,
+        "TOTAL_CONVERSIONS": 152,
+        "TOTAL_PAGE_VISIT": 5359,
+        "TOTAL_SIGNUP": 28,
+        "TOTAL_LEAD": 0,
+        "TOTAL_CLICK_ADD_TO_CART": 395,
+        "TOTAL_CHECKOUT": 119,
+        "TOTAL_CHECKOUT_VALUE_IN_MICRO_DOLLAR": 14399000000
+      }
+    },
+    "get_campaign_analytics_daily": {
+      "columns": [
+        "DATE",
+        "CAMPAIGN_ID",
+        "SPEND_IN_DOLLAR",
+        "IMPRESSION_1",
+        "OUTBOUND_CLICK_1",
+        "TOTAL_CONVERSIONS"
+      ],
+      "rows": [
+        [
+          "2026-07-30",
+          "626700000011",
+          63.76,
+          8672,
+          136,
+          1
+        ],
+        [
+          "2026-07-30",
+          "626700000012",
+          34.41,
+          4228,
+          75,
+          3
+        ],
+        [
+          "2026-07-30",
+          "626700000013",
+          5.86,
+          416,
+          8,
+          0
+        ],
+        [
+          "2026-07-30",
+          "626700000009",
+          24.13,
+          2781,
+          37,
+          0
+        ],
+        [
+          "2026-07-31",
+          "626700000011",
+          66.21,
+          8662,
+          137,
+          4
+        ],
+        [
+          "2026-07-31",
+          "626700000012",
+          35.08,
+          4438,
+          71,
+          0
+        ],
+        [
+          "2026-07-31",
+          "626700000013",
+          6.31,
+          451,
+          8,
+          0
+        ],
+        [
+          "2026-07-31",
+          "626700000009",
+          23.07,
+          2660,
+          33,
+          0
+        ],
+        [
+          "2026-08-01",
+          "626700000011",
+          62.06,
+          8488,
+          132,
+          2
+        ],
+        [
+          "2026-08-01",
+          "626700000012",
+          36.5,
+          4940,
+          84,
+          4
+        ],
+        [
+          "2026-08-01",
+          "626700000013",
+          5.56,
+          391,
+          8,
+          0
+        ],
+        [
+          "2026-08-01",
+          "626700000009",
+          22.28,
+          2445,
+          34,
+          0
+        ],
+        [
+          "2026-08-02",
+          "626700000011",
+          60.96,
+          8582,
+          135,
+          2
+        ],
+        [
+          "2026-08-02",
+          "626700000012",
+          35.55,
+          4351,
+          79,
+          1
+        ],
+        [
+          "2026-08-02",
+          "626700000013",
+          6.24,
+          467,
+          8,
+          0
+        ],
+        [
+          "2026-08-02",
+          "626700000009",
+          22.58,
+          2693,
+          33,
+          0
+        ],
+        [
+          "2026-08-03",
+          "626700000011",
+          64.93,
+          8898,
+          123,
+          2
+        ],
+        [
+          "2026-08-03",
+          "626700000012",
+          37.34,
+          4658,
+          88,
+          1
+        ],
+        [
+          "2026-08-03",
+          "626700000013",
+          5.7,
+          383,
+          8,
+          1
+        ],
+        [
+          "2026-08-03",
+          "626700000009",
+          22.08,
+          2477,
+          30,
+          0
+        ],
+        [
+          "2026-08-04",
+          "626700000011",
+          59.85,
+          8185,
+          120,
+          5
+        ],
+        [
+          "2026-08-04",
+          "626700000012",
+          36.08,
+          4538,
+          77,
+          1
+        ],
+        [
+          "2026-08-04",
+          "626700000013",
+          5.72,
+          421,
+          7,
+          0
+        ],
+        [
+          "2026-08-04",
+          "626700000009",
+          24.59,
+          2777,
+          34,
+          0
+        ],
+        [
+          "2026-08-05",
+          "626700000011",
+          62.88,
+          8191,
+          123,
+          8
+        ],
+        [
+          "2026-08-05",
+          "626700000012",
+          35.84,
+          4383,
+          80,
+          1
+        ],
+        [
+          "2026-08-05",
+          "626700000013",
+          6.15,
+          455,
+          8,
+          2
+        ],
+        [
+          "2026-08-05",
+          "626700000009",
+          22.79,
+          2747,
+          37,
+          1
+        ],
+        [
+          "2026-08-06",
+          "626700000011",
+          59.85,
+          7867,
+          114,
+          2
+        ],
+        [
+          "2026-08-06",
+          "626700000012",
+          35.36,
+          4604,
+          75,
+          0
+        ],
+        [
+          "2026-08-06",
+          "626700000013",
+          4.74,
+          338,
+          6,
+          0
+        ],
+        [
+          "2026-08-06",
+          "626700000009",
+          22.96,
+          2760,
+          36,
+          1
+        ],
+        [
+          "2026-08-07",
+          "626700000011",
+          65.59,
+          9110,
+          122,
+          4
+        ],
+        [
+          "2026-08-07",
+          "626700000012",
+          37.17,
+          4629,
+          77,
+          3
+        ],
+        [
+          "2026-08-07",
+          "626700000013",
+          6.45,
+          434,
+          8,
+          0
+        ],
+        [
+          "2026-08-07",
+          "626700000009",
+          22.51,
+          2586,
+          32,
+          0
+        ],
+        [
+          "2026-08-08",
+          "626700000011",
+          62.29,
+          8087,
+          116,
+          1
+        ],
+        [
+          "2026-08-08",
+          "626700000012",
+          38.29,
+          4994,
+          88,
+          2
+        ],
+        [
+          "2026-08-08",
+          "626700000013",
+          5.91,
+          427,
+          8,
+          1
+        ],
+        [
+          "2026-08-08",
+          "626700000009",
+          24.58,
+          2931,
+          38,
+          0
+        ],
+        [
+          "2026-08-09",
+          "626700000011",
+          65.44,
+          9211,
+          127,
+          2
+        ],
+        [
+          "2026-08-09",
+          "626700000012",
+          37.36,
+          5093,
+          93,
+          2
+        ],
+        [
+          "2026-08-09",
+          "626700000013",
+          5.98,
+          422,
+          8,
+          0
+        ],
+        [
+          "2026-08-09",
+          "626700000009",
+          24.27,
+          2718,
+          33,
+          1
+        ],
+        [
+          "2026-08-10",
+          "626700000011",
+          62.05,
+          8998,
+          130,
+          3
+        ],
+        [
+          "2026-08-10",
+          "626700000012",
+          36.5,
+          4700,
+          78,
+          0
+        ],
+        [
+          "2026-08-10",
+          "626700000013",
+          6.43,
+          475,
+          10,
+          2
+        ],
+        [
+          "2026-08-10",
+          "626700000009",
+          23.02,
+          2842,
+          39,
+          2
+        ],
+        [
+          "2026-08-11",
+          "626700000011",
+          65.85,
+          9205,
+          129,
+          5
+        ],
+        [
+          "2026-08-11",
+          "626700000012",
+          35.94,
+          4510,
+          78,
+          1
+        ],
+        [
+          "2026-08-11",
+          "626700000013",
+          5.29,
+          365,
+          7,
+          0
+        ],
+        [
+          "2026-08-11",
+          "626700000009",
+          23.3,
+          2639,
+          32,
+          1
+        ],
+        [
+          "2026-08-12",
+          "626700000011",
+          62.64,
+          8541,
+          116,
+          2
+        ],
+        [
+          "2026-08-12",
+          "626700000012",
+          36.2,
+          4838,
+          85,
+          1
+        ],
+        [
+          "2026-08-12",
+          "626700000013",
+          5.15,
+          381,
+          8,
+          0
+        ],
+        [
+          "2026-08-12",
+          "626700000009",
+          22.02,
+          2628,
+          32,
+          2
+        ],
+        [
+          "2026-08-13",
+          "626700000011",
+          65.16,
+          8736,
+          138,
+          2
+        ],
+        [
+          "2026-08-13",
+          "626700000012",
+          37.62,
+          4711,
+          80,
+          0
+        ],
+        [
+          "2026-08-13",
+          "626700000013",
+          6.0,
+          408,
+          8,
+          0
+        ],
+        [
+          "2026-08-13",
+          "626700000009",
+          22.43,
+          2629,
+          36,
+          1
+        ],
+        [
+          "2026-08-14",
+          "626700000011",
+          65.73,
+          9348,
+          125,
+          2
+        ],
+        [
+          "2026-08-14",
+          "626700000012",
+          37.2,
+          4675,
+          88,
+          3
+        ],
+        [
+          "2026-08-14",
+          "626700000013",
+          5.79,
+          425,
+          9,
+          0
+        ],
+        [
+          "2026-08-14",
+          "626700000009",
+          24.17,
+          2958,
+          35,
+          0
+        ],
+        [
+          "2026-08-15",
+          "626700000011",
+          61.89,
+          8465,
+          131,
+          4
+        ],
+        [
+          "2026-08-15",
+          "626700000012",
+          34.82,
+          4535,
+          83,
+          2
+        ],
+        [
+          "2026-08-15",
+          "626700000013",
+          6.51,
+          454,
+          9,
+          1
+        ],
+        [
+          "2026-08-15",
+          "626700000009",
+          22.13,
+          2450,
+          34,
+          0
+        ],
+        [
+          "2026-08-16",
+          "626700000011",
+          63.39,
+          9183,
+          125,
+          4
+        ],
+        [
+          "2026-08-16",
+          "626700000012",
+          36.7,
+          4452,
+          76,
+          5
+        ],
+        [
+          "2026-08-16",
+          "626700000013",
+          6.35,
+          467,
+          9,
+          0
+        ],
+        [
+          "2026-08-16",
+          "626700000009",
+          22.6,
+          2730,
+          36,
+          0
+        ],
+        [
+          "2026-08-17",
+          "626700000011",
+          64.44,
+          9222,
+          147,
+          3
+        ],
+        [
+          "2026-08-17",
+          "626700000012",
+          34.7,
+          4302,
+          72,
+          3
+        ],
+        [
+          "2026-08-17",
+          "626700000013",
+          5.45,
+          400,
+          8,
+          0
+        ],
+        [
+          "2026-08-17",
+          "626700000009",
+          23.44,
+          2756,
+          35,
+          0
+        ],
+        [
+          "2026-08-18",
+          "626700000011",
+          61.33,
+          8392,
+          115,
+          2
+        ],
+        [
+          "2026-08-18",
+          "626700000012",
+          36.17,
+          4551,
+          75,
+          1
+        ],
+        [
+          "2026-08-18",
+          "626700000013",
+          4.73,
+          351,
+          6,
+          0
+        ],
+        [
+          "2026-08-18",
+          "626700000009",
+          23.92,
+          2679,
+          33,
+          0
+        ],
+        [
+          "2026-08-19",
+          "626700000011",
+          67.05,
+          8909,
+          140,
+          3
+        ],
+        [
+          "2026-08-19",
+          "626700000012",
+          34.18,
+          4570,
+          86,
+          2
+        ],
+        [
+          "2026-08-19",
+          "626700000013",
+          4.84,
+          336,
+          7,
+          1
+        ],
+        [
+          "2026-08-19",
+          "626700000009",
+          24.6,
+          2856,
+          38,
+          2
+        ],
+        [
+          "2026-08-20",
+          "626700000011",
+          67.82,
+          8800,
+          117,
+          5
+        ],
+        [
+          "2026-08-20",
+          "626700000012",
+          37.61,
+          4745,
+          86,
+          2
+        ],
+        [
+          "2026-08-20",
+          "626700000013",
+          6.2,
+          455,
+          9,
+          2
+        ],
+        [
+          "2026-08-20",
+          "626700000009",
+          23.24,
+          2650,
+          31,
+          0
+        ],
+        [
+          "2026-08-21",
+          "626700000011",
+          66.4,
+          9565,
+          143,
+          4
+        ],
+        [
+          "2026-08-21",
+          "626700000012",
+          35.59,
+          4486,
+          72,
+          0
+        ],
+        [
+          "2026-08-21",
+          "626700000013",
+          6.48,
+          473,
+          10,
+          1
+        ],
+        [
+          "2026-08-21",
+          "626700000009",
+          23.17,
+          2649,
+          31,
+          0
+        ],
+        [
+          "2026-08-22",
+          "626700000011",
+          64.57,
+          8603,
+          133,
+          5
+        ],
+        [
+          "2026-08-22",
+          "626700000012",
+          36.45,
+          4441,
+          69,
+          2
+        ],
+        [
+          "2026-08-22",
+          "626700000013",
+          4.97,
+          351,
+          7,
+          0
+        ],
+        [
+          "2026-08-22",
+          "626700000009",
+          22.55,
+          2679,
+          31,
+          0
+        ],
+        [
+          "2026-08-23",
+          "626700000011",
+          61.15,
+          8604,
+          122,
+          2
+        ],
+        [
+          "2026-08-23",
+          "626700000012",
+          35.98,
+          4670,
+          83,
+          4
+        ],
+        [
+          "2026-08-23",
+          "626700000013",
+          5.82,
+          390,
+          8,
+          0
+        ],
+        [
+          "2026-08-23",
+          "626700000009",
+          22.44,
+          2488,
+          34,
+          0
+        ],
+        [
+          "2026-08-24",
+          "626700000011",
+          67.71,
+          8996,
+          126,
+          6
+        ],
+        [
+          "2026-08-24",
+          "626700000012",
+          34.23,
+          4409,
+          83,
+          1
+        ],
+        [
+          "2026-08-24",
+          "626700000013",
+          6.06,
+          403,
+          8,
+          0
+        ],
+        [
+          "2026-08-24",
+          "626700000009",
+          22.47,
+          2499,
+          34,
+          0
+        ],
+        [
+          "2026-08-25",
+          "626700000011",
+          64.63,
+          8922,
+          139,
+          5
+        ],
+        [
+          "2026-08-25",
+          "626700000012",
+          36.75,
+          4673,
+          87,
+          1
+        ],
+        [
+          "2026-08-25",
+          "626700000013",
+          6.29,
+          440,
+          8,
+          0
+        ],
+        [
+          "2026-08-25",
+          "626700000009",
+          24.25,
+          2791,
+          39,
+          0
+        ],
+        [
+          "2026-08-26",
+          "626700000011",
+          59.64,
+          8107,
+          117,
+          3
+        ],
+        [
+          "2026-08-26",
+          "626700000012",
+          35.92,
+          4726,
+          80,
+          1
+        ],
+        [
+          "2026-08-26",
+          "626700000013",
+          6.44,
+          458,
+          9,
+          0
+        ],
+        [
+          "2026-08-26",
+          "626700000009",
+          22.84,
+          2702,
+          33,
+          0
+        ],
+        [
+          "2026-08-27",
+          "626700000011",
+          62.01,
+          8682,
+          136,
+          2
+        ],
+        [
+          "2026-08-27",
+          "626700000012",
+          34.9,
+          4309,
+          68,
+          2
+        ],
+        [
+          "2026-08-27",
+          "626700000013",
+          6.28,
+          454,
+          9,
+          0
+        ],
+        [
+          "2026-08-27",
+          "626700000009",
+          22.53,
+          2554,
+          34,
+          0
+        ],
+        [
+          "2026-08-28",
+          "626700000011",
+          65.19,
+          9277,
+          135,
+          3
+        ],
+        [
+          "2026-08-28",
+          "626700000012",
+          36.28,
+          4420,
+          69,
+          2
+        ],
+        [
+          "2026-08-28",
+          "626700000013",
+          5.75,
+          421,
+          8,
+          0
+        ],
+        [
+          "2026-08-28",
+          "626700000009",
+          24.47,
+          2730,
+          38,
+          1
+        ],
+        [
+          "2026-08-29",
+          "626700000011",
+          60.93,
+          8475,
+          116,
+          0
+        ],
+        [
+          "2026-08-29",
+          "626700000012",
+          35.72,
+          4658,
+          81,
+          3
+        ],
+        [
+          "2026-08-29",
+          "626700000013",
+          5.61,
+          401,
+          8,
+          1
+        ],
+        [
+          "2026-08-29",
+          "626700000009",
+          23.87,
+          2874,
+          40,
+          1
+        ],
+        [
+          "2026-08-30",
+          "626700000011",
+          61.62,
+          8016,
+          122,
+          1
+        ],
+        [
+          "2026-08-30",
+          "626700000012",
+          37.08,
+          4842,
+          84,
+          4
+        ],
+        [
+          "2026-08-30",
+          "626700000013",
+          5.37,
+          370,
+          7,
+          2
+        ],
+        [
+          "2026-08-30",
+          "626700000009",
+          23.15,
+          2854,
+          38,
+          0
+        ],
+        [
+          "2026-08-31",
+          "626700000011",
+          61.84,
+          8045,
+          114,
+          1
+        ],
+        [
+          "2026-08-31",
+          "626700000012",
+          36.49,
+          4934,
+          88,
+          3
+        ],
+        [
+          "2026-08-31",
+          "626700000013",
+          4.67,
+          334,
+          7,
+          2
+        ],
+        [
+          "2026-08-31",
+          "626700000009",
+          23.29,
+          2685,
+          35,
+          1
+        ],
+        [
+          "2026-09-01",
+          "626700000011",
+          63.27,
+          8844,
+          140,
+          2
+        ],
+        [
+          "2026-09-01",
+          "626700000012",
+          37.0,
+          4936,
+          77,
+          2
+        ],
+        [
+          "2026-09-01",
+          "626700000013",
+          5.64,
+          405,
+          8,
+          0
+        ],
+        [
+          "2026-09-02",
+          "626700000011",
+          61.66,
+          8860,
+          120,
+          4
+        ],
+        [
+          "2026-09-02",
+          "626700000012",
+          34.5,
+          4630,
+          79,
+          0
+        ],
+        [
+          "2026-09-02",
+          "626700000013",
+          6.03,
+          434,
+          8,
+          2
+        ],
+        [
+          "2026-09-03",
+          "626700000011",
+          60.16,
+          8024,
+          118,
+          4
+        ],
+        [
+          "2026-09-03",
+          "626700000012",
+          36.66,
+          4986,
+          84,
+          1
+        ],
+        [
+          "2026-09-03",
+          "626700000013",
+          5.25,
+          366,
+          7,
+          0
+        ],
+        [
+          "2026-09-04",
+          "626700000011",
+          64.39,
+          9113,
+          143,
+          5
+        ],
+        [
+          "2026-09-04",
+          "626700000012",
+          37.99,
+          5061,
+          89,
+          1
+        ],
+        [
+          "2026-09-04",
+          "626700000013",
+          5.87,
+          390,
+          7,
+          0
+        ],
+        [
+          "2026-09-05",
+          "626700000011",
+          67.65,
+          9045,
+          141,
+          2
+        ],
+        [
+          "2026-09-05",
+          "626700000012",
+          36.53,
+          4577,
+          73,
+          1
+        ],
+        [
+          "2026-09-05",
+          "626700000013",
+          4.61,
+          326,
+          6,
+          1
+        ],
+        [
+          "2026-09-06",
+          "626700000011",
+          62.1,
+          8099,
+          117,
+          1
+        ],
+        [
+          "2026-09-06",
+          "626700000012",
+          37.88,
+          4798,
+          90,
+          2
+        ],
+        [
+          "2026-09-06",
+          "626700000013",
+          5.69,
+          401,
+          8,
+          1
+        ],
+        [
+          "2026-09-07",
+          "626700000011",
+          62.07,
+          8838,
+          129,
+          3
+        ],
+        [
+          "2026-09-07",
+          "626700000012",
+          36.76,
+          4865,
+          86,
+          2
+        ],
+        [
+          "2026-09-07",
+          "626700000013",
+          5.19,
+          387,
+          8,
+          1
+        ],
+        [
+          "2026-09-08",
+          "626700000011",
+          64.53,
+          9235,
+          146,
+          2
+        ],
+        [
+          "2026-09-08",
+          "626700000012",
+          34.56,
+          4358,
+          68,
+          1
+        ],
+        [
+          "2026-09-08",
+          "626700000013",
+          4.71,
+          346,
+          6,
+          3
+        ],
+        [
+          "2026-09-09",
+          "626700000011",
+          61.06,
+          7975,
+          108,
+          3
+        ],
+        [
+          "2026-09-09",
+          "626700000012",
+          34.9,
+          4273,
+          68,
+          3
+        ],
+        [
+          "2026-09-09",
+          "626700000013",
+          4.99,
+          369,
+          7,
+          0
+        ],
+        [
+          "2026-09-10",
+          "626700000011",
+          62.01,
+          8234,
+          115,
+          4
+        ],
+        [
+          "2026-09-10",
+          "626700000012",
+          34.85,
+          4669,
+          85,
+          3
+        ],
+        [
+          "2026-09-10",
+          "626700000013",
+          5.89,
+          418,
+          7,
+          1
+        ],
+        [
+          "2026-09-11",
+          "626700000011",
+          63.72,
+          9064,
+          125,
+          1
+        ],
+        [
+          "2026-09-11",
+          "626700000012",
+          38.12,
+          4975,
+          86,
+          3
+        ],
+        [
+          "2026-09-11",
+          "626700000013",
+          5.99,
+          419,
+          7,
+          0
+        ],
+        [
+          "2026-09-12",
+          "626700000011",
+          59.88,
+          8578,
+          124,
+          5
+        ],
+        [
+          "2026-09-12",
+          "626700000012",
+          36.11,
+          4521,
+          77,
+          3
+        ],
+        [
+          "2026-09-12",
+          "626700000013",
+          5.22,
+          354,
+          6,
+          1
+        ],
+        [
+          "2026-09-13",
+          "626700000011",
+          63.14,
+          9196,
+          128,
+          2
+        ],
+        [
+          "2026-09-13",
+          "626700000012",
+          34.44,
+          4311,
+          67,
+          2
+        ],
+        [
+          "2026-09-13",
+          "626700000013",
+          6.13,
+          446,
+          9,
+          0
+        ],
+        [
+          "2026-09-14",
+          "626700000011",
+          60.35,
+          8431,
+          127,
+          3
+        ],
+        [
+          "2026-09-14",
+          "626700000012",
+          36.84,
+          4532,
+          72,
+          1
+        ],
+        [
+          "2026-09-14",
+          "626700000013",
+          5.56,
+          370,
+          7,
+          2
+        ],
+        [
+          "2026-09-15",
+          "626700000011",
+          65.74,
+          9300,
+          145,
+          5
+        ],
+        [
+          "2026-09-15",
+          "626700000012",
+          37.75,
+          4844,
+          82,
+          0
+        ],
+        [
+          "2026-09-15",
+          "626700000013",
+          6.52,
+          469,
+          10,
+          0
+        ],
+        [
+          "2026-09-16",
+          "626700000011",
+          61.44,
+          7946,
+          107,
+          3
+        ],
+        [
+          "2026-09-16",
+          "626700000012",
+          35.57,
+          4452,
+          80,
+          0
+        ],
+        [
+          "2026-09-16",
+          "626700000013",
+          4.92,
+          332,
+          6,
+          0
+        ],
+        [
+          "2026-09-17",
+          "626700000011",
+          64.65,
+          8665,
+          116,
+          0
+        ],
+        [
+          "2026-09-17",
+          "626700000012",
+          38.31,
+          4969,
+          79,
+          0
+        ],
+        [
+          "2026-09-17",
+          "626700000013",
+          5.27,
+          375,
+          7,
+          0
+        ],
+        [
+          "2026-09-18",
+          "626700000011",
+          67.42,
+          9098,
+          121,
+          2
+        ],
+        [
+          "2026-09-18",
+          "626700000012",
+          34.35,
+          4600,
+          86,
+          2
+        ],
+        [
+          "2026-09-18",
+          "626700000013",
+          6.57,
+          453,
+          8,
+          0
+        ],
+        [
+          "2026-09-19",
+          "626700000011",
+          59.23,
+          8139,
+          109,
+          4
+        ],
+        [
+          "2026-09-19",
+          "626700000012",
+          37.29,
+          4577,
+          78,
+          3
+        ],
+        [
+          "2026-09-19",
+          "626700000013",
+          4.56,
+          332,
+          6,
+          1
+        ],
+        [
+          "2026-09-20",
+          "626700000011",
+          60.3,
+          8458,
+          132,
+          4
+        ],
+        [
+          "2026-09-20",
+          "626700000012",
+          36.63,
+          4479,
+          82,
+          1
+        ],
+        [
+          "2026-09-20",
+          "626700000013",
+          5.66,
+          400,
+          8,
+          0
+        ],
+        [
+          "2026-09-21",
+          "626700000011",
+          59.21,
+          7755,
+          117,
+          4
+        ],
+        [
+          "2026-09-21",
+          "626700000012",
+          36.02,
+          4449,
+          83,
+          2
+        ],
+        [
+          "2026-09-21",
+          "626700000013",
+          4.64,
+          325,
+          6,
+          1
+        ],
+        [
+          "2026-09-22",
+          "626700000011",
+          60.44,
+          7845,
+          123,
+          2
+        ],
+        [
+          "2026-09-22",
+          "626700000012",
+          37.57,
+          4947,
+          82,
+          2
+        ],
+        [
+          "2026-09-22",
+          "626700000013",
+          6.25,
+          455,
+          8,
+          2
+        ],
+        [
+          "2026-09-23",
+          "626700000011",
+          62.27,
+          8780,
+          122,
+          2
+        ],
+        [
+          "2026-09-23",
+          "626700000012",
+          36.33,
+          4840,
+          89,
+          1
+        ],
+        [
+          "2026-09-23",
+          "626700000013",
+          6.48,
+          453,
+          9,
+          0
+        ],
+        [
+          "2026-09-24",
+          "626700000011",
+          60.97,
+          8715,
+          133,
+          1
+        ],
+        [
+          "2026-09-24",
+          "626700000012",
+          38.24,
+          4638,
+          75,
+          2
+        ],
+        [
+          "2026-09-24",
+          "626700000013",
+          5.41,
+          386,
+          7,
+          0
+        ],
+        [
+          "2026-09-25",
+          "626700000011",
+          62.11,
+          8720,
+          139,
+          3
+        ],
+        [
+          "2026-09-25",
+          "626700000012",
+          35.28,
+          4674,
+          85,
+          2
+        ],
+        [
+          "2026-09-25",
+          "626700000013",
+          5.97,
+          440,
+          8,
+          0
+        ],
+        [
+          "2026-09-26",
+          "626700000011",
+          62.83,
+          8150,
+          112,
+          1
+        ],
+        [
+          "2026-09-26",
+          "626700000012",
+          35.11,
+          4321,
+          74,
+          0
+        ],
+        [
+          "2026-09-26",
+          "626700000013",
+          4.53,
+          335,
+          6,
+          0
+        ],
+        [
+          "2026-09-27",
+          "626700000011",
+          61.95,
+          8543,
+          115,
+          2
+        ],
+        [
+          "2026-09-27",
+          "626700000012",
+          37.37,
+          4628,
+          72,
+          3
+        ],
+        [
+          "2026-09-27",
+          "626700000013",
+          5.53,
+          401,
+          7,
+          0
+        ],
+        [
+          "2026-09-28",
+          "626700000011",
+          59.02,
+          7653,
+          107,
+          1
+        ],
+        [
+          "2026-09-28",
+          "626700000012",
+          37.62,
+          5049,
+          83,
+          0
+        ],
+        [
+          "2026-09-28",
+          "626700000013",
+          6.38,
+          472,
+          9,
+          2
+        ],
+        [
+          "2026-09-29",
+          "626700000011",
+          62.59,
+          7369,
+          74,
+          1
+        ],
+        [
+          "2026-09-29",
+          "626700000012",
+          37.88,
+          4906,
+          77,
+          2
+        ],
+        [
+          "2026-09-29",
+          "626700000013",
+          6.19,
+          421,
+          8,
+          0
+        ],
+        [
+          "2026-09-30",
+          "626700000011",
+          61.94,
+          7449,
+          74,
+          2
+        ],
+        [
+          "2026-09-30",
+          "626700000012",
+          37.12,
+          4993,
+          78,
+          4
+        ],
+        [
+          "2026-09-30",
+          "626700000013",
+          6.19,
+          443,
+          8,
+          0
+        ],
+        [
+          "2026-10-01",
+          "626700000011",
+          66.25,
+          7823,
+          76,
+          1
+        ],
+        [
+          "2026-10-01",
+          "626700000012",
+          37.13,
+          4861,
+          86,
+          3
+        ],
+        [
+          "2026-10-01",
+          "626700000013",
+          4.59,
+          329,
+          7,
+          0
+        ],
+        [
+          "2026-10-02",
+          "626700000011",
+          60.6,
+          7622,
+          66,
+          2
+        ],
+        [
+          "2026-10-02",
+          "626700000012",
+          34.99,
+          4574,
+          72,
+          1
+        ],
+        [
+          "2026-10-02",
+          "626700000013",
+          6.41,
+          445,
+          9,
+          1
+        ],
+        [
+          "2026-10-03",
+          "626700000011",
+          67.7,
+          7774,
+          73,
+          2
+        ],
+        [
+          "2026-10-03",
+          "626700000012",
+          37.75,
+          4816,
+          79,
+          0
+        ],
+        [
+          "2026-10-03",
+          "626700000013",
+          5.14,
+          385,
+          7,
+          1
+        ],
+        [
+          "2026-10-04",
+          "626700000011",
+          59.95,
+          6877,
+          66,
+          3
+        ],
+        [
+          "2026-10-04",
+          "626700000012",
+          35.37,
+          4742,
+          84,
+          1
+        ],
+        [
+          "2026-10-04",
+          "626700000013",
+          5.83,
+          393,
+          8,
+          1
+        ],
+        [
+          "2026-10-05",
+          "626700000011",
+          62.8,
+          7960,
+          71,
+          0
+        ],
+        [
+          "2026-10-05",
+          "626700000012",
+          35.56,
+          4321,
+          76,
+          2
+        ],
+        [
+          "2026-10-05",
+          "626700000013",
+          4.85,
+          346,
+          7,
+          1
+        ],
+        [
+          "2026-10-06",
+          "626700000011",
+          61.48,
+          7332,
+          71,
+          4
+        ],
+        [
+          "2026-10-06",
+          "626700000012",
+          36.96,
+          4801,
+          87,
+          3
+        ],
+        [
+          "2026-10-06",
+          "626700000013",
+          5.39,
+          370,
+          7,
+          0
+        ],
+        [
+          "2026-10-07",
+          "626700000011",
+          59.37,
+          6813,
+          68,
+          2
+        ],
+        [
+          "2026-10-07",
+          "626700000012",
+          37.5,
+          4856,
+          86,
+          3
+        ],
+        [
+          "2026-10-07",
+          "626700000013",
+          5.66,
+          416,
+          8,
+          0
+        ],
+        [
+          "2026-10-08",
+          "626700000011",
+          59.47,
+          7283,
+          71,
+          3
+        ],
+        [
+          "2026-10-08",
+          "626700000012",
+          35.51,
+          4626,
+          75,
+          2
+        ],
+        [
+          "2026-10-08",
+          "626700000013",
+          6.28,
+          429,
+          7,
+          0
+        ],
+        [
+          "2026-10-09",
+          "626700000011",
+          62.75,
+          7236,
+          63,
+          3
+        ],
+        [
+          "2026-10-09",
+          "626700000012",
+          34.45,
+          4584,
+          72,
+          0
+        ],
+        [
+          "2026-10-09",
+          "626700000013",
+          5.8,
+          405,
+          7,
+          0
+        ],
+        [
+          "2026-10-10",
+          "626700000011",
+          59.61,
+          6918,
+          59,
+          2
+        ],
+        [
+          "2026-10-10",
+          "626700000012",
+          37.82,
+          4836,
+          82,
+          4
+        ],
+        [
+          "2026-10-10",
+          "626700000013",
+          4.89,
+          329,
+          6,
+          2
+        ],
+        [
+          "2026-10-11",
+          "626700000011",
+          61.6,
+          7477,
+          76,
+          1
+        ],
+        [
+          "2026-10-11",
+          "626700000012",
+          38.24,
+          4831,
+          78,
+          1
+        ],
+        [
+          "2026-10-11",
+          "626700000013",
+          5.51,
+          398,
+          8,
+          0
+        ],
+        [
+          "2026-10-12",
+          "626700000011",
+          67.6,
+          8340,
+          84,
+          6
+        ],
+        [
+          "2026-10-12",
+          "626700000012",
+          34.73,
+          4301,
+          69,
+          0
+        ],
+        [
+          "2026-10-12",
+          "626700000013",
+          4.98,
+          367,
+          7,
+          0
+        ],
+        [
+          "2026-10-13",
+          "626700000011",
+          63.61,
+          7960,
+          77,
+          2
+        ],
+        [
+          "2026-10-13",
+          "626700000012",
+          34.87,
+          4516,
+          80,
+          5
+        ],
+        [
+          "2026-10-13",
+          "626700000013",
+          6.55,
+          478,
+          10,
+          0
+        ],
+        [
+          "2026-10-14",
+          "626700000011",
+          67.16,
+          7810,
+          80,
+          2
+        ],
+        [
+          "2026-10-14",
+          "626700000012",
+          37.6,
+          4595,
+          74,
+          2
+        ],
+        [
+          "2026-10-14",
+          "626700000013",
+          5.81,
+          421,
+          8,
+          1
+        ],
+        [
+          "2026-10-15",
+          "626700000011",
+          63.72,
+          7743,
+          70,
+          2
+        ],
+        [
+          "2026-10-15",
+          "626700000012",
+          34.8,
+          4456,
+          73,
+          3
+        ],
+        [
+          "2026-10-15",
+          "626700000013",
+          6.59,
+          470,
+          8,
+          0
+        ],
+        [
+          "2026-10-16",
+          "626700000011",
+          63.19,
+          7896,
+          74,
+          2
+        ],
+        [
+          "2026-10-16",
+          "626700000012",
+          35.19,
+          4465,
+          71,
+          2
+        ],
+        [
+          "2026-10-16",
+          "626700000013",
+          4.92,
+          347,
+          6,
+          1
+        ],
+        [
+          "2026-10-17",
+          "626700000011",
+          59.62,
+          7620,
+          77,
+          1
+        ],
+        [
+          "2026-10-17",
+          "626700000012",
+          34.05,
+          4136,
+          64,
+          2
+        ],
+        [
+          "2026-10-17",
+          "626700000013",
+          6.29,
+          456,
+          8,
+          0
+        ],
+        [
+          "2026-10-18",
+          "626700000011",
+          65.98,
+          7562,
+          68,
+          4
+        ],
+        [
+          "2026-10-18",
+          "626700000012",
+          37.77,
+          4588,
+          86,
+          2
+        ],
+        [
+          "2026-10-18",
+          "626700000013",
+          6.06,
+          445,
+          8,
+          0
+        ],
+        [
+          "2026-10-19",
+          "626700000011",
+          65.2,
+          8192,
+          80,
+          2
+        ],
+        [
+          "2026-10-19",
+          "626700000012",
+          36.26,
+          4567,
+          80,
+          2
+        ],
+        [
+          "2026-10-19",
+          "626700000013",
+          4.9,
+          351,
+          7,
+          1
+        ],
+        [
+          "2026-10-20",
+          "626700000011",
+          59.39,
+          7048,
+          67,
+          2
+        ],
+        [
+          "2026-10-20",
+          "626700000012",
+          36.9,
+          4572,
+          83,
+          2
+        ],
+        [
+          "2026-10-20",
+          "626700000013",
+          5.81,
+          427,
+          9,
+          1
+        ],
+        [
+          "2026-10-21",
+          "626700000011",
+          61.42,
+          7613,
+          70,
+          2
+        ],
+        [
+          "2026-10-21",
+          "626700000012",
+          34.58,
+          4477,
+          81,
+          2
+        ],
+        [
+          "2026-10-21",
+          "626700000013",
+          6.08,
+          444,
+          8,
+          1
+        ],
+        [
+          "2026-10-22",
+          "626700000011",
+          66.79,
+          8471,
+          74,
+          1
+        ],
+        [
+          "2026-10-22",
+          "626700000012",
+          36.71,
+          4756,
+          87,
+          2
+        ],
+        [
+          "2026-10-22",
+          "626700000013",
+          5.15,
+          361,
+          7,
+          2
+        ],
+        [
+          "2026-10-23",
+          "626700000011",
+          60.6,
+          7111,
+          71,
+          1
+        ],
+        [
+          "2026-10-23",
+          "626700000012",
+          34.09,
+          4477,
+          79,
+          1
+        ],
+        [
+          "2026-10-23",
+          "626700000013",
+          5.72,
+          408,
+          7,
+          0
+        ],
+        [
+          "2026-10-24",
+          "626700000011",
+          60.27,
+          7518,
+          72,
+          3
+        ],
+        [
+          "2026-10-24",
+          "626700000012",
+          34.47,
+          4537,
+          73,
+          4
+        ],
+        [
+          "2026-10-24",
+          "626700000013",
+          5.29,
+          366,
+          7,
+          2
+        ],
+        [
+          "2026-10-25",
+          "626700000011",
+          63.9,
+          7596,
+          77,
+          1
+        ],
+        [
+          "2026-10-25",
+          "626700000012",
+          36.34,
+          4817,
+          90,
+          4
+        ],
+        [
+          "2026-10-25",
+          "626700000013",
+          5.52,
+          387,
+          8,
+          1
+        ],
+        [
+          "2026-10-26",
+          "626700000011",
+          65.17,
+          8161,
+          70,
+          4
+        ],
+        [
+          "2026-10-26",
+          "626700000012",
+          36.62,
+          4462,
+          70,
+          3
+        ],
+        [
+          "2026-10-26",
+          "626700000013",
+          6.25,
+          455,
+          9,
+          0
+        ],
+        [
+          "2026-10-27",
+          "626700000011",
+          63.62,
+          7686,
+          79,
+          3
+        ],
+        [
+          "2026-10-27",
+          "626700000012",
+          34.8,
+          4353,
+          69,
+          1
+        ],
+        [
+          "2026-10-27",
+          "626700000013",
+          4.57,
+          332,
+          7,
+          0
+        ]
+      ]
+    },
+    "get_ad_group_analytics": [
+      {
+        "AD_GROUP_ID": "2680000000101",
+        "SPEND_IN_DOLLAR": 715.3,
+        "IMPRESSION_1": 91165,
+        "OUTBOUND_CLICK_1": 1169,
+        "OUTBOUND_CTR_1": 0.012823,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.61,
+        "TOTAL_IMPRESSION_FREQUENCY": 2.04,
+        "TOTAL_CONVERSIONS": 29,
+        "TOTAL_CHECKOUT_VALUE_IN_MICRO_DOLLAR": 2985840000
+      },
+      {
+        "AD_GROUP_ID": "2680000000102",
+        "SPEND_IN_DOLLAR": 865.89,
+        "IMPRESSION_1": 100282,
+        "OUTBOUND_CLICK_1": 661,
+        "OUTBOUND_CTR_1": 0.006591,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 1.31,
+        "TOTAL_IMPRESSION_FREQUENCY": 1.74,
+        "TOTAL_CONVERSIONS": 16,
+        "TOTAL_CHECKOUT_VALUE_IN_MICRO_DOLLAR": 1472640000
+      },
+      {
+        "AD_GROUP_ID": "2680000000103",
+        "SPEND_IN_DOLLAR": 301.18,
+        "IMPRESSION_1": 36466,
+        "OUTBOUND_CLICK_1": 375,
+        "OUTBOUND_CTR_1": 0.010284,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.8,
+        "TOTAL_IMPRESSION_FREQUENCY": 1.74,
+        "TOTAL_CONVERSIONS": 20,
+        "TOTAL_CHECKOUT_VALUE_IN_MICRO_DOLLAR": 2199600000
+      },
+      {
+        "AD_GROUP_ID": "2680000000104",
+        "SPEND_IN_DOLLAR": 1083.68,
+        "IMPRESSION_1": 138871,
+        "OUTBOUND_CLICK_1": 2344,
+        "OUTBOUND_CTR_1": 0.016879,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.46,
+        "TOTAL_IMPRESSION_FREQUENCY": 1.8,
+        "TOTAL_CONVERSIONS": 63,
+        "TOTAL_CHECKOUT_VALUE_IN_MICRO_DOLLAR": 5110560000
+      },
+      {
+        "AD_GROUP_ID": "2680000000105",
+        "SPEND_IN_DOLLAR": 169.6,
+        "IMPRESSION_1": 12096,
+        "OUTBOUND_CLICK_1": 230,
+        "OUTBOUND_CTR_1": 0.019015,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.74,
+        "TOTAL_IMPRESSION_FREQUENCY": 4.8,
+        "TOTAL_CONVERSIONS": 18,
+        "TOTAL_CHECKOUT_VALUE_IN_MICRO_DOLLAR": 1769040000
+      }
+    ],
+    "get_ad_analytics": [
+      {
+        "AD_ID": "687000000201",
+        "SPEND_IN_DOLLAR": 357.65,
+        "IMPRESSION_1": 48317,
+        "OUTBOUND_CLICK_1": 853,
+        "OUTBOUND_CTR_1": 0.017654,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.42,
+        "REPIN_1": 149,
+        "TOTAL_CONVERSIONS": 20
+      },
+      {
+        "AD_ID": "687000000202",
+        "SPEND_IN_DOLLAR": 357.65,
+        "IMPRESSION_1": 42848,
+        "OUTBOUND_CLICK_1": 316,
+        "OUTBOUND_CTR_1": 0.007375,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 1.13,
+        "REPIN_1": 68,
+        "TOTAL_CONVERSIONS": 9,
+        "TOTAL_VIDEO_3SEC_VIEWS": 8998,
+        "TOTAL_VIDEO_P25_COMBINED": 5578,
+        "TOTAL_VIDEO_P50_COMBINED": 3059,
+        "TOTAL_VIDEO_P75_COMBINED": 1709,
+        "TOTAL_VIDEO_P100_COMPLETE": 989,
+        "TOTAL_VIDEO_AVG_WATCHTIME_IN_SECOND": 6.4
+      },
+      {
+        "AD_ID": "687000000203",
+        "SPEND_IN_DOLLAR": 346.36,
+        "IMPRESSION_1": 45127,
+        "OUTBOUND_CLICK_1": 469,
+        "OUTBOUND_CTR_1": 0.010393,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.74,
+        "REPIN_1": 171,
+        "TOTAL_CONVERSIONS": 11
+      },
+      {
+        "AD_ID": "687000000204",
+        "SPEND_IN_DOLLAR": 519.53,
+        "IMPRESSION_1": 55155,
+        "OUTBOUND_CLICK_1": 192,
+        "OUTBOUND_CTR_1": 0.003481,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 2.71,
+        "REPIN_1": 77,
+        "TOTAL_CONVERSIONS": 5,
+        "TOTAL_VIDEO_3SEC_VIEWS": 11582,
+        "TOTAL_VIDEO_P25_COMBINED": 6717,
+        "TOTAL_VIDEO_P50_COMBINED": 3590,
+        "TOTAL_VIDEO_P75_COMBINED": 1968,
+        "TOTAL_VIDEO_P100_COMPLETE": 1042,
+        "TOTAL_VIDEO_AVG_WATCHTIME_IN_SECOND": 6.4
+      },
+      {
+        "AD_ID": "687000000205",
+        "SPEND_IN_DOLLAR": 301.18,
+        "IMPRESSION_1": 36466,
+        "OUTBOUND_CLICK_1": 375,
+        "OUTBOUND_CTR_1": 0.010284,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.8,
+        "REPIN_1": 160,
+        "TOTAL_CONVERSIONS": 20
+      },
+      {
+        "AD_ID": "687000000206",
+        "SPEND_IN_DOLLAR": 1083.68,
+        "IMPRESSION_1": 138871,
+        "OUTBOUND_CLICK_1": 2344,
+        "OUTBOUND_CTR_1": 0.016879,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.46,
+        "REPIN_1": 305,
+        "TOTAL_CONVERSIONS": 63
+      },
+      {
+        "AD_ID": "687000000207",
+        "SPEND_IN_DOLLAR": 169.6,
+        "IMPRESSION_1": 12096,
+        "OUTBOUND_CLICK_1": 230,
+        "OUTBOUND_CTR_1": 0.019015,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.74,
+        "REPIN_1": 14,
+        "TOTAL_CONVERSIONS": 18
+      }
+    ],
+    "get_targeting_analytics": [
+      {
+        "TARGETING_TYPE": "KEYWORD",
+        "TARGETING_VALUE": "linen duvet cover",
+        "SPEND_IN_DOLLAR": 100.14,
+        "IMPRESSION_1": 11619,
+        "OUTBOUND_CLICK_1": 208,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.48,
+        "TOTAL_CONVERSIONS": 5
+      },
+      {
+        "TARGETING_TYPE": "KEYWORD",
+        "TARGETING_VALUE": "linen bedding",
+        "SPEND_IN_DOLLAR": 92.99,
+        "IMPRESSION_1": 12513,
+        "OUTBOUND_CLICK_1": 175,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.53,
+        "TOTAL_CONVERSIONS": 4
+      },
+      {
+        "TARGETING_TYPE": "KEYWORD",
+        "TARGETING_VALUE": "stonewashed linen",
+        "SPEND_IN_DOLLAR": 57.22,
+        "IMPRESSION_1": 6256,
+        "OUTBOUND_CLICK_1": 120,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.48,
+        "TOTAL_CONVERSIONS": 3
+      },
+      {
+        "TARGETING_TYPE": "KEYWORD",
+        "TARGETING_VALUE": "linen sheets",
+        "SPEND_IN_DOLLAR": 64.38,
+        "IMPRESSION_1": 8938,
+        "OUTBOUND_CLICK_1": 98,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.66,
+        "TOTAL_CONVERSIONS": 2
+      },
+      {
+        "TARGETING_TYPE": "KEYWORD",
+        "TARGETING_VALUE": "linen pillowcases",
+        "SPEND_IN_DOLLAR": 35.77,
+        "IMPRESSION_1": 4469,
+        "OUTBOUND_CLICK_1": 65,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.55,
+        "TOTAL_CONVERSIONS": 2
+      },
+      {
+        "TARGETING_TYPE": "KEYWORD",
+        "TARGETING_VALUE": "flax linen bedding",
+        "SPEND_IN_DOLLAR": 35.77,
+        "IMPRESSION_1": 4469,
+        "OUTBOUND_CLICK_1": 76,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.47,
+        "TOTAL_CONVERSIONS": 2
+      },
+      {
+        "TARGETING_TYPE": "KEYWORD",
+        "TARGETING_VALUE": "linen duvet cover queen",
+        "SPEND_IN_DOLLAR": 42.92,
+        "IMPRESSION_1": 4469,
+        "OUTBOUND_CLICK_1": 98,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.44,
+        "TOTAL_CONVERSIONS": 3
+      },
+      {
+        "TARGETING_TYPE": "KEYWORD",
+        "TARGETING_VALUE": "linen duvet cover king",
+        "SPEND_IN_DOLLAR": 28.61,
+        "IMPRESSION_1": 3575,
+        "OUTBOUND_CLICK_1": 65,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.44,
+        "TOTAL_CONVERSIONS": 2
+      },
+      {
+        "TARGETING_TYPE": "KEYWORD",
+        "TARGETING_VALUE": "neutral bedding",
+        "SPEND_IN_DOLLAR": 42.92,
+        "IMPRESSION_1": 6256,
+        "OUTBOUND_CLICK_1": 44,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.98,
+        "TOTAL_CONVERSIONS": 1
+      },
+      {
+        "TARGETING_TYPE": "KEYWORD",
+        "TARGETING_VALUE": "earthy bedroom",
+        "SPEND_IN_DOLLAR": 35.76,
+        "IMPRESSION_1": 6256,
+        "OUTBOUND_CLICK_1": 22,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 1.63,
+        "TOTAL_CONVERSIONS": 0
+      },
+      {
+        "TARGETING_TYPE": "KEYWORD",
+        "TARGETING_VALUE": "linen bed set",
+        "SPEND_IN_DOLLAR": 42.92,
+        "IMPRESSION_1": 4469,
+        "OUTBOUND_CLICK_1": 55,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.78,
+        "TOTAL_CONVERSIONS": 1
+      },
+      {
+        "TARGETING_TYPE": "KEYWORD",
+        "TARGETING_VALUE": "washed linen bedding",
+        "SPEND_IN_DOLLAR": 28.61,
+        "IMPRESSION_1": 3575,
+        "OUTBOUND_CLICK_1": 55,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.52,
+        "TOTAL_CONVERSIONS": 1
+      },
+      {
+        "TARGETING_TYPE": "KEYWORD",
+        "TARGETING_VALUE": "bedding sets queen",
+        "SPEND_IN_DOLLAR": 42.92,
+        "IMPRESSION_1": 5363,
+        "OUTBOUND_CLICK_1": 33,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 1.3,
+        "TOTAL_CONVERSIONS": 1
+      },
+      {
+        "TARGETING_TYPE": "KEYWORD",
+        "TARGETING_VALUE": "cozy bedding",
+        "SPEND_IN_DOLLAR": 35.76,
+        "IMPRESSION_1": 5363,
+        "OUTBOUND_CLICK_1": 22,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 1.63,
+        "TOTAL_CONVERSIONS": 1
+      },
+      {
+        "TARGETING_TYPE": "KEYWORD",
+        "TARGETING_VALUE": "duvet cover",
+        "SPEND_IN_DOLLAR": 28.61,
+        "IMPRESSION_1": 3575,
+        "OUTBOUND_CLICK_1": 33,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.87,
+        "TOTAL_CONVERSIONS": 1
+      },
+      {
+        "TARGETING_TYPE": "TARGETED_INTEREST",
+        "TARGETING_VALUE": "Bedroom decor",
+        "SPEND_IN_DOLLAR": 259.77,
+        "IMPRESSION_1": 28079,
+        "OUTBOUND_CLICK_1": 225,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 1.15,
+        "TOTAL_CONVERSIONS": 6
+      },
+      {
+        "TARGETING_TYPE": "TARGETED_INTEREST",
+        "TARGETING_VALUE": "Home decor",
+        "SPEND_IN_DOLLAR": 225.13,
+        "IMPRESSION_1": 30084,
+        "OUTBOUND_CLICK_1": 132,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 1.71,
+        "TOTAL_CONVERSIONS": 3
+      },
+      {
+        "TARGETING_TYPE": "TARGETED_INTEREST",
+        "TARGETING_VALUE": "Scandinavian interiors",
+        "SPEND_IN_DOLLAR": 121.22,
+        "IMPRESSION_1": 13037,
+        "OUTBOUND_CLICK_1": 99,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 1.22,
+        "TOTAL_CONVERSIONS": 2
+      },
+      {
+        "TARGETING_TYPE": "TARGETED_INTEREST",
+        "TARGETING_VALUE": "Cozy home",
+        "SPEND_IN_DOLLAR": 147.2,
+        "IMPRESSION_1": 17048,
+        "OUTBOUND_CLICK_1": 126,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 1.17,
+        "TOTAL_CONVERSIONS": 3
+      },
+      {
+        "TARGETING_TYPE": "TARGETED_INTEREST",
+        "TARGETING_VALUE": "Neutral home decor",
+        "SPEND_IN_DOLLAR": 112.57,
+        "IMPRESSION_1": 12034,
+        "OUTBOUND_CLICK_1": 79,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 1.42,
+        "TOTAL_CONVERSIONS": 2
+      },
+      {
+        "TARGETING_TYPE": "AUDIENCE_INCLUDE",
+        "TARGETING_VALUE": "Actalike 1% | Past buyers",
+        "SPEND_IN_DOLLAR": 301.18,
+        "IMPRESSION_1": 36466,
+        "OUTBOUND_CLICK_1": 375,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.8,
+        "TOTAL_CONVERSIONS": 20
+      },
+      {
+        "TARGETING_TYPE": "AUDIENCE_INCLUDE",
+        "TARGETING_VALUE": "Site visitors 30 days",
+        "SPEND_IN_DOLLAR": 169.6,
+        "IMPRESSION_1": 12096,
+        "OUTBOUND_CLICK_1": 230,
+        "COST_PER_OUTBOUND_CLICK_IN_DOLLAR": 0.74,
+        "TOTAL_CONVERSIONS": 18
+      },
+      {
+        "TARGETING_TYPE": "PINNER_INTEREST",
+        "TARGETING_VALUE": "Bedroom decor",
+        "IMPRESSION_1": 155340,
+        "OUTBOUND_CLICK_1": 1833
+      },
+      {
+        "TARGETING_TYPE": "PINNER_INTEREST",
+        "TARGETING_VALUE": "Home organisation",
+        "IMPRESSION_1": 83353,
+        "OUTBOUND_CLICK_1": 783
+      },
+      {
+        "TARGETING_TYPE": "PINNER_INTEREST",
+        "TARGETING_VALUE": "Wedding registry ideas",
+        "IMPRESSION_1": 34099,
+        "OUTBOUND_CLICK_1": 514
+      },
+      {
+        "TARGETING_TYPE": "PINNER_INTEREST",
+        "TARGETING_VALUE": "Guest room ideas",
+        "IMPRESSION_1": 30310,
+        "OUTBOUND_CLICK_1": 421
+      },
+      {
+        "TARGETING_TYPE": "PINNER_INTEREST",
+        "TARGETING_VALUE": "Slow living",
+        "IMPRESSION_1": 22732,
+        "OUTBOUND_CLICK_1": 277
+      }
+    ],
+    "get_trending_keywords": {
+      "region": "US",
+      "interests": [
+        "home_decor"
+      ],
+      "week_dates": [
+        "2025-10-29",
+        "2025-11-05",
+        "2025-11-12",
+        "2025-11-19",
+        "2025-11-26",
+        "2025-12-03",
+        "2025-12-10",
+        "2025-12-17",
+        "2025-12-24",
+        "2025-12-31",
+        "2026-01-07",
+        "2026-01-14",
+        "2026-01-21",
+        "2026-01-28",
+        "2026-02-04",
+        "2026-02-11",
+        "2026-02-18",
+        "2026-02-25",
+        "2026-03-04",
+        "2026-03-11",
+        "2026-03-18",
+        "2026-03-25",
+        "2026-04-01",
+        "2026-04-08",
+        "2026-04-15",
+        "2026-04-22",
+        "2026-04-29",
+        "2026-05-06",
+        "2026-05-13",
+        "2026-05-20",
+        "2026-05-27",
+        "2026-06-03",
+        "2026-06-10",
+        "2026-06-17",
+        "2026-06-24",
+        "2026-07-01",
+        "2026-07-08",
+        "2026-07-15",
+        "2026-07-22",
+        "2026-07-29",
+        "2026-08-05",
+        "2026-08-12",
+        "2026-08-19",
+        "2026-08-26",
+        "2026-09-02",
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23",
+        "2026-09-30",
+        "2026-10-07",
+        "2026-10-14",
+        "2026-10-21"
+      ],
+      "yearly": [
+        {
+          "keyword": "linen throw blanket",
+          "pct_growth_wow": 5,
+          "pct_growth_mom": 22,
+          "pct_growth_yoy": 31,
+          "time_series": [
+            41,
+            43,
+            55,
+            69,
+            82,
+            95,
+            100,
+            94,
+            87,
+            67,
+            59,
+            48,
+            38,
+            39,
+            38,
+            32,
+            32,
+            31,
+            32,
+            33,
+            35,
+            35,
+            32,
+            35,
+            34,
+            35,
+            37,
+            36,
+            37,
+            35,
+            36,
+            33,
+            33,
+            34,
+            33,
+            36,
+            32,
+            36,
+            36,
+            35,
+            33,
+            34,
+            37,
+            33,
+            37,
+            34,
+            36,
+            35,
+            37,
+            33,
+            37,
+            36
+          ]
+        },
+        {
+          "keyword": "linen bedding",
+          "pct_growth_wow": 2,
+          "pct_growth_mom": 5,
+          "pct_growth_yoy": 18,
+          "time_series": [
+            42,
+            44,
+            43,
+            46,
+            46,
+            42,
+            42,
+            44,
+            46,
+            41,
+            46,
+            45,
+            49,
+            48,
+            51,
+            58,
+            62,
+            77,
+            86,
+            94,
+            96,
+            100,
+            99,
+            91,
+            84,
+            76,
+            63,
+            56,
+            54,
+            46,
+            47,
+            46,
+            47,
+            42,
+            46,
+            46,
+            44,
+            42,
+            46,
+            45,
+            46,
+            44,
+            42,
+            44,
+            46,
+            41,
+            43,
+            47,
+            46,
+            43,
+            42,
+            43
+          ]
+        },
+        {
+          "keyword": "linen duvet cover",
+          "pct_growth_wow": 1,
+          "pct_growth_mom": 4,
+          "pct_growth_yoy": 22,
+          "time_series": [
+            40,
+            42,
+            40,
+            41,
+            42,
+            40,
+            43,
+            39,
+            39,
+            39,
+            43,
+            40,
+            43,
+            39,
+            44,
+            43,
+            51,
+            58,
+            66,
+            79,
+            90,
+            97,
+            100,
+            98,
+            92,
+            80,
+            67,
+            60,
+            53,
+            44,
+            42,
+            41,
+            43,
+            42,
+            38,
+            43,
+            38,
+            37,
+            40,
+            38,
+            39,
+            38,
+            43,
+            37,
+            40,
+            41,
+            42,
+            42,
+            41,
+            41,
+            39,
+            41
+          ]
+        },
+        {
+          "keyword": "throw blanket",
+          "pct_growth_wow": 1,
+          "pct_growth_mom": 6,
+          "pct_growth_yoy": 3,
+          "time_series": [
+            97,
+            95,
+            97,
+            97,
+            96,
+            99,
+            99,
+            100,
+            99,
+            99,
+            99,
+            99,
+            99,
+            96,
+            94,
+            99,
+            92,
+            97,
+            92,
+            96,
+            92,
+            94,
+            91,
+            89,
+            84,
+            89,
+            83,
+            88,
+            81,
+            80,
+            84,
+            79,
+            80,
+            82,
+            82,
+            84,
+            85,
+            86,
+            83,
+            87,
+            90,
+            86,
+            91,
+            89,
+            88,
+            94,
+            92,
+            95,
+            95,
+            94,
+            99,
+            95
+          ]
+        },
+        {
+          "keyword": "bedding ideas",
+          "pct_growth_wow": 0,
+          "pct_growth_mom": 2,
+          "pct_growth_yoy": 5,
+          "time_series": [
+            92,
+            92,
+            95,
+            93,
+            98,
+            99,
+            94,
+            96,
+            99,
+            99,
+            99,
+            99,
+            99,
+            99,
+            100,
+            99,
+            99,
+            99,
+            99,
+            97,
+            99,
+            98,
+            99,
+            97,
+            95,
+            96,
+            97,
+            90,
+            90,
+            93,
+            95,
+            93,
+            90,
+            91,
+            85,
+            90,
+            85,
+            88,
+            84,
+            87,
+            83,
+            85,
+            88,
+            89,
+            86,
+            91,
+            92,
+            93,
+            92,
+            93,
+            93,
+            95
+          ]
+        },
+        {
+          "keyword": "entryway decor",
+          "pct_growth_wow": 1,
+          "pct_growth_mom": 3,
+          "pct_growth_yoy": 6,
+          "time_series": [
+            90,
+            92,
+            90,
+            92,
+            93,
+            95,
+            95,
+            94,
+            96,
+            99,
+            99,
+            96,
+            100,
+            99,
+            99,
+            99,
+            99,
+            98,
+            94,
+            99,
+            99,
+            92,
+            96,
+            94,
+            92,
+            92,
+            89,
+            89,
+            88,
+            84,
+            81,
+            85,
+            85,
+            80,
+            80,
+            79,
+            81,
+            75,
+            74,
+            77,
+            81,
+            81,
+            78,
+            78,
+            85,
+            84,
+            81,
+            87,
+            87,
+            88,
+            84,
+            90
+          ]
+        },
+        {
+          "keyword": "boho living room",
+          "pct_growth_wow": -1,
+          "pct_growth_mom": -2,
+          "pct_growth_yoy": -12,
+          "time_series": [
+            82,
+            84,
+            89,
+            88,
+            85,
+            88,
+            93,
+            89,
+            93,
+            97,
+            95,
+            98,
+            99,
+            98,
+            98,
+            96,
+            99,
+            99,
+            100,
+            99,
+            99,
+            96,
+            96,
+            99,
+            99,
+            96,
+            95,
+            95,
+            94,
+            95,
+            91,
+            91,
+            89,
+            84,
+            82,
+            88,
+            85,
+            81,
+            81,
+            81,
+            78,
+            78,
+            81,
+            80,
+            77,
+            76,
+            77,
+            77,
+            77,
+            82,
+            83,
+            79
+          ]
+        },
+        {
+          "keyword": "gallery wall",
+          "pct_growth_wow": 0,
+          "pct_growth_mom": 1,
+          "pct_growth_yoy": 2,
+          "time_series": [
+            84,
+            84,
+            84,
+            84,
+            89,
+            91,
+            91,
+            91,
+            90,
+            99,
+            95,
+            99,
+            99,
+            99,
+            99,
+            99,
+            100,
+            97,
+            96,
+            98,
+            95,
+            97,
+            94,
+            96,
+            94,
+            92,
+            92,
+            92,
+            89,
+            88,
+            88,
+            83,
+            80,
+            79,
+            84,
+            83,
+            79,
+            74,
+            79,
+            72,
+            73,
+            74,
+            76,
+            76,
+            76,
+            77,
+            73,
+            75,
+            80,
+            75,
+            78,
+            81
+          ]
+        },
+        {
+          "keyword": "kitchen decor",
+          "pct_growth_wow": 1,
+          "pct_growth_mom": 3,
+          "pct_growth_yoy": 8,
+          "time_series": [
+            78,
+            78,
+            79,
+            80,
+            79,
+            80,
+            84,
+            89,
+            86,
+            91,
+            88,
+            87,
+            93,
+            89,
+            96,
+            93,
+            99,
+            98,
+            99,
+            95,
+            97,
+            97,
+            99,
+            99,
+            100,
+            99,
+            96,
+            97,
+            96,
+            99,
+            96,
+            95,
+            98,
+            93,
+            90,
+            93,
+            93,
+            93,
+            92,
+            89,
+            83,
+            84,
+            82,
+            80,
+            80,
+            78,
+            84,
+            79,
+            76,
+            82,
+            77,
+            78
+          ]
+        }
+      ],
+      "seasonal": [
+        {
+          "keyword": "linen tablecloth",
+          "pct_growth_wow": 9,
+          "pct_growth_mom": 41,
+          "pct_growth_yoy": 12,
+          "time_series": [
+            33,
+            56,
+            87,
+            100,
+            88,
+            54,
+            34,
+            25,
+            25,
+            21,
+            23,
+            25,
+            21,
+            21,
+            23,
+            21,
+            20,
+            24,
+            22,
+            21,
+            22,
+            22,
+            23,
+            21,
+            22,
+            22,
+            19,
+            19,
+            23,
+            20,
+            22,
+            24,
+            22,
+            22,
+            22,
+            25,
+            21,
+            22,
+            19,
+            21,
+            24,
+            21,
+            22,
+            23,
+            22,
+            24,
+            23,
+            21,
+            21,
+            19,
+            25,
+            24
+          ]
+        },
+        {
+          "keyword": "chunky throw blanket",
+          "pct_growth_wow": 6,
+          "pct_growth_mom": 38,
+          "pct_growth_yoy": -8,
+          "time_series": [
+            35,
+            45,
+            59,
+            80,
+            92,
+            100,
+            95,
+            79,
+            59,
+            42,
+            33,
+            30,
+            23,
+            23,
+            26,
+            25,
+            26,
+            25,
+            26,
+            21,
+            24,
+            26,
+            25,
+            26,
+            23,
+            24,
+            22,
+            24,
+            22,
+            25,
+            26,
+            24,
+            25,
+            26,
+            24,
+            22,
+            26,
+            25,
+            22,
+            22,
+            24,
+            27,
+            22,
+            22,
+            25,
+            21,
+            26,
+            27,
+            22,
+            24,
+            22,
+            21
+          ]
+        },
+        {
+          "keyword": "christmas bedding",
+          "pct_growth_wow": 14,
+          "pct_growth_mom": 120,
+          "pct_growth_yoy": 25,
+          "time_series": [
+            7,
+            11,
+            12,
+            19,
+            32,
+            58,
+            90,
+            100,
+            84,
+            56,
+            31,
+            16,
+            10,
+            7,
+            10,
+            7,
+            10,
+            8,
+            10,
+            8,
+            8,
+            8,
+            7,
+            5,
+            10,
+            8,
+            7,
+            9,
+            11,
+            9,
+            7,
+            5,
+            10,
+            7,
+            7,
+            10,
+            9,
+            11,
+            11,
+            9,
+            9,
+            9,
+            11,
+            7,
+            7,
+            6,
+            8,
+            10,
+            8,
+            7,
+            6,
+            6
+          ]
+        },
+        {
+          "keyword": "winter bedding",
+          "pct_growth_wow": 4,
+          "pct_growth_mom": 30,
+          "pct_growth_yoy": 9,
+          "time_series": [
+            17,
+            17,
+            20,
+            19,
+            20,
+            26,
+            33,
+            46,
+            72,
+            93,
+            100,
+            90,
+            73,
+            49,
+            32,
+            24,
+            20,
+            21,
+            21,
+            20,
+            17,
+            19,
+            16,
+            17,
+            19,
+            18,
+            16,
+            18,
+            17,
+            19,
+            20,
+            17,
+            15,
+            21,
+            18,
+            21,
+            17,
+            15,
+            16,
+            17,
+            21,
+            17,
+            18,
+            21,
+            20,
+            18,
+            20,
+            19,
+            20,
+            19,
+            16,
+            21
+          ]
+        },
+        {
+          "keyword": "summer bedding",
+          "pct_growth_wow": -6,
+          "pct_growth_mom": -21,
+          "pct_growth_yoy": 7,
+          "time_series": [
+            22,
+            19,
+            23,
+            21,
+            21,
+            21,
+            20,
+            21,
+            17,
+            21,
+            22,
+            22,
+            22,
+            23,
+            23,
+            18,
+            20,
+            18,
+            17,
+            22,
+            18,
+            20,
+            21,
+            21,
+            21,
+            23,
+            20,
+            23,
+            25,
+            35,
+            55,
+            72,
+            94,
+            100,
+            94,
+            76,
+            55,
+            34,
+            28,
+            24,
+            21,
+            23,
+            17,
+            17,
+            18,
+            20,
+            21,
+            18,
+            23,
+            19,
+            21,
+            22
+          ]
+        },
+        {
+          "keyword": "fall living room",
+          "pct_growth_wow": -3,
+          "pct_growth_mom": 12,
+          "pct_growth_yoy": 4,
+          "time_series": [
+            20,
+            21,
+            17,
+            18,
+            20,
+            19,
+            22,
+            23,
+            19,
+            18,
+            23,
+            21,
+            19,
+            19,
+            21,
+            18,
+            17,
+            22,
+            22,
+            21,
+            20,
+            20,
+            20,
+            23,
+            18,
+            21,
+            19,
+            23,
+            18,
+            19,
+            18,
+            18,
+            17,
+            17,
+            20,
+            22,
+            22,
+            20,
+            20,
+            21,
+            20,
+            17,
+            22,
+            21,
+            28,
+            35,
+            48,
+            73,
+            92,
+            100,
+            91,
+            74
+          ]
+        },
+        {
+          "keyword": "halloween decor",
+          "pct_growth_wow": 18,
+          "pct_growth_mom": 140,
+          "pct_growth_yoy": 10,
+          "time_series": [
+            8,
+            5,
+            7,
+            4,
+            7,
+            4,
+            6,
+            5,
+            8,
+            3,
+            4,
+            8,
+            3,
+            5,
+            8,
+            9,
+            8,
+            6,
+            8,
+            8,
+            3,
+            7,
+            3,
+            4,
+            6,
+            9,
+            8,
+            5,
+            9,
+            3,
+            5,
+            6,
+            8,
+            6,
+            8,
+            6,
+            3,
+            7,
+            7,
+            6,
+            5,
+            6,
+            8,
+            6,
+            6,
+            7,
+            8,
+            9,
+            16,
+            42,
+            77,
+            100
+          ]
+        },
+        {
+          "keyword": "christmas tree ideas",
+          "pct_growth_wow": 11,
+          "pct_growth_mom": 96,
+          "pct_growth_yoy": -4,
+          "time_series": [
+            10,
+            19,
+            27,
+            55,
+            83,
+            100,
+            85,
+            54,
+            29,
+            14,
+            11,
+            12,
+            10,
+            12,
+            12,
+            11,
+            9,
+            13,
+            11,
+            8,
+            11,
+            12,
+            12,
+            10,
+            12,
+            7,
+            13,
+            9,
+            10,
+            12,
+            10,
+            9,
+            11,
+            12,
+            11,
+            9,
+            7,
+            13,
+            12,
+            13,
+            8,
+            11,
+            13,
+            11,
+            8,
+            11,
+            11,
+            12,
+            8,
+            8,
+            12,
+            8
+          ]
+        },
+        {
+          "keyword": "spring porch decor",
+          "pct_growth_wow": -2,
+          "pct_growth_mom": -5,
+          "pct_growth_yoy": 15,
+          "time_series": [
+            11,
+            14,
+            12,
+            13,
+            14,
+            12,
+            13,
+            15,
+            12,
+            15,
+            16,
+            15,
+            16,
+            17,
+            17,
+            16,
+            24,
+            42,
+            68,
+            89,
+            100,
+            90,
+            65,
+            40,
+            23,
+            20,
+            17,
+            14,
+            12,
+            14,
+            13,
+            14,
+            16,
+            13,
+            12,
+            14,
+            13,
+            11,
+            15,
+            14,
+            14,
+            12,
+            15,
+            12,
+            14,
+            12,
+            14,
+            15,
+            11,
+            15,
+            15,
+            11
+          ]
+        }
+      ]
+    }
+  }
+}

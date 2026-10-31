@@ -1,0 +1,513 @@
+{
+  "summary": "Stop-loss rules for Corvale Planters' new TikTok and Pinterest ads at a $40 target per purchase, tested on 2026-07-29 to 2026-10-26. Recommended setting: 5% confidence. A new ad stops once spend passes $120.00 with no purchase, $189.60 with one, $252.00 with two or $310.00 with three, or when its click rate stays under half the platform's median with no purchase. It leaves the watch after 3 purchases at or under $40. On the last 90 days this stops 4 of 5 losing ads and none of the 5 winners. Today: 1 ad to stop, 1 on watch.",
+  "inputs": {
+    "target_cost_per_purchase": 40.0,
+    "currency": "USD",
+    "window": "2026-07-29 to 2026-10-26 (90 days)",
+    "data_through": "2026-10-26",
+    "conversion_lag_days": 1,
+    "platforms": [
+      "tiktok-ads",
+      "pinterest-ads"
+    ]
+  },
+  "rules": [
+    {
+      "rule": "Spend against purchases",
+      "stop_when": "the chance that the ad really costs $40 a purchase or less, given its spend and purchases so far, falls under 5%",
+      "in_dollars": [
+        {
+          "purchases_so_far": 0,
+          "spend_multiple_of_target": 3.0,
+          "stop_once_spend_passes": 120.0
+        },
+        {
+          "purchases_so_far": 1,
+          "spend_multiple_of_target": 4.74,
+          "stop_once_spend_passes": 189.6
+        },
+        {
+          "purchases_so_far": 2,
+          "spend_multiple_of_target": 6.3,
+          "stop_once_spend_passes": 252.0
+        },
+        {
+          "purchases_so_far": 3,
+          "spend_multiple_of_target": 7.75,
+          "stop_once_spend_passes": 310.0
+        }
+      ]
+    },
+    {
+      "rule": "Click-rate floor",
+      "stop_when": "no purchase yet, enough impressions for 30 clicks at the platform median, and click rate under half that median",
+      "floors": [
+        {
+          "platform": "tiktok-ads",
+          "ads_measured": 7,
+          "median_ctr_percent": 1.11,
+          "floor_ctr_percent": 0.56,
+          "judge_after_impressions": 2800
+        },
+        {
+          "platform": "pinterest-ads",
+          "ads_measured": 4,
+          "median_ctr_percent": 0.7,
+          "floor_ctr_percent": 0.35,
+          "judge_after_impressions": 4300
+        }
+      ]
+    },
+    {
+      "rule": "Overspend",
+      "stop_when": "a campaign spends more than 125% of its agreed daily cap in a day",
+      "caps": [
+        {
+          "campaign": "Prospecting | Planters",
+          "platform": "tiktok-ads",
+          "daily_cap": 250
+        },
+        {
+          "campaign": "UGC tests",
+          "platform": "tiktok-ads",
+          "daily_cap": 150
+        },
+        {
+          "campaign": "Consideration | Planters",
+          "platform": "pinterest-ads",
+          "daily_cap": 120
+        }
+      ]
+    },
+    {
+      "rule": "Grace and graduation",
+      "stop_when": "no verdict before day 3 of delivery; an ad with 3 purchases at or under $40 leaves the stop-loss watch"
+    }
+  ],
+  "backtest": {
+    "ads_tested": 11,
+    "winners": 5,
+    "losers": 5,
+    "not_graded": [
+      "Glaze colours carousel"
+    ],
+    "left_out": [
+      {
+        "ad": "Evergreen catalog video",
+        "why": "started before the window, so its first days are not in the data"
+      },
+      {
+        "ad": "Terracotta care hack",
+        "why": "still running, so its outcome is not known yet; see today's check"
+      },
+      {
+        "ad": "Ridge set restock",
+        "why": "still running, so its outcome is not known yet; see today's check"
+      },
+      {
+        "ad": "Gift guide: planters under 50",
+        "why": "still running, so its outcome is not known yet; see today's check"
+      }
+    ],
+    "spend_limits_by_confidence": [
+      {
+        "confidence": "20%",
+        "no_purchase": "1.61x",
+        "one_purchase": "2.99x",
+        "two_purchases": "4.28x"
+      },
+      {
+        "confidence": "10%",
+        "no_purchase": "2.30x",
+        "one_purchase": "3.89x",
+        "two_purchases": "5.32x"
+      },
+      {
+        "confidence": "5%",
+        "no_purchase": "3.00x",
+        "one_purchase": "4.74x",
+        "two_purchases": "6.30x"
+      }
+    ],
+    "settings_compared": [
+      {
+        "confidence": "20%",
+        "no_purchase_stop_at": "$64.40",
+        "losers_stopped": "5 of 5",
+        "winners_stopped": [
+          "Self-watering pot demo",
+          "Pothos propagation tip"
+        ],
+        "spend_saved": 3289.31,
+        "purchases_lost": 60,
+        "net_at_target": 889.31
+      },
+      {
+        "confidence": "10%",
+        "no_purchase_stop_at": "$92.00",
+        "losers_stopped": "4 of 5",
+        "winners_stopped": [
+          "Self-watering pot demo"
+        ],
+        "spend_saved": 1910.64,
+        "purchases_lost": 25,
+        "net_at_target": 910.64
+      },
+      {
+        "confidence": "5%",
+        "no_purchase_stop_at": "$120.00",
+        "losers_stopped": "4 of 5",
+        "winners_stopped": [],
+        "spend_saved": 1024.61,
+        "purchases_lost": 0,
+        "net_at_target": 1024.61
+      }
+    ],
+    "recommended": "5%",
+    "why": "the only setting that stops no winner, and the best net of the three at the $40 target",
+    "per_ad_at_recommended": [
+      {
+        "platform": "tiktok-ads",
+        "ad": "Repotting in 20 seconds",
+        "spend": 1585.47,
+        "purchases": 44,
+        "cost_per_purchase": 36.03,
+        "ctr_percent": 1.43,
+        "outcome": "winner",
+        "stopped_on": null,
+        "day_of_test": null,
+        "rule": "graduated on 2026-08-04",
+        "spend_saved": 0.0,
+        "purchases_lost": 0
+      },
+      {
+        "platform": "tiktok-ads",
+        "ad": "Self-watering pot demo",
+        "spend": 916.48,
+        "purchases": 25,
+        "cost_per_purchase": 36.66,
+        "ctr_percent": 1.19,
+        "outcome": "winner",
+        "stopped_on": null,
+        "day_of_test": null,
+        "rule": "graduated on 2026-08-25",
+        "spend_saved": 0.0,
+        "purchases_lost": 0
+      },
+      {
+        "platform": "tiktok-ads",
+        "ad": "Pothos propagation tip",
+        "spend": 710.99,
+        "purchases": 21,
+        "cost_per_purchase": 33.86,
+        "ctr_percent": 1.11,
+        "outcome": "winner",
+        "stopped_on": null,
+        "day_of_test": null,
+        "rule": "graduated on 2026-08-25",
+        "spend_saved": 0.0,
+        "purchases_lost": 0
+      },
+      {
+        "platform": "tiktok-ads",
+        "ad": "Unboxing the Ridge set",
+        "spend": 496.78,
+        "purchases": 0,
+        "cost_per_purchase": null,
+        "ctr_percent": 0.89,
+        "outcome": "loser",
+        "stopped_on": "2026-08-30",
+        "day_of_test": 3,
+        "rule": "spend past the limit for 0 purchases",
+        "spend_saved": 324.69,
+        "purchases_lost": 0
+      },
+      {
+        "platform": "tiktok-ads",
+        "ad": "Price reveal",
+        "spend": 638.82,
+        "purchases": 1,
+        "cost_per_purchase": 638.82,
+        "ctr_percent": 0.99,
+        "outcome": "loser",
+        "stopped_on": "2026-09-11",
+        "day_of_test": 5,
+        "rule": "spend past the limit for 1 purchase",
+        "spend_saved": 412.93,
+        "purchases_lost": 0
+      },
+      {
+        "platform": "tiktok-ads",
+        "ad": "Before and after balcony",
+        "spend": 805.08,
+        "purchases": 15,
+        "cost_per_purchase": 53.67,
+        "ctr_percent": 1.3,
+        "outcome": "loser",
+        "stopped_on": null,
+        "day_of_test": null,
+        "rule": "never stopped",
+        "spend_saved": 0.0,
+        "purchases_lost": 0
+      },
+      {
+        "platform": "tiktok-ads",
+        "ad": "Plant shelf voiceover",
+        "spend": 239.01,
+        "purchases": 0,
+        "cost_per_purchase": null,
+        "ctr_percent": 0.35,
+        "outcome": "loser",
+        "stopped_on": "2026-09-29",
+        "day_of_test": 3,
+        "rule": "click rate under the floor",
+        "spend_saved": 146.93,
+        "purchases_lost": 0
+      },
+      {
+        "platform": "pinterest-ads",
+        "ad": "Ridge planter idea pin",
+        "spend": 894.35,
+        "purchases": 30,
+        "cost_per_purchase": 29.81,
+        "ctr_percent": 0.25,
+        "outcome": "winner",
+        "stopped_on": null,
+        "day_of_test": null,
+        "rule": "graduated on 2026-08-10",
+        "spend_saved": 0.0,
+        "purchases_lost": 0
+      },
+      {
+        "platform": "pinterest-ads",
+        "ad": "Small-space shelf styling",
+        "spend": 882.32,
+        "purchases": 31,
+        "cost_per_purchase": 28.46,
+        "ctr_percent": 0.9,
+        "outcome": "winner",
+        "stopped_on": null,
+        "day_of_test": null,
+        "rule": "graduated on 2026-08-25",
+        "spend_saved": 0.0,
+        "purchases_lost": 0
+      },
+      {
+        "platform": "pinterest-ads",
+        "ad": "Hanging planter close-up",
+        "spend": 280.43,
+        "purchases": 0,
+        "cost_per_purchase": null,
+        "ctr_percent": 0.6,
+        "outcome": "loser",
+        "stopped_on": "2026-09-16",
+        "day_of_test": 5,
+        "rule": "spend past the limit for 0 purchases",
+        "spend_saved": 140.06,
+        "purchases_lost": 0
+      },
+      {
+        "platform": "pinterest-ads",
+        "ad": "Glaze colours carousel",
+        "spend": 45.46,
+        "purchases": 0,
+        "cost_per_purchase": null,
+        "ctr_percent": 0.8,
+        "outcome": "not graded",
+        "stopped_on": null,
+        "day_of_test": null,
+        "rule": "never stopped",
+        "spend_saved": 0.0,
+        "purchases_lost": 0
+      }
+    ],
+    "click_rate_floor_without_purchase_gate": {
+      "winners_stopped": [
+        "Ridge planter idea pin"
+      ],
+      "net_at_target": 667.4
+    },
+    "overspend_days": [
+      {
+        "campaign": "Prospecting | Planters",
+        "platform": "tiktok-ads",
+        "date": "2026-08-12",
+        "spend": 356.54,
+        "daily_cap": 250,
+        "trigger_at": 312.5,
+        "above_cap": 106.54
+      }
+    ],
+    "caveat": "Daily reports pulled today include purchases that were credited late, so the replay knows a little more than a live rule would. Live checks judge data at least 1 day old."
+  },
+  "findings": [
+    "At 5% confidence the rules stop 4 of 5 losing ads and none of the 5 winners, and save $1,024.61 of spend for 0 lost purchases (net $1,024.61 at the $40 target).",
+    "Quicker settings cost winners: 10% stops Self-watering pot demo and 20% stops Self-watering pot demo and Pothos propagation tip. Both started slowly and finished under $40 a purchase.",
+    "The click-rate floor only acts on ads with no purchase. Without that gate it would have stopped Ridge planter idea pin, a winner with a 0.25% click rate that sold at $29.81 a purchase.",
+    "The click-rate floor stopped Plant shelf voiceover on day 3, 1 day before the spend rule would have, saving $29.88 more.",
+    "Before and after balcony was never stopped: 15 purchases at $53.67 each is 34% over target, too close for a stop-loss to call. Judge it as a bid or creative question, not a stop.",
+    "The overspend rule fires once: Prospecting | Planters spent $356.54 on 2026-08-12 against a $250.00 daily cap ($106.54 above it)."
+  ],
+  "todays_check": {
+    "data_through": "2026-10-26",
+    "ads": [
+      {
+        "platform": "tiktok-ads",
+        "ad_id": "tt-a-508",
+        "ad": "Terracotta care hack",
+        "days_with_data": 6,
+        "spend": 132.77,
+        "purchases": 0,
+        "state": "stop now",
+        "why": "spend past the limit for 0 purchases: $132.77 spent with 0 purchases, limit $120.00",
+        "ad_group": "tt-g-34",
+        "ad_group_note": "the only live ad in its ad group: pausing it leaves the ad group with nothing delivering. Pause the ad group instead, or add a new ad first?"
+      },
+      {
+        "platform": "pinterest-ads",
+        "ad_id": "pin-a-704",
+        "ad": "Gift guide: planters under 50",
+        "days_with_data": 8,
+        "spend": 162.39,
+        "purchases": 1,
+        "state": "on watch",
+        "why": "$162.39 spent with 1 purchase; it stops at $189.60 unless another purchase comes in"
+      },
+      {
+        "platform": "tiktok-ads",
+        "ad_id": "tt-a-410",
+        "ad": "Evergreen catalog video",
+        "days_with_data": 90,
+        "spend": 2696.27,
+        "purchases": 80,
+        "state": "graduated",
+        "why": "started before the window and earned 80 purchases at $33.70 each; fatigue is checked elsewhere"
+      },
+      {
+        "platform": "tiktok-ads",
+        "ad_id": "tt-a-509",
+        "ad": "Ridge set restock",
+        "days_with_data": 20,
+        "spend": 801.73,
+        "purchases": 26,
+        "state": "graduated",
+        "why": "graduated on 2026-10-08 at $30.84 per purchase: off the stop-loss watch"
+      }
+    ]
+  },
+  "setup": [
+    {
+      "platform": "tiktok-ads",
+      "how": "Saved as TikTok automated rules on new ads, one rule per rung of the ladder up to two purchases. The daily check covers the rest: the click-rate floor, the three-purchase rung, graduation and the overspend cap.",
+      "action": "optimizer_rule_create",
+      "status": "not run: drafted for confirmation",
+      "check_before_run": "The helper lists only rule_name, conditions, actions, schedule, entity_type and entity_ids. Map each condition below to the field names actions_details returns for optimizer_rule_create, and use a time range that covers the whole test.",
+      "payloads": [
+        {
+          "rule_name": "Stop-loss: no purchase by $120.00",
+          "entity_type": "AD",
+          "conditions": [
+            {
+              "metric": "spend",
+              "operator": "greater than",
+              "value": 120.0
+            },
+            {
+              "metric": "conversion",
+              "operator": "equals",
+              "value": 0
+            }
+          ],
+          "actions": [
+            {
+              "action": "turn off",
+              "notify": true
+            }
+          ],
+          "schedule": "every 30 minutes"
+        },
+        {
+          "rule_name": "Stop-loss: 1 purchase by $189.60",
+          "entity_type": "AD",
+          "conditions": [
+            {
+              "metric": "spend",
+              "operator": "greater than",
+              "value": 189.6
+            },
+            {
+              "metric": "conversion",
+              "operator": "less than",
+              "value": 2
+            }
+          ],
+          "actions": [
+            {
+              "action": "turn off",
+              "notify": true
+            }
+          ],
+          "schedule": "every 30 minutes"
+        },
+        {
+          "rule_name": "Stop-loss: 2 purchases by $252.00",
+          "entity_type": "AD",
+          "conditions": [
+            {
+              "metric": "spend",
+              "operator": "greater than",
+              "value": 252.0
+            },
+            {
+              "metric": "conversion",
+              "operator": "less than",
+              "value": 3
+            }
+          ],
+          "actions": [
+            {
+              "action": "turn off",
+              "notify": true
+            }
+          ],
+          "schedule": "every 30 minutes"
+        }
+      ]
+    },
+    {
+      "platform": "tiktok-ads",
+      "how": "Today's stop, as a one-off pause while the rules are not yet saved.",
+      "action": "ad_status_update",
+      "status": "not run: waiting for your yes",
+      "payloads": [
+        {
+          "advertiser_id": "<ADVERTISER_ID>",
+          "ad_ids": [
+            "tt-a-508"
+          ],
+          "operation_status": "DISABLE"
+        }
+      ]
+    },
+    {
+      "platform": "pinterest-ads",
+      "how": "Pinterest rules can't be created through the connector, so the same ladder runs as a daily check with this skill, and each stop is a pause you confirm.",
+      "action": "update_ads",
+      "status": "not run",
+      "payloads": [],
+      "payload_shape": {
+        "ad_account_id": "<AD_ACCOUNT_ID>",
+        "body": [
+          {
+            "id": "<AD_ID>",
+            "status": "PAUSED"
+          }
+        ]
+      }
+    }
+  ],
+  "not_covered": [
+    "Meta and Google Ads stop rules: use their own rules skills if installed.",
+    "The slow decline of a winner: that is ad fatigue, not a stop-loss."
+  ]
+}

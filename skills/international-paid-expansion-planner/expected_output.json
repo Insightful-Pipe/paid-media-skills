@@ -1,0 +1,646 @@
+{
+  "header": {
+    "business": "Example Hiking Gear Store",
+    "home_market": "United States",
+    "account_currency": "USD",
+    "date_ranges": {
+      "ga4_and_ads": [
+        "2026-08-01",
+        "2026-10-29"
+      ],
+      "search_console": [
+        "2026-07-29",
+        "2026-10-26"
+      ],
+      "orders": [
+        "2025-10-30",
+        "2026-10-29"
+      ]
+    },
+    "target_roas": 3.0,
+    "monthly_test_budget": 6000.0,
+    "test_day_1": "2026-11-16",
+    "exchange_rates": "not needed: Keyword Planner, DataForSEO and Shopify totals are all in USD",
+    "sources": [
+      "GA4",
+      "Search Console",
+      "Shopify",
+      "Google Ads (geographic_view, landing_page_view, Keyword Planner)",
+      "DataForSEO (Sweden)",
+      "Meta Ads"
+    ]
+  },
+  "home_baselines": {
+    "non_brand_search_clicks": 27000,
+    "cost": 29700.0,
+    "home_cpc": 1.1,
+    "click_conversion_rate_pct": 3.0,
+    "home_roas": 3.27,
+    "clicks_per_month": 9000,
+    "site_conversion_rate_pct": 2.0,
+    "average_order_value": 120.0,
+    "monthly_volume": 90000,
+    "tool_cpc": 1.32,
+    "home_ratio": 0.8331,
+    "home_capture_pct": 10.0,
+    "meta_cost_per_purchase": 50.0,
+    "meta_min_daily_budget_rare_events": 40.0,
+    "left_out": "Search - Brand (brand campaign) and the Area of interest row for the United Kingdom"
+  },
+  "candidates": [
+    {
+      "country": "Canada",
+      "code": "CA",
+      "sessions": 6200,
+      "purchases": 105,
+      "site_conversion_rate_pct": 1.69,
+      "market_index": 0.85,
+      "market_index_source": "measured",
+      "orders_12m": 380,
+      "average_order_value": 118.0,
+      "aov_source": "own orders",
+      "home_language_share_pct": 88.0,
+      "local_checkout_share_pct": 92.6,
+      "search_console_impressions": 48000,
+      "demand": "proven"
+    },
+    {
+      "country": "United Kingdom",
+      "code": "GB",
+      "sessions": 5100,
+      "purchases": 84,
+      "site_conversion_rate_pct": 1.65,
+      "market_index": 0.82,
+      "market_index_source": "measured",
+      "orders_12m": 290,
+      "average_order_value": 126.0,
+      "aov_source": "own orders",
+      "home_language_share_pct": 100.0,
+      "local_checkout_share_pct": 93.4,
+      "search_console_impressions": 61000,
+      "demand": "proven"
+    },
+    {
+      "country": "Australia",
+      "code": "AU",
+      "sessions": 3300,
+      "purchases": 50,
+      "site_conversion_rate_pct": 1.52,
+      "market_index": 0.76,
+      "market_index_source": "measured",
+      "orders_12m": 140,
+      "average_order_value": 131.0,
+      "aov_source": "own orders",
+      "home_language_share_pct": 100.0,
+      "local_checkout_share_pct": 0.0,
+      "search_console_impressions": 27000,
+      "demand": "proven"
+    },
+    {
+      "country": "Germany",
+      "code": "DE",
+      "sessions": 2800,
+      "purchases": 25,
+      "site_conversion_rate_pct": 0.89,
+      "market_index": 0.45,
+      "market_index_source": "measured",
+      "orders_12m": 70,
+      "average_order_value": 112.0,
+      "aov_source": "own orders",
+      "home_language_share_pct": 31.0,
+      "local_checkout_share_pct": 91.4,
+      "search_console_impressions": 39000,
+      "demand": "proven"
+    },
+    {
+      "country": "Netherlands",
+      "code": "NL",
+      "sessions": 900,
+      "purchases": 13,
+      "site_conversion_rate_pct": 1.44,
+      "market_index": 0.72,
+      "market_index_source": "measured",
+      "orders_12m": 26,
+      "average_order_value": 115.0,
+      "aov_source": "own orders",
+      "home_language_share_pct": 66.0,
+      "local_checkout_share_pct": 88.5,
+      "search_console_impressions": 6200,
+      "demand": "proven"
+    },
+    {
+      "country": "France",
+      "code": "FR",
+      "sessions": 700,
+      "purchases": 4,
+      "site_conversion_rate_pct": 0.57,
+      "market_index": 0.29,
+      "market_index_source": "measured",
+      "orders_12m": 9,
+      "average_order_value": 120.0,
+      "aov_source": "estimate (home, under 10 orders)",
+      "home_language_share_pct": 20.0,
+      "local_checkout_share_pct": 88.9,
+      "search_console_impressions": 12500,
+      "demand": "showing"
+    },
+    {
+      "country": "Sweden",
+      "code": "SE",
+      "sessions": 250,
+      "purchases": 3,
+      "site_conversion_rate_pct": 1.2,
+      "market_index": 0.7,
+      "market_index_source": "estimate (under 300 sessions)",
+      "orders_12m": 6,
+      "average_order_value": 120.0,
+      "aov_source": "estimate (home, under 10 orders)",
+      "home_language_share_pct": 58.0,
+      "local_checkout_share_pct": 0.0,
+      "search_console_impressions": 3800,
+      "demand": "none"
+    }
+  ],
+  "excluded": [
+    {
+      "country": "Brazil",
+      "code": "BR",
+      "sessions": 1900,
+      "reason": "no carrier contract; customs returns not set up"
+    }
+  ],
+  "cost_and_size": [
+    {
+      "country": "Canada",
+      "code": "CA",
+      "keyword_source": "keyword_planner",
+      "term_language": "English",
+      "monthly_volume": 11000,
+      "tool_cpc": 1.1,
+      "planned_cpc": 0.92,
+      "reachable_clicks_per_month": 1100,
+      "planned_conversion_rate_pct": 2.54,
+      "planned_cpa": 36.12,
+      "planned_roas": 3.27,
+      "conversions_per_month_at_reach": 27.9,
+      "meta_audience": 19700000
+    },
+    {
+      "country": "United Kingdom",
+      "code": "GB",
+      "keyword_source": "keyword_planner",
+      "term_language": "English",
+      "monthly_volume": 16000,
+      "tool_cpc": 1.0,
+      "planned_cpc": 0.83,
+      "reachable_clicks_per_month": 1600,
+      "planned_conversion_rate_pct": 2.47,
+      "planned_cpa": 33.71,
+      "planned_roas": 3.74,
+      "conversions_per_month_at_reach": 39.5,
+      "meta_audience": 35050000
+    },
+    {
+      "country": "Australia",
+      "code": "AU",
+      "keyword_source": "keyword_planner",
+      "term_language": "English",
+      "monthly_volume": 8500,
+      "tool_cpc": 1.1,
+      "planned_cpc": 0.92,
+      "reachable_clicks_per_month": 850,
+      "planned_conversion_rate_pct": 2.27,
+      "planned_cpa": 40.3,
+      "planned_roas": 3.25,
+      "conversions_per_month_at_reach": 19.3,
+      "meta_audience": 13150000
+    },
+    {
+      "country": "Germany",
+      "code": "DE",
+      "keyword_source": "keyword_planner",
+      "term_language": "German",
+      "monthly_volume": 21000,
+      "tool_cpc": 0.75,
+      "planned_cpc": 0.62,
+      "reachable_clicks_per_month": 2100,
+      "planned_conversion_rate_pct": 1.34,
+      "planned_cpa": 46.62,
+      "planned_roas": 2.4,
+      "conversions_per_month_at_reach": 28.1,
+      "meta_audience": 43850000
+    },
+    {
+      "country": "Netherlands",
+      "code": "NL",
+      "keyword_source": "keyword_planner",
+      "term_language": "English",
+      "monthly_volume": 2400,
+      "tool_cpc": 0.9,
+      "planned_cpc": 0.75,
+      "reachable_clicks_per_month": 240,
+      "planned_conversion_rate_pct": 2.17,
+      "planned_cpa": 34.58,
+      "planned_roas": 3.33,
+      "conversions_per_month_at_reach": 5.2,
+      "meta_audience": 9700000
+    },
+    {
+      "country": "France",
+      "code": "FR",
+      "keyword_source": "keyword_planner",
+      "term_language": "French",
+      "monthly_volume": 14000,
+      "tool_cpc": 1.05,
+      "planned_cpc": 0.87,
+      "reachable_clicks_per_month": 1400,
+      "planned_conversion_rate_pct": 0.86,
+      "planned_cpa": 102.04,
+      "planned_roas": 1.18,
+      "conversions_per_month_at_reach": 12.0,
+      "meta_audience": 36000000
+    },
+    {
+      "country": "Sweden",
+      "code": "SE",
+      "keyword_source": "dataforseo",
+      "term_language": "English",
+      "monthly_volume": 1100,
+      "tool_cpc": 0.85,
+      "planned_cpc": 0.71,
+      "reachable_clicks_per_month": 110,
+      "planned_conversion_rate_pct": 2.1,
+      "planned_cpa": 33.7,
+      "planned_roas": 3.56,
+      "conversions_per_month_at_reach": 2.3,
+      "meta_audience": 5000000
+    }
+  ],
+  "status_and_rank": [
+    {
+      "rank": 1,
+      "country": "United Kingdom",
+      "code": "GB",
+      "status": "Open",
+      "rule": "planned ROAS 3.74 is at or above the 3.0 target with 39.5 purchases a month at reach"
+    },
+    {
+      "rank": 2,
+      "country": "Canada",
+      "code": "CA",
+      "status": "Open",
+      "rule": "planned ROAS 3.27 is at or above the 3.0 target with 27.9 purchases a month at reach"
+    },
+    {
+      "rank": 3,
+      "country": "Australia",
+      "code": "AU",
+      "status": "Open",
+      "rule": "planned ROAS 3.25 is at or above the 3.0 target with 19.3 purchases a month at reach"
+    },
+    {
+      "rank": 4,
+      "country": "Germany",
+      "code": "DE",
+      "status": "Test with fixes",
+      "rule": "planned ROAS 2.4 is between 2.31 and the 3.0 target",
+      "needed_conversion_rate_pct": 1.67,
+      "planned_conversion_rate_pct": 1.34,
+      "fix": "German pages: the measured index (0.45) comes from an English-only site"
+    },
+    {
+      "rank": null,
+      "country": "Netherlands",
+      "code": "NL",
+      "status": "Too small to read",
+      "rule": "5.2 purchases a month at reach, under the 10 a 60-day read needs"
+    },
+    {
+      "rank": null,
+      "country": "France",
+      "code": "FR",
+      "status": "Not now",
+      "rule": "planned ROAS 1.18 is below 2.31 (target ÷ 1.3)"
+    },
+    {
+      "rank": null,
+      "country": "Sweden",
+      "code": "SE",
+      "status": "Calibrate",
+      "rule": "demand is none (250 sessions, 3,800 Search Console impressions, 6 orders)"
+    },
+    {
+      "rank": null,
+      "country": "Brazil",
+      "code": "BR",
+      "status": "Excluded",
+      "rule": "no carrier contract; customs returns not set up"
+    }
+  ],
+  "waves": {
+    "wave_1": [
+      {
+        "country": "United Kingdom",
+        "code": "GB",
+        "status": "Open",
+        "start_day": "2026-11-16",
+        "day_60": "2027-01-14",
+        "search_budget_per_month": 1332.65,
+        "meta_calibration_buy": 840.0,
+        "cost_per_month": 1752.65,
+        "expected_purchases_in_test": 79.1
+      },
+      {
+        "country": "Canada",
+        "code": "CA",
+        "status": "Open",
+        "start_day": "2026-11-16",
+        "day_60": "2027-01-14",
+        "search_budget_per_month": 1009.21,
+        "meta_calibration_buy": 840.0,
+        "cost_per_month": 1429.21,
+        "expected_purchases_in_test": 55.9
+      },
+      {
+        "country": "Australia",
+        "code": "AU",
+        "status": "Open",
+        "start_day": "2026-12-07",
+        "day_60": "2027-02-04",
+        "search_budget_per_month": 778.46,
+        "meta_calibration_buy": 840.0,
+        "cost_per_month": 1198.46,
+        "expected_purchases_in_test": 38.6
+      },
+      {
+        "country": "Sweden",
+        "code": "SE",
+        "status": "Calibrate",
+        "start_day": "2026-12-07",
+        "calibration_ends": "2026-12-27",
+        "search_budget_per_month": 0.0,
+        "meta_calibration_buy": 840.0,
+        "cost_per_month": 420.0,
+        "expected_purchases_in_test": 0.0
+      }
+    ],
+    "wave_2": [
+      {
+        "country": "Germany",
+        "code": "DE",
+        "status": "Test with fixes",
+        "search_budget_per_month": 1311.28,
+        "meta_calibration_buy": 840.0,
+        "cost_per_month": 1731.28,
+        "expected_purchases_in_test": 56.2,
+        "why_waiting": "cost per month $1,731.28 is more than the $1,619.68 left when its turn came",
+        "starts_after": "2027-02-04"
+      }
+    ],
+    "budget_used_per_month": 4800.32,
+    "budget_left_per_month": 1199.68
+  },
+  "pages_to_localise": {
+    "rule": "pages holding 80% of home non-brand paid purchases, at most 5; Search - Brand left out",
+    "non_brand_purchases": 810.0,
+    "pages": [
+      {
+        "page": "https://www.hikinggear.example/collections/ultralight-backpacks",
+        "conversions": 296.0,
+        "share_pct": 36.5
+      },
+      {
+        "page": "https://www.hikinggear.example/collections/tents",
+        "conversions": 241.0,
+        "share_pct": 29.8
+      },
+      {
+        "page": "https://www.hikinggear.example/collections/sleeping-bags",
+        "conversions": 133.0,
+        "share_pct": 16.4
+      }
+    ],
+    "share_covered_pct": 82.7
+  },
+  "market_plans": [
+    {
+      "country": "United Kingdom",
+      "code": "GB",
+      "wave": 1,
+      "ad_language": "English",
+      "why": "home ads reused",
+      "before_the_test": [
+        "none"
+      ],
+      "google_search": {
+        "campaign": "Search - United Kingdom - test",
+        "location": "United Kingdom, Presence: people in or regularly in your included locations",
+        "languages": [
+          "English"
+        ],
+        "keywords": [
+          "ultralight backpack",
+          "lightweight tent",
+          "backpacking stove",
+          "hiking sleeping bag",
+          "trekking poles",
+          "ultralight sleeping pad"
+        ],
+        "daily_budget": 43.81,
+        "ads": "home responsive search ads, prices shown in GBP"
+      },
+      "meta": {
+        "ad_set": "United Kingdom - English",
+        "calibration_buy": 840.0,
+        "runs": "2026-11-30 to 2026-12-20",
+        "daily_budget": 40.0
+      },
+      "stop_rules": {
+        "day_14_spend_floor": 306.69,
+        "cpc_ceiling": 1.08,
+        "landing_page_check_after_clicks": 203,
+        "day_30_stop_below_roas": 1.5,
+        "day_60_go": "20 or more purchases and ROAS 3.0 or more",
+        "day_60_extend": "ROAS 2.4 or more, or ROAS 3.0 or more with fewer than 20 purchases",
+        "stay_on_rolling_30_day_roas": 2.5,
+        "meta_promote_at_roas": 2.0
+      }
+    },
+    {
+      "country": "Canada",
+      "code": "CA",
+      "wave": 1,
+      "ad_language": "English",
+      "why": "home ads reused",
+      "before_the_test": [
+        "none"
+      ],
+      "google_search": {
+        "campaign": "Search - Canada - test",
+        "location": "Canada, Presence: people in or regularly in your included locations",
+        "languages": [
+          "English"
+        ],
+        "keywords": [
+          "ultralight backpack",
+          "lightweight tent",
+          "backpacking stove",
+          "hiking sleeping bag",
+          "trekking poles",
+          "ultralight sleeping pad"
+        ],
+        "daily_budget": 33.18,
+        "ads": "home responsive search ads, prices shown in CAD"
+      },
+      "home_campaign_exclusion": "exclude Canada from Search - Tents on the start day (140 presence clicks there in 90 days)",
+      "meta": {
+        "ad_set": "Canada - English",
+        "calibration_buy": 840.0,
+        "runs": "2026-11-30 to 2026-12-20",
+        "daily_budget": 40.0
+      },
+      "stop_rules": {
+        "day_14_spend_floor": 232.26,
+        "cpc_ceiling": 1.19,
+        "landing_page_check_after_clicks": 197,
+        "day_30_stop_below_roas": 1.5,
+        "day_60_go": "20 or more purchases and ROAS 3.0 or more",
+        "day_60_extend": "ROAS 2.4 or more, or ROAS 3.0 or more with fewer than 20 purchases",
+        "stay_on_rolling_30_day_roas": 2.5,
+        "meta_promote_at_roas": 2.0
+      }
+    },
+    {
+      "country": "Australia",
+      "code": "AU",
+      "wave": 1,
+      "ad_language": "English",
+      "why": "home ads reused",
+      "before_the_test": [
+        "AUD at checkout (local checkout share 0.0%)",
+        "Shipping time and cost shown on the pages"
+      ],
+      "google_search": {
+        "campaign": "Search - Australia - test",
+        "location": "Australia, Presence: people in or regularly in your included locations",
+        "languages": [
+          "English"
+        ],
+        "keywords": [
+          "ultralight backpack",
+          "lightweight tent",
+          "backpacking stove",
+          "hiking sleeping bag",
+          "trekking poles",
+          "ultralight sleeping pad"
+        ],
+        "daily_budget": 25.59,
+        "ads": "home responsive search ads, prices shown in AUD"
+      },
+      "meta": {
+        "ad_set": "Australia - English",
+        "calibration_buy": 840.0,
+        "runs": "2026-12-21 to 2027-01-10",
+        "daily_budget": 40.0
+      },
+      "stop_rules": {
+        "day_14_spend_floor": 179.15,
+        "cpc_ceiling": 1.19,
+        "landing_page_check_after_clicks": 220,
+        "day_30_stop_below_roas": 1.5,
+        "day_60_go": "20 or more purchases and ROAS 3.0 or more",
+        "day_60_extend": "ROAS 2.4 or more, or ROAS 3.0 or more with fewer than 20 purchases",
+        "stay_on_rolling_30_day_roas": 2.5,
+        "meta_promote_at_roas": 2.0
+      }
+    },
+    {
+      "country": "Sweden",
+      "code": "SE",
+      "wave": 1,
+      "ad_language": "English",
+      "why": "team can't write Swedish; 58.0% of sessions browse in English, so the test targets English-language users only",
+      "before_the_test": [
+        "SEK at checkout (local checkout share 0.0%)"
+      ],
+      "meta": {
+        "ad_set": "Sweden - English",
+        "calibration_buy": 840.0,
+        "runs": "2026-12-07 to 2026-12-27",
+        "daily_budget": 40.0
+      },
+      "stop_rules": {
+        "meta_promote_at_roas": 2.0
+      }
+    },
+    {
+      "country": "Germany",
+      "code": "DE",
+      "wave": 2,
+      "ad_language": "German",
+      "why": "native translator",
+      "before_the_test": [
+        "German ads and the 3 pages that carry 82.7% of home non-brand paid purchases"
+      ],
+      "google_search": {
+        "campaign": "Search - Germany - test",
+        "location": "Germany, Presence: people in or regularly in your included locations",
+        "languages": [
+          "German",
+          "English"
+        ],
+        "keywords": [
+          "ultraleicht rucksack",
+          "leichtes zelt",
+          "trekking kocher",
+          "schlafsack wandern",
+          "trekkingstöcke",
+          "isomatte ultraleicht"
+        ],
+        "daily_budget": 43.11,
+        "ads": "responsive search ads written by the German translator, prices in EUR"
+      },
+      "pages_to_localise": [
+        "https://www.hikinggear.example/collections/ultralight-backpacks",
+        "https://www.hikinggear.example/collections/tents",
+        "https://www.hikinggear.example/collections/sleeping-bags"
+      ],
+      "meta": {
+        "ad_set": "Germany - German",
+        "calibration_buy": 840.0,
+        "runs": "21 days from day 15 of its test",
+        "daily_budget": 40.0
+      },
+      "stop_rules": {
+        "day_14_spend_floor": 301.77,
+        "cpc_ceiling": 0.81,
+        "landing_page_check_after_clicks": 374,
+        "day_30_stop_below_roas": 1.5,
+        "day_60_go": "20 or more purchases and ROAS 3.0 or more",
+        "day_60_extend": "ROAS 2.4 or more, or ROAS 3.0 or more with fewer than 20 purchases",
+        "stay_on_rolling_30_day_roas": 2.5,
+        "meta_promote_at_roas": 2.0
+      }
+    }
+  ],
+  "weekly_metrics": [
+    "Spend, clicks, CPC, purchases and ROAS per market: Google Ads geographic_view presence rows; Meta country breakdown",
+    "Sessions and site conversion rate per country: GA4",
+    "Orders and revenue by shipping country: Shopify get_orders",
+    "Impressions by country: Search Console"
+  ],
+  "open_questions": [
+    "Australia: add AUD to checkout and confirm shipping time and cost before its day 1.",
+    "Germany: VAT on EU orders and German legal pages go to an adviser before its test.",
+    "Netherlands: too small to read on English-language search alone; look again when its sessions or orders grow.",
+    "From you, not measured: target ROAS 3.0, the $6,000 monthly budget, the countries you ship to and the shipping you confirmed, the countries you named, checkout currencies, translators, the 21-day fix time, the German and French term lists and day 1 (2026-11-16)."
+  ],
+  "go_deeper": [
+    "market-entry-plan",
+    "international-seo-planner",
+    "copy-transcreation",
+    "cross-border-store-expansion",
+    "geo-performance-optimizer",
+    "cross-platform-budget-allocator"
+  ]
+}

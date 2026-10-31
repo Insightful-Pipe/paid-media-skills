@@ -1,0 +1,553 @@
+{
+  "note": "Example data: an invented online candle store, Wickhollow Candle Co. (wickhollow.example), not a real business. Every number in expected_output.json follows from this input.",
+  "request": "Audit all our ad platforms for the last 30 days and tell me where the money is going wrong.",
+  "business": {
+    "name": "Wickhollow Candle Co.",
+    "site": "wickhollow.example",
+    "type": "online store",
+    "currency": "USD"
+  },
+  "answers": {
+    "result": "purchase",
+    "site_side_count": "GA4 purchase key events",
+    "markets": [
+      "US"
+    ],
+    "funnel_roles": {
+      "TikTok Ads": "prospecting"
+    },
+    "installed_skills": [
+      "google-ads-account-audit"
+    ]
+  },
+  "window": {
+    "start": "2026-09-30",
+    "end": "2026-10-29"
+  },
+  "google_ads": {
+    "campaigns": [
+      {
+        "id": "20000000101",
+        "name": "Brand Search",
+        "channel": "SEARCH",
+        "geo_type": "PRESENCE",
+        "countries": [
+          "US"
+        ],
+        "spend": 2400.0,
+        "impressions": 30000,
+        "conversions": 260,
+        "lost_budget": 0.02,
+        "lost_rank": 0.05,
+        "audience": "all"
+      },
+      {
+        "id": "20000000102",
+        "name": "Non-brand Search Candles",
+        "channel": "SEARCH",
+        "geo_type": "PRESENCE",
+        "countries": [
+          "US"
+        ],
+        "spend": 9800.0,
+        "impressions": 210000,
+        "conversions": 230,
+        "lost_budget": 0.18,
+        "lost_rank": 0.22,
+        "audience": "all"
+      },
+      {
+        "id": "20000000103",
+        "name": "Performance Max All Products",
+        "channel": "PERFORMANCE_MAX",
+        "geo_type": "PRESENCE",
+        "countries": [
+          "US"
+        ],
+        "spend": 8600.0,
+        "impressions": 640000,
+        "conversions": 270,
+        "lost_budget": null,
+        "lost_rank": null,
+        "audience": "all"
+      },
+      {
+        "id": "20000000104",
+        "name": "Shopping Gift Sets",
+        "channel": "SHOPPING",
+        "geo_type": "PRESENCE",
+        "countries": [
+          "US"
+        ],
+        "spend": 1400.0,
+        "impressions": 95000,
+        "conversions": 12,
+        "lost_budget": null,
+        "lost_rank": null,
+        "audience": "all"
+      },
+      {
+        "id": "20000000105",
+        "name": "Remarketing Display Site Visitors",
+        "channel": "DISPLAY",
+        "geo_type": "PRESENCE",
+        "countries": [
+          "US"
+        ],
+        "spend": 1800.0,
+        "impressions": 300000,
+        "conversions": 48,
+        "lost_budget": null,
+        "lost_rank": null,
+        "audience": "retargeting"
+      }
+    ],
+    "conversion_actions": [
+      {
+        "name": "Purchase",
+        "category": "PURCHASE",
+        "primary_for_goal": true,
+        "include_in_conversions_metric": true,
+        "counting_type": "MANY_PER_CLICK",
+        "click_days": 30,
+        "view_days": 1,
+        "model": "GOOGLE_SEARCH_ATTRIBUTION_DATA_DRIVEN"
+      },
+      {
+        "name": "Add to cart",
+        "category": "ADD_TO_CART",
+        "primary_for_goal": false,
+        "include_in_conversions_metric": false,
+        "counting_type": "MANY_PER_CLICK",
+        "click_days": 30,
+        "view_days": 1,
+        "model": "GOOGLE_SEARCH_ATTRIBUTION_DATA_DRIVEN"
+      }
+    ]
+  },
+  "meta": {
+    "adsets": [
+      {
+        "id": "120000000000000101",
+        "name": "Prospecting Broad US",
+        "optimization_goal": "OFFSITE_CONVERSIONS",
+        "event": "PURCHASE",
+        "countries": [
+          "US"
+        ],
+        "location_types": [
+          "home",
+          "recent"
+        ],
+        "age": [
+          25,
+          65
+        ],
+        "audience": "prospecting",
+        "excluded": [
+          "Purchasers 180 days"
+        ],
+        "spend": 6200.0,
+        "impressions": 520000,
+        "purchases": 300
+      },
+      {
+        "id": "120000000000000102",
+        "name": "Prospecting Interests Home Decor",
+        "optimization_goal": "OFFSITE_CONVERSIONS",
+        "event": "PURCHASE",
+        "countries": [
+          "US"
+        ],
+        "location_types": [
+          "home",
+          "recent"
+        ],
+        "age": [
+          25,
+          65
+        ],
+        "audience": "prospecting",
+        "excluded": [
+          "Purchasers 180 days"
+        ],
+        "spend": 3100.0,
+        "impressions": 240000,
+        "purchases": 14
+      },
+      {
+        "id": "120000000000000103",
+        "name": "Prospecting Interests Wedding Favors",
+        "optimization_goal": "OFFSITE_CONVERSIONS",
+        "event": "PURCHASE",
+        "countries": [
+          "US"
+        ],
+        "location_types": [
+          "home",
+          "recent"
+        ],
+        "age": [
+          25,
+          65
+        ],
+        "audience": "prospecting",
+        "excluded": [
+          "Purchasers 180 days"
+        ],
+        "spend": 1900.0,
+        "impressions": 150000,
+        "purchases": 9
+      },
+      {
+        "id": "120000000000000104",
+        "name": "Prospecting Gift Buyers LPV",
+        "optimization_goal": "LANDING_PAGE_VIEWS",
+        "event": null,
+        "countries": [
+          "US"
+        ],
+        "location_types": [
+          "home",
+          "recent"
+        ],
+        "age": [
+          25,
+          65
+        ],
+        "audience": "prospecting",
+        "excluded": [
+          "Purchasers 180 days"
+        ],
+        "spend": 2060.0,
+        "impressions": 170000,
+        "purchases": 27
+      },
+      {
+        "id": "120000000000000105",
+        "name": "Retargeting Site Visitors 30d",
+        "optimization_goal": "OFFSITE_CONVERSIONS",
+        "event": "PURCHASE",
+        "countries": [
+          "US"
+        ],
+        "location_types": [
+          "home",
+          "recent"
+        ],
+        "age": [
+          25,
+          65
+        ],
+        "audience": "retargeting",
+        "excluded": [
+          "Purchasers 180 days"
+        ],
+        "spend": 3400.0,
+        "impressions": 380000,
+        "purchases": 220
+      },
+      {
+        "id": "120000000000000106",
+        "name": "Retargeting Cart Abandoners 14d",
+        "optimization_goal": "OFFSITE_CONVERSIONS",
+        "event": "PURCHASE",
+        "countries": [
+          "US"
+        ],
+        "location_types": [
+          "home",
+          "recent"
+        ],
+        "age": [
+          25,
+          65
+        ],
+        "audience": "retargeting",
+        "excluded": [
+          "Purchasers 180 days"
+        ],
+        "spend": 1340.0,
+        "impressions": 150000,
+        "purchases": 70
+      }
+    ],
+    "attribution_setting": "1d_view_7d_click",
+    "purchases_7d_click_only": 470,
+    "account_level": {
+      "impressions": 1610000,
+      "reach": 470000
+    },
+    "live_ads_created": [
+      "2026-09-07",
+      "2026-09-05",
+      "2026-09-03",
+      "2026-09-01",
+      "2026-08-31",
+      "2026-08-30",
+      "2026-07-21",
+      "2026-07-02",
+      "2026-06-15",
+      "2026-05-30"
+    ]
+  },
+  "microsoft_ads": {
+    "campaigns": [
+      {
+        "name": "Brand Search",
+        "spend": 600.0,
+        "impressions": 9000,
+        "conversions": 40,
+        "lost_budget": 0.0,
+        "lost_rank": 0.04,
+        "countries": [
+          "US"
+        ]
+      },
+      {
+        "name": "Non-brand Search Candles",
+        "spend": 2400.0,
+        "impressions": 61000,
+        "conversions": 80,
+        "lost_budget": 0.25,
+        "lost_rank": 0.2,
+        "countries": [
+          "US"
+        ]
+      }
+    ],
+    "conversion_goals": [
+      {
+        "Name": "Purchase",
+        "Type": "Event",
+        "Status": "Active",
+        "TrackingStatus": "RecentConversions",
+        "ExcludeFromBidding": false,
+        "CountType": "All",
+        "ConversionWindowInMinutes": 43200
+      }
+    ]
+  },
+  "tiktok_ads": {
+    "adgroups": [
+      {
+        "id": "1800000000000101",
+        "name": "Spark Ads Candle Haul",
+        "optimization_goal": "CLICK",
+        "location_ids": [
+          "6252001"
+        ],
+        "age_groups": [
+          "AGE_25_34",
+          "AGE_35_44",
+          "AGE_45_54",
+          "AGE_55_100"
+        ],
+        "audience_ids": [],
+        "excluded_audience_ids": [
+          "7100000000000001"
+        ],
+        "spend": 2700.0,
+        "impressions": 900000,
+        "conversion": 6
+      },
+      {
+        "id": "1800000000000102",
+        "name": "Gift Guide Video",
+        "optimization_goal": "CLICK",
+        "location_ids": [
+          "6252001"
+        ],
+        "age_groups": [
+          "AGE_25_34",
+          "AGE_35_44",
+          "AGE_45_54",
+          "AGE_55_100"
+        ],
+        "audience_ids": [],
+        "excluded_audience_ids": [],
+        "spend": 1200.0,
+        "impressions": 380000,
+        "conversion": 4
+      },
+      {
+        "id": "1800000000000103",
+        "name": "Purchase Broad",
+        "optimization_goal": "CONVERT",
+        "location_ids": [
+          "6252001"
+        ],
+        "age_groups": [
+          "AGE_25_34",
+          "AGE_35_44",
+          "AGE_45_54",
+          "AGE_55_100"
+        ],
+        "audience_ids": [],
+        "excluded_audience_ids": [
+          "7100000000000001"
+        ],
+        "spend": 2100.0,
+        "impressions": 420000,
+        "conversion": 50
+      }
+    ],
+    "attribution_window": null,
+    "account_level": {
+      "impressions": 1700000,
+      "reach": 1062500
+    },
+    "audiences_held": [
+      {
+        "id": "7100000000000001",
+        "name": "Purchasers 180 days"
+      }
+    ],
+    "live_ads_created": [
+      "2026-10-17",
+      "2026-10-09",
+      "2026-10-02",
+      "2026-09-21",
+      "2026-09-12",
+      "2026-08-11"
+    ]
+  },
+  "pinterest_ads": {
+    "adgroups": [
+      {
+        "id": "2600000000101",
+        "name": "Holiday Candles Conversions",
+        "objective_type": "CONVERSIONS",
+        "LOCATION": [
+          "US",
+          "CA"
+        ],
+        "AGE_BUCKET": [
+          "25-34",
+          "35-44",
+          "45-49",
+          "50-54",
+          "55-64",
+          "65+"
+        ],
+        "audience": "prospecting",
+        "AUDIENCE_EXCLUDE": [
+          "Purchasers 180 days"
+        ],
+        "spend": 2600.0,
+        "impressions": 410000,
+        "conversions": 100
+      },
+      {
+        "id": "2600000000102",
+        "name": "Retargeting Pin Engagers",
+        "objective_type": "CONVERSIONS",
+        "LOCATION": [
+          "US"
+        ],
+        "AGE_BUCKET": [
+          "25-34",
+          "35-44",
+          "45-49",
+          "50-54",
+          "55-64",
+          "65+"
+        ],
+        "audience": "retargeting",
+        "AUDIENCE_EXCLUDE": [
+          "Purchasers 180 days"
+        ],
+        "spend": 700.0,
+        "impressions": 140000,
+        "conversions": 30
+      },
+      {
+        "id": "2600000000103",
+        "name": "Gift Ideas Consideration",
+        "objective_type": "CONSIDERATION",
+        "LOCATION": [
+          "US"
+        ],
+        "AGE_BUCKET": [
+          "25-34",
+          "35-44",
+          "45-49",
+          "50-54",
+          "55-64",
+          "65+"
+        ],
+        "audience": "prospecting",
+        "AUDIENCE_EXCLUDE": [
+          "Purchasers 180 days"
+        ],
+        "spend": 700.0,
+        "impressions": 160000,
+        "conversions": 20
+      }
+    ],
+    "live_ads_created": [
+      "2026-07-26",
+      "2026-07-12",
+      "2026-06-30",
+      "2026-06-02",
+      "2026-05-20"
+    ]
+  },
+  "ga4": {
+    "purchase_key_events_by_source_medium": [
+      {
+        "sessionSourceMedium": "google / cpc",
+        "sessions": 21400,
+        "keyEvents": 700
+      },
+      {
+        "sessionSourceMedium": "facebook / paid_social",
+        "sessions": 14800,
+        "keyEvents": 290
+      },
+      {
+        "sessionSourceMedium": "bing / cpc",
+        "sessions": 2900,
+        "keyEvents": 105
+      },
+      {
+        "sessionSourceMedium": "tiktok / paid",
+        "sessions": 5100,
+        "keyEvents": 38
+      },
+      {
+        "sessionSourceMedium": "pinterest / paid",
+        "sessions": 2300,
+        "keyEvents": 40
+      },
+      {
+        "sessionSourceMedium": "google / organic",
+        "sessions": 9100,
+        "keyEvents": 310
+      },
+      {
+        "sessionSourceMedium": "(direct) / (none)",
+        "sessions": 6200,
+        "keyEvents": 240
+      },
+      {
+        "sessionSourceMedium": "klaviyo / email",
+        "sessions": 3300,
+        "keyEvents": 190
+      }
+    ],
+    "total_users": 38500
+  },
+  "deep_audits_run": {
+    "google-ads": {
+      "skill": "google-ads-account-audit",
+      "grade": 76,
+      "fixes": [
+        {
+          "fix": "Add 41 negatives from search terms that spent with no purchase (jobs, DIY, wholesale)",
+          "money": 1180.0
+        }
+      ]
+    }
+  }
+}

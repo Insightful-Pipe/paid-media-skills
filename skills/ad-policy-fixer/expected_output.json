@@ -1,0 +1,601 @@
+{
+  "header": {
+    "run_at_utc": "2026-10-28T19:00:00Z",
+    "business": "Example Budget App",
+    "accounts": [
+      {
+        "platform": "LinkedIn Ads",
+        "id": "500000001",
+        "standing": "active"
+      },
+      {
+        "platform": "TikTok Ads",
+        "id": "7000000000000001",
+        "standing": "active (STATUS_ENABLE)"
+      },
+      {
+        "platform": "TikTok Ads",
+        "id": "7000000000000002",
+        "standing": "blocked (STATUS_LIMIT, ads show ADVERTISER_ACCOUNT_PUNISH)"
+      },
+      {
+        "platform": "Microsoft Ads",
+        "id": "150000001",
+        "standing": "active"
+      },
+      {
+        "platform": "Pinterest Ads",
+        "id": "549000000001",
+        "standing": "no account-level policy status in the data"
+      },
+      {
+        "platform": "Snapchat Ads",
+        "id": "00000000-0000-4000-8000-000000000101",
+        "standing": "active"
+      },
+      {
+        "platform": "X Ads",
+        "id": "18ab00cd1",
+        "standing": "approved (ACCEPTED)"
+      },
+      {
+        "platform": "ChatGPT ads (OpenAI Ads)",
+        "id": "adacct_example0001",
+        "standing": "approved"
+      },
+      {
+        "platform": "Reddit Ads",
+        "id": null,
+        "standing": "from the paste only"
+      }
+    ]
+  },
+  "summary": {
+    "accounts_blocked": 1,
+    "ads_rejected": 6,
+    "ads_stuck": 1,
+    "ads_in_review": 1,
+    "dark_groups": 4,
+    "dark_list": [
+      "Pinterest Ads: 2680000000011",
+      "LinkedIn Ads: urn:li:sponsoredCampaign:600000011",
+      "X Ads: li7a1",
+      "Microsoft Ads: 1300000000001"
+    ],
+    "reasons_by_source": {
+      "from the platform": 2,
+      "from your notice": 3,
+      "likely, no notice": 1
+    }
+  },
+  "account_blocked": {
+    "platform": "TikTok Ads",
+    "advertiser_id": "7000000000000002",
+    "name": "Example Budget App | Creators test",
+    "status": "STATUS_LIMIT",
+    "ads_held": 2,
+    "reason": "repeated violations of the TikTok Advertising Policies (from your notice); TikTok's reason fields were empty",
+    "fix_first": "The three September ads are already deleted. Keep the main account clean: fix the rejected Builder Card ad before resubmitting anything.",
+    "appeal_draft": "We are Example Budget App (https://examplebudget.example), a US budgeting app. We use this TikTok ad account, 7000000000000002, to test creator videos for our app. On 2026-10-09 it was restricted for repeated violations of the TikTok Advertising Policies. The cause was three ads in September that made income and savings claims we can't support. We deleted all three. Every new ad now goes through a written check before launch: no guaranteed results, no fixed savings or credit-score figures, and every claim must appear on the landing page. We found one more ad with the same problem in our main account and are rewriting it now. We ask you to review the restriction on this account. Thank you.",
+    "appeal_words": 116,
+    "send_from": "TikTok Ads Manager, on the account's status notice",
+    "never": "Don't open a new TikTok ad account to get around the restriction."
+  },
+  "blocked_list": [
+    {
+      "priority": 1,
+      "level": 2,
+      "platform": "Pinterest Ads",
+      "ad": "Budget app | savings challenge pin",
+      "ad_id": "687000000101",
+      "group": "2680000000011",
+      "state": "Rejected",
+      "status_read": "review_status REJECTED",
+      "since_utc": "2026-10-23 08:00",
+      "hours_blocked": 131.0,
+      "dark": true,
+      "reason": "EXAGGERATED_CLAIMS (Exaggerated claims)",
+      "reason_source": "from the platform",
+      "policy_page": "https://policy.pinterest.com/en/advertising-guidelines"
+    },
+    {
+      "priority": 2,
+      "level": 2,
+      "platform": "LinkedIn Ads",
+      "ad": "Hiring | Support specialists | image",
+      "ad_id": "urn:li:sponsoredCreative:700000101",
+      "group": "urn:li:sponsoredCampaign:600000011",
+      "state": "Rejected",
+      "status_read": "review.status REJECTED",
+      "since_utc": "2026-10-24 14:00",
+      "hours_blocked": 101.0,
+      "dark": true,
+      "reason": "DISCRIMINATION",
+      "reason_source": "from the platform",
+      "policy_page": "https://www.linkedin.com/legal/ads-policy"
+    },
+    {
+      "priority": 3,
+      "level": 2,
+      "platform": "X Ads",
+      "ad": "Promoted post, Budget app",
+      "ad_id": "1850000000000000101",
+      "group": "li7a1",
+      "state": "Rejected",
+      "status_read": "approval_status REJECTED",
+      "since_utc": "2026-10-26 10:00",
+      "hours_blocked": 57.0,
+      "dark": true,
+      "reason": "likely X's quality policy: clickbait wording and false urgency",
+      "reason_source": "likely, no notice",
+      "policy_page": "https://business.x.com/en/help/ads-policies"
+    },
+    {
+      "priority": 4,
+      "level": 2,
+      "platform": "Microsoft Ads",
+      "ad": "Responsive search ad, Credit builder card",
+      "ad_id": "82000000000001",
+      "group": "1300000000001",
+      "state": "Rejected",
+      "status_read": "EditorialStatus Disapproved",
+      "since_utc": "unknown (Microsoft returns no review date)",
+      "hours_blocked": null,
+      "dark": true,
+      "reason": "excessive capitalization; superlative claim not supported on the landing page",
+      "reason_source": "from your notice",
+      "policy_page": "https://about.ads.microsoft.com/en/policies/home"
+    },
+    {
+      "priority": 5,
+      "level": 3,
+      "platform": "TikTok Ads",
+      "ad": "Builder Card | creator hook v3",
+      "ad_id": "1800000000000101",
+      "group": "1700000000000011",
+      "state": "Rejected",
+      "status_read": "secondary_status AD_STATUS_AUDIT_DENY",
+      "since_utc": "2026-10-25 09:30",
+      "hours_blocked": 81.5,
+      "dark": false,
+      "reason": "exaggerated or misleading claims (financial services)",
+      "reason_source": "from your notice",
+      "policy_page": "https://ads.tiktok.com/help/article/tiktok-advertising-policies"
+    },
+    {
+      "priority": 6,
+      "level": 3,
+      "platform": "Reddit Ads",
+      "ad": "Promoted post, Budget app",
+      "ad_id": null,
+      "group": "Budget app | r/personalfinance interest",
+      "state": "Rejected",
+      "status_read": "pasted notice (no connector)",
+      "since_utc": "2026-10-26 00:00",
+      "since_note": "date from the notice",
+      "hours_blocked": 67.0,
+      "dark": "unknown (no connector)",
+      "reason": "unsubstantiated claims",
+      "reason_source": "from your notice",
+      "policy_page": "https://business.reddithelp.com/s/article/Reddit-Advertising-Policy-Overview"
+    },
+    {
+      "priority": 7,
+      "level": 4,
+      "platform": "Snapchat Ads",
+      "ad": "Budget app | 15s video",
+      "ad_id": "00000000-0000-4000-8000-000000000201",
+      "group": "sq-001",
+      "state": "Stuck",
+      "status_read": "review_status PENDING_REVIEW (ad and creative)",
+      "since_utc": "2026-10-25 15:00",
+      "hours_blocked": 76.0,
+      "dark": false,
+      "reason": null,
+      "reason_source": null,
+      "policy_page": "https://snap.com/en-US/ad-policies"
+    },
+    {
+      "priority": 8,
+      "level": 4,
+      "platform": "ChatGPT ads (OpenAI Ads)",
+      "ad": "Plan your month in 5 minutes",
+      "ad_id": "ad_example0001",
+      "group": "adgrp_example0001",
+      "state": "In review",
+      "status_read": "review_status in_review",
+      "since_utc": "2026-10-27 23:00",
+      "hours_blocked": 20.0,
+      "dark": false,
+      "reason": null,
+      "reason_source": null,
+      "policy_page": "https://openai.com/policies/ad-policies/"
+    }
+  ],
+  "cards": [
+    {
+      "platform": "LinkedIn Ads",
+      "ad": "Hiring | Support specialists | image",
+      "ad_id": "urn:li:sponsoredCreative:700000101",
+      "reason": "DISCRIMINATION (from the platform)",
+      "policy_page": "https://www.linkedin.com/legal/ads-policy#discrimination",
+      "trigger": "young, energetic digital natives",
+      "why": "Asking for a young age group in a job ad is age discrimination under LinkedIn's policy, and an age-based hiring preference is a legal risk in the US.",
+      "angle": "A remote support job open to apply today.",
+      "rewrite": [
+        {
+          "field": "intro text",
+          "old": "We're hiring! Looking for young, energetic digital natives to join our remote support team. Apply today.",
+          "new": "We're hiring! Looking for patient, curious problem-solvers to join our remote support team. Any experience level. Apply today.",
+          "new_chars": 126,
+          "limit": 600
+        }
+      ],
+      "visual": "No change: the image shows the team, not an age requirement.",
+      "category_check": "Employment: the campaign also narrows targeting to ages 18 to 34 (see the category check).",
+      "route": "Replace: LinkedIn creative text can't be edited, so a new creative goes to review in the same campaign.",
+      "review_request": null
+    },
+    {
+      "platform": "TikTok Ads",
+      "ad": "Builder Card | creator hook v3",
+      "ad_id": "1800000000000101",
+      "reason": "exaggerated or misleading claims, financial services (from your notice)",
+      "policy_page": "https://ads.tiktok.com/help/article/tiktok-advertising-policies",
+      "trigger": "Guaranteed to fix your credit in 30 days",
+      "also_changed": "no catch!",
+      "why": "A guaranteed credit result in a fixed time is a promise no card can keep; your own facts say score results are not promised.",
+      "angle": "Build credit, and it's easy to get (no credit check to apply).",
+      "rewrite": [
+        {
+          "field": "ad_text",
+          "old": "Guaranteed to fix your credit in 30 days. No credit check, no catch!",
+          "new": "Build credit with every on-time payment. No credit check to apply.",
+          "new_chars": 66,
+          "limit": 100
+        }
+      ],
+      "visual": "Check the video for the same promise in captions or voiceover and cut it.",
+      "category_check": "Credit: the ad group targets ages 18 to 34 only (see the category check).",
+      "route": "Edit and resubmit: the edit sends the ad back to review. The founder story ad keeps the ad group running meanwhile.",
+      "review_request": null
+    },
+    {
+      "platform": "Microsoft Ads",
+      "ad": "Responsive search ad, Credit builder card",
+      "ad_id": "82000000000001",
+      "reason": "excessive capitalization; superlative claim not supported on landing page (from your notice)",
+      "policy_page": "https://about.ads.microsoft.com/en/policies/home",
+      "trigger": [
+        "BEST CREDIT BUILDER CARD!!!",
+        "#1"
+      ],
+      "why": "All caps and repeated exclamation marks break Microsoft's editorial style rules, and 'best' and '#1' need proof on the landing page.",
+      "angle": "A card made for building credit, no credit check to apply.",
+      "rewrite": [
+        {
+          "field": "headline 1",
+          "old": "BEST CREDIT BUILDER CARD!!!",
+          "new": "A Card Built to Build Credit",
+          "new_chars": 28,
+          "limit": 30
+        },
+        {
+          "field": "headline 2",
+          "old": "#1 Card to Build Credit",
+          "new": "Reports to All 3 Bureaus",
+          "new_chars": 24,
+          "limit": 30
+        }
+      ],
+      "unchanged": [
+        "No Credit Check to Apply",
+        "Build credit with every on-time payment. Reports to all 3 bureaus.",
+        "Secured card with no annual fee. Apply online in minutes."
+      ],
+      "visual": null,
+      "category_check": "Credit: campaign targets the United States with no age or gender criterion; no narrowing found.",
+      "route": "Replace: add the fixed ad paused in the same ad group; the user switches it on once it passes review.",
+      "review_request": null
+    },
+    {
+      "platform": "Pinterest Ads",
+      "ad": "Budget app | savings challenge pin",
+      "ad_id": "687000000101",
+      "reason": "EXAGGERATED_CLAIMS, label 'Exaggerated claims' (from the platform)",
+      "policy_page": "https://policy.pinterest.com/en/advertising-guidelines",
+      "trigger": "Save $10,000 in 6 months on any salary",
+      "also_changed": "got me out of debt",
+      "why": "A fixed savings amount in a fixed time for anyone is a result the app can't promise; your facts say savings aren't tracked. The first-person debt story reads as a testimonial with no customer behind it.",
+      "angle": "The app finds money to save, and it's quick to start.",
+      "rewrite": [
+        {
+          "field": "title",
+          "old": "Save $10,000 in 6 months on any salary",
+          "new": "See where your money goes, then save more of it",
+          "new_chars": 47,
+          "limit": 100
+        },
+        {
+          "field": "description",
+          "old": "The budgeting method that got me out of debt. Start today.",
+          "new": "Set up the 50/30/20 plan in minutes. Start today.",
+          "new_chars": 49,
+          "limit": 500
+        }
+      ],
+      "visual": "Replace the balance jumping from $0 to $10,000 with an app screen of spending categories, and no balance figures.",
+      "category_check": null,
+      "route": "Replace: the text lives on the Pin, so create a new Pin and a new ad (paused) in the same ad group. The approved categories Pin is paused, so the ad group stays dark until one runs.",
+      "review_request": null
+    },
+    {
+      "platform": "X Ads",
+      "ad": "Promoted post, Budget app",
+      "ad_id": "1850000000000000101",
+      "reason": "likely X's quality policy: clickbait and false urgency (likely, no notice)",
+      "policy_page": "https://business.x.com/en/help/ads-policies",
+      "trigger": [
+        "Your bank doesn't want you to see this",
+        "before it's gone"
+      ],
+      "why": "X returns no reason. The post hides what it promotes behind a tease and adds urgency for something that isn't going away. Paste X's notice to confirm.",
+      "angle": "A simple budgeting method the app sets up for you.",
+      "rewrite": [
+        {
+          "field": "post text",
+          "old": "Your bank doesn't want you to see this budgeting trick. Tap to find out before it's gone.",
+          "new": "Try the 50/30/20 budget: split your pay into needs, wants and savings in a few taps with Example Budget App.",
+          "new_chars": 108,
+          "limit": 280
+        }
+      ],
+      "visual": null,
+      "category_check": null,
+      "route": "Replace: create a new promoted-only post and promote it in the same line item.",
+      "review_request": null
+    },
+    {
+      "platform": "Reddit Ads",
+      "ad": "Promoted post, Budget app",
+      "ad_id": null,
+      "reason": "unsubstantiated claims (from your notice)",
+      "policy_page": "https://business.reddithelp.com/s/article/Reddit-Advertising-Policy-Overview",
+      "trigger": [
+        "2 million",
+        "doubled their savings"
+      ],
+      "why": "Your facts say 140,000 users and savings not tracked, so both numbers are unsupported.",
+      "angle": "Join a lot of people already using the app.",
+      "rewrite": [
+        {
+          "field": "headline",
+          "old": "Join 2 million people who doubled their savings with Example Budget App.",
+          "new": "Join 140,000 people who plan every dollar with Example Budget App.",
+          "new_chars": 66
+        }
+      ],
+      "visual": null,
+      "category_check": null,
+      "route": "Edit and resubmit in Reddit Ads Manager (no connector for Reddit).",
+      "review_request": null
+    }
+  ],
+  "stuck_and_waiting": [
+    {
+      "platform": "Snapchat Ads",
+      "ad": "Budget app | 15s video",
+      "hours": 76.0,
+      "route": "Stuck (over 48 hours): don't edit it; send this to Snapchat support.",
+      "support_message": "Our Snapchat ad 00000000-0000-4000-8000-000000000201 (Budget app | 15s video) has been in review since 2026-10-25 15:00 UTC, 76 hours. It promotes Example Budget App, a budgeting app, and links to https://examplebudget.example/. The other ad in the same ad squad was approved. Could you check whether the review is stuck or needs anything from us? We haven't edited the ad so the review isn't restarted.",
+      "support_message_words": 64
+    },
+    {
+      "platform": "ChatGPT ads (OpenAI Ads)",
+      "ad": "Plan your month in 5 minutes",
+      "hours": 20.0,
+      "route": "In review for under 48 hours: wait, and check again after 2026-10-29 23:00 UTC."
+    }
+  ],
+  "restricted_category_check": [
+    {
+      "platform": "LinkedIn Ads",
+      "campaign": "Hiring | Remote support | US",
+      "category": "employment",
+      "narrowing_found": [
+        "age ranges: urn:li:ageRange:(18,24), urn:li:ageRange:(25,34)"
+      ],
+      "recommendation": "Remove the age facet so every adult can see the job ad; keep location and job function."
+    },
+    {
+      "platform": "TikTok Ads",
+      "campaign": "Builder Card | US | 18 to 34",
+      "category": "credit",
+      "narrowing_found": [
+        "age_groups: AGE_18_24, AGE_25_34 (2 of 5 adult groups)"
+      ],
+      "recommendation": "Open the ad group to all adult age groups, then confirm TikTok's current setting for credit ads on its policy page."
+    },
+    {
+      "platform": "Microsoft Ads",
+      "campaign": "Search | Builder Card",
+      "category": "credit",
+      "narrowing_found": [],
+      "recommendation": "No narrowing found: the only campaign criterion is the location United States."
+    }
+  ],
+  "changes_i_can_make": [
+    {
+      "fix": "Replace the LinkedIn hiring creative",
+      "platform": "linkedin-ads",
+      "action": "create_creative_inline",
+      "body": {
+        "workspace_id": 1,
+        "brand_id": 1,
+        "ad_account_id": "500000001",
+        "campaign": "urn:li:sponsoredCampaign:600000011",
+        "inlineContent": {
+          "post": {
+            "adContext": {
+              "dscAdAccount": "urn:li:sponsoredAccount:500000001",
+              "dscStatus": "ACTIVE"
+            },
+            "author": "urn:li:organization:90000001",
+            "visibility": "PUBLIC",
+            "lifecycleState": "PUBLISHED",
+            "commentary": "We're hiring! Looking for patient, curious problem-solvers to join our remote support team. Any experience level. Apply today.",
+            "content": {
+              "media": {
+                "id": "urn:li:image:C4E00000000001",
+                "title": "Join the Example Budget App support team"
+              }
+            }
+          }
+        },
+        "intendedStatus": "ACTIVE"
+      },
+      "note": "ACTIVE is what sends a LinkedIn creative to review; it serves after approval because the campaign is on. The rejected creative stays as it is.",
+      "status": "not run"
+    },
+    {
+      "fix": "Edit the TikTok ad text",
+      "platform": "tiktok-ads",
+      "action": "ad/update/",
+      "body": {
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "7000000000000001",
+        "advertiser_id": "7000000000000001",
+        "method": "POST",
+        "ad_id": "1800000000000101",
+        "ad_text": "Build credit with every on-time payment. No credit check to apply."
+      },
+      "note": "Sends the ad back to review.",
+      "status": "not run"
+    },
+    {
+      "fix": "Add the fixed Microsoft ad, paused",
+      "platform": "microsoft-ads",
+      "action": "add_ads",
+      "body": {
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "150000001",
+        "ad_group_id": "1300000000001",
+        "ads": [
+          {
+            "Type": "ResponsiveSearch",
+            "Status": "Paused",
+            "Headlines": [
+              {
+                "Text": "A Card Built to Build Credit"
+              },
+              {
+                "Text": "Reports to All 3 Bureaus"
+              },
+              {
+                "Text": "No Credit Check to Apply"
+              }
+            ],
+            "Descriptions": [
+              {
+                "Text": "Build credit with every on-time payment. Reports to all 3 bureaus."
+              },
+              {
+                "Text": "Secured card with no annual fee. Apply online in minutes."
+              }
+            ],
+            "Path1": "builder-card",
+            "FinalUrls": [
+              "https://examplebudget.example/builder-card"
+            ]
+          }
+        ]
+      },
+      "status": "not run"
+    },
+    {
+      "fix": "New Pinterest Pin with the fixed text",
+      "platform": "pinterest-pages",
+      "action": "create_pin",
+      "body": {
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "<PINTEREST_USER_ID>",
+        "board_id": "<BOARD_ID>",
+        "media_source": {
+          "source_type": "image_url",
+          "url": "<NEW_IMAGE_URL>"
+        },
+        "title": "See where your money goes, then save more of it",
+        "description": "Set up the 50/30/20 plan in minutes. Start today.",
+        "link": "https://examplebudget.example/"
+      },
+      "note": "Needs the new image from the visual note first.",
+      "status": "not run"
+    },
+    {
+      "fix": "New Pinterest ad from that Pin, paused",
+      "platform": "pinterest-ads",
+      "action": "create_ads",
+      "body": {
+        "workspace_id": 1,
+        "brand_id": 1,
+        "ad_account_id": "549000000001",
+        "body": [
+          {
+            "name": "Budget app | savings pin v2",
+            "ad_group_id": "2680000000011",
+            "pin_id": "<NEW_PIN_ID>",
+            "creative_type": "REGULAR",
+            "status": "PAUSED"
+          }
+        ]
+      },
+      "status": "not run"
+    },
+    {
+      "fix": "New promoted-only X post",
+      "platform": "x-ads",
+      "action": "create_ad_tweet",
+      "body": {
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "18ab00cd1",
+        "as_user_id": "<PROMOTABLE_USER_ID>",
+        "text": "Try the 50/30/20 budget: split your pay into needs, wants and savings in a few taps with Example Budget App.",
+        "nullcast": "true"
+      },
+      "status": "not run"
+    },
+    {
+      "fix": "Promote it in the same line item",
+      "platform": "x-ads",
+      "action": "create_promoted_tweet",
+      "body": {
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "18ab00cd1",
+        "line_item_id": "li7a1",
+        "tweet_ids": "<NEW_TWEET_ID>"
+      },
+      "note": "The line item is running, so the new post serves once X approves it.",
+      "status": "not run"
+    }
+  ],
+  "not_checked": [
+    "TikTok, Microsoft and X don't pass ad rejection reasons to the connector; those reasons are from your notices or marked likely.",
+    "Microsoft returns no review date on an ad, so its time blocked is unknown.",
+    "LinkedIn and X ad text isn't in these calls; the rewrites use the text you pasted.",
+    "Reddit has no connector; everything for Reddit comes from your paste.",
+    "Pinterest and Snapchat targeting wasn't read: none of their blocked ads sells a restricted category."
+  ],
+  "go_deeper": [
+    "meta-ad-rejection-fixer",
+    "google-ads-disapproval-suspension-fixer",
+    "linkedin-ads-auditor",
+    "tiktok-ads-analyzer",
+    "microsoft-ads-account-audit",
+    "ad-landing-page-match-scorer"
+  ]
+}

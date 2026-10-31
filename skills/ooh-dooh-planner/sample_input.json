@@ -1,0 +1,3085 @@
+{
+  "note": "Example data: an invented online sofa and furniture brand with invented media owners, quotes and accounts, not a real business. Every number in expected_output.json follows from this input.",
+  "request": "Plan a billboard and digital out-of-home push for our Presidents' Day sale. Budget $60,000 all in, 4 weeks around Presidents' Day 2027. Tell us which cities to buy, which boards, whether to add programmatic screens, check our three drafts, and how we will know if it worked.",
+  "run_date": "2026-10-30",
+  "business": {
+    "name": "Example Sofa Co.",
+    "site": "https://www.examplesofa.example",
+    "sells": "sofas, sectionals and chairs online, shipped across the Southeast US",
+    "showrooms": [
+      "Atlanta",
+      "Charlotte",
+      "Nashville"
+    ],
+    "profit_per_purchase": 420,
+    "currency": "USD"
+  },
+  "brief": {
+    "budget_all_in": 60000,
+    "flight_start": "2027-01-25",
+    "flight_weeks": 4,
+    "goal": "online purchases and showroom visits in the markets that see the boards",
+    "target_weekly_grps": 30,
+    "other_geo_spend": "Google Ads and Meta run nationally with no city budgets"
+  },
+  "connected": {
+    "google-analytics": {
+      "property_id": "properties/123456789",
+      "call": {
+        "action": "get_report",
+        "dimensions": [
+          "isoYearIsoWeek",
+          "region",
+          "city"
+        ],
+        "metrics": [
+          "sessions",
+          "ecommercePurchases"
+        ],
+        "start_date": "2026-07-27",
+        "end_date": "2026-10-25"
+      },
+      "rows": [
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "Georgia",
+          "city": "Atlanta",
+          "sessions": 2361,
+          "ecommercePurchases": 43
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "Florida",
+          "city": "Orlando",
+          "sessions": 1965,
+          "ecommercePurchases": 36
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "Florida",
+          "city": "Tampa",
+          "sessions": 1686,
+          "ecommercePurchases": 34
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "Florida",
+          "city": "Jacksonville",
+          "sessions": 1349,
+          "ecommercePurchases": 28
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "North Carolina",
+          "city": "Charlotte",
+          "sessions": 1420,
+          "ecommercePurchases": 26
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "Tennessee",
+          "city": "Nashville",
+          "sessions": 1115,
+          "ecommercePurchases": 23
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "Alabama",
+          "city": "Birmingham",
+          "sessions": 875,
+          "ecommercePurchases": 18
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "North Carolina",
+          "city": "Raleigh",
+          "sessions": 885,
+          "ecommercePurchases": 17
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "Florida",
+          "city": "St. Petersburg",
+          "sessions": 871,
+          "ecommercePurchases": 16
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "South Carolina",
+          "city": "Greenville",
+          "sessions": 780,
+          "ecommercePurchases": 15
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "Georgia",
+          "city": "Marietta",
+          "sessions": 724,
+          "ecommercePurchases": 15
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "Georgia",
+          "city": "Alpharetta",
+          "sessions": 706,
+          "ecommercePurchases": 13
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "Georgia",
+          "city": "Decatur",
+          "sessions": 580,
+          "ecommercePurchases": 11
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "Florida",
+          "city": "Kissimmee",
+          "sessions": 496,
+          "ecommercePurchases": 10
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "Florida",
+          "city": "Clearwater",
+          "sessions": 453,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "South Carolina",
+          "city": "Columbia",
+          "sessions": 421,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "North Carolina",
+          "city": "Durham",
+          "sessions": 432,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "Tennessee",
+          "city": "Franklin",
+          "sessions": 424,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "South Carolina",
+          "city": "Spartanburg",
+          "sessions": 425,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "Tennessee",
+          "city": "Knoxville",
+          "sessions": 367,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "(not set)",
+          "city": "(not set)",
+          "sessions": 300,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "North Carolina",
+          "city": "Concord",
+          "sessions": 319,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "Alabama",
+          "city": "Hoover",
+          "sessions": 290,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "Tennessee",
+          "city": "Murfreesboro",
+          "sessions": 318,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "Georgia",
+          "city": "Savannah",
+          "sessions": 305,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "North Carolina",
+          "city": "Cary",
+          "sessions": 277,
+          "ecommercePurchases": 5
+        },
+        {
+          "isoYearIsoWeek": "202631",
+          "region": "North Carolina",
+          "city": "Gastonia",
+          "sessions": 243,
+          "ecommercePurchases": 5
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "Georgia",
+          "city": "Atlanta",
+          "sessions": 2404,
+          "ecommercePurchases": 48
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "Florida",
+          "city": "Orlando",
+          "sessions": 2168,
+          "ecommercePurchases": 41
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "North Carolina",
+          "city": "Charlotte",
+          "sessions": 2078,
+          "ecommercePurchases": 38
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "Florida",
+          "city": "Tampa",
+          "sessions": 1839,
+          "ecommercePurchases": 37
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "Florida",
+          "city": "Jacksonville",
+          "sessions": 1634,
+          "ecommercePurchases": 31
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "Tennessee",
+          "city": "Nashville",
+          "sessions": 1030,
+          "ecommercePurchases": 21
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "Alabama",
+          "city": "Birmingham",
+          "sessions": 1041,
+          "ecommercePurchases": 20
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "North Carolina",
+          "city": "Raleigh",
+          "sessions": 981,
+          "ecommercePurchases": 18
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "Georgia",
+          "city": "Marietta",
+          "sessions": 852,
+          "ecommercePurchases": 17
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "Florida",
+          "city": "St. Petersburg",
+          "sessions": 941,
+          "ecommercePurchases": 17
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "Georgia",
+          "city": "Alpharetta",
+          "sessions": 760,
+          "ecommercePurchases": 15
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "South Carolina",
+          "city": "Greenville",
+          "sessions": 722,
+          "ecommercePurchases": 15
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "Georgia",
+          "city": "Decatur",
+          "sessions": 666,
+          "ecommercePurchases": 13
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "Florida",
+          "city": "Kissimmee",
+          "sessions": 607,
+          "ecommercePurchases": 12
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "Florida",
+          "city": "Clearwater",
+          "sessions": 542,
+          "ecommercePurchases": 10
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "North Carolina",
+          "city": "Concord",
+          "sessions": 465,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "North Carolina",
+          "city": "Durham",
+          "sessions": 487,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "South Carolina",
+          "city": "Spartanburg",
+          "sessions": 486,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "South Carolina",
+          "city": "Columbia",
+          "sessions": 341,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "Tennessee",
+          "city": "Franklin",
+          "sessions": 366,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "North Carolina",
+          "city": "Gastonia",
+          "sessions": 344,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "Alabama",
+          "city": "Hoover",
+          "sessions": 347,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "Tennessee",
+          "city": "Knoxville",
+          "sessions": 380,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "(not set)",
+          "city": "(not set)",
+          "sessions": 300,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "North Carolina",
+          "city": "Cary",
+          "sessions": 329,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "Tennessee",
+          "city": "Murfreesboro",
+          "sessions": 298,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202632",
+          "region": "Georgia",
+          "city": "Savannah",
+          "sessions": 251,
+          "ecommercePurchases": 5
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "Georgia",
+          "city": "Atlanta",
+          "sessions": 2141,
+          "ecommercePurchases": 44
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "Florida",
+          "city": "Orlando",
+          "sessions": 1894,
+          "ecommercePurchases": 37
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "Florida",
+          "city": "Tampa",
+          "sessions": 1621,
+          "ecommercePurchases": 31
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "North Carolina",
+          "city": "Charlotte",
+          "sessions": 1528,
+          "ecommercePurchases": 28
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "Tennessee",
+          "city": "Nashville",
+          "sessions": 1542,
+          "ecommercePurchases": 28
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "Florida",
+          "city": "Jacksonville",
+          "sessions": 1323,
+          "ecommercePurchases": 26
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "Alabama",
+          "city": "Birmingham",
+          "sessions": 903,
+          "ecommercePurchases": 17
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "Georgia",
+          "city": "Marietta",
+          "sessions": 754,
+          "ecommercePurchases": 15
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "North Carolina",
+          "city": "Raleigh",
+          "sessions": 754,
+          "ecommercePurchases": 15
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "Georgia",
+          "city": "Alpharetta",
+          "sessions": 747,
+          "ecommercePurchases": 14
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "South Carolina",
+          "city": "Greenville",
+          "sessions": 747,
+          "ecommercePurchases": 14
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "Florida",
+          "city": "St. Petersburg",
+          "sessions": 724,
+          "ecommercePurchases": 14
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "Georgia",
+          "city": "Decatur",
+          "sessions": 664,
+          "ecommercePurchases": 12
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "Florida",
+          "city": "Kissimmee",
+          "sessions": 537,
+          "ecommercePurchases": 10
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "Tennessee",
+          "city": "Franklin",
+          "sessions": 446,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "Florida",
+          "city": "Clearwater",
+          "sessions": 404,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "Tennessee",
+          "city": "Murfreesboro",
+          "sessions": 420,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "South Carolina",
+          "city": "Spartanburg",
+          "sessions": 399,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "(not set)",
+          "city": "(not set)",
+          "sessions": 350,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "South Carolina",
+          "city": "Columbia",
+          "sessions": 378,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "North Carolina",
+          "city": "Concord",
+          "sessions": 338,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "North Carolina",
+          "city": "Durham",
+          "sessions": 369,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "Tennessee",
+          "city": "Knoxville",
+          "sessions": 363,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "Alabama",
+          "city": "Hoover",
+          "sessions": 334,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "Georgia",
+          "city": "Savannah",
+          "sessions": 330,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "North Carolina",
+          "city": "Cary",
+          "sessions": 263,
+          "ecommercePurchases": 5
+        },
+        {
+          "isoYearIsoWeek": "202633",
+          "region": "North Carolina",
+          "city": "Gastonia",
+          "sessions": 273,
+          "ecommercePurchases": 5
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "Georgia",
+          "city": "Atlanta",
+          "sessions": 2421,
+          "ecommercePurchases": 47
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "Florida",
+          "city": "Orlando",
+          "sessions": 2045,
+          "ecommercePurchases": 38
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "Florida",
+          "city": "Tampa",
+          "sessions": 1923,
+          "ecommercePurchases": 35
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "Tennessee",
+          "city": "Nashville",
+          "sessions": 1641,
+          "ecommercePurchases": 33
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "North Carolina",
+          "city": "Charlotte",
+          "sessions": 1687,
+          "ecommercePurchases": 31
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "Florida",
+          "city": "Jacksonville",
+          "sessions": 1490,
+          "ecommercePurchases": 29
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "Alabama",
+          "city": "Birmingham",
+          "sessions": 986,
+          "ecommercePurchases": 19
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "Georgia",
+          "city": "Marietta",
+          "sessions": 821,
+          "ecommercePurchases": 16
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "North Carolina",
+          "city": "Raleigh",
+          "sessions": 877,
+          "ecommercePurchases": 16
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "Florida",
+          "city": "St. Petersburg",
+          "sessions": 895,
+          "ecommercePurchases": 16
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "Georgia",
+          "city": "Alpharetta",
+          "sessions": 708,
+          "ecommercePurchases": 14
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "South Carolina",
+          "city": "Greenville",
+          "sessions": 689,
+          "ecommercePurchases": 14
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "Georgia",
+          "city": "Decatur",
+          "sessions": 725,
+          "ecommercePurchases": 13
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "Tennessee",
+          "city": "Franklin",
+          "sessions": 592,
+          "ecommercePurchases": 11
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "Florida",
+          "city": "Kissimmee",
+          "sessions": 592,
+          "ecommercePurchases": 11
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "Tennessee",
+          "city": "Knoxville",
+          "sessions": 532,
+          "ecommercePurchases": 10
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "Florida",
+          "city": "Clearwater",
+          "sessions": 501,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "South Carolina",
+          "city": "Columbia",
+          "sessions": 482,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "Tennessee",
+          "city": "Murfreesboro",
+          "sessions": 494,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "North Carolina",
+          "city": "Durham",
+          "sessions": 409,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "South Carolina",
+          "city": "Spartanburg",
+          "sessions": 435,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "North Carolina",
+          "city": "Concord",
+          "sessions": 390,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "Alabama",
+          "city": "Hoover",
+          "sessions": 336,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "North Carolina",
+          "city": "Gastonia",
+          "sessions": 331,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "Georgia",
+          "city": "Savannah",
+          "sessions": 298,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "(not set)",
+          "city": "(not set)",
+          "sessions": 250,
+          "ecommercePurchases": 5
+        },
+        {
+          "isoYearIsoWeek": "202634",
+          "region": "North Carolina",
+          "city": "Cary",
+          "sessions": 265,
+          "ecommercePurchases": 5
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "Georgia",
+          "city": "Atlanta",
+          "sessions": 2655,
+          "ecommercePurchases": 49
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "Florida",
+          "city": "Orlando",
+          "sessions": 2180,
+          "ecommercePurchases": 42
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "Florida",
+          "city": "Tampa",
+          "sessions": 1998,
+          "ecommercePurchases": 40
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "Florida",
+          "city": "Jacksonville",
+          "sessions": 1632,
+          "ecommercePurchases": 32
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "North Carolina",
+          "city": "Charlotte",
+          "sessions": 1577,
+          "ecommercePurchases": 31
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "Tennessee",
+          "city": "Nashville",
+          "sessions": 1211,
+          "ecommercePurchases": 22
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "Alabama",
+          "city": "Birmingham",
+          "sessions": 1124,
+          "ecommercePurchases": 21
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "North Carolina",
+          "city": "Raleigh",
+          "sessions": 928,
+          "ecommercePurchases": 19
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "Florida",
+          "city": "St. Petersburg",
+          "sessions": 1050,
+          "ecommercePurchases": 19
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "Georgia",
+          "city": "Marietta",
+          "sessions": 841,
+          "ecommercePurchases": 17
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "South Carolina",
+          "city": "Greenville",
+          "sessions": 800,
+          "ecommercePurchases": 16
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "Georgia",
+          "city": "Alpharetta",
+          "sessions": 793,
+          "ecommercePurchases": 15
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "Georgia",
+          "city": "Decatur",
+          "sessions": 655,
+          "ecommercePurchases": 13
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "Florida",
+          "city": "Kissimmee",
+          "sessions": 581,
+          "ecommercePurchases": 12
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "Florida",
+          "city": "Clearwater",
+          "sessions": 510,
+          "ecommercePurchases": 10
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "South Carolina",
+          "city": "Columbia",
+          "sessions": 469,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "North Carolina",
+          "city": "Durham",
+          "sessions": 452,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "Tennessee",
+          "city": "Knoxville",
+          "sessions": 469,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "South Carolina",
+          "city": "Spartanburg",
+          "sessions": 433,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "(not set)",
+          "city": "(not set)",
+          "sessions": 400,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "North Carolina",
+          "city": "Concord",
+          "sessions": 353,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "Tennessee",
+          "city": "Franklin",
+          "sessions": 371,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "Alabama",
+          "city": "Hoover",
+          "sessions": 376,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "North Carolina",
+          "city": "Cary",
+          "sessions": 293,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "North Carolina",
+          "city": "Gastonia",
+          "sessions": 321,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "Tennessee",
+          "city": "Murfreesboro",
+          "sessions": 295,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202635",
+          "region": "Georgia",
+          "city": "Savannah",
+          "sessions": 306,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "Georgia",
+          "city": "Atlanta",
+          "sessions": 3481,
+          "ecommercePurchases": 63
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "Florida",
+          "city": "Orlando",
+          "sessions": 2815,
+          "ecommercePurchases": 54
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "Florida",
+          "city": "Tampa",
+          "sessions": 2613,
+          "ecommercePurchases": 47
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "North Carolina",
+          "city": "Charlotte",
+          "sessions": 1941,
+          "ecommercePurchases": 40
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "Florida",
+          "city": "Jacksonville",
+          "sessions": 2074,
+          "ecommercePurchases": 38
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "Alabama",
+          "city": "Birmingham",
+          "sessions": 1419,
+          "ecommercePurchases": 26
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "Tennessee",
+          "city": "Nashville",
+          "sessions": 1299,
+          "ecommercePurchases": 26
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "North Carolina",
+          "city": "Raleigh",
+          "sessions": 1307,
+          "ecommercePurchases": 24
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "Georgia",
+          "city": "Marietta",
+          "sessions": 1122,
+          "ecommercePurchases": 22
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "Florida",
+          "city": "St. Petersburg",
+          "sessions": 1205,
+          "ecommercePurchases": 22
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "South Carolina",
+          "city": "Greenville",
+          "sessions": 1015,
+          "ecommercePurchases": 20
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "Georgia",
+          "city": "Alpharetta",
+          "sessions": 1004,
+          "ecommercePurchases": 19
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "Georgia",
+          "city": "Decatur",
+          "sessions": 936,
+          "ecommercePurchases": 17
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "Florida",
+          "city": "Kissimmee",
+          "sessions": 729,
+          "ecommercePurchases": 15
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "Florida",
+          "city": "Clearwater",
+          "sessions": 609,
+          "ecommercePurchases": 12
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "North Carolina",
+          "city": "Durham",
+          "sessions": 654,
+          "ecommercePurchases": 12
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "South Carolina",
+          "city": "Columbia",
+          "sessions": 563,
+          "ecommercePurchases": 11
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "South Carolina",
+          "city": "Spartanburg",
+          "sessions": 534,
+          "ecommercePurchases": 11
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "North Carolina",
+          "city": "Concord",
+          "sessions": 486,
+          "ecommercePurchases": 10
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "Tennessee",
+          "city": "Franklin",
+          "sessions": 438,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "Alabama",
+          "city": "Hoover",
+          "sessions": 502,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "Tennessee",
+          "city": "Knoxville",
+          "sessions": 438,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "North Carolina",
+          "city": "Cary",
+          "sessions": 447,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "Georgia",
+          "city": "Savannah",
+          "sessions": 434,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "North Carolina",
+          "city": "Gastonia",
+          "sessions": 377,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "Tennessee",
+          "city": "Murfreesboro",
+          "sessions": 384,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202636",
+          "region": "(not set)",
+          "city": "(not set)",
+          "sessions": 250,
+          "ecommercePurchases": 5
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "Georgia",
+          "city": "Atlanta",
+          "sessions": 2876,
+          "ecommercePurchases": 52
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "Florida",
+          "city": "Orlando",
+          "sessions": 2389,
+          "ecommercePurchases": 43
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "Florida",
+          "city": "Tampa",
+          "sessions": 2138,
+          "ecommercePurchases": 40
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "North Carolina",
+          "city": "Charlotte",
+          "sessions": 1846,
+          "ecommercePurchases": 36
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "Florida",
+          "city": "Jacksonville",
+          "sessions": 1749,
+          "ecommercePurchases": 32
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "Tennessee",
+          "city": "Nashville",
+          "sessions": 1456,
+          "ecommercePurchases": 30
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "Alabama",
+          "city": "Birmingham",
+          "sessions": 1014,
+          "ecommercePurchases": 20
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "Florida",
+          "city": "St. Petersburg",
+          "sessions": 989,
+          "ecommercePurchases": 19
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "Georgia",
+          "city": "Marietta",
+          "sessions": 890,
+          "ecommercePurchases": 18
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "North Carolina",
+          "city": "Raleigh",
+          "sessions": 1001,
+          "ecommercePurchases": 18
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "Georgia",
+          "city": "Alpharetta",
+          "sessions": 801,
+          "ecommercePurchases": 16
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "South Carolina",
+          "city": "Greenville",
+          "sessions": 822,
+          "ecommercePurchases": 16
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "Georgia",
+          "city": "Decatur",
+          "sessions": 735,
+          "ecommercePurchases": 14
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "Florida",
+          "city": "Kissimmee",
+          "sessions": 629,
+          "ecommercePurchases": 12
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "Florida",
+          "city": "Clearwater",
+          "sessions": 504,
+          "ecommercePurchases": 10
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "South Carolina",
+          "city": "Columbia",
+          "sessions": 522,
+          "ecommercePurchases": 10
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "Tennessee",
+          "city": "Franklin",
+          "sessions": 502,
+          "ecommercePurchases": 10
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "North Carolina",
+          "city": "Concord",
+          "sessions": 486,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "North Carolina",
+          "city": "Durham",
+          "sessions": 444,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "Tennessee",
+          "city": "Knoxville",
+          "sessions": 484,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "South Carolina",
+          "city": "Spartanburg",
+          "sessions": 460,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "(not set)",
+          "city": "(not set)",
+          "sessions": 400,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "Tennessee",
+          "city": "Murfreesboro",
+          "sessions": 436,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "North Carolina",
+          "city": "Gastonia",
+          "sessions": 386,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "Alabama",
+          "city": "Hoover",
+          "sessions": 344,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "Georgia",
+          "city": "Savannah",
+          "sessions": 369,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202637",
+          "region": "North Carolina",
+          "city": "Cary",
+          "sessions": 302,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "Georgia",
+          "city": "Atlanta",
+          "sessions": 2232,
+          "ecommercePurchases": 45
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "Florida",
+          "city": "Orlando",
+          "sessions": 2160,
+          "ecommercePurchases": 40
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "Florida",
+          "city": "Tampa",
+          "sessions": 1893,
+          "ecommercePurchases": 34
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "North Carolina",
+          "city": "Charlotte",
+          "sessions": 1506,
+          "ecommercePurchases": 29
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "Florida",
+          "city": "Jacksonville",
+          "sessions": 1426,
+          "ecommercePurchases": 28
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "Tennessee",
+          "city": "Nashville",
+          "sessions": 1157,
+          "ecommercePurchases": 23
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "Alabama",
+          "city": "Birmingham",
+          "sessions": 884,
+          "ecommercePurchases": 18
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "North Carolina",
+          "city": "Raleigh",
+          "sessions": 931,
+          "ecommercePurchases": 18
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "Georgia",
+          "city": "Marietta",
+          "sessions": 784,
+          "ecommercePurchases": 16
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "Florida",
+          "city": "St. Petersburg",
+          "sessions": 859,
+          "ecommercePurchases": 16
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "Georgia",
+          "city": "Alpharetta",
+          "sessions": 750,
+          "ecommercePurchases": 14
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "South Carolina",
+          "city": "Greenville",
+          "sessions": 689,
+          "ecommercePurchases": 14
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "Georgia",
+          "city": "Decatur",
+          "sessions": 585,
+          "ecommercePurchases": 12
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "Florida",
+          "city": "Kissimmee",
+          "sessions": 576,
+          "ecommercePurchases": 11
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "Florida",
+          "city": "Clearwater",
+          "sessions": 438,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "North Carolina",
+          "city": "Durham",
+          "sessions": 469,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "Tennessee",
+          "city": "Franklin",
+          "sessions": 386,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "South Carolina",
+          "city": "Spartanburg",
+          "sessions": 396,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "South Carolina",
+          "city": "Columbia",
+          "sessions": 351,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "North Carolina",
+          "city": "Concord",
+          "sessions": 391,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "Tennessee",
+          "city": "Knoxville",
+          "sessions": 348,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "North Carolina",
+          "city": "Cary",
+          "sessions": 314,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "Alabama",
+          "city": "Hoover",
+          "sessions": 304,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "Tennessee",
+          "city": "Murfreesboro",
+          "sessions": 317,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "Georgia",
+          "city": "Savannah",
+          "sessions": 305,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "(not set)",
+          "city": "(not set)",
+          "sessions": 250,
+          "ecommercePurchases": 5
+        },
+        {
+          "isoYearIsoWeek": "202638",
+          "region": "North Carolina",
+          "city": "Gastonia",
+          "sessions": 276,
+          "ecommercePurchases": 5
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "Georgia",
+          "city": "Atlanta",
+          "sessions": 2270,
+          "ecommercePurchases": 41
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "Florida",
+          "city": "Orlando",
+          "sessions": 1757,
+          "ecommercePurchases": 35
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "Florida",
+          "city": "Tampa",
+          "sessions": 1548,
+          "ecommercePurchases": 31
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "North Carolina",
+          "city": "Charlotte",
+          "sessions": 1627,
+          "ecommercePurchases": 30
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "Florida",
+          "city": "Jacksonville",
+          "sessions": 1384,
+          "ecommercePurchases": 26
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "Tennessee",
+          "city": "Nashville",
+          "sessions": 1017,
+          "ecommercePurchases": 20
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "Alabama",
+          "city": "Birmingham",
+          "sessions": 890,
+          "ecommercePurchases": 18
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "North Carolina",
+          "city": "Raleigh",
+          "sessions": 822,
+          "ecommercePurchases": 16
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "South Carolina",
+          "city": "Greenville",
+          "sessions": 676,
+          "ecommercePurchases": 14
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "Georgia",
+          "city": "Marietta",
+          "sessions": 716,
+          "ecommercePurchases": 14
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "Florida",
+          "city": "St. Petersburg",
+          "sessions": 691,
+          "ecommercePurchases": 14
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "Georgia",
+          "city": "Alpharetta",
+          "sessions": 685,
+          "ecommercePurchases": 13
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "Georgia",
+          "city": "Decatur",
+          "sessions": 607,
+          "ecommercePurchases": 11
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "Florida",
+          "city": "Kissimmee",
+          "sessions": 515,
+          "ecommercePurchases": 10
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "Florida",
+          "city": "Clearwater",
+          "sessions": 442,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "North Carolina",
+          "city": "Durham",
+          "sessions": 412,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "South Carolina",
+          "city": "Spartanburg",
+          "sessions": 385,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "South Carolina",
+          "city": "Columbia",
+          "sessions": 379,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "North Carolina",
+          "city": "Concord",
+          "sessions": 389,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "Tennessee",
+          "city": "Franklin",
+          "sessions": 375,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "North Carolina",
+          "city": "Gastonia",
+          "sessions": 300,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "Alabama",
+          "city": "Hoover",
+          "sessions": 302,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "Tennessee",
+          "city": "Murfreesboro",
+          "sessions": 295,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "(not set)",
+          "city": "(not set)",
+          "sessions": 250,
+          "ecommercePurchases": 5
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "North Carolina",
+          "city": "Cary",
+          "sessions": 272,
+          "ecommercePurchases": 5
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "Tennessee",
+          "city": "Knoxville",
+          "sessions": 268,
+          "ecommercePurchases": 5
+        },
+        {
+          "isoYearIsoWeek": "202639",
+          "region": "Georgia",
+          "city": "Savannah",
+          "sessions": 204,
+          "ecommercePurchases": 4
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "Georgia",
+          "city": "Atlanta",
+          "sessions": 2294,
+          "ecommercePurchases": 46
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "Florida",
+          "city": "Orlando",
+          "sessions": 1873,
+          "ecommercePurchases": 38
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "Florida",
+          "city": "Tampa",
+          "sessions": 1903,
+          "ecommercePurchases": 35
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "North Carolina",
+          "city": "Charlotte",
+          "sessions": 1545,
+          "ecommercePurchases": 32
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "Tennessee",
+          "city": "Nashville",
+          "sessions": 1659,
+          "ecommercePurchases": 31
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "Florida",
+          "city": "Jacksonville",
+          "sessions": 1457,
+          "ecommercePurchases": 29
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "Alabama",
+          "city": "Birmingham",
+          "sessions": 940,
+          "ecommercePurchases": 19
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "North Carolina",
+          "city": "Raleigh",
+          "sessions": 890,
+          "ecommercePurchases": 17
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "Georgia",
+          "city": "Marietta",
+          "sessions": 778,
+          "ecommercePurchases": 16
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "Florida",
+          "city": "St. Petersburg",
+          "sessions": 859,
+          "ecommercePurchases": 16
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "South Carolina",
+          "city": "Greenville",
+          "sessions": 732,
+          "ecommercePurchases": 15
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "Georgia",
+          "city": "Alpharetta",
+          "sessions": 754,
+          "ecommercePurchases": 14
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "Georgia",
+          "city": "Decatur",
+          "sessions": 665,
+          "ecommercePurchases": 12
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "Florida",
+          "city": "Kissimmee",
+          "sessions": 573,
+          "ecommercePurchases": 11
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "Tennessee",
+          "city": "Franklin",
+          "sessions": 556,
+          "ecommercePurchases": 10
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "Florida",
+          "city": "Clearwater",
+          "sessions": 470,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "South Carolina",
+          "city": "Columbia",
+          "sessions": 446,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "North Carolina",
+          "city": "Concord",
+          "sessions": 404,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "North Carolina",
+          "city": "Durham",
+          "sessions": 439,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "Tennessee",
+          "city": "Knoxville",
+          "sessions": 418,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "Tennessee",
+          "city": "Murfreesboro",
+          "sessions": 422,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "South Carolina",
+          "city": "Spartanburg",
+          "sessions": 429,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "Alabama",
+          "city": "Hoover",
+          "sessions": 376,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "(not set)",
+          "city": "(not set)",
+          "sessions": 300,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "North Carolina",
+          "city": "Gastonia",
+          "sessions": 335,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "North Carolina",
+          "city": "Cary",
+          "sessions": 246,
+          "ecommercePurchases": 5
+        },
+        {
+          "isoYearIsoWeek": "202640",
+          "region": "Georgia",
+          "city": "Savannah",
+          "sessions": 255,
+          "ecommercePurchases": 5
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "Georgia",
+          "city": "Atlanta",
+          "sessions": 2783,
+          "ecommercePurchases": 57
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "Florida",
+          "city": "Orlando",
+          "sessions": 2395,
+          "ecommercePurchases": 43
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "Florida",
+          "city": "Tampa",
+          "sessions": 1954,
+          "ecommercePurchases": 40
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "North Carolina",
+          "city": "Charlotte",
+          "sessions": 2115,
+          "ecommercePurchases": 38
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "Florida",
+          "city": "Jacksonville",
+          "sessions": 1760,
+          "ecommercePurchases": 32
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "Tennessee",
+          "city": "Nashville",
+          "sessions": 1284,
+          "ecommercePurchases": 23
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "Alabama",
+          "city": "Birmingham",
+          "sessions": 1078,
+          "ecommercePurchases": 22
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "Georgia",
+          "city": "Marietta",
+          "sessions": 1029,
+          "ecommercePurchases": 20
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "North Carolina",
+          "city": "Raleigh",
+          "sessions": 866,
+          "ecommercePurchases": 18
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "Florida",
+          "city": "St. Petersburg",
+          "sessions": 985,
+          "ecommercePurchases": 18
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "Georgia",
+          "city": "Alpharetta",
+          "sessions": 852,
+          "ecommercePurchases": 17
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "South Carolina",
+          "city": "Greenville",
+          "sessions": 846,
+          "ecommercePurchases": 16
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "Georgia",
+          "city": "Decatur",
+          "sessions": 746,
+          "ecommercePurchases": 15
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "Florida",
+          "city": "Kissimmee",
+          "sessions": 597,
+          "ecommercePurchases": 12
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "Tennessee",
+          "city": "Knoxville",
+          "sessions": 559,
+          "ecommercePurchases": 11
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "Florida",
+          "city": "Clearwater",
+          "sessions": 546,
+          "ecommercePurchases": 10
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "South Carolina",
+          "city": "Columbia",
+          "sessions": 472,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "North Carolina",
+          "city": "Concord",
+          "sessions": 499,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "North Carolina",
+          "city": "Durham",
+          "sessions": 458,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "South Carolina",
+          "city": "Spartanburg",
+          "sessions": 443,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "Tennessee",
+          "city": "Franklin",
+          "sessions": 429,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "Alabama",
+          "city": "Hoover",
+          "sessions": 406,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "North Carolina",
+          "city": "Gastonia",
+          "sessions": 343,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "Georgia",
+          "city": "Savannah",
+          "sessions": 363,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "(not set)",
+          "city": "(not set)",
+          "sessions": 300,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "North Carolina",
+          "city": "Cary",
+          "sessions": 324,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202641",
+          "region": "Tennessee",
+          "city": "Murfreesboro",
+          "sessions": 328,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "Georgia",
+          "city": "Atlanta",
+          "sessions": 3030,
+          "ecommercePurchases": 60
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "Florida",
+          "city": "Orlando",
+          "sessions": 2389,
+          "ecommercePurchases": 47
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "North Carolina",
+          "city": "Charlotte",
+          "sessions": 1975,
+          "ecommercePurchases": 40
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "Florida",
+          "city": "Tampa",
+          "sessions": 2082,
+          "ecommercePurchases": 40
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "Florida",
+          "city": "Jacksonville",
+          "sessions": 1816,
+          "ecommercePurchases": 35
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "Alabama",
+          "city": "Birmingham",
+          "sessions": 1308,
+          "ecommercePurchases": 25
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "Tennessee",
+          "city": "Nashville",
+          "sessions": 1058,
+          "ecommercePurchases": 22
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "Georgia",
+          "city": "Marietta",
+          "sessions": 1150,
+          "ecommercePurchases": 21
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "North Carolina",
+          "city": "Raleigh",
+          "sessions": 969,
+          "ecommercePurchases": 20
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "South Carolina",
+          "city": "Greenville",
+          "sessions": 998,
+          "ecommercePurchases": 19
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "Florida",
+          "city": "St. Petersburg",
+          "sessions": 1030,
+          "ecommercePurchases": 19
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "Georgia",
+          "city": "Alpharetta",
+          "sessions": 949,
+          "ecommercePurchases": 18
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "Georgia",
+          "city": "Decatur",
+          "sessions": 800,
+          "ecommercePurchases": 16
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "South Carolina",
+          "city": "Columbia",
+          "sessions": 752,
+          "ecommercePurchases": 14
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "Florida",
+          "city": "Kissimmee",
+          "sessions": 627,
+          "ecommercePurchases": 13
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "South Carolina",
+          "city": "Spartanburg",
+          "sessions": 551,
+          "ecommercePurchases": 11
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "Florida",
+          "city": "Clearwater",
+          "sessions": 545,
+          "ecommercePurchases": 10
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "North Carolina",
+          "city": "Concord",
+          "sessions": 483,
+          "ecommercePurchases": 10
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "North Carolina",
+          "city": "Durham",
+          "sessions": 553,
+          "ecommercePurchases": 10
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "Georgia",
+          "city": "Savannah",
+          "sessions": 548,
+          "ecommercePurchases": 10
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "Alabama",
+          "city": "Hoover",
+          "sessions": 500,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "Tennessee",
+          "city": "Franklin",
+          "sessions": 388,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "Tennessee",
+          "city": "Knoxville",
+          "sessions": 419,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "North Carolina",
+          "city": "Cary",
+          "sessions": 372,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "North Carolina",
+          "city": "Gastonia",
+          "sessions": 338,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "(not set)",
+          "city": "(not set)",
+          "sessions": 300,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202642",
+          "region": "Tennessee",
+          "city": "Murfreesboro",
+          "sessions": 294,
+          "ecommercePurchases": 6
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "Georgia",
+          "city": "Atlanta",
+          "sessions": 2728,
+          "ecommercePurchases": 55
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "Florida",
+          "city": "Orlando",
+          "sessions": 2147,
+          "ecommercePurchases": 42
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "Florida",
+          "city": "Tampa",
+          "sessions": 2284,
+          "ecommercePurchases": 42
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "North Carolina",
+          "city": "Charlotte",
+          "sessions": 1988,
+          "ecommercePurchases": 38
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "Florida",
+          "city": "Jacksonville",
+          "sessions": 1670,
+          "ecommercePurchases": 34
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "Tennessee",
+          "city": "Nashville",
+          "sessions": 1451,
+          "ecommercePurchases": 30
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "Alabama",
+          "city": "Birmingham",
+          "sessions": 1126,
+          "ecommercePurchases": 21
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "North Carolina",
+          "city": "Raleigh",
+          "sessions": 1082,
+          "ecommercePurchases": 21
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "Florida",
+          "city": "St. Petersburg",
+          "sessions": 1084,
+          "ecommercePurchases": 20
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "Georgia",
+          "city": "Marietta",
+          "sessions": 993,
+          "ecommercePurchases": 19
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "South Carolina",
+          "city": "Greenville",
+          "sessions": 938,
+          "ecommercePurchases": 18
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "Georgia",
+          "city": "Alpharetta",
+          "sessions": 852,
+          "ecommercePurchases": 17
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "Georgia",
+          "city": "Decatur",
+          "sessions": 832,
+          "ecommercePurchases": 15
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "Florida",
+          "city": "Kissimmee",
+          "sessions": 668,
+          "ecommercePurchases": 12
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "Tennessee",
+          "city": "Knoxville",
+          "sessions": 616,
+          "ecommercePurchases": 12
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "Florida",
+          "city": "Clearwater",
+          "sessions": 570,
+          "ecommercePurchases": 11
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "South Carolina",
+          "city": "Columbia",
+          "sessions": 559,
+          "ecommercePurchases": 11
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "North Carolina",
+          "city": "Durham",
+          "sessions": 541,
+          "ecommercePurchases": 10
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "Tennessee",
+          "city": "Franklin",
+          "sessions": 483,
+          "ecommercePurchases": 10
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "South Carolina",
+          "city": "Spartanburg",
+          "sessions": 527,
+          "ecommercePurchases": 10
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "North Carolina",
+          "city": "Concord",
+          "sessions": 453,
+          "ecommercePurchases": 9
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "Tennessee",
+          "city": "Murfreesboro",
+          "sessions": 403,
+          "ecommercePurchases": 8
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "North Carolina",
+          "city": "Cary",
+          "sessions": 374,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "North Carolina",
+          "city": "Gastonia",
+          "sessions": 341,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "Alabama",
+          "city": "Hoover",
+          "sessions": 360,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "Georgia",
+          "city": "Savannah",
+          "sessions": 357,
+          "ecommercePurchases": 7
+        },
+        {
+          "isoYearIsoWeek": "202643",
+          "region": "(not set)",
+          "city": "(not set)",
+          "sessions": 250,
+          "ecommercePurchases": 5
+        }
+      ]
+    },
+    "google-search-console": {
+      "site_url": "https://www.examplesofa.example/",
+      "country_call": {
+        "action": "search_analytics",
+        "dimensions": [
+          "country"
+        ],
+        "start_date": "2026-07-27",
+        "end_date": "2026-10-25"
+      },
+      "country_rows": [
+        {
+          "country": "USA",
+          "clicks": 18420,
+          "impressions": 402300
+        },
+        {
+          "country": "CAN",
+          "clicks": 410,
+          "impressions": 11900
+        },
+        {
+          "country": "GBR",
+          "clicks": 160,
+          "impressions": 6200
+        },
+        {
+          "country": "IND",
+          "clicks": 95,
+          "impressions": 4100
+        }
+      ],
+      "brand_call": {
+        "action": "search_analytics",
+        "dimensions": [
+          "date",
+          "query"
+        ],
+        "filter": "query contains \"example sofa\"",
+        "summed_to": "weeks starting Monday"
+      },
+      "brand_weekly": [
+        {
+          "week_start": "2026-07-27",
+          "brand_clicks": 2031
+        },
+        {
+          "week_start": "2026-08-03",
+          "brand_clicks": 2053
+        },
+        {
+          "week_start": "2026-08-10",
+          "brand_clicks": 1923
+        },
+        {
+          "week_start": "2026-08-17",
+          "brand_clicks": 2087
+        },
+        {
+          "week_start": "2026-08-24",
+          "brand_clicks": 2267
+        },
+        {
+          "week_start": "2026-08-31",
+          "brand_clicks": 2750
+        },
+        {
+          "week_start": "2026-09-07",
+          "brand_clicks": 2477
+        },
+        {
+          "week_start": "2026-09-14",
+          "brand_clicks": 2020
+        },
+        {
+          "week_start": "2026-09-21",
+          "brand_clicks": 1832
+        },
+        {
+          "week_start": "2026-09-28",
+          "brand_clicks": 2039
+        },
+        {
+          "week_start": "2026-10-05",
+          "brand_clicks": 2151
+        },
+        {
+          "week_start": "2026-10-12",
+          "brand_clicks": 2501
+        },
+        {
+          "week_start": "2026-10-19",
+          "brand_clicks": 2413
+        }
+      ]
+    },
+    "google-my-business": {
+      "call": {
+        "action": "get_multi_daily_metrics",
+        "dailyMetrics": [
+          "BUSINESS_DIRECTION_REQUESTS",
+          "CALL_CLICKS"
+        ],
+        "summed_to": "weeks starting Monday; a day with no value counts as 0"
+      },
+      "locations": {
+        "Atlanta": {
+          "location": "Example Sofa Co. Atlanta showroom",
+          "weekly": [
+            {
+              "week_start": "2026-07-27",
+              "BUSINESS_DIRECTION_REQUESTS": 102,
+              "CALL_CLICKS": 45
+            },
+            {
+              "week_start": "2026-08-03",
+              "BUSINESS_DIRECTION_REQUESTS": 111,
+              "CALL_CLICKS": 50
+            },
+            {
+              "week_start": "2026-08-10",
+              "BUSINESS_DIRECTION_REQUESTS": 98,
+              "CALL_CLICKS": 49
+            },
+            {
+              "week_start": "2026-08-17",
+              "BUSINESS_DIRECTION_REQUESTS": 109,
+              "CALL_CLICKS": 44
+            },
+            {
+              "week_start": "2026-08-24",
+              "BUSINESS_DIRECTION_REQUESTS": 128,
+              "CALL_CLICKS": 56
+            },
+            {
+              "week_start": "2026-08-31",
+              "BUSINESS_DIRECTION_REQUESTS": 139,
+              "CALL_CLICKS": 65
+            },
+            {
+              "week_start": "2026-09-07",
+              "BUSINESS_DIRECTION_REQUESTS": 126,
+              "CALL_CLICKS": 50
+            },
+            {
+              "week_start": "2026-09-14",
+              "BUSINESS_DIRECTION_REQUESTS": 97,
+              "CALL_CLICKS": 49
+            },
+            {
+              "week_start": "2026-09-21",
+              "BUSINESS_DIRECTION_REQUESTS": 102,
+              "CALL_CLICKS": 38
+            },
+            {
+              "week_start": "2026-09-28",
+              "BUSINESS_DIRECTION_REQUESTS": 117,
+              "CALL_CLICKS": 51
+            },
+            {
+              "week_start": "2026-10-05",
+              "BUSINESS_DIRECTION_REQUESTS": 131,
+              "CALL_CLICKS": 54
+            },
+            {
+              "week_start": "2026-10-12",
+              "BUSINESS_DIRECTION_REQUESTS": 144,
+              "CALL_CLICKS": 63
+            },
+            {
+              "week_start": "2026-10-19",
+              "BUSINESS_DIRECTION_REQUESTS": 127,
+              "CALL_CLICKS": 55
+            }
+          ]
+        },
+        "Charlotte": {
+          "location": "Example Sofa Co. Charlotte showroom",
+          "weekly": [
+            {
+              "week_start": "2026-07-27",
+              "BUSINESS_DIRECTION_REQUESTS": 59,
+              "CALL_CLICKS": 24
+            },
+            {
+              "week_start": "2026-08-03",
+              "BUSINESS_DIRECTION_REQUESTS": 64,
+              "CALL_CLICKS": 29
+            },
+            {
+              "week_start": "2026-08-10",
+              "BUSINESS_DIRECTION_REQUESTS": 57,
+              "CALL_CLICKS": 24
+            },
+            {
+              "week_start": "2026-08-17",
+              "BUSINESS_DIRECTION_REQUESTS": 63,
+              "CALL_CLICKS": 28
+            },
+            {
+              "week_start": "2026-08-24",
+              "BUSINESS_DIRECTION_REQUESTS": 60,
+              "CALL_CLICKS": 33
+            },
+            {
+              "week_start": "2026-08-31",
+              "BUSINESS_DIRECTION_REQUESTS": 80,
+              "CALL_CLICKS": 36
+            },
+            {
+              "week_start": "2026-09-07",
+              "BUSINESS_DIRECTION_REQUESTS": 65,
+              "CALL_CLICKS": 27
+            },
+            {
+              "week_start": "2026-09-14",
+              "BUSINESS_DIRECTION_REQUESTS": 64,
+              "CALL_CLICKS": 23
+            },
+            {
+              "week_start": "2026-09-21",
+              "BUSINESS_DIRECTION_REQUESTS": 56,
+              "CALL_CLICKS": 24
+            },
+            {
+              "week_start": "2026-09-28",
+              "BUSINESS_DIRECTION_REQUESTS": 59,
+              "CALL_CLICKS": 26
+            },
+            {
+              "week_start": "2026-10-05",
+              "BUSINESS_DIRECTION_REQUESTS": 65,
+              "CALL_CLICKS": 28
+            },
+            {
+              "week_start": "2026-10-12",
+              "BUSINESS_DIRECTION_REQUESTS": 73,
+              "CALL_CLICKS": 31
+            },
+            {
+              "week_start": "2026-10-19",
+              "BUSINESS_DIRECTION_REQUESTS": 72,
+              "CALL_CLICKS": 33
+            }
+          ]
+        },
+        "Nashville": {
+          "location": "Example Sofa Co. Nashville showroom",
+          "weekly": [
+            {
+              "week_start": "2026-07-27",
+              "BUSINESS_DIRECTION_REQUESTS": 48,
+              "CALL_CLICKS": 22
+            },
+            {
+              "week_start": "2026-08-03",
+              "BUSINESS_DIRECTION_REQUESTS": 53,
+              "CALL_CLICKS": 22
+            },
+            {
+              "week_start": "2026-08-10",
+              "BUSINESS_DIRECTION_REQUESTS": 72,
+              "CALL_CLICKS": 32
+            },
+            {
+              "week_start": "2026-08-17",
+              "BUSINESS_DIRECTION_REQUESTS": 73,
+              "CALL_CLICKS": 32
+            },
+            {
+              "week_start": "2026-08-24",
+              "BUSINESS_DIRECTION_REQUESTS": 55,
+              "CALL_CLICKS": 19
+            },
+            {
+              "week_start": "2026-08-31",
+              "BUSINESS_DIRECTION_REQUESTS": 64,
+              "CALL_CLICKS": 23
+            },
+            {
+              "week_start": "2026-09-07",
+              "BUSINESS_DIRECTION_REQUESTS": 80,
+              "CALL_CLICKS": 27
+            },
+            {
+              "week_start": "2026-09-14",
+              "BUSINESS_DIRECTION_REQUESTS": 56,
+              "CALL_CLICKS": 24
+            },
+            {
+              "week_start": "2026-09-21",
+              "BUSINESS_DIRECTION_REQUESTS": 45,
+              "CALL_CLICKS": 22
+            },
+            {
+              "week_start": "2026-09-28",
+              "BUSINESS_DIRECTION_REQUESTS": 73,
+              "CALL_CLICKS": 27
+            },
+            {
+              "week_start": "2026-10-05",
+              "BUSINESS_DIRECTION_REQUESTS": 52,
+              "CALL_CLICKS": 24
+            },
+            {
+              "week_start": "2026-10-12",
+              "BUSINESS_DIRECTION_REQUESTS": 55,
+              "CALL_CLICKS": 23
+            },
+            {
+              "week_start": "2026-10-19",
+              "BUSINESS_DIRECTION_REQUESTS": 71,
+              "CALL_CLICKS": 29
+            }
+          ]
+        }
+      }
+    }
+  },
+  "pasted": {
+    "market_population_18plus": {
+      "Atlanta": 5040000,
+      "Charlotte": 2310000,
+      "Nashville": 1890000,
+      "Raleigh-Durham": 1820000
+    },
+    "media_owner_quotes": [
+      {
+        "market": "Atlanta",
+        "media_owner": "Media owner A",
+        "unit": "ATL-B-114",
+        "format": "bulletin 14x48 ft",
+        "placement_type": "roadside",
+        "weekly_impressions_18plus": 412000,
+        "audited": true,
+        "media_cost_4_weeks": 6900,
+        "production_and_install": 1100
+      },
+      {
+        "market": "Atlanta",
+        "media_owner": "Media owner A",
+        "unit": "ATL-B-207",
+        "format": "bulletin 14x48 ft",
+        "placement_type": "roadside",
+        "weekly_impressions_18plus": 355000,
+        "audited": true,
+        "media_cost_4_weeks": 6300,
+        "production_and_install": 1100
+      },
+      {
+        "market": "Atlanta",
+        "media_owner": "Media owner B",
+        "unit": "ATL-D-031",
+        "format": "digital bulletin 10.5x36 ft",
+        "placement_type": "roadside",
+        "weekly_impressions_18plus": 298000,
+        "audited": true,
+        "media_cost_4_weeks": 4400,
+        "production_and_install": 0,
+        "spot_seconds": 8,
+        "loop_seconds": 64
+      },
+      {
+        "market": "Atlanta",
+        "media_owner": "Media owner B",
+        "unit": "ATL-D-044",
+        "format": "digital bulletin 10.5x36 ft",
+        "placement_type": "roadside",
+        "weekly_impressions_18plus": 276000,
+        "audited": true,
+        "media_cost_4_weeks": 4300,
+        "production_and_install": 0,
+        "spot_seconds": 8,
+        "loop_seconds": 64
+      },
+      {
+        "market": "Atlanta",
+        "media_owner": "Media owner A",
+        "unit": "ATL-P-560",
+        "format": "poster 10.5x22 ft",
+        "placement_type": "roadside",
+        "weekly_impressions_18plus": 118000,
+        "audited": true,
+        "media_cost_4_weeks": 2900,
+        "production_and_install": 300
+      },
+      {
+        "market": "Atlanta",
+        "media_owner": "Media owner C",
+        "unit": "ATL-T-12",
+        "format": "rail platform digital network (12 screens)",
+        "placement_type": "transit",
+        "weekly_impressions_18plus": 205000,
+        "audited": true,
+        "media_cost_4_weeks": 3500,
+        "production_and_install": 0,
+        "spot_seconds": 10,
+        "loop_seconds": 60
+      },
+      {
+        "market": "Atlanta",
+        "media_owner": "Media owner D",
+        "unit": "ATL-M-01",
+        "format": "mall screen network",
+        "placement_type": "street",
+        "weekly_impressions_18plus": 240000,
+        "audited": false,
+        "media_cost_4_weeks": 3800,
+        "production_and_install": 0,
+        "spot_seconds": 15,
+        "loop_seconds": 90
+      },
+      {
+        "market": "Charlotte",
+        "media_owner": "Media owner A",
+        "unit": "CLT-B-021",
+        "format": "bulletin 14x48 ft",
+        "placement_type": "roadside",
+        "weekly_impressions_18plus": 236000,
+        "audited": true,
+        "media_cost_4_weeks": 4600,
+        "production_and_install": 1100
+      },
+      {
+        "market": "Charlotte",
+        "media_owner": "Media owner B",
+        "unit": "CLT-D-009",
+        "format": "digital bulletin 10.5x36 ft",
+        "placement_type": "roadside",
+        "weekly_impressions_18plus": 214000,
+        "audited": true,
+        "media_cost_4_weeks": 3500,
+        "production_and_install": 0,
+        "spot_seconds": 8,
+        "loop_seconds": 64
+      },
+      {
+        "market": "Charlotte",
+        "media_owner": "Media owner A",
+        "unit": "CLT-P-118",
+        "format": "poster 10.5x22 ft",
+        "placement_type": "roadside",
+        "weekly_impressions_18plus": 96000,
+        "audited": true,
+        "media_cost_4_weeks": 2200,
+        "production_and_install": 300
+      },
+      {
+        "market": "Charlotte",
+        "media_owner": "Media owner C",
+        "unit": "CLT-S-40",
+        "format": "bus shelter package (20 faces)",
+        "placement_type": "street",
+        "weekly_impressions_18plus": 150000,
+        "audited": true,
+        "media_cost_4_weeks": 3300,
+        "production_and_install": 1500
+      },
+      {
+        "market": "Nashville",
+        "media_owner": "Media owner A",
+        "unit": "BNA-B-033",
+        "format": "bulletin 14x48 ft",
+        "placement_type": "roadside",
+        "weekly_impressions_18plus": 248000,
+        "audited": true,
+        "media_cost_4_weeks": 4400,
+        "production_and_install": 1100
+      },
+      {
+        "market": "Nashville",
+        "media_owner": "Media owner B",
+        "unit": "BNA-D-015",
+        "format": "digital bulletin 10.5x36 ft",
+        "placement_type": "roadside",
+        "weekly_impressions_18plus": 205000,
+        "audited": true,
+        "media_cost_4_weeks": 3300,
+        "production_and_install": 0,
+        "spot_seconds": 8,
+        "loop_seconds": 64
+      },
+      {
+        "market": "Nashville",
+        "media_owner": "Media owner A",
+        "unit": "BNA-P-090",
+        "format": "poster 10.5x22 ft",
+        "placement_type": "roadside",
+        "weekly_impressions_18plus": 101000,
+        "audited": true,
+        "media_cost_4_weeks": 2100,
+        "production_and_install": 300
+      },
+      {
+        "market": "Raleigh-Durham",
+        "media_owner": "Media owner A",
+        "unit": "RDU-B-012",
+        "format": "bulletin 14x48 ft",
+        "placement_type": "roadside",
+        "weekly_impressions_18plus": 228000,
+        "audited": true,
+        "media_cost_4_weeks": 4200,
+        "production_and_install": 1100
+      },
+      {
+        "market": "Raleigh-Durham",
+        "media_owner": "Media owner B",
+        "unit": "RDU-D-006",
+        "format": "digital bulletin 10.5x36 ft",
+        "placement_type": "roadside",
+        "weekly_impressions_18plus": 196000,
+        "audited": true,
+        "media_cost_4_weeks": 3200,
+        "production_and_install": 0,
+        "spot_seconds": 8,
+        "loop_seconds": 64
+      },
+      {
+        "market": "Raleigh-Durham",
+        "media_owner": "Media owner A",
+        "unit": "RDU-P-044",
+        "format": "poster 10.5x22 ft",
+        "placement_type": "roadside",
+        "weekly_impressions_18plus": 92000,
+        "audited": true,
+        "media_cost_4_weeks": 1900,
+        "production_and_install": 300
+      }
+    ],
+    "dsp_forecast": {
+      "note": "forecast CPM for roadside and urban screens, geofenced to each market, Mon to Sun 6am to 10pm",
+      "cpm_by_market": {
+        "Atlanta": 11.5,
+        "Charlotte": 10.8,
+        "Nashville": 10.6,
+        "Raleigh-Durham": 10.4
+      }
+    },
+    "creative_drafts": [
+      {
+        "id": "D1",
+        "placement": "bulletin 14x48 ft",
+        "type": "roadside",
+        "digital": false,
+        "copy": "Example Sofa Co. Presidents' Day Sale: 30% off every sofa this week only. examplesofa.example",
+        "text_hex": "#FFFFFF",
+        "background_hex": "#1F3B5A",
+        "face_height_in": 168,
+        "main_line_cap_height_in": 14,
+        "qr_code": false
+      },
+      {
+        "id": "D2",
+        "placement": "digital bulletin 10.5x36 ft, 8-second spot",
+        "type": "roadside",
+        "digital": true,
+        "spot_seconds": 8,
+        "frames": 1,
+        "motion": false,
+        "copy": "Example Sofa Co. 30% off. Presidents' Day.",
+        "text_hex": "#FFD400",
+        "background_hex": "#111111",
+        "face_height_in": 126,
+        "main_line_cap_height_in": 16,
+        "qr_code": false
+      },
+      {
+        "id": "D3",
+        "placement": "rail platform digital screen, 10-second spot",
+        "type": "transit",
+        "digital": true,
+        "spot_seconds": 10,
+        "frames": 1,
+        "motion": false,
+        "copy": "Example Sofa Co. Presidents' Day Sale. 30% off every sofa, free delivery on orders over $999. Scan to see your size.",
+        "text_hex": "#8A8A8A",
+        "background_hex": "#FFFFFF",
+        "face_height_in": 72,
+        "main_line_cap_height_in": 5,
+        "qr_code": true
+      }
+    ]
+  }
+}

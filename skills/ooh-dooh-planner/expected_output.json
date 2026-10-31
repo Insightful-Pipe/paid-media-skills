@@ -1,0 +1,887 @@
+{
+  "title": "Out-of-home plan: Example Sofa Co. Presidents' Day 2027",
+  "header": {
+    "business": "Example Sofa Co.",
+    "budget_all_in": 60000,
+    "flight": "2027-01-25 to 2027-02-21 (4 weeks)",
+    "target_weekly_grps": 30,
+    "profit_per_purchase": 420
+  },
+  "data_window": {
+    "weeks": "2026-07-27 to 2026-10-25 (13 complete weeks)",
+    "sources": [
+      "GA4 get_report by week, region and city",
+      "Search Console search_analytics by country and brand query",
+      "Business Profile get_multi_daily_metrics per showroom",
+      "pasted media owner quotes, DSP forecast and drafts"
+    ]
+  },
+  "step_1_markets": {
+    "purchases_13_weeks": 5825,
+    "city_not_set": 78,
+    "city_not_set_pct": 1.3,
+    "located_purchases": 5747,
+    "eligibility_rule": "at least 3% of located purchases and at least 5 a week",
+    "search_console_us_click_share_pct": 96.5,
+    "search_console_note": "Search Console splits by country only, so it confirms the demand is US but cannot rank cities",
+    "markets": [
+      {
+        "market": "Atlanta",
+        "cities": [
+          "Atlanta",
+          "Marietta",
+          "Alpharetta",
+          "Decatur"
+        ],
+        "purchases_13_weeks": 1249,
+        "share_of_located_purchases_pct": 21.7,
+        "purchases_per_week": 96.1,
+        "sessions_13_weeks": 64687,
+        "eligible": true,
+        "showroom_direction_requests_13_weeks": 1531,
+        "showroom_call_clicks_13_weeks": 669
+      },
+      {
+        "market": "Tampa-St. Petersburg",
+        "cities": [
+          "Tampa",
+          "St. Petersburg",
+          "Clearwater"
+        ],
+        "purchases_13_weeks": 837,
+        "share_of_located_purchases_pct": 14.6,
+        "purchases_per_week": 64.4,
+        "sessions_13_weeks": 44199,
+        "eligible": true
+      },
+      {
+        "market": "Orlando",
+        "cities": [
+          "Orlando",
+          "Kissimmee"
+        ],
+        "purchases_13_weeks": 687,
+        "share_of_located_purchases_pct": 12.0,
+        "purchases_per_week": 52.8,
+        "sessions_13_weeks": 35904,
+        "eligible": true
+      },
+      {
+        "market": "Charlotte",
+        "cities": [
+          "Charlotte",
+          "Concord",
+          "Gastonia"
+        ],
+        "purchases_13_weeks": 623,
+        "share_of_located_purchases_pct": 10.8,
+        "purchases_per_week": 47.9,
+        "sessions_13_weeks": 32497,
+        "eligible": true,
+        "showroom_direction_requests_13_weeks": 837,
+        "showroom_call_clicks_13_weeks": 366
+      },
+      {
+        "market": "Nashville",
+        "cities": [
+          "Nashville",
+          "Franklin",
+          "Murfreesboro"
+        ],
+        "purchases_13_weeks": 534,
+        "share_of_located_purchases_pct": 9.3,
+        "purchases_per_week": 41.1,
+        "sessions_13_weeks": 27380,
+        "eligible": true,
+        "showroom_direction_requests_13_weeks": 797,
+        "showroom_call_clicks_13_weeks": 326
+      },
+      {
+        "market": "Raleigh-Durham",
+        "cities": [
+          "Raleigh",
+          "Durham",
+          "Cary"
+        ],
+        "purchases_13_weeks": 430,
+        "share_of_located_purchases_pct": 7.5,
+        "purchases_per_week": 33.1,
+        "sessions_13_weeks": 22490,
+        "eligible": true
+      },
+      {
+        "market": "Jacksonville",
+        "cities": [
+          "Jacksonville"
+        ],
+        "purchases_13_weeks": 400,
+        "share_of_located_purchases_pct": 7.0,
+        "purchases_per_week": 30.8,
+        "sessions_13_weeks": 20764,
+        "eligible": true
+      },
+      {
+        "market": "Birmingham",
+        "cities": [
+          "Birmingham",
+          "Hoover"
+        ],
+        "purchases_13_weeks": 356,
+        "share_of_located_purchases_pct": 6.2,
+        "purchases_per_week": 27.4,
+        "sessions_13_weeks": 18365,
+        "eligible": true
+      },
+      {
+        "market": "Greenville-Spartanburg",
+        "cities": [
+          "Greenville",
+          "Spartanburg"
+        ],
+        "purchases_13_weeks": 322,
+        "share_of_located_purchases_pct": 5.6,
+        "purchases_per_week": 24.8,
+        "sessions_13_weeks": 16357,
+        "eligible": true
+      },
+      {
+        "market": "Columbia SC",
+        "cities": [
+          "Columbia"
+        ],
+        "purchases_13_weeks": 117,
+        "share_of_located_purchases_pct": 2.0,
+        "purchases_per_week": 9.0,
+        "sessions_13_weeks": 6135,
+        "eligible": false,
+        "why_not": "2.0% of purchases is under 3%"
+      },
+      {
+        "market": "Knoxville",
+        "cities": [
+          "Knoxville"
+        ],
+        "purchases_13_weeks": 109,
+        "share_of_located_purchases_pct": 1.9,
+        "purchases_per_week": 8.4,
+        "sessions_13_weeks": 5661,
+        "eligible": false,
+        "why_not": "1.9% of purchases is under 3%"
+      },
+      {
+        "market": "Savannah",
+        "cities": [
+          "Savannah"
+        ],
+        "purchases_13_weeks": 83,
+        "share_of_located_purchases_pct": 1.4,
+        "purchases_per_week": 6.4,
+        "sessions_13_weeks": 4325,
+        "eligible": false,
+        "why_not": "1.4% of purchases is under 3%"
+      }
+    ],
+    "eligible_markets": [
+      "Atlanta",
+      "Tampa-St. Petersburg",
+      "Orlando",
+      "Charlotte",
+      "Nashville",
+      "Raleigh-Durham",
+      "Jacksonville",
+      "Birmingham",
+      "Greenville-Spartanburg"
+    ]
+  },
+  "step_2_packages": {
+    "target_weekly_grps": 30,
+    "rule": "audited units only, cheapest all-in CPM first, add units until weekly GRPs reach the target",
+    "packages": [
+      {
+        "market": "Nashville",
+        "units": [
+          {
+            "unit": "BNA-D-015",
+            "media_owner": "Media owner B",
+            "format": "digital bulletin 10.5x36 ft",
+            "placement_type": "roadside",
+            "weekly_impressions_18plus": 205000,
+            "weekly_grps": 10.8,
+            "cost_4_weeks_all_in": 3300,
+            "cpm_all_in": 4.02
+          },
+          {
+            "unit": "BNA-B-033",
+            "media_owner": "Media owner A",
+            "format": "bulletin 14x48 ft",
+            "placement_type": "roadside",
+            "weekly_impressions_18plus": 248000,
+            "weekly_grps": 13.1,
+            "cost_4_weeks_all_in": 5500,
+            "cpm_all_in": 5.54
+          },
+          {
+            "unit": "BNA-P-090",
+            "media_owner": "Media owner A",
+            "format": "poster 10.5x22 ft",
+            "placement_type": "roadside",
+            "weekly_impressions_18plus": 101000,
+            "weekly_grps": 5.3,
+            "cost_4_weeks_all_in": 2400,
+            "cpm_all_in": 5.94
+          }
+        ],
+        "weekly_grps": 29.3,
+        "reaches_target": false,
+        "cost_4_weeks_all_in": 11200,
+        "flight_impressions_18plus": 2216000,
+        "blended_cpm_all_in": 5.05,
+        "audited_units_left_out": [],
+        "listed_not_priced": [],
+        "note": "short of target: every audited unit together reaches 29.3 of 30 weekly GRPs"
+      },
+      {
+        "market": "Atlanta",
+        "units": [
+          {
+            "unit": "ATL-D-031",
+            "media_owner": "Media owner B",
+            "format": "digital bulletin 10.5x36 ft",
+            "placement_type": "roadside",
+            "weekly_impressions_18plus": 298000,
+            "weekly_grps": 5.9,
+            "cost_4_weeks_all_in": 4400,
+            "cpm_all_in": 3.69
+          },
+          {
+            "unit": "ATL-D-044",
+            "media_owner": "Media owner B",
+            "format": "digital bulletin 10.5x36 ft",
+            "placement_type": "roadside",
+            "weekly_impressions_18plus": 276000,
+            "weekly_grps": 5.5,
+            "cost_4_weeks_all_in": 4300,
+            "cpm_all_in": 3.89
+          },
+          {
+            "unit": "ATL-T-12",
+            "media_owner": "Media owner C",
+            "format": "rail platform digital network (12 screens)",
+            "placement_type": "transit",
+            "weekly_impressions_18plus": 205000,
+            "weekly_grps": 4.1,
+            "cost_4_weeks_all_in": 3500,
+            "cpm_all_in": 4.27
+          },
+          {
+            "unit": "ATL-B-114",
+            "media_owner": "Media owner A",
+            "format": "bulletin 14x48 ft",
+            "placement_type": "roadside",
+            "weekly_impressions_18plus": 412000,
+            "weekly_grps": 8.2,
+            "cost_4_weeks_all_in": 8000,
+            "cpm_all_in": 4.85
+          },
+          {
+            "unit": "ATL-B-207",
+            "media_owner": "Media owner A",
+            "format": "bulletin 14x48 ft",
+            "placement_type": "roadside",
+            "weekly_impressions_18plus": 355000,
+            "weekly_grps": 7.0,
+            "cost_4_weeks_all_in": 7400,
+            "cpm_all_in": 5.21
+          }
+        ],
+        "weekly_grps": 30.7,
+        "reaches_target": true,
+        "cost_4_weeks_all_in": 27600,
+        "flight_impressions_18plus": 6184000,
+        "blended_cpm_all_in": 4.46,
+        "audited_units_left_out": [
+          {
+            "unit": "ATL-P-560",
+            "cpm_all_in": 6.78,
+            "reason": "target reached with cheaper units"
+          }
+        ],
+        "listed_not_priced": [
+          {
+            "unit": "ATL-M-01",
+            "format": "mall screen network",
+            "media_owner": "Media owner D",
+            "reason": "impressions are the owner's own count, not audited; not priced on CPM"
+          }
+        ]
+      },
+      {
+        "market": "Raleigh-Durham",
+        "units": [
+          {
+            "unit": "RDU-D-006",
+            "media_owner": "Media owner B",
+            "format": "digital bulletin 10.5x36 ft",
+            "placement_type": "roadside",
+            "weekly_impressions_18plus": 196000,
+            "weekly_grps": 10.8,
+            "cost_4_weeks_all_in": 3200,
+            "cpm_all_in": 4.08
+          },
+          {
+            "unit": "RDU-B-012",
+            "media_owner": "Media owner A",
+            "format": "bulletin 14x48 ft",
+            "placement_type": "roadside",
+            "weekly_impressions_18plus": 228000,
+            "weekly_grps": 12.5,
+            "cost_4_weeks_all_in": 5300,
+            "cpm_all_in": 5.81
+          },
+          {
+            "unit": "RDU-P-044",
+            "media_owner": "Media owner A",
+            "format": "poster 10.5x22 ft",
+            "placement_type": "roadside",
+            "weekly_impressions_18plus": 92000,
+            "weekly_grps": 5.1,
+            "cost_4_weeks_all_in": 2200,
+            "cpm_all_in": 5.98
+          }
+        ],
+        "weekly_grps": 28.4,
+        "reaches_target": false,
+        "cost_4_weeks_all_in": 10700,
+        "flight_impressions_18plus": 2064000,
+        "blended_cpm_all_in": 5.18,
+        "audited_units_left_out": [],
+        "listed_not_priced": [],
+        "note": "short of target: every audited unit together reaches 28.4 of 30 weekly GRPs"
+      },
+      {
+        "market": "Charlotte",
+        "units": [
+          {
+            "unit": "CLT-D-009",
+            "media_owner": "Media owner B",
+            "format": "digital bulletin 10.5x36 ft",
+            "placement_type": "roadside",
+            "weekly_impressions_18plus": 214000,
+            "weekly_grps": 9.3,
+            "cost_4_weeks_all_in": 3500,
+            "cpm_all_in": 4.09
+          },
+          {
+            "unit": "CLT-B-021",
+            "media_owner": "Media owner A",
+            "format": "bulletin 14x48 ft",
+            "placement_type": "roadside",
+            "weekly_impressions_18plus": 236000,
+            "weekly_grps": 10.2,
+            "cost_4_weeks_all_in": 5700,
+            "cpm_all_in": 6.04
+          },
+          {
+            "unit": "CLT-P-118",
+            "media_owner": "Media owner A",
+            "format": "poster 10.5x22 ft",
+            "placement_type": "roadside",
+            "weekly_impressions_18plus": 96000,
+            "weekly_grps": 4.2,
+            "cost_4_weeks_all_in": 2500,
+            "cpm_all_in": 6.51
+          },
+          {
+            "unit": "CLT-S-40",
+            "media_owner": "Media owner C",
+            "format": "bus shelter package (20 faces)",
+            "placement_type": "street",
+            "weekly_impressions_18plus": 150000,
+            "weekly_grps": 6.5,
+            "cost_4_weeks_all_in": 4800,
+            "cpm_all_in": 8.0
+          }
+        ],
+        "weekly_grps": 30.1,
+        "reaches_target": true,
+        "cost_4_weeks_all_in": 16500,
+        "flight_impressions_18plus": 2784000,
+        "blended_cpm_all_in": 5.93,
+        "audited_units_left_out": [],
+        "listed_not_priced": []
+      }
+    ]
+  },
+  "step_3_funding": {
+    "budget": 60000,
+    "order_rule": "purchases in 13 weeks per $1,000 of package cost, highest first; a market is bought whole or not at all, and only with a dark control that passes",
+    "decisions": [
+      {
+        "market": "Nashville",
+        "purchases_per_1000_dollars": 47.7,
+        "package_cost": 11200,
+        "budget_left_before": 60000,
+        "controls_checked": [
+          {
+            "control": "Tampa-St. Petersburg",
+            "correlation": 0.07,
+            "size_ratio": 1.57,
+            "mape_pct": 15.9,
+            "placebo_lift_pct": -1.9,
+            "smallest_readable_lift_pct": 28.7,
+            "passes": false,
+            "fails": [
+              "correlation under 0.8",
+              "MAPE over 15%"
+            ]
+          },
+          {
+            "control": "Jacksonville",
+            "correlation": 0.03,
+            "size_ratio": 0.75,
+            "mape_pct": 16.0,
+            "placebo_lift_pct": -3.0,
+            "smallest_readable_lift_pct": 28.0,
+            "passes": false,
+            "fails": [
+              "correlation under 0.8",
+              "MAPE over 15%"
+            ]
+          },
+          {
+            "control": "Orlando",
+            "correlation": -0.03,
+            "size_ratio": 1.29,
+            "mape_pct": 17.3,
+            "placebo_lift_pct": 0.5,
+            "smallest_readable_lift_pct": 28.8,
+            "passes": false,
+            "fails": [
+              "correlation under 0.8",
+              "MAPE over 15%"
+            ]
+          }
+        ],
+        "decision": "not funded",
+        "reason": "no dark market tracks it: best is Tampa-St. Petersburg at correlation 0.07, under 0.8; a buy here could not be measured"
+      },
+      {
+        "market": "Atlanta",
+        "purchases_per_1000_dollars": 45.3,
+        "package_cost": 27600,
+        "budget_left_before": 60000,
+        "controls_checked": [
+          {
+            "control": "Jacksonville",
+            "correlation": 0.95,
+            "size_ratio": 0.32,
+            "mape_pct": 3.4,
+            "placebo_lift_pct": 4.5,
+            "smallest_readable_lift_pct": 6.3,
+            "passes": false,
+            "fails": [
+              "size outside 0.5x to 2x"
+            ]
+          },
+          {
+            "control": "Birmingham",
+            "correlation": 0.95,
+            "size_ratio": 0.29,
+            "mape_pct": 3.9,
+            "placebo_lift_pct": 1.5,
+            "smallest_readable_lift_pct": 6.3,
+            "passes": false,
+            "fails": [
+              "size outside 0.5x to 2x"
+            ]
+          },
+          {
+            "control": "Orlando",
+            "correlation": 0.93,
+            "size_ratio": 0.55,
+            "mape_pct": 3.7,
+            "placebo_lift_pct": 8.2,
+            "smallest_readable_lift_pct": 6.7,
+            "passes": false,
+            "fails": [
+              "placebo lift outside the smallest readable lift"
+            ]
+          },
+          {
+            "control": "Greenville-Spartanburg",
+            "correlation": 0.93,
+            "size_ratio": 0.26,
+            "mape_pct": 3.7,
+            "placebo_lift_pct": 2.5,
+            "smallest_readable_lift_pct": 7.4,
+            "passes": false,
+            "fails": [
+              "size outside 0.5x to 2x"
+            ]
+          },
+          {
+            "control": "Tampa-St. Petersburg",
+            "correlation": 0.9,
+            "size_ratio": 0.67,
+            "mape_pct": 4.2,
+            "placebo_lift_pct": 5.6,
+            "smallest_readable_lift_pct": 8.1,
+            "passes": true
+          }
+        ],
+        "decision": "funded",
+        "control": "Tampa-St. Petersburg"
+      },
+      {
+        "market": "Raleigh-Durham",
+        "purchases_per_1000_dollars": 40.2,
+        "package_cost": 10700,
+        "budget_left_before": 32400,
+        "controls_checked": [
+          {
+            "control": "Jacksonville",
+            "correlation": 0.94,
+            "size_ratio": 0.93,
+            "mape_pct": 4.0,
+            "placebo_lift_pct": -1.8,
+            "smallest_readable_lift_pct": 6.9,
+            "passes": true
+          }
+        ],
+        "decision": "funded",
+        "control": "Jacksonville"
+      },
+      {
+        "market": "Charlotte",
+        "controls_left_out": {
+          "Greenville-Spartanburg": "borders the market"
+        },
+        "purchases_per_1000_dollars": 37.8,
+        "package_cost": 16500,
+        "budget_left_before": 21700,
+        "controls_checked": [
+          {
+            "control": "Birmingham",
+            "correlation": 0.84,
+            "size_ratio": 0.57,
+            "mape_pct": 6.2,
+            "placebo_lift_pct": 3.3,
+            "smallest_readable_lift_pct": 11.1,
+            "passes": true
+          }
+        ],
+        "decision": "funded",
+        "control": "Birmingham"
+      }
+    ],
+    "funded_markets": [
+      "Atlanta",
+      "Raleigh-Durham",
+      "Charlotte"
+    ],
+    "ooh_packages_total": 54800,
+    "left_after_packages": 5200
+  },
+  "step_4_programmatic_dooh": {
+    "budget": 5200,
+    "lines": [
+      {
+        "market": "Atlanta",
+        "budget": 2820,
+        "cap_30_pct_of_package": 8280,
+        "dsp_cpm": 11.5,
+        "impressions": 245217,
+        "geofence": "Atlanta market only"
+      },
+      {
+        "market": "Raleigh-Durham",
+        "budget": 970,
+        "cap_30_pct_of_package": 3210,
+        "dsp_cpm": 10.4,
+        "impressions": 93269,
+        "geofence": "Raleigh-Durham market only"
+      },
+      {
+        "market": "Charlotte",
+        "budget": 1410,
+        "cap_30_pct_of_package": 4950,
+        "dsp_cpm": 10.8,
+        "impressions": 130556,
+        "geofence": "Charlotte market only"
+      }
+    ],
+    "rule": "leftover of at least $2,000 goes to programmatic DOOH inside the funded markets, split by their purchases, at most 30% of each market's package"
+  },
+  "step_5_creative": [
+    {
+      "draft": "D1",
+      "placement": "bulletin 14x48 ft",
+      "copy": "Example Sofa Co. Presidents' Day Sale: 30% off every sofa this week only. examplesofa.example",
+      "checks": [
+        {
+          "check": "words",
+          "value": 14,
+          "limit": 7,
+          "result": "fail"
+        },
+        {
+          "check": "contrast",
+          "value": 11.47,
+          "limit": 7.0,
+          "result": "pass"
+        },
+        {
+          "check": "main line cap height (inches)",
+          "value": 14,
+          "limit": 16.8,
+          "result": "fail"
+        },
+        {
+          "check": "QR only where people stand",
+          "value": false,
+          "result": "pass"
+        }
+      ],
+      "verdict": "fix before files are due",
+      "failed": [
+        "words",
+        "main line cap height (inches)"
+      ],
+      "suggested_fix": {
+        "copy": "Example Sofa Co. 30% off sofas. examplesofa.example/atl",
+        "words": 7,
+        "word_limit": 7,
+        "contrast": 11.47,
+        "main_line_cap_height_in": 17,
+        "note": "one short path per market (atl, clt, rdu); the path counts as 1 word",
+        "final_words": "the offline-audio-print-ad-writer skill (if installed) writes the lines"
+      }
+    },
+    {
+      "draft": "D2",
+      "placement": "digital bulletin 10.5x36 ft, 8-second spot",
+      "copy": "Example Sofa Co. 30% off. Presidents' Day.",
+      "checks": [
+        {
+          "check": "words",
+          "value": 7,
+          "limit": 7,
+          "result": "pass"
+        },
+        {
+          "check": "words vs spot seconds",
+          "value": 7,
+          "limit": 8,
+          "result": "pass"
+        },
+        {
+          "check": "one static frame, no motion on a roadside screen",
+          "result": "pass"
+        },
+        {
+          "check": "contrast",
+          "value": 13.19,
+          "limit": 7.0,
+          "result": "pass"
+        },
+        {
+          "check": "main line cap height (inches)",
+          "value": 16,
+          "limit": 12.6,
+          "result": "pass"
+        },
+        {
+          "check": "QR only where people stand",
+          "value": false,
+          "result": "pass"
+        }
+      ],
+      "verdict": "ready",
+      "failed": []
+    },
+    {
+      "draft": "D3",
+      "placement": "rail platform digital screen, 10-second spot",
+      "copy": "Example Sofa Co. Presidents' Day Sale. 30% off every sofa, free delivery on orders over $999. Scan to see your size.",
+      "checks": [
+        {
+          "check": "words",
+          "value": 21,
+          "limit": 20,
+          "result": "fail"
+        },
+        {
+          "check": "words vs spot seconds",
+          "value": 21,
+          "limit": 10,
+          "result": "fail"
+        },
+        {
+          "check": "contrast",
+          "value": 3.45,
+          "limit": 7.0,
+          "result": "fail"
+        },
+        {
+          "check": "main line cap height (inches)",
+          "value": 5,
+          "limit": 3.6,
+          "result": "pass"
+        },
+        {
+          "check": "QR only where people stand",
+          "value": true,
+          "result": "pass"
+        }
+      ],
+      "verdict": "fix before files are due",
+      "failed": [
+        "words",
+        "words vs spot seconds",
+        "contrast"
+      ],
+      "suggested_fix": {
+        "copy": "Example Sofa Co. 30% off every sofa. Scan to shop.",
+        "words": 10,
+        "word_limit": 10,
+        "contrast": 11.47,
+        "main_line_cap_height_in": 5,
+        "note": "navy text on white; the QR stays because people wait on the platform",
+        "final_words": "the offline-audio-print-ad-writer skill (if installed) writes the lines"
+      }
+    }
+  ],
+  "step_6_measurement_plan": {
+    "outcome": "GA4 ecommercePurchases by week, cities rolled into markets",
+    "flight_weeks": 4,
+    "carry_over_weeks": 2,
+    "per_market": [
+      {
+        "test_market": "Atlanta",
+        "control_market": "Tampa-St. Petersburg",
+        "correlation": 0.9,
+        "scale": 1.49,
+        "pre_period_mape_pct": 4.2,
+        "placebo_lift_last_4_weeks_pct": 5.6,
+        "weekly_residual_sd_pct": 5.76,
+        "smallest_readable_lift_pct": 8.1,
+        "expected_flight_purchases_without_ooh": 384.3,
+        "market_spend": 30420,
+        "break_even_lift_pct": 18.8,
+        "readable_alone": true,
+        "second_outcome": {
+          "metric": "showroom direction requests (Business Profile)",
+          "pre_period_weekly_mean": 117.8,
+          "read": "directional only"
+        }
+      },
+      {
+        "test_market": "Raleigh-Durham",
+        "control_market": "Jacksonville",
+        "correlation": 0.94,
+        "scale": 1.08,
+        "pre_period_mape_pct": 4.0,
+        "placebo_lift_last_4_weeks_pct": -1.8,
+        "weekly_residual_sd_pct": 4.96,
+        "smallest_readable_lift_pct": 6.9,
+        "expected_flight_purchases_without_ooh": 132.3,
+        "market_spend": 11670,
+        "break_even_lift_pct": 21.0,
+        "readable_alone": true
+      },
+      {
+        "test_market": "Charlotte",
+        "control_market": "Birmingham",
+        "correlation": 0.84,
+        "scale": 1.75,
+        "pre_period_mape_pct": 6.2,
+        "placebo_lift_last_4_weeks_pct": 3.3,
+        "weekly_residual_sd_pct": 7.92,
+        "smallest_readable_lift_pct": 11.1,
+        "expected_flight_purchases_without_ooh": 191.7,
+        "market_spend": 17910,
+        "break_even_lift_pct": 22.2,
+        "readable_alone": true,
+        "second_outcome": {
+          "metric": "showroom direction requests (Business Profile)",
+          "pre_period_weekly_mean": 64.4,
+          "read": "directional only"
+        }
+      }
+    ],
+    "pooled": "not needed: every funded market is readable alone",
+    "national_brand_search": {
+      "metric": "Search Console clicks on brand queries, weekly",
+      "pre_period_weekly_mean": 2195.7,
+      "pre_period_sd_pct": 12.2,
+      "use": "national context only; it cannot be split by market"
+    },
+    "response_keys": [
+      {
+        "market": "Atlanta",
+        "short_path": "examplesofa.example/atl",
+        "promo_code": "SOFAATL",
+        "redirect_to": "https://www.examplesofa.example/sale/?utm_source=ooh&utm_medium=billboard&utm_campaign=pd27-atl"
+      },
+      {
+        "market": "Raleigh-Durham",
+        "short_path": "examplesofa.example/rdu",
+        "promo_code": "SOFARDU",
+        "redirect_to": "https://www.examplesofa.example/sale/?utm_source=ooh&utm_medium=billboard&utm_campaign=pd27-rdu"
+      },
+      {
+        "market": "Charlotte",
+        "short_path": "examplesofa.example/clt",
+        "promo_code": "SOFACLT",
+        "redirect_to": "https://www.examplesofa.example/sale/?utm_source=ooh&utm_medium=billboard&utm_campaign=pd27-clt"
+      }
+    ],
+    "freeze": "no city-level budget changes in Atlanta, Raleigh-Durham, Charlotte, Tampa-St. Petersburg, Jacksonville, Birmingham from 2026-12-28 to 2027-03-07",
+    "read_after": "the offline-media-lift-analyst skill (if installed) reads it against this plan without refitting"
+  },
+  "budget_summary": {
+    "ooh_packages": 54800,
+    "programmatic_dooh": 5200,
+    "reserve": 0,
+    "total": 60000
+  },
+  "calendar": [
+    {
+      "date": "2026-12-14",
+      "what": "Sign the contracts and hold the units; refresh the 13-week fit with the latest weeks"
+    },
+    {
+      "date": "2026-12-28",
+      "what": "Freeze starts: no city-level budget changes in test or control markets"
+    },
+    {
+      "date": "2027-01-04",
+      "what": "Static artwork due to the media owners for printing and install"
+    },
+    {
+      "date": "2027-01-11",
+      "what": "Short paths and promo codes live, tested from a phone; GA4 shows utm_source=ooh landings"
+    },
+    {
+      "date": "2027-01-18",
+      "what": "Digital files due to the media owner and the DSP; DSP line set up, paused"
+    },
+    {
+      "date": "2027-01-25",
+      "what": "Posting date: boards up, DSP line on; ask for posting proof photos"
+    },
+    {
+      "date": "2027-02-15",
+      "what": "Presidents' Day"
+    },
+    {
+      "date": "2027-02-21",
+      "what": "Flight ends; boards come down"
+    },
+    {
+      "date": "2027-03-07",
+      "what": "Carry-over ends; freeze ends; read the lift on the weeks to this date"
+    }
+  ],
+  "changes_made": "none; this skill plans and checks, it buys nothing"
+}

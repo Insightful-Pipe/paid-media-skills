@@ -1,0 +1,1426 @@
+{
+  "header": {
+    "account": "Larkmoor Home",
+    "ad_account_id": "549200000101",
+    "currency": "USD",
+    "date_range": "2026-09-28 to 2026-10-27",
+    "previous_period": "2026-08-29 to 2026-09-27",
+    "attribution_windows": "30-day click, 30-day engagement, 1-day view",
+    "grade": 80,
+    "rating": "needs work"
+  },
+  "summary": [
+    "You spent $3,135.65 on Pinterest from 2026-09-28 to 2026-10-27 (-1.9% on the 30 days before) for 4,779 outbound clicks at $0.66 each, under your $0.70 target.",
+    "That bought 146 conversions, including 114 checkouts worth $13,537.68 (ROAS 4.32), and the shopping campaign returned 4.72 against your 3.0 target.",
+    "The one change for next month: move budget from interest targeting to a longer keyword list before the winter peak, and pause the interest-group video until a vertical, shorter cut is ready."
+  ],
+  "kpis": [
+    {
+      "metric": "spend",
+      "window": 3135.65,
+      "previous_period": 3196.23,
+      "change_pct": -1.9
+    },
+    {
+      "metric": "impressions",
+      "window": 378880,
+      "previous_period": 416635,
+      "change_pct": -9.1
+    },
+    {
+      "metric": "reach",
+      "window": 164017,
+      "previous_period": 191116,
+      "change_pct": -14.2
+    },
+    {
+      "metric": "frequency",
+      "window": 2.31,
+      "previous_period": 2.18,
+      "change_pct": 6.0
+    },
+    {
+      "metric": "outbound_clicks",
+      "window": 4779,
+      "previous_period": 6457,
+      "change_pct": -26.0
+    },
+    {
+      "metric": "outbound_ctr_pct",
+      "window": 1.26,
+      "previous_period": 1.55,
+      "change_pct": -18.6
+    },
+    {
+      "metric": "cost_per_outbound_click",
+      "window": 0.66,
+      "previous_period": 0.5,
+      "change_pct": 32.6
+    },
+    {
+      "metric": "cpm",
+      "window": 8.28,
+      "previous_period": 7.67,
+      "change_pct": 7.9
+    },
+    {
+      "metric": "saves",
+      "window": 909,
+      "previous_period": 999,
+      "change_pct": -9.0
+    },
+    {
+      "metric": "conversions",
+      "window": 146,
+      "previous_period": 152,
+      "change_pct": -3.9
+    },
+    {
+      "metric": "cost_per_result",
+      "window": 21.48,
+      "previous_period": 21.03,
+      "change_pct": 2.1
+    },
+    {
+      "metric": "checkouts",
+      "window": 114,
+      "previous_period": 119,
+      "change_pct": -4.2
+    },
+    {
+      "metric": "checkout_value",
+      "window": 13537.68,
+      "previous_period": 14399.0,
+      "change_pct": -6.0
+    },
+    {
+      "metric": "roas",
+      "window": 4.32,
+      "previous_period": 4.5,
+      "change_pct": -4.2
+    }
+  ],
+  "structure": {
+    "status_counts": {
+      "campaigns": {
+        "status": {
+          "ACTIVE": 4
+        },
+        "summary_status": {
+          "RUNNING": 3,
+          "COMPLETED": 1
+        }
+      },
+      "ad_groups": {
+        "status": {
+          "ACTIVE": 6
+        },
+        "summary_status": {
+          "RUNNING": 5,
+          "COMPLETED": 1
+        }
+      },
+      "ads": {
+        "status": {
+          "ACTIVE": 8
+        },
+        "summary_status": {
+          "RUNNING": 7,
+          "COMPLETED": 1
+        }
+      }
+    },
+    "live_now": {
+      "campaigns": 3,
+      "ad_groups": 5,
+      "ads": 7
+    },
+    "active_not_delivering": [
+      {
+        "level": "campaign",
+        "name": "Summer sale | Table linen",
+        "status": "ACTIVE",
+        "summary_status": "COMPLETED",
+        "note": "finished: end_time 2026-08-31 has passed, so not live"
+      },
+      {
+        "level": "ad group",
+        "name": "Summer sale | Table linen | Interests",
+        "status": "ACTIVE",
+        "summary_status": "COMPLETED",
+        "note": "its campaign has finished"
+      },
+      {
+        "level": "ad",
+        "name": "Summer sale | Tablecloths",
+        "status": "ACTIVE",
+        "summary_status": "COMPLETED",
+        "note": "its campaign has finished"
+      }
+    ],
+    "rejected_ads": 0,
+    "pacing": [
+      {
+        "campaign": "Evergreen | Linen bedding | Conversions",
+        "daily_cap": 70.0,
+        "days_in_window": 30,
+        "capacity": 2100.0,
+        "spend": 1882.37,
+        "spend_pct_of_capacity": 89.6,
+        "flexible_daily_budget": true,
+        "result": "pass"
+      },
+      {
+        "campaign": "Shopping | Catalog | All products",
+        "daily_cap": 40.0,
+        "days_in_window": 30,
+        "capacity": 1200.0,
+        "spend": 1083.68,
+        "spend_pct_of_capacity": 90.3,
+        "flexible_daily_budget": false,
+        "result": "pass"
+      },
+      {
+        "campaign": "Retargeting | Site visitors 30 days",
+        "daily_cap": 15.0,
+        "days_in_window": 30,
+        "capacity": 450.0,
+        "spend": 169.6,
+        "spend_pct_of_capacity": 37.7,
+        "flexible_daily_budget": false,
+        "result": "warn"
+      }
+    ]
+  },
+  "scorecard": [
+    {
+      "area": "1. Delivery and budget pacing",
+      "result": "warn",
+      "deduction": -5,
+      "key_number": "Retargeting | Site visitors 30 days: $169.60 of $450.00 capacity (37.7%)",
+      "why": "3 campaigns live; the other two spent 89.6%, 90.3% of capacity. Retargeting is under half its $15 daily cap; its only audience is 21,000 site visitors from the last 30 days. 0 rejected ads; 1 finished campaign still marked ACTIVE."
+    },
+    {
+      "area": "2. Pinterest tag and conversions",
+      "result": "pass",
+      "deduction": 0,
+      "key_number": "tag last fired 2026-10-27 22:14 UTC; enhanced match VALIDATED",
+      "why": "The tag is ACTIVE and firing, page visits and conversions arrive in every conversion campaign. Conversions API: unknown through this connection."
+    },
+    {
+      "area": "3. Cost per outbound click trend",
+      "result": "warn",
+      "deduction": -5,
+      "key_number": "$0.50 to $0.66 (+32.6%)",
+      "why": "CPM moved +7.8% and outbound CTR -18.7%, so the ads got weaker more than the auction got dearer. In between, 2 video ads launched on 2026-09-29."
+    },
+    {
+      "area": "4. Creative formats and pin specs",
+      "result": "warn",
+      "deduction": -5,
+      "key_number": "VIDEO $1.73 vs SHOPPING $0.46 per outbound click (3.73x, 28.0% of spend)",
+      "why": "Both video ads use one 1920x1080, 30-second pin, and the retargeting pin's title and description disagree on the free-shipping threshold."
+    },
+    {
+      "area": "5. Targeting: keywords vs interests",
+      "result": "warn",
+      "deduction": -5,
+      "key_number": "interests $1.31 vs keywords $0.61 per outbound click (2.14x, 27.6% of spend)",
+      "why": "Interest targeting costs 2.14 times keywords per outbound click and holds over 25% of spend, and the keyword ad group has 16 keywords, under Pinterest's suggested 25."
+    },
+    {
+      "area": "6. Audiences: actalike, retargeting and customer lists",
+      "result": "pass",
+      "deduction": 0,
+      "key_number": "actalike $15.06 per result vs prospecting $35.14",
+      "why": "Visitor, engagement, customer-list and actalike audiences are all READY, and the actalike is the cheapest source of results in the conversion campaign."
+    },
+    {
+      "area": "7. Catalog and product groups",
+      "result": "pass",
+      "deduction": 0,
+      "key_number": "ROAS 4.72 vs target 3.0",
+      "why": "Feed ACTIVE (214 products). $1,083.68 spent for $5,110.56 of checkout value. The product group split needs create_report, which was not run."
+    }
+  ],
+  "grade_math": "1: warn (-5) 2: pass (0) 3: warn (-5) 4: warn (-5) 5: warn (-5) 6: pass (0) 7: pass (0); 100 -20 = 80",
+  "area_2_checks": [
+    {
+      "check": "a tag exists",
+      "result": "pass",
+      "key": "1 tag, status ACTIVE"
+    },
+    {
+      "check": "the tag fires",
+      "result": "pass",
+      "key": "last fired 2026-10-27 22:14 UTC"
+    },
+    {
+      "check": "enhanced match",
+      "result": "pass",
+      "key": "VALIDATED"
+    },
+    {
+      "check": "events arrive",
+      "result": "pass",
+      "key": "3,966 page visits from 4,779 outbound clicks; conversions per conversion campaign: Evergreen | Linen bedding | Conversions 65, Shopping | Catalog | All products 63, Retargeting | Site visitors 30 days 18"
+    },
+    {
+      "check": "Conversions API",
+      "result": "unknown",
+      "key": "not readable through this connection: check Pinterest Ads Manager under Conversions for events from both the tag and the API, with event ids for deduplication"
+    }
+  ],
+  "area_3_trend": {
+    "blocks": [
+      {
+        "block": "2026-08-05 to 2026-08-11",
+        "spend": 904.79,
+        "impressions": 115721,
+        "outbound_clicks": 1732,
+        "cost_per_outbound_click": 0.52
+      },
+      {
+        "block": "2026-08-12 to 2026-08-18",
+        "spend": 898.68,
+        "impressions": 115667,
+        "outbound_clicks": 1754,
+        "cost_per_outbound_click": 0.51
+      },
+      {
+        "block": "2026-08-19 to 2026-08-25",
+        "spend": 913.5,
+        "impressions": 115853,
+        "outbound_clicks": 1781,
+        "cost_per_outbound_click": 0.51
+      },
+      {
+        "block": "2026-08-26 to 2026-09-01",
+        "spend": 867.8,
+        "impressions": 111513,
+        "outbound_clicks": 1701,
+        "cost_per_outbound_click": 0.51
+      },
+      {
+        "block": "2026-09-02 to 2026-09-08",
+        "spend": 734.79,
+        "impressions": 97139,
+        "outbound_clicks": 1533,
+        "cost_per_outbound_click": 0.48
+      },
+      {
+        "block": "2026-09-09 to 2026-09-15",
+        "spend": 729.21,
+        "impressions": 95748,
+        "outbound_clicks": 1462,
+        "cost_per_outbound_click": 0.5
+      },
+      {
+        "block": "2026-09-16 to 2026-09-22",
+        "spend": 726.3,
+        "impressions": 93051,
+        "outbound_clicks": 1444,
+        "cost_per_outbound_click": 0.5
+      },
+      {
+        "block": "2026-09-23 to 2026-09-29",
+        "spend": 730.06,
+        "impressions": 93894,
+        "outbound_clicks": 1411,
+        "cost_per_outbound_click": 0.52
+      },
+      {
+        "block": "2026-09-30 to 2026-10-06",
+        "spend": 734.0,
+        "impressions": 88656,
+        "outbound_clicks": 1112,
+        "cost_per_outbound_click": 0.66
+      },
+      {
+        "block": "2026-10-07 to 2026-10-13",
+        "spend": 726.8,
+        "impressions": 87399,
+        "outbound_clicks": 1093,
+        "cost_per_outbound_click": 0.66
+      },
+      {
+        "block": "2026-10-14 to 2026-10-20",
+        "spend": 737.21,
+        "impressions": 88167,
+        "outbound_clicks": 1101,
+        "cost_per_outbound_click": 0.67
+      },
+      {
+        "block": "2026-10-21 to 2026-10-27",
+        "spend": 727.96,
+        "impressions": 88788,
+        "outbound_clicks": 1115,
+        "cost_per_outbound_click": 0.65
+      }
+    ],
+    "dropped_partial_block": "2026-07-30 to 2026-08-04",
+    "prior_4_blocks": {
+      "range": "2026-09-02 to 2026-09-29",
+      "spend": 2920.36,
+      "impressions": 379832,
+      "outbound_clicks": 5850,
+      "cost_per_outbound_click": 0.5,
+      "cpm": 7.69,
+      "outbound_ctr_pct": 1.54
+    },
+    "last_4_blocks": {
+      "range": "2026-09-30 to 2026-10-27",
+      "spend": 2925.97,
+      "impressions": 353010,
+      "outbound_clicks": 4421,
+      "cost_per_outbound_click": 0.66,
+      "cpm": 8.29,
+      "outbound_ctr_pct": 1.252
+    },
+    "cost_per_outbound_click_change_pct": 32.6,
+    "cpm_change_pct": 7.8,
+    "outbound_ctr_change_pct": -18.7,
+    "what_changed": [
+      "'Video | Linen duvet set (keywords)' created 2026-09-29",
+      "'Video | Linen duvet set (interests)' created 2026-09-29"
+    ]
+  },
+  "area_4_checks": [
+    {
+      "check": "pin exists and has a destination",
+      "result": "pass",
+      "key": "8 ads, 7 pins, none deleted"
+    },
+    {
+      "check": "shape",
+      "result": "warn",
+      "key": "pin 860000000000000102 (2 video ads) is 1920x1080, wider than tall"
+    },
+    {
+      "check": "video length",
+      "result": "warn",
+      "key": "pin 860000000000000102 runs 30 s; Pinterest recommends 6 to 15"
+    },
+    {
+      "check": "title and description agree",
+      "result": "warn",
+      "key": "retargeting pin: title over $100, description over $75"
+    },
+    {
+      "check": "performance by format",
+      "result": "warn",
+      "key": "VIDEO costs 3.73x SHOPPING per outbound click with 28.0% of spend"
+    }
+  ],
+  "area_4_formats": [
+    {
+      "format": "SHOPPING",
+      "ads": 1,
+      "spend": 1083.68,
+      "share_of_spend_pct": 34.6,
+      "impressions": 138871,
+      "outbound_ctr_pct": 1.69,
+      "cost_per_outbound_click": 0.46,
+      "conversions": 63,
+      "cost_per_result": 17.2,
+      "vs_best_format": 1.0,
+      "flag": null
+    },
+    {
+      "format": "VIDEO",
+      "ads": 2,
+      "spend": 877.18,
+      "share_of_spend_pct": 28.0,
+      "impressions": 98003,
+      "outbound_ctr_pct": 0.52,
+      "cost_per_outbound_click": 1.73,
+      "conversions": 14,
+      "cost_per_result": 62.66,
+      "vs_best_format": 3.73,
+      "flag": "warn"
+    },
+    {
+      "format": "REGULAR",
+      "ads": 3,
+      "spend": 873.61,
+      "share_of_spend_pct": 27.9,
+      "impressions": 105540,
+      "outbound_ctr_pct": 1.47,
+      "cost_per_outbound_click": 0.56,
+      "conversions": 49,
+      "cost_per_result": 17.83,
+      "vs_best_format": 1.22,
+      "flag": null
+    },
+    {
+      "format": "CAROUSEL",
+      "ads": 1,
+      "spend": 301.18,
+      "share_of_spend_pct": 9.6,
+      "impressions": 36466,
+      "outbound_ctr_pct": 1.03,
+      "cost_per_outbound_click": 0.8,
+      "conversions": 20,
+      "cost_per_result": 15.06,
+      "vs_best_format": 1.74,
+      "flag": null
+    }
+  ],
+  "area_4_video_dropoff": {
+    "steps_pct_of_3s_views": {
+      "3-second view": 100.0,
+      "25%": 59.7,
+      "50%": 32.3,
+      "75%": 17.9,
+      "100%": 9.9
+    },
+    "biggest_step_down": "3-second view to 25% (40.3 points)"
+  },
+  "area_4_pin_specs": [
+    {
+      "ad": "Static | Stonewashed duvet set",
+      "pin_id": "860000000000000101",
+      "format": "REGULAR",
+      "size": "1000x1500",
+      "video_seconds": null,
+      "title": "Stonewashed Linen Duvet Cover Set | Larkmoor Home",
+      "title_chars": 49,
+      "shows_in_feed": "Stonewashed Linen Duvet Cover Set | Lark",
+      "issues": [],
+      "result": "pass"
+    },
+    {
+      "ad": "Video | Linen duvet set (keywords)",
+      "pin_id": "860000000000000102",
+      "format": "VIDEO",
+      "size": "1920x1080",
+      "video_seconds": 30,
+      "title": "Make Your Bed With Larkmoor Home Linen: Watch the Duvet Cover Set Go On",
+      "title_chars": 71,
+      "shows_in_feed": "Make Your Bed With Larkmoor Home Linen: ",
+      "issues": [
+        "1920x1080 is wider than tall",
+        "video is 30 s, over 15"
+      ],
+      "result": "warn"
+    },
+    {
+      "ad": "Static | Linen throw",
+      "pin_id": "860000000000000103",
+      "format": "REGULAR",
+      "size": "1000x1500",
+      "video_seconds": null,
+      "title": "Larkmoor Home Linen Throw Blanket | 9 Colours",
+      "title_chars": 45,
+      "shows_in_feed": "Larkmoor Home Linen Throw Blanket | 9 Co",
+      "issues": [],
+      "result": "pass"
+    },
+    {
+      "ad": "Video | Linen duvet set (interests)",
+      "pin_id": "860000000000000102",
+      "format": "VIDEO",
+      "size": "1920x1080",
+      "video_seconds": 30,
+      "title": "Make Your Bed With Larkmoor Home Linen: Watch the Duvet Cover Set Go On",
+      "title_chars": 71,
+      "shows_in_feed": "Make Your Bed With Larkmoor Home Linen: ",
+      "issues": [
+        "1920x1080 is wider than tall",
+        "video is 30 s, over 15"
+      ],
+      "result": "warn"
+    },
+    {
+      "ad": "Carousel | Bedroom colour palettes",
+      "pin_id": "860000000000000104",
+      "format": "CAROUSEL",
+      "size": "1000x1000",
+      "video_seconds": null,
+      "title": "5 Bedroom Colour Palettes in Linen | Larkmoor Home",
+      "title_chars": 50,
+      "shows_in_feed": "5 Bedroom Colour Palettes in Linen | Lar",
+      "issues": [],
+      "result": "pass"
+    },
+    {
+      "ad": "Shopping | Catalog product pins",
+      "pin_id": "860000000000000106",
+      "format": "SHOPPING",
+      "size": "1000x1000",
+      "video_seconds": null,
+      "title": "Linen Duvet Cover, Sage, Queen",
+      "title_chars": 30,
+      "shows_in_feed": "Linen Duvet Cover, Sage, Queen",
+      "issues": [],
+      "result": "pass"
+    },
+    {
+      "ad": "Static | Free shipping reminder",
+      "pin_id": "860000000000000105",
+      "format": "REGULAR",
+      "size": "1000x1500",
+      "video_seconds": null,
+      "title": "Free Shipping Over $100 on All Linen Bedding | Larkmoor Home",
+      "title_chars": 60,
+      "shows_in_feed": "Free Shipping Over $100 on All Linen Bed",
+      "issues": [
+        "title says free shipping over $100, description says over $75"
+      ],
+      "result": "warn"
+    },
+    {
+      "ad": "Summer sale | Tablecloths",
+      "pin_id": "860000000000000107",
+      "format": "REGULAR",
+      "size": "1000x1500",
+      "video_seconds": null,
+      "title": "Linen Tablecloths for Summer Dinners | Larkmoor Home",
+      "title_chars": 52,
+      "shows_in_feed": "Linen Tablecloths for Summer Dinners | L",
+      "issues": [],
+      "result": "pass"
+    }
+  ],
+  "pause_candidates": [
+    {
+      "ad": "Video | Linen duvet set (interests)",
+      "ad_id": "687000000204",
+      "impressions": 55155,
+      "spend": 519.53,
+      "cost_per_outbound_click": 2.71,
+      "limit": 1.4,
+      "days": 29,
+      "other_active_ads_in_group": [
+        "Static | Linen throw"
+      ]
+    }
+  ],
+  "area_5_targeting": {
+    "ad_groups": [
+      {
+        "ad_group": "Keywords | Linen bedding",
+        "type": "keyword",
+        "keywords": 16,
+        "interests": [],
+        "expanded_targeting": false,
+        "location": [
+          "US"
+        ]
+      },
+      {
+        "ad_group": "Interests | Home decor",
+        "type": "interest",
+        "keywords": 0,
+        "interests": [
+          "Bedroom decor",
+          "Home decor",
+          "Scandinavian interiors",
+          "Cozy home",
+          "Neutral home decor"
+        ],
+        "expanded_targeting": false,
+        "location": [
+          "US"
+        ]
+      },
+      {
+        "ad_group": "Actalike 1% | Past buyers",
+        "type": "audience",
+        "keywords": 0,
+        "interests": [],
+        "expanded_targeting": false,
+        "location": [
+          "US"
+        ]
+      },
+      {
+        "ad_group": "Shopping | All products",
+        "type": "broad",
+        "keywords": 0,
+        "interests": [],
+        "expanded_targeting": true,
+        "location": [
+          "US"
+        ]
+      },
+      {
+        "ad_group": "Retargeting | Site visitors 30 days",
+        "type": "audience",
+        "keywords": 0,
+        "interests": [],
+        "expanded_targeting": false,
+        "location": [
+          "US"
+        ]
+      },
+      {
+        "ad_group": "Summer sale | Table linen | Interests",
+        "type": "interest",
+        "keywords": 0,
+        "interests": [
+          "Table settings"
+        ],
+        "expanded_targeting": false,
+        "location": [
+          "US"
+        ]
+      }
+    ],
+    "keyword_match_types": {
+      "PHRASE": 4,
+      "BROAD": 9,
+      "EXACT": 2,
+      "BROAD_NEGATIVE": 1
+    },
+    "keyword_ad_group_keywords": 16,
+    "keywords": {
+      "spend": 715.3,
+      "share_of_spend_pct": 22.8,
+      "impressions": 91165,
+      "outbound_ctr_pct": 1.28,
+      "cost_per_outbound_click": 0.61,
+      "conversions": 29,
+      "cost_per_result": 24.67
+    },
+    "interests": {
+      "spend": 865.89,
+      "share_of_spend_pct": 27.6,
+      "impressions": 100282,
+      "outbound_ctr_pct": 0.66,
+      "cost_per_outbound_click": 1.31,
+      "conversions": 16,
+      "cost_per_result": 54.12
+    },
+    "interest_vs_keyword_cost_ratio": 2.14,
+    "best_10": [
+      {
+        "type": "keyword",
+        "value": "linen duvet cover queen",
+        "spend": 42.92,
+        "outbound_clicks": 98,
+        "cost_per_outbound_click": 0.44
+      },
+      {
+        "type": "keyword",
+        "value": "linen duvet cover king",
+        "spend": 28.61,
+        "outbound_clicks": 65,
+        "cost_per_outbound_click": 0.44
+      },
+      {
+        "type": "keyword",
+        "value": "flax linen bedding",
+        "spend": 35.77,
+        "outbound_clicks": 76,
+        "cost_per_outbound_click": 0.47
+      },
+      {
+        "type": "keyword",
+        "value": "stonewashed linen",
+        "spend": 57.22,
+        "outbound_clicks": 120,
+        "cost_per_outbound_click": 0.48
+      },
+      {
+        "type": "keyword",
+        "value": "linen duvet cover",
+        "spend": 100.14,
+        "outbound_clicks": 208,
+        "cost_per_outbound_click": 0.48
+      },
+      {
+        "type": "keyword",
+        "value": "washed linen bedding",
+        "spend": 28.61,
+        "outbound_clicks": 55,
+        "cost_per_outbound_click": 0.52
+      },
+      {
+        "type": "keyword",
+        "value": "linen bedding",
+        "spend": 92.99,
+        "outbound_clicks": 175,
+        "cost_per_outbound_click": 0.53
+      },
+      {
+        "type": "keyword",
+        "value": "linen pillowcases",
+        "spend": 35.77,
+        "outbound_clicks": 65,
+        "cost_per_outbound_click": 0.55
+      },
+      {
+        "type": "keyword",
+        "value": "linen sheets",
+        "spend": 64.38,
+        "outbound_clicks": 98,
+        "cost_per_outbound_click": 0.66
+      },
+      {
+        "type": "keyword",
+        "value": "linen bed set",
+        "spend": 42.92,
+        "outbound_clicks": 55,
+        "cost_per_outbound_click": 0.78
+      }
+    ],
+    "worst_10": [
+      {
+        "type": "interest",
+        "value": "Home decor",
+        "spend": 225.13,
+        "outbound_clicks": 132,
+        "cost_per_outbound_click": 1.71
+      },
+      {
+        "type": "keyword",
+        "value": "cozy bedding",
+        "spend": 35.76,
+        "outbound_clicks": 22,
+        "cost_per_outbound_click": 1.63
+      },
+      {
+        "type": "keyword",
+        "value": "earthy bedroom",
+        "spend": 35.76,
+        "outbound_clicks": 22,
+        "cost_per_outbound_click": 1.63
+      },
+      {
+        "type": "interest",
+        "value": "Neutral home decor",
+        "spend": 112.57,
+        "outbound_clicks": 79,
+        "cost_per_outbound_click": 1.42
+      },
+      {
+        "type": "keyword",
+        "value": "bedding sets queen",
+        "spend": 42.92,
+        "outbound_clicks": 33,
+        "cost_per_outbound_click": 1.3
+      },
+      {
+        "type": "interest",
+        "value": "Scandinavian interiors",
+        "spend": 121.22,
+        "outbound_clicks": 99,
+        "cost_per_outbound_click": 1.22
+      },
+      {
+        "type": "interest",
+        "value": "Cozy home",
+        "spend": 147.2,
+        "outbound_clicks": 126,
+        "cost_per_outbound_click": 1.17
+      },
+      {
+        "type": "interest",
+        "value": "Bedroom decor",
+        "spend": 259.77,
+        "outbound_clicks": 225,
+        "cost_per_outbound_click": 1.15
+      },
+      {
+        "type": "keyword",
+        "value": "neutral bedding",
+        "spend": 42.92,
+        "outbound_clicks": 44,
+        "cost_per_outbound_click": 0.98
+      },
+      {
+        "type": "keyword",
+        "value": "duvet cover",
+        "spend": 28.61,
+        "outbound_clicks": 33,
+        "cost_per_outbound_click": 0.87
+      }
+    ],
+    "pinner_interests": [
+      {
+        "interest": "Bedroom decor",
+        "impressions": 155340,
+        "outbound_ctr_pct": 1.18
+      },
+      {
+        "interest": "Home organisation",
+        "impressions": 83353,
+        "outbound_ctr_pct": 0.94
+      },
+      {
+        "interest": "Wedding registry ideas",
+        "impressions": 34099,
+        "outbound_ctr_pct": 1.51
+      },
+      {
+        "interest": "Guest room ideas",
+        "impressions": 30310,
+        "outbound_ctr_pct": 1.39
+      },
+      {
+        "interest": "Slow living",
+        "impressions": 22732,
+        "outbound_ctr_pct": 1.22
+      }
+    ],
+    "new_interest_ideas": [
+      "Home organisation",
+      "Wedding registry ideas",
+      "Guest room ideas",
+      "Slow living"
+    ]
+  },
+  "area_6_checks": [
+    {
+      "check": "audiences exist",
+      "result": "pass",
+      "key": "4 audiences, 1 customer list"
+    },
+    {
+      "check": "targeted audiences ready",
+      "result": "pass",
+      "key": "both targeted audiences are READY"
+    },
+    {
+      "check": "visitor audience can grow",
+      "result": "pass",
+      "key": "tag ACTIVE and firing"
+    },
+    {
+      "check": "actalike vs prospecting",
+      "result": "pass",
+      "key": "actalike $15.06 per result vs prospecting $35.14 (0.43x)"
+    },
+    {
+      "check": "actalike seed size",
+      "result": "pass",
+      "key": "seed list matched 2,400 people (over about 1,000)"
+    }
+  ],
+  "area_7_catalog": {
+    "feed_status": "ACTIVE",
+    "products": 214,
+    "spend": 1083.68,
+    "conversions": 63,
+    "checkout_value": 5110.56,
+    "roas": 4.72,
+    "target_roas": 3.0,
+    "product_groups": "not run: needs create_report with level PRODUCT_GROUP, which this connection classes as a write. Say yes and I will run it."
+  },
+  "top_fixes": [
+    {
+      "area": 5,
+      "spend_affected": 1581.19,
+      "fix": "Move budget from the interest ad group toward keywords, and add keywords until the list passes Pinterest's suggested 25 (the calendar's matched keywords are a start).",
+      "evidence": "get_targeting_analytics: interests $1.31, keywords $0.61 per outbound click; get_keywords: 16 keywords.",
+      "who": "do this in Pinterest Ads Manager",
+      "rank": 1
+    },
+    {
+      "area": 4,
+      "spend_affected": 877.18,
+      "fix": "Pause 'Video | Linen duvet set (interests)' now, and cut the duvet video to a vertical (2:3 or 9:16) 6 to 15 second version before it runs again. The keyword-group video can stay until the new cut exists.",
+      "evidence": "get_ad_analytics: video ads $1.73 per outbound click vs SHOPPING $0.46; 'Video | Linen duvet set (interests)' $2.71 over 29 days, over the $1.40 pause limit (2 times your $0.70 target). Also behind the area 3 rise.",
+      "who": "I can do this now (after your yes) for the pause; the new cut is done in Pinterest",
+      "rank": 2
+    },
+    {
+      "area": 1,
+      "spend_affected": 169.6,
+      "fix": "Widen retargeting: add the 'Pin engagers 60 days' audience (48,000) or lengthen the visitor window to 90 days, so the campaign can use its cap.",
+      "evidence": "get_campaign_analytics: $169.60 of $450.00 (37.7%); get_audiences: Site visitors 30 days, 21,000.",
+      "who": "do this in Pinterest Ads Manager",
+      "rank": 3
+    },
+    {
+      "area": 4,
+      "spend_affected": 169.6,
+      "fix": "Make the retargeting pin agree on one free-shipping threshold (the title says $100, the description $75), then point the ad at the new pin.",
+      "evidence": "pinterest-pages get_pin 860000000000000105.",
+      "who": "tell me which threshold is right and I can draft the new pin and ad (after your yes)",
+      "rank": 4
+    }
+  ],
+  "ads_table": [
+    {
+      "ad": "Shopping | Catalog product pins",
+      "format": "SHOPPING",
+      "spend": 1083.68,
+      "impressions": 138871,
+      "outbound_ctr_pct": 1.69,
+      "cost_per_outbound_click": 0.46,
+      "results": 63
+    },
+    {
+      "ad": "Video | Linen duvet set (interests)",
+      "format": "VIDEO",
+      "spend": 519.53,
+      "impressions": 55155,
+      "outbound_ctr_pct": 0.35,
+      "cost_per_outbound_click": 2.71,
+      "results": 5
+    },
+    {
+      "ad": "Static | Stonewashed duvet set",
+      "format": "REGULAR",
+      "spend": 357.65,
+      "impressions": 48317,
+      "outbound_ctr_pct": 1.77,
+      "cost_per_outbound_click": 0.42,
+      "results": 20
+    },
+    {
+      "ad": "Video | Linen duvet set (keywords)",
+      "format": "VIDEO",
+      "spend": 357.65,
+      "impressions": 42848,
+      "outbound_ctr_pct": 0.74,
+      "cost_per_outbound_click": 1.13,
+      "results": 9
+    },
+    {
+      "ad": "Static | Linen throw",
+      "format": "REGULAR",
+      "spend": 346.36,
+      "impressions": 45127,
+      "outbound_ctr_pct": 1.04,
+      "cost_per_outbound_click": 0.74,
+      "results": 11
+    },
+    {
+      "ad": "Carousel | Bedroom colour palettes",
+      "format": "CAROUSEL",
+      "spend": 301.18,
+      "impressions": 36466,
+      "outbound_ctr_pct": 1.03,
+      "cost_per_outbound_click": 0.8,
+      "results": 20
+    },
+    {
+      "ad": "Static | Free shipping reminder",
+      "format": "REGULAR",
+      "spend": 169.6,
+      "impressions": 12096,
+      "outbound_ctr_pct": 1.9,
+      "cost_per_outbound_click": 0.74,
+      "results": 18
+    },
+    {
+      "ad": "Summer sale | Tablecloths",
+      "format": "REGULAR",
+      "spend": "no spend",
+      "impressions": "no delivery",
+      "note": "its campaign finished on 2026-08-31"
+    }
+  ],
+  "seasonal_calendar": {
+    "interest": "home_decor",
+    "topic_words": [
+      "linen",
+      "duvet",
+      "throw blanket",
+      "bedding"
+    ],
+    "region": "US",
+    "keywords_checked": 18,
+    "keywords_matched": 10,
+    "assumption": "Dates are projected from the last 52 weeks and assume last year's pattern repeats.",
+    "by_launch_month": {
+      "now": [
+        "linen tablecloth",
+        "linen throw blanket",
+        "chunky throw blanket"
+      ],
+      "November 2026": [
+        "christmas bedding",
+        "winter bedding"
+      ],
+      "January 2027": [
+        "linen bedding",
+        "linen duvet cover"
+      ],
+      "April 2027": [
+        "summer bedding"
+      ]
+    },
+    "seasonal": [
+      {
+        "keyword": "linen tablecloth",
+        "peak_week": "2025-11-19",
+        "peak_to_median": 4.55,
+        "yoy_growth_pct": 12,
+        "ramp_week": "2025-11-05",
+        "launch_week": "2025-10-08",
+        "next_peak_week": "2026-11-18",
+        "next_ramp_week": "2026-11-04",
+        "next_launch_week": "2026-10-07",
+        "launch_month": "now",
+        "launch_note": "the launch week (2026-10-07) has passed; launch now, before the ramp week 2026-11-04",
+        "campaign_it_suits": "Holiday table linen (prospecting)"
+      },
+      {
+        "keyword": "linen throw blanket",
+        "peak_week": "2025-12-10",
+        "peak_to_median": 2.78,
+        "yoy_growth_pct": 31,
+        "ramp_week": "2025-11-12",
+        "launch_week": "2025-10-15",
+        "next_peak_week": "2026-12-09",
+        "next_ramp_week": "2026-11-11",
+        "next_launch_week": "2026-10-14",
+        "launch_month": "now",
+        "launch_note": "the launch week (2026-10-14) has passed; launch now, before the ramp week 2026-11-11",
+        "campaign_it_suits": "Winter bedding and throws"
+      },
+      {
+        "keyword": "chunky throw blanket",
+        "peak_week": "2025-12-03",
+        "peak_to_median": 4.0,
+        "yoy_growth_pct": -8,
+        "ramp_week": "2025-11-12",
+        "launch_week": "2025-10-15",
+        "next_peak_week": "2026-12-02",
+        "next_ramp_week": "2026-11-11",
+        "next_launch_week": "2026-10-14",
+        "launch_month": "now",
+        "launch_note": "the launch week (2026-10-14) has passed; launch now, before the ramp week 2026-11-11",
+        "campaign_it_suits": "Winter bedding and throws"
+      },
+      {
+        "keyword": "christmas bedding",
+        "peak_week": "2025-12-17",
+        "peak_to_median": 11.11,
+        "yoy_growth_pct": 25,
+        "ramp_week": "2025-12-03",
+        "launch_week": "2025-11-05",
+        "next_peak_week": "2026-12-16",
+        "next_ramp_week": "2026-12-02",
+        "next_launch_week": "2026-11-04",
+        "launch_month": "November 2026",
+        "campaign_it_suits": "Winter bedding and throws"
+      },
+      {
+        "keyword": "winter bedding",
+        "peak_week": "2026-01-07",
+        "peak_to_median": 5.13,
+        "yoy_growth_pct": 9,
+        "ramp_week": "2025-12-24",
+        "launch_week": "2025-11-26",
+        "next_peak_week": "2027-01-06",
+        "next_ramp_week": "2026-12-23",
+        "next_launch_week": "2026-11-25",
+        "launch_month": "November 2026",
+        "campaign_it_suits": "Winter bedding and throws"
+      },
+      {
+        "keyword": "linen bedding",
+        "peak_week": "2026-03-25",
+        "peak_to_median": 2.17,
+        "yoy_growth_pct": 18,
+        "ramp_week": "2026-02-04",
+        "launch_week": "2026-01-07",
+        "next_peak_week": "2027-03-24",
+        "next_ramp_week": "2027-02-03",
+        "next_launch_week": "2027-01-06",
+        "launch_month": "January 2027",
+        "campaign_it_suits": "Spring linen bedding refresh"
+      },
+      {
+        "keyword": "linen duvet cover",
+        "peak_week": "2026-04-01",
+        "peak_to_median": 2.38,
+        "yoy_growth_pct": 22,
+        "ramp_week": "2026-02-18",
+        "launch_week": "2026-01-21",
+        "next_peak_week": "2027-03-31",
+        "next_ramp_week": "2027-02-17",
+        "next_launch_week": "2027-01-20",
+        "launch_month": "January 2027",
+        "campaign_it_suits": "Spring linen bedding refresh"
+      },
+      {
+        "keyword": "summer bedding",
+        "peak_week": "2026-06-17",
+        "peak_to_median": 4.76,
+        "yoy_growth_pct": 7,
+        "ramp_week": "2026-05-27",
+        "launch_week": "2026-04-29",
+        "next_peak_week": "2027-06-16",
+        "next_ramp_week": "2027-05-26",
+        "next_launch_week": "2027-04-28",
+        "launch_month": "April 2027",
+        "campaign_it_suits": "Summer bedding (lightweight linen)"
+      }
+    ],
+    "always_on": [
+      {
+        "keyword": "throw blanket",
+        "peak_week": "2025-12-17",
+        "peak_to_median": 1.09,
+        "yoy_growth_pct": 3
+      },
+      {
+        "keyword": "bedding ideas",
+        "peak_week": "2026-02-04",
+        "peak_to_median": 1.07,
+        "yoy_growth_pct": 5
+      }
+    ]
+  },
+  "ad_copy": {
+    "source_ad": "Static | Stonewashed duvet set",
+    "source_label": "lowest cost per outbound click among ads with 1,000+ impressions ($0.42)",
+    "current": {
+      "title": "Stonewashed Linen Duvet Cover Set | Larkmoor Home",
+      "title_chars": 49,
+      "shows_in_feed": "Stonewashed Linen Duvet Cover Set | Lark",
+      "description_chars": 199,
+      "link": "https://www.larkmoor.example/collections/duvet-covers"
+    },
+    "angle": "soft, stonewashed linen bedding in many colours",
+    "facts_on_the_pin": [
+      "stonewashed linen duvet cover set",
+      "two matching pillowcases included",
+      "12 colours",
+      "sizes twin to king",
+      "pre-washed, soft from the first night",
+      "free returns for 30 days"
+    ],
+    "titles": [
+      {
+        "title": "Larkmoor Home: Soft Linen From Night One | Stonewashed duvet cover set in 12 colours",
+        "chars": 84,
+        "shows_in_feed": "Larkmoor Home: Soft Linen From Night One"
+      },
+      {
+        "title": "Linen Duvet Cover Set by Larkmoor Home | Two matching pillowcases included, twin to king",
+        "chars": 88,
+        "shows_in_feed": "Linen Duvet Cover Set by Larkmoor Home |"
+      },
+      {
+        "title": "Larkmoor Home Linen Bedding, Pre-Washed | 12 colours, free returns for 30 days",
+        "chars": 78,
+        "shows_in_feed": "Larkmoor Home Linen Bedding, Pre-Washed "
+      },
+      {
+        "title": "Larkmoor Home: Linen Bedding in 12 Colours | Stonewashed, sizes twin to king",
+        "chars": 76,
+        "shows_in_feed": "Larkmoor Home: Linen Bedding in 12 Colou"
+      },
+      {
+        "title": "Larkmoor Home Stonewashed Linen Duvet Set | Soft from the first night, free 30-day returns",
+        "chars": 90,
+        "shows_in_feed": "Larkmoor Home Stonewashed Linen Duvet Se"
+      }
+    ],
+    "descriptions": [
+      {
+        "description": "A linen duvet cover set that feels soft from the first night: Larkmoor Home stonewashes every set, and each one comes with two matching pillowcases. Choose from 12 colours in sizes twin to king, and return it free within 30 days if it isn't right.",
+        "chars": 247,
+        "trend_keywords_in_first_sentence": [
+          "linen duvet cover"
+        ]
+      },
+      {
+        "description": "Linen bedding, pre-washed for you: our stonewashed duvet cover set comes with two matching pillowcases, in 12 colours from twin to king. Free returns for 30 days.",
+        "chars": 162,
+        "trend_keywords_in_first_sentence": [
+          "linen bedding"
+        ]
+      }
+    ],
+    "how_to_use_it": "An ad's title can't be edited, so the new copy needs a new pin. The source is an image pin, so I can create it with create_pin (it goes live on your board at once) and then draft create_ads with the new pin_id, after your yes."
+  },
+  "paused_build": {
+    "brief": "winter bedding and linen throws, sales, $40 a day, landing page https://www.larkmoor.example/collections/throws; first winter peak 2026-12-02.",
+    "decisions": [
+      "Objective WEB_CONVERSION: the tag is ACTIVE and last fired 2026-10-27, inside 7 days.",
+      "Daily cap $40.00 from your brief (40,000,000 micro-currency).",
+      "Billable event IMPRESSION, location US and expanded targeting off, copied from 'Keywords | Linen bedding'.",
+      "8 keywords: 6 matched trend keywords and 2 phrases from the proven winner's pin. That is under Pinterest's suggested 25, so send your own list before launch.",
+      "The ad uses the existing linen throw pin 860000000000000103 (no spec issues). It already links to https://www.larkmoor.example/collections/throws, your landing page, so no destination_url is needed.",
+      "No start or end time: the objects are created paused and you set the dates when you switch them on in Pinterest Ads Manager."
+    ],
+    "payloads": [
+      {
+        "step": 1,
+        "status": "not run",
+        "action": "create_campaigns",
+        "body": {
+          "workspace_id": 1,
+          "brand_id": 1,
+          "ad_account_id": "549200000101",
+          "action": "create_campaigns",
+          "body": [
+            {
+              "name": "Q4 2026 | Winter bedding and throws | Conversions",
+              "objective_type": "WEB_CONVERSION",
+              "daily_spend_cap": 40000000,
+              "status": "PAUSED"
+            }
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "status": "not run",
+        "action": "create_ad_groups",
+        "body": {
+          "workspace_id": 1,
+          "brand_id": 1,
+          "ad_account_id": "549200000101",
+          "action": "create_ad_groups",
+          "body": [
+            {
+              "name": "Q4 2026 | Winter bedding and throws | Keywords",
+              "campaign_id": "<NEW_CAMPAIGN_ID>",
+              "billable_event": "IMPRESSION",
+              "targeting_spec": {
+                "LOCATION": [
+                  "US"
+                ]
+              },
+              "auto_targeting_enabled": false,
+              "status": "PAUSED"
+            }
+          ]
+        }
+      },
+      {
+        "step": 3,
+        "status": "not run",
+        "action": "create_keywords",
+        "body": {
+          "workspace_id": 1,
+          "brand_id": 1,
+          "ad_account_id": "549200000101",
+          "action": "create_keywords",
+          "parent_id": "<NEW_AD_GROUP_ID>",
+          "keywords": [
+            {
+              "value": "linen throw blanket",
+              "match_type": "BROAD"
+            },
+            {
+              "value": "chunky throw blanket",
+              "match_type": "BROAD"
+            },
+            {
+              "value": "christmas bedding",
+              "match_type": "BROAD"
+            },
+            {
+              "value": "winter bedding",
+              "match_type": "BROAD"
+            },
+            {
+              "value": "throw blanket",
+              "match_type": "BROAD"
+            },
+            {
+              "value": "bedding ideas",
+              "match_type": "BROAD"
+            },
+            {
+              "value": "stonewashed linen",
+              "match_type": "BROAD"
+            },
+            {
+              "value": "linen duvet cover set",
+              "match_type": "BROAD"
+            }
+          ]
+        }
+      },
+      {
+        "step": 4,
+        "status": "not run",
+        "action": "create_ads",
+        "body": {
+          "workspace_id": 1,
+          "brand_id": 1,
+          "ad_account_id": "549200000101",
+          "action": "create_ads",
+          "body": [
+            {
+              "name": "Q4 2026 | Static | Linen throw",
+              "ad_group_id": "<NEW_AD_GROUP_ID>",
+              "pin_id": "860000000000000103",
+              "creative_type": "REGULAR",
+              "status": "PAUSED"
+            }
+          ]
+        }
+      }
+    ],
+    "keywords_with_sources": [
+      {
+        "value": "linen throw blanket",
+        "match_type": "BROAD",
+        "source": "Pinterest Trends (home_decor), matched your topic words"
+      },
+      {
+        "value": "chunky throw blanket",
+        "match_type": "BROAD",
+        "source": "Pinterest Trends (home_decor), matched your topic words"
+      },
+      {
+        "value": "christmas bedding",
+        "match_type": "BROAD",
+        "source": "Pinterest Trends (home_decor), matched your topic words"
+      },
+      {
+        "value": "winter bedding",
+        "match_type": "BROAD",
+        "source": "Pinterest Trends (home_decor), matched your topic words"
+      },
+      {
+        "value": "throw blanket",
+        "match_type": "BROAD",
+        "source": "Pinterest Trends (home_decor), matched your topic words"
+      },
+      {
+        "value": "bedding ideas",
+        "match_type": "BROAD",
+        "source": "Pinterest Trends (home_decor), matched your topic words"
+      },
+      {
+        "value": "stonewashed linen",
+        "match_type": "BROAD",
+        "source": "title and description of 'Static | Stonewashed duvet set', the proven winner"
+      },
+      {
+        "value": "linen duvet cover set",
+        "match_type": "BROAD",
+        "source": "title and description of 'Static | Stonewashed duvet set', the proven winner"
+      }
+    ],
+    "pause_payload": {
+      "status": "not run",
+      "action": "update_ads",
+      "body": {
+        "workspace_id": 1,
+        "brand_id": 1,
+        "ad_account_id": "549200000101",
+        "action": "update_ads",
+        "body": [
+          {
+            "id": "687000000204",
+            "status": "PAUSED"
+          }
+        ]
+      }
+    }
+  },
+  "unknowns": [
+    "Conversions API: not readable through this connection; check Pinterest Ads Manager under Conversions.",
+    "Product group split: needs the async report (create_report), classed as a write, so it was not run.",
+    "Performance before 2026-07-30: beyond the 90-day limit of the sync analytics."
+  ],
+  "go_deeper": [
+    "ad-creative-fatigue-detector to watch the static pins that have run since June (if installed)",
+    "meta-ads-creative-ranker to compare the video with your Meta creative (if installed)",
+    "marketing-performance-report for a cross-channel view (if installed)"
+  ]
+}

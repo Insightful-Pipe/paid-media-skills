@@ -1,0 +1,173 @@
+{
+  "note": "Example data: an invented online coffee roaster, not a real business. Every number in expected_output.json follows from this input.",
+  "request": "Hey Claude, I just added the \"paid-media-math\" skill. Work out our break-even ROAS and the most we can pay for a customer, check our live targets, tell me what it takes to make $60,000 from ads next month, whether the 3.0 ROAS on Meta our founder wants is realistic, and what testing a new product page on Meta would cost.",
+  "business": {
+    "name": "Example Coffee Roasters",
+    "site": "https://roastery.example",
+    "what_it_sells": "coffee beans, gift boxes and subscriptions, shipped in the US",
+    "currency": "USD"
+  },
+  "window": "2026-09-28 to 2026-10-27",
+  "connected": [
+    "shopify",
+    "google-ads",
+    "facebook-ads",
+    "tiktok-ads"
+  ],
+  "typed_by_user": {
+    "product_cost_per_order": 14.2,
+    "fulfilment_per_order": 7.8,
+    "card_fee_percent": 3.0,
+    "card_fee_fixed": 0.3,
+    "resale_share_of_returns": 0.0,
+    "profit_goal_share_of_revenue": 0.1,
+    "platform_value_basis": "order total with tax and shipping (the Shopify sales channel default)",
+    "meta_minimum_roas_floors": {
+      "Retargeting | 30 days": 2.5
+    },
+    "meta_minimum_roas_floors_note": "typed from Ads Manager, because the connector doesn't return bid_constraints"
+  },
+  "data_pulled": {
+    "store": {
+      "source": "shopify get_orders, status any, created in the window",
+      "orders": 1880,
+      "subtotal_after_discounts": 77456.0,
+      "shipping_charged": 7144.0,
+      "tax_collected": 3045.0,
+      "refunds": 1692.0,
+      "new_customers": 690
+    },
+    "repeat_cohort": {
+      "source": "shopify get_orders, 2025-09-28 to 2026-09-27",
+      "payback_window_months": 6,
+      "customers_first_order_in_first_6_months": 2140,
+      "further_orders_within_6_months": 3424
+    },
+    "google_ads_gaql": [
+      {
+        "campaign": "Coffee | Search non-brand",
+        "bidding_strategy_type": "MAXIMIZE_CONVERSIONS",
+        "target_cpa_micros": 25000000,
+        "target_roas": null,
+        "cost_micros": 4100000000,
+        "clicks": 3900,
+        "conversions": 165,
+        "conversions_value": 7700.0
+      },
+      {
+        "campaign": "Coffee | Shopping",
+        "bidding_strategy_type": "MAXIMIZE_CONVERSION_VALUE",
+        "target_cpa_micros": null,
+        "target_roas": 2.0,
+        "cost_micros": 3900000000,
+        "clicks": 3300,
+        "conversions": 180,
+        "conversions_value": 8700.0
+      },
+      {
+        "campaign": "Brand | Search",
+        "bidding_strategy_type": "MAXIMIZE_CLICKS",
+        "target_cpa_micros": null,
+        "target_roas": null,
+        "cost_micros": 1400000000,
+        "clicks": 600,
+        "conversions": 65,
+        "conversions_value": 3200.0
+      }
+    ],
+    "meta_get_insights_adaccount": [
+      {
+        "campaign_name": "Prospecting | Broad",
+        "spend": 7800.0,
+        "clicks": 10100,
+        "purchases": 300,
+        "purchase_value": 13600.0
+      },
+      {
+        "campaign_name": "Prospecting | Lookalike",
+        "spend": 3000.0,
+        "clicks": 3500,
+        "purchases": 130,
+        "purchase_value": 6000.0
+      },
+      {
+        "campaign_name": "Retargeting | 30 days",
+        "spend": 1800.0,
+        "clicks": 1700,
+        "purchases": 90,
+        "purchase_value": 4300.0
+      }
+    ],
+    "meta_get_adsets": [
+      {
+        "name": "Prospecting | Broad",
+        "effective_status": "ACTIVE",
+        "bid_strategy": "COST_CAP",
+        "bid_amount": 5800
+      },
+      {
+        "name": "Prospecting | Lookalike",
+        "effective_status": "ACTIVE",
+        "bid_strategy": "COST_CAP",
+        "bid_amount": 3800
+      },
+      {
+        "name": "Retargeting | 30 days",
+        "effective_status": "ACTIVE",
+        "bid_strategy": "LOWEST_COST_WITH_MIN_ROAS",
+        "bid_amount": null
+      }
+    ],
+    "tiktok_integrated_report_basic": [
+      {
+        "campaign": "Spark | Value",
+        "spend": 1100.0,
+        "clicks": 2500,
+        "conversion": 22,
+        "total_purchase_value": 1000.0
+      },
+      {
+        "campaign": "Spark | Purchases",
+        "spend": 800.0,
+        "clicks": 1600,
+        "conversion": 16,
+        "total_purchase_value": 700.0
+      }
+    ],
+    "tiktok_adgroups_metadata": [
+      {
+        "adgroup_name": "Spark | Value",
+        "operation_status": "ENABLE",
+        "bid_type": "BID_TYPE_CUSTOM",
+        "conversion_bid_price": 0,
+        "roas_bid": 0.8
+      },
+      {
+        "adgroup_name": "Spark | Purchases",
+        "operation_status": "ENABLE",
+        "bid_type": "BID_TYPE_CUSTOM",
+        "conversion_bid_price": 45.0,
+        "roas_bid": null
+      }
+    ]
+  },
+  "goal": {
+    "type": "net revenue from ads (after discounts, excluding tax), the same basis as R",
+    "amount": 60000.0,
+    "period": "next 30 days",
+    "split": "today's split of claimed conversions"
+  },
+  "handed_target": {
+    "platform": "Meta",
+    "metric": "ROAS",
+    "value": 3.0,
+    "basis": "as Meta reports it",
+    "from": "the founder"
+  },
+  "test": {
+    "channel": "Meta",
+    "what": "a new product page for the house blend",
+    "min_lift": 0.15,
+    "daily_budget": "Meta's current daily spend"
+  }
+}

@@ -1,0 +1,838 @@
+{
+  "header": {
+    "business": "Example Booking Software",
+    "window": "2026-09-28 to 2026-10-27",
+    "currency": "USD",
+    "platforms": [
+      "TikTok Ads (MCP + delivery report export)",
+      "Microsoft Advertising (MCP + Website URL report export)",
+      "LinkedIn Ads (MCP + Audience Network publisher export)",
+      "DSP (domain report export)",
+      "GA4 (MCP)"
+    ],
+    "target_cost_per_result": {
+      "tiktok-ads": 60.0,
+      "microsoft-ads": 60.0,
+      "linkedin-ads": 100.0,
+      "dsp": 60.0
+    },
+    "red_lines": [
+      "apps made for children",
+      "gambling and casino",
+      "adult content",
+      "crime and tragedy news"
+    ],
+    "thresholds": [
+      "judge a row at 20+ clicks or spend >= target",
+      "no return: spend >= target, 0 conversions",
+      "accidental taps: 20+ clicks, CTR >= 3x the network's CTR",
+      "thin visits: 30+ clicks, sessions per click or engaged share under half the baseline",
+      "made for advertising, suspected: a site with 0 conversions and 2+ of taps, thin visits, viewability < 40%, invalid traffic >= 10%",
+      "costly: CPR > 2x target on spend >= 2x target",
+      "turn a network off: >= 20% of spend and CPR >= 2x the feed's (10+ feed results), or 0 results on spend >= 2x target"
+    ]
+  },
+  "network_verdicts": {
+    "tiktok_ads": {
+      "by_adgroup": [
+        {
+          "adgroup": "Salon owners - interests",
+          "adgroup_id": "1800000000000001",
+          "network_spend": 700.0,
+          "network_share_of_spend_pct": 31.8,
+          "network_share_of_impressions_pct": 42.4,
+          "network_cost_per_result": 233.33,
+          "feed_cost_per_result": 50.0,
+          "network_results": 3,
+          "feed_results": 30,
+          "verdict": "turn the network off here",
+          "reach_cost": "This network gave 42.4% of the impressions here; turning it off gives up that reach."
+        },
+        {
+          "adgroup": "Clinic managers - broad",
+          "adgroup_id": "1800000000000002",
+          "network_spend": 200.0,
+          "network_share_of_spend_pct": 18.2,
+          "network_share_of_impressions_pct": 26.7,
+          "network_cost_per_result": 200.0,
+          "feed_cost_per_result": 50.0,
+          "network_results": 1,
+          "feed_results": 18,
+          "verdict": "keep, with a block list"
+        },
+        {
+          "adgroup": "Fitness studios - TikTok only",
+          "verdict": "network not used (TikTok-only placement)"
+        }
+      ],
+      "ga4_network_level": {
+        "feed_sessions_per_click_pct": 90.0,
+        "feed_engaged_pct": 61.0,
+        "network_sessions_per_click_pct": 27.0,
+        "network_engaged_pct": 20.9,
+        "thin_visits_at_network_level": true
+      }
+    },
+    "microsoft_ads": {
+      "by_campaign": [
+        {
+          "campaign": "Search - Booking software",
+          "network_spend": 500.0,
+          "network_share_of_spend_pct": 21.7,
+          "network_share_of_impressions_pct": 83.3,
+          "network_cost_per_result": 250.0,
+          "feed_cost_per_result": 50.0,
+          "network_results": 2,
+          "feed_results": 36,
+          "AudienceAdsBidAdjustment": 0,
+          "verdict": "turn the network off here",
+          "reach_cost": "This network gave 83.3% of the impressions here; turning it off gives up that reach."
+        },
+        {
+          "campaign": "Audience - Salon and clinic owners",
+          "verdict": "Audience campaign: the network is the campaign, so prune with site exclusions",
+          "flagged_spend": 520.0
+        }
+      ],
+      "ga4_network_level": [
+        {
+          "campaign": "Search - Booking software",
+          "audience_sessions_per_click_pct": 40.0,
+          "audience_engaged_pct": 22.1,
+          "baseline_sessions_per_click_pct": 92.2,
+          "baseline_engaged_pct": 64.0,
+          "thin_visits_at_network_level": true
+        },
+        {
+          "campaign": "Audience - Salon and clinic owners",
+          "audience_sessions_per_click_pct": 55.0,
+          "audience_engaged_pct": 34.0,
+          "baseline_sessions_per_click_pct": 92.2,
+          "baseline_engaged_pct": 64.0,
+          "thin_visits_at_network_level": false
+        }
+      ]
+    },
+    "linkedin_ads": {
+      "by_campaign": [
+        {
+          "campaign": "Demo - Clinic managers",
+          "campaign_id": "600000001",
+          "network_spend": 900.0,
+          "network_share_of_spend_pct": 22.0,
+          "network_share_of_impressions_pct": 42.9,
+          "network_cost_per_result": 900.0,
+          "feed_cost_per_result": 80.0,
+          "network_results": 1,
+          "feed_results": 40,
+          "offsiteDeliveryEnabled": true,
+          "verdict": "turn the network off here",
+          "reach_cost": "This network gave 42.9% of the impressions here; turning it off gives up that reach."
+        },
+        {
+          "campaign": "Demo - Salon owners",
+          "campaign_id": "600000002",
+          "network_spend": 300.0,
+          "network_share_of_spend_pct": 16.7,
+          "network_share_of_impressions_pct": 40.0,
+          "network_cost_per_result": 100.0,
+          "feed_cost_per_result": 75.0,
+          "network_results": 3,
+          "feed_results": 20,
+          "offsiteDeliveryEnabled": true,
+          "verdict": "keep, with a block list"
+        }
+      ],
+      "ga4": "not graded: LinkedIn URL tracking passes no placement, so Audience Network visits can't be told apart in GA4"
+    },
+    "dsp": {
+      "ga4_baseline": {
+        "rows": [
+          "clinicmanagerhub.example"
+        ],
+        "sessions_per_click_pct": 87.5,
+        "engaged_pct": 65.7
+      }
+    }
+  },
+  "site_and_app_findings": {
+    "tiktok_ad_network": [
+      {
+        "platform": "TikTok Ad Network",
+        "placement": "Tile matching puzzle game (com.example.tilematch)",
+        "spend": 150.0,
+        "spend_estimated": true,
+        "clicks": 1650,
+        "impressions": 30000,
+        "ctr_pct": 5.5,
+        "network_ctr_pct": 1.44,
+        "conversions": "not in export",
+        "flags": [
+          "accidental taps"
+        ],
+        "action": "block",
+        "notes": [
+          "No-return and costly checks not graded: the export has no conversions."
+        ],
+        "bundle_id": "com.example.tilematch",
+        "store_category": "Games > Puzzle"
+      },
+      {
+        "platform": "TikTok Ad Network",
+        "placement": "Coloring game for children (com.example.kidscolor)",
+        "spend": 45.0,
+        "spend_estimated": true,
+        "clicks": 120,
+        "impressions": 9000,
+        "ctr_pct": 1.33,
+        "network_ctr_pct": 1.44,
+        "conversions": "not in export",
+        "flags": [
+          "red line: apps made for children"
+        ],
+        "action": "block",
+        "notes": [
+          "No-return and costly checks not graded: the export has no conversions."
+        ],
+        "bundle_id": "com.example.kidscolor",
+        "store_category": "Games > Kids"
+      },
+      {
+        "platform": "TikTok Ad Network",
+        "placement": "Weather forecast app (com.example.weatherdaily)",
+        "spend": 250.0,
+        "spend_estimated": true,
+        "clicks": 230,
+        "impressions": 50000,
+        "ctr_pct": 0.46,
+        "network_ctr_pct": 1.44,
+        "conversions": "not in export",
+        "flags": [],
+        "action": "keep",
+        "notes": [
+          "No-return and costly checks not graded: the export has no conversions."
+        ],
+        "bundle_id": "com.example.weatherdaily",
+        "store_category": "Weather"
+      },
+      {
+        "platform": "TikTok Ad Network",
+        "placement": "General news reader (com.example.newsbrief)",
+        "spend": 175.0,
+        "spend_estimated": true,
+        "clicks": 250,
+        "impressions": 35000,
+        "ctr_pct": 0.71,
+        "network_ctr_pct": 1.44,
+        "conversions": "not in export",
+        "flags": [
+          "unclear content: general news could carry crime and tragedy stories"
+        ],
+        "action": "check by hand",
+        "notes": [
+          "No-return and costly checks not graded: the export has no conversions."
+        ],
+        "bundle_id": "com.example.newsbrief",
+        "store_category": "News"
+      },
+      {
+        "platform": "TikTok Ad Network",
+        "placement": "Casino slots game (com.example.slotsfun)",
+        "spend": 30.0,
+        "spend_estimated": true,
+        "clicks": 60,
+        "impressions": 6000,
+        "ctr_pct": 1.0,
+        "network_ctr_pct": 1.44,
+        "conversions": "not in export",
+        "flags": [
+          "red line: gambling and casino"
+        ],
+        "action": "block",
+        "notes": [
+          "No-return and costly checks not graded: the export has no conversions."
+        ],
+        "bundle_id": "com.example.slotsfun",
+        "store_category": "Games > Casino"
+      },
+      {
+        "platform": "TikTok Ad Network",
+        "placement": "Phone storage cleaner (com.example.cleanerpro)",
+        "spend": 150.0,
+        "spend_estimated": true,
+        "clicks": 180,
+        "impressions": 30000,
+        "ctr_pct": 0.6,
+        "network_ctr_pct": 1.44,
+        "conversions": "not in export",
+        "flags": [],
+        "action": "keep",
+        "notes": [
+          "No-return and costly checks not graded: the export has no conversions."
+        ],
+        "bundle_id": "com.example.cleanerpro",
+        "store_category": "Tools"
+      },
+      {
+        "platform": "TikTok Ad Network",
+        "placement": "Recipe collection app (com.example.recipebox)",
+        "spend": 60.0,
+        "spend_estimated": true,
+        "clicks": 80,
+        "impressions": 12000,
+        "ctr_pct": 0.67,
+        "network_ctr_pct": 1.44,
+        "conversions": "not in export",
+        "flags": [],
+        "action": "keep",
+        "notes": [
+          "No-return and costly checks not graded: the export has no conversions."
+        ],
+        "bundle_id": "com.example.recipebox",
+        "store_category": "Food and Drink"
+      },
+      {
+        "platform": "TikTok Ad Network",
+        "placement": "Flashlight utility (com.example.flashlight)",
+        "spend": 40.0,
+        "spend_estimated": true,
+        "clicks": 30,
+        "impressions": 8000,
+        "ctr_pct": 0.38,
+        "network_ctr_pct": 1.44,
+        "conversions": "not in export",
+        "flags": [],
+        "action": "keep",
+        "notes": [
+          "No-return and costly checks not graded: the export has no conversions."
+        ],
+        "bundle_id": "com.example.flashlight",
+        "store_category": "Tools"
+      }
+    ],
+    "microsoft_audience_network": [
+      {
+        "platform": "Microsoft Audience Network",
+        "placement": "dailyquizhub.example",
+        "spend": 360.0,
+        "spend_estimated": false,
+        "clicks": 420,
+        "impressions": 50000,
+        "ctr_pct": 0.84,
+        "network_ctr_pct": 0.36,
+        "conversions": 0,
+        "flags": [
+          "no return"
+        ],
+        "action": "block",
+        "campaign": "Search - Booking software"
+      },
+      {
+        "platform": "Microsoft Audience Network",
+        "placement": "weatherwatch.example",
+        "spend": 140.0,
+        "spend_estimated": false,
+        "clicks": 180,
+        "impressions": 100000,
+        "ctr_pct": 0.18,
+        "network_ctr_pct": 0.36,
+        "conversions": 2,
+        "flags": [],
+        "action": "keep",
+        "campaign": "Search - Booking software"
+      },
+      {
+        "platform": "Microsoft Audience Network",
+        "placement": "dailyquizhub.example",
+        "spend": 300.0,
+        "spend_estimated": false,
+        "clicks": 660,
+        "impressions": 60000,
+        "ctr_pct": 1.1,
+        "network_ctr_pct": 0.36,
+        "conversions": 0,
+        "flags": [
+          "no return",
+          "accidental taps"
+        ],
+        "action": "block",
+        "campaign": "Audience - Salon and clinic owners"
+      },
+      {
+        "platform": "Microsoft Audience Network",
+        "placement": "homeservicestoday.example",
+        "spend": 260.0,
+        "spend_estimated": false,
+        "clicks": 240,
+        "impressions": 90000,
+        "ctr_pct": 0.27,
+        "network_ctr_pct": 0.36,
+        "conversions": 7,
+        "flags": [],
+        "action": "keep",
+        "campaign": "Audience - Salon and clinic owners"
+      },
+      {
+        "platform": "Microsoft Audience Network",
+        "placement": "salonpronews.example",
+        "spend": 180.0,
+        "spend_estimated": false,
+        "clicks": 180,
+        "impressions": 70000,
+        "ctr_pct": 0.26,
+        "network_ctr_pct": 0.36,
+        "conversions": 5,
+        "flags": [],
+        "action": "keep",
+        "campaign": "Audience - Salon and clinic owners"
+      },
+      {
+        "platform": "Microsoft Audience Network",
+        "placement": "celebgossipdaily.example",
+        "spend": 150.0,
+        "spend_estimated": false,
+        "clicks": 150,
+        "impressions": 80000,
+        "ctr_pct": 0.19,
+        "network_ctr_pct": 0.36,
+        "conversions": 0,
+        "flags": [
+          "no return"
+        ],
+        "action": "block",
+        "campaign": "Audience - Salon and clinic owners"
+      },
+      {
+        "platform": "Microsoft Audience Network",
+        "placement": "smallbizjournal.example",
+        "spend": 140.0,
+        "spend_estimated": false,
+        "clicks": 120,
+        "impressions": 60000,
+        "ctr_pct": 0.2,
+        "network_ctr_pct": 0.36,
+        "conversions": 2,
+        "flags": [],
+        "action": "keep",
+        "campaign": "Audience - Salon and clinic owners"
+      },
+      {
+        "platform": "Microsoft Audience Network",
+        "placement": "crimeandcrashreports.example",
+        "spend": 70.0,
+        "spend_estimated": false,
+        "clicks": 50,
+        "impressions": 40000,
+        "ctr_pct": 0.12,
+        "network_ctr_pct": 0.36,
+        "conversions": 0,
+        "flags": [
+          "no return",
+          "red line: crime and tragedy news"
+        ],
+        "action": "block",
+        "campaign": "Audience - Salon and clinic owners"
+      }
+    ],
+    "linkedin_audience_network": [
+      {
+        "platform": "LinkedIn Audience Network",
+        "placement": "Word puzzle game (https://play.google.com/store/apps/details?id=com.example.wordpuzzle)",
+        "spend": 266.67,
+        "spend_estimated": true,
+        "clicks": 700,
+        "impressions": 40000,
+        "ctr_pct": 1.75,
+        "network_ctr_pct": 0.53,
+        "conversions": "not in export",
+        "flags": [
+          "accidental taps"
+        ],
+        "action": "block",
+        "notes": [
+          "No-return and costly checks not graded: the export has no conversions."
+        ],
+        "url": "https://play.google.com/store/apps/details?id=com.example.wordpuzzle"
+      },
+      {
+        "platform": "LinkedIn Audience Network",
+        "placement": "Business news site (bizinsightsweekly.example)",
+        "spend": 400.0,
+        "spend_estimated": true,
+        "clicks": 150,
+        "impressions": 60000,
+        "ctr_pct": 0.25,
+        "network_ctr_pct": 0.53,
+        "conversions": "not in export",
+        "flags": [],
+        "action": "keep",
+        "notes": [
+          "No-return and costly checks not graded: the export has no conversions."
+        ],
+        "url": "bizinsightsweekly.example"
+      },
+      {
+        "platform": "LinkedIn Audience Network",
+        "placement": "HR and people management site (hrleadersdigest.example)",
+        "spend": 266.67,
+        "spend_estimated": true,
+        "clicks": 70,
+        "impressions": 40000,
+        "ctr_pct": 0.17,
+        "network_ctr_pct": 0.53,
+        "conversions": "not in export",
+        "flags": [],
+        "action": "keep",
+        "notes": [
+          "No-return and costly checks not graded: the export has no conversions."
+        ],
+        "url": "hrleadersdigest.example"
+      },
+      {
+        "platform": "LinkedIn Audience Network",
+        "placement": "Card solitaire game (https://play.google.com/store/apps/details?id=com.example.solitaire)",
+        "spend": 166.67,
+        "spend_estimated": true,
+        "clicks": 30,
+        "impressions": 25000,
+        "ctr_pct": 0.12,
+        "network_ctr_pct": 0.53,
+        "conversions": "not in export",
+        "flags": [],
+        "action": "keep",
+        "notes": [
+          "No-return and costly checks not graded: the export has no conversions."
+        ],
+        "url": "https://play.google.com/store/apps/details?id=com.example.solitaire"
+      },
+      {
+        "platform": "LinkedIn Audience Network",
+        "placement": "Alphabet game for children (https://play.google.com/store/apps/details?id=com.example.kidsabc)",
+        "spend": 100.0,
+        "spend_estimated": true,
+        "clicks": 10,
+        "impressions": 15000,
+        "ctr_pct": 0.07,
+        "network_ctr_pct": 0.53,
+        "conversions": "not in export",
+        "flags": [
+          "red line: apps made for children"
+        ],
+        "action": "block",
+        "notes": [
+          "No-return and costly checks not graded: the export has no conversions."
+        ],
+        "url": "https://play.google.com/store/apps/details?id=com.example.kidsabc"
+      }
+    ],
+    "dsp": [
+      {
+        "platform": "DSP",
+        "placement": "topfactsdaily.example",
+        "spend": 400.0,
+        "spend_estimated": false,
+        "clicks": 900,
+        "impressions": 200000,
+        "ctr_pct": 0.45,
+        "network_ctr_pct": 0.31,
+        "conversions": 0,
+        "flags": [
+          "no return",
+          "thin visits",
+          "made for advertising, suspected"
+        ],
+        "action": "block",
+        "viewability_pct": 31,
+        "invalid_traffic_pct": 14,
+        "ga4_sessions_per_click_pct": 27.8,
+        "ga4_engaged_pct": 12.0
+      },
+      {
+        "platform": "DSP",
+        "placement": "clinicmanagerhub.example",
+        "spend": 240.0,
+        "spend_estimated": false,
+        "clicks": 160,
+        "impressions": 80000,
+        "ctr_pct": 0.2,
+        "network_ctr_pct": 0.31,
+        "conversions": 6,
+        "flags": [],
+        "action": "keep",
+        "viewability_pct": 68,
+        "invalid_traffic_pct": 2,
+        "ga4_sessions_per_click_pct": 87.5,
+        "ga4_engaged_pct": 65.7
+      },
+      {
+        "platform": "DSP",
+        "placement": "beautybizdaily.example",
+        "spend": 250.0,
+        "spend_estimated": false,
+        "clicks": 140,
+        "impressions": 90000,
+        "ctr_pct": 0.16,
+        "network_ctr_pct": 0.31,
+        "conversions": 4,
+        "flags": [],
+        "action": "keep",
+        "viewability_pct": 64,
+        "invalid_traffic_pct": 3,
+        "ga4_sessions_per_click_pct": 85.7,
+        "ga4_engaged_pct": 60.8
+      },
+      {
+        "platform": "DSP",
+        "placement": "slideshowworld.example",
+        "spend": 210.0,
+        "spend_estimated": false,
+        "clicks": 520,
+        "impressions": 150000,
+        "ctr_pct": 0.35,
+        "network_ctr_pct": 0.31,
+        "conversions": 0,
+        "flags": [
+          "no return",
+          "thin visits",
+          "made for advertising, suspected"
+        ],
+        "action": "block",
+        "viewability_pct": 36,
+        "invalid_traffic_pct": 6,
+        "ga4_sessions_per_click_pct": 25.0,
+        "ga4_engaged_pct": 9.2
+      },
+      {
+        "platform": "DSP",
+        "placement": "localnewsnow.example",
+        "spend": 100.0,
+        "spend_estimated": false,
+        "clicks": 80,
+        "impressions": 60000,
+        "ctr_pct": 0.13,
+        "network_ctr_pct": 0.31,
+        "conversions": 1,
+        "flags": [
+          "unclear content: general local news could carry crime and tragedy stories"
+        ],
+        "action": "check by hand",
+        "viewability_pct": 58,
+        "invalid_traffic_pct": 4,
+        "ga4_sessions_per_click_pct": 82.5,
+        "ga4_engaged_pct": 54.5
+      }
+    ]
+  },
+  "block_lists": {
+    "tiktok_ad_network": {
+      "format": "bundle IDs, one per row in an .xlsx, at most 10,000",
+      "from_current_list": 1,
+      "new": 3,
+      "list": [
+        "com.example.oldwallpaper",
+        "com.example.tilematch",
+        "com.example.kidscolor",
+        "com.example.slotsfun"
+      ]
+    },
+    "microsoft": {
+      "format": "site URLs, at most 2,500 per campaign; the set call replaces the list, so these are merged",
+      "by_campaign": [
+        {
+          "campaign": "Audience - Salon and clinic owners",
+          "current": [
+            "oldcouponsite.example"
+          ],
+          "new": [
+            "dailyquizhub.example",
+            "celebgossipdaily.example",
+            "crimeandcrashreports.example"
+          ],
+          "merged": [
+            "oldcouponsite.example",
+            "dailyquizhub.example",
+            "celebgossipdaily.example",
+            "crimeandcrashreports.example"
+          ]
+        }
+      ],
+      "notes": [
+        "Search - Booking software: no list, because Audience ads get a turn-off verdict there."
+      ]
+    },
+    "linkedin_audience_network": {
+      "format": "one column of URLs in a .csv, uploaded in Campaign Manager (up to 48 hours to apply)",
+      "new": 2,
+      "list": [
+        "https://play.google.com/store/apps/details?id=com.example.wordpuzzle",
+        "https://play.google.com/store/apps/details?id=com.example.kidsabc"
+      ]
+    },
+    "dsp": {
+      "format": "domains, as the DSP's block list asks",
+      "new": 2,
+      "list": [
+        "topfactsdaily.example",
+        "slideshowworld.example"
+      ]
+    }
+  },
+  "settings_to_change": [
+    {
+      "platform": "TikTok",
+      "where": "Salon owners - interests",
+      "change": "Switch placements from automatic to TikTok only (remove TikTok Ad Network and the global app bundle).",
+      "who": "do this in TikTok Ads Manager"
+    },
+    {
+      "platform": "TikTok",
+      "where": "Salon owners - interests",
+      "change": "brand_safety_type is NO_BRAND_SAFETY while the brand has red lines: set an inventory filter tier.",
+      "who": "do this in TikTok Ads Manager"
+    },
+    {
+      "platform": "TikTok",
+      "where": "Clinic managers - broad",
+      "change": "Keep TikTok Ad Network; turn on 'Use block list' in the ad group after the list is updated (the API read doesn't show this toggle).",
+      "who": "do this in TikTok Ads Manager"
+    },
+    {
+      "platform": "Microsoft",
+      "where": "Search - Booking software",
+      "change": "Audience ads are on (AudienceAdsBidAdjustment 0); set it to -100 to switch them off on this Search campaign.",
+      "who": "do this in Microsoft Advertising"
+    },
+    {
+      "platform": "Microsoft",
+      "where": "Audience - Salon and clinic owners",
+      "change": "Set campaign site exclusions to the merged list of 4 URLs.",
+      "who": "I can do this now"
+    },
+    {
+      "platform": "LinkedIn",
+      "where": "Demo - Clinic managers",
+      "change": "Turn LinkedIn Audience Network off (offsiteDeliveryEnabled false).",
+      "who": "I can do this now"
+    },
+    {
+      "platform": "LinkedIn",
+      "where": "Demo - Salon owners",
+      "change": "Keep Audience Network on and apply the account block list in Campaign Manager.",
+      "who": "do this in LinkedIn Campaign Manager"
+    },
+    {
+      "platform": "TikTok",
+      "where": "Ad Network block list",
+      "change": "Update the block list to the merged 4 bundle IDs.",
+      "who": "I can do this now"
+    },
+    {
+      "platform": "DSP",
+      "where": "domain block list",
+      "change": "Add 2 domains to the DSP block list.",
+      "who": "do this in the DSP"
+    }
+  ],
+  "tracking": [
+    "TikTok: GA4 shows TikTok and Pangle values in utm_content, so __PLACEMENT__ is in the URLs (network level only).",
+    "Microsoft: FinalUrlSuffix carries utm_content={Network} on both campaigns (network level only).",
+    "DSP: utm_content carries the domain, so visits are judged per site.",
+    "LinkedIn: no placement macro exists; judged on LinkedIn numbers only."
+  ],
+  "money_at_stake": {
+    "window": "2026-09-28 to 2026-10-27",
+    "by_platform": [
+      {
+        "platform": "TikTok",
+        "turn_off_spend": 700.0,
+        "block_list_spend": 50.0,
+        "estimated": true,
+        "how": "Turn-off: the network's actual spend in ad groups with that verdict. Block list: estimated spend on blocked apps, times the share of network spend in ad groups that keep the network."
+      },
+      {
+        "platform": "Microsoft",
+        "turn_off_spend": 500.0,
+        "block_list_spend": 520.0,
+        "estimated": false,
+        "how": "Turn-off: Audience spend on the Search campaign. Block list: blocked sites' spend in the Audience campaign (the export has spend)."
+      },
+      {
+        "platform": "LinkedIn",
+        "turn_off_spend": 900.0,
+        "block_list_spend": 91.67,
+        "estimated": true,
+        "how": "Turn-off: Audience Network spend on that campaign. Block list: estimated spend on blocked publishers, times the share of network spend in campaigns that keep the network."
+      },
+      {
+        "platform": "DSP",
+        "turn_off_spend": 0.0,
+        "block_list_spend": 610.0,
+        "estimated": false,
+        "how": "Blocked domains' spend."
+      }
+    ],
+    "total": 3371.67,
+    "note": "Spend in the window on placements this report turns off or blocks. Blocking stops future delivery there; the platform may move the budget to other partner inventory, so recheck after the next 30 days."
+  },
+  "not_graded": [
+    "TikTok and LinkedIn app and site rows: no-return and costly checks, because those exports have no conversions.",
+    "TikTok and Microsoft site-level visit quality: their URL macros pass the network, not the site.",
+    "LinkedIn visit quality at any level: no placement macro."
+  ],
+  "fixes_offered": [
+    {
+      "fix": "Update the TikTok Ad Network block list",
+      "status": "not run, waiting for the user's yes",
+      "payload": {
+        "platform": "tiktok-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "7000000000000000001",
+        "action": "pangle_block_list_update",
+        "advertiser_id": "7000000000000000001",
+        "app_block_list": [
+          "com.example.oldwallpaper",
+          "com.example.tilematch",
+          "com.example.kidscolor",
+          "com.example.slotsfun"
+        ]
+      }
+    },
+    {
+      "fix": "Set Microsoft site exclusions on Audience - Salon and clinic owners",
+      "status": "not run, waiting for the user's yes",
+      "payload": {
+        "platform": "microsoft-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "150000001",
+        "action": "set_negative_sites_to_campaigns",
+        "campaign_negative_sites": [
+          {
+            "CampaignId": "410000002",
+            "NegativeSites": [
+              "oldcouponsite.example",
+              "dailyquizhub.example",
+              "celebgossipdaily.example",
+              "crimeandcrashreports.example"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fix": "Turn LinkedIn Audience Network off on Demo - Clinic managers",
+      "status": "not run, waiting for the user's yes",
+      "payload": {
+        "platform": "linkedin-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "action": "update_campaign",
+        "ad_account_id": "500000001",
+        "campaign_id": "600000001",
+        "offsiteDeliveryEnabled": false
+      }
+    }
+  ],
+  "summary": "Partner networks cost 3371.67 USD in the window on placements this report turns off or blocks. TikTok Ad Network in 'Salon owners - interests' ran at 233.33 per result against 50.0 on TikTok, and GA4 shows 27.0% of its clicks became sessions against 90.0% from the feed. Microsoft Audience ads on the Search campaign took 21.7% of its spend at 250.0 per result. LinkedIn Audience Network on 'Demo - Clinic managers' cost 900.0 per result against 80.0 in the feed. Two open-web sites look made for advertising. Block lists: 4 TikTok bundle IDs, 4 Microsoft URLs, 2 LinkedIn URLs and 2 DSP domains."
+}

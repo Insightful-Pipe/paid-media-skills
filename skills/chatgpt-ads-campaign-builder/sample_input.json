@@ -1,0 +1,443 @@
+{
+  "note": "Example data: an invented online booking software company with invented accounts, not a real business. Every number in expected_output.json follows from this input. Nothing was created: every write is a drafted payload marked not run.",
+  "request": "Hey Claude, I just added the \"chatgpt-ads-campaign-builder\" skill. Build a ChatGPT Ads campaign for https://example.com/industries/salons in the US and Canada, bidding on sign-ups, with a $2,000 lifetime cap and a $45 target cost per sign-up. Use the square image at https://www.example.com/images/ads/salon-booking-square-1200.png, use our existing sign-up tracking, make an audience from the customer list I attached (2,400 emails) so we can exclude current customers, and add a salon demo request lead form. Write the ad copy too. Draft everything; don't create anything yet.",
+  "account": {
+    "name": "Example Booking Software",
+    "ad_account_id": "adacct_ex1000000001",
+    "currency": "USD",
+    "time_zone": "America/New_York",
+    "brand_site": "https://www.example.com",
+    "workspace_id": 1,
+    "brand_id": 1
+  },
+  "brief": {
+    "offer": "online booking software for hair and beauty salons",
+    "landing_url": "https://example.com/industries/salons",
+    "locations": [
+      "united states",
+      "canada"
+    ],
+    "goal": "conversions",
+    "conversion_that_matters": "sign-ups",
+    "lifetime_cap_usd": 2000,
+    "target_cpa_usd": 45.0,
+    "image_url": "https://www.example.com/images/ads/salon-booking-square-1200.png",
+    "customer_list": {
+      "rows": 2400,
+      "column": "email",
+      "use": "exclude current customers"
+    },
+    "lead_form": "yes: a salon demo request form"
+  },
+  "date_range": {
+    "insights": "2026-09-28 to 2026-10-27",
+    "why": "last 30 complete days, for the bid anchor"
+  },
+  "data_pulled": [
+    "query_contexts accounts (access_level full)",
+    "get_ad_account (status, review, currency, time zone, url)",
+    "crawler status-code-checker on the landing page (HTTP 200, 2 redirects) and the privacy page (HTTP 200)",
+    "web fetch of the final landing page: title, H1, 6 H2 headings and the lines under them",
+    "get_campaigns (5), get_ad_groups for each (6), get_ads for each ad group (13)",
+    "get_ad_account_insights 2026-09-28 to 2026-10-27 (1 row)",
+    "get_pixels (2), get_event_settings (4), get_conversion_events for each pixel",
+    "get_custom_audiences (2)",
+    "get_lead_forms (1)",
+    "search_geo_locations \"united states\" and \"canada\""
+  ],
+  "reads": {
+    "accounts": {
+      "ad_account_id": "adacct_ex1000000001",
+      "name": "Example Booking Software",
+      "access_level": "full"
+    },
+    "get_ad_account": {
+      "id": "adacct_ex1000000001",
+      "name": "Example Booking Software",
+      "status": "active",
+      "review": {
+        "status": "approved"
+      },
+      "currency_code": "USD",
+      "timezone": "America/New_York",
+      "url": "https://www.example.com"
+    },
+    "status_code_checker": [
+      {
+        "url": "https://example.com/industries/salons",
+        "status_code": 200,
+        "redirect_count": 2,
+        "final_url": "https://www.example.com/industries/salons/"
+      },
+      {
+        "url": "https://www.example.com/privacy/",
+        "status_code": 200,
+        "redirect_count": 0,
+        "final_url": "https://www.example.com/privacy/"
+      }
+    ],
+    "landing_page": {
+      "title": "Booking software for salons | Example Booking Software",
+      "h1": "Online booking for salons that keeps every chair busy",
+      "sections": [
+        {
+          "h2": "Clients book 24/7, even when you're with a client",
+          "lines": [
+            "Add a Book now button to your website and social profiles.",
+            "Clients pick a service, a time and their favourite stylist."
+          ]
+        },
+        {
+          "h2": "Every stylist's day in one calendar",
+          "lines": [
+            "See all chairs and stylists at a glance.",
+            "Two-way calendar sync means no double bookings."
+          ]
+        },
+        {
+          "h2": "Deposits that stop no-shows",
+          "lines": [
+            "Take a deposit or card on file when clients book.",
+            "Charge your cancellation fee automatically.",
+            "Clients see your deposit policy before they book, so nothing comes as a surprise."
+          ]
+        },
+        {
+          "h2": "Reminders clients actually read",
+          "lines": [
+            "Automatic SMS and email reminders go out 24 hours and 2 hours before each appointment."
+          ]
+        },
+        {
+          "h2": "Switch in an afternoon",
+          "lines": [
+            "Import your clients and services from a spreadsheet.",
+            "We help you move from your old booking system."
+          ]
+        },
+        {
+          "h2": "Plans for salons with 1 to 20 staff",
+          "lines": [
+            "Plans from $19 a month."
+          ]
+        }
+      ]
+    },
+    "get_campaigns": [
+      {
+        "id": "cmpn_ex01",
+        "name": "Online booking | US | Clicks | 2026-08",
+        "status": "active",
+        "bidding_type": "clicks"
+      },
+      {
+        "id": "cmpn_ex02",
+        "name": "Clinic scheduling | US | Clicks | 2026-09",
+        "status": "active",
+        "bidding_type": "clicks"
+      },
+      {
+        "id": "cmpn_ex03",
+        "name": "salon booking | us, ca | conversions | 2026-10",
+        "status": "paused",
+        "bidding_type": "clicks"
+      },
+      {
+        "id": "cmpn_ex04",
+        "name": "QA smoke check, do not enable",
+        "status": "paused",
+        "bidding_type": "impressions"
+      },
+      {
+        "id": "cmpn_ex05",
+        "name": "Acceptance test campaign",
+        "status": "paused",
+        "bidding_type": "clicks"
+      }
+    ],
+    "get_ad_groups": {
+      "cmpn_ex01": [
+        {
+          "id": "adgrp_ex11",
+          "name": "Small business booking",
+          "status": "active"
+        },
+        {
+          "id": "adgrp_ex12",
+          "name": "Appointment reminders",
+          "status": "active"
+        }
+      ],
+      "cmpn_ex02": [
+        {
+          "id": "adgrp_ex21",
+          "name": "Clinic front desk",
+          "status": "active"
+        },
+        {
+          "id": "adgrp_ex22",
+          "name": "Physio and therapy booking",
+          "status": "active"
+        }
+      ],
+      "cmpn_ex03": [],
+      "cmpn_ex04": [
+        {
+          "id": "adgrp_ex41",
+          "name": "QA group",
+          "status": "paused"
+        }
+      ],
+      "cmpn_ex05": [
+        {
+          "id": "adgrp_ex51",
+          "name": "Acceptance test group",
+          "status": "paused"
+        }
+      ]
+    },
+    "get_ads": {
+      "adgrp_ex11": [
+        {
+          "name": "Booking page | job",
+          "status": "active"
+        },
+        {
+          "name": "Booking page | proof",
+          "status": "active"
+        },
+        {
+          "name": "Booking page | friction",
+          "status": "active"
+        }
+      ],
+      "adgrp_ex12": [
+        {
+          "name": "Reminders | job",
+          "status": "active"
+        },
+        {
+          "name": "Reminders | proof",
+          "status": "active"
+        }
+      ],
+      "adgrp_ex21": [
+        {
+          "name": "Front desk | job",
+          "status": "active"
+        },
+        {
+          "name": "Front desk | proof",
+          "status": "active"
+        },
+        {
+          "name": "Front desk | friction",
+          "status": "active"
+        }
+      ],
+      "adgrp_ex22": [
+        {
+          "name": "Therapy booking | job",
+          "status": "active"
+        },
+        {
+          "name": "Therapy booking | proof",
+          "status": "active"
+        }
+      ],
+      "adgrp_ex41": [
+        {
+          "name": "QA ad 1",
+          "status": "paused"
+        },
+        {
+          "name": "QA ad 2",
+          "status": "paused"
+        }
+      ],
+      "adgrp_ex51": [
+        {
+          "name": "Acceptance test ad",
+          "status": "paused"
+        }
+      ]
+    },
+    "get_ad_account_insights": [
+      {
+        "ad_account.impressions": 80200,
+        "ad_account.clicks": 2238,
+        "ad_account.spend": 4812.4
+      }
+    ],
+    "get_pixels": [
+      {
+        "id": "cds_ex0000000001",
+        "client_type": "web",
+        "name": "Example Booking website",
+        "pixel_id": "pxEx0000000001"
+      },
+      {
+        "id": "cds_ex0000000002",
+        "client_type": "web",
+        "name": "Spring landing pages (unused)",
+        "pixel_id": "pxEx0000000002"
+      }
+    ],
+    "get_conversion_events": {
+      "pxEx0000000001": [
+        {
+          "event_type": "registration_completed",
+          "count": 412
+        },
+        {
+          "event_type": "appointment_scheduled",
+          "count": 168
+        }
+      ],
+      "pxEx0000000002": []
+    },
+    "get_event_settings": [
+      {
+        "id": "evs_ex01",
+        "name": "Account sign-ups",
+        "event_type": "registration_completed",
+        "archived": false,
+        "attribution_window_days": 30,
+        "source_ids": [
+          "cds_ex0000000001"
+        ]
+      },
+      {
+        "id": "evs_ex02",
+        "name": "Demo booked",
+        "event_type": "appointment_scheduled",
+        "archived": false,
+        "attribution_window_days": 30,
+        "source_ids": [
+          "cds_ex0000000001"
+        ]
+      },
+      {
+        "id": "evs_ex03",
+        "name": "Pricing page view",
+        "event_type": "custom",
+        "archived": false,
+        "attribution_window_days": 7,
+        "source_ids": [
+          "cds_ex0000000001"
+        ]
+      },
+      {
+        "id": "evs_ex04",
+        "name": "Spring sign-ups (unused)",
+        "event_type": "registration_completed",
+        "archived": true,
+        "attribution_window_days": 30,
+        "source_ids": [
+          "cds_ex0000000002"
+        ]
+      }
+    ],
+    "get_custom_audiences": [
+      {
+        "id": "caud_ex01",
+        "name": "QA audience, do not use",
+        "status": "ready"
+      },
+      {
+        "id": "caud_ex02",
+        "name": "Test upload",
+        "status": "ready"
+      }
+    ],
+    "get_lead_forms": [
+      {
+        "id": "lf_ex01",
+        "name": "Newsletter sign-up",
+        "status": "published",
+        "fields": [
+          "Your name",
+          "Email"
+        ]
+      }
+    ],
+    "search_geo_locations": {
+      "united states": [
+        {
+          "id": "3100001",
+          "type": "country",
+          "canonical_name": "United States",
+          "country_code": "US"
+        },
+        {
+          "id": "3100002",
+          "type": "region",
+          "canonical_name": "United States Virgin Islands",
+          "country_code": "VI"
+        },
+        {
+          "id": "3100100",
+          "type": "region",
+          "canonical_name": "Utah, United States",
+          "country_code": "US"
+        },
+        {
+          "id": "3100101",
+          "type": "region",
+          "canonical_name": "Texas, United States",
+          "country_code": "US"
+        },
+        {
+          "id": "3100102",
+          "type": "region",
+          "canonical_name": "Ohio, United States",
+          "country_code": "US"
+        },
+        {
+          "id": "3100103",
+          "type": "region",
+          "canonical_name": "Iowa, United States",
+          "country_code": "US"
+        },
+        {
+          "id": "3100104",
+          "type": "region",
+          "canonical_name": "Maine, United States",
+          "country_code": "US"
+        },
+        {
+          "id": "3100105",
+          "type": "region",
+          "canonical_name": "Idaho, United States",
+          "country_code": "US"
+        }
+      ],
+      "canada": [
+        {
+          "id": "3100040",
+          "type": "country",
+          "canonical_name": "Canada",
+          "country_code": "CA"
+        },
+        {
+          "id": "3100400",
+          "type": "region",
+          "canonical_name": "Ontario, Canada",
+          "country_code": "CA"
+        },
+        {
+          "id": "3100401",
+          "type": "region",
+          "canonical_name": "Quebec, Canada",
+          "country_code": "CA"
+        },
+        {
+          "id": "3100402",
+          "type": "region",
+          "canonical_name": "Alberta, Canada",
+          "country_code": "CA"
+        }
+      ]
+    }
+  }
+}

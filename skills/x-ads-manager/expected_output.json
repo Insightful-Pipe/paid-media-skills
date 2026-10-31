@@ -1,0 +1,1155 @@
+{
+  "header": {
+    "account": "Example Booking Software (X Ads account)",
+    "account_id": "x1a2b3c4d5",
+    "time_zone": "America/New_York",
+    "currency": "USD",
+    "window": "2026-09-28 to 2026-10-27",
+    "window_utc": "2026-09-28T04:00:00Z to 2026-10-28T04:00:00Z",
+    "spend": 2805.22,
+    "grade": 70,
+    "rating": "needs work",
+    "grade_math": "100 - 1 fail x 15 - 3 warns x 5 = 70 (needs work: 65 to 84)",
+    "freshness": "The window ends 2026-10-27, one day before the run, so spend for its last 3 days is an estimate until X finalises it."
+  },
+  "summary": [
+    "The account spent $2,805.22 from 2026-09-28 to 2026-10-27 across 3 campaigns: 807 salons link clicks at $1.83, 290 clinic site visits at $2.92 and 15,270 brand video views. Grade 70, needs work.",
+    "What works: salons keywords buy clicks at $1.55, the tagged clinics line item records sign-ups, and both videos hold over half their viewers to 25%.",
+    "Fix first: the salons clicks aren't tracked past the click, the new clinics conversions line item has no pixel tag, follower lookalikes cost 1.84x the average click, and the salons posts are wearing out (CPE +40.6%)."
+  ],
+  "scorecard": [
+    {
+      "area": "Readiness and delivery",
+      "result": "pass",
+      "key_number": "$2,805.22 spent, approval ACCEPTED",
+      "why": "Approved, funded by an active card, all 3 campaigns servable and each delivered 79.0% to 89.3% of its daily budget."
+    },
+    {
+      "area": "Promoted post engagement",
+      "result": "warn",
+      "key_number": "1 low post, 12.0% of link-click spend",
+      "why": "Post 1000000000000001013 has a 0.29% link CTR against a 0.8% median and costs $4.52 a click against $2.30. Under 25% of the goal's spend, so warn."
+    },
+    {
+      "area": "Targeting: keywords, lookalikes, conversations",
+      "result": "warn",
+      "key_number": "lookalikes $3.36 a click vs $1.83 average",
+      "why": "Follower lookalikes cost 1.84x the goal's average cost per link click and took 34.9% of its spend; keywords bought clicks at $1.55."
+    },
+    {
+      "area": "Video completion",
+      "result": "pass",
+      "key_number": "58.0% and 66.0% of starts reach 25%",
+      "why": "Both videos keep over half their starts to 25%. The 30-second video loses most viewers in its opening seconds (start to 25%, 42.0 points)."
+    },
+    {
+      "area": "X Pixel and conversions",
+      "result": "fail",
+      "key_number": "Clinics | Trial users list | US: no pixel tag",
+      "why": "A live conversions line item has no primary_web_event_tag, and the salons website-clicks line items have none either. The tagged clinics line item records conversions (290 site visits, 21 sign-ups)."
+    },
+    {
+      "area": "Cost per engagement trend",
+      "result": "warn",
+      "key_number": "CPE $0.61 to $0.77 (+26.5%)",
+      "why": "Between the first full week (2026-09-28 to 2026-10-04) and the last (2026-10-19 to 2026-10-25), CPM rose 12.9% and the engagement rate fell 10.8%. The salons campaign drove it (+40.6% CPE)."
+    }
+  ],
+  "top_fixes": [
+    {
+      "rank": 1,
+      "fix": "Track sign-ups from the salons website-clicks campaign",
+      "spend_touched": "$1,473.06 in the window",
+      "evidence": "get_line_items: 3 live WEBSITE_CLICKS line items, primary_web_event_tag null on all; $1,473.06 bought 807 link clicks with no record of what happened after",
+      "who": "do this in X Ads Manager: pick the site's sign-up event tag (from X Events Manager) on these line items"
+    },
+    {
+      "rank": 2,
+      "fix": "Refresh the salons posts: the cost per engagement is rising",
+      "spend_touched": "$1,473.06 in the window",
+      "evidence": "get_stats CAMPAIGN DAY: salons CPE $0.63 to $0.89 (+40.6%) from the first to the last full week; account CPM +12.9%, engagement rate -10.8%",
+      "who": "I can draft new variations (build step B) and create them paused after you confirm"
+    },
+    {
+      "rank": 3,
+      "fix": "Move budget from the follower lookalike line item to keywords",
+      "spend_touched": "$514.56 in the window",
+      "evidence": "get_stats LINE_ITEM: lookalikes $3.36 a link click, keywords $1.55, goal average $1.83; lookalikes run with audience_expansion EXPANDED",
+      "who": "do this in X Ads Manager: the skill recommends budget changes but doesn't make them"
+    },
+    {
+      "rank": 4,
+      "fix": "Pause the weak salons post 1000000000000001013",
+      "spend_touched": "$176.42 in the window",
+      "evidence": "get_stats PROMOTED_TWEET: 0.29% link CTR (median 0.8%), $4.52 a click (median $2.30); the other posts in Salons | Keywords | US-EN are fine, so the line item stays on",
+      "who": "do this in X Ads Manager: no action pauses one promoted post on its own"
+    },
+    {
+      "rank": 5,
+      "fix": "Attach the sign-up event tag to Clinics | Trial users list | US",
+      "spend_touched": "$57.78 in the window",
+      "evidence": "get_line_items: goal WEBSITE_CONVERSIONS, primary_web_event_tag null, live since 2026-10-19; $57.78 spent, 0 conversions recorded",
+      "who": "do this in X Ads Manager: pick the sign-up event tag on the line item; the skill can't set pixel tags"
+    }
+  ],
+  "readiness_checks": [
+    {
+      "check": "Account approval",
+      "result": "pass",
+      "evidence": "get_account approval_status ACCEPTED"
+    },
+    {
+      "check": "Funding",
+      "result": "pass",
+      "evidence": "1 of 1 funding instrument ACTIVE and able to fund: type CREDIT_CARD. No runway check: X defines credit_remaining_local_micro only for CREDIT_LINE and AGENCY_CREDIT_LINE"
+    },
+    {
+      "check": "Servable campaigns",
+      "result": "pass",
+      "evidence": "3 of 3 live campaigns servable; none lists reasons_not_servable"
+    },
+    {
+      "check": "Rejected ads",
+      "result": "pass",
+      "evidence": "0 of 12 live promoted posts, 0 of 2 media creatives and 0 promoted accounts rejected"
+    },
+    {
+      "check": "Delivery",
+      "result": "pass",
+      "evidence": "Salons | Website clicks | US | 2026-09: $1,473.06 of $1,650.00 (89.3%); Clinics | Site visits | US | 2026-08: $905.44 of $1,050.00 (86.2%); Brand | Video views | US | 2026-09: $426.72 of $540.00 (79.0%)",
+      "campaigns": [
+        {
+          "campaign": "Salons | Website clicks | US | 2026-09",
+          "daily_budget": 55,
+          "active_days": 30,
+          "budget_x_days": 1650,
+          "spend": 1473.06,
+          "delivered_pct": 89.3
+        },
+        {
+          "campaign": "Clinics | Site visits | US | 2026-08",
+          "daily_budget": 35,
+          "active_days": 30,
+          "budget_x_days": 1050,
+          "spend": 905.44,
+          "delivered_pct": 86.2
+        },
+        {
+          "campaign": "Brand | Video views | US | 2026-09",
+          "daily_budget": 18,
+          "active_days": 30,
+          "budget_x_days": 540,
+          "spend": 426.72,
+          "delivered_pct": 79.0
+        }
+      ]
+    }
+  ],
+  "posts": {
+    "by_goal": [
+      {
+        "goal": "LINK_CLICKS",
+        "posts": 7,
+        "graded_posts": 6,
+        "rate": "link CTR",
+        "median_rate_pct": 0.8,
+        "median_cost_per_result": 2.3,
+        "half_median_rate_pct": 0.4,
+        "cost_limit": 3.45,
+        "goal_spend": 1473.06,
+        "low_posts": [
+          {
+            "promoted_post_id": "pt03ex",
+            "tweet_id": "1000000000000001013",
+            "line_item": "Salons | Keywords | US-EN",
+            "link_ctr_pct": 0.29,
+            "cost_per_link_click": 4.52,
+            "spend": 176.42
+          }
+        ],
+        "low_share_of_goal_spend_pct": 12.0,
+        "result": "warn",
+        "not_graded_posts": [
+          "pt07ex (760 impressions, under 1,000)"
+        ]
+      },
+      {
+        "goal": "SITE_VISITS",
+        "posts": 2,
+        "graded_posts": 2,
+        "rate": "link CTR",
+        "result": "not graded",
+        "why": "2 graded posts; ranking needs at least 3"
+      },
+      {
+        "goal": "VIDEO_VIEW",
+        "posts": 2,
+        "graded_posts": 2,
+        "rate": "judged in area 4",
+        "result": "not graded",
+        "why": "video posts are judged on completion in area 4"
+      },
+      {
+        "goal": "WEBSITE_CONVERSIONS",
+        "posts": 1,
+        "graded_posts": 1,
+        "rate": "not defined",
+        "result": "not graded",
+        "why": "1 graded post; ranking needs at least 3"
+      }
+    ],
+    "table": [
+      {
+        "promoted_post_id": "pt01ex",
+        "tweet_id": "1000000000000001011",
+        "line_item": "Salons | Keywords | US-EN",
+        "goal": "LINK_CLICKS",
+        "impressions": 27000,
+        "engagements": 664,
+        "engagement_rate_pct": 2.46,
+        "cpe": 0.51,
+        "link_clicks": 282,
+        "link_ctr_pct": 1.04,
+        "spend": 338.14,
+        "graded": true,
+        "cost_per_link_click": 1.2
+      },
+      {
+        "promoted_post_id": "pt02ex",
+        "tweet_id": "1000000000000001012",
+        "line_item": "Salons | Keywords | US-EN",
+        "goal": "LINK_CLICKS",
+        "impressions": 21000,
+        "engagements": 440,
+        "engagement_rate_pct": 2.1,
+        "cpe": 0.6,
+        "link_clicks": 182,
+        "link_ctr_pct": 0.87,
+        "spend": 263.0,
+        "graded": true,
+        "cost_per_link_click": 1.45
+      },
+      {
+        "promoted_post_id": "pt03ex",
+        "tweet_id": "1000000000000001013",
+        "line_item": "Salons | Keywords | US-EN",
+        "goal": "LINK_CLICKS",
+        "impressions": 13500,
+        "engagements": 111,
+        "engagement_rate_pct": 0.82,
+        "cpe": 1.59,
+        "link_clicks": 39,
+        "link_ctr_pct": 0.29,
+        "spend": 176.42,
+        "graded": true,
+        "cost_per_link_click": 4.52
+      },
+      {
+        "promoted_post_id": "pt04ex",
+        "tweet_id": "1000000000000001011",
+        "line_item": "Salons | Follower lookalikes | US-EN",
+        "goal": "LINK_CLICKS",
+        "impressions": 12000,
+        "engagements": 207,
+        "engagement_rate_pct": 1.73,
+        "cpe": 1.33,
+        "link_clicks": 87,
+        "link_ctr_pct": 0.73,
+        "spend": 274.43,
+        "graded": true,
+        "cost_per_link_click": 3.15
+      },
+      {
+        "promoted_post_id": "pt05ex",
+        "tweet_id": "1000000000000001012",
+        "line_item": "Salons | Follower lookalikes | US-EN",
+        "goal": "LINK_CLICKS",
+        "impressions": 10500,
+        "engagements": 164,
+        "engagement_rate_pct": 1.56,
+        "cpe": 1.46,
+        "link_clicks": 66,
+        "link_ctr_pct": 0.63,
+        "spend": 240.13,
+        "graded": true,
+        "cost_per_link_click": 3.64
+      },
+      {
+        "promoted_post_id": "pt06ex",
+        "tweet_id": "1000000000000001011",
+        "line_item": "Salons | Conversations | US-EN",
+        "goal": "LINK_CLICKS",
+        "impressions": 15000,
+        "engagements": 342,
+        "engagement_rate_pct": 2.28,
+        "cpe": 0.5,
+        "link_clicks": 145,
+        "link_ctr_pct": 0.97,
+        "spend": 171.52,
+        "graded": true,
+        "cost_per_link_click": 1.18
+      },
+      {
+        "promoted_post_id": "pt07ex",
+        "tweet_id": "1000000000000001014",
+        "line_item": "Salons | Conversations | US-EN",
+        "goal": "LINK_CLICKS",
+        "impressions": 760,
+        "engagements": 13,
+        "engagement_rate_pct": 1.71,
+        "cpe": 0.72,
+        "link_clicks": 6,
+        "link_ctr_pct": 0.79,
+        "spend": 9.42,
+        "graded": false,
+        "cost_per_link_click": 1.57
+      },
+      {
+        "promoted_post_id": "pt08ex",
+        "tweet_id": "1000000000000001017",
+        "line_item": "Clinics | Keywords | US-EN",
+        "goal": "SITE_VISITS",
+        "impressions": 36000,
+        "engagements": 703,
+        "engagement_rate_pct": 1.95,
+        "cpe": 0.69,
+        "link_clicks": 317,
+        "link_ctr_pct": 0.88,
+        "spend": 484.37,
+        "graded": true,
+        "cost_per_link_click": 1.53
+      },
+      {
+        "promoted_post_id": "pt09ex",
+        "tweet_id": "1000000000000001018",
+        "line_item": "Clinics | Keywords | US-EN",
+        "goal": "SITE_VISITS",
+        "impressions": 27000,
+        "engagements": 474,
+        "engagement_rate_pct": 1.76,
+        "cpe": 0.77,
+        "link_clicks": 211,
+        "link_ctr_pct": 0.78,
+        "spend": 363.29,
+        "graded": true,
+        "cost_per_link_click": 1.72
+      },
+      {
+        "promoted_post_id": "pt10ex",
+        "tweet_id": "1000000000000001015",
+        "line_item": "Brand | Interests | US-EN",
+        "goal": "VIDEO_VIEW",
+        "impressions": 33000,
+        "engagements": 493,
+        "engagement_rate_pct": 1.49,
+        "cpe": 0.48,
+        "link_clicks": 64,
+        "link_ctr_pct": 0.19,
+        "spend": 234.7,
+        "graded": true
+      },
+      {
+        "promoted_post_id": "pt11ex",
+        "tweet_id": "1000000000000001016",
+        "line_item": "Brand | Interests | US-EN",
+        "goal": "VIDEO_VIEW",
+        "impressions": 27000,
+        "engagements": 431,
+        "engagement_rate_pct": 1.6,
+        "cpe": 0.45,
+        "link_clicks": 47,
+        "link_ctr_pct": 0.17,
+        "spend": 192.02,
+        "graded": true
+      },
+      {
+        "promoted_post_id": "pt12ex",
+        "tweet_id": "1000000000000001017",
+        "line_item": "Clinics | Trial users list | US",
+        "goal": "WEBSITE_CONVERSIONS",
+        "impressions": 3600,
+        "engagements": 51,
+        "engagement_rate_pct": 1.42,
+        "cpe": 1.13,
+        "link_clicks": 29,
+        "link_ctr_pct": 0.81,
+        "spend": 57.78,
+        "graded": true
+      }
+    ],
+    "top_3_by_link_ctr": [
+      {
+        "tweet_id": "1000000000000001011",
+        "line_item": "Salons | Keywords | US-EN",
+        "link_ctr_pct": 1.04,
+        "cost_per_link_click": 1.2
+      },
+      {
+        "tweet_id": "1000000000000001011",
+        "line_item": "Salons | Conversations | US-EN",
+        "link_ctr_pct": 0.97,
+        "cost_per_link_click": 1.18
+      },
+      {
+        "tweet_id": "1000000000000001012",
+        "line_item": "Salons | Keywords | US-EN",
+        "link_ctr_pct": 0.87,
+        "cost_per_link_click": 1.45
+      }
+    ]
+  },
+  "targeting": {
+    "line_items": [
+      {
+        "line_item": "Salons | Keywords | US-EN",
+        "goal": "LINK_CLICKS",
+        "family": "Keywords",
+        "audience_expansion": "DEFINED",
+        "bought": [
+          "salon booking",
+          "salon no shows",
+          "hair salon software"
+        ],
+        "spend": 777.56,
+        "impressions": 61500,
+        "engagement_rate_pct": 1.98,
+        "cpe": 0.64,
+        "result": "link clicks",
+        "results": 503,
+        "cost_per_result": 1.55,
+        "graded": true
+      },
+      {
+        "line_item": "Salons | Follower lookalikes | US-EN",
+        "goal": "LINK_CLICKS",
+        "family": "Follower lookalikes",
+        "audience_expansion": "EXPANDED",
+        "bought": [
+          "Followers like Competitor A (a booking software rival)",
+          "Followers like Competitor B (a booking software rival)"
+        ],
+        "spend": 514.56,
+        "impressions": 22500,
+        "engagement_rate_pct": 1.65,
+        "cpe": 1.39,
+        "result": "link clicks",
+        "results": 153,
+        "cost_per_result": 3.36,
+        "graded": true
+      },
+      {
+        "line_item": "Salons | Conversations | US-EN",
+        "goal": "LINK_CLICKS",
+        "family": "Mixed",
+        "families_mixed": [
+          "Conversations",
+          "Keywords"
+        ],
+        "audience_expansion": "DEFINED",
+        "bought": [
+          "Business - Small business",
+          "Beauty - Hair care",
+          "salon owner"
+        ],
+        "spend": 180.94,
+        "impressions": 15760,
+        "engagement_rate_pct": 2.25,
+        "cpe": 0.51,
+        "result": "link clicks",
+        "results": 151,
+        "cost_per_result": 1.2,
+        "graded": true
+      },
+      {
+        "line_item": "Clinics | Keywords | US-EN",
+        "goal": "SITE_VISITS",
+        "family": "Keywords",
+        "audience_expansion": "DEFINED",
+        "bought": [
+          "clinic scheduling",
+          "patient reminders"
+        ],
+        "spend": 847.66,
+        "impressions": 63000,
+        "engagement_rate_pct": 1.87,
+        "cpe": 0.72,
+        "result": "site visits",
+        "results": 290,
+        "cost_per_result": 2.92,
+        "graded": true
+      },
+      {
+        "line_item": "Clinics | Trial users list | US",
+        "goal": "WEBSITE_CONVERSIONS",
+        "family": "Your audiences",
+        "audience_expansion": "DEFINED",
+        "bought": [
+          "Trial users, last 180 days (customer list)"
+        ],
+        "spend": 57.78,
+        "impressions": 3600,
+        "engagement_rate_pct": 1.42,
+        "cpe": 1.13,
+        "result": "conversions",
+        "results": 0,
+        "cost_per_result": null,
+        "graded": true
+      },
+      {
+        "line_item": "Brand | Interests | US-EN",
+        "goal": "VIDEO_VIEW",
+        "family": "Interests",
+        "audience_expansion": "DEFINED",
+        "bought": [
+          "Business / Small business"
+        ],
+        "spend": 426.72,
+        "impressions": 60000,
+        "engagement_rate_pct": 1.54,
+        "cpe": 0.46,
+        "result": "video views",
+        "results": 15270,
+        "cost_per_result": 0.03,
+        "graded": true
+      }
+    ],
+    "by_goal": [
+      {
+        "goal": "LINK_CLICKS",
+        "spend": 1473.06,
+        "results": 807,
+        "average_cost_per_result": 1.83,
+        "limit": 2.75,
+        "costly_families": [
+          {
+            "family": "Follower lookalikes",
+            "line_item": "Salons | Follower lookalikes | US-EN",
+            "cost_per_result": 3.36,
+            "vs_average": 1.84
+          }
+        ],
+        "costly_share_of_goal_spend_pct": 34.9,
+        "result": "warn",
+        "mixed_not_credited": [
+          "Salons | Conversations | US-EN"
+        ]
+      },
+      {
+        "goal": "SITE_VISITS",
+        "spend": 847.66,
+        "results": 290,
+        "average_cost_per_result": 2.92,
+        "result": "not graded",
+        "why": "one audience family in this goal (Keywords), nothing to compare"
+      },
+      {
+        "goal": "WEBSITE_CONVERSIONS",
+        "spend": 57.78,
+        "results": 0,
+        "average_cost_per_result": null,
+        "result": "not graded",
+        "why": "one audience family in this goal (Your audiences), nothing to compare"
+      },
+      {
+        "goal": "VIDEO_VIEW",
+        "spend": 426.72,
+        "results": 15270,
+        "average_cost_per_result": 0.03,
+        "result": "not graded",
+        "why": "one audience family in this goal (Interests), nothing to compare"
+      }
+    ]
+  },
+  "videos": [
+    {
+      "promoted_post_id": "pt10ex",
+      "tweet_id": "1000000000000001015",
+      "video_length_s": 30,
+      "impressions": 33000,
+      "starts": 9900,
+      "total_views": 8250,
+      "retention_pct": {
+        "25": 58.0,
+        "50": 41.0,
+        "75": 30.0,
+        "100": 22.0
+      },
+      "video_6s_views": 3566,
+      "video_15s_views": 2477,
+      "cost_per_view": 0.028,
+      "biggest_drop": "start to 25%, 42.0 points",
+      "reading": "a drop before 25% points at the opening seconds",
+      "result": "pass"
+    },
+    {
+      "promoted_post_id": "pt11ex",
+      "tweet_id": "1000000000000001016",
+      "video_length_s": 15,
+      "impressions": 27000,
+      "starts": 8370,
+      "total_views": 7020,
+      "retention_pct": {
+        "25": 66.0,
+        "50": 52.0,
+        "75": 43.0,
+        "100": 36.0
+      },
+      "video_6s_views": 3934,
+      "video_15s_views": 2931,
+      "cost_per_view": 0.027,
+      "biggest_drop": "start to 25%, 34.0 points",
+      "reading": "a drop before 25% points at the opening seconds",
+      "result": "pass"
+    }
+  ],
+  "pixel_and_conversions": {
+    "checks": [
+      {
+        "check": "Conversion goal with no tag",
+        "result": "fail",
+        "evidence": "Clinics | Trial users list | US (goal WEBSITE_CONVERSIONS, live since 2026-10-19) has primary_web_event_tag null: $57.78 spent and 3,600 impressions with nothing to optimise for"
+      },
+      {
+        "check": "Tag set, nothing recorded",
+        "result": "pass",
+        "evidence": "Clinics | Keywords | US-EN has tag tag01ex and recorded 290 site visits and 21 sign-ups"
+      },
+      {
+        "check": "View-through only",
+        "result": "pass",
+        "evidence": "242 of 311 conversions came after an engagement, 69 after a view only"
+      },
+      {
+        "check": "Website traffic with no tag",
+        "result": "warn",
+        "evidence": "3 live WEBSITE_CLICKS line items ($1,473.06 spent) and none has a tag, so salons results stop at the click"
+      }
+    ],
+    "conversions": [
+      {
+        "type": "site_visits",
+        "total": 290,
+        "after_engagement": 226,
+        "after_view": 64,
+        "assisted": 35
+      },
+      {
+        "type": "sign_ups",
+        "total": 21,
+        "after_engagement": 16,
+        "after_view": 5,
+        "assisted": 3
+      }
+    ],
+    "note": "There is no call that lists pixel event tags or when they last fired: confirm the tag in X Events Manager."
+  },
+  "weekly_cpe": {
+    "weeks": [
+      {
+        "window": "W1",
+        "dates": "2026-09-28 to 2026-10-04",
+        "days": 7,
+        "partial": false,
+        "spend": 602.7,
+        "impressions": 51800,
+        "engagements": 992,
+        "cpe": 0.61,
+        "cpm": 11.64,
+        "engagement_rate_pct": 1.92
+      },
+      {
+        "window": "W2",
+        "dates": "2026-10-05 to 2026-10-11",
+        "days": 7,
+        "partial": false,
+        "spend": 623.18,
+        "impressions": 51800,
+        "engagements": 965,
+        "cpe": 0.65,
+        "cpm": 12.03,
+        "engagement_rate_pct": 1.86
+      },
+      {
+        "window": "W3",
+        "dates": "2026-10-12 to 2026-10-18",
+        "days": 7,
+        "partial": false,
+        "spend": 646.81,
+        "impressions": 51800,
+        "engagements": 925,
+        "cpe": 0.7,
+        "cpm": 12.49,
+        "engagement_rate_pct": 1.79
+      },
+      {
+        "window": "W4",
+        "dates": "2026-10-19 to 2026-10-25",
+        "days": 7,
+        "partial": false,
+        "spend": 717.28,
+        "impressions": 54600,
+        "engagements": 933,
+        "cpe": 0.77,
+        "cpm": 13.14,
+        "engagement_rate_pct": 1.71
+      },
+      {
+        "window": "W5",
+        "dates": "2026-10-26 to 2026-10-27",
+        "days": 2,
+        "partial": true,
+        "spend": 215.25,
+        "impressions": 16360,
+        "engagements": 278,
+        "cpe": 0.77,
+        "cpm": 13.16,
+        "engagement_rate_pct": 1.7
+      }
+    ],
+    "compare": "W1 vs W4 (W5 is a 2-day partial week, left out)",
+    "cpe_change_pct": 26.5,
+    "cpm_change_pct": 12.9,
+    "engagement_rate_change_pct": -10.8,
+    "by_campaign": [
+      {
+        "campaign": "Salons | Website clicks | US | 2026-09",
+        "cpe_w1": 0.63,
+        "cpe_w4": 0.89,
+        "change_pct": 40.6,
+        "spend_30d": 1473.06
+      },
+      {
+        "campaign": "Clinics | Site visits | US | 2026-08",
+        "cpe_w1": 0.68,
+        "cpe_w4": 0.81,
+        "change_pct": 19.1,
+        "spend_30d": 905.44
+      },
+      {
+        "campaign": "Brand | Video views | US | 2026-09",
+        "cpe_w1": 0.45,
+        "cpe_w4": 0.47,
+        "change_pct": 4.4,
+        "spend_30d": 426.72
+      }
+    ]
+  },
+  "not_graded_and_unknown": [
+    {
+      "area": "Promoted post engagement, goals other than LINK_CLICKS",
+      "reason": "SITE_VISITS: 2 graded posts; ranking needs at least 3; VIDEO_VIEW: video posts are judged on completion in area 4; WEBSITE_CONVERSIONS: 1 graded post; ranking needs at least 3"
+    },
+    {
+      "area": "Targeting, goals other than LINK_CLICKS",
+      "reason": "SITE_VISITS: one audience family in this goal (Keywords), nothing to compare; WEBSITE_CONVERSIONS: one audience family in this goal (Your audiences), nothing to compare; VIDEO_VIEW: one audience family in this goal (Interests), nothing to compare"
+    },
+    {
+      "area": "Promoted post engagement, one post",
+      "reason": "pt07ex (760 impressions, under 1,000): added to the line item on 2026-10-26; numbers shown, not graded"
+    },
+    {
+      "area": "Recommendations and change history",
+      "reason": "Not available through this connection (get_recommendations fails; get_account_history is not enabled for the app)."
+    }
+  ],
+  "build_step_a": {
+    "brief": {
+      "goal": "website visits",
+      "audience": "US fitness studio owners and personal trainers, English",
+      "daily_budget": 20,
+      "landing_page": "https://www.example.com/industries/fitness/",
+      "keywords": [
+        "class booking",
+        "personal trainer software",
+        "studio scheduling"
+      ],
+      "conversation_topics": [
+        "Fitness - Personal training",
+        "Fitness - Group fitness classes"
+      ],
+      "interests": [
+        "Health / Exercise and fitness"
+      ]
+    },
+    "start_time": "2026-11-02 (Monday), 2026-11-02T05:00:00Z at the account's midnight (US daylight saving time ends the day before, so midnight is 05:00 UTC, not 04:00)",
+    "naming": "follows the account's own pattern <Audience> | <Goal> | <Country> | <YYYY-MM>, as in \"Salons | Website clicks | US | 2026-09\"",
+    "goal_mapping": "website visits: objective WEBSITE_CLICKS, goal LINK_CLICKS, pay_by LINK_CLICK. A conversion goal would need a sign-up event tag on the line item; until one is attached (fix above), link clicks is the goal",
+    "lookups": {
+      "funding_instrument": {
+        "id": "f1e2d3",
+        "type": "CREDIT_CARD",
+        "entity_status": "ACTIVE",
+        "able_to_fund": true
+      },
+      "posting_account_user_id": "1000000000000000101",
+      "location": {
+        "name": "United States",
+        "targeting_value": "96683cc9126741d1"
+      },
+      "language": {
+        "name": "English",
+        "targeting_value": "en"
+      },
+      "conversation_topics": [
+        {
+          "name": "Fitness - Personal training",
+          "targeting_value": "f3m",
+          "page": 4
+        },
+        {
+          "name": "Fitness - Group fitness classes",
+          "targeting_value": "f8q",
+          "page": 6
+        }
+      ],
+      "conversation_pages_read": 6,
+      "interests": [
+        {
+          "name": "Health / Exercise and fitness",
+          "targeting_value": "1900000000000000027"
+        }
+      ]
+    },
+    "readiness": "Account approved and funded; nothing blocks delivery once the user switches the campaign on."
+  },
+  "build_step_b": {
+    "evidence": "Best graded link-click post by link CTR: 1000000000000001011 (1.04% in Salons | Keywords | US-EN). The connection can't read post text, so the variations build on the text the user pasted (198 characters counted).",
+    "facts_used": "the user's pasted salons post and the brand's own site: automatic SMS and email reminders before every appointment, plans from $19 a month. Nothing else is claimed",
+    "variations": [
+      {
+        "id": "V1",
+        "angle": "problem",
+        "hook": "statement",
+        "parent": "winning salons post",
+        "change": "audience: salons to fitness studios and trainers, as the brief asks (chair to class spot, appointment to class and session, salons page to fitness page). Same problem angle, statement hook, price line and call to action",
+        "text": "Every no-show is an empty spot in a class you already paid for.\n\nExample Booking Software sends automatic SMS and email reminders before every class and session. Plans start at $19 a month.\n\nhttps://www.example.com/industries/fitness/",
+        "characters_counted": 214,
+        "hashtags": 0
+      },
+      {
+        "id": "V2",
+        "angle": "problem",
+        "hook": "question",
+        "parent": "V1",
+        "change": "hook: statement to question. Same angle, body and link as V1",
+        "text": "How many class spots did no-shows leave empty this week?\n\nExample Booking Software sends automatic SMS and email reminders before every class and session. Plans start at $19 a month.\n\nhttps://www.example.com/industries/fitness/",
+        "characters_counted": 207,
+        "hashtags": 0
+      },
+      {
+        "id": "V3",
+        "angle": "how it works",
+        "hook": "statement",
+        "parent": "V1",
+        "change": "angle: problem to how it works. Same statement hook, body and link as V1",
+        "text": "Clients book classes and sessions online, any time of day.\n\nExample Booking Software sends automatic SMS and email reminders before every class and session. Plans start at $19 a month.\n\nhttps://www.example.com/industries/fitness/",
+        "characters_counted": 209,
+        "hashtags": 0
+      }
+    ]
+  },
+  "payloads": [
+    {
+      "step": 1,
+      "action": "create_campaign",
+      "status": "not run",
+      "note": "$20 a day on the campaign, shared by the three line items.",
+      "body": {
+        "action": "create_campaign",
+        "funding_instrument_id": "f1e2d3",
+        "name": "Fitness | Website clicks | US | 2026-11",
+        "entity_status": "PAUSED",
+        "budget_optimization": "CAMPAIGN",
+        "daily_budget_amount_local_micro": 20000000
+      }
+    },
+    {
+      "step": 2,
+      "action": "create_line_item",
+      "status": "not run",
+      "note": "One audience family per line item, so area 3 can compare them next month.",
+      "body": {
+        "action": "create_line_item",
+        "campaign_id": "<CAMPAIGN_ID from step 1>",
+        "name": "Fitness | Keywords | US-EN",
+        "objective": "WEBSITE_CLICKS",
+        "product_type": "PROMOTED_TWEETS",
+        "placements": "ALL_ON_TWITTER",
+        "goal": "LINK_CLICKS",
+        "pay_by": "LINK_CLICK",
+        "bid_strategy": "AUTO",
+        "entity_status": "PAUSED",
+        "start_time": "2026-11-02T05:00:00Z"
+      }
+    },
+    {
+      "step": 3,
+      "action": "create_line_item",
+      "status": "not run",
+      "note": "One audience family per line item, so area 3 can compare them next month.",
+      "body": {
+        "action": "create_line_item",
+        "campaign_id": "<CAMPAIGN_ID from step 1>",
+        "name": "Fitness | Conversations | US-EN",
+        "objective": "WEBSITE_CLICKS",
+        "product_type": "PROMOTED_TWEETS",
+        "placements": "ALL_ON_TWITTER",
+        "goal": "LINK_CLICKS",
+        "pay_by": "LINK_CLICK",
+        "bid_strategy": "AUTO",
+        "entity_status": "PAUSED",
+        "start_time": "2026-11-02T05:00:00Z"
+      }
+    },
+    {
+      "step": 4,
+      "action": "create_line_item",
+      "status": "not run",
+      "note": "One audience family per line item, so area 3 can compare them next month.",
+      "body": {
+        "action": "create_line_item",
+        "campaign_id": "<CAMPAIGN_ID from step 1>",
+        "name": "Fitness | Interests | US-EN",
+        "objective": "WEBSITE_CLICKS",
+        "product_type": "PROMOTED_TWEETS",
+        "placements": "ALL_ON_TWITTER",
+        "goal": "LINK_CLICKS",
+        "pay_by": "LINK_CLICK",
+        "bid_strategy": "AUTO",
+        "entity_status": "PAUSED",
+        "start_time": "2026-11-02T05:00:00Z"
+      }
+    },
+    {
+      "step": 5,
+      "action": "create_targeting_criterion",
+      "status": "not run",
+      "note": "United States",
+      "body": {
+        "action": "create_targeting_criterion",
+        "line_item_id": "<LINE_ITEM_ID from step 2>",
+        "operator_type": "EQ",
+        "targeting_type": "LOCATION",
+        "targeting_value": "96683cc9126741d1"
+      }
+    },
+    {
+      "step": 6,
+      "action": "create_targeting_criterion",
+      "status": "not run",
+      "note": "English",
+      "body": {
+        "action": "create_targeting_criterion",
+        "line_item_id": "<LINE_ITEM_ID from step 2>",
+        "operator_type": "EQ",
+        "targeting_type": "LANGUAGE",
+        "targeting_value": "en"
+      }
+    },
+    {
+      "step": 7,
+      "action": "create_targeting_criterion",
+      "status": "not run",
+      "note": "class booking",
+      "body": {
+        "action": "create_targeting_criterion",
+        "line_item_id": "<LINE_ITEM_ID from step 2>",
+        "operator_type": "EQ",
+        "targeting_type": "BROAD_KEYWORD",
+        "targeting_value": "class booking"
+      }
+    },
+    {
+      "step": 8,
+      "action": "create_targeting_criterion",
+      "status": "not run",
+      "note": "personal trainer software",
+      "body": {
+        "action": "create_targeting_criterion",
+        "line_item_id": "<LINE_ITEM_ID from step 2>",
+        "operator_type": "EQ",
+        "targeting_type": "BROAD_KEYWORD",
+        "targeting_value": "personal trainer software"
+      }
+    },
+    {
+      "step": 9,
+      "action": "create_targeting_criterion",
+      "status": "not run",
+      "note": "studio scheduling",
+      "body": {
+        "action": "create_targeting_criterion",
+        "line_item_id": "<LINE_ITEM_ID from step 2>",
+        "operator_type": "EQ",
+        "targeting_type": "BROAD_KEYWORD",
+        "targeting_value": "studio scheduling"
+      }
+    },
+    {
+      "step": 10,
+      "action": "create_targeting_criterion",
+      "status": "not run",
+      "note": "United States",
+      "body": {
+        "action": "create_targeting_criterion",
+        "line_item_id": "<LINE_ITEM_ID from step 3>",
+        "operator_type": "EQ",
+        "targeting_type": "LOCATION",
+        "targeting_value": "96683cc9126741d1"
+      }
+    },
+    {
+      "step": 11,
+      "action": "create_targeting_criterion",
+      "status": "not run",
+      "note": "English",
+      "body": {
+        "action": "create_targeting_criterion",
+        "line_item_id": "<LINE_ITEM_ID from step 3>",
+        "operator_type": "EQ",
+        "targeting_type": "LANGUAGE",
+        "targeting_value": "en"
+      }
+    },
+    {
+      "step": 12,
+      "action": "create_targeting_criterion",
+      "status": "not run",
+      "note": "Fitness - Personal training",
+      "body": {
+        "action": "create_targeting_criterion",
+        "line_item_id": "<LINE_ITEM_ID from step 3>",
+        "operator_type": "EQ",
+        "targeting_type": "CONVERSATION",
+        "targeting_value": "f3m"
+      }
+    },
+    {
+      "step": 13,
+      "action": "create_targeting_criterion",
+      "status": "not run",
+      "note": "Fitness - Group fitness classes",
+      "body": {
+        "action": "create_targeting_criterion",
+        "line_item_id": "<LINE_ITEM_ID from step 3>",
+        "operator_type": "EQ",
+        "targeting_type": "CONVERSATION",
+        "targeting_value": "f8q"
+      }
+    },
+    {
+      "step": 14,
+      "action": "create_targeting_criterion",
+      "status": "not run",
+      "note": "United States",
+      "body": {
+        "action": "create_targeting_criterion",
+        "line_item_id": "<LINE_ITEM_ID from step 4>",
+        "operator_type": "EQ",
+        "targeting_type": "LOCATION",
+        "targeting_value": "96683cc9126741d1"
+      }
+    },
+    {
+      "step": 15,
+      "action": "create_targeting_criterion",
+      "status": "not run",
+      "note": "English",
+      "body": {
+        "action": "create_targeting_criterion",
+        "line_item_id": "<LINE_ITEM_ID from step 4>",
+        "operator_type": "EQ",
+        "targeting_type": "LANGUAGE",
+        "targeting_value": "en"
+      }
+    },
+    {
+      "step": 16,
+      "action": "create_targeting_criterion",
+      "status": "not run",
+      "note": "Health / Exercise and fitness",
+      "body": {
+        "action": "create_targeting_criterion",
+        "line_item_id": "<LINE_ITEM_ID from step 4>",
+        "operator_type": "EQ",
+        "targeting_type": "INTEREST",
+        "targeting_value": "1900000000000000027"
+      }
+    },
+    {
+      "step": 17,
+      "action": "create_ad_tweet",
+      "status": "not run",
+      "note": "V1; promoted-only, never on the profile timeline",
+      "body": {
+        "action": "create_ad_tweet",
+        "as_user_id": "1000000000000000101",
+        "text": "Every no-show is an empty spot in a class you already paid for.\n\nExample Booking Software sends automatic SMS and email reminders before every class and session. Plans start at $19 a month.\n\nhttps://www.example.com/industries/fitness/",
+        "nullcast": "true"
+      }
+    },
+    {
+      "step": 18,
+      "action": "create_ad_tweet",
+      "status": "not run",
+      "note": "V2; promoted-only, never on the profile timeline",
+      "body": {
+        "action": "create_ad_tweet",
+        "as_user_id": "1000000000000000101",
+        "text": "How many class spots did no-shows leave empty this week?\n\nExample Booking Software sends automatic SMS and email reminders before every class and session. Plans start at $19 a month.\n\nhttps://www.example.com/industries/fitness/",
+        "nullcast": "true"
+      }
+    },
+    {
+      "step": 19,
+      "action": "create_ad_tweet",
+      "status": "not run",
+      "note": "V3; promoted-only, never on the profile timeline",
+      "body": {
+        "action": "create_ad_tweet",
+        "as_user_id": "1000000000000000101",
+        "text": "Clients book classes and sessions online, any time of day.\n\nExample Booking Software sends automatic SMS and email reminders before every class and session. Plans start at $19 a month.\n\nhttps://www.example.com/industries/fitness/",
+        "nullcast": "true"
+      }
+    },
+    {
+      "step": 20,
+      "action": "create_promoted_tweet",
+      "status": "not run",
+      "note": "All three posts on the Keywords line item",
+      "body": {
+        "action": "create_promoted_tweet",
+        "line_item_id": "<LINE_ITEM_ID from step 2>",
+        "tweet_ids": "<TWEET_ID from step 17>,<TWEET_ID from step 18>,<TWEET_ID from step 19>"
+      }
+    },
+    {
+      "step": 21,
+      "action": "create_promoted_tweet",
+      "status": "not run",
+      "note": "All three posts on the Conversations line item",
+      "body": {
+        "action": "create_promoted_tweet",
+        "line_item_id": "<LINE_ITEM_ID from step 3>",
+        "tweet_ids": "<TWEET_ID from step 17>,<TWEET_ID from step 18>,<TWEET_ID from step 19>"
+      }
+    },
+    {
+      "step": 22,
+      "action": "create_promoted_tweet",
+      "status": "not run",
+      "note": "All three posts on the Interests line item",
+      "body": {
+        "action": "create_promoted_tweet",
+        "line_item_id": "<LINE_ITEM_ID from step 4>",
+        "tweet_ids": "<TWEET_ID from step 17>,<TWEET_ID from step 18>,<TWEET_ID from step 19>"
+      }
+    }
+  ],
+  "calls": {
+    "reads_run": 42,
+    "write_payloads_drafted": 22,
+    "writes_run": 0,
+    "note": "Reads this sample needs, counting 20 get_stats calls (4 entity types x 5 windows, one batch of up to 20 ids each) and 6 conversation pages of 1,000."
+  }
+}

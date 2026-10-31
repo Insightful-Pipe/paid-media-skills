@@ -1,0 +1,1190 @@
+{
+  "header": {
+    "run_date": "2026-10-28",
+    "window": "2026-07-30 to 2026-10-27",
+    "library_countries": "GB,IE,DE,FR,NL",
+    "top_ads_filters": "apparel_accessories, conversions, US, English, last 30 days, sorted by CTR rank",
+    "sources_answered": [
+      "[Library]",
+      "[Top Ads]",
+      "[Your account]"
+    ],
+    "sources_unavailable": [],
+    "calls": 23,
+    "video_note": "The spoken and on-screen hook is in the video, which this skill can't watch; open the links to see it."
+  },
+  "snapshot": [
+    {
+      "library": "TikTok Ad Library",
+      "competitor": "Northpeak Apparel",
+      "advertiser_names_matched": [
+        "Northpeak Apparel Ltd"
+      ],
+      "advertiser_name_confirmed_by": [
+        "detail call on ad 1880000000000101: handle @northpeakapparel and landing page on northpeak.example"
+      ],
+      "ads_found": 11,
+      "still_showing": 9,
+      "proven": 6,
+      "widest_reach_band": "500K-600K",
+      "mentions_by_other_accounts": 20,
+      "countries_searched": "GB,IE,DE,FR,NL",
+      "pages_read": 3,
+      "source": "[Library]"
+    },
+    {
+      "library": "TikTok Ad Library",
+      "competitor": "Kinetiq Wear",
+      "advertiser_names_matched": [
+        "Kinetiq Wear GmbH"
+      ],
+      "advertiser_name_confirmed_by": [
+        "detail call on ad 1880000000000201: handle @kinetiqwear and landing page on kinetiqwear.example"
+      ],
+      "ads_found": 9,
+      "still_showing": 7,
+      "proven": 5,
+      "widest_reach_band": "200K-300K",
+      "mentions_by_other_accounts": 10,
+      "countries_searched": "GB,IE,DE,FR,NL",
+      "pages_read": 2,
+      "source": "[Library]"
+    },
+    {
+      "library": "TikTok Ad Library",
+      "competitor": "Loopfit Studio",
+      "advertiser_names_matched": [],
+      "advertiser_name_confirmed_by": [],
+      "ads_found": 0,
+      "still_showing": 0,
+      "proven": 0,
+      "widest_reach_band": null,
+      "mentions_by_other_accounts": 0,
+      "countries_searched": "GB,IE,DE,FR,NL",
+      "pages_read": 1,
+      "source": "[Library]",
+      "note": "No ads found in the Library for these countries and dates. The control search answered with ads, and a retry was also empty. The Library covers Europe only, so this does not mean Loopfit Studio runs no TikTok ads: you said it sells mostly in the US."
+    },
+    {
+      "library": "TikTok Ad Library",
+      "competitor": "Brightlane Activewear (you)",
+      "advertiser_names_matched": [
+        "Brightlane Activewear Ltd"
+      ],
+      "advertiser_name_confirmed_by": [
+        "the legal name you gave for your own brand"
+      ],
+      "ads_found": 5,
+      "still_showing": 4,
+      "proven": 2,
+      "widest_reach_band": "10K-100K",
+      "mentions_by_other_accounts": 4,
+      "countries_searched": "GB,IE,DE,FR,NL",
+      "pages_read": 1,
+      "source": "[Library]"
+    }
+  ],
+  "run_length": {
+    "finding": "Kinetiq Wear's longest-running ad has run 130 days and is still showing (\"Ich trage sie jeden Tag ins Studio und sie rutschen nie.\"). [Library]",
+    "rule": "Days running = (last shown minus first shown) / 86,400,000 + 1. Proven = still showing and 30 days or more.",
+    "by_competitor": {
+      "Northpeak Apparel": [
+        {
+          "days": 118,
+          "first_shown": "2026-07-02",
+          "last_shown": "2026-10-27",
+          "still_showing": true,
+          "proven": true,
+          "format": "video",
+          "reach_band": "500K-600K",
+          "hook": "I did 50 squats in these and nobody could tell.",
+          "link": "https://library.tiktok.com/ads/detail/?ad_id=1880000000000101"
+        },
+        {
+          "days": 87,
+          "first_shown": "2026-08-01",
+          "last_shown": "2026-10-26",
+          "still_showing": true,
+          "proven": true,
+          "format": "video",
+          "reach_band": "200K-300K",
+          "hook": "Rated 4.8 by 12,000+ customers.",
+          "link": "https://library.tiktok.com/ads/detail/?ad_id=1880000000000102"
+        },
+        {
+          "days": 69,
+          "first_shown": "2026-08-20",
+          "last_shown": "2026-10-27",
+          "still_showing": true,
+          "proven": true,
+          "format": "video",
+          "reach_band": "100K-200K",
+          "hook": "POV: you finally found leggings with a phone pocket that holds.",
+          "link": "https://library.tiktok.com/ads/detail/?ad_id=1880000000000103"
+        },
+        {
+          "days": 51,
+          "first_shown": "2026-09-05",
+          "last_shown": "2026-10-25",
+          "still_showing": true,
+          "proven": true,
+          "format": "image",
+          "reach_band": "100K-200K",
+          "hook": "Autumn sale: 20% off all sets with code PEAK20 until Sunday.",
+          "link": "https://library.tiktok.com/ads/detail/?ad_id=1880000000000104"
+        },
+        {
+          "days": 47,
+          "first_shown": "2026-07-15",
+          "last_shown": "2026-08-30",
+          "still_showing": false,
+          "proven": false,
+          "format": "video",
+          "reach_band": "10K-100K",
+          "hook": "Summer drop is here.",
+          "link": "https://library.tiktok.com/ads/detail/?ad_id=1880000000000106"
+        }
+      ],
+      "Kinetiq Wear": [
+        {
+          "days": 130,
+          "first_shown": "2026-06-20",
+          "last_shown": "2026-10-27",
+          "still_showing": true,
+          "proven": true,
+          "format": "video",
+          "reach_band": "200K-300K",
+          "hook": "Ich trage sie jeden Tag ins Studio und sie rutschen nie.",
+          "link": "https://library.tiktok.com/ads/detail/?ad_id=1880000000000201"
+        },
+        {
+          "days": 73,
+          "first_shown": "2026-08-15",
+          "last_shown": "2026-10-26",
+          "still_showing": true,
+          "proven": true,
+          "format": "video",
+          "reach_band": "100K-200K",
+          "hook": "20% Rabatt auf alle Sets, nur heute!",
+          "link": "https://library.tiktok.com/ads/detail/?ad_id=1880000000000202"
+        },
+        {
+          "days": 64,
+          "first_shown": "2026-08-25",
+          "last_shown": "2026-10-27",
+          "still_showing": true,
+          "proven": true,
+          "format": "video",
+          "reach_band": "10K-100K",
+          "hook": "POV: ich habe endlich das perfekte Gym-Set gefunden.",
+          "link": "https://library.tiktok.com/ads/detail/?ad_id=1880000000000207"
+        },
+        {
+          "days": 57,
+          "first_shown": "2026-09-01",
+          "last_shown": "2026-10-27",
+          "still_showing": true,
+          "proven": true,
+          "format": "video",
+          "reach_band": "100K-200K",
+          "hook": "My honest review after 3 months: still squat-proof, still no pilling.",
+          "link": "https://library.tiktok.com/ads/detail/?ad_id=1880000000000203"
+        },
+        {
+          "days": 54,
+          "first_shown": "2026-07-10",
+          "last_shown": "2026-09-01",
+          "still_showing": false,
+          "proven": false,
+          "format": "video",
+          "reach_band": "10K-100K",
+          "hook": "Neue Kollektion: nahtlos, atmungsaktiv, mit Taschen.",
+          "link": "https://library.tiktok.com/ads/detail/?ad_id=1880000000000204"
+        }
+      ],
+      "Loopfit Studio": []
+    },
+    "note": "An advertiser keeps paying for an ad that works, so a long run is a good sign, not proof."
+  },
+  "hooks_and_angles": {
+    "finding": "Creator voice is used by 2 competitors and 5 of the 13 Top Ads; none of your ads use Creator voice or Proof. [Library] [Top Ads] [Your account]",
+    "angle_counts": {
+      "Northpeak Apparel": {
+        "Offer": 1,
+        "Urgency": 1,
+        "Proof": 1,
+        "Guarantee": 1,
+        "Creator voice": 4,
+        "Question": 1,
+        "Feature": 6
+      },
+      "Kinetiq Wear": {
+        "Offer": 1,
+        "Urgency": 1,
+        "Proof": 2,
+        "Guarantee": 1,
+        "Creator voice": 3,
+        "Question": 1,
+        "Feature": 1
+      },
+      "Loopfit Studio": {
+        "Offer": 0,
+        "Urgency": 0,
+        "Proof": 0,
+        "Guarantee": 0,
+        "Creator voice": 0,
+        "Question": 0,
+        "Feature": 0
+      },
+      "Top Ads set": {
+        "Offer": 0,
+        "Urgency": 1,
+        "Proof": 4,
+        "Guarantee": 0,
+        "Creator voice": 5,
+        "Question": 2,
+        "Feature": 1
+      },
+      "You (TikTok Ads account)": {
+        "Offer": 0,
+        "Urgency": 0,
+        "Proof": 0,
+        "Guarantee": 0,
+        "Creator voice": 0,
+        "Question": 2,
+        "Feature": 3
+      }
+    },
+    "swipe_file": [
+      {
+        "angle": "Offer",
+        "quotes": [
+          {
+            "quote": "Autumn sale: 20% off all sets with code PEAK20 until Sunday.",
+            "part": "hook",
+            "who": "Northpeak Apparel",
+            "source": "[Library]",
+            "link": "https://library.tiktok.com/ads/detail/?ad_id=1880000000000104"
+          },
+          {
+            "quote": "20% Rabatt auf alle Sets, nur heute!",
+            "part": "hook",
+            "who": "Kinetiq Wear",
+            "source": "[Library]",
+            "link": "https://library.tiktok.com/ads/detail/?ad_id=1880000000000202"
+          }
+        ]
+      },
+      {
+        "angle": "Urgency",
+        "quotes": [
+          {
+            "quote": "Last chance: the Seamless Sculpt set in plum ends at midnight.",
+            "part": "hook",
+            "who": "Northpeak Apparel",
+            "source": "[Library]",
+            "link": "https://library.tiktok.com/ads/detail/?ad_id=1880000000000108"
+          },
+          {
+            "quote": "20% Rabatt auf alle Sets, nur heute!",
+            "part": "hook",
+            "who": "Kinetiq Wear",
+            "source": "[Library]",
+            "link": "https://library.tiktok.com/ads/detail/?ad_id=1880000000000202"
+          }
+        ]
+      },
+      {
+        "angle": "Proof",
+        "quotes": [
+          {
+            "quote": "Rated 4.8 by 12,000+ customers.",
+            "part": "hook",
+            "who": "Northpeak Apparel",
+            "source": "[Library]",
+            "link": "https://library.tiktok.com/ads/detail/?ad_id=1880000000000102"
+          },
+          {
+            "quote": "Unsere Bestseller-Leggings jetzt in 6 Farben.",
+            "part": "caption sentence",
+            "who": "Kinetiq Wear",
+            "source": "[Library]",
+            "link": "https://library.tiktok.com/ads/detail/?ad_id=1880000000000201"
+          }
+        ]
+      },
+      {
+        "angle": "Guarantee",
+        "quotes": [
+          {
+            "quote": "Free returns on every order, so try the size you think fits.",
+            "part": "hook",
+            "who": "Northpeak Apparel",
+            "source": "[Library]",
+            "link": "https://library.tiktok.com/ads/detail/?ad_id=1880000000000109"
+          },
+          {
+            "quote": "Geld-zurück-Garantie: 30 Tage testen.",
+            "part": "hook",
+            "who": "Kinetiq Wear",
+            "source": "[Library]",
+            "link": "https://library.tiktok.com/ads/detail/?ad_id=1880000000000208"
+          }
+        ]
+      },
+      {
+        "angle": "Creator voice",
+        "quotes": [
+          {
+            "quote": "I did 50 squats in these and nobody could tell.",
+            "part": "hook",
+            "who": "Northpeak Apparel",
+            "source": "[Library]",
+            "link": "https://library.tiktok.com/ads/detail/?ad_id=1880000000000101"
+          },
+          {
+            "quote": "POV: you finally found leggings with a phone pocket that holds.",
+            "part": "hook",
+            "who": "Northpeak Apparel",
+            "source": "[Library]",
+            "link": "https://library.tiktok.com/ads/detail/?ad_id=1880000000000103"
+          }
+        ]
+      },
+      {
+        "angle": "Question",
+        "quotes": [
+          {
+            "quote": "Is your sports bra really doing its job?",
+            "part": "hook",
+            "who": "Northpeak Apparel",
+            "source": "[Library]",
+            "link": "https://library.tiktok.com/ads/detail/?ad_id=1880000000000107"
+          },
+          {
+            "quote": "Why do your leggings slide down?",
+            "part": "hook",
+            "who": "Kinetiq Wear",
+            "source": "[Library]",
+            "link": "https://library.tiktok.com/ads/detail/?ad_id=1880000000000206"
+          }
+        ]
+      },
+      {
+        "angle": "Feature",
+        "quotes": [
+          {
+            "quote": "The Seamless Sculpt legging is squat-proof, promise.",
+            "part": "caption sentence",
+            "who": "Northpeak Apparel",
+            "source": "[Library]",
+            "link": "https://library.tiktok.com/ads/detail/?ad_id=1880000000000101"
+          },
+          {
+            "quote": "Find out why our high-waist leggings keep selling out.",
+            "part": "caption sentence",
+            "who": "Northpeak Apparel",
+            "source": "[Library]",
+            "link": "https://library.tiktok.com/ads/detail/?ad_id=1880000000000102"
+          }
+        ]
+      }
+    ]
+  },
+  "format_and_length": {
+    "library_format": {
+      "Northpeak Apparel": {
+        "video": 9,
+        "image": 2,
+        "text": 0,
+        "video_share_pct": 82
+      },
+      "Kinetiq Wear": {
+        "video": 8,
+        "image": 1,
+        "text": 0,
+        "video_share_pct": 89
+      },
+      "Loopfit Studio": {
+        "video": 0,
+        "image": 0,
+        "text": 0,
+        "video_share_pct": null
+      }
+    },
+    "top_ads_length": {
+      "buckets": {
+        "under 15s": 2,
+        "15 to 30s": 9,
+        "31 to 60s": 2,
+        "over 60s": 0
+      },
+      "median_seconds": 21.4,
+      "ads": 13
+    },
+    "library_length": "not available: the Library gives no video length",
+    "yours": {
+      "video": 5,
+      "image": 3,
+      "spark_ads": 3,
+      "ad_only_posts": 5
+    },
+    "finding": "10 of 11 proven competitor ads are video, while 3 of your 8 ads are images. [Library] [Your account]"
+  },
+  "landing_pages_ctas_objectives": {
+    "finding": "Northpeak Apparel sends 3 of 5 detailed ads to northpeak.example/collections/seamless-sculpt; 82.7% of your spend goes to your home page. [Library] [Your account]",
+    "by_competitor": {
+      "Northpeak Apparel": {
+        "ads_detailed": 5,
+        "of_own_ads": 11,
+        "landing_pages": [
+          {
+            "page": "northpeak.example/collections/seamless-sculpt",
+            "ads": 3
+          },
+          {
+            "page": "northpeak.example/collections/leggings",
+            "ads": 1
+          },
+          {
+            "page": "northpeak.example/collections/sale",
+            "ads": 1
+          }
+        ],
+        "ctas": {
+          "Shop now": 5
+        },
+        "objectives": {
+          "Conversions": 5
+        }
+      },
+      "Kinetiq Wear": {
+        "ads_detailed": 5,
+        "of_own_ads": 9,
+        "landing_pages": [
+          {
+            "page": "kinetiqwear.example/de/leggings",
+            "ads": 2
+          },
+          {
+            "page": "kinetiqwear.example/de/sale",
+            "ads": 1
+          },
+          {
+            "page": "kinetiqwear.example/de/sets",
+            "ads": 1
+          },
+          {
+            "page": "kinetiqwear.example/en/leggings",
+            "ads": 1
+          }
+        ],
+        "ctas": {
+          "Jetzt shoppen": 3,
+          "Shop now": 1,
+          "Mehr erfahren": 1
+        },
+        "objectives": {
+          "Conversions": 4,
+          "Traffic": 1
+        }
+      },
+      "Loopfit Studio": {
+        "ads_detailed": 0,
+        "of_own_ads": 0,
+        "landing_pages": [],
+        "ctas": {},
+        "objectives": {}
+      },
+      "You (TikTok Ads account)": {
+        "landing_pages_by_spend": [
+          {
+            "page": "brightlane.example/",
+            "spend": 5885.0,
+            "spend_share_pct": 82.7
+          },
+          {
+            "page": "brightlane.example/blog/fabric-guide",
+            "spend": 520.0,
+            "spend_share_pct": 7.3
+          },
+          {
+            "page": "brightlane.example/products/everyday-legging",
+            "spend": 410.0,
+            "spend_share_pct": 5.8
+          },
+          {
+            "page": "brightlane.example/blog/care-guide",
+            "spend": 300.0,
+            "spend_share_pct": 4.2
+          }
+        ],
+        "ctas": {
+          "SHOP_NOW": 5,
+          "dynamic": 1,
+          "LEARN_MORE": 2
+        },
+        "source": "[Your account]"
+      }
+    },
+    "coverage": "Details cover at most 5 ads per competitor: Northpeak Apparel 5 of 11, Kinetiq Wear 5 of 9"
+  },
+  "targeting_and_where_ads_ran": {
+    "finding": "Northpeak Apparel puts 88.6% of its detailed impressions in GB; Kinetiq Wear puts 83.9% of its detailed impressions in DE. [Library]",
+    "rule": "A market to watch is a country that holds more than half of a competitor's detailed impressions and where you also sell.",
+    "by_competitor": {
+      "Northpeak Apparel": {
+        "ads_detailed": 5,
+        "countries_targeted": [
+          "GB",
+          "IE",
+          "NL"
+        ],
+        "age_bands": {
+          "18-24": 5,
+          "25-34": 5,
+          "35-44": 4,
+          "45-54": 1
+        },
+        "gender": {
+          "female": 4,
+          "all": 1
+        },
+        "ads_using_custom_audiences": 2,
+        "ads_using_interests": 3,
+        "impressions_by_country": [
+          {
+            "country": "GB",
+            "impressions": 1226000,
+            "share_pct": 88.6
+          },
+          {
+            "country": "IE",
+            "impressions": 139000,
+            "share_pct": 10.0
+          },
+          {
+            "country": "NL",
+            "impressions": 19000,
+            "share_pct": 1.4
+          }
+        ],
+        "total_impressions": 1384000,
+        "market_to_watch": "GB"
+      },
+      "Kinetiq Wear": {
+        "ads_detailed": 5,
+        "countries_targeted": [
+          "DE",
+          "FR",
+          "NL"
+        ],
+        "age_bands": {
+          "18-24": 4,
+          "25-34": 5,
+          "35-44": 2
+        },
+        "gender": {
+          "female": 4,
+          "all": 1
+        },
+        "ads_using_custom_audiences": 1,
+        "ads_using_interests": 3,
+        "impressions_by_country": [
+          {
+            "country": "DE",
+            "impressions": 608000,
+            "share_pct": 83.9
+          },
+          {
+            "country": "NL",
+            "impressions": 96000,
+            "share_pct": 13.2
+          },
+          {
+            "country": "FR",
+            "impressions": 21000,
+            "share_pct": 2.9
+          }
+        ],
+        "total_impressions": 725000,
+        "market_to_watch": "DE"
+      }
+    }
+  },
+  "category_benchmark": {
+    "filters": "apparel_accessories, conversions, US, English, 30 days",
+    "returned": 14,
+    "pool_total": 1240,
+    "dropped_other_script": {
+      "count": 1,
+      "ids": [
+        "TT-11"
+      ]
+    },
+    "ranked": [
+      {
+        "rank": 1,
+        "advertiser": "unnamed advertiser",
+        "ctr_rank": "top 3%",
+        "budget_level": "medium",
+        "likes": 48200,
+        "length_s": 21,
+        "hook": "I wore these to a 6am class and a lunch date.",
+        "angles": [
+          "Creator voice"
+        ],
+        "top_ads_id": "TT-01"
+      },
+      {
+        "rank": 2,
+        "advertiser": "Packwell",
+        "ctr_rank": "top 5%",
+        "budget_level": "high",
+        "likes": 31800,
+        "length_s": 18,
+        "hook": "POV: your gym bag finally has a place for everything.",
+        "angles": [
+          "Creator voice"
+        ],
+        "top_ads_id": "TT-02"
+      },
+      {
+        "rank": 3,
+        "advertiser": "unnamed advertiser",
+        "ctr_rank": "top 6%",
+        "budget_level": "medium",
+        "likes": 22400,
+        "length_s": 25,
+        "hook": "Over 10,000+ five-star reviews can't be wrong.",
+        "angles": [
+          "Proof"
+        ],
+        "top_ads_id": "TT-03"
+      },
+      {
+        "rank": 4,
+        "advertiser": "unnamed advertiser",
+        "ctr_rank": "top 6%",
+        "budget_level": "low",
+        "likes": 19900,
+        "length_s": 28,
+        "hook": "My honest try-on of the softest set I own.",
+        "angles": [
+          "Creator voice"
+        ],
+        "top_ads_id": "TT-04"
+      },
+      {
+        "rank": 5,
+        "advertiser": "unnamed advertiser",
+        "ctr_rank": "top 8%",
+        "budget_level": "medium",
+        "likes": 17600,
+        "length_s": 14,
+        "hook": "Why is nobody talking about this sports bra?",
+        "angles": [
+          "Question"
+        ],
+        "top_ads_id": "TT-05"
+      },
+      {
+        "rank": 6,
+        "advertiser": "Arcline",
+        "ctr_rank": "top 9%",
+        "budget_level": "high",
+        "likes": 15100,
+        "length_s": 20,
+        "hook": "Sold out twice, back for the last time.",
+        "angles": [
+          "Proof"
+        ],
+        "top_ads_id": "TT-06"
+      },
+      {
+        "rank": 7,
+        "advertiser": "unnamed advertiser",
+        "ctr_rank": "top 10%",
+        "budget_level": "medium",
+        "likes": 14300,
+        "length_s": 34,
+        "hook": "I tested the viral pocket leggings so you don't have to.",
+        "angles": [
+          "Creator voice",
+          "Feature"
+        ],
+        "top_ads_id": "TT-07"
+      },
+      {
+        "rank": 8,
+        "advertiser": "Vela Studio",
+        "ctr_rank": "top 11%",
+        "budget_level": "high",
+        "likes": 12800,
+        "length_s": 10,
+        "hook": "Black friday early access starts today.",
+        "angles": [
+          "Urgency"
+        ],
+        "top_ads_id": "TT-08"
+      },
+      {
+        "rank": 9,
+        "advertiser": "unnamed advertiser",
+        "ctr_rank": "top 12%",
+        "budget_level": "low",
+        "likes": 11200,
+        "length_s": 26,
+        "hook": "3 ways to style one set.",
+        "angles": [],
+        "top_ads_id": "TT-09"
+      },
+      {
+        "rank": 10,
+        "advertiser": "Arcline",
+        "ctr_rank": "top 14%",
+        "budget_level": "medium",
+        "likes": 9800,
+        "length_s": 15,
+        "hook": "Our bestseller hoodie, now in 8 colours.",
+        "angles": [
+          "Proof"
+        ],
+        "top_ads_id": "TT-10"
+      },
+      {
+        "rank": 11,
+        "advertiser": "unnamed advertiser",
+        "ctr_rank": "top 17%",
+        "budget_level": "low",
+        "likes": 8700,
+        "length_s": 23,
+        "hook": "My morning walk outfit, linked below.",
+        "angles": [
+          "Creator voice"
+        ],
+        "top_ads_id": "TT-12"
+      },
+      {
+        "rank": 12,
+        "advertiser": "unnamed advertiser",
+        "ctr_rank": "top 19%",
+        "budget_level": "medium",
+        "likes": 7900,
+        "length_s": 45,
+        "hook": "Is this the comfiest jogger ever?",
+        "angles": [
+          "Question"
+        ],
+        "top_ads_id": "TT-13"
+      },
+      {
+        "rank": 13,
+        "advertiser": "unnamed advertiser",
+        "ctr_rank": "top 21%",
+        "budget_level": "medium",
+        "likes": 6400,
+        "length_s": 16,
+        "hook": "Rated 4.9 by runners.",
+        "angles": [
+          "Proof"
+        ],
+        "top_ads_id": "TT-14"
+      }
+    ],
+    "summary": {
+      "angles": {
+        "Offer": 0,
+        "Urgency": 1,
+        "Proof": 4,
+        "Guarantee": 0,
+        "Creator voice": 5,
+        "Question": 2,
+        "Feature": 1
+      },
+      "length_buckets": {
+        "under 15s": 2,
+        "15 to 30s": 9,
+        "31 to 60s": 2,
+        "over 60s": 0
+      },
+      "budget_levels": {
+        "low": 3,
+        "medium": 7,
+        "high": 3
+      },
+      "unnamed_advertiser": 9
+    },
+    "note": "These are anonymous winners in the category, not your named competitors. CTR rank 'top 3%' means the top 3% of the category; lower is better.",
+    "source": "[Top Ads]"
+  },
+  "compared_with_you": {
+    "ads": [
+      {
+        "ad_id": "1810000000000001",
+        "ad_name": "Everyday legging static",
+        "format": "image",
+        "spark_or_ad_only": "ad-only post",
+        "cta": "SHOP_NOW",
+        "landing_page": "brightlane.example/",
+        "hook": "Meet the Everyday legging.",
+        "angles": [
+          "Feature"
+        ],
+        "optimization_goal": "CONVERT",
+        "spend": 2140.0,
+        "impressions": 182000,
+        "hook_rate_pct": "n/a (image)",
+        "hold_rate_pct": "n/a (image)",
+        "ctr_pct": 0.72,
+        "results": 41,
+        "cost_per_result": 52.2,
+        "graded": "yes",
+        "source": "[Your account]"
+      },
+      {
+        "ad_id": "1810000000000002",
+        "ad_name": "New colours static",
+        "format": "image",
+        "spark_or_ad_only": "ad-only post",
+        "cta": "SHOP_NOW",
+        "landing_page": "brightlane.example/",
+        "hook": "New colours just landed.",
+        "angles": [],
+        "optimization_goal": "CONVERT",
+        "spend": 1460.0,
+        "impressions": 121000,
+        "hook_rate_pct": "n/a (image)",
+        "hold_rate_pct": "n/a (image)",
+        "ctr_pct": 0.69,
+        "results": 22,
+        "cost_per_result": 66.36,
+        "graded": "yes",
+        "source": "[Your account]"
+      },
+      {
+        "ad_id": "1810000000000003",
+        "ad_name": "Pockets video",
+        "format": "video",
+        "spark_or_ad_only": "Spark Ad",
+        "cta": "SHOP_NOW",
+        "landing_page": "brightlane.example/",
+        "hook": "Leggings with deep pockets?",
+        "angles": [
+          "Question",
+          "Feature"
+        ],
+        "optimization_goal": "CONVERT",
+        "spend": 980.0,
+        "impressions": 96000,
+        "hook_rate_pct": 32.5,
+        "hold_rate_pct": 39.7,
+        "ctr_pct": 1.2,
+        "results": 29,
+        "cost_per_result": 33.79,
+        "graded": "yes",
+        "source": "[Your account]"
+      },
+      {
+        "ad_id": "1810000000000004",
+        "ad_name": "Squats video",
+        "format": "video",
+        "spark_or_ad_only": "Spark Ad",
+        "cta": "SHOP_NOW",
+        "landing_page": "brightlane.example/",
+        "hook": "Built for squats, walks and everything between.",
+        "angles": [],
+        "optimization_goal": "CONVERT",
+        "spend": 1270.0,
+        "impressions": 118000,
+        "hook_rate_pct": 31.2,
+        "hold_rate_pct": 35.6,
+        "ctr_pct": 1.09,
+        "results": 36,
+        "cost_per_result": 35.28,
+        "graded": "yes",
+        "source": "[Your account]"
+      },
+      {
+        "ad_id": "1810000000000005",
+        "ad_name": "Navy launch video",
+        "format": "video",
+        "spark_or_ad_only": "ad-only post",
+        "cta": "dynamic",
+        "landing_page": "brightlane.example/products/everyday-legging",
+        "hook": "The Everyday legging, now in navy.",
+        "angles": [],
+        "optimization_goal": "CONVERT",
+        "spend": 410.0,
+        "impressions": 39000,
+        "hook_rate_pct": 25.1,
+        "hold_rate_pct": 35.7,
+        "ctr_pct": 0.9,
+        "results": 8,
+        "cost_per_result": 51.25,
+        "graded": "yes",
+        "source": "[Your account]"
+      },
+      {
+        "ad_id": "1810000000000006",
+        "ad_name": "Studio to street video",
+        "format": "video",
+        "spark_or_ad_only": "Spark Ad",
+        "cta": "SHOP_NOW",
+        "landing_page": "brightlane.example/",
+        "hook": "From studio to street in one high-waist set.",
+        "angles": [
+          "Feature"
+        ],
+        "optimization_goal": "CONVERT",
+        "spend": 35.0,
+        "impressions": 820,
+        "hook_rate_pct": null,
+        "hold_rate_pct": null,
+        "ctr_pct": null,
+        "results": 0,
+        "cost_per_result": null,
+        "graded": "too little data",
+        "source": "[Your account]"
+      },
+      {
+        "ad_id": "1810000000000007",
+        "ad_name": "Blog fabric guide",
+        "format": "video",
+        "spark_or_ad_only": "ad-only post",
+        "cta": "LEARN_MORE",
+        "landing_page": "brightlane.example/blog/fabric-guide",
+        "hook": "What is the best fabric for hot yoga?",
+        "angles": [
+          "Question"
+        ],
+        "optimization_goal": "CLICK",
+        "spend": 520.0,
+        "impressions": 64000,
+        "hook_rate_pct": 28.0,
+        "hold_rate_pct": 34.1,
+        "ctr_pct": 1.59,
+        "results": 980,
+        "cost_per_result": 0.53,
+        "graded": "yes",
+        "source": "[Your account]"
+      },
+      {
+        "ad_id": "1810000000000008",
+        "ad_name": "Blog care guide",
+        "format": "image",
+        "spark_or_ad_only": "ad-only post",
+        "cta": "LEARN_MORE",
+        "landing_page": "brightlane.example/blog/care-guide",
+        "hook": "How to wash leggings so they last.",
+        "angles": [],
+        "optimization_goal": "CLICK",
+        "spend": 300.0,
+        "impressions": 41000,
+        "hook_rate_pct": "n/a (image)",
+        "hold_rate_pct": "n/a (image)",
+        "ctr_pct": 1.1,
+        "results": 430,
+        "cost_per_result": 0.7,
+        "graded": "yes",
+        "source": "[Your account]"
+      }
+    ],
+    "best_angle_by_goal": {
+      "CLICK": {
+        "best": {
+          "angle": "Question",
+          "ads": 1,
+          "spend": 520.0,
+          "results": 980,
+          "cost_per_result": 0.53
+        },
+        "all_angles": [
+          {
+            "angle": "Question",
+            "ads": 1,
+            "spend": 520.0,
+            "results": 980,
+            "cost_per_result": 0.53
+          }
+        ],
+        "ads_with_no_angle": {
+          "ads": 1,
+          "spend": 300.0,
+          "results": 430,
+          "cost_per_result": 0.7
+        }
+      },
+      "CONVERT": {
+        "best": {
+          "angle": "Question",
+          "ads": 1,
+          "spend": 980.0,
+          "results": 29,
+          "cost_per_result": 33.79
+        },
+        "all_angles": [
+          {
+            "angle": "Question",
+            "ads": 1,
+            "spend": 980.0,
+            "results": 29,
+            "cost_per_result": 33.79
+          },
+          {
+            "angle": "Feature",
+            "ads": 2,
+            "spend": 3120.0,
+            "results": 70,
+            "cost_per_result": 44.57
+          }
+        ],
+        "ads_with_no_angle": {
+          "ads": 3,
+          "spend": 3140.0,
+          "results": 66,
+          "cost_per_result": 47.58
+        }
+      }
+    },
+    "finding": "Within the CONVERT goal, your best angle is Question at $33.79 per result, resting on 1 graded ad; your 3 graded ads with no angle cost $47.58 per result. One ad is below 1,000 impressions and is not graded. [Your account]"
+  },
+  "what_to_test_next": [
+    {
+      "rule": "Test an angle",
+      "idea": "Test the creator voice angle in your captions and opening line",
+      "count": 12,
+      "evidence": "7 competitor ads in the Library (Northpeak Apparel, Kinetiq Wear) and 5 of the 13 Top Ads use it; none of your 8 ads do.",
+      "ads_behind_it": [
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000101",
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000110",
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000103",
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000105",
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000201",
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000203",
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000207",
+        "Top Ads TT-01",
+        "Top Ads TT-02",
+        "Top Ads TT-04",
+        "Top Ads TT-07",
+        "Top Ads TT-12"
+      ],
+      "sources": [
+        "[Library]",
+        "[Top Ads]",
+        "[Your account]"
+      ]
+    },
+    {
+      "rule": "Test video",
+      "idea": "Move budget from your image ads to video",
+      "count": 10,
+      "evidence": "10 of the competitors' 11 proven ads are video (91%); 3 of your 8 ads are images.",
+      "ads_behind_it": [
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000101",
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000102",
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000107",
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000103",
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000105",
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000201",
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000205",
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000202",
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000203",
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000207"
+      ],
+      "sources": [
+        "[Library]",
+        "[Your account]"
+      ]
+    },
+    {
+      "rule": "Fit the length",
+      "idea": "Make your videos 15 to 30 seconds long",
+      "count": 9,
+      "evidence": "9 of the 13 Top Ads (69%) run 15 to 30 seconds; the median is 21.4 seconds. Your video lengths aren't readable here, so check yours against it.",
+      "ads_behind_it": [
+        "Top Ads TT-01",
+        "Top Ads TT-02",
+        "Top Ads TT-03",
+        "Top Ads TT-04",
+        "Top Ads TT-06",
+        "Top Ads TT-09",
+        "Top Ads TT-10",
+        "Top Ads TT-12",
+        "Top Ads TT-14"
+      ],
+      "sources": [
+        "[Top Ads]"
+      ]
+    },
+    {
+      "rule": "Test an angle",
+      "idea": "Test the proof angle in your captions and opening line",
+      "count": 7,
+      "evidence": "3 competitor ads in the Library (Northpeak Apparel, Kinetiq Wear) and 4 of the 13 Top Ads use it; none of your 8 ads do.",
+      "ads_behind_it": [
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000102",
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000201",
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000205",
+        "Top Ads TT-03",
+        "Top Ads TT-06",
+        "Top Ads TT-10",
+        "Top Ads TT-14"
+      ],
+      "sources": [
+        "[Library]",
+        "[Top Ads]",
+        "[Your account]"
+      ]
+    },
+    {
+      "rule": "Localise",
+      "idea": "Run German captions for your German audience",
+      "count": 7,
+      "evidence": "Kinetiq Wear runs 7 ads with German captions, and Germany holds 83.9% of its detailed impressions; all your captions are English.",
+      "ads_behind_it": [
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000201",
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000205",
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000209",
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000202",
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000207",
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000204",
+        "https://library.tiktok.com/ads/detail/?ad_id=1880000000000208"
+      ],
+      "sources": [
+        "[Library]",
+        "[Your account]"
+      ]
+    }
+  ],
+  "ideas_cut_to_keep_five": [
+    "If you have an offer or a returns promise, say it in the caption",
+    "Test the urgency angle in your captions and opening line",
+    "Send your conversion ads to a product or collection page instead of the home page"
+  ],
+  "gaps": [
+    "The Library covers the EU, EEA, UK, Switzerland and Turkey only: Loopfit Studio sells mostly in the US, so its empty result says nothing about its US ads.",
+    "Neither source shows spend. Reach bands, ad counts, budget levels and run lengths are not spend.",
+    "Top Ads returns at most 20 ads per filter set; this set returned 14 from a pool of 1,240, and 1 was dropped for a caption in another script.",
+    "Landing pages, CTAs, objectives and targeting cover 5 detailed ads per competitor, not every ad.",
+    "Mentions by other accounts (20 for Northpeak Apparel, 10 for Kinetiq Wear) are counted but not named or quoted."
+  ],
+  "go_deeper": [
+    {
+      "next_step": "Meta, Google, Microsoft and LinkedIn libraries in the same report",
+      "skill": "competitor-ad-research"
+    },
+    {
+      "next_step": "A full analysis of your own TikTok account",
+      "skill": "tiktok-ads-analyzer"
+    },
+    {
+      "next_step": "Turn the creator-voice angle into a TikTok script",
+      "skill": "video-ad-script-writer"
+    },
+    {
+      "next_step": "Brief creators on a try-on video",
+      "skill": "ugc-brief-generator"
+    }
+  ]
+}

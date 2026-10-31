@@ -1,0 +1,1712 @@
+{
+  "header": {
+    "account": "Example Booking Software",
+    "account_id": "150000001",
+    "currency": "USD",
+    "time_zone": "EasternTimeUSCanada",
+    "window": "2026-09-28 to 2026-10-27",
+    "window_note": "Last30Days; all four live campaigns served, so the window wasn't widened.",
+    "tracking": "working: 2 active goals are RecordingConversions (Account created, Demo booked). The paused goal 'Newsletter signup (old)' is TagInactive and doesn't count.",
+    "target_cpa": "$60, given by you (the account's own CPA for the window is $40.75)",
+    "totals": {
+      "impressions": 57300,
+      "clicks": 2743,
+      "spend": 5052.9,
+      "conversions": 124,
+      "average_cpc": 1.84,
+      "cpa": 40.75
+    }
+  },
+  "summary": [
+    {
+      "step": "Negative keywords",
+      "key_number": "14 negatives in 3 campaigns covering $748.90 of $4,019.15 visible search-term spend",
+      "line": "Search terms show 79.5% of spend. 2 other-brand terms are held for your approval; 5 terms go on the watch list. One old negative, 'calendar', blocks an active keyword."
+    },
+    {
+      "step": "Keywords to pause",
+      "key_number": "4 keywords, $955.50 of $5,052.90 spend",
+      "line": "3 attract the wrong searchers (relevance rule) and 4 miss the $60 target by the conversion rule; some hit both. 'example booking login' meets the conversion rule but stays on: it's in the brand campaign."
+    },
+    {
+      "step": "Budgets",
+      "key_number": "Generic - Booking software: $90 to $108/day",
+      "line": "It loses 22.4% of impression share to budget at a $50.01 CPA. Industries - Salons and fitness runs at $97.28: fix it before cutting the shared budget. Industries - Salons and fitness and Features - Reminders and payments lose more than half their impression share to rank."
+    },
+    {
+      "step": "Responsive search ads",
+      "key_number": "7 of 7 ad groups covered; 3 ads have room or Low lines",
+      "line": "Fitness has 2 Low headlines and uses only 11 of 15 headlines and 2 of 4 descriptions. 21 assets are Unrated. 2 active keywords are too long for their keyword-insertion headline."
+    },
+    {
+      "step": "New campaign",
+      "key_number": "8 keywords, 1 ad with 15 headlines, 16 negatives, $30/day",
+      "line": "Groomer search terms already convert in Generic: 3 terms, $186.35, 9 conversions ($20.71 CPA). Everything is created paused."
+    }
+  ],
+  "negatives": {
+    "visible_share": "$4,019.15 of $5,052.90 (79.5%) of spend shows up as search terms",
+    "groups": [
+      {
+        "group": "Wants to book or track their own appointment, not run a business",
+        "terms": [
+          {
+            "term": "book salon appointment near me",
+            "campaign": "Industries - Salons and fitness",
+            "clicks": 74,
+            "spend": 118.4,
+            "conversions": 0
+          },
+          {
+            "term": "hair salon appointment online",
+            "campaign": "Industries - Salons and fitness",
+            "clicks": 61,
+            "spend": 97.6,
+            "conversions": 0
+          },
+          {
+            "term": "nail salon appointment",
+            "campaign": "Industries - Salons and fitness",
+            "clicks": 45,
+            "spend": 72.0,
+            "conversions": 0
+          },
+          {
+            "term": "yoga class schedule near me",
+            "campaign": "Industries - Salons and fitness",
+            "clicks": 46,
+            "spend": 64.4,
+            "conversions": 0
+          },
+          {
+            "term": "gym class schedule",
+            "campaign": "Industries - Salons and fitness",
+            "clicks": 38,
+            "spend": 53.2,
+            "conversions": 0
+          },
+          {
+            "term": "spin class schedule today",
+            "campaign": "Industries - Salons and fitness",
+            "clicks": 24,
+            "spend": 33.6,
+            "conversions": 0
+          },
+          {
+            "term": "doctor appointment reminder app",
+            "campaign": "Features - Reminders and payments",
+            "clicks": 12,
+            "spend": 15.6,
+            "conversions": 0
+          }
+        ]
+      },
+      {
+        "group": "Wants staff rota software, not client booking",
+        "terms": [
+          {
+            "term": "employee scheduling software",
+            "campaign": "Generic - Booking software",
+            "clicks": 21,
+            "spend": 52.5,
+            "conversions": 0
+          },
+          {
+            "term": "shift scheduling app",
+            "campaign": "Generic - Booking software",
+            "clicks": 16,
+            "spend": 40.0,
+            "conversions": 0
+          },
+          {
+            "term": "staff rota app",
+            "campaign": "Generic - Booking software",
+            "clicks": 12,
+            "spend": 30.0,
+            "conversions": 0
+          }
+        ]
+      },
+      {
+        "group": "Wants a different product",
+        "terms": [
+          {
+            "term": "shared online calendar",
+            "campaign": "Generic - Booking software",
+            "clicks": 17,
+            "spend": 40.8,
+            "conversions": 0
+          },
+          {
+            "term": "restaurant reservation system",
+            "campaign": "Generic - Booking software",
+            "clicks": 9,
+            "spend": 38.7,
+            "conversions": 0
+          },
+          {
+            "term": "hotel booking software",
+            "campaign": "Generic - Booking software",
+            "clicks": 7,
+            "spend": 29.4,
+            "conversions": 0
+          }
+        ]
+      },
+      {
+        "group": "Wants a free template or printable",
+        "terms": [
+          {
+            "term": "appointment reminder card template",
+            "campaign": "Features - Reminders and payments",
+            "clicks": 27,
+            "spend": 35.1,
+            "conversions": 0
+          },
+          {
+            "term": "printable appointment book",
+            "campaign": "Generic - Booking software",
+            "clicks": 12,
+            "spend": 19.2,
+            "conversions": 0
+          },
+          {
+            "term": "appointment reminder text template",
+            "campaign": "Features - Reminders and payments",
+            "clicks": 6,
+            "spend": 8.4,
+            "conversions": 0
+          }
+        ]
+      },
+      {
+        "group": "Other brands' products (approve one by one)",
+        "terms": [
+          {
+            "term": "bookfinch pricing",
+            "campaign": "Generic - Booking software",
+            "clicks": 4,
+            "spend": 14.4,
+            "conversions": 0
+          },
+          {
+            "term": "slotmoth login",
+            "campaign": "Generic - Booking software",
+            "clicks": 3,
+            "spend": 6.6,
+            "conversions": 0
+          }
+        ]
+      }
+    ],
+    "proposed": [
+      {
+        "campaign": "Generic - Booking software",
+        "text": "employee scheduling software",
+        "match_type": "Exact",
+        "group": "Wants staff rota software, not client booking",
+        "covers_terms": [
+          "employee scheduling software"
+        ],
+        "spend": 52.5,
+        "clicks": 21,
+        "also_blocks_zero_spend_terms": []
+      },
+      {
+        "campaign": "Generic - Booking software",
+        "text": "shared online calendar",
+        "match_type": "Exact",
+        "group": "Wants a different product",
+        "covers_terms": [
+          "shared online calendar"
+        ],
+        "spend": 40.8,
+        "clicks": 17,
+        "also_blocks_zero_spend_terms": []
+      },
+      {
+        "campaign": "Generic - Booking software",
+        "text": "shift scheduling app",
+        "match_type": "Exact",
+        "group": "Wants staff rota software, not client booking",
+        "covers_terms": [
+          "shift scheduling app"
+        ],
+        "spend": 40.0,
+        "clicks": 16,
+        "also_blocks_zero_spend_terms": []
+      },
+      {
+        "campaign": "Generic - Booking software",
+        "text": "restaurant reservation system",
+        "match_type": "Exact",
+        "group": "Wants a different product",
+        "covers_terms": [
+          "restaurant reservation system"
+        ],
+        "spend": 38.7,
+        "clicks": 9,
+        "also_blocks_zero_spend_terms": []
+      },
+      {
+        "campaign": "Generic - Booking software",
+        "text": "staff rota app",
+        "match_type": "Exact",
+        "group": "Wants staff rota software, not client booking",
+        "covers_terms": [
+          "staff rota app"
+        ],
+        "spend": 30.0,
+        "clicks": 12,
+        "also_blocks_zero_spend_terms": []
+      },
+      {
+        "campaign": "Generic - Booking software",
+        "text": "hotel booking software",
+        "match_type": "Exact",
+        "group": "Wants a different product",
+        "covers_terms": [
+          "hotel booking software"
+        ],
+        "spend": 29.4,
+        "clicks": 7,
+        "also_blocks_zero_spend_terms": []
+      },
+      {
+        "campaign": "Generic - Booking software",
+        "text": "printable appointment book",
+        "match_type": "Exact",
+        "group": "Wants a free template or printable",
+        "covers_terms": [
+          "printable appointment book"
+        ],
+        "spend": 19.2,
+        "clicks": 12,
+        "also_blocks_zero_spend_terms": []
+      },
+      {
+        "campaign": "Industries - Salons and fitness",
+        "text": "near me",
+        "match_type": "Phrase",
+        "group": "Wants to book or track their own appointment, not run a business",
+        "covers_terms": [
+          "book salon appointment near me",
+          "yoga class schedule near me"
+        ],
+        "spend": 182.8,
+        "clicks": 120,
+        "why_phrase": "\"near me\" means someone looking for a place to book, not software to run one",
+        "also_blocks_zero_spend_terms": [
+          "massage appointment near me"
+        ]
+      },
+      {
+        "campaign": "Industries - Salons and fitness",
+        "text": "hair salon appointment online",
+        "match_type": "Exact",
+        "group": "Wants to book or track their own appointment, not run a business",
+        "covers_terms": [
+          "hair salon appointment online"
+        ],
+        "spend": 97.6,
+        "clicks": 61,
+        "also_blocks_zero_spend_terms": []
+      },
+      {
+        "campaign": "Industries - Salons and fitness",
+        "text": "nail salon appointment",
+        "match_type": "Exact",
+        "group": "Wants to book or track their own appointment, not run a business",
+        "covers_terms": [
+          "nail salon appointment"
+        ],
+        "spend": 72.0,
+        "clicks": 45,
+        "also_blocks_zero_spend_terms": []
+      },
+      {
+        "campaign": "Industries - Salons and fitness",
+        "text": "gym class schedule",
+        "match_type": "Exact",
+        "group": "Wants to book or track their own appointment, not run a business",
+        "covers_terms": [
+          "gym class schedule"
+        ],
+        "spend": 53.2,
+        "clicks": 38,
+        "also_blocks_zero_spend_terms": []
+      },
+      {
+        "campaign": "Industries - Salons and fitness",
+        "text": "spin class schedule today",
+        "match_type": "Exact",
+        "group": "Wants to book or track their own appointment, not run a business",
+        "covers_terms": [
+          "spin class schedule today"
+        ],
+        "spend": 33.6,
+        "clicks": 24,
+        "also_blocks_zero_spend_terms": []
+      },
+      {
+        "campaign": "Features - Reminders and payments",
+        "text": "template",
+        "match_type": "Phrase",
+        "group": "Wants a free template or printable",
+        "covers_terms": [
+          "appointment reminder card template",
+          "appointment reminder text template"
+        ],
+        "spend": 43.5,
+        "clicks": 33,
+        "why_phrase": "people looking for a free template, not software",
+        "also_blocks_zero_spend_terms": []
+      },
+      {
+        "campaign": "Features - Reminders and payments",
+        "text": "doctor appointment reminder app",
+        "match_type": "Exact",
+        "group": "Wants to book or track their own appointment, not run a business",
+        "covers_terms": [
+          "doctor appointment reminder app"
+        ],
+        "spend": 15.6,
+        "clicks": 12,
+        "also_blocks_zero_spend_terms": []
+      }
+    ],
+    "held_for_approval": [
+      {
+        "campaign": "Generic - Booking software",
+        "text": "bookfinch pricing",
+        "match_type": "Exact",
+        "covers_terms": [
+          "bookfinch pricing"
+        ],
+        "spend": 14.4,
+        "clicks": 4
+      },
+      {
+        "campaign": "Generic - Booking software",
+        "text": "slotmoth login",
+        "match_type": "Exact",
+        "covers_terms": [
+          "slotmoth login"
+        ],
+        "spend": 6.6,
+        "clicks": 3
+      }
+    ],
+    "zero_spend_terms": "2 terms had impressions but no spend: counted, not targeted (online booking software reviews, massage appointment near me)",
+    "checks": "No proposed negative blocks an active keyword or a watch-list term in its campaign (the Exact negatives 'nail salon appointment' and 'gym class schedule' don't block the keywords 'salon appointment' and 'class schedule'), and none is already covered by a campaign negative or the attached shared list 'Account negatives'.",
+    "existing_conflicts": [
+      {
+        "negative": "calendar",
+        "match_type": "Phrase",
+        "level": "campaign",
+        "campaign": "Industries - Salons and fitness",
+        "blocks_keyword": "booking calendar for salons",
+        "keyword_id": "8100000000016",
+        "change": 9
+      }
+    ],
+    "unknown": "Ad-group negatives can't be read through this connection (entity_type AdGroup returns an error). Check them in Microsoft Advertising."
+  },
+  "watch_list": [
+    {
+      "term": "example booking login",
+      "campaign": "Brand",
+      "clicks": 160,
+      "spend": 131.2,
+      "conversions": 0,
+      "why_kept": "your own brand: existing customers looking for the login page. Never a negative; consider a sitelink to the login page"
+    },
+    {
+      "term": "physio booking system",
+      "campaign": "Generic - Booking software",
+      "clicks": 11,
+      "spend": 31.9,
+      "conversions": 0,
+      "why_kept": "describes what you sell (clinics); give it time or send it to the clinics page"
+    },
+    {
+      "term": "online appointment calendar",
+      "campaign": "Generic - Booking software",
+      "clicks": 20,
+      "spend": 48.0,
+      "conversions": 0,
+      "why_kept": "describes what you sell; a bid or landing-page question"
+    },
+    {
+      "term": "staff scheduling and client booking",
+      "campaign": "Generic - Booking software",
+      "clicks": 3,
+      "spend": 7.5,
+      "conversions": 0,
+      "why_kept": "describes what you sell; 3 clicks"
+    },
+    {
+      "term": "salon appointment app",
+      "campaign": "Industries - Salons and fitness",
+      "clicks": 22,
+      "spend": 35.2,
+      "conversions": 0,
+      "why_kept": "could be a salon owner looking for an app; too little data to judge"
+    }
+  ],
+  "pause": {
+    "target_cpa": "$60",
+    "keywords": [
+      {
+        "keyword": "online calendar",
+        "keyword_id": "8100000000007",
+        "match_type": "Broad",
+        "campaign": "Generic - Booking software",
+        "ad_group": "Booking software",
+        "keyword_report": {
+          "impressions": 3900,
+          "clicks": 95,
+          "spend": 209.0,
+          "conversions": 1
+        },
+        "rules": [
+          "1 conversion on $209.00 spend: CPA $209.00, above 3 x target ($180)"
+        ],
+        "decision": "lower the bid or pause: your call",
+        "change": 5
+      },
+      {
+        "keyword": "staff scheduling",
+        "keyword_id": "8100000000010",
+        "match_type": "Broad",
+        "campaign": "Generic - Booking software",
+        "ad_group": "Appointment scheduling",
+        "keyword_report": {
+          "impressions": 2600,
+          "clicks": 61,
+          "spend": 152.5,
+          "conversions": 0
+        },
+        "rules": [
+          "0 conversions on $152.50, at least 2 x the $60 target CPA",
+          "94.2% of its $130.00 visible search-term spend and 49 clicks went to the proposed negative groups"
+        ],
+        "decision": "pause if this doesn't describe what you sell",
+        "matched_off_target_terms": [
+          {
+            "term": "employee scheduling software",
+            "spend": 52.5
+          },
+          {
+            "term": "shift scheduling app",
+            "spend": 40.0
+          },
+          {
+            "term": "staff rota app",
+            "spend": 30.0
+          }
+        ],
+        "change": 6
+      },
+      {
+        "keyword": "salon appointment",
+        "keyword_id": "8100000000015",
+        "match_type": "Broad",
+        "campaign": "Industries - Salons and fitness",
+        "ad_group": "Salons",
+        "keyword_report": {
+          "impressions": 7800,
+          "clicks": 230,
+          "spend": 398.0,
+          "conversions": 0
+        },
+        "rules": [
+          "0 conversions on $398.00, at least 2 x the $60 target CPA",
+          "89.1% of its $323.20 visible search-term spend and 180 clicks went to the proposed negative groups"
+        ],
+        "decision": "pause if this doesn't describe what you sell",
+        "matched_off_target_terms": [
+          {
+            "term": "book salon appointment near me",
+            "spend": 118.4
+          },
+          {
+            "term": "hair salon appointment online",
+            "spend": 97.6
+          },
+          {
+            "term": "nail salon appointment",
+            "spend": 72.0
+          },
+          {
+            "term": "massage appointment near me",
+            "spend": 0.0
+          }
+        ],
+        "change": 7
+      },
+      {
+        "keyword": "class schedule",
+        "keyword_id": "8100000000019",
+        "match_type": "Broad",
+        "campaign": "Industries - Salons and fitness",
+        "ad_group": "Fitness",
+        "keyword_report": {
+          "impressions": 6100,
+          "clicks": 140,
+          "spend": 196.0,
+          "conversions": 1
+        },
+        "rules": [
+          "1 conversion on $196.00 spend: CPA $196.00, above 3 x target ($180)",
+          "87.5% of its $172.80 visible search-term spend and 108 clicks went to the proposed negative groups"
+        ],
+        "decision": "pause if this doesn't describe what you sell",
+        "matched_off_target_terms": [
+          {
+            "term": "yoga class schedule near me",
+            "spend": 64.4
+          },
+          {
+            "term": "gym class schedule",
+            "spend": 53.2
+          },
+          {
+            "term": "spin class schedule today",
+            "spend": 33.6
+          }
+        ],
+        "change": 8
+      }
+    ],
+    "not_paused": [
+      {
+        "keyword": "example booking login",
+        "campaign": "Brand",
+        "keyword_report": {
+          "clicks": 160,
+          "spend": 131.2,
+          "conversions": 0
+        },
+        "why": "meets the conversion rule, but keywords in a brand campaign are never paused"
+      }
+    ],
+    "near_miss": [
+      {
+        "keyword": "appointment reminder",
+        "why": "$59.10 of its $78.60 visible search-term spend (75.2%) went to the proposed negative groups, under 80%, and it has 1 conversion on $91.00. Leave it on: the new Features negatives cover all 3 of its off-target terms."
+      }
+    ],
+    "keywords_left_active": "21 of 25 active keywords stay on, and every ad group keeps at least one",
+    "editorial_issues": "none: every keyword's editorial status is Active",
+    "blocked_by_existing_negative": {
+      "keyword": "booking calendar for salons",
+      "keyword_id": "8100000000016",
+      "negative": "calendar",
+      "negative_match_type": "Phrase",
+      "keyword_report": "no impressions in the window",
+      "decision": "it describes what you sell, so remove the negative by hand; or pause the keyword (change 9)"
+    }
+  },
+  "budgets": {
+    "campaigns": [
+      {
+        "campaign": "Brand",
+        "id": "410000001",
+        "status": "Active",
+        "budget": "its own (BudgetId is null)",
+        "daily_budget": 20,
+        "spend": 551.2,
+        "conversions": 45,
+        "cpa": 12.25,
+        "average_cpc": 0.73,
+        "floor": "10 x $0.73 = $7.30, rounded up to $8/day",
+        "floor_met": true,
+        "impression_share": {
+          "share_pct": 92.4,
+          "lost_to_budget_pct": 0.0,
+          "lost_to_rank_pct": 7.6
+        },
+        "decision": "no change: 0.0% lost to budget is under 10%, CPA $12.25 is within target"
+      },
+      {
+        "campaign": "Generic - Booking software",
+        "id": "410000002",
+        "status": "Active",
+        "budget": "its own (BudgetId is null)",
+        "daily_budget": 90,
+        "spend": 2650.4,
+        "conversions": 53,
+        "cpa": 50.01,
+        "average_cpc": 2.53,
+        "floor": "10 x $2.53 = $25.30, rounded up to $26/day",
+        "floor_met": true,
+        "impression_share": {
+          "share_pct": 41.3,
+          "lost_to_budget_pct": 22.4,
+          "lost_to_rank_pct": 36.3
+        },
+        "decision": "raise: 22.4% lost to budget at a $50.01 CPA, under the $60 target. Up 20%, from $90 to $108/day; check again in 7 days",
+        "new_budget": 108
+      },
+      {
+        "campaign": "Industries - Salons and fitness",
+        "id": "410000003",
+        "status": "Active",
+        "budget": "shared budget 'Industries and features' (9100000000001)",
+        "daily_budget": 80,
+        "spend": 1361.9,
+        "conversions": 14,
+        "cpa": 97.28,
+        "average_cpc": 2.03,
+        "floor": "10 x $2.03 = $20.30, rounded up to $21/day",
+        "floor_met": true,
+        "impression_share": {
+          "share_pct": 37.8,
+          "lost_to_budget_pct": 6.1,
+          "lost_to_rank_pct": 56.1
+        },
+        "decision": "cut or fix first: CPA $97.28 is above 1.5 x target ($90). Fix the negatives and pauses first; cut the shared budget 20% only if the CPA is still above that after 14 days",
+        "cut": true,
+        "rank_note": "56.1% lost to rank: more budget won't buy much until bids or ad quality improve"
+      },
+      {
+        "campaign": "Features - Reminders and payments",
+        "id": "410000004",
+        "status": "Active",
+        "budget": "shared budget 'Industries and features' (9100000000001)",
+        "daily_budget": 80,
+        "spend": 489.4,
+        "conversions": 12,
+        "cpa": 40.78,
+        "average_cpc": 1.86,
+        "floor": "10 x $1.86 = $18.60, rounded up to $19/day",
+        "floor_met": true,
+        "impression_share": {
+          "share_pct": 33.2,
+          "lost_to_budget_pct": 8.4,
+          "lost_to_rank_pct": 58.4
+        },
+        "decision": "no change: 8.4% lost to budget is under 10%, CPA $40.78 is within target",
+        "rank_note": "58.4% lost to rank: more budget won't buy much until bids or ad quality improve"
+      }
+    ],
+    "shared_budget": {
+      "name": "Industries and features",
+      "id": "9100000000001",
+      "amount": 80,
+      "used_by": [
+        "Industries - Salons and fitness",
+        "Features - Reminders and payments"
+      ],
+      "note": "Microsoft refuses a DailyBudget change on a campaign with a shared budget, so any change goes through update_budgets and affects both campaigns."
+    }
+  },
+  "responsive_search_ads": {
+    "coverage": "7 of 7 active ad groups have an active responsive search ad",
+    "ads": [
+      {
+        "campaign": "Brand",
+        "ad_group": "Brand terms",
+        "ad_id": "7100000000011",
+        "status": "Active",
+        "editorial_status": "Active",
+        "headlines_used": 12,
+        "descriptions_used": 4,
+        "asset_labels": {
+          "Best": 3,
+          "Good": 9,
+          "Unrated": 4
+        },
+        "flags": [
+          "room for 3 more headlines"
+        ]
+      },
+      {
+        "campaign": "Generic - Booking software",
+        "ad_group": "Booking software",
+        "ad_id": "7100000000021",
+        "status": "Active",
+        "editorial_status": "Active",
+        "headlines_used": 15,
+        "descriptions_used": 4,
+        "asset_labels": {
+          "Best": 2,
+          "Good": 15,
+          "Unrated": 2
+        },
+        "flags": [
+          "none"
+        ],
+        "keyword_insertion": {
+          "headlines": [
+            "{KeyWord:Online Booking Software}"
+          ],
+          "active_keywords_over_30_chars": [
+            {
+              "keyword": "booking software for small business",
+              "chars": 35
+            }
+          ],
+          "effect": "for these keywords the headline shows its default text instead of the keyword"
+        }
+      },
+      {
+        "campaign": "Generic - Booking software",
+        "ad_group": "Appointment scheduling",
+        "ad_id": "7100000000022",
+        "status": "Active",
+        "editorial_status": "Active",
+        "headlines_used": 15,
+        "descriptions_used": 4,
+        "asset_labels": {
+          "Best": 1,
+          "Good": 16,
+          "Unrated": 2
+        },
+        "flags": [
+          "none"
+        ],
+        "keyword_insertion": {
+          "headlines": [
+            "{KeyWord:Scheduling Software}"
+          ],
+          "active_keywords_over_30_chars": [
+            {
+              "keyword": "appointment scheduling software",
+              "chars": 31
+            }
+          ],
+          "effect": "for these keywords the headline shows its default text instead of the keyword"
+        }
+      },
+      {
+        "campaign": "Industries - Salons and fitness",
+        "ad_group": "Salons",
+        "ad_id": "7100000000031",
+        "status": "Active",
+        "editorial_status": "Active",
+        "headlines_used": 14,
+        "descriptions_used": 3,
+        "asset_labels": {
+          "Good": 15,
+          "Unrated": 2
+        },
+        "flags": [
+          "room for 1 more headline",
+          "room for 1 more description"
+        ]
+      },
+      {
+        "campaign": "Industries - Salons and fitness",
+        "ad_group": "Fitness",
+        "ad_id": "7100000000032",
+        "status": "Active",
+        "editorial_status": "Active",
+        "headlines_used": 11,
+        "descriptions_used": 2,
+        "asset_labels": {
+          "Good": 9,
+          "Low": 2,
+          "Unrated": 2
+        },
+        "flags": [
+          "room for 4 more headlines",
+          "room for 2 more descriptions",
+          "replace the 2 Low headlines"
+        ],
+        "low_lines": [
+          "Gym Software Since 2019",
+          "The Smart Choice for Studios"
+        ]
+      },
+      {
+        "campaign": "Features - Reminders and payments",
+        "ad_group": "Reminders",
+        "ad_id": "7100000000041",
+        "status": "Active",
+        "editorial_status": "Active",
+        "headlines_used": 15,
+        "descriptions_used": 4,
+        "asset_labels": {
+          "Good": 17,
+          "Unrated": 2
+        },
+        "flags": [
+          "none"
+        ]
+      },
+      {
+        "campaign": "Features - Reminders and payments",
+        "ad_group": "Payments",
+        "ad_id": "7100000000042",
+        "status": "Active",
+        "editorial_status": "Active",
+        "headlines_used": 15,
+        "descriptions_used": 4,
+        "asset_labels": {
+          "Good": 12,
+          "Unrated": 7
+        },
+        "flags": [
+          "none"
+        ]
+      }
+    ],
+    "label_note": "Unrated means not enough traffic yet, so those lines aren't judged.",
+    "assets_not_editorially_active": "none: every ad, headline and description is Active",
+    "decision": "No payload for the existing ads: an RSA can't be edited here. Offer: draft a new Fitness RSA without the 2 Low lines, add it paused, and pause the old one after review."
+  },
+  "new_campaign": {
+    "name": "Industries - Pet groomers",
+    "daily_budget": 30,
+    "budget_check": "$30/day is at or above the $26/day floor (10 x $2.53, the average CPC of Generic - Booking software)",
+    "evidence": {
+      "groomer_terms": [
+        {
+          "term": "dog grooming booking app",
+          "clicks": 31,
+          "spend": 86.8,
+          "conversions": 4
+        },
+        {
+          "term": "booking app for dog groomers",
+          "clicks": 15,
+          "spend": 41.25,
+          "conversions": 2
+        },
+        {
+          "term": "pet grooming appointment scheduling software",
+          "clicks": 22,
+          "spend": 58.3,
+          "conversions": 3
+        }
+      ],
+      "total": {
+        "clicks": 68,
+        "spend": 186.35,
+        "conversions": 9,
+        "cpa": 20.71
+      }
+    },
+    "locations": [
+      "United States (+0% bid)",
+      "Canada (-10% bid)"
+    ],
+    "ad_group": {
+      "name": "Pet groomers",
+      "bid": 2.6
+    },
+    "bidding": "BiddingScheme left out, so Microsoft's default for search applies (the account's campaigns run EnhancedCpc).",
+    "keywords": [
+      {
+        "text": "dog grooming booking app",
+        "match_type": "Phrase",
+        "bid": "ad group bid",
+        "source": "search term in Generic - Booking software (via 'booking app', Broad)",
+        "window": {
+          "clicks": 31,
+          "spend": 86.8,
+          "conversions": 4,
+          "cpa": 21.7
+        }
+      },
+      {
+        "text": "pet grooming appointment scheduling software",
+        "match_type": "Phrase",
+        "bid": "ad group bid",
+        "source": "search term in Generic - Booking software (via 'appointment scheduling software', Phrase)",
+        "window": {
+          "clicks": 22,
+          "spend": 58.3,
+          "conversions": 3,
+          "cpa": 19.43
+        }
+      },
+      {
+        "text": "booking app for dog groomers",
+        "match_type": "Phrase",
+        "bid": "ad group bid",
+        "source": "search term in Generic - Booking software (via 'booking app', Broad)",
+        "window": {
+          "clicks": 15,
+          "spend": 41.25,
+          "conversions": 2,
+          "cpa": 20.63
+        }
+      },
+      {
+        "text": "pet grooming booking software",
+        "match_type": "Phrase",
+        "bid": "ad group bid",
+        "source": "landing page: H1: \"Booking software for pet groomers\"",
+        "window": "new"
+      },
+      {
+        "text": "dog grooming software",
+        "match_type": "Phrase",
+        "bid": "ad group bid",
+        "source": "landing page: meta description: \"dog groomers and pet salons\"",
+        "window": "new"
+      },
+      {
+        "text": "pet salon booking system",
+        "match_type": "Phrase",
+        "bid": "ad group bid",
+        "source": "landing page: meta description: \"dog groomers and pet salons\"",
+        "window": "new"
+      },
+      {
+        "text": "mobile dog grooming scheduling",
+        "match_type": "Phrase",
+        "bid": "ad group bid",
+        "source": "landing page: line: \"Works for grooming salons and mobile groomers.\"",
+        "window": "new"
+      },
+      {
+        "text": "grooming salon booking",
+        "match_type": "Exact",
+        "bid": "ad group bid",
+        "source": "the brief",
+        "window": "new"
+      }
+    ],
+    "keyword_note": "No account keyword is reused, so nothing competes keyword for keyword. The groomer terms reach Generic through 'booking app' (Broad) and 'appointment scheduling software' (Phrase), so once the new campaign is on, add 'grooming' as a Phrase negative to Generic to send that traffic to the new campaign.",
+    "ad": {
+      "headlines": [
+        {
+          "text": "Pet Grooming Booking Software",
+          "chars": 29,
+          "source": "landing page H1 \"Booking software for pet groomers\"; keyword pet grooming booking software"
+        },
+        {
+          "text": "Dog Grooming Booking App",
+          "chars": 24,
+          "source": "keyword: dog grooming booking app (4 conversions in the window)"
+        },
+        {
+          "text": "Booking App for Dog Groomers",
+          "chars": 28,
+          "source": "keyword: booking app for dog groomers (2 conversions in the window)"
+        },
+        {
+          "text": "Grooming Appointment Software",
+          "chars": 29,
+          "source": "keyword: pet grooming appointment scheduling software (3 conversions in the window)"
+        },
+        {
+          "text": "Clients Book Day or Night",
+          "chars": 25,
+          "source": "landing page: \"Let clients book grooming appointments online, day or night.\""
+        },
+        {
+          "text": "Online Grooming Appointments",
+          "chars": 28,
+          "source": "landing page: \"Let clients book grooming appointments online, day or night.\""
+        },
+        {
+          "text": "SMS and Email Reminders",
+          "chars": 23,
+          "source": "landing page: \"Automatic SMS and email reminders cut no-shows.\""
+        },
+        {
+          "text": "Cut No-Shows With Reminders",
+          "chars": 27,
+          "source": "landing page: \"Automatic SMS and email reminders cut no-shows.\""
+        },
+        {
+          "text": "Take a Deposit When They Book",
+          "chars": 29,
+          "source": "landing page: \"Take a deposit when clients book.\""
+        },
+        {
+          "text": "Two-Way Calendar Sync",
+          "chars": 21,
+          "source": "landing page: \"Two-way calendar sync.\""
+        },
+        {
+          "text": "For Salons and Mobile Groomers",
+          "chars": 30,
+          "source": "landing page: \"Works for grooming salons and mobile groomers.\""
+        },
+        {
+          "text": "Your Booking Page in Minutes",
+          "chars": 28,
+          "source": "landing page: \"Set up your booking page in minutes.\""
+        },
+        {
+          "text": "Plans From $19 a Month",
+          "chars": 22,
+          "source": "meta description: \"Plans from $19 a month.\""
+        },
+        {
+          "text": "Example Booking Software",
+          "chars": 24,
+          "source": "page title"
+        },
+        {
+          "text": "Create Your Account",
+          "chars": 19,
+          "source": "landing page button"
+        }
+      ],
+      "descriptions": [
+        {
+          "text": "Let clients book grooming appointments online, day or night, from your own booking page.",
+          "chars": 88,
+          "source": "landing page lines 1 and 6"
+        },
+        {
+          "text": "Automatic SMS and email reminders cut no-shows. Take a deposit when clients book.",
+          "chars": 81,
+          "source": "landing page lines 2 and 3"
+        },
+        {
+          "text": "Online booking, reminders and deposits for dog groomers and pet salons. From $19 a month.",
+          "chars": 89,
+          "source": "meta description"
+        },
+        {
+          "text": "Two-way calendar sync. Works for grooming salons and mobile groomers alike.",
+          "chars": 75,
+          "source": "landing page lines 4 and 5"
+        }
+      ],
+      "path1": {
+        "text": "pet-groomers",
+        "chars": 12
+      },
+      "path2": {
+        "text": "booking",
+        "chars": 7
+      },
+      "final_url": "https://www.example.com/industries/pet-groomers/",
+      "pins": "none",
+      "claims_check": "The only number, $19 a month, is on the landing page; no rating, guarantee or result is claimed."
+    },
+    "negatives_note": "Carries over the 3 negatives of Generic - Booking software and the 14 new ones (1 of them, 'template', is already among Generic's, so it appears once); none blocks a new keyword. Attach the shared list 'Account negatives' by hand in Microsoft Advertising."
+  },
+  "change_list": [
+    {
+      "order": 1,
+      "change": "Add 7 negatives to Generic - Booking software",
+      "why": "off-target search terms with $250.60 spend and 94 clicks, 0 conversions",
+      "status": "not run",
+      "payload": {
+        "platform": "microsoft-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "150000001",
+        "action": "add_negative_keywords_to_entities",
+        "entity_negative_keywords": [
+          {
+            "EntityId": "410000002",
+            "EntityType": "Campaign",
+            "NegativeKeywords": [
+              {
+                "Text": "employee scheduling software",
+                "MatchType": "Exact"
+              },
+              {
+                "Text": "shared online calendar",
+                "MatchType": "Exact"
+              },
+              {
+                "Text": "shift scheduling app",
+                "MatchType": "Exact"
+              },
+              {
+                "Text": "restaurant reservation system",
+                "MatchType": "Exact"
+              },
+              {
+                "Text": "staff rota app",
+                "MatchType": "Exact"
+              },
+              {
+                "Text": "hotel booking software",
+                "MatchType": "Exact"
+              },
+              {
+                "Text": "printable appointment book",
+                "MatchType": "Exact"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 2,
+      "change": "Add 5 negatives to Industries - Salons and fitness",
+      "why": "off-target search terms with $439.20 spend and 288 clicks, 0 conversions",
+      "status": "not run",
+      "payload": {
+        "platform": "microsoft-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "150000001",
+        "action": "add_negative_keywords_to_entities",
+        "entity_negative_keywords": [
+          {
+            "EntityId": "410000003",
+            "EntityType": "Campaign",
+            "NegativeKeywords": [
+              {
+                "Text": "near me",
+                "MatchType": "Phrase"
+              },
+              {
+                "Text": "hair salon appointment online",
+                "MatchType": "Exact"
+              },
+              {
+                "Text": "nail salon appointment",
+                "MatchType": "Exact"
+              },
+              {
+                "Text": "gym class schedule",
+                "MatchType": "Exact"
+              },
+              {
+                "Text": "spin class schedule today",
+                "MatchType": "Exact"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 3,
+      "change": "Add 2 negatives to Features - Reminders and payments",
+      "why": "off-target search terms with $59.10 spend and 45 clicks, 0 conversions",
+      "status": "not run",
+      "payload": {
+        "platform": "microsoft-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "150000001",
+        "action": "add_negative_keywords_to_entities",
+        "entity_negative_keywords": [
+          {
+            "EntityId": "410000004",
+            "EntityType": "Campaign",
+            "NegativeKeywords": [
+              {
+                "Text": "template",
+                "MatchType": "Phrase"
+              },
+              {
+                "Text": "doctor appointment reminder app",
+                "MatchType": "Exact"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 4,
+      "change": "Add 2 other-brand negatives to Generic - Booking software",
+      "why": "search terms naming other brands' products, $21.00 spend, 0 conversions",
+      "status": "ask first",
+      "condition": "approve each name; some accounts bid on them on purpose",
+      "payload": {
+        "platform": "microsoft-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "150000001",
+        "action": "add_negative_keywords_to_entities",
+        "entity_negative_keywords": [
+          {
+            "EntityId": "410000002",
+            "EntityType": "Campaign",
+            "NegativeKeywords": [
+              {
+                "Text": "bookfinch pricing",
+                "MatchType": "Exact"
+              },
+              {
+                "Text": "slotmoth login",
+                "MatchType": "Exact"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 5,
+      "change": "Pause the keyword 'online calendar' (Broad) in Booking software",
+      "why": "1 conversion on $209.00 spend: CPA $209.00, above 3 x target ($180)",
+      "status": "ask first",
+      "condition": "or lower its bid by hand in Microsoft Advertising; bid changes are out of scope here",
+      "payload": {
+        "platform": "microsoft-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "150000001",
+        "action": "update_keywords",
+        "ad_group_id": "1310000000021",
+        "keywords": [
+          {
+            "Id": "8100000000007",
+            "Status": "Paused"
+          }
+        ]
+      }
+    },
+    {
+      "order": 6,
+      "change": "Pause the keyword 'staff scheduling' (Broad) in Appointment scheduling",
+      "why": "0 conversions on $152.50, at least 2 x the $60 target CPA; 94.2% of its $130.00 visible search-term spend and 49 clicks went to the proposed negative groups",
+      "status": "ask first",
+      "condition": "only if this keyword doesn't describe what you sell",
+      "payload": {
+        "platform": "microsoft-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "150000001",
+        "action": "update_keywords",
+        "ad_group_id": "1310000000022",
+        "keywords": [
+          {
+            "Id": "8100000000010",
+            "Status": "Paused"
+          }
+        ]
+      }
+    },
+    {
+      "order": 7,
+      "change": "Pause the keyword 'salon appointment' (Broad) in Salons",
+      "why": "0 conversions on $398.00, at least 2 x the $60 target CPA; 89.1% of its $323.20 visible search-term spend and 180 clicks went to the proposed negative groups",
+      "status": "ask first",
+      "condition": "only if this keyword doesn't describe what you sell",
+      "payload": {
+        "platform": "microsoft-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "150000001",
+        "action": "update_keywords",
+        "ad_group_id": "1310000000031",
+        "keywords": [
+          {
+            "Id": "8100000000015",
+            "Status": "Paused"
+          }
+        ]
+      }
+    },
+    {
+      "order": 8,
+      "change": "Pause the keyword 'class schedule' (Broad) in Fitness",
+      "why": "1 conversion on $196.00 spend: CPA $196.00, above 3 x target ($180); 87.5% of its $172.80 visible search-term spend and 108 clicks went to the proposed negative groups",
+      "status": "ask first",
+      "condition": "only if this keyword doesn't describe what you sell",
+      "payload": {
+        "platform": "microsoft-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "150000001",
+        "action": "update_keywords",
+        "ad_group_id": "1310000000032",
+        "keywords": [
+          {
+            "Id": "8100000000019",
+            "Status": "Paused"
+          }
+        ]
+      }
+    },
+    {
+      "order": 9,
+      "change": "Pause the keyword 'booking calendar for salons' in Salons",
+      "why": "the campaign negative 'calendar' (Phrase) blocks it, so it can't serve",
+      "status": "ask first",
+      "condition": "better: keep the keyword, which describes what you sell, and remove the negative by hand in Microsoft Advertising; deleting is out of scope here",
+      "payload": {
+        "platform": "microsoft-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "150000001",
+        "action": "update_keywords",
+        "ad_group_id": "1310000000031",
+        "keywords": [
+          {
+            "Id": "8100000000016",
+            "Status": "Paused"
+          }
+        ]
+      }
+    },
+    {
+      "order": 10,
+      "change": "Raise the daily budget of Generic - Booking software from $90 to $108",
+      "why": "22.4% of impression share lost to budget at a $50.01 CPA, under the $60 target",
+      "status": "ask first",
+      "payload": {
+        "platform": "microsoft-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "150000001",
+        "action": "update_campaigns",
+        "campaigns": [
+          {
+            "Id": "410000002",
+            "DailyBudget": 108
+          }
+        ]
+      }
+    },
+    {
+      "order": 11,
+      "change": "Cut the shared budget 'Industries and features' from $80 to $64",
+      "why": "Industries - Salons and fitness runs at a $97.28 CPA, above 1.5 x target. The change affects Industries - Salons and fitness and Features - Reminders and payments",
+      "status": "conditional",
+      "condition": "only if Industries - Salons and fitness is still above $90 CPA 14 days after the negatives and pauses above",
+      "payload": {
+        "platform": "microsoft-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "150000001",
+        "action": "update_budgets",
+        "budgets": [
+          {
+            "Id": "9100000000001",
+            "Amount": 64
+          }
+        ]
+      }
+    },
+    {
+      "order": 12,
+      "change": "Create the campaign 'Industries - Pet groomers' (paused)",
+      "why": "your brief",
+      "status": "not run",
+      "payload": {
+        "platform": "microsoft-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "150000001",
+        "action": "add_campaigns",
+        "campaigns": [
+          {
+            "Name": "Industries - Pet groomers",
+            "BudgetType": "DailyBudgetStandard",
+            "DailyBudget": 30,
+            "TimeZone": "EasternTimeUSCanada",
+            "CampaignType": "Search",
+            "Languages": [
+              "English"
+            ],
+            "Status": "Paused"
+          }
+        ]
+      }
+    },
+    {
+      "order": 13,
+      "change": "Copy 2 locations to it",
+      "why": "you asked to copy them from Generic - Booking software: United States (+0% bid), Canada (-10% bid)",
+      "status": "not run",
+      "payload": {
+        "platform": "microsoft-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "150000001",
+        "action": "add_campaign_criterions",
+        "criterion_type": "Targets",
+        "campaign_criterions": [
+          {
+            "CampaignId": "<NEW_CAMPAIGN_ID from change 12>",
+            "Type": "BiddableCampaignCriterion",
+            "Criterion": {
+              "Type": "LocationCriterion",
+              "LocationId": "190"
+            },
+            "CriterionBid": {
+              "Type": "BidMultiplier",
+              "Multiplier": 0
+            }
+          },
+          {
+            "CampaignId": "<NEW_CAMPAIGN_ID from change 12>",
+            "Type": "BiddableCampaignCriterion",
+            "Criterion": {
+              "Type": "LocationCriterion",
+              "LocationId": "32"
+            },
+            "CriterionBid": {
+              "Type": "BidMultiplier",
+              "Multiplier": -10
+            }
+          }
+        ]
+      }
+    },
+    {
+      "order": 14,
+      "change": "Create the ad group (paused)",
+      "why": "bid $2.60, the current bid of Booking software in Generic - Booking software, where the groomer search terms came in",
+      "status": "not run",
+      "payload": {
+        "platform": "microsoft-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "150000001",
+        "action": "add_ad_groups",
+        "campaign_id": "<NEW_CAMPAIGN_ID from change 12>",
+        "ad_groups": [
+          {
+            "Name": "Pet groomers",
+            "CpcBid": {
+              "Amount": 2.6
+            },
+            "Status": "Paused"
+          }
+        ]
+      }
+    },
+    {
+      "order": 15,
+      "change": "Add 8 keywords",
+      "why": "3 from converting search terms, 4 from the landing page and 1 from the brief; Phrase and Exact only",
+      "status": "not run",
+      "payload": {
+        "platform": "microsoft-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "150000001",
+        "action": "add_keywords",
+        "ad_group_id": "<NEW_AD_GROUP_ID from change 14>",
+        "keywords": [
+          {
+            "Text": "dog grooming booking app",
+            "MatchType": "Phrase"
+          },
+          {
+            "Text": "pet grooming appointment scheduling software",
+            "MatchType": "Phrase"
+          },
+          {
+            "Text": "booking app for dog groomers",
+            "MatchType": "Phrase"
+          },
+          {
+            "Text": "pet grooming booking software",
+            "MatchType": "Phrase"
+          },
+          {
+            "Text": "dog grooming software",
+            "MatchType": "Phrase"
+          },
+          {
+            "Text": "pet salon booking system",
+            "MatchType": "Phrase"
+          },
+          {
+            "Text": "mobile dog grooming scheduling",
+            "MatchType": "Phrase"
+          },
+          {
+            "Text": "grooming salon booking",
+            "MatchType": "Exact"
+          }
+        ]
+      }
+    },
+    {
+      "order": 16,
+      "change": "Add the responsive search ad (paused)",
+      "why": "15 headlines and 4 descriptions, each counted and sourced",
+      "status": "not run",
+      "payload": {
+        "platform": "microsoft-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "150000001",
+        "action": "add_ads",
+        "ad_group_id": "<NEW_AD_GROUP_ID from change 14>",
+        "ads": [
+          {
+            "Type": "ResponsiveSearch",
+            "Headlines": [
+              {
+                "Text": "Pet Grooming Booking Software"
+              },
+              {
+                "Text": "Dog Grooming Booking App"
+              },
+              {
+                "Text": "Booking App for Dog Groomers"
+              },
+              {
+                "Text": "Grooming Appointment Software"
+              },
+              {
+                "Text": "Clients Book Day or Night"
+              },
+              {
+                "Text": "Online Grooming Appointments"
+              },
+              {
+                "Text": "SMS and Email Reminders"
+              },
+              {
+                "Text": "Cut No-Shows With Reminders"
+              },
+              {
+                "Text": "Take a Deposit When They Book"
+              },
+              {
+                "Text": "Two-Way Calendar Sync"
+              },
+              {
+                "Text": "For Salons and Mobile Groomers"
+              },
+              {
+                "Text": "Your Booking Page in Minutes"
+              },
+              {
+                "Text": "Plans From $19 a Month"
+              },
+              {
+                "Text": "Example Booking Software"
+              },
+              {
+                "Text": "Create Your Account"
+              }
+            ],
+            "Descriptions": [
+              {
+                "Text": "Let clients book grooming appointments online, day or night, from your own booking page."
+              },
+              {
+                "Text": "Automatic SMS and email reminders cut no-shows. Take a deposit when clients book."
+              },
+              {
+                "Text": "Online booking, reminders and deposits for dog groomers and pet salons. From $19 a month."
+              },
+              {
+                "Text": "Two-way calendar sync. Works for grooming salons and mobile groomers alike."
+              }
+            ],
+            "Path1": "pet-groomers",
+            "Path2": "booking",
+            "FinalUrls": [
+              "https://www.example.com/industries/pet-groomers/"
+            ],
+            "Status": "Paused"
+          }
+        ]
+      }
+    },
+    {
+      "order": 17,
+      "change": "Add 16 negatives to the new campaign",
+      "why": "the 3 negatives of Generic - Booking software plus the 14 new ones above (1 of them, 'template', is already among Generic's, so it appears once)",
+      "status": "not run",
+      "payload": {
+        "platform": "microsoft-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "150000001",
+        "action": "add_negative_keywords_to_entities",
+        "entity_negative_keywords": [
+          {
+            "EntityId": "<NEW_CAMPAIGN_ID from change 12>",
+            "EntityType": "Campaign",
+            "NegativeKeywords": [
+              {
+                "Text": "jobs",
+                "MatchType": "Phrase"
+              },
+              {
+                "Text": "receptionist",
+                "MatchType": "Phrase"
+              },
+              {
+                "Text": "template",
+                "MatchType": "Phrase"
+              },
+              {
+                "Text": "employee scheduling software",
+                "MatchType": "Exact"
+              },
+              {
+                "Text": "shared online calendar",
+                "MatchType": "Exact"
+              },
+              {
+                "Text": "shift scheduling app",
+                "MatchType": "Exact"
+              },
+              {
+                "Text": "restaurant reservation system",
+                "MatchType": "Exact"
+              },
+              {
+                "Text": "staff rota app",
+                "MatchType": "Exact"
+              },
+              {
+                "Text": "hotel booking software",
+                "MatchType": "Exact"
+              },
+              {
+                "Text": "printable appointment book",
+                "MatchType": "Exact"
+              },
+              {
+                "Text": "near me",
+                "MatchType": "Phrase"
+              },
+              {
+                "Text": "hair salon appointment online",
+                "MatchType": "Exact"
+              },
+              {
+                "Text": "nail salon appointment",
+                "MatchType": "Exact"
+              },
+              {
+                "Text": "gym class schedule",
+                "MatchType": "Exact"
+              },
+              {
+                "Text": "spin class schedule today",
+                "MatchType": "Exact"
+              },
+              {
+                "Text": "doctor appointment reminder app",
+                "MatchType": "Exact"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "recommendations_without_payload": [
+    "Remove the campaign negative 'calendar' from Industries - Salons and fitness by hand, so 'booking calendar for salons' can serve.",
+    "Fitness RSA: replace the 2 Low headlines and fill the open slots (4 headlines, 2 descriptions). Say the word and I'll draft it.",
+    "Once the pet groomers campaign is live, add 'grooming' (Phrase) as a negative to Generic - Booking software."
+  ],
+  "information_only": {
+    "zero_impression_keywords": "3 of 25 active keywords had no impressions in the window: schedule appointments online, booking page builder, no show fee software. ('booking calendar for salons' also had none, because a negative blocks it.)",
+    "unused_shared_budgets": [
+      {
+        "name": "Holiday promo 2025",
+        "id": "9100000000002",
+        "amount": 15
+      }
+    ],
+    "unrated_assets": 21
+  },
+  "unknowns": [
+    "Ad-group-level negatives: the read returns an error through this connection."
+  ],
+  "go_deeper": "For a full health check, review the whole account: structure, settings, tracking and every campaign, not only what this skill changes. Run this skill again 2 to 4 weeks after the changes."
+}

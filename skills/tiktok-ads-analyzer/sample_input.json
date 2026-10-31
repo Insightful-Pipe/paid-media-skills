@@ -1,0 +1,1960 @@
+{
+  "request": "Hey Claude, I just added the \"tiktok-ads-analyzer\" skill. Analyze my TikTok ads for the last 30 days: which creatives and audiences work, and what should I change? Our targets are $40 per sign-up and $25 per demo lead, and the October budget is $11,500.",
+  "run_date": "2026-10-28",
+  "account": {
+    "name": "Example Booking Software (TikTok ad account)",
+    "advertiser_id": "7000000000000000001",
+    "currency": "USD",
+    "time_zone": "America/New_York",
+    "display_timezone": "America/New_York",
+    "country": "US",
+    "business": "Example Booking Software, an online booking and scheduling app for small service businesses (invented example)"
+  },
+  "window": "2026-09-28 to 2026-10-27 (last 30 complete days in the advertiser's display time zone)",
+  "targets": {
+    "CONVERT (sign-up, the pixel's CompleteRegistration event)": 40.0,
+    "LEAD_GENERATION (instant form)": 25.0,
+    "CLICK": "none given: the account's own cost per click"
+  },
+  "monthly_budget": {
+    "month": "2026-10",
+    "amount": 11500.0
+  },
+  "hook_types": "tagged by the user: the first words of each ad name before the | are its hook type",
+  "audiences_named_by_user": {
+    "6900000000000001": "customer list: paying accounts (you told us)",
+    "6900000000000002": "lookalike of paying gym and studio accounts (you told us)"
+  },
+  "data_pulled": {
+    "advertisers_metadata": {
+      "advertiser_id": "7000000000000000001",
+      "name": "Example Booking Software (TikTok ad account)",
+      "currency": "USD",
+      "timezone": "America/New_York",
+      "display_timezone": "America/New_York",
+      "country": "US",
+      "status": "STATUS_ENABLE"
+    },
+    "campaigns_metadata": [
+      {
+        "campaign_id": "1800000000000001",
+        "campaign_name": "Sign-ups | Salon and barber owners | Manual",
+        "objective_type": "WEB_CONVERSIONS",
+        "campaign_automation_type": "MANUAL",
+        "is_smart_performance_campaign": false,
+        "budget_optimize_on": false,
+        "budget": 0,
+        "budget_mode": "BUDGET_MODE_INFINITE",
+        "operation_status": "ENABLE",
+        "create_time": "2026-08-24"
+      },
+      {
+        "campaign_id": "1800000000000002",
+        "campaign_name": "Smart+ | Sign-ups | Service business owners",
+        "objective_type": "WEB_CONVERSIONS",
+        "campaign_automation_type": "SMART_PLUS",
+        "is_smart_performance_campaign": true,
+        "budget_optimize_on": true,
+        "budget": 115.0,
+        "budget_mode": "BUDGET_MODE_DAY",
+        "operation_status": "ENABLE",
+        "create_time": "2026-09-08"
+      },
+      {
+        "campaign_id": "1800000000000003",
+        "campaign_name": "Leads | Demo | Gym and studio owners",
+        "objective_type": "LEAD_GENERATION",
+        "campaign_automation_type": "MANUAL",
+        "is_smart_performance_campaign": false,
+        "budget_optimize_on": false,
+        "budget": 0,
+        "budget_mode": "BUDGET_MODE_INFINITE",
+        "operation_status": "ENABLE",
+        "create_time": "2026-09-01"
+      },
+      {
+        "campaign_id": "1800000000000004",
+        "campaign_name": "Traffic | Blog | Reduce no-shows",
+        "objective_type": "TRAFFIC",
+        "campaign_automation_type": "MANUAL",
+        "is_smart_performance_campaign": false,
+        "budget_optimize_on": false,
+        "budget": 0,
+        "budget_mode": "BUDGET_MODE_INFINITE",
+        "operation_status": "ENABLE",
+        "create_time": "2026-08-24"
+      }
+    ],
+    "campaigns_metadata_other": "6 more campaigns, switched off, with no delivery in the window",
+    "adgroups_metadata": [
+      {
+        "adgroup_id": "1810000000000001",
+        "adgroup_name": "Broad 18-54 | Lowest cost",
+        "campaign_id": "1800000000000001",
+        "budget": 150.0,
+        "budget_mode": "BUDGET_MODE_DAY",
+        "bid_type": "BID_TYPE_NO_BID",
+        "conversion_bid_price": 0,
+        "optimization_goal": "CONVERT",
+        "billing_event": "OCPM",
+        "pacing": "PACING_MODE_SMOOTH",
+        "placement_type": "PLACEMENT_TYPE_AUTOMATIC",
+        "placements": [],
+        "age_groups": [
+          "AGE_18_24",
+          "AGE_25_34",
+          "AGE_35_44",
+          "AGE_45_54"
+        ],
+        "gender": "GENDER_UNLIMITED",
+        "location_ids": [
+          "6252001"
+        ],
+        "interest_category_ids": [],
+        "actions": [],
+        "audience_ids": [],
+        "excluded_audience_ids": [
+          "6900000000000001"
+        ],
+        "pixel_id": "7100000000000001",
+        "schedule_start_time": "2026-08-24 00:00:00",
+        "operation_status": "ENABLE",
+        "secondary_status": "ADGROUP_STATUS_DELIVERY_OK"
+      },
+      {
+        "adgroup_id": "1810000000000002",
+        "adgroup_name": "Interest: beauty business | Cost cap 38",
+        "campaign_id": "1800000000000001",
+        "budget": 80.0,
+        "budget_mode": "BUDGET_MODE_DAY",
+        "bid_type": "BID_TYPE_CUSTOM",
+        "conversion_bid_price": 38.0,
+        "optimization_goal": "CONVERT",
+        "billing_event": "OCPM",
+        "pacing": "PACING_MODE_SMOOTH",
+        "placement_type": "PLACEMENT_TYPE_NORMAL",
+        "placements": [
+          "PLACEMENT_TIKTOK"
+        ],
+        "age_groups": [
+          "AGE_25_34",
+          "AGE_35_44",
+          "AGE_45_54"
+        ],
+        "gender": "GENDER_UNLIMITED",
+        "location_ids": [
+          "6252001"
+        ],
+        "interest_category_ids": [
+          "24100",
+          "24102"
+        ],
+        "actions": [],
+        "audience_ids": [],
+        "excluded_audience_ids": [
+          "6900000000000001"
+        ],
+        "pixel_id": "7100000000000001",
+        "schedule_start_time": "2026-08-24 00:00:00",
+        "operation_status": "ENABLE",
+        "secondary_status": "ADGROUP_STATUS_DELIVERY_OK"
+      },
+      {
+        "adgroup_id": "1810000000000003",
+        "adgroup_name": "Smart+ | Sign-ups",
+        "campaign_id": "1800000000000002",
+        "budget": 0,
+        "budget_mode": "BUDGET_MODE_INFINITE",
+        "bid_type": "BID_TYPE_NO_BID",
+        "conversion_bid_price": 0,
+        "optimization_goal": "CONVERT",
+        "billing_event": "OCPM",
+        "pacing": "PACING_MODE_SMOOTH",
+        "placement_type": "PLACEMENT_TYPE_AUTOMATIC",
+        "placements": [],
+        "age_groups": [
+          "AGE_18_PLUS"
+        ],
+        "gender": "GENDER_UNLIMITED",
+        "location_ids": [
+          "6252001"
+        ],
+        "interest_category_ids": [],
+        "actions": [],
+        "audience_ids": [],
+        "excluded_audience_ids": [
+          "6900000000000001"
+        ],
+        "pixel_id": "7100000000000001",
+        "schedule_start_time": "2026-09-08 00:00:00",
+        "operation_status": "ENABLE",
+        "secondary_status": "ADGROUP_STATUS_DELIVERY_OK"
+      },
+      {
+        "adgroup_id": "1810000000000004",
+        "adgroup_name": "Fitness owners | Instant form",
+        "campaign_id": "1800000000000003",
+        "budget": 60.0,
+        "budget_mode": "BUDGET_MODE_DAY",
+        "bid_type": "BID_TYPE_NO_BID",
+        "conversion_bid_price": 0,
+        "optimization_goal": "LEAD_GENERATION",
+        "billing_event": "OCPM",
+        "pacing": "PACING_MODE_SMOOTH",
+        "placement_type": "PLACEMENT_TYPE_NORMAL",
+        "placements": [
+          "PLACEMENT_TIKTOK"
+        ],
+        "age_groups": [
+          "AGE_25_34",
+          "AGE_35_44",
+          "AGE_45_54"
+        ],
+        "gender": "GENDER_UNLIMITED",
+        "location_ids": [
+          "6252001"
+        ],
+        "interest_category_ids": [
+          "24310"
+        ],
+        "actions": [],
+        "audience_ids": [
+          "6900000000000002"
+        ],
+        "excluded_audience_ids": [
+          "6900000000000001"
+        ],
+        "pixel_id": null,
+        "schedule_start_time": "2026-09-01 00:00:00",
+        "operation_status": "ENABLE",
+        "secondary_status": "ADGROUP_STATUS_DELIVERY_OK"
+      },
+      {
+        "adgroup_id": "1810000000000005",
+        "adgroup_name": "Blog readers | Clicks",
+        "campaign_id": "1800000000000004",
+        "budget": 15.0,
+        "budget_mode": "BUDGET_MODE_DAY",
+        "bid_type": "BID_TYPE_NO_BID",
+        "conversion_bid_price": 0,
+        "optimization_goal": "CLICK",
+        "billing_event": "CPC",
+        "pacing": "PACING_MODE_SMOOTH",
+        "placement_type": "PLACEMENT_TYPE_NORMAL",
+        "placements": [
+          "PLACEMENT_TIKTOK"
+        ],
+        "age_groups": [
+          "AGE_25_34",
+          "AGE_35_44",
+          "AGE_45_54"
+        ],
+        "gender": "GENDER_UNLIMITED",
+        "location_ids": [
+          "6252001"
+        ],
+        "interest_category_ids": [
+          "24100"
+        ],
+        "actions": [],
+        "audience_ids": [],
+        "excluded_audience_ids": [],
+        "pixel_id": "7100000000000001",
+        "schedule_start_time": "2026-08-24 00:00:00",
+        "operation_status": "ENABLE",
+        "secondary_status": "ADGROUP_STATUS_DELIVERY_OK"
+      }
+    ],
+    "adgroups_metadata_other": "9 more ad groups, switched off",
+    "ads_metadata": [
+      {
+        "ad_id": "1820000000000001",
+        "ad_name": "Creator intro | Salon owner day in the life",
+        "adgroup_id": "1810000000000001",
+        "ad_format": "SINGLE_VIDEO",
+        "identity_type": "BC_AUTH_TT",
+        "dark_post_status": "OFF",
+        "tiktok_item_id": "7410000000000001",
+        "video_id": "v1000000001",
+        "video_length_seconds": 27,
+        "landing_page_url": "https://www.example.com/signup/",
+        "call_to_action": "SIGN_UP",
+        "operation_status": "ENABLE",
+        "create_time": "2026-08-24 10:00:00"
+      },
+      {
+        "ad_id": "1820000000000002",
+        "ad_name": "Demo | Booking in 3 taps",
+        "adgroup_id": "1810000000000001",
+        "ad_format": "SINGLE_VIDEO",
+        "identity_type": "TT_USER",
+        "dark_post_status": "ON",
+        "tiktok_item_id": "7410000000000002",
+        "video_id": "v1000000002",
+        "video_length_seconds": 19,
+        "landing_page_url": "https://www.example.com/signup/",
+        "call_to_action": "SIGN_UP",
+        "operation_status": "ENABLE",
+        "create_time": "2026-08-24 10:00:00"
+      },
+      {
+        "ad_id": "1820000000000003",
+        "ad_name": "Product first | Logo and app tour",
+        "adgroup_id": "1810000000000001",
+        "ad_format": "SINGLE_VIDEO",
+        "identity_type": "CUSTOMIZED_USER",
+        "dark_post_status": null,
+        "tiktok_item_id": "7410000000000003",
+        "video_id": "v1000000003",
+        "video_length_seconds": 30,
+        "landing_page_url": "https://www.example.com/signup/",
+        "call_to_action": "SIGN_UP",
+        "operation_status": "ENABLE",
+        "create_time": "2026-10-09 10:00:00"
+      },
+      {
+        "ad_id": "1820000000000004",
+        "ad_name": "Creator intro | Founder: why we built it",
+        "adgroup_id": "1810000000000002",
+        "ad_format": "SINGLE_VIDEO",
+        "identity_type": "BC_AUTH_TT",
+        "dark_post_status": "OFF",
+        "tiktok_item_id": "7410000000000004",
+        "video_id": "v1000000004",
+        "video_length_seconds": 34,
+        "landing_page_url": "https://www.example.com/signup/",
+        "call_to_action": "SIGN_UP",
+        "operation_status": "ENABLE",
+        "create_time": "2026-08-24 10:00:00"
+      },
+      {
+        "ad_id": "1820000000000005",
+        "ad_name": "Bold claim | Half the no-shows",
+        "adgroup_id": "1810000000000002",
+        "ad_format": "SINGLE_VIDEO",
+        "identity_type": "TT_USER",
+        "dark_post_status": "ON",
+        "tiktok_item_id": "7410000000000005",
+        "video_id": "v1000000005",
+        "video_length_seconds": 16,
+        "landing_page_url": "https://www.example.com/signup/",
+        "call_to_action": "SIGN_UP",
+        "operation_status": "ENABLE",
+        "create_time": "2026-08-24 10:00:00"
+      },
+      {
+        "ad_id": "1820000000000006",
+        "ad_name": "UGC testimonial | Salon owner: no more no-shows",
+        "adgroup_id": "1810000000000003",
+        "ad_format": "SINGLE_VIDEO",
+        "identity_type": "BC_AUTH_TT",
+        "dark_post_status": "OFF",
+        "tiktok_item_id": "7410000000000006",
+        "video_id": "v1000000006",
+        "video_length_seconds": 24,
+        "landing_page_url": "https://www.example.com/signup/",
+        "call_to_action": "SIGN_UP",
+        "operation_status": "ENABLE",
+        "create_time": "2026-09-08 10:00:00"
+      },
+      {
+        "ad_id": "1820000000000007",
+        "ad_name": "Demo | Screen recording of the booking page",
+        "adgroup_id": "1810000000000003",
+        "ad_format": "SINGLE_VIDEO",
+        "identity_type": "TT_USER",
+        "dark_post_status": "ON",
+        "tiktok_item_id": "7410000000000007",
+        "video_id": "v1000000007",
+        "video_length_seconds": 21,
+        "landing_page_url": "https://www.example.com/signup/",
+        "call_to_action": "SIGN_UP",
+        "operation_status": "ENABLE",
+        "create_time": "2026-09-08 10:00:00"
+      },
+      {
+        "ad_id": "1820000000000008",
+        "ad_name": "Question | Still chasing deposits?",
+        "adgroup_id": "1810000000000003",
+        "ad_format": "SINGLE_VIDEO",
+        "identity_type": "BC_AUTH_TT",
+        "dark_post_status": "OFF",
+        "tiktok_item_id": "7410000000000008",
+        "video_id": "v1000000008",
+        "video_length_seconds": 18,
+        "landing_page_url": "https://www.example.com/signup/",
+        "call_to_action": "SIGN_UP",
+        "operation_status": "ENABLE",
+        "create_time": "2026-09-08 10:00:00"
+      },
+      {
+        "ad_id": "1820000000000009",
+        "ad_name": "Bold claim | Fill every class",
+        "adgroup_id": "1810000000000004",
+        "ad_format": "SINGLE_VIDEO",
+        "identity_type": "TT_USER",
+        "dark_post_status": "ON",
+        "tiktok_item_id": "7410000000000009",
+        "video_id": "v1000000009",
+        "video_length_seconds": 17,
+        "landing_page_url": null,
+        "call_to_action": "SIGN_UP",
+        "operation_status": "ENABLE",
+        "create_time": "2026-09-01 10:00:00"
+      },
+      {
+        "ad_id": "1820000000000010",
+        "ad_name": "UGC testimonial | Gym owner on waitlists",
+        "adgroup_id": "1810000000000004",
+        "ad_format": "SINGLE_VIDEO",
+        "identity_type": "BC_AUTH_TT",
+        "dark_post_status": "OFF",
+        "tiktok_item_id": "7410000000000010",
+        "video_id": "v1000000010",
+        "video_length_seconds": 26,
+        "landing_page_url": null,
+        "call_to_action": "SIGN_UP",
+        "operation_status": "ENABLE",
+        "create_time": "2026-09-01 10:00:00"
+      },
+      {
+        "ad_id": "1820000000000011",
+        "ad_name": "Question | Why do clients no-show?",
+        "adgroup_id": "1810000000000005",
+        "ad_format": "SINGLE_VIDEO",
+        "identity_type": "TT_USER",
+        "dark_post_status": "ON",
+        "tiktok_item_id": "7410000000000011",
+        "video_id": "v1000000011",
+        "video_length_seconds": 22,
+        "landing_page_url": "https://www.example.com/blog/reduce-no-shows/",
+        "call_to_action": "LEARN_MORE",
+        "operation_status": "ENABLE",
+        "create_time": "2026-08-24 10:00:00"
+      },
+      {
+        "ad_id": "1820000000000012",
+        "ad_name": "Bold claim | 9 tactics that cut no-shows",
+        "adgroup_id": "1810000000000005",
+        "ad_format": "SINGLE_VIDEO",
+        "identity_type": "TT_USER",
+        "dark_post_status": "ON",
+        "tiktok_item_id": "7410000000000012",
+        "video_id": "v1000000012",
+        "video_length_seconds": 20,
+        "landing_page_url": "https://www.example.com/blog/reduce-no-shows/",
+        "call_to_action": "LEARN_MORE",
+        "operation_status": "ENABLE",
+        "create_time": "2026-08-24 10:00:00"
+      }
+    ],
+    "ads_metadata_other": "21 more ads, switched off",
+    "integrated_report_basic_AUCTION_ADGROUP": [
+      {
+        "adgroup_id": "1810000000000001",
+        "spend": "4248.80",
+        "impressions": "291236",
+        "reach": "126624",
+        "frequency": "2.30",
+        "clicks": "3049",
+        "result": "100",
+        "conversion": "100",
+        "total_sales_lead": "0",
+        "complete_payment": "24",
+        "total_purchase_value": "1176.00"
+      },
+      {
+        "adgroup_id": "1810000000000002",
+        "spend": "1145.63",
+        "impressions": "128629",
+        "reach": "67699",
+        "frequency": "1.90",
+        "clicks": "1487",
+        "result": "47",
+        "conversion": "47",
+        "total_sales_lead": "0",
+        "complete_payment": "8",
+        "total_purchase_value": "392.00"
+      },
+      {
+        "adgroup_id": "1810000000000003",
+        "spend": "2957.08",
+        "impressions": "205905",
+        "reach": "98050",
+        "frequency": "2.10",
+        "clicks": "2506",
+        "result": "89",
+        "conversion": "89",
+        "total_sales_lead": "0",
+        "complete_payment": "21",
+        "total_purchase_value": "1029.00"
+      },
+      {
+        "adgroup_id": "1810000000000004",
+        "spend": "1734.20",
+        "impressions": "179828",
+        "reach": "69164",
+        "frequency": "2.60",
+        "clicks": "2282",
+        "result": "95",
+        "conversion": "0",
+        "total_sales_lead": "95",
+        "complete_payment": "0",
+        "total_purchase_value": "0.00"
+      },
+      {
+        "adgroup_id": "1810000000000005",
+        "spend": "376.87",
+        "impressions": "194144",
+        "reach": "114202",
+        "frequency": "1.70",
+        "clicks": "2899",
+        "result": "2899",
+        "conversion": "4",
+        "total_sales_lead": "0",
+        "complete_payment": "2",
+        "total_purchase_value": "38.00"
+      }
+    ],
+    "integrated_report_basic_AUCTION_AD": [
+      {
+        "ad_id": "1820000000000001",
+        "spend": "2124.41",
+        "impressions": "145619",
+        "clicks": "1754",
+        "result": "61",
+        "video_play_actions": "141250",
+        "video_watched_2s": "48054",
+        "video_watched_6s": "22585",
+        "video_views_p25": "37482",
+        "video_views_p50": "27822",
+        "video_views_p75": "20463",
+        "video_views_p100": "13105",
+        "average_video_play": "9.20",
+        "likes": "3057",
+        "comments": "305",
+        "shares": "232",
+        "follows": "87",
+        "profile_visits": "582"
+      },
+      {
+        "ad_id": "1820000000000002",
+        "spend": "1359.61",
+        "impressions": "93195",
+        "clicks": "946",
+        "result": "31",
+        "video_play_actions": "90399",
+        "video_watched_2s": "27958",
+        "video_watched_6s": "11742",
+        "video_views_p25": "21807",
+        "video_views_p50": "16248",
+        "video_views_p75": "11991",
+        "video_views_p100": "7735",
+        "average_video_play": "5.70",
+        "likes": "1304",
+        "comments": "111",
+        "shares": "83",
+        "follows": "0",
+        "profile_visits": "139"
+      },
+      {
+        "ad_id": "1820000000000003",
+        "spend": "764.78",
+        "impressions": "52422",
+        "clicks": "349",
+        "result": "8",
+        "video_play_actions": "50849",
+        "video_watched_2s": "7863",
+        "video_watched_6s": "2830",
+        "video_views_p25": "6133",
+        "video_views_p50": "4555",
+        "video_views_p75": "3352",
+        "video_views_p100": "2149",
+        "average_video_play": "4.30",
+        "likes": "262",
+        "comments": "15",
+        "shares": "10",
+        "follows": "0",
+        "profile_visits": "78"
+      },
+      {
+        "ad_id": "1820000000000004",
+        "spend": "630.10",
+        "impressions": "70746",
+        "clicks": "847",
+        "result": "28",
+        "video_play_actions": "68623",
+        "video_watched_2s": "21931",
+        "video_watched_6s": "10746",
+        "video_views_p25": "17106",
+        "video_views_p50": "12676",
+        "video_views_p75": "9309",
+        "video_views_p100": "5942",
+        "average_video_play": "11.00",
+        "likes": "1344",
+        "comments": "183",
+        "shares": "84",
+        "follows": "42",
+        "profile_visits": "282"
+      },
+      {
+        "ad_id": "1820000000000005",
+        "spend": "515.53",
+        "impressions": "57883",
+        "clicks": "640",
+        "result": "19",
+        "video_play_actions": "56146",
+        "video_watched_2s": "16207",
+        "video_watched_6s": "6482",
+        "video_views_p25": "12641",
+        "video_views_p50": "9849",
+        "video_views_p75": "7558",
+        "video_views_p100": "5267",
+        "average_video_play": "4.60",
+        "likes": "694",
+        "comments": "57",
+        "shares": "46",
+        "follows": "0",
+        "profile_visits": "86"
+      },
+      {
+        "ad_id": "1820000000000006",
+        "spend": "1241.98",
+        "impressions": "86481",
+        "clicks": "1180",
+        "result": "45",
+        "video_play_actions": "83886",
+        "video_watched_2s": "30268",
+        "video_watched_6s": "15134",
+        "video_views_p25": "23609",
+        "video_views_p50": "17788",
+        "video_views_p75": "13261",
+        "video_views_p100": "8734",
+        "average_video_play": "9.20",
+        "likes": "2248",
+        "comments": "259",
+        "shares": "190",
+        "follows": "51",
+        "profile_visits": "345"
+      },
+      {
+        "ad_id": "1820000000000007",
+        "spend": "975.83",
+        "impressions": "67948",
+        "clicks": "704",
+        "result": "23",
+        "video_play_actions": "65909",
+        "video_watched_2s": "19704",
+        "video_watched_6s": "8472",
+        "video_views_p25": "15369",
+        "video_views_p50": "11404",
+        "video_views_p75": "8385",
+        "video_views_p100": "5367",
+        "average_video_play": "6.20",
+        "likes": "747",
+        "comments": "54",
+        "shares": "40",
+        "follows": "0",
+        "profile_visits": "101"
+      },
+      {
+        "ad_id": "1820000000000008",
+        "spend": "739.27",
+        "impressions": "51476",
+        "clicks": "622",
+        "result": "21",
+        "video_play_actions": "49931",
+        "video_watched_2s": "15957",
+        "video_watched_6s": "7021",
+        "video_views_p25": "12446",
+        "video_views_p50": "9562",
+        "video_views_p75": "7251",
+        "video_views_p100": "4941",
+        "average_video_play": "5.90",
+        "likes": "875",
+        "comments": "97",
+        "shares": "72",
+        "follows": "30",
+        "profile_visits": "205"
+      },
+      {
+        "ad_id": "1820000000000009",
+        "spend": "901.79",
+        "impressions": "93511",
+        "clicks": "1151",
+        "result": "47",
+        "video_play_actions": "90705",
+        "video_watched_2s": "28053",
+        "video_watched_6s": "12623",
+        "video_views_p25": "21881",
+        "video_views_p50": "16559",
+        "video_views_p75": "12393",
+        "video_views_p100": "8228",
+        "average_video_play": "5.60",
+        "likes": "1215",
+        "comments": "130",
+        "shares": "84",
+        "follows": "0",
+        "profile_visits": "140"
+      },
+      {
+        "ad_id": "1820000000000010",
+        "spend": "832.41",
+        "impressions": "86317",
+        "clicks": "1131",
+        "result": "48",
+        "video_play_actions": "83727",
+        "video_watched_2s": "29347",
+        "video_watched_6s": "14966",
+        "video_views_p25": "22890",
+        "video_views_p50": "17194",
+        "video_views_p75": "12783",
+        "video_views_p100": "8372",
+        "average_video_play": "9.80",
+        "likes": "2071",
+        "comments": "241",
+        "shares": "164",
+        "follows": "51",
+        "profile_visits": "345"
+      },
+      {
+        "ad_id": "1820000000000011",
+        "spend": "211.05",
+        "impressions": "108721",
+        "clicks": "1705",
+        "result": "1705",
+        "video_play_actions": "105459",
+        "video_watched_2s": "32616",
+        "video_watched_6s": "14351",
+        "video_views_p25": "25440",
+        "video_views_p50": "19253",
+        "video_views_p75": "14410",
+        "video_views_p100": "9567",
+        "average_video_play": "6.70",
+        "likes": "1087",
+        "comments": "97",
+        "shares": "119",
+        "follows": "0",
+        "profile_visits": "163"
+      },
+      {
+        "ad_id": "1820000000000012",
+        "spend": "165.82",
+        "impressions": "85423",
+        "clicks": "1194",
+        "result": "1194",
+        "video_play_actions": "82860",
+        "video_watched_2s": "23064",
+        "video_watched_6s": "9456",
+        "video_views_p25": "17989",
+        "video_views_p50": "13652",
+        "video_views_p75": "10242",
+        "video_views_p100": "6833",
+        "average_video_play": "5.40",
+        "likes": "683",
+        "comments": "59",
+        "shares": "76",
+        "follows": "0",
+        "profile_visits": "128"
+      }
+    ],
+    "integrated_report_basic_AUCTION_AD_last_7_days": [
+      {
+        "ad_id": "1820000000000001",
+        "impressions": "33977",
+        "clicks": "285"
+      },
+      {
+        "ad_id": "1820000000000002",
+        "impressions": "21745",
+        "clicks": "228"
+      },
+      {
+        "ad_id": "1820000000000003",
+        "impressions": "17736",
+        "clicks": "124"
+      },
+      {
+        "ad_id": "1820000000000004",
+        "impressions": "16507",
+        "clicks": "194"
+      },
+      {
+        "ad_id": "1820000000000005",
+        "impressions": "13506",
+        "clicks": "148"
+      },
+      {
+        "ad_id": "1820000000000006",
+        "impressions": "20178",
+        "clicks": "264"
+      },
+      {
+        "ad_id": "1820000000000007",
+        "impressions": "15854",
+        "clicks": "158"
+      },
+      {
+        "ad_id": "1820000000000008",
+        "impressions": "12011",
+        "clicks": "141"
+      },
+      {
+        "ad_id": "1820000000000009",
+        "impressions": "21819",
+        "clicks": "264"
+      },
+      {
+        "ad_id": "1820000000000010",
+        "impressions": "20140",
+        "clicks": "257"
+      },
+      {
+        "ad_id": "1820000000000011",
+        "impressions": "25368",
+        "clicks": "393"
+      },
+      {
+        "ad_id": "1820000000000012",
+        "impressions": "19932",
+        "clicks": "277"
+      }
+    ],
+    "integrated_report_basic_AUCTION_ADGROUP_daily": {
+      "1810000000000001": {
+        "2026-09-28": {
+          "spend": "134.46",
+          "impressions": "9552",
+          "clicks": "106",
+          "result": "4"
+        },
+        "2026-09-29": {
+          "spend": "132.39",
+          "impressions": "9226",
+          "clicks": "108",
+          "result": "4"
+        },
+        "2026-09-30": {
+          "spend": "138.07",
+          "impressions": "9641",
+          "clicks": "112",
+          "result": "4"
+        },
+        "2026-10-01": {
+          "spend": "124.87",
+          "impressions": "8810",
+          "clicks": "106",
+          "result": "3"
+        },
+        "2026-10-02": {
+          "spend": "151.58",
+          "impressions": "9988",
+          "clicks": "114",
+          "result": "4"
+        },
+        "2026-10-03": {
+          "spend": "152.30",
+          "impressions": "10164",
+          "clicks": "109",
+          "result": "3"
+        },
+        "2026-10-04": {
+          "spend": "137.88",
+          "impressions": "9833",
+          "clicks": "103",
+          "result": "3"
+        },
+        "2026-10-05": {
+          "spend": "137.89",
+          "impressions": "9709",
+          "clicks": "102",
+          "result": "3"
+        },
+        "2026-10-06": {
+          "spend": "147.54",
+          "impressions": "9955",
+          "clicks": "111",
+          "result": "4"
+        },
+        "2026-10-07": {
+          "spend": "153.52",
+          "impressions": "10333",
+          "clicks": "109",
+          "result": "3"
+        },
+        "2026-10-08": {
+          "spend": "155.01",
+          "impressions": "10548",
+          "clicks": "120",
+          "result": "5"
+        },
+        "2026-10-09": {
+          "spend": "143.25",
+          "impressions": "9814",
+          "clicks": "112",
+          "result": "4"
+        },
+        "2026-10-10": {
+          "spend": "133.89",
+          "impressions": "9047",
+          "clicks": "107",
+          "result": "3"
+        },
+        "2026-10-11": {
+          "spend": "143.65",
+          "impressions": "10096",
+          "clicks": "113",
+          "result": "3"
+        },
+        "2026-10-12": {
+          "spend": "148.91",
+          "impressions": "9855",
+          "clicks": "106",
+          "result": "3"
+        },
+        "2026-10-13": {
+          "spend": "143.77",
+          "impressions": "10104",
+          "clicks": "117",
+          "result": "3"
+        },
+        "2026-10-14": {
+          "spend": "151.94",
+          "impressions": "10268",
+          "clicks": "113",
+          "result": "4"
+        },
+        "2026-10-15": {
+          "spend": "136.99",
+          "impressions": "9333",
+          "clicks": "103",
+          "result": "3"
+        },
+        "2026-10-16": {
+          "spend": "139.64",
+          "impressions": "9894",
+          "clicks": "119",
+          "result": "4"
+        },
+        "2026-10-17": {
+          "spend": "137.28",
+          "impressions": "9493",
+          "clicks": "99",
+          "result": "4"
+        },
+        "2026-10-18": {
+          "spend": "155.48",
+          "impressions": "10258",
+          "clicks": "120",
+          "result": "4"
+        },
+        "2026-10-19": {
+          "spend": "147.70",
+          "impressions": "10365",
+          "clicks": "111",
+          "result": "4"
+        },
+        "2026-10-20": {
+          "spend": "137.95",
+          "impressions": "9138",
+          "clicks": "98",
+          "result": "3"
+        },
+        "2026-10-21": {
+          "spend": "130.72",
+          "impressions": "8926",
+          "clicks": "76",
+          "result": "2"
+        },
+        "2026-10-22": {
+          "spend": "151.79",
+          "impressions": "10055",
+          "clicks": "78",
+          "result": "3"
+        },
+        "2026-10-23": {
+          "spend": "129.98",
+          "impressions": "9127",
+          "clicks": "74",
+          "result": "3"
+        },
+        "2026-10-24": {
+          "spend": "145.98",
+          "impressions": "10192",
+          "clicks": "76",
+          "result": "2"
+        },
+        "2026-10-25": {
+          "spend": "142.79",
+          "impressions": "9660",
+          "clicks": "78",
+          "result": "3"
+        },
+        "2026-10-26": {
+          "spend": "129.82",
+          "impressions": "8892",
+          "clicks": "76",
+          "result": "3"
+        },
+        "2026-10-27": {
+          "spend": "131.76",
+          "impressions": "8960",
+          "clicks": "73",
+          "result": "2"
+        }
+      },
+      "1810000000000002": {
+        "2026-09-28": {
+          "spend": "42.47",
+          "impressions": "4643",
+          "clicks": "57",
+          "result": "2"
+        },
+        "2026-09-29": {
+          "spend": "41.46",
+          "impressions": "4721",
+          "clicks": "54",
+          "result": "2"
+        },
+        "2026-09-30": {
+          "spend": "40.71",
+          "impressions": "4556",
+          "clicks": "56",
+          "result": "2"
+        },
+        "2026-10-01": {
+          "spend": "38.78",
+          "impressions": "4240",
+          "clicks": "52",
+          "result": "2"
+        },
+        "2026-10-02": {
+          "spend": "38.94",
+          "impressions": "4432",
+          "clicks": "54",
+          "result": "2"
+        },
+        "2026-10-03": {
+          "spend": "35.69",
+          "impressions": "4155",
+          "clicks": "46",
+          "result": "2"
+        },
+        "2026-10-04": {
+          "spend": "40.70",
+          "impressions": "4539",
+          "clicks": "53",
+          "result": "2"
+        },
+        "2026-10-05": {
+          "spend": "36.53",
+          "impressions": "4106",
+          "clicks": "45",
+          "result": "1"
+        },
+        "2026-10-06": {
+          "spend": "39.14",
+          "impressions": "4367",
+          "clicks": "52",
+          "result": "2"
+        },
+        "2026-10-07": {
+          "spend": "35.24",
+          "impressions": "3889",
+          "clicks": "43",
+          "result": "1"
+        },
+        "2026-10-08": {
+          "spend": "40.63",
+          "impressions": "4421",
+          "clicks": "49",
+          "result": "1"
+        },
+        "2026-10-09": {
+          "spend": "38.07",
+          "impressions": "4281",
+          "clicks": "47",
+          "result": "1"
+        },
+        "2026-10-10": {
+          "spend": "39.05",
+          "impressions": "4387",
+          "clicks": "52",
+          "result": "1"
+        },
+        "2026-10-11": {
+          "spend": "41.26",
+          "impressions": "4673",
+          "clicks": "56",
+          "result": "2"
+        },
+        "2026-10-12": {
+          "spend": "35.77",
+          "impressions": "4120",
+          "clicks": "48",
+          "result": "1"
+        },
+        "2026-10-13": {
+          "spend": "38.18",
+          "impressions": "4291",
+          "clicks": "49",
+          "result": "2"
+        },
+        "2026-10-14": {
+          "spend": "38.82",
+          "impressions": "4203",
+          "clicks": "47",
+          "result": "2"
+        },
+        "2026-10-15": {
+          "spend": "36.83",
+          "impressions": "4042",
+          "clicks": "45",
+          "result": "1"
+        },
+        "2026-10-16": {
+          "spend": "37.14",
+          "impressions": "4252",
+          "clicks": "49",
+          "result": "2"
+        },
+        "2026-10-17": {
+          "spend": "35.21",
+          "impressions": "3936",
+          "clicks": "45",
+          "result": "1"
+        },
+        "2026-10-18": {
+          "spend": "39.36",
+          "impressions": "4580",
+          "clicks": "51",
+          "result": "1"
+        },
+        "2026-10-19": {
+          "spend": "39.30",
+          "impressions": "4311",
+          "clicks": "48",
+          "result": "1"
+        },
+        "2026-10-20": {
+          "spend": "35.12",
+          "impressions": "4087",
+          "clicks": "45",
+          "result": "2"
+        },
+        "2026-10-21": {
+          "spend": "40.00",
+          "impressions": "4654",
+          "clicks": "54",
+          "result": "2"
+        },
+        "2026-10-22": {
+          "spend": "36.67",
+          "impressions": "4040",
+          "clicks": "49",
+          "result": "2"
+        },
+        "2026-10-23": {
+          "spend": "35.09",
+          "impressions": "4076",
+          "clicks": "48",
+          "result": "2"
+        },
+        "2026-10-24": {
+          "spend": "35.16",
+          "impressions": "4015",
+          "clicks": "44",
+          "result": "1"
+        },
+        "2026-10-25": {
+          "spend": "35.96",
+          "impressions": "3977",
+          "clicks": "45",
+          "result": "1"
+        },
+        "2026-10-26": {
+          "spend": "42.27",
+          "impressions": "4596",
+          "clicks": "54",
+          "result": "2"
+        },
+        "2026-10-27": {
+          "spend": "36.08",
+          "impressions": "4039",
+          "clicks": "50",
+          "result": "1"
+        }
+      },
+      "1810000000000003": {
+        "2026-09-28": {
+          "spend": "102.94",
+          "impressions": "7243",
+          "clicks": "85",
+          "result": "3"
+        },
+        "2026-09-29": {
+          "spend": "101.50",
+          "impressions": "6925",
+          "clicks": "79",
+          "result": "3"
+        },
+        "2026-09-30": {
+          "spend": "90.98",
+          "impressions": "6213",
+          "clicks": "73",
+          "result": "3"
+        },
+        "2026-10-01": {
+          "spend": "100.76",
+          "impressions": "6951",
+          "clicks": "87",
+          "result": "3"
+        },
+        "2026-10-02": {
+          "spend": "94.34",
+          "impressions": "6450",
+          "clicks": "79",
+          "result": "2"
+        },
+        "2026-10-03": {
+          "spend": "95.18",
+          "impressions": "6705",
+          "clicks": "87",
+          "result": "3"
+        },
+        "2026-10-04": {
+          "spend": "105.67",
+          "impressions": "7274",
+          "clicks": "89",
+          "result": "3"
+        },
+        "2026-10-05": {
+          "spend": "93.24",
+          "impressions": "6351",
+          "clicks": "74",
+          "result": "2"
+        },
+        "2026-10-06": {
+          "spend": "102.72",
+          "impressions": "7130",
+          "clicks": "89",
+          "result": "3"
+        },
+        "2026-10-07": {
+          "spend": "98.50",
+          "impressions": "7122",
+          "clicks": "85",
+          "result": "3"
+        },
+        "2026-10-08": {
+          "spend": "99.06",
+          "impressions": "7018",
+          "clicks": "88",
+          "result": "3"
+        },
+        "2026-10-09": {
+          "spend": "100.80",
+          "impressions": "6866",
+          "clicks": "84",
+          "result": "3"
+        },
+        "2026-10-10": {
+          "spend": "103.53",
+          "impressions": "7041",
+          "clicks": "87",
+          "result": "3"
+        },
+        "2026-10-11": {
+          "spend": "102.65",
+          "impressions": "7073",
+          "clicks": "88",
+          "result": "3"
+        },
+        "2026-10-12": {
+          "spend": "91.58",
+          "impressions": "6230",
+          "clicks": "74",
+          "result": "3"
+        },
+        "2026-10-13": {
+          "spend": "101.15",
+          "impressions": "7085",
+          "clicks": "89",
+          "result": "3"
+        },
+        "2026-10-14": {
+          "spend": "89.97",
+          "impressions": "6354",
+          "clicks": "73",
+          "result": "3"
+        },
+        "2026-10-15": {
+          "spend": "102.89",
+          "impressions": "7271",
+          "clicks": "92",
+          "result": "4"
+        },
+        "2026-10-16": {
+          "spend": "102.22",
+          "impressions": "6979",
+          "clicks": "84",
+          "result": "3"
+        },
+        "2026-10-17": {
+          "spend": "102.99",
+          "impressions": "6974",
+          "clicks": "87",
+          "result": "3"
+        },
+        "2026-10-18": {
+          "spend": "93.96",
+          "impressions": "6546",
+          "clicks": "82",
+          "result": "3"
+        },
+        "2026-10-19": {
+          "spend": "91.76",
+          "impressions": "6395",
+          "clicks": "79",
+          "result": "3"
+        },
+        "2026-10-20": {
+          "spend": "106.48",
+          "impressions": "7523",
+          "clicks": "94",
+          "result": "3"
+        },
+        "2026-10-21": {
+          "spend": "94.65",
+          "impressions": "6777",
+          "clicks": "80",
+          "result": "3"
+        },
+        "2026-10-22": {
+          "spend": "88.78",
+          "impressions": "6240",
+          "clicks": "75",
+          "result": "3"
+        },
+        "2026-10-23": {
+          "spend": "97.13",
+          "impressions": "6990",
+          "clicks": "82",
+          "result": "3"
+        },
+        "2026-10-24": {
+          "spend": "101.36",
+          "impressions": "7060",
+          "clicks": "84",
+          "result": "3"
+        },
+        "2026-10-25": {
+          "spend": "102.48",
+          "impressions": "6991",
+          "clicks": "81",
+          "result": "3"
+        },
+        "2026-10-26": {
+          "spend": "107.50",
+          "impressions": "7529",
+          "clicks": "97",
+          "result": "3"
+        },
+        "2026-10-27": {
+          "spend": "90.31",
+          "impressions": "6599",
+          "clicks": "79",
+          "result": "3"
+        }
+      },
+      "1810000000000004": {
+        "2026-09-28": {
+          "spend": "61.40",
+          "impressions": "6156",
+          "clicks": "83",
+          "result": "4"
+        },
+        "2026-09-29": {
+          "spend": "56.45",
+          "impressions": "5893",
+          "clicks": "77",
+          "result": "3"
+        },
+        "2026-09-30": {
+          "spend": "51.67",
+          "impressions": "5514",
+          "clicks": "66",
+          "result": "3"
+        },
+        "2026-10-01": {
+          "spend": "56.54",
+          "impressions": "5968",
+          "clicks": "71",
+          "result": "3"
+        },
+        "2026-10-02": {
+          "spend": "52.05",
+          "impressions": "5506",
+          "clicks": "69",
+          "result": "2"
+        },
+        "2026-10-03": {
+          "spend": "56.45",
+          "impressions": "5899",
+          "clicks": "75",
+          "result": "3"
+        },
+        "2026-10-04": {
+          "spend": "61.93",
+          "impressions": "6597",
+          "clicks": "90",
+          "result": "4"
+        },
+        "2026-10-05": {
+          "spend": "55.49",
+          "impressions": "5850",
+          "clicks": "78",
+          "result": "3"
+        },
+        "2026-10-06": {
+          "spend": "57.50",
+          "impressions": "5885",
+          "clicks": "70",
+          "result": "3"
+        },
+        "2026-10-07": {
+          "spend": "59.11",
+          "impressions": "5907",
+          "clicks": "80",
+          "result": "4"
+        },
+        "2026-10-08": {
+          "spend": "61.63",
+          "impressions": "6319",
+          "clicks": "85",
+          "result": "3"
+        },
+        "2026-10-09": {
+          "spend": "57.02",
+          "impressions": "6106",
+          "clicks": "75",
+          "result": "3"
+        },
+        "2026-10-10": {
+          "spend": "53.57",
+          "impressions": "5552",
+          "clicks": "70",
+          "result": "3"
+        },
+        "2026-10-11": {
+          "spend": "57.44",
+          "impressions": "5901",
+          "clicks": "75",
+          "result": "3"
+        },
+        "2026-10-12": {
+          "spend": "54.32",
+          "impressions": "5661",
+          "clicks": "74",
+          "result": "3"
+        },
+        "2026-10-13": {
+          "spend": "63.42",
+          "impressions": "6701",
+          "clicks": "88",
+          "result": "4"
+        },
+        "2026-10-14": {
+          "spend": "58.74",
+          "impressions": "6200",
+          "clicks": "74",
+          "result": "3"
+        },
+        "2026-10-15": {
+          "spend": "54.97",
+          "impressions": "5546",
+          "clicks": "66",
+          "result": "3"
+        },
+        "2026-10-16": {
+          "spend": "56.52",
+          "impressions": "6049",
+          "clicks": "82",
+          "result": "3"
+        },
+        "2026-10-17": {
+          "spend": "53.92",
+          "impressions": "5554",
+          "clicks": "70",
+          "result": "3"
+        },
+        "2026-10-18": {
+          "spend": "52.86",
+          "impressions": "5540",
+          "clicks": "67",
+          "result": "3"
+        },
+        "2026-10-19": {
+          "spend": "62.79",
+          "impressions": "6479",
+          "clicks": "87",
+          "result": "4"
+        },
+        "2026-10-20": {
+          "spend": "64.58",
+          "impressions": "6454",
+          "clicks": "76",
+          "result": "3"
+        },
+        "2026-10-21": {
+          "spend": "53.12",
+          "impressions": "5695",
+          "clicks": "70",
+          "result": "3"
+        },
+        "2026-10-22": {
+          "spend": "61.71",
+          "impressions": "6524",
+          "clicks": "77",
+          "result": "3"
+        },
+        "2026-10-23": {
+          "spend": "57.87",
+          "impressions": "5854",
+          "clicks": "71",
+          "result": "3"
+        },
+        "2026-10-24": {
+          "spend": "64.81",
+          "impressions": "6664",
+          "clicks": "85",
+          "result": "4"
+        },
+        "2026-10-25": {
+          "spend": "54.88",
+          "impressions": "5637",
+          "clicks": "75",
+          "result": "3"
+        },
+        "2026-10-26": {
+          "spend": "61.98",
+          "impressions": "6191",
+          "clicks": "75",
+          "result": "3"
+        },
+        "2026-10-27": {
+          "spend": "59.46",
+          "impressions": "6026",
+          "clicks": "81",
+          "result": "3"
+        }
+      },
+      "1810000000000005": {
+        "2026-09-28": {
+          "spend": "12.09",
+          "impressions": "6422",
+          "clicks": "93",
+          "result": "93"
+        },
+        "2026-09-29": {
+          "spend": "14.43",
+          "impressions": "7033",
+          "clicks": "111",
+          "result": "111"
+        },
+        "2026-09-30": {
+          "spend": "12.09",
+          "impressions": "6550",
+          "clicks": "93",
+          "result": "93"
+        },
+        "2026-10-01": {
+          "spend": "10.66",
+          "impressions": "5766",
+          "clicks": "82",
+          "result": "82"
+        },
+        "2026-10-02": {
+          "spend": "12.87",
+          "impressions": "6516",
+          "clicks": "99",
+          "result": "99"
+        },
+        "2026-10-03": {
+          "spend": "13.00",
+          "impressions": "6469",
+          "clicks": "100",
+          "result": "100"
+        },
+        "2026-10-04": {
+          "spend": "12.22",
+          "impressions": "6769",
+          "clicks": "94",
+          "result": "94"
+        },
+        "2026-10-05": {
+          "spend": "13.65",
+          "impressions": "6862",
+          "clicks": "105",
+          "result": "105"
+        },
+        "2026-10-06": {
+          "spend": "13.26",
+          "impressions": "7002",
+          "clicks": "102",
+          "result": "102"
+        },
+        "2026-10-07": {
+          "spend": "14.04",
+          "impressions": "6929",
+          "clicks": "108",
+          "result": "108"
+        },
+        "2026-10-08": {
+          "spend": "11.31",
+          "impressions": "6069",
+          "clicks": "87",
+          "result": "87"
+        },
+        "2026-10-09": {
+          "spend": "12.35",
+          "impressions": "6006",
+          "clicks": "95",
+          "result": "95"
+        },
+        "2026-10-10": {
+          "spend": "12.74",
+          "impressions": "7007",
+          "clicks": "98",
+          "result": "98"
+        },
+        "2026-10-11": {
+          "spend": "11.18",
+          "impressions": "5920",
+          "clicks": "86",
+          "result": "86"
+        },
+        "2026-10-12": {
+          "spend": "12.61",
+          "impressions": "6126",
+          "clicks": "97",
+          "result": "97"
+        },
+        "2026-10-13": {
+          "spend": "11.83",
+          "impressions": "6233",
+          "clicks": "91",
+          "result": "91"
+        },
+        "2026-10-14": {
+          "spend": "11.83",
+          "impressions": "5906",
+          "clicks": "91",
+          "result": "91"
+        },
+        "2026-10-15": {
+          "spend": "11.83",
+          "impressions": "6014",
+          "clicks": "91",
+          "result": "91"
+        },
+        "2026-10-16": {
+          "spend": "12.48",
+          "impressions": "6712",
+          "clicks": "96",
+          "result": "96"
+        },
+        "2026-10-17": {
+          "spend": "12.87",
+          "impressions": "6764",
+          "clicks": "99",
+          "result": "99"
+        },
+        "2026-10-18": {
+          "spend": "11.96",
+          "impressions": "6179",
+          "clicks": "92",
+          "result": "92"
+        },
+        "2026-10-19": {
+          "spend": "13.26",
+          "impressions": "6588",
+          "clicks": "102",
+          "result": "102"
+        },
+        "2026-10-20": {
+          "spend": "12.74",
+          "impressions": "6769",
+          "clicks": "98",
+          "result": "98"
+        },
+        "2026-10-21": {
+          "spend": "13.13",
+          "impressions": "6556",
+          "clicks": "101",
+          "result": "101"
+        },
+        "2026-10-22": {
+          "spend": "11.31",
+          "impressions": "5797",
+          "clicks": "87",
+          "result": "87"
+        },
+        "2026-10-23": {
+          "spend": "12.61",
+          "impressions": "6078",
+          "clicks": "97",
+          "result": "97"
+        },
+        "2026-10-24": {
+          "spend": "13.00",
+          "impressions": "6924",
+          "clicks": "100",
+          "result": "100"
+        },
+        "2026-10-25": {
+          "spend": "12.09",
+          "impressions": "6274",
+          "clicks": "93",
+          "result": "93"
+        },
+        "2026-10-26": {
+          "spend": "13.00",
+          "impressions": "6957",
+          "clicks": "100",
+          "result": "100"
+        },
+        "2026-10-27": {
+          "spend": "14.43",
+          "impressions": "6947",
+          "clicks": "111",
+          "result": "111"
+        }
+      }
+    },
+    "integrated_report_basic_AUDIENCE_age_gender_AG1": [
+      {
+        "adgroup_id": "1810000000000001",
+        "age": "AGE_18_24",
+        "gender": "FEMALE",
+        "spend": "418.08",
+        "impressions": "34954",
+        "clicks": "159",
+        "result": "2"
+      },
+      {
+        "adgroup_id": "1810000000000001",
+        "age": "AGE_18_24",
+        "gender": "MALE",
+        "spend": "339.90",
+        "impressions": "29123",
+        "clicks": "134",
+        "result": "3"
+      },
+      {
+        "adgroup_id": "1810000000000001",
+        "age": "AGE_18_24",
+        "gender": "NONE",
+        "spend": "67.98",
+        "impressions": "5824",
+        "clicks": "30",
+        "result": "1"
+      },
+      {
+        "adgroup_id": "1810000000000001",
+        "age": "AGE_25_34",
+        "gender": "FEMALE",
+        "spend": "900.75",
+        "impressions": "58247",
+        "clicks": "686",
+        "result": "24"
+      },
+      {
+        "adgroup_id": "1810000000000001",
+        "age": "AGE_25_34",
+        "gender": "MALE",
+        "spend": "630.52",
+        "impressions": "40773",
+        "clicks": "420",
+        "result": "14"
+      },
+      {
+        "adgroup_id": "1810000000000001",
+        "age": "AGE_25_34",
+        "gender": "NONE",
+        "spend": "90.07",
+        "impressions": "5824",
+        "clicks": "55",
+        "result": "2"
+      },
+      {
+        "adgroup_id": "1810000000000001",
+        "age": "AGE_35_44",
+        "gender": "FEMALE",
+        "spend": "720.60",
+        "impressions": "46597",
+        "clicks": "759",
+        "result": "26"
+      },
+      {
+        "adgroup_id": "1810000000000001",
+        "age": "AGE_35_44",
+        "gender": "MALE",
+        "spend": "450.37",
+        "impressions": "29123",
+        "clicks": "337",
+        "result": "12"
+      },
+      {
+        "adgroup_id": "1810000000000001",
+        "age": "AGE_35_44",
+        "gender": "NONE",
+        "spend": "45.04",
+        "impressions": "2912",
+        "clicks": "30",
+        "result": "1"
+      },
+      {
+        "adgroup_id": "1810000000000001",
+        "age": "AGE_45_54",
+        "gender": "FEMALE",
+        "spend": "360.30",
+        "impressions": "23298",
+        "clicks": "294",
+        "result": "10"
+      },
+      {
+        "adgroup_id": "1810000000000001",
+        "age": "AGE_45_54",
+        "gender": "MALE",
+        "spend": "225.19",
+        "impressions": "14561",
+        "clicks": "145",
+        "result": "5"
+      }
+    ],
+    "integrated_report_basic_AUDIENCE_province_AG1": [
+      {
+        "adgroup_id": "1810000000000001",
+        "province_id": "5332921",
+        "spend": "722.30",
+        "impressions": "49514",
+        "clicks": "545",
+        "result": "19"
+      },
+      {
+        "adgroup_id": "1810000000000001",
+        "province_id": "4736286",
+        "spend": "552.34",
+        "impressions": "37860",
+        "clicks": "432",
+        "result": "15"
+      },
+      {
+        "adgroup_id": "1810000000000001",
+        "province_id": "4155751",
+        "spend": "467.37",
+        "impressions": "32035",
+        "clicks": "392",
+        "result": "15"
+      },
+      {
+        "adgroup_id": "1810000000000001",
+        "province_id": "5128638",
+        "spend": "382.39",
+        "impressions": "26211",
+        "clicks": "250",
+        "result": "7"
+      },
+      {
+        "adgroup_id": "1810000000000001",
+        "province_id": "4896861",
+        "spend": "212.44",
+        "impressions": "14561",
+        "clicks": "151",
+        "result": "5"
+      },
+      {
+        "adgroup_id": "1810000000000001",
+        "province_id": "-1",
+        "spend": "339.90",
+        "impressions": "23298",
+        "clicks": "193",
+        "result": "5"
+      }
+    ],
+    "integrated_report_basic_AUDIENCE_province_AG1_smaller_rows": {
+      "rows": 46,
+      "spend": "1572.06",
+      "impressions": "107757",
+      "clicks": "1086",
+      "result": "34",
+      "largest_row_impressions": "5926",
+      "highest_row_ctr_pct": "1.31"
+    },
+    "tool_targeting_info_GEO": {
+      "5332921": "California",
+      "4736286": "Texas",
+      "4155751": "Florida",
+      "5128638": "New York",
+      "4896861": "Illinois"
+    },
+    "integrated_report_basic_AUDIENCE_placement_AG1": [
+      {
+        "adgroup_id": "1810000000000001",
+        "placement": "PLACEMENT_TIKTOK",
+        "spend": "3101.62",
+        "impressions": "180567",
+        "clicks": "1059",
+        "result": "80"
+      },
+      {
+        "adgroup_id": "1810000000000001",
+        "placement": "PLACEMENT_PANGLE",
+        "spend": "934.74",
+        "impressions": "90283",
+        "clicks": "1799",
+        "result": "14"
+      },
+      {
+        "adgroup_id": "1810000000000001",
+        "placement": "PLACEMENT_GLOBAL_APP_BUNDLE",
+        "spend": "212.44",
+        "impressions": "20386",
+        "clicks": "191",
+        "result": "6"
+      }
+    ],
+    "integrated_report_basic_AUDIENCE_placement_other_ad_groups": "AG2, AG4 and AG5 return PLACEMENT_TIKTOK only; the Smart+ ad group returns TikTok 88% and Pangle 12% of its spend",
+    "integrated_report_basic_AUDIENCE_platform_AG1": [
+      {
+        "adgroup_id": "1810000000000001",
+        "platform": "IPHONE",
+        "spend": "1742.01",
+        "impressions": "119408",
+        "clicks": "1374",
+        "result": "58"
+      },
+      {
+        "adgroup_id": "1810000000000001",
+        "platform": "ANDROID",
+        "spend": "2336.84",
+        "impressions": "160179",
+        "clicks": "1590",
+        "result": "40"
+      },
+      {
+        "adgroup_id": "1810000000000001",
+        "platform": "IPAD",
+        "spend": "169.95",
+        "impressions": "11649",
+        "clicks": "85",
+        "result": "2"
+      }
+    ],
+    "gmv_max_store_list": [],
+    "gmv_max_campaigns": []
+  },
+  "calls": "17 read-only calls, all returned success; no changes made",
+  "note": "Example data: an invented online booking software company with invented accounts, not a real business. Every number in expected_output.json follows from this input."
+}

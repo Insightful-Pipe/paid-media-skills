@@ -1,0 +1,400 @@
+{
+  "header": {
+    "business": "Example Coffee Roasters",
+    "window": "2026-09-28 to 2026-10-27",
+    "currency": "USD",
+    "pulled": "Shopify orders, Google Ads campaigns, Meta campaigns and ad sets, TikTok campaigns and ad groups",
+    "typed": "product cost, fulfilment, card fees, resale share, profit goal, Meta minimum ROAS floor, goal, handed target, test"
+  },
+  "key_findings": [
+    "Break-even ROAS is 2.20 on net revenue and 2.28 as the platforms report it, because they record the order total with tax. A new customer can cost up to 53.17 and still pay back within 6 months; on the first order alone the limit is 20.45.",
+    "2 live targets lose money if hit: Meta Prospecting | Broad (cost cap 58.00, bid_amount 5800 cents); TikTok Ads Spark | Value (ROAS bid 0.80).",
+    "MER is 3.54 against a break-even of 2.20, leaving 14,546 after ads. Blended CAC is 34.64: above the first-order limit of 20.45 and below the 6-month limit of 53.17, so it pays back within 6 months through repeat orders; a new customer needs 1.69 orders' margin to pay back.",
+    "The 3.0 ROAS the founder wants on Meta is out of reach at today's rates: Meta runs at 1.90 (range 1.74 to 2.06), so it needs a 58.2% higher conversion rate or a 36.8% lower CPC. If it were hit, its verdict would be 'clears the profit goal'.",
+    "Making 60,000 from ads takes about 1,333 orders and 32,920 of spend at today's rates (32,214 to 33,891 with TikTok's range), against 23,900 now.",
+    "A Meta test for a 15% lift needs 42,515 clicks, about 35,012 and 83 days at today's budget, so it can't give an answer; in 28 days the budget can detect a lift of 26.5% or more."
+  ],
+  "inputs_sheet": [
+    {
+      "input": "Net revenue per order (R)",
+      "value": 45.0,
+      "source": "Shopify"
+    },
+    {
+      "input": "Product cost per order (C)",
+      "value": 14.2,
+      "source": "typed"
+    },
+    {
+      "input": "Fulfilment per order (F)",
+      "value": 7.8,
+      "source": "typed"
+    },
+    {
+      "input": "Card fees (f%, f0)",
+      "value": "3.0% + 0.30",
+      "source": "typed"
+    },
+    {
+      "input": "Refund rate (r)",
+      "value_percent": 2.0,
+      "source": "Shopify"
+    },
+    {
+      "input": "Resale share of returns (s)",
+      "value": 0.0,
+      "source": "typed"
+    },
+    {
+      "input": "Repeat orders within 6 months (m)",
+      "value": 1.6,
+      "source": "Shopify, 12 months of orders"
+    },
+    {
+      "input": "Payback window (W)",
+      "value": "6 months",
+      "source": "default"
+    },
+    {
+      "input": "Profit goal (p)",
+      "value_percent": 10.0,
+      "source": "typed"
+    },
+    {
+      "input": "Platform value basis (k)",
+      "value": 1.036,
+      "source": "Shopify tax per order"
+    }
+  ],
+  "numbers": [
+    {
+      "name": "Net revenue per order (R)",
+      "value": 45.0,
+      "formula": "(subtotal after discounts 77,456 + shipping charged 7,144) / 1,880 orders = 45.00"
+    },
+    {
+      "name": "Refund rate (r)",
+      "value_percent": 2.0,
+      "formula": "refunds 1,692 / net revenue 84,600 = 2.0%"
+    },
+    {
+      "name": "Contribution margin per order (CM)",
+      "value": 20.45,
+      "formula": "CM = R 45.00 - refunds 0.90 - goods 14.20 - fulfilment 7.80 - card fees 1.65 = 20.45"
+    },
+    {
+      "name": "Margin share (CM%)",
+      "value_percent": 45.4,
+      "formula": "CM 20.45 / R 45.00 = 45.4%"
+    },
+    {
+      "name": "Break-even ROAS, net revenue basis",
+      "value": 2.2,
+      "formula": "1 / 0.4544 = 2.20"
+    },
+    {
+      "name": "Break-even ACOS",
+      "value_percent": 45.4,
+      "formula": "CM% = 45.4%"
+    },
+    {
+      "name": "Platform value basis (k)",
+      "value": 1.036,
+      "formula": "(net revenue 84,600 + tax 3,045) / net revenue 84,600 = 1.036"
+    },
+    {
+      "name": "Break-even ROAS, as the platforms report it",
+      "value": 2.28,
+      "formula": "k 1.036 / CM% 0.4544 = 2.28"
+    },
+    {
+      "name": "ROAS for a 10% profit, as the platforms report it",
+      "value": 2.92,
+      "formula": "k 1.036 / (CM% 0.4544 - 0.10) = 2.92"
+    },
+    {
+      "name": "Repeat orders per new customer within 6 months (m)",
+      "value": 1.6,
+      "formula": "3,424 further orders / 2,140 customers = 1.60"
+    },
+    {
+      "name": "Payback break-even ROAS, as the platforms report it",
+      "value": 0.88,
+      "formula": "k 1.036 / (CM% 0.4544 x (1 + 1.60)) = 0.88"
+    },
+    {
+      "name": "First-order break-even CPA",
+      "value": 20.45,
+      "formula": "CM = 20.45"
+    },
+    {
+      "name": "Payback CPA (most a new customer can cost)",
+      "value": 53.17,
+      "formula": "CM 20.45 x (1 + 1.60) = 53.17"
+    },
+    {
+      "name": "Target CPA for a 10% profit, first order",
+      "value": 15.95,
+      "formula": "CM 20.45 - 0.10 x R 45.00 = 15.95"
+    },
+    {
+      "name": "Target CPA for a 10% profit, over 6 months",
+      "value": 41.47,
+      "formula": "15.95 x (1 + 1.60) = 41.47"
+    }
+  ],
+  "channels": [
+    {
+      "channel": "Google Ads",
+      "spend": 9400,
+      "clicks": 7800,
+      "conversions": 410,
+      "conversion_value": 19600,
+      "cpc": 1.21,
+      "conversion_rate_percent": 5.26,
+      "cpa": 22.93,
+      "roas_platform_basis": 2.09,
+      "roas_net_basis": 2.01,
+      "verdict": "pays back only through repeat orders"
+    },
+    {
+      "channel": "Meta",
+      "spend": 12600,
+      "clicks": 15300,
+      "conversions": 520,
+      "conversion_value": 23900,
+      "cpc": 0.82,
+      "conversion_rate_percent": 3.4,
+      "cpa": 24.23,
+      "roas_platform_basis": 1.9,
+      "roas_net_basis": 1.83,
+      "verdict": "pays back only through repeat orders"
+    },
+    {
+      "channel": "TikTok Ads",
+      "spend": 1900,
+      "clicks": 4100,
+      "conversions": 38,
+      "conversion_value": 1700,
+      "cpc": 0.46,
+      "conversion_rate_percent": 0.93,
+      "cpa": 50.0,
+      "roas_platform_basis": 0.89,
+      "roas_net_basis": 0.86,
+      "verdict": "pays back only through repeat orders",
+      "conversion_rate_range_percent": [
+        0.68,
+        1.27
+      ],
+      "cpa_range": [
+        36.5,
+        68.55
+      ],
+      "verdict_range": [
+        "pays back only through repeat orders",
+        "loses money if hit"
+      ],
+      "range_note": "38 conversions is under 100, so the conversion rate and CPA are shown as 95% ranges."
+    }
+  ],
+  "mer_and_cac": {
+    "total_ad_spend": 23900,
+    "store_net_revenue": 84600,
+    "mer": 3.54,
+    "mer_formula": "84,600 / 23,900 = 3.54",
+    "break_even_mer": 2.2,
+    "break_even_mer_formula": "1 / 0.4544 = 2.20",
+    "profit_after_ads": 14546,
+    "profit_after_ads_formula": "84,600 x 0.4544 - 23,900 = 14,546",
+    "new_customers": 690,
+    "blended_cac": 34.64,
+    "blended_cac_formula": "23,900 / 690 = 34.64",
+    "orders_to_pay_back": 1.69,
+    "orders_to_pay_back_formula": "34.64 / CM 20.45 = 1.69",
+    "cac_verdict": "pays back within 6 months through repeat orders",
+    "platform_claims": {
+      "claimed_purchases": 968,
+      "store_orders": 1880,
+      "claimed_share_percent": 51.5,
+      "deflated": false,
+      "note": "The platforms together claim fewer purchases than the store took, so no platform's conversions were scaled down."
+    }
+  },
+  "goal_plan": {
+    "goal": 60000.0,
+    "orders_needed": 1333,
+    "orders_formula": "60,000 / R 45.00 = 1,333",
+    "channels": [
+      {
+        "channel": "Google Ads",
+        "share_percent": 42.4,
+        "conversions_needed": 565,
+        "clicks_needed": 10744,
+        "budget": 12948,
+        "current_spend": 9400,
+        "budget_vs_current": 1.38,
+        "implied_cpa": 22.93,
+        "implied_roas_net_basis": 1.96,
+        "verdict": "pays back only through repeat orders",
+        "scale_warning": false
+      },
+      {
+        "channel": "Meta",
+        "share_percent": 53.7,
+        "conversions_needed": 716,
+        "clicks_needed": 21074,
+        "budget": 17355,
+        "current_spend": 12600,
+        "budget_vs_current": 1.38,
+        "implied_cpa": 24.23,
+        "implied_roas_net_basis": 1.86,
+        "verdict": "pays back only through repeat orders",
+        "scale_warning": false
+      },
+      {
+        "channel": "TikTok Ads",
+        "share_percent": 3.9,
+        "conversions_needed": 52,
+        "clicks_needed": 5647,
+        "budget": 2617,
+        "current_spend": 1900,
+        "budget_vs_current": 1.38,
+        "implied_cpa": 50.0,
+        "implied_roas_net_basis": 0.9,
+        "verdict": "pays back only through repeat orders",
+        "scale_warning": false,
+        "budget_range": [
+          1911,
+          3588
+        ],
+        "implied_cpa_range": [
+          36.5,
+          68.55
+        ],
+        "verdict_range": [
+          "pays back only through repeat orders",
+          "loses money if hit"
+        ]
+      }
+    ],
+    "total_budget": 32920,
+    "total_budget_range": [
+      32214,
+      33891
+    ],
+    "current_total_spend": 23900,
+    "scale_warnings": []
+  },
+  "target_check": {
+    "target": "Meta ROAS 3.0, as Meta reports it, from the founder",
+    "ladder_verdict": "clears the profit goal",
+    "current_roas_platform_basis": 1.9,
+    "current_range": [
+      1.74,
+      2.06
+    ],
+    "range_formula": "Wilson 95% range of the conversion rate (520 purchases from 15,300 clicks) applied to ROAS 1.90",
+    "reachable": "out of reach at today's rates",
+    "lever": {
+      "conversion_rate_needed_percent": 5.38,
+      "conversion_rate_now_percent": 3.4,
+      "conversion_rate_change_percent": 58.2,
+      "cpc_needed": 0.52,
+      "cpc_now": 0.82,
+      "cpc_change_percent": -36.8
+    }
+  },
+  "live_target_flags": [
+    {
+      "platform": "Meta",
+      "where": "Prospecting | Broad",
+      "target": "cost cap 58.00, bid_amount 5800 cents",
+      "kind": "CPA",
+      "value": 58.0,
+      "verdict": "loses money if hit",
+      "value_that_pays_back": "at or below 53.17"
+    },
+    {
+      "platform": "TikTok Ads",
+      "where": "Spark | Value",
+      "target": "ROAS bid 0.80",
+      "kind": "ROAS",
+      "value": 0.8,
+      "verdict": "loses money if hit",
+      "value_that_pays_back": "at or above 0.88"
+    },
+    {
+      "platform": "Google Ads",
+      "where": "Coffee | Search non-brand",
+      "target": "target CPA 25.00",
+      "kind": "CPA",
+      "value": 25.0,
+      "verdict": "pays back only through repeat orders"
+    },
+    {
+      "platform": "Google Ads",
+      "where": "Coffee | Shopping",
+      "target": "target ROAS 2.00",
+      "kind": "ROAS",
+      "value": 2.0,
+      "verdict": "pays back only through repeat orders"
+    },
+    {
+      "platform": "Meta",
+      "where": "Prospecting | Lookalike",
+      "target": "cost cap 38.00, bid_amount 3800 cents",
+      "kind": "CPA",
+      "value": 38.0,
+      "verdict": "pays back only through repeat orders"
+    },
+    {
+      "platform": "TikTok Ads",
+      "where": "Spark | Purchases",
+      "target": "cost cap 45.00",
+      "kind": "CPA",
+      "value": 45.0,
+      "verdict": "pays back only through repeat orders"
+    },
+    {
+      "platform": "Meta",
+      "where": "Retargeting | 30 days",
+      "target": "minimum ROAS 2.50 (typed from Ads Manager)",
+      "kind": "ROAS",
+      "value": 2.5,
+      "verdict": "clears break-even, below the profit goal"
+    }
+  ],
+  "test_cost": {
+    "channel": "Meta",
+    "test": "a new product page for the house blend",
+    "baseline_conversion_rate_percent": 3.4,
+    "lift_to_detect_percent": 15.0,
+    "clicks_per_version": 21257,
+    "clicks_total": 42515,
+    "conversions_implied": 1553,
+    "cost": 35012,
+    "cpc": 0.82,
+    "daily_budget": 420,
+    "days": 83,
+    "formula": "(1.96 + 0.8416)^2 x (0.0340 x 0.9660 + 0.0391 x 0.9609) / (0.0391 - 0.0340)^2 = 21,257 clicks per version",
+    "smallest_lift_in_28_days_percent": 26.5,
+    "can_answer_at_this_budget": false
+  },
+  "not_graded": [
+    {
+      "item": "Microsoft Ads and LinkedIn Ads",
+      "why": "not connected and not used by this business"
+    },
+    {
+      "item": "Lead gen cost per lead",
+      "why": "an online store with no lead step; not needed"
+    }
+  ],
+  "go_deeper": [
+    "ltv-cac-ratio-optimizer for lifetime value beyond 6 months",
+    "bid-strategy-auditor for the bid strategies behind the flagged targets",
+    "ab-test-designer to plan the product page test at a size the budget can carry",
+    "cross-platform-budget-allocator to split the goal budget by marginal return instead of today's split"
+  ],
+  "changes_made": "None. This skill reads and calculates only."
+}

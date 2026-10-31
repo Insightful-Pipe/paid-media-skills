@@ -1,0 +1,945 @@
+{
+  "header": {
+    "account": "Example Booking Software (TikTok ad account)",
+    "currency": "USD",
+    "time_zone": "America/New_York",
+    "window": "2026-09-28 to 2026-10-27",
+    "total_spend": 10462.58
+  },
+  "headline": {
+    "spend": 10462.58,
+    "impressions": 999742,
+    "clicks": 12223,
+    "ctr_pct": 1.22,
+    "cpm": 10.47,
+    "results_by_goal": [
+      {
+        "optimization_goal": "CONVERT",
+        "ad_groups": 3,
+        "spend": 8351.51,
+        "results": 236,
+        "cost_per_result": 35.39,
+        "target": 40.0,
+        "purchases": 53,
+        "purchase_value": 2597.0,
+        "roas": 0.31
+      },
+      {
+        "optimization_goal": "LEAD_GENERATION",
+        "ad_groups": 1,
+        "spend": 1734.2,
+        "results": 95,
+        "cost_per_result": 18.25,
+        "target": 25.0,
+        "purchases": 0,
+        "purchase_value": 0.0,
+        "roas": "not graded: no purchase value tracked"
+      },
+      {
+        "optimization_goal": "CLICK",
+        "ad_groups": 1,
+        "spend": 376.87,
+        "results": 2899,
+        "cost_per_result": 0.13,
+        "target": null,
+        "purchases": 2,
+        "purchase_value": 38.0,
+        "roas": 0.1
+      }
+    ],
+    "account_roas": 0.25,
+    "account_roas_note": "first payments only: 55 paid plans worth $2,635.00 in the window. A monthly plan pays back over months, so judge sign-ups against the $40 target, not this ROAS.",
+    "delivery": "4 campaigns, 5 ad groups and 12 ads delivered; 1 campaign is Smart+."
+  },
+  "creative_funnel": {
+    "hook_rate_pct": 30.1,
+    "six_second_hold_pct": 45.3,
+    "completion_pct": 8.63,
+    "ctr_pct": 1.22,
+    "results_per_click_sign_up_goal": 0.034,
+    "saves": "not returned by the report",
+    "first_break": "hook: the weak ads break first at the hook (Product first | Logo and app tour); 11 of 12 graded ads have no weak step",
+    "graded_ads": 12,
+    "baseline": "impression-weighted average of the graded ads"
+  },
+  "leaderboard": {
+    "sign_up_goal": [
+      {
+        "rank": 1,
+        "ad": "Creator intro | Founder: why we built it",
+        "spend": 630.1,
+        "hook_rate_pct": 31.0,
+        "six_second_hold_pct": 49.0,
+        "ctr_pct": 1.2,
+        "results": 28,
+        "cost_per_result": 22.5,
+        "diagnosis": "no weak step"
+      },
+      {
+        "rank": 2,
+        "ad": "Bold claim | Half the no-shows",
+        "spend": 515.53,
+        "hook_rate_pct": 28.0,
+        "six_second_hold_pct": 40.0,
+        "ctr_pct": 1.11,
+        "results": 19,
+        "cost_per_result": 27.13,
+        "diagnosis": "no weak step"
+      },
+      {
+        "rank": 3,
+        "ad": "UGC testimonial | Salon owner: no more no-shows",
+        "spend": 1241.98,
+        "hook_rate_pct": 35.0,
+        "six_second_hold_pct": 50.0,
+        "ctr_pct": 1.36,
+        "results": 45,
+        "cost_per_result": 27.6,
+        "diagnosis": "no weak step"
+      },
+      {
+        "rank": 4,
+        "ad": "Creator intro | Salon owner day in the life",
+        "spend": 2124.41,
+        "hook_rate_pct": 33.0,
+        "six_second_hold_pct": 47.0,
+        "ctr_pct": 1.2,
+        "results": 61,
+        "cost_per_result": 34.83,
+        "diagnosis": "no weak step"
+      },
+      {
+        "rank": 5,
+        "ad": "Question | Still chasing deposits?",
+        "spend": 739.27,
+        "hook_rate_pct": 31.0,
+        "six_second_hold_pct": 44.0,
+        "ctr_pct": 1.21,
+        "results": 21,
+        "cost_per_result": 35.2,
+        "diagnosis": "no weak step"
+      },
+      {
+        "rank": 6,
+        "ad": "Demo | Screen recording of the booking page",
+        "spend": 975.83,
+        "hook_rate_pct": 29.0,
+        "six_second_hold_pct": 43.0,
+        "ctr_pct": 1.04,
+        "results": 23,
+        "cost_per_result": 42.43,
+        "diagnosis": "no weak step"
+      },
+      {
+        "rank": 7,
+        "ad": "Demo | Booking in 3 taps",
+        "spend": 1359.61,
+        "hook_rate_pct": 30.0,
+        "six_second_hold_pct": 42.0,
+        "ctr_pct": 1.02,
+        "results": 31,
+        "cost_per_result": 43.86,
+        "diagnosis": "no weak step"
+      },
+      {
+        "rank": 8,
+        "ad": "Product first | Logo and app tour",
+        "spend": 764.78,
+        "hook_rate_pct": 15.0,
+        "six_second_hold_pct": 36.0,
+        "ctr_pct": 0.67,
+        "results": 8,
+        "cost_per_result": 95.6,
+        "diagnosis": "weak hook"
+      }
+    ],
+    "lead_goal": [
+      {
+        "rank": 1,
+        "ad": "UGC testimonial | Gym owner on waitlists",
+        "spend": 832.41,
+        "hook_rate_pct": 34.0,
+        "six_second_hold_pct": 51.0,
+        "ctr_pct": 1.31,
+        "results": 48,
+        "cost_per_result": 17.34,
+        "diagnosis": "no weak step"
+      },
+      {
+        "rank": 2,
+        "ad": "Bold claim | Fill every class",
+        "spend": 901.79,
+        "hook_rate_pct": 30.0,
+        "six_second_hold_pct": 45.0,
+        "ctr_pct": 1.23,
+        "results": 47,
+        "cost_per_result": 19.19,
+        "diagnosis": "no weak step"
+      }
+    ],
+    "click_goal": [
+      {
+        "rank": 1,
+        "ad": "Question | Why do clients no-show?",
+        "spend": 211.05,
+        "hook_rate_pct": 30.0,
+        "six_second_hold_pct": 44.0,
+        "ctr_pct": 1.57,
+        "results": 1705,
+        "cost_per_result": 0.12,
+        "diagnosis": "no weak step"
+      },
+      {
+        "rank": 2,
+        "ad": "Bold claim | 9 tactics that cut no-shows",
+        "spend": 165.82,
+        "hook_rate_pct": 27.0,
+        "six_second_hold_pct": 41.0,
+        "ctr_pct": 1.4,
+        "results": 1194,
+        "cost_per_result": 0.14,
+        "diagnosis": "no weak step"
+      }
+    ],
+    "weak_ads": [
+      {
+        "ad": "Product first | Logo and app tour",
+        "diagnosis": "weak hook",
+        "cost_per_result": 95.6
+      }
+    ]
+  },
+  "sections": [
+    {
+      "section": "1. Smart+, bids and budgets",
+      "verdict": "watch",
+      "findings": [
+        "Smart+ against manual (sign-up goal): $33.23 against $36.70 per sign-up, with 35.4% of the goal's spend. Smart+ wins on cost and hasn't starved the manual ad groups.",
+        "Bids: the cost cap of $38.00 spends 47.7% of its budget, under half, so it is set too tight; lowest cost on Broad 18-54 | Lowest cost runs at $42.49, within 30% of the target.",
+        "Learning: 4 of 5 ad groups had under 50 results in the last 7 days; read their cost per result as unsettled, and prefer fewer, larger ad groups."
+      ]
+    },
+    {
+      "section": "2. Creatives and Spark Ads",
+      "verdict": "act",
+      "findings": [
+        "Product first | Logo and app tour: weak hook (15.0% against 30.1%) and the dearest sign-ups ($95.60).",
+        "Hook types: UGC testimonial stops the most people (34.5% hook rate); bold claim brings the cheapest sign-ups ($27.13). Make more of both.",
+        "Identity (sign-up goal): Spark Ads $30.55 a sign-up against $39.05 for ad-only posts, and they keep 210 follows on the profile.",
+        "Fatigue hint: Creator intro | Salon owner day in the life has run 65 days and its CTR is 30.0% below its window average in the last 7 days."
+      ],
+      "identity": [
+        {
+          "group": "Spark Ad (on the profile)",
+          "ads": 4,
+          "spend": 4735.76,
+          "results": 155,
+          "cost_per_result": 30.55,
+          "ctr_pct": 1.24,
+          "follows": 210,
+          "clears_floor": true
+        },
+        {
+          "group": "ad-only post",
+          "ads": 3,
+          "spend": 2850.97,
+          "results": 73,
+          "cost_per_result": 39.05,
+          "ctr_pct": 1.05,
+          "follows": 0,
+          "clears_floor": true
+        },
+        {
+          "group": "custom identity",
+          "ads": 1,
+          "spend": 764.78,
+          "results": 8,
+          "cost_per_result": 95.6,
+          "ctr_pct": 0.67,
+          "follows": 0,
+          "clears_floor": false
+        }
+      ],
+      "hook_types": [
+        {
+          "hook_type": "UGC testimonial",
+          "graded_ads": 2,
+          "hook_rate_pct": 34.5,
+          "cost_per_sign_up": 27.6
+        },
+        {
+          "hook_type": "creator intro",
+          "graded_ads": 2,
+          "hook_rate_pct": 32.3,
+          "cost_per_sign_up": 30.95
+        },
+        {
+          "hook_type": "question",
+          "graded_ads": 2,
+          "hook_rate_pct": 30.3,
+          "cost_per_sign_up": 35.2
+        },
+        {
+          "hook_type": "demo",
+          "graded_ads": 2,
+          "hook_rate_pct": 29.6,
+          "cost_per_sign_up": 43.25
+        },
+        {
+          "hook_type": "bold claim",
+          "graded_ads": 3,
+          "hook_rate_pct": 28.4,
+          "cost_per_sign_up": 27.13
+        },
+        {
+          "hook_type": "product first",
+          "graded_ads": 1,
+          "hook_rate_pct": 15.0,
+          "cost_per_sign_up": 95.6
+        }
+      ],
+      "fatigue": [
+        {
+          "ad": "Creator intro | Salon owner day in the life",
+          "days_running": 65,
+          "ctr_window_pct": 1.2,
+          "ctr_last_7_days_pct": 0.84,
+          "change_pct": -30.0
+        }
+      ]
+    },
+    {
+      "section": "3. Age, gender, region and targeting",
+      "verdict": "act",
+      "findings": [
+        "Broad 18-54 | Lowest cost: 18-24 takes 24.0% of impressions at 0.46% CTR against the ad group's 1.05%, and its sign-ups cost $137.66. Women 35-44 beat the ad group's CTR by 50% or more (1.63%).",
+        "Regions: Florida and Texas give the most sign-ups per 1,000 impressions (0.47 and 0.4 against 0.34 for the ad group); no state is flagged. The other 46 rows hold 107,757 impressions; the largest has 2.0% of the ad group's impressions and the highest CTR is 1.31%, under the 1.57% a strong flag needs, so none is flagged.",
+        "Targeting: the prospecting ad groups all exclude the paying-accounts list; the lead ad group adds a lookalike of paying gym and studio accounts. Audience names come from you; no read returns them."
+      ],
+      "age_gender_ag1": [
+        {
+          "age": "AGE_18_24",
+          "gender": "female",
+          "impressions": 34954,
+          "share_of_impressions_pct": 12.0,
+          "clicks": 159,
+          "ctr_pct": 0.45,
+          "results": 2,
+          "results_per_1000_impressions": 0.06,
+          "spend": 418.08,
+          "cost_per_result": 209.04,
+          "graded": true,
+          "flag": null
+        },
+        {
+          "age": "AGE_18_24",
+          "gender": "male",
+          "impressions": 29123,
+          "share_of_impressions_pct": 10.0,
+          "clicks": 134,
+          "ctr_pct": 0.46,
+          "results": 3,
+          "results_per_1000_impressions": 0.1,
+          "spend": 339.9,
+          "cost_per_result": 113.3,
+          "graded": true,
+          "flag": null
+        },
+        {
+          "age": "AGE_18_24",
+          "gender": "none",
+          "impressions": 5824,
+          "share_of_impressions_pct": 2.0,
+          "clicks": 30,
+          "ctr_pct": 0.52,
+          "results": 1,
+          "results_per_1000_impressions": 0.17,
+          "spend": 67.98,
+          "cost_per_result": 67.98,
+          "graded": true,
+          "flag": null
+        },
+        {
+          "age": "AGE_25_34",
+          "gender": "female",
+          "impressions": 58247,
+          "share_of_impressions_pct": 20.0,
+          "clicks": 686,
+          "ctr_pct": 1.18,
+          "results": 24,
+          "results_per_1000_impressions": 0.41,
+          "spend": 900.75,
+          "cost_per_result": 37.53,
+          "graded": true,
+          "flag": null
+        },
+        {
+          "age": "AGE_25_34",
+          "gender": "male",
+          "impressions": 40773,
+          "share_of_impressions_pct": 14.0,
+          "clicks": 420,
+          "ctr_pct": 1.03,
+          "results": 14,
+          "results_per_1000_impressions": 0.34,
+          "spend": 630.52,
+          "cost_per_result": 45.04,
+          "graded": true,
+          "flag": null
+        },
+        {
+          "age": "AGE_25_34",
+          "gender": "none",
+          "impressions": 5824,
+          "share_of_impressions_pct": 2.0,
+          "clicks": 55,
+          "ctr_pct": 0.94,
+          "results": 2,
+          "results_per_1000_impressions": 0.34,
+          "spend": 90.07,
+          "cost_per_result": 45.04,
+          "graded": true,
+          "flag": null
+        },
+        {
+          "age": "AGE_35_44",
+          "gender": "female",
+          "impressions": 46597,
+          "share_of_impressions_pct": 16.0,
+          "clicks": 759,
+          "ctr_pct": 1.63,
+          "results": 26,
+          "results_per_1000_impressions": 0.56,
+          "spend": 720.6,
+          "cost_per_result": 27.72,
+          "graded": true,
+          "flag": "beats the ad group's CTR by 50% or more"
+        },
+        {
+          "age": "AGE_35_44",
+          "gender": "male",
+          "impressions": 29123,
+          "share_of_impressions_pct": 10.0,
+          "clicks": 337,
+          "ctr_pct": 1.16,
+          "results": 12,
+          "results_per_1000_impressions": 0.41,
+          "spend": 450.37,
+          "cost_per_result": 37.53,
+          "graded": true,
+          "flag": null
+        },
+        {
+          "age": "AGE_35_44",
+          "gender": "none",
+          "impressions": 2912,
+          "share_of_impressions_pct": 1.0,
+          "clicks": 30,
+          "ctr_pct": 1.03,
+          "results": 1,
+          "results_per_1000_impressions": 0.34,
+          "spend": 45.04,
+          "cost_per_result": 45.04,
+          "graded": true,
+          "flag": null
+        },
+        {
+          "age": "AGE_45_54",
+          "gender": "female",
+          "impressions": 23298,
+          "share_of_impressions_pct": 8.0,
+          "clicks": 294,
+          "ctr_pct": 1.26,
+          "results": 10,
+          "results_per_1000_impressions": 0.43,
+          "spend": 360.3,
+          "cost_per_result": 36.03,
+          "graded": true,
+          "flag": null
+        },
+        {
+          "age": "AGE_45_54",
+          "gender": "male",
+          "impressions": 14561,
+          "share_of_impressions_pct": 5.0,
+          "clicks": 145,
+          "ctr_pct": 1.0,
+          "results": 5,
+          "results_per_1000_impressions": 0.34,
+          "spend": 225.19,
+          "cost_per_result": 45.04,
+          "graded": true,
+          "flag": null
+        }
+      ],
+      "age_bands_ag1": [
+        {
+          "age": "AGE_18_24",
+          "share_of_impressions_pct": 24.0,
+          "ctr_pct": 0.46,
+          "results": 6,
+          "cost_per_result": 137.66,
+          "flag": "20%+ of impressions at half the ad group's CTR or worse"
+        },
+        {
+          "age": "AGE_25_34",
+          "share_of_impressions_pct": 36.0,
+          "ctr_pct": 1.11,
+          "results": 40,
+          "cost_per_result": 40.53,
+          "flag": null
+        },
+        {
+          "age": "AGE_35_44",
+          "share_of_impressions_pct": 27.0,
+          "ctr_pct": 1.43,
+          "results": 39,
+          "cost_per_result": 31.18,
+          "flag": null
+        },
+        {
+          "age": "AGE_45_54",
+          "share_of_impressions_pct": 13.0,
+          "ctr_pct": 1.16,
+          "results": 15,
+          "cost_per_result": 39.03,
+          "flag": null
+        }
+      ],
+      "regions_ag1": [
+        {
+          "region": "California",
+          "province_id": "5332921",
+          "impressions": 49514,
+          "share_of_impressions_pct": 17.0,
+          "ctr_pct": 1.1,
+          "results": 19,
+          "results_per_1000_impressions": 0.38,
+          "graded": true
+        },
+        {
+          "region": "Texas",
+          "province_id": "4736286",
+          "impressions": 37860,
+          "share_of_impressions_pct": 13.0,
+          "ctr_pct": 1.14,
+          "results": 15,
+          "results_per_1000_impressions": 0.4,
+          "graded": true
+        },
+        {
+          "region": "Florida",
+          "province_id": "4155751",
+          "impressions": 32035,
+          "share_of_impressions_pct": 11.0,
+          "ctr_pct": 1.22,
+          "results": 15,
+          "results_per_1000_impressions": 0.47,
+          "graded": true
+        },
+        {
+          "region": "New York",
+          "province_id": "5128638",
+          "impressions": 26211,
+          "share_of_impressions_pct": 9.0,
+          "ctr_pct": 0.95,
+          "results": 7,
+          "results_per_1000_impressions": 0.27,
+          "graded": true
+        },
+        {
+          "region": "Illinois",
+          "province_id": "4896861",
+          "impressions": 14561,
+          "share_of_impressions_pct": 5.0,
+          "ctr_pct": 1.04,
+          "results": 5,
+          "results_per_1000_impressions": 0.34,
+          "graded": true
+        },
+        {
+          "region": "unknown",
+          "province_id": "-1",
+          "impressions": 23298,
+          "share_of_impressions_pct": 8.0,
+          "ctr_pct": 0.83,
+          "results": 5,
+          "results_per_1000_impressions": 0.21,
+          "graded": true
+        }
+      ],
+      "targeting_setup": [
+        {
+          "ad_group": "Broad 18-54 | Lowest cost",
+          "goal": "CONVERT",
+          "label": "broad",
+          "excludes": [
+            "customer list: paying accounts (you told us)"
+          ],
+          "cost_per_result": 42.49,
+          "ctr_pct": 1.05,
+          "cpm": 14.59
+        },
+        {
+          "ad_group": "Interest: beauty business | Cost cap 38",
+          "goal": "CONVERT",
+          "label": "interests",
+          "excludes": [
+            "customer list: paying accounts (you told us)"
+          ],
+          "cost_per_result": 24.38,
+          "ctr_pct": 1.16,
+          "cpm": 8.91
+        },
+        {
+          "ad_group": "Smart+ | Sign-ups",
+          "goal": "CONVERT",
+          "label": "Smart+ (TikTok chooses the audience)",
+          "excludes": [
+            "customer list: paying accounts (you told us)"
+          ],
+          "cost_per_result": 33.23,
+          "ctr_pct": 1.22,
+          "cpm": 14.36
+        },
+        {
+          "ad_group": "Fitness owners | Instant form",
+          "goal": "LEAD_GENERATION",
+          "label": "custom or lookalike audiences",
+          "excludes": [
+            "customer list: paying accounts (you told us)"
+          ],
+          "cost_per_result": 18.25,
+          "ctr_pct": 1.27,
+          "cpm": 9.64
+        },
+        {
+          "ad_group": "Blog readers | Clicks",
+          "goal": "CLICK",
+          "label": "interests",
+          "excludes": "nothing",
+          "cost_per_result": 0.13,
+          "ctr_pct": 1.49,
+          "cpm": 1.94
+        }
+      ]
+    },
+    {
+      "section": "4. Placements, Pangle and device",
+      "verdict": "act",
+      "findings": [
+        "Pangle took 22.0% of Broad 18-54 | Lowest cost's spend at $66.77 a sign-up, +72.2% on TikTok's $38.77, with a CTR 3.4 times TikTok's and fewer sign-ups per click.",
+        "2 ad groups run on automatic placement, which includes Pangle: Broad 18-54 | Lowest cost, Smart+ | Sign-ups.",
+        "Device: iPhone gives 0.49 sign-ups per 1,000 impressions against Android's 0.25."
+      ],
+      "placements_ag1": {
+        "PLACEMENT_TIKTOK": {
+          "spend": 3101.62,
+          "impressions": 180567,
+          "clicks": 1059,
+          "results": 80,
+          "ctr_pct": 0.59,
+          "cpm": 17.18,
+          "cost_per_result": 38.77,
+          "results_per_click": 0.076
+        },
+        "PLACEMENT_PANGLE": {
+          "spend": 934.74,
+          "impressions": 90283,
+          "clicks": 1799,
+          "results": 14,
+          "ctr_pct": 1.99,
+          "cpm": 10.35,
+          "cost_per_result": 66.77,
+          "results_per_click": 0.008
+        },
+        "PLACEMENT_GLOBAL_APP_BUNDLE": {
+          "spend": 212.44,
+          "impressions": 20386,
+          "clicks": 191,
+          "results": 6,
+          "ctr_pct": 0.94,
+          "cpm": 10.42,
+          "cost_per_result": 35.41,
+          "results_per_click": 0.031
+        }
+      },
+      "devices_ag1": [
+        {
+          "device": "IPHONE",
+          "impressions": 119408,
+          "ctr_pct": 1.15,
+          "results": 58,
+          "results_per_1000_impressions": 0.49,
+          "graded": true
+        },
+        {
+          "device": "ANDROID",
+          "impressions": 160179,
+          "ctr_pct": 0.99,
+          "results": 40,
+          "results_per_1000_impressions": 0.25,
+          "graded": true
+        },
+        {
+          "device": "IPAD",
+          "impressions": 11649,
+          "ctr_pct": 0.73,
+          "results": 2,
+          "results_per_1000_impressions": 0.17,
+          "graded": true
+        }
+      ]
+    },
+    {
+      "section": "5. Cost per result spike",
+      "verdict": "act",
+      "findings": [
+        "Broad 18-54 | Lowest cost: cost per sign-up $38.73 to $53.49 (+38.1%). CTR moved -27.3%, CPM -0.1% and results per click +0.0%, so the creative is the cause, not the auction or the page.",
+        "No single day had 5 or more results at over twice the window's cost per result."
+      ],
+      "spike": {
+        "ad_group": "Broad 18-54 | Lowest cost",
+        "prior_7_days": {
+          "spend": 1006.98,
+          "impressions": 68749,
+          "clicks": 763,
+          "results": 26,
+          "cpm": 14.65,
+          "ctr_pct": 1.11,
+          "results_per_click": 0.034,
+          "cost_per_result": 38.73
+        },
+        "last_7_days": {
+          "spend": 962.84,
+          "impressions": 65812,
+          "clicks": 531,
+          "results": 18,
+          "cpm": 14.63,
+          "ctr_pct": 0.807,
+          "results_per_click": 0.034,
+          "cost_per_result": 53.49
+        },
+        "cost_per_result_change_pct": 38.1,
+        "moves_pct": {
+          "CPM": -0.1,
+          "CTR": -27.3,
+          "results per click": 0.0
+        },
+        "main_cause": "CTR"
+      },
+      "single_days": []
+    },
+    {
+      "section": "6. Pixel and events",
+      "verdict": "good",
+      "findings": [
+        "Every sign-up ad group carries pixel 7100000000000001; 0 conversion ad groups deliver without one.",
+        "Pixel conversions in the window: 240 (conversion summed over the ad group rows).",
+        "Event match quality and Events API deduplication live in TikTok Events Manager; check them there."
+      ]
+    },
+    {
+      "section": "7. Lead generation forms",
+      "verdict": "good",
+      "findings": [
+        "Fitness owners | Instant form: 95 leads at $18.25 each, under the $25 target; 4.2% of clicks sent the form. total_sales_lead agrees (95).",
+        "Form questions and lead quality aren't readable here: share how many leads became demos and customers before calling the form good."
+      ]
+    },
+    {
+      "section": "8. TikTok Shop and catalog",
+      "verdict": "not graded",
+      "findings": [
+        "No TikTok Shop linked (0 stores), 0 GMV Max campaigns and 0 catalog ads: a booking app sells plans, not products."
+      ]
+    },
+    {
+      "section": "9. Budget pacing",
+      "verdict": "act",
+      "findings": [
+        "Fitness owners | Instant form is budget-capped (98.5%) and beats its target: the first place to add money.",
+        "Interest: beauty business | Cost cap 38 is under-delivering (46.6%): the cap, not the budget, is the limit.",
+        "Month-end forecast (an estimate that assumes the last 7 days repeat): $9,429.47 month to date + $344.24 a day x 4 days = $10,806.43, $693.57 under the $11,500.00 budget; to land on it, change spend by $173.39 a day."
+      ],
+      "pacing": [
+        {
+          "budget": "ad group: Broad 18-54 | Lowest cost",
+          "daily_budget": 150.0,
+          "avg_daily_spend_last_7": 137.55,
+          "pct_of_budget": 91.7,
+          "state": "delivering",
+          "cost_per_result": 42.49,
+          "target": 40.0,
+          "beats_target": false
+        },
+        {
+          "budget": "ad group: Interest: beauty business | Cost cap 38",
+          "daily_budget": 80.0,
+          "avg_daily_spend_last_7": 37.32,
+          "pct_of_budget": 46.6,
+          "state": "under-delivering",
+          "cost_per_result": 24.38,
+          "target": 40.0,
+          "beats_target": true
+        },
+        {
+          "budget": "campaign: Smart+ | Sign-ups | Service business owners",
+          "daily_budget": 115.0,
+          "avg_daily_spend_last_7": 97.46,
+          "pct_of_budget": 84.7,
+          "state": "delivering",
+          "cost_per_result": 33.23,
+          "target": 40.0,
+          "beats_target": true
+        },
+        {
+          "budget": "ad group: Fitness owners | Instant form",
+          "daily_budget": 60.0,
+          "avg_daily_spend_last_7": 59.12,
+          "pct_of_budget": 98.5,
+          "state": "budget-capped",
+          "cost_per_result": 18.25,
+          "target": 25.0,
+          "beats_target": true
+        },
+        {
+          "budget": "ad group: Blog readers | Clicks",
+          "daily_budget": 15.0,
+          "avg_daily_spend_last_7": 12.8,
+          "pct_of_budget": 85.3,
+          "state": "delivering",
+          "cost_per_result": 0.13,
+          "target": null,
+          "beats_target": null
+        }
+      ],
+      "forecast": {
+        "month_to_date": 9429.47,
+        "avg_daily_last_7": 344.24,
+        "days_left": 4,
+        "forecast": 10806.43,
+        "budget": 11500.0,
+        "gap": 693.57,
+        "per_day_change_to_land": 173.39
+      }
+    }
+  ],
+  "top_actions": [
+    {
+      "rank": 1,
+      "action": "Loosen the cost cap on Interest: beauty business | Cost cap 38: raise it toward the $40 target, or test lowest cost",
+      "money_at_stake": 1254.37,
+      "how_estimated": "the budget the cap left unspent in the window",
+      "evidence": "adgroups_metadata: cap $38.00; daily report: it spent 47.7% of its $80.00 budget at $24.38 a sign-up",
+      "who": "do this in TikTok Ads Manager (bids are recommendations in this skill)"
+    },
+    {
+      "rank": 2,
+      "action": "Pause Product first | Logo and app tour",
+      "money_at_stake": 486.14,
+      "how_estimated": "its $764.78 minus its 8 sign-ups at the best ad in its ad group ($34.83)",
+      "evidence": "ad report: hook rate 15.0% against an account baseline of 30.1%, cost per sign-up $95.60; it opens on the logo. Two other ads keep delivering in the ad group.",
+      "who": "I can do this now, after your yes (ad_status_update)"
+    },
+    {
+      "rank": 3,
+      "action": "Move Broad 18-54 | Lowest cost from automatic placement to TikTok only, or block Pangle",
+      "money_at_stake": 391.96,
+      "how_estimated": "Pangle spend $934.74 minus its 14 sign-ups at TikTok's $38.77 each",
+      "evidence": "AUDIENCE placement report: Pangle 22.0% of the ad group's spend, cost per sign-up $66.77 against $38.77 on TikTok (+72.2%), CTR 3.4 times TikTok's with fewer sign-ups per click (accidental taps)",
+      "who": "do this in TikTok Ads Manager (placements are recommendations in this skill)"
+    },
+    {
+      "rank": 4,
+      "action": "Refresh Creator intro | Salon owner day in the life: two new openings on the same video, then rotate",
+      "money_at_stake": 265.7,
+      "how_estimated": "last 7 days' spend minus its 18 sign-ups at the prior week's $38.73",
+      "evidence": "daily ad group report: cost per sign-up up 38.1% week on week, CTR -27.3% while CPM moved -0.1%; the ad's CTR fell from 1.2% to 0.84% after 65 days",
+      "who": "do this in TikTok Ads Manager with new cuts; video-ad-script-writer can draft the openings, if installed"
+    },
+    {
+      "rank": 5,
+      "action": "Raise Fitness owners | Instant form's daily budget by 20%, from $60.00 to $72.00",
+      "money_at_stake": 48.0,
+      "how_estimated": "the extra $12.00 a day over the 4 days left in October",
+      "evidence": "daily report: 98.5% of budget over the last 7 days at $18.25 a lead against the $25 target",
+      "who": "I can do this now, after your yes (adgroup_update); wait 48 hours before the next step"
+    }
+  ],
+  "testing_agenda": [
+    {
+      "test": "Two new openings for Creator intro | Salon owner day in the life: a face and the result on screen in the first second",
+      "hypothesis": "its CTR fell -30.0% in the last 7 days; a fresh opening on the same story restores it",
+      "decides_it": "hook rate and CTR on at least 1,000 impressions per version"
+    },
+    {
+      "test": "TikTok only against automatic placement, same creative and budget",
+      "hypothesis": "cutting Pangle lowers the cost per sign-up toward TikTok's $38.77",
+      "decides_it": "cost per sign-up with at least 10 sign-ups each"
+    },
+    {
+      "test": "Cost cap at $40 against the current $38.00 on the beauty-business interest ad group",
+      "hypothesis": "a looser cap spends the budget at a cost still under target",
+      "decides_it": "share of budget spent and cost per sign-up over 14 days"
+    }
+  ],
+  "not_graded": [
+    "TikTok Shop and catalog: none linked",
+    "Saves: not returned by the report",
+    "Lead quality past the form: needs your demo and customer counts",
+    "Event match quality: lives in TikTok Events Manager"
+  ],
+  "go_deeper": [
+    {
+      "next_step": "Pause, scale or rebuild with exact payloads",
+      "skill": "tiktok-ads-campaign-builder"
+    },
+    {
+      "next_step": "New openings and scripts for the tired video",
+      "skill": "video-ad-script-writer"
+    },
+    {
+      "next_step": "Full fatigue check across creatives",
+      "skill": "ad-creative-fatigue-detector"
+    },
+    {
+      "next_step": "A month of creative tests",
+      "skill": "creative-testing-roadmap"
+    }
+  ],
+  "changes_offered": [
+    {
+      "change": "Pause a losing ad",
+      "action": "ad_status_update",
+      "status": "not run: waiting for your yes",
+      "body": {
+        "platform": "tiktok-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "7000000000000000001",
+        "advertiser_id": "7000000000000000001",
+        "action": "ad_status_update",
+        "ad_ids": [
+          "1820000000000003"
+        ],
+        "operation_status": "DISABLE"
+      }
+    },
+    {
+      "change": "Raise a budget-capped winner by 20%",
+      "action": "adgroup_update",
+      "status": "not run: waiting for your yes",
+      "body": {
+        "platform": "tiktok-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "7000000000000000001",
+        "advertiser_id": "7000000000000000001",
+        "action": "adgroup_update",
+        "adgroup_id": "1810000000000004",
+        "budget": 72.0
+      }
+    }
+  ]
+}

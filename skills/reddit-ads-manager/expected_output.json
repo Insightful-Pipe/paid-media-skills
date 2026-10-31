@@ -1,0 +1,1175 @@
+{
+  "header": {
+    "account": "Example Booking Software (Reddit ad account)",
+    "dates": "2026-09-28 to 2026-10-27",
+    "currency": "USD",
+    "attribution_window": "28-day click, 1-day view",
+    "result_that_counts": "Sign Up, click-through + view-through",
+    "T": "$43.43",
+    "T_source": "the account's own cost per result: $7,340.00 / 169 sign ups",
+    "spend_gate": "$86.86",
+    "winner_at_or_below": "$34.75",
+    "cut_at_or_above": "$65.15",
+    "community_export_coverage": "98.8% of the community ad groups' spend ($4,920.00 of $4,980.00)",
+    "exports_match": "ad group spend $7,340.00 = ad spend $7,340.00",
+    "grade": 50,
+    "rating": "at risk",
+    "grade_math": "100 - 2 fail x 15 - 4 warn x 5 = 50 (6 of 6 areas graded)"
+  },
+  "scorecard": [
+    {
+      "area": "Communities",
+      "result": "fail",
+      "key_number": "4 cuts took 26.0% of judged spend",
+      "why": "12 communities cleared the $86.86 gate: 4 winners, 4 cuts. Cuts took $1,250.00 of $4,800.00 judged spend, over the 25% fail line."
+    },
+    {
+      "area": "Targeting mix",
+      "result": "warn",
+      "key_number": "Interests $91.54 per result",
+      "why": "The interest ad group costs 2.11x T on 16.2% of spend; under half of spend, so a warn."
+    },
+    {
+      "area": "Ads and comments",
+      "result": "warn",
+      "key_number": "3 pause candidates, 2 ads with 2+ wording flags",
+      "why": "Pause candidates hold over 25% of their ad groups' spend; ad2's comments are 50.0% hostile and ad6's comments are 62.5% hostile."
+    },
+    {
+      "area": "Bids and budgets",
+      "result": "warn",
+      "key_number": "3 ad groups flagged",
+      "why": "Studios and trainers under-delivers on a cost cap below its cost per result. Daily budgets under T: Studios and trainers ($30), Keywords: booking and no-shows ($25), Site visitors, last 30 days ($15)."
+    },
+    {
+      "area": "Reddit Pixel and Conversions API",
+      "result": "fail",
+      "key_number": "Reddit received 1.61x the site's sign ups",
+      "why": "The Conversions API sends no conversion ID, so Reddit counts many sign ups twice."
+    },
+    {
+      "area": "Site check (GA4)",
+      "result": "warn",
+      "key_number": "click match 73.3%, result match 3.18",
+      "why": "The account clears 70%, but one campaign is at 51.6%; Reddit reports 3.18x the sign ups GA4 sees from paid Reddit sessions, over the 3x line."
+    }
+  ],
+  "worth_it": {
+    "answer": "Not yet answerable: the tracking has to be fixed first.",
+    "reddit_cost_per_sign_up": "$43.43",
+    "ga4_cost_per_sign_up": "$188.21",
+    "google_ads_cost_per_sign_up": "$55.00 (the user's figure)",
+    "reasoning": [
+      "On Reddit's count the account pays $43.43 a sign up, below the $55.00 the user pays on Google Ads.",
+      "On GA4's count (sign ups from paid Reddit sessions) it pays $188.21, 3.42x Google Ads. The true figure sits between the two, and area 5 shows Reddit's count is inflated.",
+      "Winning communities hold $1,870.00 of $4,800.00 judged spend (39.0%). Double counting inflates every ad group alike, so the rankings inside the account hold.",
+      "Fix the conversion ID and the UTM tags, run 30 more days and ask again: if the GA4 cost per sign up then comes under the Google Ads figure, Reddit earns more budget."
+    ]
+  },
+  "top_fixes": [
+    {
+      "fix": "Send the same conversion ID from the Pixel and the Conversions API for Sign Up, so Reddit can match the two and stop counting sign ups twice",
+      "spend_touched": "$7,340.00 in the window",
+      "evidence": "Events Manager paste and site count: 2,010 Sign Up events vs 1,250 in the app's database (1.61x); the Conversions API sends no conversion ID",
+      "where": "on the site (the Conversions API set-up) and in Events Manager",
+      "rank": 1
+    },
+    {
+      "fix": "Pause ad2 in Salon owners, ad4 in Clinic managers, ad6 in Small business owners, and replace the two flagged ones with the new headlines below",
+      "spend_touched": "$1,410.00 in the window",
+      "evidence": "ad report: ad2 $65.00 per result, 2.31x the leader's cost per result, 30.6% of its ad group's spend; ad4 $70.00 per result, 1.71x the leader's cost per result, 29.9% of its ad group's spend; ad6 $135.00 per result, 4.08x the leader's cost per result, 36.0% of its ad group's spend",
+      "where": "in Reddit Ads Manager",
+      "rank": 2
+    },
+    {
+      "fix": "Remove the cut communities from their ad groups and let the winners take the budget",
+      "spend_touched": "$1,250.00 in the window",
+      "evidence": "community report: r/yoga $200.00, 2 results, $100.00 per result; r/massage $390.00, 3 results, $130.00 per result; r/EstheticianLife $140.00, 1 result, $140.00 per result; r/Entrepreneur $520.00, 3 results, $173.33 per result; T is $43.43",
+      "where": "in Reddit Ads Manager",
+      "rank": 3
+    },
+    {
+      "fix": "Cut the interest ad group's budget and move it to community ad groups with winners",
+      "spend_touched": "$1,190.00 in the window",
+      "evidence": "ad group report: Interests cost $91.54 per result, 2.11x T, on $1,190.00; targeting expansion is on",
+      "where": "in Reddit Ads Manager",
+      "rank": 4
+    },
+    {
+      "fix": "Add UTM tags to the keyword ad group's ad, so its visits stop landing in GA4 as reddit.com referral",
+      "spend_touched": "$740.00 in the window",
+      "evidence": "ad report: ad9's destination URL has no utm_ parameters; GA4: campaign 'Sign ups - Interests and keywords' click match 51.6%",
+      "where": "in Reddit Ads Manager",
+      "rank": 5
+    }
+  ],
+  "communities": {
+    "T": "$43.43",
+    "gate": "$86.86",
+    "judged": [
+      {
+        "rank": 1,
+        "community": "r/sweatystartup",
+        "ad_groups": [
+          "Small business owners"
+        ],
+        "spend": "$200.00",
+        "clicks": 180,
+        "ctr_pct": 0.67,
+        "results": 8,
+        "cpr": "$25.00",
+        "verdict": "winner"
+      },
+      {
+        "rank": 2,
+        "community": "r/hairstylist",
+        "ad_groups": [
+          "Salon owners"
+        ],
+        "spend": "$760.00",
+        "clicks": 650,
+        "ctr_pct": 0.67,
+        "results": 27,
+        "cpr": "$28.15",
+        "verdict": "winner"
+      },
+      {
+        "rank": 3,
+        "community": "r/salonowners",
+        "ad_groups": [
+          "Salon owners"
+        ],
+        "spend": "$370.00",
+        "clicks": 360,
+        "ctr_pct": 0.86,
+        "results": 12,
+        "cpr": "$30.83",
+        "verdict": "winner"
+      },
+      {
+        "rank": 4,
+        "community": "r/physicaltherapy",
+        "ad_groups": [
+          "Clinic managers"
+        ],
+        "spend": "$540.00",
+        "clicks": 450,
+        "ctr_pct": 0.68,
+        "results": 16,
+        "cpr": "$33.75",
+        "verdict": "winner"
+      },
+      {
+        "rank": 5,
+        "community": "r/smallbusiness",
+        "ad_groups": [
+          "Small business owners"
+        ],
+        "spend": "$760.00",
+        "clicks": 640,
+        "ctr_pct": 0.46,
+        "results": 21,
+        "cpr": "$36.19",
+        "verdict": "keep"
+      },
+      {
+        "rank": 6,
+        "community": "r/personaltraining",
+        "ad_groups": [
+          "Studios and trainers"
+        ],
+        "spend": "$330.00",
+        "clicks": 250,
+        "ctr_pct": 0.66,
+        "results": 8,
+        "cpr": "$41.25",
+        "verdict": "keep"
+      },
+      {
+        "rank": 7,
+        "community": "r/Chiropractic",
+        "ad_groups": [
+          "Clinic managers"
+        ],
+        "spend": "$170.00",
+        "clicks": 120,
+        "ctr_pct": 0.67,
+        "results": 4,
+        "cpr": "$42.50",
+        "verdict": "keep"
+      },
+      {
+        "rank": 8,
+        "community": "r/Hairdressing",
+        "ad_groups": [
+          "Salon owners"
+        ],
+        "spend": "$420.00",
+        "clicks": 340,
+        "ctr_pct": 0.61,
+        "results": 9,
+        "cpr": "$46.67",
+        "verdict": "keep"
+      },
+      {
+        "rank": 9,
+        "community": "r/yoga",
+        "ad_groups": [
+          "Studios and trainers"
+        ],
+        "spend": "$200.00",
+        "clicks": 130,
+        "ctr_pct": 0.5,
+        "results": 2,
+        "cpr": "$100.00",
+        "verdict": "cut"
+      },
+      {
+        "rank": 10,
+        "community": "r/massage",
+        "ad_groups": [
+          "Clinic managers"
+        ],
+        "spend": "$390.00",
+        "clicks": 330,
+        "ctr_pct": 0.57,
+        "results": 3,
+        "cpr": "$130.00",
+        "verdict": "cut"
+      },
+      {
+        "rank": 11,
+        "community": "r/EstheticianLife",
+        "ad_groups": [
+          "Salon owners"
+        ],
+        "spend": "$140.00",
+        "clicks": 100,
+        "ctr_pct": 0.48,
+        "results": 1,
+        "cpr": "$140.00",
+        "verdict": "cut"
+      },
+      {
+        "rank": 12,
+        "community": "r/Entrepreneur",
+        "ad_groups": [
+          "Small business owners"
+        ],
+        "spend": "$520.00",
+        "clicks": 330,
+        "ctr_pct": 0.3,
+        "results": 3,
+        "cpr": "$173.33",
+        "verdict": "cut"
+      }
+    ],
+    "too_little_spend": [
+      {
+        "community": "r/medicaloffice",
+        "ad_groups": [
+          "Clinic managers"
+        ],
+        "spend": "$55.00",
+        "results": 2,
+        "needs": "$31.86 more spend before a verdict"
+      },
+      {
+        "community": "r/pilates",
+        "ad_groups": [
+          "Studios and trainers"
+        ],
+        "spend": "$65.00",
+        "results": 1,
+        "needs": "$21.86 more spend before a verdict"
+      }
+    ],
+    "cuts_go_to": [
+      {
+        "cut": "r/yoga",
+        "ad_group": "Studios and trainers",
+        "budget_to": "a new community ad group (step First campaign)"
+      },
+      {
+        "cut": "r/massage",
+        "ad_group": "Clinic managers",
+        "budget_to": [
+          "r/physicaltherapy"
+        ]
+      },
+      {
+        "cut": "r/EstheticianLife",
+        "ad_group": "Salon owners",
+        "budget_to": [
+          "r/hairstylist",
+          "r/salonowners"
+        ]
+      },
+      {
+        "cut": "r/Entrepreneur",
+        "ad_group": "Small business owners",
+        "budget_to": [
+          "r/sweatystartup"
+        ]
+      }
+    ]
+  },
+  "targeting_mix": {
+    "families": [
+      {
+        "family": "Communities",
+        "ad_groups": [
+          "Salon owners",
+          "Clinic managers",
+          "Small business owners",
+          "Studios and trainers"
+        ],
+        "spend": "$4,980.00",
+        "ctr_pct": 0.55,
+        "cpc": "$1.25",
+        "results": 119,
+        "cpr": "$41.85",
+        "result": "pass"
+      },
+      {
+        "family": "Interests",
+        "ad_groups": [
+          "Interest: Business and finance"
+        ],
+        "spend": "$1,190.00",
+        "ctr_pct": 0.32,
+        "cpc": "$1.13",
+        "results": 13,
+        "cpr": "$91.54",
+        "result": "warn"
+      },
+      {
+        "family": "Keywords",
+        "ad_groups": [
+          "Keywords: booking and no-shows"
+        ],
+        "spend": "$740.00",
+        "ctr_pct": 0.62,
+        "cpc": "$1.32",
+        "results": 15,
+        "cpr": "$49.33",
+        "result": "pass"
+      },
+      {
+        "family": "Your audiences",
+        "ad_groups": [
+          "Site visitors, last 30 days"
+        ],
+        "spend": "$430.00",
+        "ctr_pct": 0.75,
+        "cpc": "$1.10",
+        "results": 22,
+        "cpr": "$19.55",
+        "result": "pass"
+      }
+    ],
+    "where_interest_and_keyword_ads_landed": [
+      {
+        "ad_group": "Interest: Business and finance",
+        "top_communities": [
+          {
+            "community": "r/personalfinance",
+            "spend": 420,
+            "results": 3
+          },
+          {
+            "community": "r/investing",
+            "spend": 300,
+            "results": 3
+          },
+          {
+            "community": "r/careerguidance",
+            "spend": 210,
+            "results": 1
+          }
+        ]
+      },
+      {
+        "ad_group": "Keywords: booking and no-shows",
+        "top_communities": [
+          {
+            "community": "r/smallbusiness",
+            "spend": 260,
+            "results": 6
+          },
+          {
+            "community": "r/hairstylist",
+            "spend": 180,
+            "results": 5
+          }
+        ]
+      }
+    ],
+    "note": "Targeting expansion is on in: Interest: Business and finance. These landing communities get no verdict: nobody chose them."
+  },
+  "ads": {
+    "rows": [
+      {
+        "ad_id": "ad1",
+        "ad_group": "Salon owners",
+        "headline": "Salon owners: what actually cut your no-shows? Our customers went from 12% to 5% in their first 90 days once clients paid a deposit at booking",
+        "characters": 142,
+        "spend": 1180,
+        "impressions": 151000,
+        "ctr_pct": 0.76,
+        "results": 42,
+        "cpr": 28.1,
+        "judged": true,
+        "wording_flags": [],
+        "utm_tagged": true,
+        "role": "leader"
+      },
+      {
+        "ad_id": "ad2",
+        "ad_group": "Salon owners",
+        "headline": "The best booking app for salons!! Try it today",
+        "characters": 46,
+        "spend": 520,
+        "impressions": 69000,
+        "ctr_pct": 0.45,
+        "results": 8,
+        "cpr": 65.0,
+        "judged": true,
+        "wording_flags": [
+          "Shouting",
+          "Hype"
+        ],
+        "utm_tagged": true,
+        "role": "pause candidate",
+        "vs_leader": "2.31x the leader's cost per result",
+        "share_of_ad_group_spend_pct": 30.6
+      },
+      {
+        "ad_id": "ad3",
+        "ad_group": "Clinic managers",
+        "headline": "Front desk managers at small clinics: how do you handle late cancellations without losing the patient?",
+        "characters": 102,
+        "spend": 820,
+        "impressions": 98000,
+        "ctr_pct": 0.73,
+        "results": 20,
+        "cpr": 41.0,
+        "judged": true,
+        "wording_flags": [],
+        "utm_tagged": true,
+        "role": "leader"
+      },
+      {
+        "ad_id": "ad4",
+        "ad_group": "Clinic managers",
+        "headline": "Example Booking Software: online booking, reminders and payments in one place",
+        "characters": 77,
+        "spend": 350,
+        "impressions": 52000,
+        "ctr_pct": 0.44,
+        "results": 5,
+        "cpr": 70.0,
+        "judged": true,
+        "wording_flags": [
+          "Brand first"
+        ],
+        "utm_tagged": true,
+        "role": "pause candidate",
+        "vs_leader": "1.71x the leader's cost per result",
+        "share_of_ad_group_spend_pct": 29.9
+      },
+      {
+        "ad_id": "ad5",
+        "ad_group": "Small business owners",
+        "headline": "Front desk on the phone all day? Clients can book and pay a deposit online, 24/7, and the reminder texts go out by themselves",
+        "characters": 125,
+        "spend": 960,
+        "impressions": 160000,
+        "ctr_pct": 0.56,
+        "results": 29,
+        "cpr": 33.1,
+        "judged": true,
+        "wording_flags": [],
+        "utm_tagged": true,
+        "role": "leader"
+      },
+      {
+        "ad_id": "ad6",
+        "ad_group": "Small business owners",
+        "headline": "Revolutionary all-in-one scheduling platform. Don't miss out!",
+        "characters": 61,
+        "spend": 540,
+        "impressions": 120000,
+        "ctr_pct": 0.22,
+        "results": 4,
+        "cpr": 135.0,
+        "judged": true,
+        "wording_flags": [
+          "Hype",
+          "No specifics"
+        ],
+        "utm_tagged": true,
+        "role": "pause candidate",
+        "vs_leader": "4.08x the leader's cost per result",
+        "share_of_ad_group_spend_pct": 36.0
+      },
+      {
+        "ad_id": "ad7",
+        "ad_group": "Studios and trainers",
+        "headline": "Studio owners: clients book and pay for classes on their phone, and the reminder texts go out by themselves",
+        "characters": 107,
+        "spend": 610,
+        "impressions": 72000,
+        "ctr_pct": 0.6,
+        "results": 11,
+        "cpr": 55.45,
+        "judged": true,
+        "wording_flags": [],
+        "utm_tagged": true,
+        "role": "only judged ad in its ad group"
+      },
+      {
+        "ad_id": "ad8",
+        "ad_group": "Interest: Business and finance",
+        "headline": "Running a small service business? Online booking that sends the reminders for you",
+        "characters": 81,
+        "spend": 1190,
+        "impressions": 330000,
+        "ctr_pct": 0.32,
+        "results": 13,
+        "cpr": 91.54,
+        "judged": true,
+        "wording_flags": [],
+        "utm_tagged": true,
+        "role": "only judged ad in its ad group"
+      },
+      {
+        "ad_id": "ad9",
+        "ad_group": "Keywords: booking and no-shows",
+        "headline": "Tired of no-shows? Our customers cut theirs from 12% to 5% in 90 days with deposits and text reminders",
+        "characters": 102,
+        "spend": 740,
+        "impressions": 90000,
+        "ctr_pct": 0.62,
+        "results": 15,
+        "cpr": 49.33,
+        "judged": true,
+        "wording_flags": [],
+        "utm_tagged": false,
+        "role": "only judged ad in its ad group"
+      },
+      {
+        "ad_id": "ad10",
+        "ad_group": "Site visitors, last 30 days",
+        "headline": "Still comparing booking apps? See how deposits, reminders and calendar sync work before you choose",
+        "characters": 98,
+        "spend": 430,
+        "impressions": 52000,
+        "ctr_pct": 0.75,
+        "results": 22,
+        "cpr": 19.55,
+        "judged": true,
+        "wording_flags": [],
+        "utm_tagged": true,
+        "role": "only judged ad in its ad group"
+      }
+    ],
+    "comment_read": [
+      {
+        "ad_id": "ad1",
+        "comments": 7,
+        "by_group": {
+          "question": 3,
+          "objection": 1,
+          "praise": 2,
+          "hostile": 0,
+          "other": 1
+        },
+        "hostile_share_pct": 0.0,
+        "items": [
+          {
+            "comment": "How does the deposit part work if a client cancels the day before?",
+            "group": "question",
+            "draft_reply": "You set the deposit and the cancellation window for each service. Clients pay the deposit online when they book, and a reminder goes out before the appointment."
+          },
+          {
+            "comment": "We started taking deposits last year and it changed everything. Wish we had done it sooner.",
+            "group": "praise"
+          },
+          {
+            "comment": "Does it sync with Google Calendar? That's the only thing stopping me from switching.",
+            "group": "question",
+            "draft_reply": "Yes, it has two-way sync with Google and Outlook calendars, so bookings show up in the calendar you already use and blocked time there stays blocked."
+          },
+          {
+            "comment": "Been using this at my salon since spring, the reminder texts alone saved us.",
+            "group": "praise"
+          },
+          {
+            "comment": "My clients are older and hate paying online, not sure deposits would fly here.",
+            "group": "objection",
+            "draft_reply": "Fair point. You set the deposit for each service, so you could ask for one only on long appointments and keep the rest as they are."
+          },
+          {
+            "comment": "Can clients book for two services back to back?",
+            "group": "question",
+            "draft_reply": "Yes, clients book and pay online, 24/7. Happy to point you to the salon page if you want to see how a two-service booking looks."
+          },
+          {
+            "comment": "Nice color work in the photo.",
+            "group": "other"
+          }
+        ],
+        "result": "pass"
+      },
+      {
+        "ad_id": "ad2",
+        "comments": 6,
+        "by_group": {
+          "question": 2,
+          "objection": 1,
+          "praise": 0,
+          "hostile": 3,
+          "other": 0
+        },
+        "hostile_share_pct": 50.0,
+        "items": [
+          {
+            "comment": "Every booking app says it's the best. What does this one do that the others don't?",
+            "group": "question",
+            "draft_reply": "Fair question. Clients book and pay a deposit online, the SMS and email reminders go out by themselves, and it syncs both ways with Google and Outlook calendars. Customers' no-show rate fell from 12% to 5% on average in their first 90 days."
+          },
+          {
+            "comment": "Two exclamation marks, must be serious.",
+            "group": "hostile"
+          },
+          {
+            "comment": "Another ad pretending to be a post. Downvoted.",
+            "group": "hostile"
+          },
+          {
+            "comment": "Already use a booking app that came with my card reader, switching is a pain.",
+            "group": "objection",
+            "draft_reply": "Understood. Set-up takes about 20 minutes and the team imports your client list for you, so the switch is mostly done for you."
+          },
+          {
+            "comment": "Does it work for a solo stylist renting a booth?",
+            "group": "question",
+            "draft_reply": "Yes, it works for teams from 1 to 20 staff, including a solo stylist."
+          },
+          {
+            "comment": "lol the marketing team discovered Reddit",
+            "group": "hostile"
+          }
+        ],
+        "result": "warn"
+      },
+      {
+        "ad_id": "ad6",
+        "comments": 8,
+        "by_group": {
+          "question": 1,
+          "objection": 1,
+          "praise": 0,
+          "hostile": 5,
+          "other": 1
+        },
+        "hostile_share_pct": 62.5,
+        "items": [
+          {
+            "comment": "Revolutionary. Sure.",
+            "group": "hostile"
+          },
+          {
+            "comment": "This reads like it was written by a bot. Spam.",
+            "group": "hostile"
+          },
+          {
+            "comment": "What does it actually do? The ad doesn't say.",
+            "group": "question",
+            "draft_reply": "Fair. It is online booking for salons, clinics, studios and trainers: clients book and pay a deposit online, and SMS and email reminders go out before every appointment."
+          },
+          {
+            "comment": "Don't miss out on what exactly?",
+            "group": "hostile"
+          },
+          {
+            "comment": "Downvoted. Nobody asked.",
+            "group": "hostile"
+          },
+          {
+            "comment": "Cringe. Tell me what it costs and what it does.",
+            "group": "hostile"
+          },
+          {
+            "comment": "Not worth switching for most of us, our current setup is fine.",
+            "group": "objection",
+            "draft_reply": "Makes sense if your setup works. Where it tends to help is no-shows: customers' rate fell from 12% to 5% on average in their first 90 days."
+          },
+          {
+            "comment": "Third time this ad has shown up in my feed today.",
+            "group": "other"
+          }
+        ],
+        "result": "warn"
+      }
+    ]
+  },
+  "bids_and_budgets": [
+    {
+      "ad_group": "Salon owners",
+      "daily_budget": 60,
+      "bid_strategy": "Lowest cost",
+      "cost_cap": null,
+      "spend": 1700,
+      "delivery_pct": 94.4,
+      "cpr": 34.0,
+      "result": "pass",
+      "findings": []
+    },
+    {
+      "ad_group": "Clinic managers",
+      "daily_budget": 45,
+      "bid_strategy": "Lowest cost",
+      "cost_cap": null,
+      "spend": 1170,
+      "delivery_pct": 86.7,
+      "cpr": 46.8,
+      "result": "pass",
+      "findings": []
+    },
+    {
+      "ad_group": "Small business owners",
+      "daily_budget": 50,
+      "bid_strategy": "Lowest cost",
+      "cost_cap": null,
+      "spend": 1500,
+      "delivery_pct": 100.0,
+      "cpr": 45.45,
+      "result": "pass",
+      "findings": []
+    },
+    {
+      "ad_group": "Studios and trainers",
+      "daily_budget": 30,
+      "bid_strategy": "Cost cap",
+      "cost_cap": 35,
+      "spend": 610,
+      "delivery_pct": 67.8,
+      "cpr": 55.45,
+      "result": "warn",
+      "findings": [
+        "Delivery: spent 67.8% of its daily budget x 30 days",
+        "Budget vs target: $30 a day is below T ($43.43), so it can't buy one result a day",
+        "Cost cap: cap $35 is below its actual cost per result $55.45 while under-delivering"
+      ]
+    },
+    {
+      "ad_group": "Interest: Business and finance",
+      "daily_budget": 45,
+      "bid_strategy": "Lowest cost",
+      "cost_cap": null,
+      "spend": 1190,
+      "delivery_pct": 88.1,
+      "cpr": 91.54,
+      "result": "pass",
+      "findings": []
+    },
+    {
+      "ad_group": "Keywords: booking and no-shows",
+      "daily_budget": 25,
+      "bid_strategy": "Lowest cost",
+      "cost_cap": null,
+      "spend": 740,
+      "delivery_pct": 98.7,
+      "cpr": 49.33,
+      "result": "warn",
+      "findings": [
+        "Budget vs target: $25 a day is below T ($43.43), so it can't buy one result a day"
+      ]
+    },
+    {
+      "ad_group": "Site visitors, last 30 days",
+      "daily_budget": 15,
+      "bid_strategy": "Lowest cost",
+      "cost_cap": null,
+      "spend": 430,
+      "delivery_pct": 95.6,
+      "cpr": 19.55,
+      "result": "warn",
+      "findings": [
+        "Budget vs target: $15 a day is below T ($43.43), so it can't buy one result a day"
+      ]
+    },
+    {
+      "note": "No ad group uses a manual bid."
+    }
+  ],
+  "pixel_and_capi": [
+    {
+      "check": "Optimization event",
+      "result": "pass",
+      "evidence": "All 7 ad groups optimize for Sign Up."
+    },
+    {
+      "check": "Double counting",
+      "result": "fail",
+      "evidence": "Events Manager received 2,010 Sign Up events (1,240 Pixel, 770 Conversions API) against 1,250 sign ups in the app's own database: 1.61x. The Conversions API sends no conversion ID, so Reddit can't match its events to the Pixel's and counts many sign ups twice."
+    },
+    {
+      "check": "Missing events",
+      "result": "pass",
+      "evidence": "Reddit received more events than the site recorded (1.61x), so none look missing."
+    },
+    {
+      "check": "Conversions API",
+      "result": "pass",
+      "evidence": "The Conversions API sends Sign Up (770 events)."
+    },
+    {
+      "check": "View-through share",
+      "result": "pass",
+      "evidence": "45 of 169 results are view-through (26.6%)."
+    },
+    {
+      "check": "Attribution window",
+      "result": "information",
+      "evidence": "28-day click, 1-day view; the previous 30 days used the same window, so the months compare."
+    }
+  ],
+  "site_check": {
+    "ga4_paid_sessions": 4400,
+    "reddit_clicks": 6000,
+    "click_match_pct": 73.3,
+    "by_campaign": [
+      {
+        "campaign": "Sign ups - Communities",
+        "utm_campaign": "signups_communities",
+        "reddit_clicks": 4000,
+        "ga4_paid_sessions": 3240,
+        "click_match_pct": 81.0,
+        "result": "pass",
+        "untagged_ad_groups": []
+      },
+      {
+        "campaign": "Sign ups - Interests and keywords",
+        "utm_campaign": "signups_interests_keywords",
+        "reddit_clicks": 1610,
+        "ga4_paid_sessions": 830,
+        "click_match_pct": 51.6,
+        "result": "warn",
+        "untagged_ad_groups": [
+          "Keywords: booking and no-shows"
+        ]
+      },
+      {
+        "campaign": "Retargeting",
+        "utm_campaign": "retargeting",
+        "reddit_clicks": 390,
+        "ga4_paid_sessions": 330,
+        "click_match_pct": 84.6,
+        "result": "pass",
+        "untagged_ad_groups": []
+      }
+    ],
+    "referral_row": {
+      "source": "reddit.com",
+      "medium": "referral",
+      "sessions": 940,
+      "sign_ups": 6,
+      "note": "Organic Reddit posts and untagged ad clicks; reported apart from the ads."
+    },
+    "reddit_click_through_sign_ups": 124,
+    "ga4_sign_ups_from_paid_reddit": 39,
+    "result_match": 3.18,
+    "result": "warn"
+  },
+  "monthly_read": {
+    "summary": [
+      "Reddit Ads spent $7,340.00 from 2026-09-28 to 2026-10-27 and Reddit credits it with 169 sign ups at $43.43 each (-4.4% against the month before); GA4 sees 39 sign ups from paid Reddit sessions.",
+      "Community ad groups did the work: r/sweatystartup, r/hairstylist, r/salonowners cost $25.00, $28.15, $30.83 per sign up, and the retargeting ad was the cheapest ad at $19.55.",
+      "Next month's one change: fix the Conversions API conversion ID so the sign-up count can be trusted, then move the cut communities' budget to the winners."
+    ],
+    "kpis": [
+      {
+        "metric": "Spend",
+        "this_month": "$7,340.00",
+        "previous_month": "$6,450.00",
+        "change_pct": 13.8
+      },
+      {
+        "metric": "Impressions",
+        "this_month": "1,194,000",
+        "previous_month": "1,045,000",
+        "change_pct": 14.3
+      },
+      {
+        "metric": "Clicks",
+        "this_month": "6,000",
+        "previous_month": "5,160",
+        "change_pct": 16.3
+      },
+      {
+        "metric": "CTR",
+        "this_month": "0.5%",
+        "previous_month": "0.49%",
+        "change_pct": 1.8
+      },
+      {
+        "metric": "CPC",
+        "this_month": "$1.22",
+        "previous_month": "$1.25",
+        "change_pct": -2.1
+      },
+      {
+        "metric": "Sign ups (Reddit, click + view)",
+        "this_month": "169",
+        "previous_month": "142",
+        "change_pct": 19.0
+      },
+      {
+        "metric": "Cost per sign up (Reddit)",
+        "this_month": "$43.43",
+        "previous_month": "$45.42",
+        "change_pct": -4.4
+      },
+      {
+        "metric": "GA4 paid Reddit sessions",
+        "this_month": "4,400",
+        "previous_month": "4,100",
+        "change_pct": 7.3
+      },
+      {
+        "metric": "GA4 sign ups from paid Reddit sessions",
+        "this_month": "39",
+        "previous_month": "37",
+        "change_pct": 5.4
+      }
+    ],
+    "no_spend_last_month": [
+      {
+        "ad_group": "Keywords: booking and no-shows",
+        "previous_month_spend": "no spend"
+      }
+    ],
+    "top_communities": [
+      {
+        "community": "r/sweatystartup",
+        "cpr": "$25.00",
+        "results": 8
+      },
+      {
+        "community": "r/hairstylist",
+        "cpr": "$28.15",
+        "results": 27
+      },
+      {
+        "community": "r/salonowners",
+        "cpr": "$30.83",
+        "results": 12
+      }
+    ],
+    "top_ad": {
+      "ad_id": "ad10",
+      "ad_group": "Site visitors, last 30 days",
+      "headline": "Still comparing booking apps? See how deposits, reminders and calendar sync work before you choose",
+      "cpr": "$19.55"
+    },
+    "next_month_tests": [
+      {
+        "test": "9 new headlines (three each) in Clinic managers, Salon owners, Small business owners, replacing the paused ads",
+        "budget_to_clear_gate": "$781.78",
+        "math": "9 ads x 2 x T ($86.86 each)"
+      },
+      {
+        "test": "Move the cut communities' budget to the winners in the same ad group: r/massage to r/physicaltherapy; r/EstheticianLife to r/hairstylist, r/salonowners; r/Entrepreneur to r/sweatystartup; r/yoga has no winner in Studios and trainers, so its budget goes to a new community test (step First campaign)",
+        "budget_to_clear_gate": "no new budget",
+        "math": "$1,250.00 a month moves from the 4 cut communities"
+      },
+      {
+        "test": "Rerun the site check once the keyword ad group carries UTM tags and the Conversions API sends a conversion ID",
+        "budget_to_clear_gate": "no new budget",
+        "math": "measurement only"
+      }
+    ]
+  },
+  "new_ad_wording": {
+    "ad_groups": [
+      "Clinic managers",
+      "Salon owners",
+      "Small business owners"
+    ],
+    "evidence": {
+      "leading_ads": [
+        {
+          "ad_id": "ad1",
+          "ad_group": "Salon owners",
+          "cpr": "$28.10",
+          "headline": "Salon owners: what actually cut your no-shows? Our customers went from 12% to 5% in their first 90 days once clients paid a deposit at booking"
+        },
+        {
+          "ad_id": "ad3",
+          "ad_group": "Clinic managers",
+          "cpr": "$41.00",
+          "headline": "Front desk managers at small clinics: how do you handle late cancellations without losing the patient?"
+        },
+        {
+          "ad_id": "ad5",
+          "ad_group": "Small business owners",
+          "cpr": "$33.10",
+          "headline": "Front desk on the phone all day? Clients can book and pay a deposit online, 24/7, and the reminder texts go out by themselves"
+        }
+      ],
+      "threads": [
+        {
+          "community": "r/hairstylist",
+          "title": "How do you deal with no-shows without sounding rude?"
+        },
+        {
+          "community": "r/salonowners",
+          "title": "Front desk spends half the day on the phone"
+        },
+        {
+          "community": "r/smallbusiness",
+          "title": "Clients who cancel last minute: what is your policy?"
+        },
+        {
+          "community": "r/sweatystartup",
+          "title": "What booking setup do you use for a service business?"
+        }
+      ],
+      "search_console_questions": [
+        {
+          "query": "how to reduce no shows at a salon",
+          "impressions": 2400,
+          "clicks": 61
+        },
+        {
+          "query": "how much deposit should a salon charge",
+          "impressions": 1900,
+          "clicks": 44
+        },
+        {
+          "query": "what is a good cancellation policy for appointments",
+          "impressions": 1500,
+          "clicks": 30
+        },
+        {
+          "query": "how to send appointment reminder texts",
+          "impressions": 1300,
+          "clicks": 38
+        },
+        {
+          "query": "is online booking worth it for small business",
+          "impressions": 820,
+          "clicks": 15
+        },
+        {
+          "query": "can clients pay a deposit when booking online",
+          "impressions": 610,
+          "clicks": 19
+        },
+        {
+          "query": "how do i stop clients cancelling last minute",
+          "impressions": 540,
+          "clicks": 12
+        }
+      ],
+      "dropped_brand_queries": [
+        "example booking software vs competitor a"
+      ]
+    },
+    "headlines": [
+      {
+        "ad_group": "Salon owners",
+        "headline": "Salon owners: how do you ask for a deposit without sounding rude? Our customers take it at booking, and their no-shows fell from 12% to 5% in their first 90 days",
+        "characters": 161,
+        "evidence": "thread in r/hairstylist (no-shows without sounding rude) and the leading ad's 12% to 5% fact",
+        "wording_flags": []
+      },
+      {
+        "ad_group": "Salon owners",
+        "headline": "Is online booking worth it for a 6-chair salon? Clients book and pay a deposit 24/7 instead of calling the front desk",
+        "characters": 117,
+        "evidence": "thread in r/salonowners (front desk on the phone all day) and Search Console question 'is online booking worth it for small business'",
+        "wording_flags": []
+      },
+      {
+        "ad_group": "Salon owners",
+        "headline": "How much deposit should a salon charge? With us you set the amount for each service, and the reminder texts go out before every appointment",
+        "characters": 139,
+        "evidence": "Search Console question 'how much deposit should a salon charge'",
+        "wording_flags": []
+      },
+      {
+        "ad_group": "Clinic managers",
+        "headline": "Clinic managers: what does your front desk say when a patient cancels the morning of? Ours sends a reminder before every visit and takes a deposit at booking",
+        "characters": 157,
+        "evidence": "the leading ad's question format in Clinic managers and Search Console question 'how do i stop clients cancelling last minute'",
+        "wording_flags": []
+      },
+      {
+        "ad_group": "Clinic managers",
+        "headline": "How do you send appointment reminder texts without someone at the front desk typing them? Set them up once and they go out before every visit",
+        "characters": 141,
+        "evidence": "Search Console question 'how to send appointment reminder texts'",
+        "wording_flags": []
+      },
+      {
+        "ad_group": "Clinic managers",
+        "headline": "Small clinics: last-minute cancellations cost more than slow weeks. Our customers' no-shows fell from 12% to 5% in their first 90 days",
+        "characters": 134,
+        "evidence": "thread in r/smallbusiness (a massage practice on last-minute cancellations) and the 12% to 5% fact",
+        "wording_flags": []
+      },
+      {
+        "ad_group": "Small business owners",
+        "headline": "Clients who cancel last minute cost more than slow weeks. With a deposit at booking and a reminder before the appointment, our customers went from 12% no-shows to 5% in 90 days",
+        "characters": 176,
+        "evidence": "thread in r/smallbusiness (last-minute cancellations) and the 12% to 5% fact",
+        "wording_flags": []
+      },
+      {
+        "ad_group": "Small business owners",
+        "headline": "Running a service business from your phone? Clients pick a slot, pay a deposit and get a reminder before the appointment, without a call",
+        "characters": 136,
+        "evidence": "thread in r/sweatystartup (booking setup for a service business) and the leading ad's 'front desk on the phone' wording",
+        "wording_flags": []
+      },
+      {
+        "ad_group": "Small business owners",
+        "headline": "What is a good cancellation policy for appointments? Ours lets you set the deposit and the window, and set-up takes about 20 minutes",
+        "characters": 132,
+        "evidence": "Search Console question 'what is a good cancellation policy for appointments'",
+        "wording_flags": []
+      }
+    ],
+    "body_text_note": "Keep comments open on the new ads only if someone will answer them; the draft replies above are the starting set."
+  },
+  "not_graded_and_unknown": [
+    "Interest and keyword breakdown exports were not given, so single interests and keywords are not ranked.",
+    "Comments were pasted for 3 of 10 ads; the other 7 ads' comments are not graded."
+  ],
+  "calls": [
+    {
+      "connector": "google-analytics",
+      "action": "list_key_events"
+    },
+    {
+      "connector": "google-analytics",
+      "action": "get_report",
+      "dates": "2026-09-28 to 2026-10-27"
+    },
+    {
+      "connector": "google-analytics",
+      "action": "get_report",
+      "dates": "2026-08-29 to 2026-09-27"
+    },
+    {
+      "connector": "google-search-console",
+      "action": "search_analytics",
+      "dates": "2026-09-29 to 2026-10-26"
+    }
+  ],
+  "changes_made": "None. There is no Reddit connection; every fix is a step the user makes in Reddit Ads Manager, Events Manager or on the site."
+}

@@ -1,0 +1,1512 @@
+{
+  "note": "Example data: an invented business (Marlobrook Pet Kitchen, fresh dog food on subscription), not a real business. The sellers are unnamed placeholders. Every number in expected_output.json follows from this input.",
+  "request": "Plan a 4-week connected TV test in Tennessee and Kentucky with $48,000, tell us where to buy and how we will know it worked. Then read it out when the read window closes.",
+  "business": {
+    "name": "Marlobrook Pet Kitchen",
+    "site": "https://www.marlobrookpet.example",
+    "sells": "fresh dog food delivered weekly on a subscription",
+    "offer": "50% off the first box with the short URL or QR code",
+    "outcome": "new customers (GA4 firstTimePurchasers)",
+    "target_cost_per_new_customer": 110.0,
+    "currency": "USD"
+  },
+  "plan_run_date": "2026-09-08",
+  "readout_run_date": "2026-10-27",
+  "budget": 48000.0,
+  "flight": {
+    "start": "2026-09-14",
+    "end": "2026-10-11",
+    "weeks": 4,
+    "carry_over_weeks": 2
+  },
+  "test_regions": [
+    "Tennessee",
+    "Kentucky"
+  ],
+  "control_candidates": [
+    {
+      "region": "Indiana",
+      "shares_dma_with_test_region": "Louisville (KY and IN)"
+    },
+    {
+      "region": "Ohio",
+      "shares_dma_with_test_region": "Cincinnati (OH and KY)"
+    },
+    {
+      "region": "Virginia",
+      "shares_dma_with_test_region": "Tri-Cities (TN and VA)"
+    },
+    {
+      "region": "Missouri",
+      "shares_dma_with_test_region": "Paducah-Cape Girardeau-Harrisburg (KY, MO, IL and TN)"
+    },
+    {
+      "region": "Wisconsin",
+      "shares_dma_with_test_region": null
+    },
+    {
+      "region": "Michigan",
+      "shares_dma_with_test_region": null
+    },
+    {
+      "region": "Louisiana",
+      "shares_dma_with_test_region": null
+    },
+    {
+      "region": "Kansas",
+      "shares_dma_with_test_region": null
+    },
+    {
+      "region": "Oklahoma",
+      "shares_dma_with_test_region": null
+    },
+    {
+      "region": "Iowa",
+      "shares_dma_with_test_region": null
+    }
+  ],
+  "target_households_in_test_regions": 400000,
+  "target_households_note": "dog-owning connected TV households in TN and KY, the user's estimate",
+  "settings": {
+    "impressions_per_household_per_week": 2,
+    "weekly_cap_per_route": 4,
+    "line_cap_share": 0.5,
+    "reach_ceiling_share": 0.5
+  },
+  "google_ads_existing_video_last_30_days": {
+    "range": [
+      "2026-08-08",
+      "2026-09-06"
+    ],
+    "campaign": "Video | Always-on (national, unchanged through the test)",
+    "rows": [
+      {
+        "device": "CONNECTED_TV",
+        "impressions": 182000,
+        "cost": 4076.8,
+        "video_quartile_p100_rate": 0.91
+      },
+      {
+        "device": "MOBILE",
+        "impressions": 610000,
+        "cost": 7320.0,
+        "video_quartile_p100_rate": 0.38
+      },
+      {
+        "device": "DESKTOP",
+        "impressions": 64000,
+        "cost": 1024.0,
+        "video_quartile_p100_rate": 0.44
+      },
+      {
+        "device": "TABLET",
+        "impressions": 41000,
+        "cost": 533.0,
+        "video_quartile_p100_rate": 0.52
+      }
+    ]
+  },
+  "quotes": [
+    {
+      "route": "R1",
+      "label": "YouTube on TV screens (Google Ads Video reach campaign, TV screens only)",
+      "type": "youtube",
+      "media_cpm": null,
+      "media_cpm_source": "the account's own TV-screen CPM, last 30 days",
+      "data_cpm": 0.0,
+      "platform_fee_pct": 0.0,
+      "min_spend": 0,
+      "audience_households_est": 260000,
+      "audience_note": "pet owners affinity audience in TN and KY, from the user's reach plan (people, treated as households)",
+      "targets_test_states_only": true,
+      "frequency_cap": true,
+      "reports_reach_and_frequency": true,
+      "reports_impressions_by_region": true,
+      "lengths": [
+        "15s non-skippable",
+        "30s non-skippable (TV screens only)"
+      ]
+    },
+    {
+      "route": "R2",
+      "label": "Streaming app A, self-serve ads tool",
+      "type": "streaming_self_serve",
+      "media_cpm": 32.0,
+      "data_cpm": 4.0,
+      "platform_fee_pct": 0.0,
+      "min_spend": 5000,
+      "audience_households_est": 180000,
+      "audience_note": "dog-owner household segment in TN and KY, from the tool's estimate",
+      "targets_test_states_only": true,
+      "frequency_cap": true,
+      "reports_reach_and_frequency": true,
+      "reports_impressions_by_region": true,
+      "lengths": [
+        "15s",
+        "30s"
+      ]
+    },
+    {
+      "route": "R3",
+      "label": "DSP B, programmatic CTV",
+      "type": "dsp",
+      "media_cpm": 24.0,
+      "data_cpm": 3.5,
+      "platform_fee_pct": 18.0,
+      "min_spend": 25000,
+      "audience_households_est": 310000,
+      "audience_note": "dog-owner household segment across CTV apps in TN and KY",
+      "targets_test_states_only": true,
+      "frequency_cap": true,
+      "reports_reach_and_frequency": true,
+      "reports_impressions_by_region": true,
+      "lengths": [
+        "15s",
+        "30s"
+      ]
+    },
+    {
+      "route": "R4",
+      "label": "FAST channel network C",
+      "type": "streaming_self_serve",
+      "media_cpm": 14.0,
+      "data_cpm": 0.0,
+      "platform_fee_pct": 0.0,
+      "min_spend": 2000,
+      "audience_households_est": 350000,
+      "audience_note": "run of network",
+      "targets_test_states_only": false,
+      "frequency_cap": true,
+      "reports_reach_and_frequency": false,
+      "reports_impressions_by_region": false,
+      "lengths": [
+        "30s"
+      ]
+    }
+  ],
+  "baseline": {
+    "weeks": [
+      "2026-07-13",
+      "2026-07-20",
+      "2026-07-27",
+      "2026-08-03",
+      "2026-08-10",
+      "2026-08-17",
+      "2026-08-24",
+      "2026-08-31"
+    ],
+    "rows": [
+      {
+        "week_start": "2026-07-13",
+        "region": "Tennessee",
+        "new_customers": 251,
+        "direct_new_users": 1972,
+        "brand_impressions": 1365
+      },
+      {
+        "week_start": "2026-07-13",
+        "region": "Kentucky",
+        "new_customers": 145,
+        "direct_new_users": 1133,
+        "brand_impressions": 782
+      },
+      {
+        "week_start": "2026-07-13",
+        "region": "Indiana",
+        "new_customers": 228,
+        "direct_new_users": 1711,
+        "brand_impressions": 1177
+      },
+      {
+        "week_start": "2026-07-13",
+        "region": "Ohio",
+        "new_customers": 411,
+        "direct_new_users": 3031,
+        "brand_impressions": 2197
+      },
+      {
+        "week_start": "2026-07-13",
+        "region": "Virginia",
+        "new_customers": 321,
+        "direct_new_users": 2547,
+        "brand_impressions": 1634
+      },
+      {
+        "week_start": "2026-07-13",
+        "region": "Missouri",
+        "new_customers": 224,
+        "direct_new_users": 1620,
+        "brand_impressions": 1228
+      },
+      {
+        "week_start": "2026-07-13",
+        "region": "Wisconsin",
+        "new_customers": 210,
+        "direct_new_users": 1525,
+        "brand_impressions": 1111
+      },
+      {
+        "week_start": "2026-07-13",
+        "region": "Michigan",
+        "new_customers": 341,
+        "direct_new_users": 2450,
+        "brand_impressions": 1766
+      },
+      {
+        "week_start": "2026-07-13",
+        "region": "Louisiana",
+        "new_customers": 184,
+        "direct_new_users": 1221,
+        "brand_impressions": 865
+      },
+      {
+        "week_start": "2026-07-13",
+        "region": "Kansas",
+        "new_customers": 104,
+        "direct_new_users": 896,
+        "brand_impressions": 519
+      },
+      {
+        "week_start": "2026-07-13",
+        "region": "Oklahoma",
+        "new_customers": 129,
+        "direct_new_users": 977,
+        "brand_impressions": 677
+      },
+      {
+        "week_start": "2026-07-13",
+        "region": "Iowa",
+        "new_customers": 60,
+        "direct_new_users": 427,
+        "brand_impressions": 273
+      },
+      {
+        "week_start": "2026-07-20",
+        "region": "Tennessee",
+        "new_customers": 233,
+        "direct_new_users": 1801,
+        "brand_impressions": 1289
+      },
+      {
+        "week_start": "2026-07-20",
+        "region": "Kentucky",
+        "new_customers": 136,
+        "direct_new_users": 1061,
+        "brand_impressions": 746
+      },
+      {
+        "week_start": "2026-07-20",
+        "region": "Indiana",
+        "new_customers": 211,
+        "direct_new_users": 1657,
+        "brand_impressions": 1164
+      },
+      {
+        "week_start": "2026-07-20",
+        "region": "Ohio",
+        "new_customers": 371,
+        "direct_new_users": 2747,
+        "brand_impressions": 1997
+      },
+      {
+        "week_start": "2026-07-20",
+        "region": "Virginia",
+        "new_customers": 297,
+        "direct_new_users": 2190,
+        "brand_impressions": 1559
+      },
+      {
+        "week_start": "2026-07-20",
+        "region": "Missouri",
+        "new_customers": 229,
+        "direct_new_users": 1637,
+        "brand_impressions": 1028
+      },
+      {
+        "week_start": "2026-07-20",
+        "region": "Wisconsin",
+        "new_customers": 206,
+        "direct_new_users": 1494,
+        "brand_impressions": 1031
+      },
+      {
+        "week_start": "2026-07-20",
+        "region": "Michigan",
+        "new_customers": 326,
+        "direct_new_users": 2377,
+        "brand_impressions": 1646
+      },
+      {
+        "week_start": "2026-07-20",
+        "region": "Louisiana",
+        "new_customers": 163,
+        "direct_new_users": 1202,
+        "brand_impressions": 760
+      },
+      {
+        "week_start": "2026-07-20",
+        "region": "Kansas",
+        "new_customers": 98,
+        "direct_new_users": 705,
+        "brand_impressions": 582
+      },
+      {
+        "week_start": "2026-07-20",
+        "region": "Oklahoma",
+        "new_customers": 122,
+        "direct_new_users": 981,
+        "brand_impressions": 647
+      },
+      {
+        "week_start": "2026-07-20",
+        "region": "Iowa",
+        "new_customers": 68,
+        "direct_new_users": 407,
+        "brand_impressions": 304
+      },
+      {
+        "week_start": "2026-07-27",
+        "region": "Tennessee",
+        "new_customers": 255,
+        "direct_new_users": 1888,
+        "brand_impressions": 1394
+      },
+      {
+        "week_start": "2026-07-27",
+        "region": "Kentucky",
+        "new_customers": 158,
+        "direct_new_users": 1120,
+        "brand_impressions": 806
+      },
+      {
+        "week_start": "2026-07-27",
+        "region": "Indiana",
+        "new_customers": 227,
+        "direct_new_users": 1812,
+        "brand_impressions": 1244
+      },
+      {
+        "week_start": "2026-07-27",
+        "region": "Ohio",
+        "new_customers": 400,
+        "direct_new_users": 3003,
+        "brand_impressions": 2162
+      },
+      {
+        "week_start": "2026-07-27",
+        "region": "Virginia",
+        "new_customers": 306,
+        "direct_new_users": 2363,
+        "brand_impressions": 1691
+      },
+      {
+        "week_start": "2026-07-27",
+        "region": "Missouri",
+        "new_customers": 227,
+        "direct_new_users": 1707,
+        "brand_impressions": 1198
+      },
+      {
+        "week_start": "2026-07-27",
+        "region": "Wisconsin",
+        "new_customers": 225,
+        "direct_new_users": 1609,
+        "brand_impressions": 1147
+      },
+      {
+        "week_start": "2026-07-27",
+        "region": "Michigan",
+        "new_customers": 342,
+        "direct_new_users": 2603,
+        "brand_impressions": 1729
+      },
+      {
+        "week_start": "2026-07-27",
+        "region": "Louisiana",
+        "new_customers": 188,
+        "direct_new_users": 1267,
+        "brand_impressions": 820
+      },
+      {
+        "week_start": "2026-07-27",
+        "region": "Kansas",
+        "new_customers": 106,
+        "direct_new_users": 812,
+        "brand_impressions": 577
+      },
+      {
+        "week_start": "2026-07-27",
+        "region": "Oklahoma",
+        "new_customers": 133,
+        "direct_new_users": 1011,
+        "brand_impressions": 678
+      },
+      {
+        "week_start": "2026-07-27",
+        "region": "Iowa",
+        "new_customers": 67,
+        "direct_new_users": 462,
+        "brand_impressions": 327
+      },
+      {
+        "week_start": "2026-08-03",
+        "region": "Tennessee",
+        "new_customers": 260,
+        "direct_new_users": 1933,
+        "brand_impressions": 1350
+      },
+      {
+        "week_start": "2026-08-03",
+        "region": "Kentucky",
+        "new_customers": 153,
+        "direct_new_users": 1118,
+        "brand_impressions": 774
+      },
+      {
+        "week_start": "2026-08-03",
+        "region": "Indiana",
+        "new_customers": 220,
+        "direct_new_users": 1810,
+        "brand_impressions": 1278
+      },
+      {
+        "week_start": "2026-08-03",
+        "region": "Ohio",
+        "new_customers": 415,
+        "direct_new_users": 2921,
+        "brand_impressions": 2142
+      },
+      {
+        "week_start": "2026-08-03",
+        "region": "Virginia",
+        "new_customers": 322,
+        "direct_new_users": 2233,
+        "brand_impressions": 1677
+      },
+      {
+        "week_start": "2026-08-03",
+        "region": "Missouri",
+        "new_customers": 207,
+        "direct_new_users": 1733,
+        "brand_impressions": 1163
+      },
+      {
+        "week_start": "2026-08-03",
+        "region": "Wisconsin",
+        "new_customers": 221,
+        "direct_new_users": 1509,
+        "brand_impressions": 1093
+      },
+      {
+        "week_start": "2026-08-03",
+        "region": "Michigan",
+        "new_customers": 354,
+        "direct_new_users": 2322,
+        "brand_impressions": 1785
+      },
+      {
+        "week_start": "2026-08-03",
+        "region": "Louisiana",
+        "new_customers": 131,
+        "direct_new_users": 1211,
+        "brand_impressions": 832
+      },
+      {
+        "week_start": "2026-08-03",
+        "region": "Kansas",
+        "new_customers": 102,
+        "direct_new_users": 811,
+        "brand_impressions": 534
+      },
+      {
+        "week_start": "2026-08-03",
+        "region": "Oklahoma",
+        "new_customers": 125,
+        "direct_new_users": 1032,
+        "brand_impressions": 683
+      },
+      {
+        "week_start": "2026-08-03",
+        "region": "Iowa",
+        "new_customers": 72,
+        "direct_new_users": 439,
+        "brand_impressions": 305
+      },
+      {
+        "week_start": "2026-08-10",
+        "region": "Tennessee",
+        "new_customers": 249,
+        "direct_new_users": 1936,
+        "brand_impressions": 1353
+      },
+      {
+        "week_start": "2026-08-10",
+        "region": "Kentucky",
+        "new_customers": 168,
+        "direct_new_users": 1101,
+        "brand_impressions": 780
+      },
+      {
+        "week_start": "2026-08-10",
+        "region": "Indiana",
+        "new_customers": 229,
+        "direct_new_users": 1731,
+        "brand_impressions": 1184
+      },
+      {
+        "week_start": "2026-08-10",
+        "region": "Ohio",
+        "new_customers": 424,
+        "direct_new_users": 3039,
+        "brand_impressions": 2074
+      },
+      {
+        "week_start": "2026-08-10",
+        "region": "Virginia",
+        "new_customers": 319,
+        "direct_new_users": 2220,
+        "brand_impressions": 1645
+      },
+      {
+        "week_start": "2026-08-10",
+        "region": "Missouri",
+        "new_customers": 221,
+        "direct_new_users": 1646,
+        "brand_impressions": 1238
+      },
+      {
+        "week_start": "2026-08-10",
+        "region": "Wisconsin",
+        "new_customers": 209,
+        "direct_new_users": 1680,
+        "brand_impressions": 1079
+      },
+      {
+        "week_start": "2026-08-10",
+        "region": "Michigan",
+        "new_customers": 349,
+        "direct_new_users": 2416,
+        "brand_impressions": 1807
+      },
+      {
+        "week_start": "2026-08-10",
+        "region": "Louisiana",
+        "new_customers": 146,
+        "direct_new_users": 1245,
+        "brand_impressions": 830
+      },
+      {
+        "week_start": "2026-08-10",
+        "region": "Kansas",
+        "new_customers": 103,
+        "direct_new_users": 739,
+        "brand_impressions": 573
+      },
+      {
+        "week_start": "2026-08-10",
+        "region": "Oklahoma",
+        "new_customers": 129,
+        "direct_new_users": 987,
+        "brand_impressions": 660
+      },
+      {
+        "week_start": "2026-08-10",
+        "region": "Iowa",
+        "new_customers": 63,
+        "direct_new_users": 458,
+        "brand_impressions": 299
+      },
+      {
+        "week_start": "2026-08-17",
+        "region": "Tennessee",
+        "new_customers": 256,
+        "direct_new_users": 1873,
+        "brand_impressions": 1256
+      },
+      {
+        "week_start": "2026-08-17",
+        "region": "Kentucky",
+        "new_customers": 166,
+        "direct_new_users": 1151,
+        "brand_impressions": 794
+      },
+      {
+        "week_start": "2026-08-17",
+        "region": "Indiana",
+        "new_customers": 227,
+        "direct_new_users": 1703,
+        "brand_impressions": 1192
+      },
+      {
+        "week_start": "2026-08-17",
+        "region": "Ohio",
+        "new_customers": 401,
+        "direct_new_users": 3006,
+        "brand_impressions": 1998
+      },
+      {
+        "week_start": "2026-08-17",
+        "region": "Virginia",
+        "new_customers": 311,
+        "direct_new_users": 2330,
+        "brand_impressions": 1641
+      },
+      {
+        "week_start": "2026-08-17",
+        "region": "Missouri",
+        "new_customers": 232,
+        "direct_new_users": 1596,
+        "brand_impressions": 1096
+      },
+      {
+        "week_start": "2026-08-17",
+        "region": "Wisconsin",
+        "new_customers": 198,
+        "direct_new_users": 1515,
+        "brand_impressions": 1046
+      },
+      {
+        "week_start": "2026-08-17",
+        "region": "Michigan",
+        "new_customers": 328,
+        "direct_new_users": 2476,
+        "brand_impressions": 1765
+      },
+      {
+        "week_start": "2026-08-17",
+        "region": "Louisiana",
+        "new_customers": 140,
+        "direct_new_users": 1042,
+        "brand_impressions": 795
+      },
+      {
+        "week_start": "2026-08-17",
+        "region": "Kansas",
+        "new_customers": 109,
+        "direct_new_users": 783,
+        "brand_impressions": 541
+      },
+      {
+        "week_start": "2026-08-17",
+        "region": "Oklahoma",
+        "new_customers": 136,
+        "direct_new_users": 930,
+        "brand_impressions": 683
+      },
+      {
+        "week_start": "2026-08-17",
+        "region": "Iowa",
+        "new_customers": 66,
+        "direct_new_users": 387,
+        "brand_impressions": 258
+      },
+      {
+        "week_start": "2026-08-24",
+        "region": "Tennessee",
+        "new_customers": 262,
+        "direct_new_users": 1885,
+        "brand_impressions": 1349
+      },
+      {
+        "week_start": "2026-08-24",
+        "region": "Kentucky",
+        "new_customers": 159,
+        "direct_new_users": 1143,
+        "brand_impressions": 826
+      },
+      {
+        "week_start": "2026-08-24",
+        "region": "Indiana",
+        "new_customers": 239,
+        "direct_new_users": 1806,
+        "brand_impressions": 1216
+      },
+      {
+        "week_start": "2026-08-24",
+        "region": "Ohio",
+        "new_customers": 418,
+        "direct_new_users": 3120,
+        "brand_impressions": 2163
+      },
+      {
+        "week_start": "2026-08-24",
+        "region": "Virginia",
+        "new_customers": 345,
+        "direct_new_users": 2358,
+        "brand_impressions": 1683
+      },
+      {
+        "week_start": "2026-08-24",
+        "region": "Missouri",
+        "new_customers": 263,
+        "direct_new_users": 1659,
+        "brand_impressions": 1183
+      },
+      {
+        "week_start": "2026-08-24",
+        "region": "Wisconsin",
+        "new_customers": 219,
+        "direct_new_users": 1639,
+        "brand_impressions": 1176
+      },
+      {
+        "week_start": "2026-08-24",
+        "region": "Michigan",
+        "new_customers": 335,
+        "direct_new_users": 2442,
+        "brand_impressions": 1811
+      },
+      {
+        "week_start": "2026-08-24",
+        "region": "Louisiana",
+        "new_customers": 182,
+        "direct_new_users": 1033,
+        "brand_impressions": 830
+      },
+      {
+        "week_start": "2026-08-24",
+        "region": "Kansas",
+        "new_customers": 104,
+        "direct_new_users": 848,
+        "brand_impressions": 577
+      },
+      {
+        "week_start": "2026-08-24",
+        "region": "Oklahoma",
+        "new_customers": 142,
+        "direct_new_users": 1034,
+        "brand_impressions": 700
+      },
+      {
+        "week_start": "2026-08-24",
+        "region": "Iowa",
+        "new_customers": 64,
+        "direct_new_users": 476,
+        "brand_impressions": 376
+      },
+      {
+        "week_start": "2026-08-31",
+        "region": "Tennessee",
+        "new_customers": 281,
+        "direct_new_users": 2018,
+        "brand_impressions": 1387
+      },
+      {
+        "week_start": "2026-08-31",
+        "region": "Kentucky",
+        "new_customers": 146,
+        "direct_new_users": 1205,
+        "brand_impressions": 847
+      },
+      {
+        "week_start": "2026-08-31",
+        "region": "Indiana",
+        "new_customers": 224,
+        "direct_new_users": 1790,
+        "brand_impressions": 1233
+      },
+      {
+        "week_start": "2026-08-31",
+        "region": "Ohio",
+        "new_customers": 426,
+        "direct_new_users": 3146,
+        "brand_impressions": 2114
+      },
+      {
+        "week_start": "2026-08-31",
+        "region": "Virginia",
+        "new_customers": 337,
+        "direct_new_users": 2287,
+        "brand_impressions": 1591
+      },
+      {
+        "week_start": "2026-08-31",
+        "region": "Missouri",
+        "new_customers": 220,
+        "direct_new_users": 1727,
+        "brand_impressions": 1237
+      },
+      {
+        "week_start": "2026-08-31",
+        "region": "Wisconsin",
+        "new_customers": 214,
+        "direct_new_users": 1605,
+        "brand_impressions": 1142
+      },
+      {
+        "week_start": "2026-08-31",
+        "region": "Michigan",
+        "new_customers": 356,
+        "direct_new_users": 2643,
+        "brand_impressions": 1877
+      },
+      {
+        "week_start": "2026-08-31",
+        "region": "Louisiana",
+        "new_customers": 164,
+        "direct_new_users": 1391,
+        "brand_impressions": 775
+      },
+      {
+        "week_start": "2026-08-31",
+        "region": "Kansas",
+        "new_customers": 116,
+        "direct_new_users": 758,
+        "brand_impressions": 570
+      },
+      {
+        "week_start": "2026-08-31",
+        "region": "Oklahoma",
+        "new_customers": 132,
+        "direct_new_users": 981,
+        "brand_impressions": 767
+      },
+      {
+        "week_start": "2026-08-31",
+        "region": "Iowa",
+        "new_customers": 65,
+        "direct_new_users": 448,
+        "brand_impressions": 341
+      }
+    ],
+    "brand_campaign_search_impression_share_by_week": [
+      0.97,
+      0.96,
+      0.98,
+      0.97,
+      0.95,
+      0.97,
+      0.96,
+      0.98
+    ],
+    "search_console_brand_clicks_by_week_national": [
+      1240,
+      1185,
+      1262,
+      1301,
+      1228,
+      1197,
+      1276,
+      1318
+    ]
+  },
+  "after_flight": {
+    "read_weeks": [
+      "2026-09-14",
+      "2026-09-21",
+      "2026-09-28",
+      "2026-10-05",
+      "2026-10-12",
+      "2026-10-19"
+    ],
+    "read_end": "2026-10-25",
+    "rows": [
+      {
+        "week_start": "2026-09-14",
+        "region": "Tennessee",
+        "new_customers": 279,
+        "direct_new_users": 2220,
+        "brand_impressions": 1584
+      },
+      {
+        "week_start": "2026-09-14",
+        "region": "Kentucky",
+        "new_customers": 173,
+        "direct_new_users": 1359,
+        "brand_impressions": 945
+      },
+      {
+        "week_start": "2026-09-14",
+        "region": "Indiana",
+        "new_customers": 242,
+        "direct_new_users": 1802,
+        "brand_impressions": 1259
+      },
+      {
+        "week_start": "2026-09-14",
+        "region": "Ohio",
+        "new_customers": 430,
+        "direct_new_users": 3151,
+        "brand_impressions": 2119
+      },
+      {
+        "week_start": "2026-09-14",
+        "region": "Virginia",
+        "new_customers": 316,
+        "direct_new_users": 2491,
+        "brand_impressions": 1632
+      },
+      {
+        "week_start": "2026-09-14",
+        "region": "Missouri",
+        "new_customers": 236,
+        "direct_new_users": 1729,
+        "brand_impressions": 1178
+      },
+      {
+        "week_start": "2026-09-14",
+        "region": "Wisconsin",
+        "new_customers": 213,
+        "direct_new_users": 1613,
+        "brand_impressions": 1107
+      },
+      {
+        "week_start": "2026-09-14",
+        "region": "Michigan",
+        "new_customers": 355,
+        "direct_new_users": 2548,
+        "brand_impressions": 1846
+      },
+      {
+        "week_start": "2026-09-14",
+        "region": "Louisiana",
+        "new_customers": 170,
+        "direct_new_users": 1190,
+        "brand_impressions": 960
+      },
+      {
+        "week_start": "2026-09-14",
+        "region": "Kansas",
+        "new_customers": 113,
+        "direct_new_users": 807,
+        "brand_impressions": 545
+      },
+      {
+        "week_start": "2026-09-14",
+        "region": "Oklahoma",
+        "new_customers": 136,
+        "direct_new_users": 1053,
+        "brand_impressions": 735
+      },
+      {
+        "week_start": "2026-09-14",
+        "region": "Iowa",
+        "new_customers": 55,
+        "direct_new_users": 502,
+        "brand_impressions": 319
+      },
+      {
+        "week_start": "2026-09-21",
+        "region": "Tennessee",
+        "new_customers": 280,
+        "direct_new_users": 2283,
+        "brand_impressions": 1663
+      },
+      {
+        "week_start": "2026-09-21",
+        "region": "Kentucky",
+        "new_customers": 189,
+        "direct_new_users": 1391,
+        "brand_impressions": 1043
+      },
+      {
+        "week_start": "2026-09-21",
+        "region": "Indiana",
+        "new_customers": 247,
+        "direct_new_users": 1658,
+        "brand_impressions": 1230
+      },
+      {
+        "week_start": "2026-09-21",
+        "region": "Ohio",
+        "new_customers": 376,
+        "direct_new_users": 3010,
+        "brand_impressions": 2073
+      },
+      {
+        "week_start": "2026-09-21",
+        "region": "Virginia",
+        "new_customers": 322,
+        "direct_new_users": 2380,
+        "brand_impressions": 1588
+      },
+      {
+        "week_start": "2026-09-21",
+        "region": "Missouri",
+        "new_customers": 210,
+        "direct_new_users": 1614,
+        "brand_impressions": 1064
+      },
+      {
+        "week_start": "2026-09-21",
+        "region": "Wisconsin",
+        "new_customers": 207,
+        "direct_new_users": 1568,
+        "brand_impressions": 1085
+      },
+      {
+        "week_start": "2026-09-21",
+        "region": "Michigan",
+        "new_customers": 319,
+        "direct_new_users": 2546,
+        "brand_impressions": 1767
+      },
+      {
+        "week_start": "2026-09-21",
+        "region": "Louisiana",
+        "new_customers": 144,
+        "direct_new_users": 1172,
+        "brand_impressions": 879
+      },
+      {
+        "week_start": "2026-09-21",
+        "region": "Kansas",
+        "new_customers": 95,
+        "direct_new_users": 776,
+        "brand_impressions": 523
+      },
+      {
+        "week_start": "2026-09-21",
+        "region": "Oklahoma",
+        "new_customers": 115,
+        "direct_new_users": 946,
+        "brand_impressions": 608
+      },
+      {
+        "week_start": "2026-09-21",
+        "region": "Iowa",
+        "new_customers": 61,
+        "direct_new_users": 420,
+        "brand_impressions": 289
+      },
+      {
+        "week_start": "2026-09-28",
+        "region": "Tennessee",
+        "new_customers": 307,
+        "direct_new_users": 2523,
+        "brand_impressions": 1934
+      },
+      {
+        "week_start": "2026-09-28",
+        "region": "Kentucky",
+        "new_customers": 195,
+        "direct_new_users": 1562,
+        "brand_impressions": 1188
+      },
+      {
+        "week_start": "2026-09-28",
+        "region": "Indiana",
+        "new_customers": 255,
+        "direct_new_users": 1839,
+        "brand_impressions": 1287
+      },
+      {
+        "week_start": "2026-09-28",
+        "region": "Ohio",
+        "new_customers": 439,
+        "direct_new_users": 3238,
+        "brand_impressions": 2288
+      },
+      {
+        "week_start": "2026-09-28",
+        "region": "Virginia",
+        "new_customers": 342,
+        "direct_new_users": 2473,
+        "brand_impressions": 1745
+      },
+      {
+        "week_start": "2026-09-28",
+        "region": "Missouri",
+        "new_customers": 243,
+        "direct_new_users": 1736,
+        "brand_impressions": 1233
+      },
+      {
+        "week_start": "2026-09-28",
+        "region": "Wisconsin",
+        "new_customers": 233,
+        "direct_new_users": 1632,
+        "brand_impressions": 1188
+      },
+      {
+        "week_start": "2026-09-28",
+        "region": "Michigan",
+        "new_customers": 347,
+        "direct_new_users": 2641,
+        "brand_impressions": 1845
+      },
+      {
+        "week_start": "2026-09-28",
+        "region": "Louisiana",
+        "new_customers": 153,
+        "direct_new_users": 1389,
+        "brand_impressions": 837
+      },
+      {
+        "week_start": "2026-09-28",
+        "region": "Kansas",
+        "new_customers": 109,
+        "direct_new_users": 782,
+        "brand_impressions": 618
+      },
+      {
+        "week_start": "2026-09-28",
+        "region": "Oklahoma",
+        "new_customers": 143,
+        "direct_new_users": 1032,
+        "brand_impressions": 767
+      },
+      {
+        "week_start": "2026-09-28",
+        "region": "Iowa",
+        "new_customers": 74,
+        "direct_new_users": 502,
+        "brand_impressions": 349
+      },
+      {
+        "week_start": "2026-10-05",
+        "region": "Tennessee",
+        "new_customers": 327,
+        "direct_new_users": 2748,
+        "brand_impressions": 2001
+      },
+      {
+        "week_start": "2026-10-05",
+        "region": "Kentucky",
+        "new_customers": 199,
+        "direct_new_users": 1649,
+        "brand_impressions": 1213
+      },
+      {
+        "week_start": "2026-10-05",
+        "region": "Indiana",
+        "new_customers": 264,
+        "direct_new_users": 1853,
+        "brand_impressions": 1297
+      },
+      {
+        "week_start": "2026-10-05",
+        "region": "Ohio",
+        "new_customers": 426,
+        "direct_new_users": 3324,
+        "brand_impressions": 2324
+      },
+      {
+        "week_start": "2026-10-05",
+        "region": "Virginia",
+        "new_customers": 340,
+        "direct_new_users": 2570,
+        "brand_impressions": 1890
+      },
+      {
+        "week_start": "2026-10-05",
+        "region": "Missouri",
+        "new_customers": 255,
+        "direct_new_users": 1847,
+        "brand_impressions": 1363
+      },
+      {
+        "week_start": "2026-10-05",
+        "region": "Wisconsin",
+        "new_customers": 232,
+        "direct_new_users": 1602,
+        "brand_impressions": 1132
+      },
+      {
+        "week_start": "2026-10-05",
+        "region": "Michigan",
+        "new_customers": 366,
+        "direct_new_users": 2624,
+        "brand_impressions": 1827
+      },
+      {
+        "week_start": "2026-10-05",
+        "region": "Louisiana",
+        "new_customers": 159,
+        "direct_new_users": 1212,
+        "brand_impressions": 871
+      },
+      {
+        "week_start": "2026-10-05",
+        "region": "Kansas",
+        "new_customers": 107,
+        "direct_new_users": 924,
+        "brand_impressions": 595
+      },
+      {
+        "week_start": "2026-10-05",
+        "region": "Oklahoma",
+        "new_customers": 133,
+        "direct_new_users": 1117,
+        "brand_impressions": 729
+      },
+      {
+        "week_start": "2026-10-05",
+        "region": "Iowa",
+        "new_customers": 69,
+        "direct_new_users": 433,
+        "brand_impressions": 305
+      },
+      {
+        "week_start": "2026-10-12",
+        "region": "Tennessee",
+        "new_customers": 301,
+        "direct_new_users": 2228,
+        "brand_impressions": 1693
+      },
+      {
+        "week_start": "2026-10-12",
+        "region": "Kentucky",
+        "new_customers": 191,
+        "direct_new_users": 1329,
+        "brand_impressions": 1064
+      },
+      {
+        "week_start": "2026-10-12",
+        "region": "Indiana",
+        "new_customers": 252,
+        "direct_new_users": 1788,
+        "brand_impressions": 1279
+      },
+      {
+        "week_start": "2026-10-12",
+        "region": "Ohio",
+        "new_customers": 418,
+        "direct_new_users": 3281,
+        "brand_impressions": 2166
+      },
+      {
+        "week_start": "2026-10-12",
+        "region": "Virginia",
+        "new_customers": 321,
+        "direct_new_users": 2353,
+        "brand_impressions": 1708
+      },
+      {
+        "week_start": "2026-10-12",
+        "region": "Missouri",
+        "new_customers": 234,
+        "direct_new_users": 1708,
+        "brand_impressions": 1233
+      },
+      {
+        "week_start": "2026-10-12",
+        "region": "Wisconsin",
+        "new_customers": 217,
+        "direct_new_users": 1629,
+        "brand_impressions": 1158
+      },
+      {
+        "week_start": "2026-10-12",
+        "region": "Michigan",
+        "new_customers": 358,
+        "direct_new_users": 2602,
+        "brand_impressions": 1821
+      },
+      {
+        "week_start": "2026-10-12",
+        "region": "Louisiana",
+        "new_customers": 184,
+        "direct_new_users": 1358,
+        "brand_impressions": 913
+      },
+      {
+        "week_start": "2026-10-12",
+        "region": "Kansas",
+        "new_customers": 122,
+        "direct_new_users": 763,
+        "brand_impressions": 579
+      },
+      {
+        "week_start": "2026-10-12",
+        "region": "Oklahoma",
+        "new_customers": 155,
+        "direct_new_users": 1025,
+        "brand_impressions": 759
+      },
+      {
+        "week_start": "2026-10-12",
+        "region": "Iowa",
+        "new_customers": 59,
+        "direct_new_users": 507,
+        "brand_impressions": 318
+      },
+      {
+        "week_start": "2026-10-19",
+        "region": "Tennessee",
+        "new_customers": 303,
+        "direct_new_users": 2346,
+        "brand_impressions": 1554
+      },
+      {
+        "week_start": "2026-10-19",
+        "region": "Kentucky",
+        "new_customers": 181,
+        "direct_new_users": 1373,
+        "brand_impressions": 993
+      },
+      {
+        "week_start": "2026-10-19",
+        "region": "Indiana",
+        "new_customers": 259,
+        "direct_new_users": 1906,
+        "brand_impressions": 1342
+      },
+      {
+        "week_start": "2026-10-19",
+        "region": "Ohio",
+        "new_customers": 442,
+        "direct_new_users": 3400,
+        "brand_impressions": 2421
+      },
+      {
+        "week_start": "2026-10-19",
+        "region": "Virginia",
+        "new_customers": 350,
+        "direct_new_users": 2504,
+        "brand_impressions": 1776
+      },
+      {
+        "week_start": "2026-10-19",
+        "region": "Missouri",
+        "new_customers": 255,
+        "direct_new_users": 1869,
+        "brand_impressions": 1336
+      },
+      {
+        "week_start": "2026-10-19",
+        "region": "Wisconsin",
+        "new_customers": 228,
+        "direct_new_users": 1653,
+        "brand_impressions": 1173
+      },
+      {
+        "week_start": "2026-10-19",
+        "region": "Michigan",
+        "new_customers": 382,
+        "direct_new_users": 2860,
+        "brand_impressions": 1924
+      },
+      {
+        "week_start": "2026-10-19",
+        "region": "Louisiana",
+        "new_customers": 184,
+        "direct_new_users": 1230,
+        "brand_impressions": 996
+      },
+      {
+        "week_start": "2026-10-19",
+        "region": "Kansas",
+        "new_customers": 120,
+        "direct_new_users": 920,
+        "brand_impressions": 594
+      },
+      {
+        "week_start": "2026-10-19",
+        "region": "Oklahoma",
+        "new_customers": 161,
+        "direct_new_users": 1161,
+        "brand_impressions": 704
+      },
+      {
+        "week_start": "2026-10-19",
+        "region": "Iowa",
+        "new_customers": 65,
+        "direct_new_users": 497,
+        "brand_impressions": 349
+      }
+    ],
+    "brand_campaign_search_impression_share_by_week": [
+      0.97,
+      0.96,
+      0.97,
+      0.95,
+      0.96,
+      0.97
+    ],
+    "search_console_brand_clicks_by_week_national": [
+      1402,
+      1455,
+      1497,
+      1530,
+      1388,
+      1350
+    ],
+    "delivery": {
+      "R1": {
+        "source": "Google Ads, segments.device = CONNECTED_TV, by region",
+        "impressions_by_region": {
+          "Tennessee": 668400,
+          "Kentucky": 381900,
+          "other": 4100
+        },
+        "cost": 23580.4,
+        "reach_households": 127500,
+        "video_quartile_p100_rate": 0.92
+      },
+      "R2": {
+        "source": "Streaming app A delivery export",
+        "impressions_by_region": {
+          "Tennessee": 361200,
+          "Kentucky": 207600,
+          "other": 0
+        },
+        "cost": 20476.8,
+        "reach_households": 52400,
+        "completion_rate": 0.97
+      }
+    },
+    "qr_sessions_ga4": [
+      {
+        "source": "youtube_tv",
+        "region": "Tennessee",
+        "device": "mobile",
+        "sessions": 236
+      },
+      {
+        "source": "youtube_tv",
+        "region": "Tennessee",
+        "device": "tablet",
+        "sessions": 17
+      },
+      {
+        "source": "youtube_tv",
+        "region": "Kentucky",
+        "device": "mobile",
+        "sessions": 131
+      },
+      {
+        "source": "youtube_tv",
+        "region": "Kentucky",
+        "device": "tablet",
+        "sessions": 9
+      },
+      {
+        "source": "youtube_tv",
+        "region": "other",
+        "device": "mobile",
+        "sessions": 6
+      },
+      {
+        "source": "streaming_app_a",
+        "region": "Tennessee",
+        "device": "mobile",
+        "sessions": 297
+      },
+      {
+        "source": "streaming_app_a",
+        "region": "Tennessee",
+        "device": "tablet",
+        "sessions": 21
+      },
+      {
+        "source": "streaming_app_a",
+        "region": "Kentucky",
+        "device": "mobile",
+        "sessions": 168
+      },
+      {
+        "source": "streaming_app_a",
+        "region": "Kentucky",
+        "device": "tablet",
+        "sessions": 12
+      },
+      {
+        "source": "streaming_app_a",
+        "region": "other",
+        "device": "mobile",
+        "sessions": 3
+      }
+    ]
+  }
+}

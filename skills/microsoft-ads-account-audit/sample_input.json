@@ -1,0 +1,2329 @@
+{
+  "note": "Example data: an invented online booking software company with invented accounts, not a real business. Every number in expected_output.json follows from this input.",
+  "run": "2026-10-28. The last 30 complete days had spend, so every check ran on that window.",
+  "request": "Hey Claude, I just added the \"microsoft-ads-account-audit\" skill. Run a full audit on my Microsoft Ads account for the last 30 days. My target CPA is $80 for a sign-up or a booked demo. Our Google Ads account isn't connected.",
+  "account": {
+    "name": "Example Booking Software",
+    "id": "150000001",
+    "currency": "USD",
+    "time_zone": "EasternTimeUSCanada",
+    "status": "Active",
+    "advertised_domain": "example.com"
+  },
+  "window": "2026-09-28 to 2026-10-27",
+  "target_cpa": 80.0,
+  "brand_terms": [
+    "example booking"
+  ],
+  "google_ads": "not connected, so the import gap check and the CPC comparison were skipped",
+  "data_pulled": {
+    "account_performance_monthly": [
+      {
+        "month": "2025-10",
+        "impressions": 66371,
+        "clicks": 2698,
+        "spend": 6420.15,
+        "conversions": 75
+      },
+      {
+        "month": "2025-11",
+        "impressions": 70528,
+        "clicks": 2867,
+        "spend": 6880.4,
+        "conversions": 82
+      },
+      {
+        "month": "2025-12",
+        "impressions": 61303,
+        "clicks": 2492,
+        "spend": 6105.9,
+        "conversions": 68
+      },
+      {
+        "month": "2026-01",
+        "impressions": 77023,
+        "clicks": 3131,
+        "spend": 7640.25,
+        "conversions": 92
+      },
+      {
+        "month": "2026-02",
+        "impressions": 80147,
+        "clicks": 3258,
+        "spend": 8015.6,
+        "conversions": 99
+      },
+      {
+        "month": "2026-03",
+        "impressions": 87822,
+        "clicks": 3570,
+        "spend": 8890.1,
+        "conversions": 113
+      },
+      {
+        "month": "2026-04",
+        "impressions": 91955,
+        "clicks": 3738,
+        "spend": 9420.75,
+        "conversions": 121
+      },
+      {
+        "month": "2026-05",
+        "impressions": 97539,
+        "clicks": 3965,
+        "spend": 10110.3,
+        "conversions": 133
+      },
+      {
+        "month": "2026-06",
+        "impressions": 101942,
+        "clicks": 4144,
+        "spend": 10690.85,
+        "conversions": 143
+      },
+      {
+        "month": "2026-07",
+        "impressions": 105608,
+        "clicks": 4293,
+        "spend": 11205.4,
+        "conversions": 151
+      },
+      {
+        "month": "2026-08",
+        "impressions": 110183,
+        "clicks": 4479,
+        "spend": 11780.65,
+        "conversions": 160
+      },
+      {
+        "month": "2026-09",
+        "impressions": 111118,
+        "clicks": 4517,
+        "spend": 12240.1,
+        "conversions": 166
+      },
+      {
+        "month": "2026-10",
+        "impressions": 103085,
+        "clicks": 4169,
+        "spend": 11309.0,
+        "conversions": 154,
+        "note": "month to date, 2026-10-01 to 2026-10-27"
+      }
+    ],
+    "get_campaigns": [
+      {
+        "id": "410000001",
+        "name": "Brand | Search | US, CA, UK",
+        "type": "Search",
+        "status": "Active",
+        "bidding": "ManualCpc",
+        "daily_budget": 25,
+        "time_zone": "EasternTimeUSCanada",
+        "audience_ads_bid_adjustment": -100,
+        "ad_group_network": "OwnedAndOperatedOnly"
+      },
+      {
+        "id": "410000002",
+        "name": "Booking Software | Search | US, CA, UK",
+        "type": "Search",
+        "status": "Active",
+        "bidding": "MaxConversions",
+        "daily_budget": 220,
+        "time_zone": "EasternTimeUSCanada",
+        "audience_ads_bid_adjustment": 0,
+        "ad_group_network": "OwnedAndOperatedAndSyndicatedSearch"
+      },
+      {
+        "id": "410000003",
+        "name": "Salons | Search | US, CA, UK",
+        "type": "Search",
+        "status": "Active",
+        "bidding": "TargetCpa",
+        "target_cpa": 70,
+        "daily_budget": 80,
+        "time_zone": "EasternTimeUSCanada",
+        "audience_ads_bid_adjustment": -100,
+        "ad_group_network": "OwnedAndOperatedOnly"
+      },
+      {
+        "id": "410000004",
+        "name": "Clinics | Search | US, CA, UK",
+        "type": "Search",
+        "status": "Active",
+        "bidding": "MaxClicks",
+        "daily_budget": 110,
+        "time_zone": "EasternTimeUSCanada",
+        "audience_ads_bid_adjustment": -100,
+        "ad_group_network": "OwnedAndOperatedOnly"
+      },
+      {
+        "id": "410000005",
+        "name": "Fitness | Search | US, CA, UK",
+        "type": "Search",
+        "status": "Active",
+        "bidding": "ManualCpc",
+        "daily_budget": 30,
+        "time_zone": "EasternTimeUSCanada",
+        "audience_ads_bid_adjustment": -100,
+        "ad_group_network": "OwnedAndOperatedOnly"
+      }
+    ],
+    "get_uet_tags": [
+      {
+        "Id": "343000001",
+        "Name": "Example Booking Software site tag",
+        "TrackingStatus": "Active"
+      }
+    ],
+    "get_conversion_goals": [
+      {
+        "Id": "71000001",
+        "Name": "Account created",
+        "Type": "Url",
+        "GoalCategory": "Signup",
+        "Status": "Active",
+        "ExcludeFromBidding": false,
+        "TrackingStatus": "RecentConversions",
+        "CountType": "Unique",
+        "UrlExpression": "example.com/signup/complete",
+        "Revenue": "NoValue"
+      },
+      {
+        "Id": "71000002",
+        "Name": "Demo booked",
+        "Type": "Event",
+        "GoalCategory": "BookAppointment",
+        "Status": "Active",
+        "ExcludeFromBidding": false,
+        "TrackingStatus": "RecentConversions",
+        "CountType": "All",
+        "EventAction": "demo_booked",
+        "Revenue": "NoValue"
+      },
+      {
+        "Id": "71000003",
+        "Name": "Pricing page view",
+        "Type": "Url",
+        "GoalCategory": "PageView",
+        "Status": "Active",
+        "ExcludeFromBidding": true,
+        "TrackingStatus": "RecentConversions",
+        "CountType": "All",
+        "UrlExpression": "example.com/pricing",
+        "Revenue": "NoValue"
+      }
+    ],
+    "goals_and_funnels_report": [
+      {
+        "Goal": "Account created",
+        "AllConversions": 120,
+        "Assists": 64,
+        "AllRevenue": 0
+      },
+      {
+        "Goal": "Demo booked",
+        "AllConversions": 51,
+        "Assists": 22,
+        "AllRevenue": 0
+      },
+      {
+        "Goal": "Pricing page view",
+        "AllConversions": 1310,
+        "Assists": 0,
+        "AllRevenue": 0
+      }
+    ],
+    "campaign_report": [
+      {
+        "campaign_id": "410000001",
+        "campaign": "Brand | Search | US, CA, UK",
+        "status": "Active",
+        "type": "Search",
+        "impressions": 2310,
+        "clicks": 548,
+        "spend": 655.3,
+        "conversions": 41,
+        "revenue": 0,
+        "average_cpc": 1.2
+      },
+      {
+        "campaign_id": "410000002",
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "status": "Active",
+        "type": "Search",
+        "impressions": 61200,
+        "clicks": 2140,
+        "spend": 5980.25,
+        "conversions": 63,
+        "revenue": 0,
+        "average_cpc": 2.79
+      },
+      {
+        "campaign_id": "410000003",
+        "campaign": "Salons | Search | US, CA, UK",
+        "status": "Active",
+        "type": "Search",
+        "impressions": 19800,
+        "clicks": 905,
+        "spend": 2384.6,
+        "conversions": 38,
+        "revenue": 0,
+        "average_cpc": 2.63
+      },
+      {
+        "campaign_id": "410000004",
+        "campaign": "Clinics | Search | US, CA, UK",
+        "status": "Active",
+        "type": "Search",
+        "impressions": 23400,
+        "clicks": 812,
+        "spend": 2912.8,
+        "conversions": 22,
+        "revenue": 0,
+        "average_cpc": 3.59
+      },
+      {
+        "campaign_id": "410000005",
+        "campaign": "Fitness | Search | US, CA, UK",
+        "status": "Active",
+        "type": "Search",
+        "impressions": 7900,
+        "clicks": 230,
+        "spend": 640.35,
+        "conversions": 7,
+        "revenue": 0,
+        "average_cpc": 2.78
+      }
+    ],
+    "campaign_impression_share": [
+      {
+        "campaign": "Brand | Search | US, CA, UK",
+        "impression_share": 91.6,
+        "lost_to_budget": 0.0,
+        "lost_to_rank": 8.4,
+        "top_impression_share": 84.2,
+        "absolute_top_impression_share": 70.5,
+        "click_share": 88.0,
+        "exact_match_impression_share": 95.1
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "impression_share": 38.2,
+        "lost_to_budget": 3.1,
+        "lost_to_rank": 58.7,
+        "top_impression_share": 30.4,
+        "absolute_top_impression_share": 14.8,
+        "click_share": 33.0,
+        "exact_match_impression_share": 52.0
+      },
+      {
+        "campaign": "Salons | Search | US, CA, UK",
+        "impression_share": 51.0,
+        "lost_to_budget": 24.0,
+        "lost_to_rank": 25.0,
+        "top_impression_share": 41.2,
+        "absolute_top_impression_share": 22.3,
+        "click_share": 47.5,
+        "exact_match_impression_share": 66.0
+      },
+      {
+        "campaign": "Clinics | Search | US, CA, UK",
+        "impression_share": 29.5,
+        "lost_to_budget": 1.8,
+        "lost_to_rank": 68.7,
+        "top_impression_share": 20.1,
+        "absolute_top_impression_share": 8.9,
+        "click_share": 24.2,
+        "exact_match_impression_share": 41.0
+      },
+      {
+        "campaign": "Fitness | Search | US, CA, UK",
+        "impression_share": 22.0,
+        "lost_to_budget": 0.0,
+        "lost_to_rank": 78.0,
+        "top_impression_share": 15.6,
+        "absolute_top_impression_share": 6.1,
+        "click_share": 19.8,
+        "exact_match_impression_share": 30.5
+      }
+    ],
+    "campaign_spend_this_month": [
+      {
+        "campaign": "Brand | Search | US, CA, UK",
+        "spend": 590.2,
+        "days": 27,
+        "range": "2026-10-01 to 2026-10-27"
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "spend": 5372.4,
+        "days": 27,
+        "range": "2026-10-01 to 2026-10-27"
+      },
+      {
+        "campaign": "Salons | Search | US, CA, UK",
+        "spend": 2156.2,
+        "days": 27,
+        "range": "2026-10-01 to 2026-10-27"
+      },
+      {
+        "campaign": "Clinics | Search | US, CA, UK",
+        "spend": 2618.4,
+        "days": 27,
+        "range": "2026-10-01 to 2026-10-27"
+      },
+      {
+        "campaign": "Fitness | Search | US, CA, UK",
+        "spend": 571.8,
+        "days": 27,
+        "range": "2026-10-01 to 2026-10-27"
+      }
+    ],
+    "search_query_report": {
+      "rows": [
+        {
+          "campaign": "Brand | Search | US, CA, UK",
+          "ad_group": "Brand terms",
+          "search_term": "example booking",
+          "keyword": "example booking",
+          "delivered_match_type": "Exact",
+          "impressions": 1120,
+          "clicks": 301,
+          "spend": 352.4,
+          "conversions": 27
+        },
+        {
+          "campaign": "Brand | Search | US, CA, UK",
+          "ad_group": "Brand terms",
+          "search_term": "example booking pricing",
+          "keyword": "example booking",
+          "delivered_match_type": "Phrase",
+          "impressions": 140,
+          "clicks": 31,
+          "spend": 88.1,
+          "conversions": 6
+        },
+        {
+          "campaign": "Booking Software | Search | US, CA, UK",
+          "ad_group": "Booking software",
+          "search_term": "online booking software",
+          "keyword": "online booking software",
+          "delivered_match_type": "Phrase",
+          "impressions": 5400,
+          "clicks": 410,
+          "spend": 1148.2,
+          "conversions": 16
+        },
+        {
+          "campaign": "Booking Software | Search | US, CA, UK",
+          "ad_group": "Booking software",
+          "search_term": "appointment scheduling software",
+          "keyword": "appointment scheduling software",
+          "delivered_match_type": "Exact",
+          "impressions": 3900,
+          "clicks": 296,
+          "spend": 842.6,
+          "conversions": 12
+        },
+        {
+          "campaign": "Booking Software | Search | US, CA, UK",
+          "ad_group": "Booking software",
+          "search_term": "booking system for small business",
+          "keyword": "booking system for small business",
+          "delivered_match_type": "Phrase",
+          "impressions": 2700,
+          "clicks": 188,
+          "spend": 541.3,
+          "conversions": 7
+        },
+        {
+          "campaign": "Booking Software | Search | US, CA, UK",
+          "ad_group": "Scheduling app",
+          "search_term": "scheduling app for small business",
+          "keyword": "scheduling app for small business",
+          "delivered_match_type": "Phrase",
+          "impressions": 2100,
+          "clicks": 152,
+          "spend": 412.7,
+          "conversions": 5
+        },
+        {
+          "campaign": "Booking Software | Search | US, CA, UK",
+          "ad_group": "Appointment reminders",
+          "search_term": "appointment reminder software",
+          "keyword": "appointment reminder software",
+          "delivered_match_type": "Phrase",
+          "impressions": 1300,
+          "clicks": 96,
+          "spend": 255.1,
+          "conversions": 4
+        },
+        {
+          "campaign": "Booking Software | Search | US, CA, UK",
+          "ad_group": "Scheduling app",
+          "search_term": "scheduling software for small business",
+          "keyword": "scheduling software for small business",
+          "delivered_match_type": "Phrase",
+          "impressions": 1050,
+          "clicks": 41,
+          "spend": 121.5,
+          "conversions": 0
+        },
+        {
+          "campaign": "Booking Software | Search | US, CA, UK",
+          "ad_group": "Booking software",
+          "search_term": "restaurant reservation system",
+          "keyword": "reservation system",
+          "delivered_match_type": "Broad",
+          "impressions": 2200,
+          "clicks": 77,
+          "spend": 236.4,
+          "conversions": 0
+        },
+        {
+          "campaign": "Booking Software | Search | US, CA, UK",
+          "ad_group": "Booking software",
+          "search_term": "hotel booking engine",
+          "keyword": "booking engine",
+          "delivered_match_type": "Broad",
+          "impressions": 1400,
+          "clicks": 49,
+          "spend": 148.6,
+          "conversions": 0
+        },
+        {
+          "campaign": "Salons | Search | US, CA, UK",
+          "ad_group": "Salon booking",
+          "search_term": "salon booking software",
+          "keyword": "salon booking software",
+          "delivered_match_type": "Phrase",
+          "impressions": 3100,
+          "clicks": 240,
+          "spend": 612.4,
+          "conversions": 13
+        },
+        {
+          "campaign": "Salons | Search | US, CA, UK",
+          "ad_group": "Salon booking",
+          "search_term": "salon scheduling app",
+          "keyword": "salon scheduling app",
+          "delivered_match_type": "Phrase",
+          "impressions": 2200,
+          "clicks": 170,
+          "spend": 430.9,
+          "conversions": 9
+        },
+        {
+          "campaign": "Salons | Search | US, CA, UK",
+          "ad_group": "Spa booking",
+          "search_term": "spa booking system",
+          "keyword": "spa booking system",
+          "delivered_match_type": "Phrase",
+          "impressions": 1100,
+          "clicks": 81,
+          "spend": 205.3,
+          "conversions": 4
+        },
+        {
+          "campaign": "Salons | Search | US, CA, UK",
+          "ad_group": "Salon booking",
+          "search_term": "hair salon near me",
+          "keyword": "salon software",
+          "delivered_match_type": "Broad",
+          "impressions": 3400,
+          "clicks": 64,
+          "spend": 96.4,
+          "conversions": 0
+        },
+        {
+          "campaign": "Salons | Search | US, CA, UK",
+          "ad_group": "Salon booking",
+          "search_term": "how to start a salon business",
+          "keyword": "salon software",
+          "delivered_match_type": "Broad",
+          "impressions": 1500,
+          "clicks": 38,
+          "spend": 84.1,
+          "conversions": 0
+        },
+        {
+          "campaign": "Clinics | Search | US, CA, UK",
+          "ad_group": "Clinic scheduling",
+          "search_term": "patient scheduling software",
+          "keyword": "patient scheduling software",
+          "delivered_match_type": "Phrase",
+          "impressions": 2600,
+          "clicks": 170,
+          "spend": 596.2,
+          "conversions": 7
+        },
+        {
+          "campaign": "Clinics | Search | US, CA, UK",
+          "ad_group": "Physio and therapy",
+          "search_term": "physical therapy scheduling software",
+          "keyword": "physical therapy scheduling software",
+          "delivered_match_type": "Phrase",
+          "impressions": 1700,
+          "clicks": 112,
+          "spend": 402.8,
+          "conversions": 5
+        },
+        {
+          "campaign": "Clinics | Search | US, CA, UK",
+          "ad_group": "Clinic scheduling",
+          "search_term": "medical appointment software",
+          "keyword": "medical appointment software",
+          "delivered_match_type": "Phrase",
+          "impressions": 1400,
+          "clicks": 89,
+          "spend": 318.5,
+          "conversions": 3
+        },
+        {
+          "campaign": "Clinics | Search | US, CA, UK",
+          "ad_group": "Physio and therapy",
+          "search_term": "physiotherapist near me",
+          "keyword": "physiotherapy booking software",
+          "delivered_match_type": "Broad",
+          "impressions": 2900,
+          "clicks": 58,
+          "spend": 142.75,
+          "conversions": 0
+        },
+        {
+          "campaign": "Clinics | Search | US, CA, UK",
+          "ad_group": "Clinic scheduling",
+          "search_term": "doctor appointment online",
+          "keyword": "appointment software for clinics",
+          "delivered_match_type": "Broad",
+          "impressions": 2300,
+          "clicks": 47,
+          "spend": 118.3,
+          "conversions": 0
+        },
+        {
+          "campaign": "Clinics | Search | US, CA, UK",
+          "ad_group": "Clinic scheduling",
+          "search_term": "clinic scheduling software",
+          "keyword": "clinic scheduling software",
+          "delivered_match_type": "Phrase",
+          "impressions": 900,
+          "clicks": 36,
+          "spend": 104.8,
+          "conversions": 0
+        },
+        {
+          "campaign": "Clinics | Search | US, CA, UK",
+          "ad_group": "Clinic scheduling",
+          "search_term": "front desk receptionist jobs",
+          "keyword": "clinic front desk software",
+          "delivered_match_type": "Broad",
+          "impressions": 1200,
+          "clicks": 31,
+          "spend": 88.2,
+          "conversions": 0
+        },
+        {
+          "campaign": "Fitness | Search | US, CA, UK",
+          "ad_group": "Class booking",
+          "search_term": "personal trainer scheduling app",
+          "keyword": "personal trainer scheduling app",
+          "delivered_match_type": "Phrase",
+          "impressions": 900,
+          "clicks": 66,
+          "spend": 187.4,
+          "conversions": 3
+        },
+        {
+          "campaign": "Fitness | Search | US, CA, UK",
+          "ad_group": "Class booking",
+          "search_term": "fitness studio software",
+          "keyword": "fitness studio software",
+          "delivered_match_type": "Phrase",
+          "impressions": 700,
+          "clicks": 48,
+          "spend": 142.1,
+          "conversions": 2
+        }
+      ],
+      "other_terms": [
+        {
+          "campaign": "Brand | Search | US, CA, UK",
+          "terms": 14,
+          "impressions": 750,
+          "clicks": 145,
+          "spend": 129.61,
+          "conversions": 1,
+          "largest_term_spend": 21.4
+        },
+        {
+          "campaign": "Booking Software | Search | US, CA, UK",
+          "terms": 129,
+          "impressions": 24668,
+          "clicks": 488,
+          "spend": 1219.98,
+          "conversions": 8,
+          "largest_term_spend": 38.9
+        },
+        {
+          "campaign": "Salons | Search | US, CA, UK",
+          "terms": 68,
+          "impressions": 5926,
+          "clicks": 194,
+          "spend": 645.5,
+          "conversions": 6,
+          "largest_term_spend": 34.6
+        },
+        {
+          "campaign": "Clinics | Search | US, CA, UK",
+          "terms": 81,
+          "impressions": 7358,
+          "clicks": 163,
+          "spend": 762.59,
+          "conversions": 3,
+          "largest_term_spend": 36.2
+        },
+        {
+          "campaign": "Fitness | Search | US, CA, UK",
+          "terms": 24,
+          "impressions": 5273,
+          "clicks": 86,
+          "spend": 227.6,
+          "conversions": 0,
+          "largest_term_spend": 27.8
+        }
+      ],
+      "other_terms_note": "Every other term spent less than $40 each; they are summed per campaign here."
+    },
+    "negatives": {
+      "campaign": [
+        {
+          "campaign": "Brand | Search | US, CA, UK",
+          "negatives": []
+        },
+        {
+          "campaign": "Booking Software | Search | US, CA, UK",
+          "negatives": [
+            "Phrase: jobs",
+            "Phrase: careers",
+            "Phrase: salary",
+            "Phrase: template"
+          ]
+        },
+        {
+          "campaign": "Salons | Search | US, CA, UK",
+          "negatives": [
+            "Phrase: jobs",
+            "Phrase: course",
+            "Phrase: school"
+          ]
+        },
+        {
+          "campaign": "Clinics | Search | US, CA, UK",
+          "negatives": [
+            "Phrase: insurance",
+            "Phrase: hospital",
+            "Phrase: course"
+          ]
+        },
+        {
+          "campaign": "Fitness | Search | US, CA, UK",
+          "negatives": [
+            "Phrase: class",
+            "Phrase: near me",
+            "Phrase: membership"
+          ]
+        }
+      ],
+      "shared_lists": [
+        {
+          "id": "9100000001",
+          "name": "Account negatives",
+          "items": [
+            "Phrase: login",
+            "Phrase: pdf",
+            "Phrase: excel",
+            "Phrase: wikipedia",
+            "Phrase: definition"
+          ],
+          "applied_to": [
+            "Booking Software | Search | US, CA, UK",
+            "Salons | Search | US, CA, UK",
+            "Clinics | Search | US, CA, UK",
+            "Fitness | Search | US, CA, UK"
+          ]
+        }
+      ]
+    },
+    "get_ad_groups_and_keywords": [
+      {
+        "campaign": "Brand | Search | US, CA, UK",
+        "ad_group": "Brand terms",
+        "ad_group_id": "1300000001",
+        "network": "OwnedAndOperatedOnly",
+        "enabled_keywords": [
+          "Exact: example booking",
+          "Phrase: example booking",
+          "Phrase: example booking software",
+          "Phrase: example booking app"
+        ]
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Booking software",
+        "ad_group_id": "1300000002",
+        "network": "OwnedAndOperatedAndSyndicatedSearch",
+        "enabled_keywords": [
+          "Phrase: online booking software",
+          "Phrase: booking software",
+          "Phrase: online booking system",
+          "Phrase: appointment booking software",
+          "Phrase: booking system for small business",
+          "Broad: reservation system",
+          "Broad: booking engine",
+          "Exact: booking software",
+          "Exact: online booking software",
+          "Phrase: appointment scheduling software",
+          "Exact: appointment scheduling software",
+          "Phrase: online appointment booking",
+          "Phrase: booking page for website",
+          "Phrase: client booking software"
+        ]
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Scheduling app",
+        "ad_group_id": "1300000003",
+        "network": "OwnedAndOperatedAndSyndicatedSearch",
+        "enabled_keywords": [
+          "Phrase: scheduling app for small business",
+          "Phrase: scheduling software for small business",
+          "Broad: scheduling app",
+          "Phrase: staff scheduling app",
+          "Phrase: online scheduling software",
+          "Phrase: appointment app"
+        ]
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Appointment reminders",
+        "ad_group_id": "1300000004",
+        "network": "OwnedAndOperatedAndSyndicatedSearch",
+        "enabled_keywords": [
+          "Phrase: appointment reminder software",
+          "Phrase: sms appointment reminders",
+          "Phrase: automated appointment reminders",
+          "Phrase: no show reduction software"
+        ]
+      },
+      {
+        "campaign": "Salons | Search | US, CA, UK",
+        "ad_group": "Salon booking",
+        "ad_group_id": "1300000005",
+        "network": "OwnedAndOperatedOnly",
+        "enabled_keywords": [
+          "Phrase: salon booking software",
+          "Phrase: salon scheduling app",
+          "Broad: salon software",
+          "Phrase: hair salon software",
+          "Phrase: barber booking app",
+          "Phrase: nail salon booking app"
+        ]
+      },
+      {
+        "campaign": "Salons | Search | US, CA, UK",
+        "ad_group": "Spa booking",
+        "ad_group_id": "1300000006",
+        "network": "OwnedAndOperatedOnly",
+        "enabled_keywords": [
+          "Phrase: spa booking system",
+          "Phrase: massage booking software",
+          "Phrase: spa scheduling software"
+        ]
+      },
+      {
+        "campaign": "Clinics | Search | US, CA, UK",
+        "ad_group": "Clinic scheduling",
+        "ad_group_id": "1300000007",
+        "network": "OwnedAndOperatedOnly",
+        "enabled_keywords": [
+          "Phrase: patient scheduling software",
+          "Phrase: clinic scheduling software",
+          "Phrase: medical appointment software",
+          "Phrase: clinic booking system",
+          "Broad: appointment software for clinics",
+          "Broad: clinic front desk software"
+        ]
+      },
+      {
+        "campaign": "Clinics | Search | US, CA, UK",
+        "ad_group": "Physio and therapy",
+        "ad_group_id": "1300000008",
+        "network": "OwnedAndOperatedOnly",
+        "enabled_keywords": [
+          "Phrase: physical therapy scheduling software",
+          "Broad: physiotherapy booking software",
+          "Phrase: chiropractic scheduling software",
+          "Phrase: therapy practice scheduling"
+        ]
+      },
+      {
+        "campaign": "Fitness | Search | US, CA, UK",
+        "ad_group": "Class booking",
+        "ad_group_id": "1300000009",
+        "network": "OwnedAndOperatedOnly",
+        "enabled_keywords": [
+          "Phrase: class booking software",
+          "Phrase: fitness class scheduling app",
+          "Phrase: personal trainer scheduling app",
+          "Phrase: fitness studio software",
+          "Phrase: gym booking system"
+        ]
+      }
+    ],
+    "get_budgets": [
+      {
+        "Name": "Q2 promo budget",
+        "Amount": 150,
+        "AssociationCount": 0
+      },
+      {
+        "Name": "Test budget",
+        "Amount": 10,
+        "AssociationCount": 0
+      }
+    ],
+    "get_bid_strategies": [
+      {
+        "Name": "Target CPA 60 (old)",
+        "Type": "TargetCpa",
+        "AssociationCount": 0
+      }
+    ],
+    "keyword_report": [
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Booking software",
+        "keyword": "online booking software",
+        "match_type": "Phrase",
+        "impressions": 9525,
+        "clicks": 510,
+        "spend": 1405.58,
+        "conversions": 19,
+        "quality_score": 7,
+        "expected_ctr": 2,
+        "ad_relevance": 3,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Booking software",
+        "keyword": "appointment scheduling software",
+        "match_type": "Exact",
+        "impressions": 6478,
+        "clicks": 358,
+        "spend": 1003.46,
+        "conversions": 14,
+        "quality_score": 8,
+        "expected_ctr": 3,
+        "ad_relevance": 3,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Salons | Search | US, CA, UK",
+        "ad_group": "Salon booking",
+        "keyword": "salon booking software",
+        "match_type": "Phrase",
+        "impressions": 5650,
+        "clicks": 333,
+        "spend": 899.05,
+        "conversions": 17,
+        "quality_score": 8,
+        "expected_ctr": 3,
+        "ad_relevance": 3,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Clinics | Search | US, CA, UK",
+        "ad_group": "Clinic scheduling",
+        "keyword": "patient scheduling software",
+        "match_type": "Phrase",
+        "impressions": 5030,
+        "clicks": 233,
+        "spend": 862.84,
+        "conversions": 7,
+        "quality_score": 4,
+        "expected_ctr": 2,
+        "ad_relevance": 2,
+        "landing_page": 1
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Booking software",
+        "keyword": "booking system for small business",
+        "match_type": "Phrase",
+        "impressions": 4247,
+        "clicks": 225,
+        "spend": 637.82,
+        "conversions": 8,
+        "quality_score": 6,
+        "expected_ctr": 2,
+        "ad_relevance": 2,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Salons | Search | US, CA, UK",
+        "ad_group": "Salon booking",
+        "keyword": "salon scheduling app",
+        "match_type": "Phrase",
+        "impressions": 3900,
+        "clicks": 232,
+        "spend": 622.0,
+        "conversions": 11,
+        "quality_score": 7,
+        "expected_ctr": 2,
+        "ad_relevance": 3,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Clinics | Search | US, CA, UK",
+        "ad_group": "Physio and therapy",
+        "keyword": "physical therapy scheduling software",
+        "match_type": "Phrase",
+        "impressions": 3644,
+        "clicks": 162,
+        "spend": 616.12,
+        "conversions": 11,
+        "quality_score": 5,
+        "expected_ctr": 2,
+        "ad_relevance": 3,
+        "landing_page": 1
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Scheduling app",
+        "keyword": "scheduling app for small business",
+        "match_type": "Phrase",
+        "impressions": 4162,
+        "clicks": 202,
+        "spend": 541.39,
+        "conversions": 6,
+        "quality_score": 7,
+        "expected_ctr": 2,
+        "ad_relevance": 3,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Brand | Search | US, CA, UK",
+        "ad_group": "Brand terms",
+        "keyword": "example booking",
+        "match_type": "Exact",
+        "impressions": 1750,
+        "clicks": 430,
+        "spend": 481.28,
+        "conversions": 32,
+        "quality_score": 10,
+        "expected_ctr": 3,
+        "ad_relevance": 3,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Clinics | Search | US, CA, UK",
+        "ad_group": "Clinic scheduling",
+        "keyword": "medical appointment software",
+        "match_type": "Phrase",
+        "impressions": 2858,
+        "clicks": 127,
+        "spend": 478.49,
+        "conversions": 3,
+        "quality_score": 4,
+        "expected_ctr": 2,
+        "ad_relevance": 2,
+        "landing_page": 1
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Appointment reminders",
+        "keyword": "appointment reminder software",
+        "match_type": "Phrase",
+        "impressions": 2847,
+        "clicks": 133,
+        "spend": 351.62,
+        "conversions": 5,
+        "quality_score": 7,
+        "expected_ctr": 2,
+        "ad_relevance": 3,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Fitness | Search | US, CA, UK",
+        "ad_group": "Class booking",
+        "keyword": "personal trainer scheduling app",
+        "match_type": "Phrase",
+        "impressions": 4050,
+        "clicks": 124,
+        "spend": 342.82,
+        "conversions": 4,
+        "quality_score": 7,
+        "expected_ctr": 2,
+        "ad_relevance": 3,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Salons | Search | US, CA, UK",
+        "ad_group": "Spa booking",
+        "keyword": "spa booking system",
+        "match_type": "Phrase",
+        "impressions": 1950,
+        "clicks": 112,
+        "spend": 300.85,
+        "conversions": 5,
+        "quality_score": 6,
+        "expected_ctr": 2,
+        "ad_relevance": 2,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Booking software",
+        "keyword": "reservation system",
+        "match_type": "Broad",
+        "impressions": 3231,
+        "clicks": 102,
+        "spend": 300.75,
+        "conversions": 0,
+        "quality_score": 3,
+        "expected_ctr": 1,
+        "ad_relevance": 1,
+        "landing_page": 2
+      },
+      {
+        "campaign": "Salons | Search | US, CA, UK",
+        "ad_group": "Salon booking",
+        "keyword": "salon software",
+        "match_type": "Broad",
+        "impressions": 5750,
+        "clicks": 133,
+        "spend": 276.05,
+        "conversions": 1,
+        "quality_score": 5,
+        "expected_ctr": 2,
+        "ad_relevance": 1,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Clinics | Search | US, CA, UK",
+        "ad_group": "Physio and therapy",
+        "keyword": "physiotherapy booking software",
+        "match_type": "Broad",
+        "impressions": 3872,
+        "clicks": 83,
+        "spend": 249.41,
+        "conversions": 0,
+        "quality_score": 4,
+        "expected_ctr": 2,
+        "ad_relevance": 2,
+        "landing_page": 1
+      },
+      {
+        "campaign": "Fitness | Search | US, CA, UK",
+        "ad_group": "Class booking",
+        "keyword": "fitness studio software",
+        "match_type": "Phrase",
+        "impressions": 2800,
+        "clicks": 87,
+        "spend": 245.72,
+        "conversions": 3,
+        "quality_score": 6,
+        "expected_ctr": 2,
+        "ad_relevance": 2,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Clinics | Search | US, CA, UK",
+        "ad_group": "Clinic scheduling",
+        "keyword": "appointment software for clinics",
+        "match_type": "Broad",
+        "impressions": 3272,
+        "clicks": 72,
+        "spend": 224.96,
+        "conversions": 0,
+        "quality_score": 3,
+        "expected_ctr": 1,
+        "ad_relevance": 2,
+        "landing_page": 1
+      },
+      {
+        "campaign": "Clinics | Search | US, CA, UK",
+        "ad_group": "Clinic scheduling",
+        "keyword": "clinic scheduling software",
+        "match_type": "Phrase",
+        "impressions": 1872,
+        "clicks": 61,
+        "spend": 211.46,
+        "conversions": 0,
+        "quality_score": 4,
+        "expected_ctr": 2,
+        "ad_relevance": 2,
+        "landing_page": 1
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Booking software",
+        "keyword": "booking engine",
+        "match_type": "Broad",
+        "impressions": 1916,
+        "clicks": 62,
+        "spend": 180.77,
+        "conversions": 0,
+        "quality_score": 3,
+        "expected_ctr": 1,
+        "ad_relevance": 1,
+        "landing_page": 2
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Booking software",
+        "keyword": "booking software",
+        "match_type": "Phrase",
+        "impressions": 2578,
+        "clicks": 62,
+        "spend": 160.86,
+        "conversions": 2,
+        "quality_score": 6,
+        "expected_ctr": 2,
+        "ad_relevance": 2,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Scheduling app",
+        "keyword": "scheduling software for small business",
+        "match_type": "Phrase",
+        "impressions": 1566,
+        "clicks": 53,
+        "spend": 153.67,
+        "conversions": 0,
+        "quality_score": 5,
+        "expected_ctr": 2,
+        "ad_relevance": 2,
+        "landing_page": 2
+      },
+      {
+        "campaign": "Brand | Search | US, CA, UK",
+        "ad_group": "Brand terms",
+        "keyword": "example booking",
+        "match_type": "Phrase",
+        "impressions": 455,
+        "clicks": 96,
+        "spend": 152.54,
+        "conversions": 8,
+        "quality_score": 9,
+        "expected_ctr": 3,
+        "ad_relevance": 3,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Clinics | Search | US, CA, UK",
+        "ad_group": "Clinic scheduling",
+        "keyword": "clinic front desk software",
+        "match_type": "Broad",
+        "impressions": 1686,
+        "clicks": 44,
+        "spend": 141.53,
+        "conversions": 0,
+        "quality_score": 3,
+        "expected_ctr": 1,
+        "ad_relevance": 2,
+        "landing_page": 1
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Booking software",
+        "keyword": "online booking system",
+        "match_type": "Phrase",
+        "impressions": 2063,
+        "clicks": 50,
+        "spend": 128.69,
+        "conversions": 1,
+        "quality_score": 6,
+        "expected_ctr": 2,
+        "ad_relevance": 2,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Booking software",
+        "keyword": "appointment booking software",
+        "match_type": "Phrase",
+        "impressions": 2062,
+        "clicks": 50,
+        "spend": 128.69,
+        "conversions": 1,
+        "quality_score": 7,
+        "expected_ctr": 2,
+        "ad_relevance": 3,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Booking software",
+        "keyword": "booking software",
+        "match_type": "Exact",
+        "impressions": 2062,
+        "clicks": 50,
+        "spend": 128.69,
+        "conversions": 1,
+        "quality_score": 8,
+        "expected_ctr": 3,
+        "ad_relevance": 3,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Booking software",
+        "keyword": "online booking software",
+        "match_type": "Exact",
+        "impressions": 2062,
+        "clicks": 50,
+        "spend": 128.69,
+        "conversions": 1,
+        "quality_score": 8,
+        "expected_ctr": 3,
+        "ad_relevance": 3,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Booking software",
+        "keyword": "appointment scheduling software",
+        "match_type": "Phrase",
+        "impressions": 1547,
+        "clicks": 37,
+        "spend": 96.52,
+        "conversions": 1,
+        "quality_score": 7,
+        "expected_ctr": 2,
+        "ad_relevance": 3,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Salons | Search | US, CA, UK",
+        "ad_group": "Salon booking",
+        "keyword": "hair salon software",
+        "match_type": "Phrase",
+        "impressions": 850,
+        "clicks": 31,
+        "spend": 95.55,
+        "conversions": 1,
+        "quality_score": 7,
+        "expected_ctr": 2,
+        "ad_relevance": 3,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Booking software",
+        "keyword": "online appointment booking",
+        "match_type": "Phrase",
+        "impressions": 1031,
+        "clicks": 25,
+        "spend": 64.35,
+        "conversions": 1,
+        "quality_score": 6,
+        "expected_ctr": 2,
+        "ad_relevance": 2,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Scheduling app",
+        "keyword": "scheduling app",
+        "match_type": "Broad",
+        "impressions": 1031,
+        "clicks": 25,
+        "spend": 64.35,
+        "conversions": 1,
+        "quality_score": 5,
+        "expected_ctr": 2,
+        "ad_relevance": 1,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Scheduling app",
+        "keyword": "online scheduling software",
+        "match_type": "Phrase",
+        "impressions": 1031,
+        "clicks": 25,
+        "spend": 64.35,
+        "conversions": 1,
+        "quality_score": 6,
+        "expected_ctr": 2,
+        "ad_relevance": 2,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Clinics | Search | US, CA, UK",
+        "ad_group": "Clinic scheduling",
+        "keyword": "clinic booking system",
+        "match_type": "Phrase",
+        "impressions": 486,
+        "clicks": 13,
+        "spend": 53.33,
+        "conversions": 0,
+        "quality_score": 4,
+        "expected_ctr": 2,
+        "ad_relevance": 2,
+        "landing_page": 1
+      },
+      {
+        "campaign": "Clinics | Search | US, CA, UK",
+        "ad_group": "Physio and therapy",
+        "keyword": "chiropractic scheduling software",
+        "match_type": "Phrase",
+        "impressions": 486,
+        "clicks": 12,
+        "spend": 53.33,
+        "conversions": 1,
+        "quality_score": 5,
+        "expected_ctr": 2,
+        "ad_relevance": 3,
+        "landing_page": 1
+      },
+      {
+        "campaign": "Fitness | Search | US, CA, UK",
+        "ad_group": "Class booking",
+        "keyword": "gym booking system",
+        "match_type": "Phrase",
+        "impressions": 1050,
+        "clicks": 19,
+        "spend": 51.81,
+        "conversions": 0,
+        "quality_score": 6,
+        "expected_ctr": 2,
+        "ad_relevance": 2,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Salons | Search | US, CA, UK",
+        "ad_group": "Salon booking",
+        "keyword": "barber booking app",
+        "match_type": "Phrase",
+        "impressions": 425,
+        "clicks": 16,
+        "spend": 47.78,
+        "conversions": 1,
+        "quality_score": 6,
+        "expected_ctr": 2,
+        "ad_relevance": 2,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Salons | Search | US, CA, UK",
+        "ad_group": "Salon booking",
+        "keyword": "nail salon booking app",
+        "match_type": "Phrase",
+        "impressions": 425,
+        "clicks": 16,
+        "spend": 47.78,
+        "conversions": 1,
+        "quality_score": 6,
+        "expected_ctr": 2,
+        "ad_relevance": 2,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Salons | Search | US, CA, UK",
+        "ad_group": "Spa booking",
+        "keyword": "massage booking software",
+        "match_type": "Phrase",
+        "impressions": 425,
+        "clicks": 16,
+        "spend": 47.77,
+        "conversions": 1,
+        "quality_score": 6,
+        "expected_ctr": 2,
+        "ad_relevance": 2,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Salons | Search | US, CA, UK",
+        "ad_group": "Spa booking",
+        "keyword": "spa scheduling software",
+        "match_type": "Phrase",
+        "impressions": 425,
+        "clicks": 16,
+        "spend": 47.77,
+        "conversions": 0,
+        "quality_score": 6,
+        "expected_ctr": 2,
+        "ad_relevance": 2,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Scheduling app",
+        "keyword": "appointment app",
+        "match_type": "Phrase",
+        "impressions": 516,
+        "clicks": 12,
+        "spend": 32.17,
+        "conversions": 0,
+        "quality_score": 5,
+        "expected_ctr": 1,
+        "ad_relevance": 2,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Appointment reminders",
+        "keyword": "sms appointment reminders",
+        "match_type": "Phrase",
+        "impressions": 516,
+        "clicks": 12,
+        "spend": 32.17,
+        "conversions": 0,
+        "quality_score": 6,
+        "expected_ctr": 2,
+        "ad_relevance": 2,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Appointment reminders",
+        "keyword": "automated appointment reminders",
+        "match_type": "Phrase",
+        "impressions": 516,
+        "clicks": 12,
+        "spend": 32.17,
+        "conversions": 0,
+        "quality_score": 6,
+        "expected_ctr": 2,
+        "ad_relevance": 2,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Brand | Search | US, CA, UK",
+        "ad_group": "Brand terms",
+        "keyword": "example booking software",
+        "match_type": "Phrase",
+        "impressions": 105,
+        "clicks": 22,
+        "spend": 21.48,
+        "conversions": 1,
+        "quality_score": 9,
+        "expected_ctr": 3,
+        "ad_relevance": 3,
+        "landing_page": 3
+      },
+      {
+        "campaign": "Clinics | Search | US, CA, UK",
+        "ad_group": "Physio and therapy",
+        "keyword": "therapy practice scheduling",
+        "match_type": "Phrase",
+        "impressions": 194,
+        "clicks": 5,
+        "spend": 21.33,
+        "conversions": 0,
+        "quality_score": null,
+        "expected_ctr": null,
+        "ad_relevance": null,
+        "landing_page": null
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Appointment reminders",
+        "keyword": "no show reduction software",
+        "match_type": "Phrase",
+        "impressions": 258,
+        "clicks": 6,
+        "spend": 16.09,
+        "conversions": 0,
+        "quality_score": 5,
+        "expected_ctr": 2,
+        "ad_relevance": 2,
+        "landing_page": 2
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Booking software",
+        "keyword": "client booking software",
+        "match_type": "Phrase",
+        "impressions": 155,
+        "clicks": 4,
+        "spend": 9.65,
+        "conversions": 0,
+        "quality_score": null,
+        "expected_ctr": null,
+        "ad_relevance": null,
+        "landing_page": null
+      }
+    ],
+    "get_ads": [
+      {
+        "campaign": "Brand | Search | US, CA, UK",
+        "ad_group": "Brand terms",
+        "ad_id": "8300000001",
+        "type": "ResponsiveSearch",
+        "headlines": 12,
+        "descriptions": 4,
+        "final_url": "https://www.example.com/",
+        "editorial_status": "Active"
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Booking software",
+        "ad_id": "8300000002",
+        "type": "ResponsiveSearch",
+        "headlines": 15,
+        "descriptions": 4,
+        "final_url": "https://www.example.com/features/online-booking/",
+        "editorial_status": "Active"
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Booking software",
+        "ad_id": "8300000003",
+        "type": "ResponsiveSearch",
+        "headlines": 12,
+        "descriptions": 4,
+        "final_url": "https://www.example.com/features/online-booking/",
+        "editorial_status": "Active"
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Scheduling app",
+        "ad_id": "8300000004",
+        "type": "ResponsiveSearch",
+        "headlines": 11,
+        "descriptions": 4,
+        "final_url": "https://www.example.com/features/online-booking/",
+        "editorial_status": "Active"
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "ad_group": "Appointment reminders",
+        "ad_id": "8300000005",
+        "type": "ResponsiveSearch",
+        "headlines": 10,
+        "descriptions": 3,
+        "final_url": "https://www.example.com/features/reminders/",
+        "editorial_status": "Active"
+      },
+      {
+        "campaign": "Salons | Search | US, CA, UK",
+        "ad_group": "Salon booking",
+        "ad_id": "8300000006",
+        "type": "ResponsiveSearch",
+        "headlines": 14,
+        "descriptions": 4,
+        "final_url": "https://www.example.com/industries/salons/",
+        "editorial_status": "Active"
+      },
+      {
+        "campaign": "Salons | Search | US, CA, UK",
+        "ad_group": "Salon booking",
+        "ad_id": "8300000007",
+        "type": "ResponsiveSearch",
+        "headlines": 10,
+        "descriptions": 3,
+        "final_url": "https://www.example.com/industries/salons/",
+        "editorial_status": "Active"
+      },
+      {
+        "campaign": "Salons | Search | US, CA, UK",
+        "ad_group": "Spa booking",
+        "ad_id": "8300000008",
+        "type": "ResponsiveSearch",
+        "headlines": 6,
+        "descriptions": 2,
+        "final_url": "https://www.example.com/industries/salons/",
+        "editorial_status": "Active"
+      },
+      {
+        "campaign": "Clinics | Search | US, CA, UK",
+        "ad_group": "Clinic scheduling",
+        "ad_id": "8300000009",
+        "type": "ResponsiveSearch",
+        "headlines": 12,
+        "descriptions": 4,
+        "final_url": "https://www.example.com/",
+        "editorial_status": "ActiveLimited",
+        "policy_topic": "Healthcare and medicines"
+      },
+      {
+        "campaign": "Clinics | Search | US, CA, UK",
+        "ad_group": "Physio and therapy",
+        "ad_id": "8300000010",
+        "type": "ResponsiveSearch",
+        "headlines": 10,
+        "descriptions": 4,
+        "final_url": "https://www.example.com/",
+        "editorial_status": "Active"
+      },
+      {
+        "campaign": "Fitness | Search | US, CA, UK",
+        "ad_group": "Class booking",
+        "ad_id": "8300000011",
+        "type": "ResponsiveSearch",
+        "headlines": 9,
+        "descriptions": 3,
+        "final_url": "https://www.example.com/industries/fitness/",
+        "editorial_status": "Active"
+      }
+    ],
+    "extension_associations": {
+      "account_level": {
+        "CalloutAdExtension": 4,
+        "LogoAdExtension": 1
+      },
+      "ad_group_level": "none",
+      "campaign_level": [
+        {
+          "campaign": "Brand | Search | US, CA, UK",
+          "SitelinkAdExtension": 6,
+          "StructuredSnippetAdExtension": 1
+        },
+        {
+          "campaign": "Booking Software | Search | US, CA, UK",
+          "SitelinkAdExtension": 6,
+          "StructuredSnippetAdExtension": 1
+        },
+        {
+          "campaign": "Salons | Search | US, CA, UK",
+          "SitelinkAdExtension": 4,
+          "StructuredSnippetAdExtension": 1
+        },
+        {
+          "campaign": "Clinics | Search | US, CA, UK",
+          "SitelinkAdExtension": 2,
+          "StructuredSnippetAdExtension": 0
+        },
+        {
+          "campaign": "Fitness | Search | US, CA, UK",
+          "SitelinkAdExtension": 4,
+          "StructuredSnippetAdExtension": 0
+        }
+      ]
+    },
+    "extensions_not_associated": [
+      {
+        "Id": "2200000101",
+        "Type": "SitelinkAdExtension",
+        "Text": "Clinic scheduling",
+        "FinalUrl": "https://www.example.com/industries/clinics/"
+      },
+      {
+        "Id": "2200000102",
+        "Type": "SitelinkAdExtension",
+        "Text": "Deposits and payments",
+        "FinalUrl": "https://www.example.com/features/payments/"
+      },
+      {
+        "Id": "2200000103",
+        "Type": "SitelinkAdExtension",
+        "Text": "Calendar sync",
+        "FinalUrl": "https://www.example.com/features/calendar-sync/"
+      }
+    ],
+    "network_rows": [
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "network": "Microsoft sites and select traffic",
+        "impressions": 38900,
+        "clicks": 1610,
+        "spend": 4350.1,
+        "conversions": 55
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "network": "Syndicated search partners",
+        "impressions": 12500,
+        "clicks": 455,
+        "spend": 1312.4,
+        "conversions": 7
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "network": "Audience",
+        "impressions": 9800,
+        "clicks": 75,
+        "spend": 317.75,
+        "conversions": 1
+      },
+      {
+        "campaign": "Brand | Search | US, CA, UK",
+        "network": "Microsoft sites and select traffic",
+        "impressions": 2310,
+        "clicks": 548,
+        "spend": 655.3,
+        "conversions": 41
+      },
+      {
+        "campaign": "Salons | Search | US, CA, UK",
+        "network": "Microsoft sites and select traffic",
+        "impressions": 19800,
+        "clicks": 905,
+        "spend": 2384.6,
+        "conversions": 38
+      },
+      {
+        "campaign": "Clinics | Search | US, CA, UK",
+        "network": "Microsoft sites and select traffic",
+        "impressions": 23400,
+        "clicks": 812,
+        "spend": 2912.8,
+        "conversions": 22
+      },
+      {
+        "campaign": "Fitness | Search | US, CA, UK",
+        "network": "Microsoft sites and select traffic",
+        "impressions": 7900,
+        "clicks": 230,
+        "spend": 640.35,
+        "conversions": 7
+      }
+    ],
+    "device_and_os_rows": [
+      {
+        "device": "Computer",
+        "os": "Windows",
+        "clicks": 2688,
+        "spend": 7543.98,
+        "conversions": 115
+      },
+      {
+        "device": "Computer",
+        "os": "MacOS",
+        "clicks": 695,
+        "spend": 1948.86,
+        "conversions": 27
+      },
+      {
+        "device": "Smartphone",
+        "os": "iOS",
+        "clicks": 626,
+        "spend": 1571.66,
+        "conversions": 14
+      },
+      {
+        "device": "Smartphone",
+        "os": "Android",
+        "clicks": 417,
+        "spend": 1043.59,
+        "conversions": 9
+      },
+      {
+        "device": "Tablet",
+        "os": "iOS",
+        "clicks": 162,
+        "spend": 377.2,
+        "conversions": 5
+      },
+      {
+        "device": "Tablet",
+        "os": "Android",
+        "clicks": 47,
+        "spend": 88.01,
+        "conversions": 1
+      }
+    ],
+    "get_campaign_criterions": [
+      {
+        "campaign": "Brand | Search | US, CA, UK",
+        "locations": [
+          {
+            "country": "United States",
+            "bid_adjustment": 0
+          },
+          {
+            "country": "Canada",
+            "bid_adjustment": 0
+          },
+          {
+            "country": "United Kingdom",
+            "bid_adjustment": 0
+          }
+        ],
+        "location_intent": "PeopleIn"
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "locations": [
+          {
+            "country": "United States",
+            "bid_adjustment": 0
+          },
+          {
+            "country": "Canada",
+            "bid_adjustment": 0
+          },
+          {
+            "country": "United Kingdom",
+            "bid_adjustment": 0
+          }
+        ],
+        "location_intent": "PeopleIn"
+      },
+      {
+        "campaign": "Salons | Search | US, CA, UK",
+        "locations": [
+          {
+            "country": "United States",
+            "bid_adjustment": 0
+          },
+          {
+            "country": "Canada",
+            "bid_adjustment": 15
+          },
+          {
+            "country": "United Kingdom",
+            "bid_adjustment": 0
+          }
+        ],
+        "location_intent": "PeopleIn"
+      },
+      {
+        "campaign": "Clinics | Search | US, CA, UK",
+        "locations": [
+          {
+            "country": "United States",
+            "bid_adjustment": 0
+          },
+          {
+            "country": "Canada",
+            "bid_adjustment": 0
+          },
+          {
+            "country": "United Kingdom",
+            "bid_adjustment": 0
+          }
+        ],
+        "location_intent": "PeopleIn"
+      },
+      {
+        "campaign": "Fitness | Search | US, CA, UK",
+        "locations": [
+          {
+            "country": "United States",
+            "bid_adjustment": 0
+          },
+          {
+            "country": "Canada",
+            "bid_adjustment": 0
+          },
+          {
+            "country": "United Kingdom",
+            "bid_adjustment": 0
+          }
+        ],
+        "location_intent": "PeopleIn"
+      }
+    ],
+    "user_location_report": [
+      {
+        "campaign": "Brand | Search | US, CA, UK",
+        "country": "United States",
+        "clicks": 449,
+        "spend": 537.34,
+        "conversions": 35
+      },
+      {
+        "campaign": "Brand | Search | US, CA, UK",
+        "country": "Canada",
+        "clicks": 49,
+        "spend": 55.7,
+        "conversions": 3
+      },
+      {
+        "campaign": "Brand | Search | US, CA, UK",
+        "country": "United Kingdom",
+        "clicks": 47,
+        "spend": 58.98,
+        "conversions": 3
+      },
+      {
+        "campaign": "Brand | Search | US, CA, UK",
+        "country": "Other countries",
+        "clicks": 3,
+        "spend": 3.28,
+        "conversions": 0
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "country": "United States",
+        "clicks": 1755,
+        "spend": 4903.81,
+        "conversions": 54
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "country": "Canada",
+        "clicks": 192,
+        "spend": 508.32,
+        "conversions": 4
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "country": "United Kingdom",
+        "clicks": 182,
+        "spend": 538.22,
+        "conversions": 5
+      },
+      {
+        "campaign": "Booking Software | Search | US, CA, UK",
+        "country": "Other countries",
+        "clicks": 11,
+        "spend": 29.9,
+        "conversions": 0
+      },
+      {
+        "campaign": "Salons | Search | US, CA, UK",
+        "country": "United States",
+        "clicks": 742,
+        "spend": 1955.37,
+        "conversions": 35
+      },
+      {
+        "campaign": "Salons | Search | US, CA, UK",
+        "country": "Canada",
+        "clicks": 81,
+        "spend": 202.69,
+        "conversions": 0
+      },
+      {
+        "campaign": "Salons | Search | US, CA, UK",
+        "country": "United Kingdom",
+        "clicks": 77,
+        "spend": 214.62,
+        "conversions": 3
+      },
+      {
+        "campaign": "Salons | Search | US, CA, UK",
+        "country": "Other countries",
+        "clicks": 5,
+        "spend": 11.92,
+        "conversions": 0
+      },
+      {
+        "campaign": "Clinics | Search | US, CA, UK",
+        "country": "United States",
+        "clicks": 666,
+        "spend": 2388.5,
+        "conversions": 19
+      },
+      {
+        "campaign": "Clinics | Search | US, CA, UK",
+        "country": "Canada",
+        "clicks": 73,
+        "spend": 247.59,
+        "conversions": 1
+      },
+      {
+        "campaign": "Clinics | Search | US, CA, UK",
+        "country": "United Kingdom",
+        "clicks": 69,
+        "spend": 262.15,
+        "conversions": 2
+      },
+      {
+        "campaign": "Clinics | Search | US, CA, UK",
+        "country": "Other countries",
+        "clicks": 4,
+        "spend": 14.56,
+        "conversions": 0
+      },
+      {
+        "campaign": "Fitness | Search | US, CA, UK",
+        "country": "United States",
+        "clicks": 189,
+        "spend": 525.09,
+        "conversions": 6
+      },
+      {
+        "campaign": "Fitness | Search | US, CA, UK",
+        "country": "Canada",
+        "clicks": 21,
+        "spend": 54.43,
+        "conversions": 0
+      },
+      {
+        "campaign": "Fitness | Search | US, CA, UK",
+        "country": "United Kingdom",
+        "clicks": 19,
+        "spend": 57.63,
+        "conversions": 1
+      },
+      {
+        "campaign": "Fitness | Search | US, CA, UK",
+        "country": "Other countries",
+        "clicks": 1,
+        "spend": 3.2,
+        "conversions": 0
+      }
+    ],
+    "geographic_report_location_type": "every row is Physical location",
+    "day_of_week": [
+      {
+        "day": "Sunday",
+        "time_period": 1,
+        "clicks": 240,
+        "spend": 751.2,
+        "conversions": 6
+      },
+      {
+        "day": "Monday",
+        "time_period": 2,
+        "clicks": 794,
+        "spend": 2271.9,
+        "conversions": 33
+      },
+      {
+        "day": "Tuesday",
+        "time_period": 3,
+        "clicks": 871,
+        "spend": 2209.67,
+        "conversions": 33
+      },
+      {
+        "day": "Wednesday",
+        "time_period": 4,
+        "clicks": 893,
+        "spend": 2470.1,
+        "conversions": 32
+      },
+      {
+        "day": "Thursday",
+        "time_period": 5,
+        "clicks": 801,
+        "spend": 2155.0,
+        "conversions": 34
+      },
+      {
+        "day": "Friday",
+        "time_period": 6,
+        "clicks": 712,
+        "spend": 1781.15,
+        "conversions": 24
+      },
+      {
+        "day": "Saturday",
+        "time_period": 7,
+        "clicks": 324,
+        "spend": 934.28,
+        "conversions": 9
+      }
+    ],
+    "hour_of_day": [
+      {
+        "hour": 0,
+        "clicks": 33,
+        "spend": 94.62,
+        "conversions": 0
+      },
+      {
+        "hour": 1,
+        "clicks": 32,
+        "spend": 88.53,
+        "conversions": 0
+      },
+      {
+        "hour": 2,
+        "clicks": 33,
+        "spend": 94.63,
+        "conversions": 0
+      },
+      {
+        "hour": 3,
+        "clicks": 33,
+        "spend": 92.07,
+        "conversions": 0
+      },
+      {
+        "hour": 4,
+        "clicks": 37,
+        "spend": 102.11,
+        "conversions": 0
+      },
+      {
+        "hour": 5,
+        "clicks": 31,
+        "spend": 88.83,
+        "conversions": 0
+      },
+      {
+        "hour": 6,
+        "clicks": 117,
+        "spend": 308.07,
+        "conversions": 4
+      },
+      {
+        "hour": 7,
+        "clicks": 117,
+        "spend": 303.13,
+        "conversions": 5
+      },
+      {
+        "hour": 8,
+        "clicks": 313,
+        "spend": 852.87,
+        "conversions": 9
+      },
+      {
+        "hour": 9,
+        "clicks": 369,
+        "spend": 992.35,
+        "conversions": 17
+      },
+      {
+        "hour": 10,
+        "clicks": 368,
+        "spend": 965.64,
+        "conversions": 13
+      },
+      {
+        "hour": 11,
+        "clicks": 356,
+        "spend": 1034.82,
+        "conversions": 13
+      },
+      {
+        "hour": 12,
+        "clicks": 374,
+        "spend": 962.65,
+        "conversions": 16
+      },
+      {
+        "hour": 13,
+        "clicks": 324,
+        "spend": 850.57,
+        "conversions": 13
+      },
+      {
+        "hour": 14,
+        "clicks": 364,
+        "spend": 1007.81,
+        "conversions": 15
+      },
+      {
+        "hour": 15,
+        "clicks": 363,
+        "spend": 994.62,
+        "conversions": 14
+      },
+      {
+        "hour": 16,
+        "clicks": 343,
+        "spend": 904.54,
+        "conversions": 14
+      },
+      {
+        "hour": 17,
+        "clicks": 205,
+        "spend": 573.2,
+        "conversions": 6
+      },
+      {
+        "hour": 18,
+        "clicks": 210,
+        "spend": 591.85,
+        "conversions": 8
+      },
+      {
+        "hour": 19,
+        "clicks": 192,
+        "spend": 496.89,
+        "conversions": 8
+      },
+      {
+        "hour": 20,
+        "clicks": 175,
+        "spend": 501.91,
+        "conversions": 7
+      },
+      {
+        "hour": 21,
+        "clicks": 77,
+        "spend": 220.27,
+        "conversions": 3
+      },
+      {
+        "hour": 22,
+        "clicks": 86,
+        "spend": 229.56,
+        "conversions": 3
+      },
+      {
+        "hour": 23,
+        "clicks": 83,
+        "spend": 221.76,
+        "conversions": 3
+      }
+    ],
+    "age": [
+      {
+        "age_group": "18-24",
+        "impressions": 6877
+      },
+      {
+        "age_group": "25-34",
+        "impressions": 27506
+      },
+      {
+        "age_group": "35-49",
+        "impressions": 30945
+      },
+      {
+        "age_group": "50-64",
+        "impressions": 13753
+      },
+      {
+        "age_group": "65+",
+        "impressions": 3438
+      },
+      {
+        "age_group": "Unknown",
+        "impressions": 32091
+      }
+    ],
+    "gender": [
+      {
+        "gender": "Female",
+        "impressions": 53867
+      },
+      {
+        "gender": "Male",
+        "impressions": 34383
+      },
+      {
+        "gender": "Unknown",
+        "impressions": 26360
+      }
+    ],
+    "linkedin_profile_targets": [
+      {
+        "ad_group": "Clinic scheduling",
+        "type": "Industry",
+        "value": "Hospital and health care",
+        "bid_adjustment": 20
+      },
+      {
+        "ad_group": "Physio and therapy",
+        "type": "Industry",
+        "value": "Hospital and health care",
+        "bid_adjustment": 20
+      }
+    ],
+    "get_audiences": [
+      {
+        "Id": "6100000001",
+        "Name": "All site visitors 30 days",
+        "Type": "RemarketingList",
+        "MembershipDuration": 30,
+        "UsedByCampaigns": 0
+      }
+    ]
+  }
+}

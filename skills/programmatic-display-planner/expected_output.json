@@ -1,0 +1,434 @@
+{
+  "header": {
+    "business": "Halvarra E-Bikes",
+    "run_date": "2026-10-28",
+    "currency": "USD",
+    "mode": "review, then plan",
+    "settings": "defaults kept (see plan_settings in the input)",
+    "sources": [
+      "pasted DSP export and quotes",
+      "google-ads",
+      "facebook-ads",
+      "google-analytics"
+    ]
+  },
+  "findings": [
+    "PR-OA-open (run of exchange) failed supply: invalid traffic 4.4%, viewable rate 45.0%, 0.34 GA4 sessions per click, 6.56 impressions per user a week against a cap of 5, and 38% of its spend on made-for-advertising domains. It is replaced by open auction on an allow list.",
+    "Its 31 view-through conversions are the most of any line; they are reported, never used in a verdict.",
+    "Retargeting and contextual PMP kept: confirmed CPA $240.00 and $260.00 against the $283.24 ceiling.",
+    "Video retune: viewable CPM $17.54 over the $15.00 ceiling and completion 66.0% under 70%. The plan caps video at a $8.77 media CPM.",
+    "The pool can absorb $6,704.94 at the cap, less than the $8,100.00 a 25% share would give it, so $1,395.06 moves to prospecting."
+  ],
+  "part_1_review": {
+    "window": "2026-09-01 to 2026-09-28 (4 weeks)",
+    "dsp": "DSP A",
+    "rule_order": "fix supply first, then too early, then keep, retune (up to 1.5x the ceiling) or cut",
+    "lines": [
+      {
+        "line": "RT-OA-allowlist",
+        "deal_type": "open auction",
+        "inventory": "allow list of 400 domains and apps",
+        "purpose": "conversions",
+        "spend": 2400.0,
+        "impressions": 380000,
+        "all_in_cpm": 6.32,
+        "measured_share": 0.9211,
+        "viewable_rate": 0.76,
+        "viewable_cpm": 9.02,
+        "ivt_rate": 0.01,
+        "clicks": 950,
+        "ctr": 0.0025,
+        "ga4_sessions": 870,
+        "sessions_per_click": 0.92,
+        "ga4_engaged_sessions": 560,
+        "cost_per_engaged_session": 4.29,
+        "weekly_frequency": 3.06,
+        "weekly_cap": 10,
+        "cap_breached": false,
+        "dsp_click_through_conversions": 11,
+        "ga4_purchases": 10,
+        "confirmed_conversions": 10,
+        "view_through_conversions_reported_only": 19,
+        "viewability_graded": true,
+        "supply_problems": [],
+        "cpa_confirmed": 240.0,
+        "kpi": "confirmed CPA $240.00 vs $283.24 ceiling",
+        "verdict": "keep"
+      },
+      {
+        "line": "PR-OA-open",
+        "deal_type": "open auction",
+        "inventory": "run of exchange, no allow list",
+        "purpose": "conversions",
+        "spend": 3000.0,
+        "impressions": 1050000,
+        "all_in_cpm": 2.86,
+        "measured_share": 0.8571,
+        "viewable_rate": 0.45,
+        "viewable_cpm": 7.41,
+        "ivt_rate": 0.044,
+        "clicks": 2900,
+        "ctr": 0.0028,
+        "ga4_sessions": 980,
+        "sessions_per_click": 0.34,
+        "ga4_engaged_sessions": 210,
+        "cost_per_engaged_session": 14.29,
+        "weekly_frequency": 6.56,
+        "weekly_cap": 5,
+        "cap_breached": true,
+        "dsp_click_through_conversions": 2,
+        "ga4_purchases": 1,
+        "confirmed_conversions": 1,
+        "view_through_conversions_reported_only": 31,
+        "viewability_graded": true,
+        "supply_problems": [
+          "invalid traffic 4.4% is over the 2% ceiling",
+          "viewable rate 45.0% is under the 70% target",
+          "0.34 GA4 sessions per click: most clicks never reached the site"
+        ],
+        "cpa_confirmed": 3000.0,
+        "kpi": "confirmed CPA $3,000.00 vs $283.24 ceiling",
+        "verdict": "fix supply",
+        "frequency_note": "6.56 impressions per user per week is over the 5 cap: the cap is not being applied across devices or exchanges; check the line setting"
+      },
+      {
+        "line": "PR-PMP-context",
+        "deal_type": "private marketplace",
+        "inventory": "curated cycling and outdoor publishers",
+        "purpose": "conversions",
+        "spend": 2600.0,
+        "impressions": 398000,
+        "all_in_cpm": 6.53,
+        "measured_share": 0.9347,
+        "viewable_rate": 0.78,
+        "viewable_cpm": 8.96,
+        "ivt_rate": 0.006,
+        "clicks": 760,
+        "ctr": 0.0019,
+        "ga4_sessions": 690,
+        "sessions_per_click": 0.91,
+        "ga4_engaged_sessions": 470,
+        "cost_per_engaged_session": 5.53,
+        "weekly_frequency": 1.05,
+        "weekly_cap": 5,
+        "cap_breached": false,
+        "dsp_click_through_conversions": 10,
+        "ga4_purchases": 10,
+        "confirmed_conversions": 10,
+        "view_through_conversions_reported_only": 9,
+        "viewability_graded": true,
+        "supply_problems": [],
+        "cpa_confirmed": 260.0,
+        "kpi": "confirmed CPA $260.00 vs $283.24 ceiling",
+        "verdict": "keep"
+      },
+      {
+        "line": "PR-PMP-video15",
+        "deal_type": "private marketplace",
+        "inventory": "in-stream video on curated publishers",
+        "purpose": "awareness",
+        "spend": 1500.0,
+        "impressions": 120000,
+        "all_in_cpm": 12.5,
+        "measured_share": 0.95,
+        "viewable_rate": 0.75,
+        "viewable_cpm": 17.54,
+        "ivt_rate": 0.005,
+        "clicks": 140,
+        "ctr": 0.0012,
+        "ga4_sessions": 118,
+        "sessions_per_click": 0.84,
+        "ga4_engaged_sessions": 71,
+        "cost_per_engaged_session": 21.13,
+        "weekly_frequency": 0.58,
+        "weekly_cap": 5,
+        "cap_breached": false,
+        "dsp_click_through_conversions": 0,
+        "ga4_purchases": 0,
+        "confirmed_conversions": 0,
+        "view_through_conversions_reported_only": 6,
+        "viewability_graded": true,
+        "supply_problems": [],
+        "completion_rate": 0.66,
+        "kpi": "viewable CPM $17.54 vs $15.00 ceiling, completion 66.0% vs 70% target",
+        "verdict": "retune"
+      }
+    ],
+    "spend_by_deal_type": {
+      "open_auction": 5400.0,
+      "private_marketplace": 4100.0,
+      "open_auction_share": 0.5684
+    },
+    "made_for_advertising_spend": {
+      "line": "PR-OA-open",
+      "flagged_spend": 1140.0,
+      "share_of_line_spend": 0.38,
+      "flagged_domains": [
+        "dailyquizfun.example",
+        "slideshowworld.example",
+        "recipesinfinite.example"
+      ],
+      "note": "the domain-by-domain cleanup belongs to a placement and brand safety audit; this plan stops it by moving open auction onto an allow list"
+    }
+  },
+  "part_2_plan": {
+    "baselines": {
+      "window": "2026-07-30 to 2026-10-27 (90 days)",
+      "google_ads_by_channel_type": {
+        "SEARCH": {
+          "cost": 57000.0,
+          "conversions": 290.0,
+          "cpa": 196.55,
+          "cpc": 1.82,
+          "cpm": 121.02
+        },
+        "PERFORMANCE_MAX": {
+          "cost": 30000.0,
+          "conversions": 95.0,
+          "cpa": 315.79,
+          "cpc": 1.15,
+          "cpm": 10.34
+        },
+        "DISPLAY": {
+          "cost": 6000.0,
+          "conversions": 14.0,
+          "cpa": 428.57,
+          "cpc": 1.94,
+          "cpm": 2.5
+        }
+      },
+      "google_display_active_view": {
+        "viewable_share_of_measured": 0.62,
+        "viewable_cpm": 4.72,
+        "use": "context only: what Google's own Display already delivers"
+      },
+      "meta": {
+        "cpm": 15.0,
+        "cost_per_link_click": 1.5,
+        "cpa": 450.0
+      },
+      "blended_paid_cpa": {
+        "value": 283.24,
+        "math": "(Google Ads 93,000 + Meta 54,000) / (399 + 120) conversions"
+      }
+    },
+    "targets": {
+      "cpa_ceiling": {
+        "value": 283.24,
+        "source": "no target given, so the blended paid CPA over 90 days"
+      },
+      "viewable_cpm_ceiling": {
+        "value": 15.0,
+        "source": "Meta CPM over the same 90 days"
+      },
+      "cost_per_engaged_session_ceiling": {
+        "value": 1.5,
+        "source": "Meta cost per link click over the same 90 days"
+      },
+      "viewability_target": 0.7,
+      "ivt_ceiling": 0.02,
+      "video_completion_target": 0.7,
+      "min_measured_share": 0.5
+    },
+    "dsp_choice": {
+      "monthly_pace": 26000.0,
+      "need": [
+        "open auction",
+        "private marketplace",
+        "pre-bid invalid traffic and viewability filtering"
+      ],
+      "options": [
+        {
+          "dsp": "DSP A",
+          "service": "self-serve",
+          "passes": true,
+          "fails_because": [],
+          "all_in_cpm_at_5_media_cpm_with_contextual": 6.53
+        },
+        {
+          "dsp": "DSP B",
+          "service": "managed",
+          "passes": false,
+          "fails_because": [
+            "monthly minimum $30,000 is above the $26,000.00 monthly pace"
+          ],
+          "all_in_cpm_at_5_media_cpm_with_contextual": 7.2
+        },
+        {
+          "dsp": "DSP C",
+          "service": "self-serve",
+          "passes": false,
+          "fails_because": [
+            "cannot buy private marketplace",
+            "no pre-bid invalid traffic and viewability filtering"
+          ],
+          "all_in_cpm_at_5_media_cpm_with_contextual": 6.48
+        }
+      ],
+      "chosen": "DSP A",
+      "why": "DSP A is the only option that clears its minimum, buys both deal types and filters pre-bid"
+    },
+    "go_or_no_go": {
+      "decision": "go",
+      "why": "monthly pace clears DSP A's minimum and 3 conversion lines can each buy at least 20 conversions at the ceiling"
+    },
+    "audiences": {
+      "retargeting_pool": {
+        "ga4_users_30d": 41200,
+        "minus_purchasers": 212,
+        "pool": 40988,
+        "match_share": 0.45,
+        "usable_users": 18444,
+        "high_intent_tiers_ga4": {
+          "view_item": 18900,
+          "add_to_cart": 3050,
+          "begin_checkout": 1180
+        },
+        "max_impressions": 1106640,
+        "math": "18,444 users x 10 per week x 6 weeks",
+        "all_in_cpm": 6.06,
+        "max_budget": 6704.94,
+        "wanted_budget": 8100.0,
+        "budget": 6704.94,
+        "finding": "the pool can absorb $6,704.94 at the cap, less than the $8,100.00 a 25% share would give it, so $1,395.06 moves to prospecting"
+      },
+      "suppression": [
+        "6,400 past customers from the CRM list",
+        "GA4 purchasers in the last 30 days"
+      ],
+      "prospecting": "contextual (cycling, commuting, outdoor family) on private marketplace and allow-list open auction; the third-party in-market segment from the pilot is dropped with its supply"
+    },
+    "budget": {
+      "total": 36000,
+      "test_reserve": 3600.0,
+      "working": 32400.0,
+      "retargeting": 6704.94,
+      "prospecting": 25695.06,
+      "reserve_rule": "released after the week 3 review, only to lines marked keep, retargeting never above its max budget"
+    },
+    "lines": [
+      {
+        "line": "RT-OA-allowlist",
+        "purpose": "conversions",
+        "audience": "retargeting: usable site visitors, buyers and customers excluded",
+        "inventory": "open auction on the pilot's allow list",
+        "budget": 6704.94,
+        "forecast_media_cpm": 5.0,
+        "addon_cpm": 0.15,
+        "all_in_cpm": 6.06,
+        "expected_impressions": 1106640,
+        "weekly_cap": 10,
+        "min_reach_at_cap": 18444,
+        "utm": "utm_source=dsp-a&utm_medium=display&utm_campaign=holiday-2026-rt-oa-allowlist",
+        "readable": true,
+        "kpi": "confirmed CPA at or under $283.24",
+        "price_check": {
+          "pilot_confirmed_per_1000": 0.0263,
+          "max_all_in_cpm": 7.45,
+          "max_media_cpm": 6.18,
+          "ok": true
+        }
+      },
+      {
+        "line": "PR-PMP-context",
+        "purpose": "conversions",
+        "audience": "contextual: cycling, commuting, outdoor family",
+        "inventory": "private marketplace, curated cycling and outdoor publishers",
+        "budget": 12847.53,
+        "forecast_media_cpm": 5.0,
+        "addon_cpm": 0.55,
+        "all_in_cpm": 6.53,
+        "expected_impressions": 1967639,
+        "weekly_cap": 5,
+        "min_reach_at_cap": 65587,
+        "utm": "utm_source=dsp-a&utm_medium=display&utm_campaign=holiday-2026-pr-pmp-context",
+        "readable": true,
+        "kpi": "confirmed CPA at or under $283.24",
+        "price_check": {
+          "pilot_confirmed_per_1000": 0.0251,
+          "max_all_in_cpm": 7.12,
+          "max_media_cpm": 5.49,
+          "ok": true
+        }
+      },
+      {
+        "line": "PR-OA-allowlist",
+        "purpose": "conversions",
+        "audience": "contextual: cycling, commuting, outdoor family",
+        "inventory": "open auction on an allow list, replacing run of exchange",
+        "budget": 7708.52,
+        "forecast_media_cpm": 2.8,
+        "addon_cpm": 0.55,
+        "all_in_cpm": 3.94,
+        "expected_impressions": 1955893,
+        "weekly_cap": 5,
+        "min_reach_at_cap": 65196,
+        "utm": "utm_source=dsp-a&utm_medium=display&utm_campaign=holiday-2026-pr-oa-allowlist",
+        "readable": true,
+        "kpi": "confirmed CPA at or under $283.24",
+        "price_check": {
+          "ok": null,
+          "why": "no pilot history on this supply; judged at the week 3 review"
+        }
+      },
+      {
+        "line": "PR-PMP-video",
+        "purpose": "awareness",
+        "audience": "contextual: cycling and commuting video",
+        "inventory": "private marketplace, in-stream video, 6 and 15 second cuts",
+        "budget": 5139.01,
+        "forecast_media_cpm": 10.0,
+        "addon_cpm": 0.15,
+        "all_in_cpm": 11.94,
+        "expected_impressions": 430360,
+        "weekly_cap": 5,
+        "min_reach_at_cap": 14345,
+        "utm": "utm_source=dsp-a&utm_medium=video&utm_campaign=holiday-2026-pr-pmp-video",
+        "readable": null,
+        "kpi": "viewable CPM at or under $15.00 and completion at or above 70%",
+        "price_check": {
+          "expected_viewable_cpm": 17.06,
+          "max_all_in_cpm": 10.5,
+          "max_media_cpm": 8.77,
+          "ok": false
+        }
+      }
+    ],
+    "standards": {
+      "viewability": "MRC: display 50% of pixels on screen for 1 continuous second (30% for ads of 242,500 pixels or more), video 50% for 2 continuous seconds; target 70% of measured impressions",
+      "invalid_traffic": "pre-bid filtering for general and sophisticated invalid traffic through the verification vendor; ceiling 2% of impressions, and ask DSP A to credit flagged impressions",
+      "frequency": "5 per user per week on prospecting, 10 on retargeting, set at line level across devices"
+    },
+    "supply_rules": [
+      "buy only from sellers listed as authorized in each site's ads.txt or each app's app-ads.txt, and prefer DIRECT sellers",
+      "require a seller identified in the exchange's sellers.json and a complete supply chain object",
+      "open auction runs only on the allow list; no run of exchange",
+      "exclude domains the verification vendor flags as made for advertising, plus the three flagged in the pilot",
+      "prefer one or two exchanges per publisher where the same impression is offered through several"
+    ],
+    "deal_plan": {
+      "open_auction_share_of_working": 0.4449,
+      "programmatic_guaranteed": "not used: no single publisher is a must-have for this flight"
+    },
+    "measurement": [
+      "one tagged link per line (utm values in each line)",
+      "confirmed conversions = the lower of DSP click-through conversions and GA4 purchases from the line's tagged sessions",
+      "view-through conversions reported apart and never used in a verdict without a holdout test"
+    ],
+    "review_schedule": [
+      {
+        "date": "2026-11-24",
+        "what": "week 3 review on the same rules as Part 1; release the reserve"
+      },
+      {
+        "date": "2026-12-15",
+        "what": "end of flight review"
+      }
+    ],
+    "video_note": "forecast media CPM $10.00 gives an expected viewable CPM of $17.06, over the $15.00 ceiling: agree a deal price of no more than $8.77, or move its budget to PR-PMP-context"
+  },
+  "not_graded": [
+    "reach overlap between lines: the export gives reach per line only",
+    "brand lift and incrementality: no holdout in the pilot"
+  ]
+}

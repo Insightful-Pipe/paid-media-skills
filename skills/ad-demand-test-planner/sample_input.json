@@ -1,0 +1,297 @@
+{
+  "note": "Example data: an invented online booking software company testing an invented add-on, with invented accounts and results, not a real business. Every number in expected_output.json follows from this input.",
+  "request": "We want to add memberships and class packs for fitness studios at $29 a month but haven't built it. Plan a paid smoke test of three promises with a $2,000 cap, then read the results when it ends.",
+  "business": "Example Booking Software, an online booking and scheduling app for small service businesses (invented example)",
+  "site": "https://www.example.com",
+  "offer": {
+    "name": "Memberships and class packs add-on",
+    "what_it_does": "studios sell monthly memberships and class packs that renew and bill on their own, with failed-card retries",
+    "status": "not built yet; the team wants to know which promise sells it before building",
+    "price_month_usd": 29,
+    "buyer": "owners of boutique fitness, yoga and pilates studios in the US",
+    "country": "US",
+    "language": "en"
+  },
+  "user_inputs": {
+    "allowed_cost_per_customer_usd": 150,
+    "allowed_cost_source": "the user's own number: the most they will pay to win one add-on customer",
+    "signup_to_customer_rate": 0.2,
+    "signup_to_customer_source": "the user's estimate from their last two add-on waitlists",
+    "budget_cap_usd": 2000,
+    "latest_decision_date": "2026-10-23",
+    "test_type": "message test (three promises, one price)",
+    "variants": [
+      {
+        "id": "A",
+        "promise": "Recurring revenue",
+        "headline": "Turn drop-in clients into monthly members"
+      },
+      {
+        "id": "B",
+        "promise": "No more chasing payments",
+        "headline": "Memberships that bill themselves, so you stop chasing late payments"
+      },
+      {
+        "id": "C",
+        "promise": "Price first",
+        "headline": "Memberships and class packs for $29 a month"
+      }
+    ],
+    "signup_event": "waitlist_signup",
+    "page": "https://www.example.com/memberships-waitlist/"
+  },
+  "planning_pull": {
+    "pulled_on": "2026-10-01",
+    "google_ads": {
+      "customer_id": "1234567890",
+      "action": "generate_keyword_ideas",
+      "request": {
+        "keywords": [
+          "studio membership software",
+          "class pack software"
+        ],
+        "language": "en",
+        "locations": [
+          "US"
+        ],
+        "limit": 50
+      },
+      "rows": [
+        {
+          "keyword": "studio membership software",
+          "avg_monthly_searches": 260,
+          "low_top_of_page_bid": 2.8,
+          "high_top_of_page_bid": 9.6
+        },
+        {
+          "keyword": "class pack software",
+          "avg_monthly_searches": 110,
+          "low_top_of_page_bid": 2.35,
+          "high_top_of_page_bid": 8.9
+        },
+        {
+          "keyword": "sell class packs online",
+          "avg_monthly_searches": 90,
+          "low_top_of_page_bid": 1.95,
+          "high_top_of_page_bid": 6.4
+        },
+        {
+          "keyword": "recurring billing for fitness studios",
+          "avg_monthly_searches": 70,
+          "low_top_of_page_bid": 3.1,
+          "high_top_of_page_bid": 11.2
+        },
+        {
+          "keyword": "pilates studio software",
+          "avg_monthly_searches": 1300,
+          "low_top_of_page_bid": 3.4,
+          "high_top_of_page_bid": 12.5
+        },
+        {
+          "keyword": "gym membership software free",
+          "avg_monthly_searches": 480,
+          "low_top_of_page_bid": 1.1,
+          "high_top_of_page_bid": 4.2
+        },
+        {
+          "keyword": "competitor a memberships",
+          "avg_monthly_searches": 210,
+          "low_top_of_page_bid": 1.6,
+          "high_top_of_page_bid": 5.3
+        }
+      ]
+    },
+    "facebook_ads": {
+      "ad_account_id": "act_100000000000001",
+      "search_interests": [
+        {
+          "id": "6000000000001",
+          "name": "Pilates",
+          "audience_size_lower_bound": 21400000,
+          "audience_size_upper_bound": 25200000
+        },
+        {
+          "id": "6000000000002",
+          "name": "Yoga studio",
+          "audience_size_lower_bound": 3100000,
+          "audience_size_upper_bound": 3650000
+        },
+        {
+          "id": "6000000000003",
+          "name": "Small business owners",
+          "audience_size_lower_bound": 48700000,
+          "audience_size_upper_bound": 57300000
+        }
+      ],
+      "estimate_audience_size": {
+        "targeting_spec": {
+          "geo_locations": {
+            "countries": [
+              "US"
+            ]
+          },
+          "age_min": 25,
+          "age_max": 60,
+          "flexible_spec": [
+            {
+              "interests": [
+                {
+                  "id": "6000000000001"
+                },
+                {
+                  "id": "6000000000002"
+                }
+              ]
+            },
+            {
+              "interests": [
+                {
+                  "id": "6000000000003"
+                }
+              ]
+            }
+          ]
+        },
+        "result": {
+          "users_lower_bound": 412000,
+          "users_upper_bound": 485000,
+          "estimate_ready": true
+        }
+      },
+      "get_minimum_budgets": {
+        "currency": "USD",
+        "min_daily_budget_imp": 100,
+        "min_daily_budget_high_freq": 500,
+        "min_daily_budget_low_freq": 4000
+      },
+      "get_insights_adaccount_last_90_days": {
+        "date_range": [
+          "2026-07-03",
+          "2026-09-30"
+        ],
+        "spend": 3840.0,
+        "inline_link_clicks": 2704,
+        "impressions": 301200
+      }
+    },
+    "google_analytics": {
+      "property_id": "properties/123456789",
+      "get_report_last_90_days": {
+        "date_range": [
+          "2026-07-03",
+          "2026-09-30"
+        ],
+        "sessionSource": "facebook",
+        "sessionMedium": "paid",
+        "sessions": 2217
+      }
+    },
+    "linkedin_ads": {
+      "ad_account_id": "500000001",
+      "get_budget_pricing": {
+        "bid_type": "CPC",
+        "campaign_type": "SPONSORED_UPDATES",
+        "match_type": "EXACT",
+        "targeting": "US; job titles Studio Owner, Gym Owner, Fitness Studio Manager",
+        "suggestedBid": {
+          "min": "8.15",
+          "default": "11.40",
+          "max": "19.60"
+        },
+        "dailyBudgetLimits": {
+          "min": "10.0",
+          "default": "250.0"
+        }
+      }
+    },
+    "reddit": "No Reddit Ads connector; the user has no Reddit Ads costs to paste."
+  },
+  "results_pull": {
+    "pulled_on": "2026-10-21",
+    "test_window": [
+      "2026-10-06",
+      "2026-10-19"
+    ],
+    "facebook_ads_get_insights_adaccount_level_ad": [
+      {
+        "ad_name": "smoke-memberships | A recurring revenue",
+        "adset_name": "A",
+        "spend": 527.4,
+        "impressions": 41230,
+        "inline_link_clicks": 368,
+        "actions": [
+          {
+            "action_type": "lead",
+            "value": "15"
+          }
+        ]
+      },
+      {
+        "ad_name": "smoke-memberships | B no chasing payments",
+        "adset_name": "B",
+        "spend": 521.85,
+        "impressions": 39870,
+        "inline_link_clicks": 381,
+        "actions": [
+          {
+            "action_type": "lead",
+            "value": "29"
+          }
+        ]
+      },
+      {
+        "ad_name": "smoke-memberships | C price first",
+        "adset_name": "C",
+        "spend": 530.1,
+        "impressions": 42560,
+        "inline_link_clicks": 359,
+        "actions": [
+          {
+            "action_type": "lead",
+            "value": "7"
+          }
+        ]
+      }
+    ],
+    "google_analytics_get_report": {
+      "dimensions": [
+        "sessionCampaignName",
+        "sessionManualAdContent"
+      ],
+      "metrics": [
+        "sessions",
+        "keyEvents:waitlist_signup"
+      ],
+      "date_range": [
+        "2026-10-06",
+        "2026-10-19"
+      ],
+      "rows": [
+        {
+          "sessionCampaignName": "smoke-studio-memberships",
+          "sessionManualAdContent": "a",
+          "sessions": 298,
+          "keyEvents:waitlist_signup": 14
+        },
+        {
+          "sessionCampaignName": "smoke-studio-memberships",
+          "sessionManualAdContent": "b",
+          "sessions": 316,
+          "keyEvents:waitlist_signup": 27
+        },
+        {
+          "sessionCampaignName": "smoke-studio-memberships",
+          "sessionManualAdContent": "c",
+          "sessions": 291,
+          "keyEvents:waitlist_signup": 7
+        },
+        {
+          "sessionCampaignName": "retargeting-trial",
+          "sessionManualAdContent": "(not set)",
+          "sessions": 1184,
+          "keyEvents:waitlist_signup": 0
+        }
+      ]
+    }
+  }
+}

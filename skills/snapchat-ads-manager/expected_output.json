@@ -1,0 +1,505 @@
+{
+  "header": {
+    "account": "Example Booking Software (Snapchat ad account)",
+    "currency": "USD",
+    "time_zone": "America/New_York",
+    "window": "2026-09-28 to 2026-10-27",
+    "previous_period": "2026-08-29 to 2026-09-27",
+    "attribution": "28-day swipe, 1-day view (Snapchat's defaults)",
+    "data_freshness": "finalised through 2026-10-26T04:00:00.000Z; 2026-10-26, 2026-10-27 are provisional",
+    "grade": 80,
+    "rating": "needs work"
+  },
+  "client_summary": [
+    "Snapchat spent $4,768.23 in the last 30 days (+27.2% on the month before) across prospecting, retargeting and one traffic campaign.",
+    "It brought 350 sign-ups at $12.31 each ($10.36 the month before) and 553 visits to the salon page.",
+    "The one change for next month: stop paying 1.8 times as much for sign-ups on the Between Stories squad, and move that money to automatic placements."
+  ],
+  "kpis": {
+    "window": "2026-09-28 to 2026-10-27",
+    "previous_period": "2026-08-29 to 2026-09-27",
+    "rows": [
+      {
+        "metric": "Spend",
+        "value": "$4,768.23",
+        "previous": "$3,749.22",
+        "change": "+27.2%"
+      },
+      {
+        "metric": "Impressions",
+        "value": 659264,
+        "previous": 549005,
+        "change": "+20.1%"
+      },
+      {
+        "metric": "Reach (uniques, summed over ad squads)",
+        "value": 316642,
+        "previous": 257723,
+        "change": "+22.9%"
+      },
+      {
+        "metric": "Frequency",
+        "value": 2.08,
+        "previous": 2.13,
+        "change": "-2.3%"
+      },
+      {
+        "metric": "Swipes",
+        "value": 5728,
+        "previous": 4936,
+        "change": "+16.0%"
+      },
+      {
+        "metric": "Swipe-up rate",
+        "value": "0.87%",
+        "previous": "0.90%",
+        "change": "-3.4%"
+      },
+      {
+        "metric": "Results: sign-ups (conversion_sign_ups, goal PIXEL_SIGNUP, 3 ad squads)",
+        "value": 350,
+        "previous": 320,
+        "change": "+9.4%"
+      },
+      {
+        "metric": "Cost per sign-up",
+        "value": "$12.31",
+        "previous": "$10.36",
+        "change": "+18.8%"
+      },
+      {
+        "metric": "Results: landing page views (landing_page_views, goal LANDING_PAGE_VIEW, 1 ad squad)",
+        "value": 553,
+        "previous": 520,
+        "change": "+6.3%"
+      },
+      {
+        "metric": "Cost per landing page view",
+        "value": "$0.83",
+        "previous": "$0.83",
+        "change": "+0.0%"
+      }
+    ]
+  },
+  "scorecard": [
+    {
+      "area": "Delivery and spend",
+      "result": "warn",
+      "key_number": "frequency 4.62 on 'Website visitors 30 days'",
+      "why": "3 campaigns, 4 ad squads and 7 ads are active, all approved and delivering. Every squad spent at least 77% of its budget capacity, with spend on every day. The retargeting squad reached each person 4.62 times in 30 days, above 4, and its swipe-up rate fell every full week: 1.50%, 1.45%, 1.38%, 1.33%."
+    },
+    {
+      "area": "Measurement: Snap Pixel and Conversions API",
+      "result": "warn",
+      "key_number": "1 of 4 website ad squads has no pixel",
+      "why": "'Salon pros | Landing page views' sends swipes to the salon page with no pixel_id, so its $459.88 buys page views but nothing after them is counted. The three sign-up squads carry the pixel and record sign-ups. Swipe to page: 73% to 84% of swipes load the page, above the 50% line. Pixel page views are 91% of landing page views on the sign-up squads. Conversions API: unknown through this connection."
+    },
+    {
+      "area": "Swipe-ups and attention",
+      "result": "warn",
+      "key_number": "weak hook holds 27% of 'Sign-ups | Prospecting' spend",
+      "why": "'Image | Feature list' swipes up at 0.36%, under half the campaign's impression-weighted 0.77%, and people watch it for 1.3 s against 2.4 s or more on the videos. It takes 27% of the campaign's spend, above the 25% warn line. No Story ads, so no story opens or position stats."
+    },
+    {
+      "area": "Video completion",
+      "result": "pass",
+      "key_number": "4 video ads; lowest share of views reaching 25%: 63%",
+      "why": "Every video ad keeps at least half of its views to the first quartile, so the openings hold. The biggest step down is start to 25% on all 4 (34% to 37% of views leave); after that the curves fall slowly to 29% to 35% completion. On the 20-second video, 37% of views reach 15 seconds across its 3 ads."
+    },
+    {
+      "area": "Placement and position",
+      "result": "warn",
+      "key_number": "Between Stories only: $27.14 a sign-up against $15.48 on automatic",
+      "why": "Same goal and same interest targeting: 'Interests | Between Stories only' (CUSTOM, INTERSTITIAL_USER) costs 1.75 times 'Interests | Automatic placements' per sign-up, above the 1.5 times warn line. The retargeting squad is left out of the comparison because it reaches warm site visitors."
+    },
+    {
+      "area": "Audiences and demographics",
+      "result": "pass",
+      "key_number": "3 audiences, 1 targeted",
+      "why": "The retargeting squad targets 'Website visitors 30 days' (41,000 users) and excludes paying customers; it costs $4.95 a sign-up against $18.72 on the interest squads. 'Lookalike: sign-ups, US' (1,600,000 users) is ready but unused. Interest ids SLC_71, SLC_84 are shown as ids. Age, gender and location split: unknown through this connection."
+    },
+    {
+      "area": "Cost per result trend",
+      "result": "pass",
+      "key_number": "largest rise +17% ('Sign-ups | Retargeting')",
+      "why": "4 full weeks, with the last 2 days dropped as a partial week. First full week to last: 'Sign-ups | Prospecting' $19.06 to $18.50 (-3%); 'Sign-ups | Retargeting' $4.61 to $5.41 (+17%); 'Traffic | Salon industry page' $0.82 to $0.84 (+2%). All under the 25% warn line, though retargeting is climbing with its frequency."
+    },
+    {
+      "area": "Catalog: Dynamic Product Ads",
+      "result": "not used",
+      "key_number": "0 catalog campaigns",
+      "why": "No CATALOG_SALES campaign and no ad squad with product_properties."
+    }
+  ],
+  "grade_math": "100 - 5 x 4 warns - 12 x 0 fails = 80; 1 of 8 areas not used (catalog), which costs nothing. 80 needs work.",
+  "top_fixes": [
+    {
+      "rank": 1,
+      "area": "Placement and position",
+      "fix": "Move the 'Interests | Between Stories only' budget to 'Interests | Automatic placements', or switch that squad to automatic placements",
+      "spend_affected": 1411.33,
+      "evidence": "get_campaign_stats breakdown adsquad: $27.14 a sign-up on CUSTOM against $15.48 on AUTOMATIC, same goal and targeting",
+      "who": "do this in Snapchat Ads Manager; budget and placement edits on live squads are left to you"
+    },
+    {
+      "rank": 2,
+      "area": "Swipe-ups and attention",
+      "fix": "Pause 'Image | Feature list' and let the two videos take its share",
+      "spend_affected": 935.17,
+      "evidence": "breakdown ad: swipe-up rate 0.36% against 0.77% for the campaign; $49.22 a sign-up against the campaign's $18.72",
+      "who": "I can do this now (after your yes): the update_ad payload is under pause_candidates"
+    },
+    {
+      "rank": 3,
+      "area": "Delivery and spend",
+      "fix": "Give the retargeting squad a new creative from the headlines below, and widen its audience past 30 days of visitors",
+      "spend_affected": 807.24,
+      "evidence": "frequency 4.62; swipe-up rate by full week 1.50%, 1.45%, 1.38%, 1.33%",
+      "who": "I can do this now (after your yes): create a paused creative and ad in that squad. Do this in Snapchat Ads Manager: switch the new ad on, and change the audience window."
+    },
+    {
+      "rank": 4,
+      "area": "Measurement",
+      "fix": "Attach the Snap Pixel (91c5e100-0000-4000-8000-000000000001) to 'Salon pros | Landing page views' so its visitors' sign-ups are counted",
+      "spend_affected": 459.88,
+      "evidence": "get_adsquads: child_ad_type REMOTE_WEBPAGE and no pixel_id; conversion_sign_ups 0 on 553 landing page views",
+      "who": "do this in Snapchat Ads Manager; this connection has no action that edits a squad's pixel"
+    }
+  ],
+  "ads": [
+    {
+      "ad": "Video | Booked while you work | Stories",
+      "ad_squad": "Interests | Between Stories only",
+      "creative": "video 20 s, headline 'Get booked while you work', CTA SIGN_UP",
+      "status": "ACTIVE",
+      "spend": 1411.33,
+      "impressions": 133010,
+      "swipes": 1131,
+      "swipe_up_rate": "0.85%",
+      "avg_screen_time_s": 2.4,
+      "results": 52,
+      "result_field": "conversion_sign_ups",
+      "cost_per_result": 27.14,
+      "verdict": "1.45 times the campaign's cost per sign-up"
+    },
+    {
+      "ad": "Image | Feature list",
+      "ad_squad": "Interests | Automatic placements",
+      "creative": "image, headline 'Booking, reminders and payments', CTA SIGN_UP",
+      "status": "ACTIVE",
+      "spend": 935.17,
+      "impressions": 152965,
+      "swipes": 558,
+      "swipe_up_rate": "0.36%",
+      "avg_screen_time_s": 1.3,
+      "results": 19,
+      "result_field": "conversion_sign_ups",
+      "cost_per_result": 49.22,
+      "verdict": "weak hook: swipe-up rate 0.36% is under half the campaign's 0.77%, and cost per sign-up is 2.6 times the campaign's"
+    },
+    {
+      "ad": "Video | Booked while you work",
+      "ad_squad": "Interests | Automatic placements",
+      "creative": "video 20 s, headline 'Get booked while you work', CTA SIGN_UP",
+      "status": "ACTIVE",
+      "spend": 703.61,
+      "impressions": 110433,
+      "swipes": 1226,
+      "swipe_up_rate": "1.11%",
+      "avg_screen_time_s": 2.9,
+      "results": 78,
+      "result_field": "conversion_sign_ups",
+      "cost_per_result": 9.02,
+      "verdict": "0.48 times the campaign's cost per sign-up"
+    },
+    {
+      "ad": "Video | Booked while you work | Retargeting",
+      "ad_squad": "Website visitors 30 days",
+      "creative": "video 20 s, headline 'Get booked while you work', CTA SIGN_UP",
+      "status": "ACTIVE",
+      "spend": 482.25,
+      "impressions": 58719,
+      "swipes": 910,
+      "swipe_up_rate": "1.55%",
+      "avg_screen_time_s": 3.1,
+      "results": 111,
+      "result_field": "conversion_sign_ups",
+      "cost_per_result": 4.34,
+      "verdict": "0.88 times the campaign's cost per sign-up"
+    },
+    {
+      "ad": "Image | Built for salons",
+      "ad_squad": "Salon pros | Landing page views",
+      "creative": "image, headline 'Booking built for salons', CTA MORE",
+      "status": "ACTIVE",
+      "spend": 459.88,
+      "impressions": 94009,
+      "swipes": 757,
+      "swipe_up_rate": "0.81%",
+      "avg_screen_time_s": 1.7,
+      "results": 553,
+      "result_field": "landing_page_views",
+      "cost_per_result": 0.83,
+      "verdict": "1.00 times the campaign's cost per landing page view"
+    },
+    {
+      "ad": "Video | No-show reminders",
+      "ad_squad": "Interests | Automatic placements",
+      "creative": "video 12 s, headline 'Reminders that cut no-shows', CTA SIGN_UP",
+      "status": "ACTIVE",
+      "spend": 450.99,
+      "impressions": 70379,
+      "swipes": 669,
+      "swipe_up_rate": "0.95%",
+      "avg_screen_time_s": 2.6,
+      "results": 38,
+      "result_field": "conversion_sign_ups",
+      "cost_per_result": 11.87,
+      "verdict": "0.63 times the campaign's cost per sign-up"
+    },
+    {
+      "ad": "Image | Booking page ready",
+      "ad_squad": "Website visitors 30 days",
+      "creative": "image, headline 'Your own booking page, today', CTA SIGN_UP",
+      "status": "ACTIVE",
+      "spend": 325.0,
+      "impressions": 39749,
+      "swipes": 477,
+      "swipe_up_rate": "1.20%",
+      "avg_screen_time_s": 1.9,
+      "results": 52,
+      "result_field": "conversion_sign_ups",
+      "cost_per_result": 6.25,
+      "verdict": "1.26 times the campaign's cost per sign-up"
+    }
+  ],
+  "unknowns": [
+    "Conversions API: there is no event-source action in this connection; check Snapchat Events Manager for events from both pixel and server, with deduplication on.",
+    "Age, gender and location split: the connection doesn't pass report_dimension to Snapchat, so only the targeting can be shown.",
+    "Interest names: the squads target interest ids SLC_71, SLC_84, reported as ids.",
+    "Provisional days: 2026-10-26, 2026-10-27 are after finalized_data_end_time and can still move; they fall in the dropped partial week."
+  ],
+  "pause_candidates": {
+    "target_used": "each campaign's own cost per result, since no target was given",
+    "ads": [
+      {
+        "ad": "Image | Feature list",
+        "impressions": 152965,
+        "spend": 935.17,
+        "results": 19,
+        "cost_per_result": 49.22,
+        "target": 18.72,
+        "times_target": 2.63,
+        "days_running": 30,
+        "rule_met": "ACTIVE, 152,965 impressions, ran 30 days at more than 2 times the target cost per result; 2 other ads stay active in its squad",
+        "payload": {
+          "workspace_id": 1,
+          "brand_id": 1,
+          "ad_account_id": "5ad0acc7-0000-4000-8000-000000000001",
+          "action": "update_ad",
+          "ad_squad_id": "5a0d0000-0000-4000-8000-000000000001",
+          "ad_id": "ad000000-0000-4000-8000-000000000003",
+          "status": "PAUSED"
+        },
+        "run": "not run: waiting for your yes"
+      }
+    ]
+  },
+  "headlines": {
+    "source_ad": "Video | Booked while you work | Retargeting",
+    "source_headline": "Get booked while you work",
+    "source_angle": "booked while you work, for busy service pros",
+    "source_status": "best ad: lowest cost per sign-up with 1,000+ impressions ($4.34, warm audience). The same creative is also the best cold ad, 'Video | Booked while you work' at $9.02.",
+    "variants": [
+      {
+        "headline": "Clients book you while you work",
+        "characters": 31,
+        "angle": "booked while you work, client's view",
+        "change": "Makes the client the one acting: they book, you keep working"
+      },
+      {
+        "headline": "Get booked between appointments",
+        "characters": 31,
+        "angle": "booked during the workday, said as when",
+        "change": "Swaps 'while you work' for the moment it happens"
+      },
+      {
+        "headline": "Take bookings while you work",
+        "characters": 28,
+        "angle": "booked while you work, owner in control",
+        "change": "Swaps 'get booked' for 'take bookings': the owner stays in charge"
+      },
+      {
+        "headline": "Stop answering booking texts",
+        "characters": 28,
+        "angle": "the hassle it removes",
+        "change": "Swaps the benefit for the chore it ends"
+      },
+      {
+        "headline": "Who's booking you right now?",
+        "characters": 28,
+        "angle": "curiosity, booked while you work",
+        "change": "Swaps the claim for a question that opens the Snap"
+      }
+    ]
+  },
+  "scripts": [
+    {
+      "length_s": 6,
+      "format": "vertical 9:16",
+      "cta": "SIGN_UP",
+      "beats": [
+        "0-1 s: a barber mid-cut while a phone on the counter lights up with 'New booking'",
+        "1-2 s: the Example Booking Software booking page on that phone, logo on screen",
+        "2-5 s: a client picks a time and confirms; caption 'Clients book you while you work'",
+        "5-6 s: the logo again and the Sign Up button"
+      ]
+    },
+    {
+      "length_s": 10,
+      "format": "vertical 9:16",
+      "cta": "SIGN_UP",
+      "beats": [
+        "0-1 s: hook 'Who's booking you right now?' over a nail tech's hands at work",
+        "1-3 s: the Example Booking Software logo and the booking page filling with a new appointment",
+        "3-8 s: the reminder text the client gets, then the client arriving on time",
+        "8-10 s: caption 'Take bookings while you work', logo and the Sign Up button"
+      ]
+    }
+  ],
+  "campaign_draft": {
+    "brief": {
+      "goal": "sign-ups",
+      "audience": "the account's lookalike audience of people who signed up",
+      "daily_budget": "$40",
+      "landing_page": "https://www.example.com/signup/",
+      "start": "next Monday"
+    },
+    "plan": "One paused sign-up campaign, one ad squad at $40.00 a day optimising for PIXEL_SIGNUP on the lookalike, one creative with headline 'Clients book you while you work' on the best ad's video, and one ad. It starts 2026-11-02 once you switch it on.",
+    "before_you_approve": [
+      "If Snapchat refuses the ad squad without bid_micro, what is the most you would pay per sign-up? I'd put it in bid_micro and retry step 2 only.",
+      "The creative uses the Public Profile already on your live creatives (9f0f11e0-0000-4000-8000-000000000001). Say if you want a different profile."
+    ],
+    "if_a_step_is_refused": "I stop at that step, quote the error and report what was created. Everything created is paused, so it spends nothing; this connection can't delete, so leftovers are removed in Snapchat Ads Manager.",
+    "payloads": [
+      {
+        "step": 1,
+        "action": "create_campaign",
+        "run": "not run",
+        "body": {
+          "workspace_id": 1,
+          "brand_id": 1,
+          "ad_account_id": "5ad0acc7-0000-4000-8000-000000000001",
+          "action": "create_campaign",
+          "name": "2026-11-02 | Sign-ups | Lookalike",
+          "start_time": "2026-11-02T05:00:00.000Z",
+          "status": "PAUSED",
+          "objective_v2_properties": {
+            "objective_v2_type": "SALES"
+          }
+        },
+        "why": "objective_v2_properties copied from 'Sign-ups | Prospecting', the account's own sign-up campaign; no campaign budget, so the squad budget paces it, as on the live campaigns"
+      },
+      {
+        "step": 2,
+        "action": "create_adsquad",
+        "run": "not run",
+        "body": {
+          "workspace_id": 1,
+          "brand_id": 1,
+          "ad_account_id": "5ad0acc7-0000-4000-8000-000000000001",
+          "action": "create_adsquad",
+          "campaign_id": "<campaign id returned by step 1>",
+          "name": "2026-11-02 | Sign-ups | Lookalike | Automatic placements",
+          "type": "SNAP_ADS",
+          "billing_event": "IMPRESSION",
+          "optimization_goal": "PIXEL_SIGNUP",
+          "pixel_id": "91c5e100-0000-4000-8000-000000000001",
+          "placement_v2": {
+            "config": "AUTOMATIC"
+          },
+          "targeting": {
+            "geos": [
+              {
+                "country_code": "us",
+                "operation": "INCLUDE"
+              }
+            ],
+            "demographics": [
+              {
+                "min_age": "21",
+                "max_age": "34"
+              }
+            ],
+            "segments": [
+              {
+                "segment_id": [
+                  "5e6e0000-0000-4000-8000-000000000003"
+                ],
+                "operation": "INCLUDE"
+              },
+              {
+                "segment_id": [
+                  "5e6e0000-0000-4000-8000-000000000001",
+                  "5e6e0000-0000-4000-8000-000000000002"
+                ],
+                "operation": "EXCLUDE"
+              }
+            ],
+            "enable_targeting_expansion": false
+          },
+          "bid_strategy": "AUTO_BID",
+          "daily_budget_micro": 40000000,
+          "status": "PAUSED"
+        },
+        "why": "The pixel is attached and records sign-ups on the live squads, so the squad optimises for PIXEL_SIGNUP with the same pixel_id. Geos and ages copied from 'Interests | Automatic placements'; the interests are replaced by the lookalike 'Lookalike: sign-ups, US' (1,600,000 users), with site visitors and paying customers excluded so this squad doesn't pay for people the retargeting squad already reaches. Automatic placements, because the Between Stories squad costs 1.8 times as much per sign-up. bid_strategy AUTO_BID copied from the live squads, which have no bid_micro, so bid_micro is left out. The helper lists bid_micro as required, so this may be refused; if it is, step 2 is retried with the fallback bid cap you give under before_you_approve, and the paused campaign from step 1 is reused."
+      },
+      {
+        "step": 3,
+        "action": "create_creative",
+        "run": "not run",
+        "body": {
+          "workspace_id": 1,
+          "brand_id": 1,
+          "ad_account_id": "5ad0acc7-0000-4000-8000-000000000001",
+          "action": "create_creative",
+          "name": "2026-11-02 | Sign-ups | Lookalike | Creative",
+          "headline": "Clients book you while you work",
+          "top_snap_media_id": "3ed1a000-0000-4000-8000-000000000001",
+          "type": "WEB_VIEW",
+          "call_to_action": "SIGN_UP",
+          "profile_properties": {
+            "profile_id": "9f0f11e0-0000-4000-8000-000000000001"
+          },
+          "web_view_properties": {
+            "url": "https://www.example.com/signup/?utm_source=snapchat&utm_medium=paid_social&utm_campaign=lookalike"
+          }
+        },
+        "why": "Reuses the best ad's READY video (booked-while-you-work-20s.mp4, 20 s, 1080x1920) because this connection can't upload media, with headline variant 1. profile_properties.profile_id copied from the live creative (Snapchat requires a profile on every creative). The account's UTM keys (utm_source, utm_medium, utm_campaign) go in the URL, because create_creative doesn't take url_macro_parameters."
+      },
+      {
+        "step": 4,
+        "action": "create_ad",
+        "run": "not run",
+        "body": {
+          "workspace_id": 1,
+          "brand_id": 1,
+          "ad_account_id": "5ad0acc7-0000-4000-8000-000000000001",
+          "action": "create_ad",
+          "ad_squad_id": "<ad squad id returned by step 2>",
+          "creative_id": "<creative id returned by step 3>",
+          "name": "2026-11-02 | Sign-ups | Lookalike | Ad",
+          "type": "REMOTE_WEBPAGE",
+          "status": "PAUSED"
+        },
+        "why": "Same ad type as the live ads (REMOTE_WEBPAGE for a WEB_VIEW creative); created paused for you to switch on"
+      }
+    ]
+  },
+  "go_deeper": [
+    "conversion-tracking-auditor (if installed) to check the pixel and Conversions API setup end to end",
+    "ad-creative-fatigue-detector (if installed) for the retargeting creative's falling swipe-up rate",
+    "marketing-performance-report (if installed) to put Snapchat next to your other channels",
+    "tiktok-ads-analyzer (if installed), since the same young service pros are reached on TikTok"
+  ]
+}

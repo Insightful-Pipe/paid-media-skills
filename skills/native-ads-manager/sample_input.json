@@ -1,0 +1,435 @@
+{
+  "note": "Example data: an invented online store selling ergonomic office chairs, with invented Taboola and Outbrain campaigns and invented publisher sites on .example domains. Not a real business, account or publisher. Every number in expected_output.json follows from this input.",
+  "request": "Hey Claude, I just added the \"native-ads-manager\" skill. Here are my Taboola and Outbrain exports for the last two weeks. Tell me which sites to block or boost, check my tracking, and write my next headline test. My target cost per purchase is $60.",
+  "business": {
+    "name": "Example ergonomic chair store",
+    "site": "https://www.chairs.example",
+    "presell_page": "https://www.chairs.example/why-your-back-hurts-at-your-desk",
+    "product": "an adjustable ergonomic desk chair sold online",
+    "conversion": "purchase"
+  },
+  "currency": "USD",
+  "date_range": "2026-10-14 to 2026-10-27",
+  "target_cpa": 60.0,
+  "conversion_method": {
+    "Taboola | US | Desktop | Chair presell": "Taboola pixel",
+    "Outbrain | US | All devices | Chair presell": "Outbrain pixel"
+  },
+  "tracking_codes": {
+    "Taboola | US | Desktop | Chair presell": "utm_source=taboola&utm_medium=native&utm_campaign={campaign_name}&utm_term={site}&utm_content={campaign_item_id}",
+    "Outbrain | US | All devices | Chair presell": "utm_source=outbrain&utm_medium=native&utm_campaign=chair-presell&utm_term={publisher_name}_{section_name}&utm_content={ad_id}"
+  },
+  "campaign_totals_by_week": {
+    "Taboola | US | Desktop | Chair presell": [
+      {
+        "week": "2026-10-14 to 2026-10-20",
+        "spend": 3020.0,
+        "clicks": 6850,
+        "conversions": 44
+      },
+      {
+        "week": "2026-10-21 to 2026-10-27",
+        "spend": 3290.0,
+        "clicks": 7340,
+        "conversions": 54
+      }
+    ],
+    "Outbrain | US | All devices | Chair presell": [
+      {
+        "week": "2026-10-14 to 2026-10-20",
+        "spend": 1000.0,
+        "clicks": 2250,
+        "conversions": 16
+      },
+      {
+        "week": "2026-10-21 to 2026-10-27",
+        "spend": 1120.0,
+        "clicks": 2430,
+        "conversions": 20
+      }
+    ]
+  },
+  "taboola_by_site_report": [
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "site": "fernhollowdaily.example",
+      "site_id": "1101",
+      "clicks": 3200,
+      "spend": 1440.0,
+      "conversions": 30
+    },
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "site": "morningcompass.example",
+      "site_id": "1102",
+      "clicks": 2100,
+      "spend": 966.0,
+      "conversions": 24
+    },
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "site": "weekendreader.example",
+      "site_id": "1103",
+      "clicks": 1900,
+      "spend": 817.0,
+      "conversions": 6
+    },
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "site": "thecommutepost.example",
+      "site_id": "1104",
+      "clicks": 1500,
+      "spend": 660.0,
+      "conversions": 9
+    },
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "site": "homefrontnews.example",
+      "site_id": "1105",
+      "clicks": 1400,
+      "spend": 574.0,
+      "conversions": 0
+    },
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "site": "parkviewherald.example",
+      "site_id": "1106",
+      "clicks": 1200,
+      "spend": 552.0,
+      "conversions": 7
+    },
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "site": "ridgelinetimes.example",
+      "site_id": "1107",
+      "clicks": 900,
+      "spend": 414.0,
+      "conversions": 9
+    },
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "site": "quietharbor.example",
+      "site_id": "1108",
+      "clicks": 700,
+      "spend": 301.0,
+      "conversions": 8
+    },
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "site": "northgatewire.example",
+      "site_id": "1109",
+      "clicks": 450,
+      "spend": 198.0,
+      "conversions": 1
+    },
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "site": "brightsidegazette.example",
+      "site_id": "1110",
+      "clicks": 260,
+      "spend": 117.0,
+      "conversions": 0
+    },
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "site": "lakeshoredigest.example",
+      "site_id": "1111",
+      "clicks": 180,
+      "spend": 90.0,
+      "conversions": 2
+    },
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "site": "maplecourier.example",
+      "site_id": "1112",
+      "clicks": 150,
+      "spend": 63.0,
+      "conversions": 0
+    }
+  ],
+  "outbrain_sections_report": [
+    {
+      "campaign": "Outbrain | US | All devices | Chair presell",
+      "publisher": "saltmarshjournal.example",
+      "section": "Lifestyle",
+      "clicks": 1300,
+      "spend": 598.0,
+      "conversions": 13
+    },
+    {
+      "campaign": "Outbrain | US | All devices | Chair presell",
+      "publisher": "saltmarshjournal.example",
+      "section": "Money",
+      "clicks": 900,
+      "spend": 405.0,
+      "conversions": 3
+    },
+    {
+      "campaign": "Outbrain | US | All devices | Chair presell",
+      "publisher": "pinecrestdaily.example",
+      "section": "Home",
+      "clicks": 1100,
+      "spend": 484.0,
+      "conversions": 14
+    },
+    {
+      "campaign": "Outbrain | US | All devices | Chair presell",
+      "publisher": "pinecrestdaily.example",
+      "section": "Health",
+      "clicks": 700,
+      "spend": 322.0,
+      "conversions": 0
+    },
+    {
+      "campaign": "Outbrain | US | All devices | Chair presell",
+      "publisher": "brackenvalenews.example",
+      "section": "Tech",
+      "clicks": 380,
+      "spend": 171.0,
+      "conversions": 4
+    },
+    {
+      "campaign": "Outbrain | US | All devices | Chair presell",
+      "publisher": "brackenvalenews.example",
+      "section": "Sports",
+      "clicks": 220,
+      "spend": 99.0,
+      "conversions": 0
+    }
+  ],
+  "taboola_top_campaign_content": [
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "item_id": "2001",
+      "title": "Why your back hurts by 4 p.m. at your desk",
+      "thumbnail": "Photo: a person at a desk pressing a hand to their lower back",
+      "viewable_impressions": 520000,
+      "clicks": 2340,
+      "spend": 1040.55,
+      "conversions": 19
+    },
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "item_id": "2002",
+      "title": "Why your back hurts by 4 p.m. at your desk",
+      "thumbnail": "Product shot: the chair on a plain white background",
+      "viewable_impressions": 300000,
+      "clicks": 1020,
+      "spend": 453.57,
+      "conversions": 8
+    },
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "item_id": "2003",
+      "title": "Office workers are trading in their old chairs for this",
+      "thumbnail": "Photo: a person at a desk pressing a hand to their lower back",
+      "viewable_impressions": 260000,
+      "clicks": 780,
+      "spend": 346.85,
+      "conversions": 5
+    },
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "item_id": "2004",
+      "title": "Office workers are trading in their old chairs for this",
+      "thumbnail": "Product shot: the chair on a plain white background",
+      "viewable_impressions": 180000,
+      "clicks": 450,
+      "spend": 200.11,
+      "conversions": 3
+    },
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "item_id": "2005",
+      "title": "3 signs your desk chair is the wrong height for you",
+      "thumbnail": "Photo: a person at a desk pressing a hand to their lower back",
+      "viewable_impressions": 480000,
+      "clicks": 2064,
+      "spend": 917.82,
+      "conversions": 18
+    },
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "item_id": "2006",
+      "title": "3 signs your desk chair is the wrong height for you",
+      "thumbnail": "Product shot: the chair on a plain white background",
+      "viewable_impressions": 260000,
+      "clicks": 832,
+      "spend": 369.97,
+      "conversions": 7
+    },
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "item_id": "2007",
+      "title": "Is your chair the reason your neck aches after work?",
+      "thumbnail": "Photo: a person at a desk pressing a hand to their lower back",
+      "viewable_impressions": 300000,
+      "clicks": 1110,
+      "spend": 493.59,
+      "conversions": 8
+    },
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "item_id": "2008",
+      "title": "Is your chair the reason your neck aches after work?",
+      "thumbnail": "Product shot: the chair on a plain white background",
+      "viewable_impressions": 170000,
+      "clicks": 527,
+      "spend": 234.35,
+      "conversions": 4
+    },
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "item_id": "2009",
+      "title": "The desk chair that adjusts in 4 places, not 2",
+      "thumbnail": "Photo: a person at a desk pressing a hand to their lower back",
+      "viewable_impressions": 240000,
+      "clicks": 840,
+      "spend": 373.53,
+      "conversions": 9
+    },
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "item_id": "2010",
+      "title": "The desk chair that adjusts in 4 places, not 2",
+      "thumbnail": "Product shot: the chair on a plain white background",
+      "viewable_impressions": 200000,
+      "clicks": 600,
+      "spend": 266.81,
+      "conversions": 7
+    },
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "item_id": "2011",
+      "title": "This chair fixes your posture in 7 days",
+      "thumbnail": "Photo: a person at a desk pressing a hand to their lower back",
+      "viewable_impressions": 480000,
+      "clicks": 2808,
+      "spend": 1248.66,
+      "conversions": 6
+    },
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "item_id": "2012",
+      "title": "This chair fixes your posture in 7 days",
+      "thumbnail": "Product shot: the chair on a plain white background",
+      "viewable_impressions": 210000,
+      "clicks": 819,
+      "spend": 364.19,
+      "conversions": 4
+    }
+  ],
+  "ga4_get_report": {
+    "dimensions": [
+      "sessionSource",
+      "sessionManualTerm",
+      "sessionManualAdContent"
+    ],
+    "metrics": [
+      "sessions",
+      "engagedSessions",
+      "keyEvents:purchase"
+    ],
+    "rows_kept": "sessionSource is taboola or outbrain, summed over sessionManualAdContent",
+    "rows": [
+      {
+        "sessionSource": "taboola",
+        "sessionManualTerm": "fernhollowdaily.example",
+        "sessions": 2880,
+        "engagedSessions": 1410,
+        "keyEvents:purchase": 28
+      },
+      {
+        "sessionSource": "taboola",
+        "sessionManualTerm": "morningcompass.example",
+        "sessions": 1930,
+        "engagedSessions": 1010,
+        "keyEvents:purchase": 23
+      },
+      {
+        "sessionSource": "taboola",
+        "sessionManualTerm": "weekendreader.example",
+        "sessions": 1690,
+        "engagedSessions": 610,
+        "keyEvents:purchase": 6
+      },
+      {
+        "sessionSource": "taboola",
+        "sessionManualTerm": "thecommutepost.example",
+        "sessions": 1340,
+        "engagedSessions": 640,
+        "keyEvents:purchase": 8
+      },
+      {
+        "sessionSource": "taboola",
+        "sessionManualTerm": "homefrontnews.example",
+        "sessions": 1210,
+        "engagedSessions": 190,
+        "keyEvents:purchase": 0
+      },
+      {
+        "sessionSource": "taboola",
+        "sessionManualTerm": "parkviewherald.example",
+        "sessions": 1070,
+        "engagedSessions": 470,
+        "keyEvents:purchase": 6
+      },
+      {
+        "sessionSource": "taboola",
+        "sessionManualTerm": "ridgelinetimes.example",
+        "sessions": 380,
+        "engagedSessions": 120,
+        "keyEvents:purchase": 8
+      },
+      {
+        "sessionSource": "taboola",
+        "sessionManualTerm": "quietharbor.example",
+        "sessions": 640,
+        "engagedSessions": 360,
+        "keyEvents:purchase": 8
+      },
+      {
+        "sessionSource": "taboola",
+        "sessionManualTerm": "northgatewire.example",
+        "sessions": 400,
+        "engagedSessions": 150,
+        "keyEvents:purchase": 1
+      },
+      {
+        "sessionSource": "taboola",
+        "sessionManualTerm": "brightsidegazette.example",
+        "sessions": 230,
+        "engagedSessions": 95,
+        "keyEvents:purchase": 0
+      },
+      {
+        "sessionSource": "taboola",
+        "sessionManualTerm": "lakeshoredigest.example",
+        "sessions": 160,
+        "engagedSessions": 70,
+        "keyEvents:purchase": 2
+      },
+      {
+        "sessionSource": "taboola",
+        "sessionManualTerm": "maplecourier.example",
+        "sessions": 130,
+        "engagedSessions": 50,
+        "keyEvents:purchase": 0
+      },
+      {
+        "sessionSource": "taboola",
+        "sessionManualTerm": "(not set)",
+        "sessions": 120,
+        "engagedSessions": 40,
+        "keyEvents:purchase": 1
+      },
+      {
+        "sessionSource": "outbrain",
+        "sessionManualTerm": "{publisher_name}_{section_name}",
+        "sessions": 4020,
+        "engagedSessions": 1650,
+        "keyEvents:purchase": 20
+      }
+    ]
+  }
+}

@@ -1,0 +1,300 @@
+{
+  "report_title": "Ad smoke test: memberships and class packs add-on for fitness studios",
+  "currency": "USD",
+  "plan_written_on": "2026-10-01",
+  "plan": {
+    "decision": "If at least one promise clears the pass line at Meta's real cost, build the add-on and lead its launch with that promise; if none clears the kill line, don't build it on this pitch.",
+    "economics": {
+      "allowed_cost_per_customer": 150,
+      "signup_to_customer_rate": 0.2,
+      "allowed_cost_per_signup": 30.0,
+      "formula": "allowed cost per sign-up = allowed cost per customer x sign-up-to-customer rate = $150 x 0.20"
+    },
+    "channels": [
+      {
+        "channel": "Google Search",
+        "source": "google-ads generate_keyword_ideas",
+        "test_set": [
+          {
+            "keyword": "studio membership software",
+            "monthly_searches": 260,
+            "mid_bid": 6.2
+          },
+          {
+            "keyword": "class pack software",
+            "monthly_searches": 110,
+            "mid_bid": 5.62
+          },
+          {
+            "keyword": "sell class packs online",
+            "monthly_searches": 90,
+            "mid_bid": 4.17
+          },
+          {
+            "keyword": "recurring billing for fitness studios",
+            "monthly_searches": 70,
+            "mid_bid": 7.15
+          }
+        ],
+        "left_out": [
+          {
+            "keyword": "pilates studio software",
+            "reason": "category term: searchers want a whole studio system, not an add-on"
+          },
+          {
+            "keyword": "gym membership software free",
+            "reason": "asks for a no-cost tool; won't pay $29"
+          },
+          {
+            "keyword": "competitor a memberships",
+            "reason": "a rival's brand name"
+          }
+        ],
+        "test_set_monthly_searches": 530,
+        "weighted_cpc": 5.86,
+        "land_rate": 0.85,
+        "land_rate_source": "default 85%; no Search history for this offer",
+        "cost_per_visit": 6.9,
+        "pass_line_pct": 22.99,
+        "kill_line_pct": 11.49,
+        "visits_per_variant": 59,
+        "budget_needed": 1403.84,
+        "clicks_needed": 209,
+        "click_ceiling_in_14_days": 24.7,
+        "verdict": "rejected",
+        "why": "The test set gets 530 searches a month, about 247.3 in 14 days. Even if one search in ten clicked, that is 24.7 clicks against 209 needed."
+      },
+      {
+        "channel": "Meta (Facebook and Instagram)",
+        "source": "facebook-ads search_interests, estimate_audience_size, get_minimum_budgets, get_insights_adaccount; google-analytics get_report",
+        "audience": "US, 25 to 60, Pilates or Yoga studio interest, and Small business owners",
+        "audience_lower_bound": 412000,
+        "cpc": 1.42,
+        "cpc_source": "own account, 2026-07-03 to 2026-09-30: $3,840.00 / 2,704 link clicks",
+        "land_rate": 0.8199,
+        "land_rate_source": "GA4 facebook / paid sessions 2,217 / 2,704 link clicks",
+        "cost_per_visit": 1.73,
+        "pass_line_pct": 5.77,
+        "kill_line_pct": 2.89,
+        "visits_per_variant": 268,
+        "budget_needed": 1601.47,
+        "planned_impressions": 109231,
+        "impressions_per_person": 0.27,
+        "verdict": "chosen",
+        "why": "Fits the $2,000 cap at $1,601.47, the audience is large enough (0.27 planned impressions per person), and studio owners are found by who they are, not by what they search."
+      },
+      {
+        "channel": "LinkedIn",
+        "source": "linkedin-ads get_budget_pricing",
+        "cpc": 11.4,
+        "cpc_source": "suggested bid (default) for the owner job titles",
+        "land_rate": 0.85,
+        "land_rate_source": "default 85%; no LinkedIn history",
+        "cost_per_visit": 13.41,
+        "pass_line_pct": 44.71,
+        "verdict": "rejected",
+        "why": "Each visit costs $13.41, so 44.7% of visitors would have to sign up to stay under $30.00 a sign-up. Cold paid traffic doesn't do that; above 25% the skill won't plan a test."
+      },
+      {
+        "channel": "Reddit",
+        "source": "no connector",
+        "verdict": "not costed",
+        "why": "No Reddit Ads costs were pasted. Paste a CPC from a past Reddit campaign to include it."
+      }
+    ],
+    "chosen_channel": "Meta (Facebook and Instagram)",
+    "sizing": {
+      "pass_line_pct": 5.77,
+      "pass_line_formula": "cost per visit $1.73 / allowed cost per sign-up $30.00",
+      "kill_line_pct": 2.89,
+      "kill_line_formula": "pass line / 2",
+      "visits_per_variant": 268,
+      "visits_formula": "one-sided 95% confidence, 80% power, kill line against pass line",
+      "variants": 3,
+      "total_visits": 804,
+      "budget": 1601.47,
+      "budget_formula": "804 visits x $1.73 x 1.15 buffer for cost drift",
+      "run_days": 14,
+      "run_dates": [
+        "2026-10-06",
+        "2026-10-19"
+      ],
+      "daily_budget_total": 114.39,
+      "daily_budget_per_variant": 38.13,
+      "meta_minimum_daily_budget": 5.0,
+      "detectable_gap_between_two_variants_pts": 6.2,
+      "detectable_gap_note": "With 268 visits each, two promises must differ by about 6.2 points before the test can call one better (alpha 0.025 per comparison). Smaller gaps read as not proven."
+    },
+    "setup": [
+      "One Meta campaign, traffic objective optimised for landing page views, three ad sets with their own budgets (no campaign budget).",
+      "Same audience, placements, image and call to action in every ad set; only the headline and first line change.",
+      "Each ad links to the same page with its own ?v= and utm_content, and the page shows the matching headline.",
+      "Sign-ups are counted by the GA4 key event waitlist_signup, not by Meta's lead count.",
+      "Before launch, submit one test sign-up on each page version and confirm it reaches GA4."
+    ],
+    "variants": [
+      {
+        "id": "A",
+        "promise": "Recurring revenue",
+        "ad_headline": "Turn drop-in clients into monthly members",
+        "ad_set": "A (Recurring revenue)",
+        "daily_budget": 38.13,
+        "page_url": "https://www.example.com/memberships-waitlist/?v=a&utm_source=facebook&utm_medium=paid&utm_campaign=smoke-studio-memberships&utm_content=a",
+        "page_headline": "Turn drop-in clients into monthly members",
+        "visits_needed": 268
+      },
+      {
+        "id": "B",
+        "promise": "No more chasing payments",
+        "ad_headline": "Memberships that bill themselves, so you stop chasing late payments",
+        "ad_set": "B (No more chasing payments)",
+        "daily_budget": 38.13,
+        "page_url": "https://www.example.com/memberships-waitlist/?v=b&utm_source=facebook&utm_medium=paid&utm_campaign=smoke-studio-memberships&utm_content=b",
+        "page_headline": "Memberships that bill themselves, so you stop chasing late payments",
+        "visits_needed": 268
+      },
+      {
+        "id": "C",
+        "promise": "Price first",
+        "ad_headline": "Memberships and class packs for $29 a month",
+        "ad_set": "C (Price first)",
+        "daily_budget": 38.13,
+        "page_url": "https://www.example.com/memberships-waitlist/?v=c&utm_source=facebook&utm_medium=paid&utm_campaign=smoke-studio-memberships&utm_content=c",
+        "page_headline": "Memberships and class packs for $29 a month",
+        "visits_needed": 268
+      }
+    ],
+    "page_brief": {
+      "url": "https://www.example.com/memberships-waitlist/",
+      "above_the_fold": "The variant headline, one line on what the add-on does, the price ($29 a month), and the button.",
+      "status_line": "Coming soon. We're building this now and will email you when it opens.",
+      "button": "Join the waitlist",
+      "form": "Email and studio name only.",
+      "visual": "A design mock-up labelled 'Preview', never a screenshot that suggests it works today.",
+      "tracking": "GA4 key event waitlist_signup on the thank-you state; ?v= picks the headline."
+    },
+    "honest_note": {
+      "thank_you_page": "Thanks for joining. Memberships and class packs aren't available yet: we're deciding what to build first and you're helping. We'll email you once, when it opens or if we decide not to build it. No payment is taken.",
+      "ad_copy_rule": "Ads say 'coming soon' or 'join the waitlist'; none says 'start today' or implies it can be bought now.",
+      "follow_up": "Email every sign-up with the outcome by 2026-11-20, whichever way the decision goes."
+    },
+    "frozen_rule": [
+      "Read each promise only after it reaches 268 visits, or when the $1,601.47 budget is spent.",
+      "Go: sign-up rate at or above 5.77% and actual cost per sign-up at or under $30.00.",
+      "Real but short: rate at or above the critical rate for its visit count, but not a go.",
+      "Stop: rate under the critical rate (the test can't tell it apart from the kill line).",
+      "A promise is 'proven better' than another only if a two-proportion test gives p under 0.025.",
+      "No early stop for good news. Early stop only if tracking breaks or spend reaches the cap."
+    ]
+  },
+  "readout": {
+    "window": [
+      "2026-10-06",
+      "2026-10-19"
+    ],
+    "read_on": "2026-10-21",
+    "source_of_truth": "GA4 key event waitlist_signup, campaign smoke-studio-memberships; rows for other campaigns left out: retargeting-trial",
+    "spend_total": 1579.35,
+    "budget": 1601.47,
+    "signups_total": 48,
+    "variants": [
+      {
+        "id": "A",
+        "promise": "Recurring revenue",
+        "spend": 527.4,
+        "link_clicks": 368,
+        "visits": 298,
+        "land_rate": 0.81,
+        "signups": 14,
+        "meta_reported_leads": 15,
+        "signup_rate_pct": 4.7,
+        "wilson_95_pct": [
+          2.82,
+          7.73
+        ],
+        "critical_rate_pct": 4.48,
+        "cost_per_visit": 1.77,
+        "cost_per_signup": 37.67,
+        "outcome": "real but short"
+      },
+      {
+        "id": "B",
+        "promise": "No more chasing payments",
+        "spend": 521.85,
+        "link_clicks": 381,
+        "visits": 316,
+        "land_rate": 0.829,
+        "signups": 27,
+        "meta_reported_leads": 29,
+        "signup_rate_pct": 8.54,
+        "wilson_95_pct": [
+          5.94,
+          12.15
+        ],
+        "critical_rate_pct": 4.44,
+        "cost_per_visit": 1.65,
+        "cost_per_signup": 19.33,
+        "outcome": "go"
+      },
+      {
+        "id": "C",
+        "promise": "Price first",
+        "spend": 530.1,
+        "link_clicks": 359,
+        "visits": 291,
+        "land_rate": 0.811,
+        "signups": 7,
+        "meta_reported_leads": 7,
+        "signup_rate_pct": 2.41,
+        "wilson_95_pct": [
+          1.17,
+          4.88
+        ],
+        "critical_rate_pct": 4.5,
+        "cost_per_visit": 1.82,
+        "cost_per_signup": 75.73,
+        "outcome": "stop"
+      }
+    ],
+    "pairwise": [
+      {
+        "comparison": "B vs A",
+        "gap_pts": 3.85,
+        "z": 1.91,
+        "p_value": 0.0564,
+        "threshold": 0.025,
+        "result": "not proven"
+      },
+      {
+        "comparison": "B vs C",
+        "gap_pts": 6.14,
+        "z": 3.29,
+        "p_value": 0.001,
+        "threshold": 0.025,
+        "result": "proven better"
+      }
+    ],
+    "checks": [
+      "Every promise passed its planned 268 visits.",
+      "Land rates 0.81, 0.829, 0.811 sit within 20% of their average, so no page version lost visitors to a slow load or a broken link.",
+      "Meta counted 51 leads against 48 sign-ups in GA4. The GA4 count decides; Meta's own count can include view-through credit and repeat submits.",
+      "Spend $1,579.35 of the $1,601.47 budget."
+    ],
+    "findings": [
+      "B (no more chasing payments) is a go: 8.54% of 316 visitors signed up, above the 5.77% pass line, at $19.33 a sign-up against $30.00 allowed.",
+      "A (recurring revenue) is real but short: 4.7% clears its critical rate of 4.48% but not the pass line; each sign-up cost $37.67.",
+      "C (price first) is a stop: 2.41% is under its critical rate of 4.5%. Leading with the price doesn't sell it.",
+      "B beat C (p 0.001) but is not proven better than A (p 0.0564, needs under 0.025). The go rests on B clearing the line on its own, not on beating A."
+    ],
+    "decision": "Go on the test: lead the add-on with the late-payments promise, and keep recurring revenue as the second line on the page. Drop the price-first pitch.",
+    "what_this_does_not_prove": "Sign-ups are not purchases. The go uses the user's 20% sign-up-to-customer estimate; check it with a paid pre-order to the 48 sign-ups before building.",
+    "next": [
+      "Email all 48 sign-ups the outcome by 2026-11-20, as the thank-you page promised.",
+      "If installed, idea-validation-plan makes the build call across this test and the pre-order."
+    ]
+  },
+  "not_checked": [
+    "Reddit: no connector and no pasted costs.",
+    "Google Ads and LinkedIn were rejected at the planning stage, so no results were pulled from them."
+  ]
+}

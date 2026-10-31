@@ -1,0 +1,1043 @@
+{
+  "header": {
+    "account": "Example Booking Software",
+    "account_id": "150000001",
+    "currency": "USD",
+    "window": "2026-09-28 to 2026-10-27",
+    "spend": 12573.3,
+    "clicks": 4635,
+    "conversions": 171,
+    "cpa": 73.53,
+    "target_cpa": 80.0,
+    "grade": 70,
+    "rating": "needs work"
+  },
+  "executive_summary": [
+    "In the last 30 days the account spent $12,573.30 for 4,635 clicks and 171 conversions, a $73.53 CPA against the $80 target.",
+    "Over the last 12 full months spend grew from $6,420.15 (2025-10) to $12,240.10 (2026-09) and CPA fell from $85.60 to $73.74; October is on the same pace at $11,309.00 month to date.",
+    "Fix first: send the Clinics | Search | US, CA, UK ads to the clinics page and move the campaign off Maximize Clicks, which spends $1,152.80 a month beyond the target."
+  ],
+  "trend": [
+    {
+      "month": "2025-10",
+      "spend": 6420.15,
+      "clicks": 2698,
+      "conversions": 75,
+      "cpa": 85.6
+    },
+    {
+      "month": "2025-11",
+      "spend": 6880.4,
+      "clicks": 2867,
+      "conversions": 82,
+      "cpa": 83.91
+    },
+    {
+      "month": "2025-12",
+      "spend": 6105.9,
+      "clicks": 2492,
+      "conversions": 68,
+      "cpa": 89.79
+    },
+    {
+      "month": "2026-01",
+      "spend": 7640.25,
+      "clicks": 3131,
+      "conversions": 92,
+      "cpa": 83.05
+    },
+    {
+      "month": "2026-02",
+      "spend": 8015.6,
+      "clicks": 3258,
+      "conversions": 99,
+      "cpa": 80.97
+    },
+    {
+      "month": "2026-03",
+      "spend": 8890.1,
+      "clicks": 3570,
+      "conversions": 113,
+      "cpa": 78.67
+    },
+    {
+      "month": "2026-04",
+      "spend": 9420.75,
+      "clicks": 3738,
+      "conversions": 121,
+      "cpa": 77.86
+    },
+    {
+      "month": "2026-05",
+      "spend": 10110.3,
+      "clicks": 3965,
+      "conversions": 133,
+      "cpa": 76.02
+    },
+    {
+      "month": "2026-06",
+      "spend": 10690.85,
+      "clicks": 4144,
+      "conversions": 143,
+      "cpa": 74.76
+    },
+    {
+      "month": "2026-07",
+      "spend": 11205.4,
+      "clicks": 4293,
+      "conversions": 151,
+      "cpa": 74.21
+    },
+    {
+      "month": "2026-08",
+      "spend": 11780.65,
+      "clicks": 4479,
+      "conversions": 160,
+      "cpa": 73.63
+    },
+    {
+      "month": "2026-09",
+      "spend": 12240.1,
+      "clicks": 4517,
+      "conversions": 166,
+      "cpa": 73.74
+    },
+    {
+      "month": "2026-10",
+      "spend": 11309.0,
+      "clicks": 4169,
+      "conversions": 154,
+      "cpa": 73.44,
+      "note": "month to date"
+    }
+  ],
+  "trend_note": "October is 2026-10-01 to 2026-10-27, month to date. CPA is spend divided by conversions.",
+  "scorecard": [
+    {
+      "area": "Measurement",
+      "result": "warn",
+      "key_number": "1 of 1 UET tag active; 2 of 2 counted goals recording",
+      "why": "The tag is active, both counted goals record conversions, and every URL goal points at example.com. 'Demo booked' is a BookAppointment goal that counts All instead of Unique, so a prospect who books twice counts twice: 51 demo conversions in the window."
+    },
+    {
+      "area": "Wasted spend",
+      "result": "warn",
+      "key_number": "7.5% of search spend on off-intent terms",
+      "why": "7 visible terms spent more than the $80 target with no conversion, $914.75 in all. 87.0% of search spend is visible as terms. The phrase negative 'class' on Fitness | Search | US, CA, UK blocks 2 of its own keywords."
+    },
+    {
+      "area": "Structure and Google import gaps",
+      "result": "pass",
+      "key_number": "largest ad group 14 enabled keywords",
+      "why": "No ad group is over 20 keywords and no live campaign is under 5% of spend. 2 shared budgets and 1 portfolio bid strategy are attached to nothing (information only). Google import check skipped: no Google Ads account is connected."
+    },
+    {
+      "area": "Keywords and Quality Score",
+      "result": "warn",
+      "key_number": "22.1% of keyword spend on Quality Score 1-4",
+      "why": "Spend-weighted Quality Score is 6.2 (scored: 45 of 47). LandingPageExperience is below average on 6 of the top 20 keywords by spend, all of them in Clinics | Search | US, CA, UK, so the page is the fix there."
+    },
+    {
+      "area": "Ads and extensions",
+      "result": "warn",
+      "key_number": "2 search campaigns below the extension minimums",
+      "why": "Every ad group has an active responsive search ad. Clinics | Search | US, CA, UK has 2 sitelinks, no structured snippet; Fitness | Search | US, CA, UK has no structured snippet. One RSA has 6 headlines and 2 descriptions, and one clinics ad is ActiveLimited (Healthcare and medicines). 3 sitelinks sit unattached."
+    },
+    {
+      "area": "Bidding, budget, pacing and impression share",
+      "result": "warn",
+      "key_number": "Maximize Clicks CPA 65.5% above target",
+      "why": "Clinics | Search | US, CA, UK on Maximize Clicks costs $132.40 a conversion, the first thing to change. Salons | Search | US, CA, UK beats the target at $62.75 and loses 24.0% of impressions to budget. 3 campaigns lose more than 30% to rank. Fitness | Search | US, CA, UK has spent 70.6% of its budget this month."
+    },
+    {
+      "area": "Networks, devices, locations and schedule",
+      "result": "warn",
+      "key_number": "search partners CPA 137.1% worse than Microsoft sites",
+      "why": "Booking Software | Search | US, CA, UK runs on search partners (455 clicks, $187.49 a conversion) and on the Audience Network ($317.75, 1 conversion). Location intent is people in the targeted countries everywhere; 0.5% of clicks came from elsewhere."
+    },
+    {
+      "area": "Other campaign types",
+      "result": "not applicable",
+      "key_number": "no Shopping, Performance Max or Audience campaigns",
+      "why": "get_campaigns returned 5 Search campaigns only."
+    }
+  ],
+  "grade_math": "100 - 12 x 0 fails - 5 x 6 warns (Measurement, Wasted spend, Keywords and Quality Score, Ads and extensions, Bidding, budget, pacing and impression share, Networks, devices, locations and schedule) = 70. Needs work: 65 to 84. Other campaign types is not applicable and costs nothing.",
+  "top_5_fixes": {
+    "ranking": "by estimated monthly dollars at stake (the account is live)",
+    "overlap": "The estimates overlap (smartphone clicks also sit in the campaigns above), so don't add them up.",
+    "fixes": [
+      {
+        "rank": 1,
+        "fix": "Send the Clinics | Search | US, CA, UK ads to the clinics page and move the campaign off Maximize Clicks",
+        "money_at_stake": "$1,152.80 a month spent beyond the $80 target: $2,912.80 for 22 conversions, a $132.40 CPA",
+        "estimate": "The money above target if the same conversions cost $80. Maximize Clicks buys clicks, not sign-ups, and every ad in the campaign lands on the home page; 9 of its 10 keywords with impressions are below average on landing page experience. With 22 conversions in 30 days it is under the 30 an automated conversion strategy needs, so start with Manual CPC on the keywords that convert.",
+        "evidence": "campaign report: $2,912.80, 22 conversions; get_campaigns: MaxClicks; get_ads: final URL https://www.example.com/; keyword report: Quality Score 3 to 5",
+        "who": "do this in Microsoft Ads (bid strategies and ads are out of scope for this skill); quality-score-fixer goes deeper, if installed"
+      },
+      {
+        "rank": 2,
+        "fix": "Raise the Salons | Search | US, CA, UK budget in steps",
+        "money_at_stake": "up to 17.9 more conversions a month for about $1,122.12 more spend",
+        "estimate": "38 conversions x 24.0% lost to budget / 51.0% impression share, at the current $62.75 CPA. An upper bound that assumes the CPA holds, which it rarely does fully.",
+        "evidence": "impression share report: 51.0% impression share, 24.0% lost to budget; campaign report: CPA $62.75 against the $80 target; pacing 99.8% of budget this month",
+        "who": "do this in Microsoft Ads (budgets are out of scope for this skill)"
+      },
+      {
+        "rank": 3,
+        "fix": "Add negatives for the off-intent search terms",
+        "money_at_stake": "$914.75 a month on 7 terms with no conversion, 7.5% of search spend",
+        "estimate": "Visible terms only (87.0% of search spend shows up as terms). Two more terms name the product and stay on the watch list.",
+        "evidence": "search query report: 'restaurant reservation system' $236.40, 'hotel booking engine' $148.60, 'physiotherapist near me' $142.75, 'doctor appointment online' $118.30, 'hair salon near me' $96.40, 'front desk receptionist jobs' $88.20, 'how to start a salon business' $84.10",
+        "who": "I can do this now, after your yes"
+      },
+      {
+        "rank": 4,
+        "fix": "Test a -20% smartphone bid adjustment",
+        "money_at_stake": "$775.25 a month spent beyond the $80 target on smartphones",
+        "estimate": "Smartphone CPA $113.71 is 70.1% above computers at $66.85. Start at half the gap and check again after 30 days.",
+        "evidence": "campaign report by device: smartphones 1,043 clicks, $2,615.25, 23 conversions; computers 3,383 clicks, $9,492.84, 142 conversions",
+        "who": "do this in Microsoft Ads (bid adjustments are out of scope for this skill)"
+      },
+      {
+        "rank": 5,
+        "fix": "Switch Booking Software | Search | US, CA, UK to Microsoft sites only (OwnedAndOperatedOnly)",
+        "money_at_stake": "$752.40 a month spent beyond the $80 target on search partners",
+        "estimate": "Partners cost $187.49 a conversion, 137.1% worse than Microsoft sites at $79.09, on 455 clicks.",
+        "evidence": "campaign report by network: partners 455 clicks, $1,312.40, 7 conversions; Microsoft sites 1,610 clicks, $4,350.10, 55 conversions",
+        "who": "do this in Microsoft Ads (networks are out of scope for this skill)"
+      }
+    ]
+  },
+  "everything_else": {
+    "measurement": [
+      "Counted goals: Account created, Demo booked (120 + 51 = 171, matching the campaign report). 'Pricing page view' is tracked but excluded from bidding, which is right for a page view.",
+      "Switch 'Demo booked' to Unique. Bidding currently counts repeat bookings from the same person.",
+      "No campaign bids on value, so goal values are not checked.",
+      "Auto-tagging (MSCLKID) can't be read through the connector; confirm it in Account settings."
+    ],
+    "wasted_spend": {
+      "search_spend": 12255.55,
+      "visible": "87.0% ($10,662.33 of $12,255.55); Audience Network spend ($317.75) has no search terms",
+      "waste_by_intent": [
+        {
+          "intent": "looking for a local business or appointment, not software",
+          "spend": 357.45,
+          "terms": [
+            {
+              "term": "hair salon near me",
+              "campaign": "Salons | Search | US, CA, UK",
+              "clicks": 64,
+              "spend": 96.4,
+              "conversions": 0
+            },
+            {
+              "term": "physiotherapist near me",
+              "campaign": "Clinics | Search | US, CA, UK",
+              "clicks": 58,
+              "spend": 142.75,
+              "conversions": 0
+            },
+            {
+              "term": "doctor appointment online",
+              "campaign": "Clinics | Search | US, CA, UK",
+              "clicks": 47,
+              "spend": 118.3,
+              "conversions": 0
+            }
+          ]
+        },
+        {
+          "intent": "another industry",
+          "spend": 385.0,
+          "terms": [
+            {
+              "term": "restaurant reservation system",
+              "campaign": "Booking Software | Search | US, CA, UK",
+              "clicks": 77,
+              "spend": 236.4,
+              "conversions": 0
+            },
+            {
+              "term": "hotel booking engine",
+              "campaign": "Booking Software | Search | US, CA, UK",
+              "clicks": 49,
+              "spend": 148.6,
+              "conversions": 0
+            }
+          ]
+        },
+        {
+          "intent": "job seekers",
+          "spend": 88.2,
+          "terms": [
+            {
+              "term": "front desk receptionist jobs",
+              "campaign": "Clinics | Search | US, CA, UK",
+              "clicks": 31,
+              "spend": 88.2,
+              "conversions": 0
+            }
+          ]
+        },
+        {
+          "intent": "research, not buying",
+          "spend": 84.1,
+          "terms": [
+            {
+              "term": "how to start a salon business",
+              "campaign": "Salons | Search | US, CA, UK",
+              "clicks": 38,
+              "spend": 84.1,
+              "conversions": 0
+            }
+          ]
+        }
+      ],
+      "watch_list": [
+        {
+          "term": "scheduling software for small business",
+          "campaign": "Booking Software | Search | US, CA, UK",
+          "clicks": 41,
+          "spend": 121.5,
+          "conversions": 0,
+          "why_not_negative": "names the product; check the bid, ad and landing page instead"
+        },
+        {
+          "term": "clinic scheduling software",
+          "campaign": "Clinics | Search | US, CA, UK",
+          "clicks": 36,
+          "spend": 104.8,
+          "conversions": 0,
+          "why_not_negative": "names the product; check the bid, ad and landing page instead"
+        }
+      ],
+      "negative_conflicts": [
+        {
+          "campaign": "Fitness | Search | US, CA, UK",
+          "negative": "Phrase: class",
+          "blocks": "Phrase: class booking software"
+        },
+        {
+          "campaign": "Fitness | Search | US, CA, UK",
+          "negative": "Phrase: class",
+          "blocks": "Phrase: fitness class scheduling app"
+        }
+      ],
+      "conflict_note": "Both blocked keywords had no impressions in the window, and Fitness | Search | US, CA, UK has spent only 70.6% of its budget this month. Replace it with narrower negatives for the consumer searches it was meant to stop, checked against these keywords, or remove it.",
+      "stale_shared_lists": "none: the one shared list holds real negatives",
+      "note": "Intent groups are a judgment on terms that appear in the report. Confirm each before it becomes a negative."
+    },
+    "structure": [
+      "Enabled keywords per ad group: Brand terms 4, Booking software 14, Scheduling app 6, Appointment reminders 4, Salon booking 6, Spa booking 3, Clinic scheduling 6, Physio and therapy 4, Class booking 5.",
+      "Idle: Q2 promo budget, Test budget (shared budgets) and Target CPA 60 (old) (portfolio bid strategy) have no campaign attached; delete them to keep the account readable."
+    ],
+    "keywords": {
+      "spend_weighted_quality_score": 6.2,
+      "coverage": "scored: 45 of 47 keywords with impressions",
+      "quality_score_1_to_4": [
+        {
+          "campaign": "Clinics | Search | US, CA, UK",
+          "keyword": "Phrase: patient scheduling software",
+          "quality_score": 4,
+          "spend": 862.84
+        },
+        {
+          "campaign": "Clinics | Search | US, CA, UK",
+          "keyword": "Phrase: medical appointment software",
+          "quality_score": 4,
+          "spend": 478.49
+        },
+        {
+          "campaign": "Booking Software | Search | US, CA, UK",
+          "keyword": "Broad: reservation system",
+          "quality_score": 3,
+          "spend": 300.75
+        },
+        {
+          "campaign": "Clinics | Search | US, CA, UK",
+          "keyword": "Broad: physiotherapy booking software",
+          "quality_score": 4,
+          "spend": 249.41
+        },
+        {
+          "campaign": "Clinics | Search | US, CA, UK",
+          "keyword": "Broad: appointment software for clinics",
+          "quality_score": 3,
+          "spend": 224.96
+        },
+        {
+          "campaign": "Clinics | Search | US, CA, UK",
+          "keyword": "Phrase: clinic scheduling software",
+          "quality_score": 4,
+          "spend": 211.46
+        },
+        {
+          "campaign": "Booking Software | Search | US, CA, UK",
+          "keyword": "Broad: booking engine",
+          "quality_score": 3,
+          "spend": 180.77
+        },
+        {
+          "campaign": "Clinics | Search | US, CA, UK",
+          "keyword": "Broad: clinic front desk software",
+          "quality_score": 3,
+          "spend": 141.53
+        },
+        {
+          "campaign": "Clinics | Search | US, CA, UK",
+          "keyword": "Phrase: clinic booking system",
+          "quality_score": 4,
+          "spend": 53.33
+        }
+      ],
+      "below_average_in_top_20": {
+        "ExpectedCtr": 3,
+        "AdRelevance": 3,
+        "LandingPageExperience": 6
+      },
+      "spend_by_match_type": {
+        "Phrase": 9075.61,
+        "Exact": 1742.12,
+        "Broad": 1437.82
+      },
+      "keywords_with_no_impressions": [
+        "Brand | Search | US, CA, UK: Phrase: example booking app",
+        "Booking Software | Search | US, CA, UK: Phrase: booking page for website",
+        "Booking Software | Search | US, CA, UK: Phrase: staff scheduling app",
+        "Fitness | Search | US, CA, UK: Phrase: class booking software",
+        "Fitness | Search | US, CA, UK: Phrase: fitness class scheduling app"
+      ],
+      "keywords_with_no_impressions_note": "Information only. Two of them are the Fitness keywords blocked by the negative 'class'."
+    },
+    "ads_and_extensions": {
+      "extensions_per_campaign": {
+        "Brand | Search | US, CA, UK": {
+          "sitelinks": 6,
+          "callouts": 4,
+          "structured_snippets": 1
+        },
+        "Booking Software | Search | US, CA, UK": {
+          "sitelinks": 6,
+          "callouts": 4,
+          "structured_snippets": 1
+        },
+        "Salons | Search | US, CA, UK": {
+          "sitelinks": 4,
+          "callouts": 4,
+          "structured_snippets": 1
+        },
+        "Clinics | Search | US, CA, UK": {
+          "sitelinks": 2,
+          "callouts": 4,
+          "structured_snippets": 0
+        },
+        "Fitness | Search | US, CA, UK": {
+          "sitelinks": 4,
+          "callouts": 4,
+          "structured_snippets": 0
+        }
+      },
+      "rsa_below_8_headlines_or_3_descriptions": [
+        {
+          "campaign": "Salons | Search | US, CA, UK",
+          "ad_group": "Spa booking",
+          "ad_id": "8300000008",
+          "headlines": 6,
+          "descriptions": 2
+        }
+      ],
+      "not_fully_approved": [
+        {
+          "campaign": "Clinics | Search | US, CA, UK",
+          "ad_group": "Clinic scheduling",
+          "ad_id": "8300000009",
+          "editorial_status": "ActiveLimited",
+          "policy_topic": "Healthcare and medicines"
+        }
+      ],
+      "unused_extensions": [
+        "Clinic scheduling (https://www.example.com/industries/clinics/)",
+        "Deposits and payments (https://www.example.com/features/payments/)",
+        "Calendar sync (https://www.example.com/features/calendar-sync/)"
+      ],
+      "other_types": "A logo extension runs at account level. No image or action extensions exist; an image extension suits a software brand. Add a call extension only if sales takes calls."
+    },
+    "bidding_and_budget": {
+      "by_strategy": [
+        {
+          "strategy": "ManualCpc",
+          "campaigns": [
+            "Brand | Search | US, CA, UK",
+            "Fitness | Search | US, CA, UK"
+          ],
+          "spend": 1295.65,
+          "conversions": 48,
+          "cpa": 26.99,
+          "vs_target_percent": -66.3
+        },
+        {
+          "strategy": "MaxConversions",
+          "campaigns": [
+            "Booking Software | Search | US, CA, UK"
+          ],
+          "spend": 5980.25,
+          "conversions": 63,
+          "cpa": 94.92,
+          "vs_target_percent": 18.7
+        },
+        {
+          "strategy": "TargetCpa",
+          "campaigns": [
+            "Salons | Search | US, CA, UK"
+          ],
+          "spend": 2384.6,
+          "conversions": 38,
+          "cpa": 62.75,
+          "vs_target_percent": -21.6
+        },
+        {
+          "strategy": "MaxClicks",
+          "campaigns": [
+            "Clinics | Search | US, CA, UK"
+          ],
+          "spend": 2912.8,
+          "conversions": 22,
+          "cpa": 132.4,
+          "vs_target_percent": 65.5
+        }
+      ],
+      "lost_to_rank_over_30_percent": [
+        {
+          "campaign": "Booking Software | Search | US, CA, UK",
+          "lost_to_rank": 58.7
+        },
+        {
+          "campaign": "Clinics | Search | US, CA, UK",
+          "lost_to_rank": 68.7
+        },
+        {
+          "campaign": "Fitness | Search | US, CA, UK",
+          "lost_to_rank": 78.0
+        }
+      ],
+      "automated_strategies_under_30_conversions": "none",
+      "pacing_this_month": [
+        {
+          "campaign": "Brand | Search | US, CA, UK",
+          "spend": 590.2,
+          "planned": 675,
+          "pacing_percent": 87.4,
+          "result": "ok"
+        },
+        {
+          "campaign": "Booking Software | Search | US, CA, UK",
+          "spend": 5372.4,
+          "planned": 5940,
+          "pacing_percent": 90.4,
+          "result": "ok"
+        },
+        {
+          "campaign": "Salons | Search | US, CA, UK",
+          "spend": 2156.2,
+          "planned": 2160,
+          "pacing_percent": 99.8,
+          "result": "ok"
+        },
+        {
+          "campaign": "Clinics | Search | US, CA, UK",
+          "spend": 2618.4,
+          "planned": 2970,
+          "pacing_percent": 88.2,
+          "result": "ok"
+        },
+        {
+          "campaign": "Fitness | Search | US, CA, UK",
+          "spend": 571.8,
+          "planned": 810,
+          "pacing_percent": 70.6,
+          "result": "under"
+        }
+      ],
+      "pacing_note": "Spend from 2026-10-01 to 2026-10-27 against daily budget x 27 days. Microsoft can spend up to twice the daily budget on one day, so the month is what counts."
+    },
+    "networks_devices_locations_schedule": {
+      "search_partners": "On for Booking Software | Search | US, CA, UK (ad group network OwnedAndOperatedAndSyndicatedSearch). The other campaigns are on Microsoft sites only.",
+      "audience_network": "Booking Software | Search | US, CA, UK: 9,800 impressions, 75 clicks, $317.75, 1 conversion; AudienceAdsBidAdjustment is 0. The other campaigns have it at -100 (off).",
+      "devices": [
+        {
+          "device": "Computer",
+          "clicks": 3383,
+          "spend": 9492.84,
+          "conversions": 142,
+          "cpa": 66.85,
+          "judgment": "CPA -9.1% vs account"
+        },
+        {
+          "device": "Smartphone",
+          "clicks": 1043,
+          "spend": 2615.25,
+          "conversions": 23,
+          "cpa": 113.71,
+          "judgment": "CPA +54.6% vs account"
+        },
+        {
+          "device": "Tablet",
+          "clicks": 209,
+          "spend": 465.21,
+          "conversions": 6,
+          "cpa": 77.54,
+          "judgment": "CPA +5.5% vs account"
+        }
+      ],
+      "device_and_os": [
+        {
+          "device": "Computer",
+          "os": "Windows",
+          "clicks": 2688,
+          "spend": 7543.98,
+          "conversions": 115,
+          "cpa": 65.6,
+          "judgment": "enough data"
+        },
+        {
+          "device": "Computer",
+          "os": "MacOS",
+          "clicks": 695,
+          "spend": 1948.86,
+          "conversions": 27,
+          "cpa": 72.18,
+          "judgment": "enough data"
+        },
+        {
+          "device": "Smartphone",
+          "os": "iOS",
+          "clicks": 626,
+          "spend": 1571.66,
+          "conversions": 14,
+          "cpa": 112.26,
+          "judgment": "enough data"
+        },
+        {
+          "device": "Smartphone",
+          "os": "Android",
+          "clicks": 417,
+          "spend": 1043.59,
+          "conversions": 9,
+          "cpa": 115.95,
+          "judgment": "enough data"
+        },
+        {
+          "device": "Tablet",
+          "os": "iOS",
+          "clicks": 162,
+          "spend": 377.2,
+          "conversions": 5,
+          "cpa": 75.44,
+          "judgment": "enough data"
+        },
+        {
+          "device": "Tablet",
+          "os": "Android",
+          "clicks": 47,
+          "spend": 88.01,
+          "conversions": 1,
+          "cpa": 88.01,
+          "judgment": "enough data"
+        }
+      ],
+      "locations": "Location intent is PeopleIn on all 5 campaigns. 24 clicks and $62.86 came from outside the 3 target countries (0.5% of clicks), travel traffic too small to act on.",
+      "bid_adjustments_without_results": [
+        {
+          "campaign": "Salons | Search | US, CA, UK",
+          "country": "Canada",
+          "bid_adjustment": 15,
+          "clicks": 81,
+          "spend": 202.69,
+          "conversions": 0
+        }
+      ],
+      "day_of_week": [
+        {
+          "day": "Sunday",
+          "clicks": 240,
+          "spend": 751.2,
+          "conversions": 6,
+          "cpa": 125.2,
+          "judgment": "CPA +70.3% vs account"
+        },
+        {
+          "day": "Monday",
+          "clicks": 794,
+          "spend": 2271.9,
+          "conversions": 33,
+          "cpa": 68.85,
+          "judgment": "CPA -6.4% vs account"
+        },
+        {
+          "day": "Tuesday",
+          "clicks": 871,
+          "spend": 2209.67,
+          "conversions": 33,
+          "cpa": 66.96,
+          "judgment": "CPA -8.9% vs account"
+        },
+        {
+          "day": "Wednesday",
+          "clicks": 893,
+          "spend": 2470.1,
+          "conversions": 32,
+          "cpa": 77.19,
+          "judgment": "CPA +5.0% vs account"
+        },
+        {
+          "day": "Thursday",
+          "clicks": 801,
+          "spend": 2155.0,
+          "conversions": 34,
+          "cpa": 63.38,
+          "judgment": "CPA -13.8% vs account"
+        },
+        {
+          "day": "Friday",
+          "clicks": 712,
+          "spend": 1781.15,
+          "conversions": 24,
+          "cpa": 74.21,
+          "judgment": "CPA +0.9% vs account"
+        },
+        {
+          "day": "Saturday",
+          "clicks": 324,
+          "spend": 934.28,
+          "conversions": 9,
+          "cpa": 103.81,
+          "judgment": "CPA +41.2% vs account"
+        }
+      ],
+      "day_of_week_note": "Weekends: $1,685.48 for 15 conversions ($112.37 CPA) against $69.79 on weekdays. A weekend bid adjustment is worth a test.",
+      "hour_of_day": [
+        {
+          "hour": 0,
+          "clicks": 33,
+          "spend": 94.62,
+          "conversions": 0,
+          "cpa": null,
+          "judgment": "no conversions"
+        },
+        {
+          "hour": 1,
+          "clicks": 32,
+          "spend": 88.53,
+          "conversions": 0,
+          "cpa": null,
+          "judgment": "no conversions"
+        },
+        {
+          "hour": 2,
+          "clicks": 33,
+          "spend": 94.63,
+          "conversions": 0,
+          "cpa": null,
+          "judgment": "no conversions"
+        },
+        {
+          "hour": 3,
+          "clicks": 33,
+          "spend": 92.07,
+          "conversions": 0,
+          "cpa": null,
+          "judgment": "no conversions"
+        },
+        {
+          "hour": 4,
+          "clicks": 37,
+          "spend": 102.11,
+          "conversions": 0,
+          "cpa": null,
+          "judgment": "no conversions"
+        },
+        {
+          "hour": 5,
+          "clicks": 31,
+          "spend": 88.83,
+          "conversions": 0,
+          "cpa": null,
+          "judgment": "no conversions"
+        },
+        {
+          "hour": 6,
+          "clicks": 117,
+          "spend": 308.07,
+          "conversions": 4,
+          "cpa": 77.02,
+          "judgment": "CPA +4.7% vs account"
+        },
+        {
+          "hour": 7,
+          "clicks": 117,
+          "spend": 303.13,
+          "conversions": 5,
+          "cpa": 60.63,
+          "judgment": "CPA -17.5% vs account"
+        },
+        {
+          "hour": 8,
+          "clicks": 313,
+          "spend": 852.87,
+          "conversions": 9,
+          "cpa": 94.76,
+          "judgment": "CPA +28.9% vs account"
+        },
+        {
+          "hour": 9,
+          "clicks": 369,
+          "spend": 992.35,
+          "conversions": 17,
+          "cpa": 58.37,
+          "judgment": "CPA -20.6% vs account"
+        },
+        {
+          "hour": 10,
+          "clicks": 368,
+          "spend": 965.64,
+          "conversions": 13,
+          "cpa": 74.28,
+          "judgment": "CPA +1.0% vs account"
+        },
+        {
+          "hour": 11,
+          "clicks": 356,
+          "spend": 1034.82,
+          "conversions": 13,
+          "cpa": 79.6,
+          "judgment": "CPA +8.3% vs account"
+        },
+        {
+          "hour": 12,
+          "clicks": 374,
+          "spend": 962.65,
+          "conversions": 16,
+          "cpa": 60.17,
+          "judgment": "CPA -18.2% vs account"
+        },
+        {
+          "hour": 13,
+          "clicks": 324,
+          "spend": 850.57,
+          "conversions": 13,
+          "cpa": 65.43,
+          "judgment": "CPA -11.0% vs account"
+        },
+        {
+          "hour": 14,
+          "clicks": 364,
+          "spend": 1007.81,
+          "conversions": 15,
+          "cpa": 67.19,
+          "judgment": "CPA -8.6% vs account"
+        },
+        {
+          "hour": 15,
+          "clicks": 363,
+          "spend": 994.62,
+          "conversions": 14,
+          "cpa": 71.04,
+          "judgment": "CPA -3.4% vs account"
+        },
+        {
+          "hour": 16,
+          "clicks": 343,
+          "spend": 904.54,
+          "conversions": 14,
+          "cpa": 64.61,
+          "judgment": "CPA -12.1% vs account"
+        },
+        {
+          "hour": 17,
+          "clicks": 205,
+          "spend": 573.2,
+          "conversions": 6,
+          "cpa": 95.53,
+          "judgment": "CPA +29.9% vs account"
+        },
+        {
+          "hour": 18,
+          "clicks": 210,
+          "spend": 591.85,
+          "conversions": 8,
+          "cpa": 73.98,
+          "judgment": "CPA +0.6% vs account"
+        },
+        {
+          "hour": 19,
+          "clicks": 192,
+          "spend": 496.89,
+          "conversions": 8,
+          "cpa": 62.11,
+          "judgment": "CPA -15.5% vs account"
+        },
+        {
+          "hour": 20,
+          "clicks": 175,
+          "spend": 501.91,
+          "conversions": 7,
+          "cpa": 71.7,
+          "judgment": "CPA -2.5% vs account"
+        },
+        {
+          "hour": 21,
+          "clicks": 77,
+          "spend": 220.27,
+          "conversions": 3,
+          "cpa": 73.42,
+          "judgment": "CPA -0.1% vs account"
+        },
+        {
+          "hour": 22,
+          "clicks": 86,
+          "spend": 229.56,
+          "conversions": 3,
+          "cpa": 76.52,
+          "judgment": "CPA +4.1% vs account"
+        },
+        {
+          "hour": 23,
+          "clicks": 83,
+          "spend": 221.76,
+          "conversions": 3,
+          "cpa": 73.92,
+          "judgment": "CPA +0.5% vs account"
+        }
+      ],
+      "hour_of_day_note": "00:00 to 05:59: 199 clicks, $560.79, 0 conversions; 6 of those 6 hours have 30 or more clicks. An ad schedule that lowers bids overnight is worth a test.",
+      "age_and_gender": "28.0% of impressions have an unknown age and 23.0% an unknown gender, so the split says little.",
+      "linkedin_profile_targeting": [
+        "Clinic scheduling: Industry 'Hospital and health care', bid adjustment +20%",
+        "Physio and therapy: Industry 'Hospital and health care', bid adjustment +20%"
+      ],
+      "linkedin_profile_note": "Performance by profile needs the Professional Demographics report, which the connector doesn't expose. Paste it to add the split."
+    },
+    "other_campaign_types": "None run. The remarketing list 'All site visitors 30 days' exists but no campaign uses it (information only).",
+    "more_fixes": [
+      {
+        "fix": "Lower bids from 00:00 to 05:59 with an ad schedule",
+        "money_at_stake": "$560.79 a month on 199 night clicks with 0 conversions",
+        "evidence": "campaign report by hour of day, hours 0 to 5",
+        "who": "do this in Microsoft Ads (schedules are out of scope for this skill)"
+      },
+      {
+        "fix": "Set AudienceAdsBidAdjustment to -100 on Booking Software | Search | US, CA, UK",
+        "money_at_stake": "$237.75 a month spent beyond the $80 target on Audience Network ads",
+        "evidence": "campaign report by network: Audience row; get_campaigns: AudienceAdsBidAdjustment 0",
+        "who": "do this in Microsoft Ads"
+      }
+    ]
+  },
+  "unknowns": [
+    "Auto-tagging (MSCLKID): no read action",
+    "13.0% of search spend has no visible search term",
+    "Microsoft's Recommendations tab: not exposed by the connector; paste it to triage",
+    "Google import gaps and Microsoft vs Google CPC: skipped, because no Google Ads account is connected",
+    "LinkedIn profile performance: the Professional Demographics report is not exposed by the connector"
+  ],
+  "offered_actions": [
+    {
+      "action": "add_negative_keywords_to_entities",
+      "status": "not run",
+      "condition": "after you confirm each group is off-intent",
+      "payload": {
+        "account_id": "150000001",
+        "entity_negative_keywords": [
+          {
+            "EntityId": "410000002",
+            "EntityType": "Campaign",
+            "NegativeKeywords": [
+              {
+                "Text": "restaurant",
+                "MatchType": "Phrase"
+              },
+              {
+                "Text": "hotel",
+                "MatchType": "Phrase"
+              }
+            ]
+          },
+          {
+            "EntityId": "410000003",
+            "EntityType": "Campaign",
+            "NegativeKeywords": [
+              {
+                "Text": "near me",
+                "MatchType": "Phrase"
+              },
+              {
+                "Text": "how to start",
+                "MatchType": "Phrase"
+              }
+            ]
+          },
+          {
+            "EntityId": "410000004",
+            "EntityType": "Campaign",
+            "NegativeKeywords": [
+              {
+                "Text": "near me",
+                "MatchType": "Phrase"
+              },
+              {
+                "Text": "doctor appointment",
+                "MatchType": "Phrase"
+              },
+              {
+                "Text": "jobs",
+                "MatchType": "Phrase"
+              }
+            ]
+          }
+        ]
+      },
+      "checked": "none of these blocks an enabled keyword in its campaign"
+    },
+    {
+      "action": "set_ad_extension_associations",
+      "status": "not run",
+      "condition": "after you confirm each sitelink is still true",
+      "payload": {
+        "account_id": "150000001",
+        "association_type": "Campaign",
+        "ad_extension_id_to_entity_id_associations": [
+          {
+            "AdExtensionId": "2200000101",
+            "EntityId": "410000004"
+          },
+          {
+            "AdExtensionId": "2200000102",
+            "EntityId": "410000004"
+          },
+          {
+            "AdExtensionId": "2200000103",
+            "EntityId": "410000004"
+          }
+        ]
+      },
+      "result_if_run": "Clinics | Search | US, CA, UK: 5 sitelinks"
+    }
+  ],
+  "do_in_microsoft_ads": [
+    "point the Clinics | Search | US, CA, UK ads at https://www.example.com/industries/clinics/ and move the campaign from Maximize Clicks to Manual CPC",
+    "raise the Salons | Search | US, CA, UK budget in steps",
+    "set 'Demo booked' to count Unique",
+    "replace the phrase negative 'class' on Fitness | Search | US, CA, UK",
+    "turn off search partners on Booking Software | Search | US, CA, UK and set its AudienceAdsBidAdjustment to -100",
+    "test a -20% smartphone bid adjustment",
+    "add a structured snippet to Clinics | Search | US, CA, UK, Fitness | Search | US, CA, UK",
+    "add headlines and a description to the Spa booking RSA"
+  ],
+  "go_deeper": [
+    "quality-score-fixer (clinic keywords and landing page), if installed",
+    "negative-keyword-implementer (negatives), if installed",
+    "impression-share-analyst (budget and rank losses), if installed",
+    "conversion-tracking-auditor (goal counting), if installed"
+  ]
+}

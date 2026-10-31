@@ -1,0 +1,272 @@
+{
+  "header": {
+    "business": "Example Booking Software",
+    "run_date": "2026-10-28",
+    "mode": "both",
+    "currency": "USD",
+    "conversion": "trial signup (GA4 event sign_up)",
+    "target_cost_per_signup": 36.0,
+    "target_math": "540.00 first-year revenue x 0.2 signup-to-paid / 3 = 36.00",
+    "review_window": "2026-08-29 to 2026-10-27 (60 days)",
+    "history_window": "2026-07-30 to 2026-10-27",
+    "settings": "benchmark = first 5 listings; review floor = half the median; rating floor = median - 0.2; readable test = 10 x target; click check 0.6 sessions per click",
+    "sources": [
+      "Capterra PPC report (pasted)",
+      "GA4 get_report",
+      "Search Console search_analytics",
+      "G2 category pages (pasted)",
+      "destination pages (crawler, pasted where empty)"
+    ]
+  },
+  "findings": [
+    "Capterra Medical Scheduling: 130 clicks and 546.00 spent with no GA4 signup, past the 108.00 stop line. Stop it. Only 0.54 sessions per click reached the site, and it pointed at the home page, which misses the category and the listing's button; https://www.example.com/industries/clinics/ passes all three checks if it is ever retested.",
+    "Capterra Appointment Scheduling earns its place: 38 signups at 32.84 each against a 36.00 target. At average position 6.2 there is room to raise the bid from 2.40 to 2.63.",
+    "Capterra Salon Software costs 46.43 per signup, 1.29 x target. Lower the bid from 3.25 to 2.52.",
+    "Skip G2 Appointment Scheduling: the highest bid it can pay is 2.10 against a 3.50 minimum, and the listing has 14 reviews where the floor is 116.5. Test G2 Salon Software instead at 2.10 a click: the listing passes against smaller rivals there.",
+    "Capterra reports 83 conversions; GA4 records 59 signups from tagged clicks. Verdicts use GA4. A further 96 untagged Capterra visits brought 5 signups and are not credited to any paid category."
+  ],
+  "review": [
+    {
+      "category_id": "capterra-appointment-scheduling",
+      "category": "Appointment Scheduling Software",
+      "fit": "primary",
+      "clicks": 520,
+      "spend": 1248.0,
+      "avg_cpc": 2.4,
+      "avg_position": 6.2,
+      "ga4_sessions": 452,
+      "sessions_per_click": 0.87,
+      "ga4_signups": 38,
+      "cost_per_signup": 32.84,
+      "signups_per_click": 0.0731,
+      "new_max_cpc": 2.63,
+      "directory_reported_conversions": 49,
+      "verdict": "keep",
+      "why": "cost per signup 32.84, at or under target 36.00; average position 6.2 with room to raise the bid from 2.40 up to 2.63",
+      "flags": []
+    },
+    {
+      "category_id": "capterra-salon",
+      "category": "Salon Software",
+      "fit": "primary",
+      "clicks": 300,
+      "spend": 975.0,
+      "avg_cpc": 3.25,
+      "avg_position": 2.8,
+      "ga4_sessions": 258,
+      "sessions_per_click": 0.86,
+      "ga4_signups": 21,
+      "cost_per_signup": 46.43,
+      "signups_per_click": 0.07,
+      "new_max_cpc": 2.52,
+      "directory_reported_conversions": 30,
+      "verdict": "lower bid",
+      "why": "cost per signup 46.43, above target 36.00 and within 1.5 x (54.00); set the bid to 2.52",
+      "flags": []
+    },
+    {
+      "category_id": "capterra-medical-scheduling",
+      "category": "Medical Scheduling Software",
+      "fit": "adjacent",
+      "clicks": 130,
+      "spend": 546.0,
+      "avg_cpc": 4.2,
+      "avg_position": 4.1,
+      "ga4_sessions": 70,
+      "sessions_per_click": 0.54,
+      "ga4_signups": 0,
+      "cost_per_signup": null,
+      "signups_per_click": 0.0,
+      "new_max_cpc": null,
+      "directory_reported_conversions": 4,
+      "verdict": "stop",
+      "why": "no GA4 signup after 546.00, past 3 x target (108.00); compete check not run (no category page pasted)",
+      "flags": [
+        "0.54 sessions per click, under 0.6: check tags and destination, ask Capterra to review the clicks",
+        "destination miss: use https://www.example.com/industries/clinics/"
+      ]
+    }
+  ],
+  "untagged_directory_traffic": {
+    "source": "capterra.com / referral",
+    "sessions": 96,
+    "signups": 5,
+    "note": "Free profile visits or paid clicks that lost their tags; not credited to any paid category."
+  },
+  "compete_check": [
+    {
+      "category_id": "g2-appointment-scheduling",
+      "benchmark_median_reviews": 233,
+      "benchmark_median_rating": 4.6,
+      "review_floor": 116.5,
+      "rating_floor": 4.4,
+      "listing_reviews": 14,
+      "listing_rating": 4.6,
+      "sponsored_in_benchmark": 2,
+      "result": "fail",
+      "misses": [
+        "14 reviews, floor 116.5: 102.5 short"
+      ]
+    },
+    {
+      "category_id": "g2-salon",
+      "benchmark_median_reviews": 22,
+      "benchmark_median_rating": 4.5,
+      "review_floor": 11.0,
+      "rating_floor": 4.3,
+      "listing_reviews": 14,
+      "listing_rating": 4.6,
+      "sponsored_in_benchmark": 1,
+      "result": "pass",
+      "misses": []
+    }
+  ],
+  "destination_check": [
+    {
+      "category_id": "capterra-appointment-scheduling",
+      "destination": "https://www.example.com/features/online-booking/",
+      "names_the_job": true,
+      "button_matches_listing": true,
+      "prices_on_page_or_one_click": true,
+      "result": "match"
+    },
+    {
+      "category_id": "capterra-salon",
+      "destination": "https://www.example.com/industries/salons/",
+      "names_the_job": true,
+      "button_matches_listing": true,
+      "prices_on_page_or_one_click": true,
+      "result": "match"
+    },
+    {
+      "category_id": "capterra-medical-scheduling",
+      "destination": "https://www.example.com/",
+      "names_the_job": false,
+      "button_matches_listing": false,
+      "prices_on_page_or_one_click": true,
+      "result": "miss",
+      "use_instead": "https://www.example.com/industries/clinics/"
+    },
+    {
+      "category_id": "g2-appointment-scheduling",
+      "destination": "https://www.example.com/features/online-booking/",
+      "names_the_job": true,
+      "button_matches_listing": true,
+      "prices_on_page_or_one_click": true,
+      "result": "match"
+    },
+    {
+      "category_id": "g2-salon",
+      "destination": "https://www.example.com/industries/salons/",
+      "names_the_job": true,
+      "button_matches_listing": true,
+      "prices_on_page_or_one_click": true,
+      "result": "match"
+    }
+  ],
+  "plan": [
+    {
+      "category_id": "g2-appointment-scheduling",
+      "directory": "G2",
+      "category": "Appointment Scheduling",
+      "fit": "primary",
+      "search_console_demand_impressions_90_days": 3020,
+      "signups_per_click": 0.0583,
+      "signups_per_click_source": "G2 referral traffic in GA4 over 90 days: 14 signups / 240 sessions",
+      "max_cpc": 2.1,
+      "minimum_bid": 3.5,
+      "compete": "fail",
+      "destination": "match",
+      "verdict": "skip",
+      "bid": null,
+      "why": "max CPC 2.10 is below the minimum bid 3.50; the listing also fails the compete check (14 reviews, floor 116.5: 102.5 short)",
+      "monthly_budget": 0.0,
+      "tagged_link": null
+    },
+    {
+      "category_id": "g2-salon",
+      "directory": "G2",
+      "category": "Salon Software",
+      "fit": "primary",
+      "search_console_demand_impressions_90_days": 1870,
+      "signups_per_click": 0.0583,
+      "signups_per_click_source": "G2 referral traffic in GA4 over 90 days: 14 signups / 240 sessions",
+      "max_cpc": 2.1,
+      "minimum_bid": 1.25,
+      "compete": "pass",
+      "destination": "match",
+      "verdict": "bid",
+      "bid": 2.1,
+      "why": "bid max CPC 2.10; the portal shows 2.40 for the top 3, so expect a lower position",
+      "monthly_budget": 180.0,
+      "tagged_link": "https://www.example.com/industries/salons/?utm_source=g2&utm_medium=cpc&utm_campaign=salon"
+    }
+  ],
+  "budget_next_period": {
+    "monthly_budget": 1500.0,
+    "allocations": [
+      {
+        "category_id": "g2-salon",
+        "status": "new test",
+        "monthly_budget": 180.0,
+        "bid": 2.1,
+        "basis": "readable test: 10 x target over 60 days = 360.00, 180.00 a month"
+      },
+      {
+        "category_id": "capterra-salon",
+        "status": "lower bid",
+        "monthly_budget": 378.0,
+        "bid": 2.52,
+        "basis": "150 clicks a month x new max CPC 2.52"
+      },
+      {
+        "category_id": "capterra-appointment-scheduling",
+        "status": "keep",
+        "monthly_budget": 942.0,
+        "bid": "up to 2.63",
+        "basis": "the rest of the 1500.00 budget; it spends more only if a bid up to 2.63 wins more clicks"
+      }
+    ],
+    "unallocated": 0.0,
+    "freed_from_stopped": [
+      {
+        "category_id": "capterra-medical-scheduling",
+        "freed_monthly": 273.0
+      }
+    ],
+    "directory_minimum": {
+      "directory": "Capterra",
+      "monthly_minimum": 500.0,
+      "planned_monthly": 1320.0,
+      "met": true
+    }
+  },
+  "tagged_links": [
+    {
+      "category_id": "g2-salon",
+      "url": "https://www.example.com/industries/salons/?utm_source=g2&utm_medium=cpc&utm_campaign=salon"
+    },
+    {
+      "category_id": "capterra-salon",
+      "url": "https://www.example.com/industries/salons/?utm_source=capterra&utm_medium=cpc&utm_campaign=salon"
+    },
+    {
+      "category_id": "capterra-appointment-scheduling",
+      "url": "https://www.example.com/features/online-booking/?utm_source=capterra&utm_medium=cpc&utm_campaign=appointment-scheduling"
+    }
+  ],
+  "stop_rule": {
+    "start": "2026-10-28",
+    "review_date": "2026-12-27",
+    "target": 36.0,
+    "rules": [
+      "any category that spends 108.00 (3 x target) with no GA4 signup stops at once",
+      "at the review date, cost per signup above 54.00 (1.5 x target) stops",
+      "above 36.00 up to 54.00 lowers the bid to target x signups per click",
+      "at or under 36.00 keeps"
+    ]
+  },
+  "not_graded": [
+    "Compete check for the three Capterra categories: no Capterra category page was pasted, so Medical Scheduling's verdict is stop rather than fix listing."
+  ]
+}

@@ -1,0 +1,388 @@
+{
+  "note": "Example data: an invented online booking software company with invented accounts, not a real business. Every number in expected_output.json follows from this input.",
+  "request": "Hey Claude, I just added the \"software-marketplace-ads-planner\" skill. We ran Capterra PPC in three categories for the last 60 days. Review it against GA4, then plan the next 60 days. We're also thinking about G2 Clicks for appointment scheduling and salon software. Budget is $1,500 a month for directories.",
+  "business": "Example Booking Software",
+  "site": "https://www.example.com",
+  "currency": "USD",
+  "run_date": "2026-10-28",
+  "mode": "both",
+  "conversion": {
+    "name": "trial signup",
+    "ga4_event": "sign_up"
+  },
+  "target_inputs": {
+    "first_year_revenue_per_new_customer": 540.0,
+    "signup_to_paid_rate": 0.2
+  },
+  "monthly_budget": 1500.0,
+  "window_days": 60,
+  "review_window": {
+    "start": "2026-08-29",
+    "end": "2026-10-27"
+  },
+  "history_window": {
+    "start": "2026-07-30",
+    "end": "2026-10-27"
+  },
+  "next_period_start": "2026-10-28",
+  "settings": {
+    "benchmark_listings": 5,
+    "review_floor_share_of_median": 0.5,
+    "rating_floor_below_median": 0.2,
+    "readable_test_multiple_of_target": 10,
+    "min_sessions_per_click": 0.6
+  },
+  "directories": {
+    "Capterra": {
+      "billing": "per click, bid per category; clicks from its sister site GetApp included, per the contract",
+      "monthly_minimum": 500.0,
+      "listing_reviews": 63,
+      "listing_rating": 4.5,
+      "listing_cta": "Start free trial"
+    },
+    "G2": {
+      "billing": "G2 Clicks, per click, bid per category",
+      "monthly_minimum": null,
+      "listing_reviews": 14,
+      "listing_rating": 4.6,
+      "listing_cta": "Start free trial"
+    }
+  },
+  "categories": [
+    {
+      "id": "capterra-appointment-scheduling",
+      "directory": "Capterra",
+      "category": "Appointment Scheduling Software",
+      "fit": "primary",
+      "synonyms": [
+        "appointment scheduling",
+        "online booking"
+      ],
+      "running": true,
+      "destination": "/features/online-booking/",
+      "tag_campaign": "appointment-scheduling"
+    },
+    {
+      "id": "capterra-salon",
+      "directory": "Capterra",
+      "category": "Salon Software",
+      "fit": "primary",
+      "synonyms": [
+        "salon software",
+        "salon booking",
+        "salons"
+      ],
+      "running": true,
+      "destination": "/industries/salons/",
+      "tag_campaign": "salon"
+    },
+    {
+      "id": "capterra-medical-scheduling",
+      "directory": "Capterra",
+      "category": "Medical Scheduling Software",
+      "fit": "adjacent",
+      "synonyms": [
+        "medical scheduling",
+        "clinic",
+        "patient scheduling"
+      ],
+      "running": true,
+      "destination": "/",
+      "tag_campaign": "medical-scheduling"
+    },
+    {
+      "id": "g2-appointment-scheduling",
+      "directory": "G2",
+      "category": "Appointment Scheduling",
+      "fit": "primary",
+      "synonyms": [
+        "appointment scheduling",
+        "online booking"
+      ],
+      "running": false,
+      "destination": "/features/online-booking/",
+      "tag_campaign": "appointment-scheduling",
+      "portal": {
+        "minimum_bid": 3.5,
+        "top_3_bid_shown": null
+      }
+    },
+    {
+      "id": "g2-salon",
+      "directory": "G2",
+      "category": "Salon Software",
+      "fit": "primary",
+      "synonyms": [
+        "salon software",
+        "salon booking",
+        "salons"
+      ],
+      "running": false,
+      "destination": "/industries/salons/",
+      "tag_campaign": "salon",
+      "portal": {
+        "minimum_bid": 1.25,
+        "top_3_bid_shown": 2.4
+      }
+    }
+  ],
+  "data_pulled": {
+    "capterra_ppc_report": {
+      "window": "2026-08-29 to 2026-10-27",
+      "rows": [
+        {
+          "category": "Appointment Scheduling Software",
+          "clicks": 520,
+          "spend": 1248.0,
+          "avg_position": 6.2,
+          "reported_conversions": 49
+        },
+        {
+          "category": "Salon Software",
+          "clicks": 300,
+          "spend": 975.0,
+          "avg_position": 2.8,
+          "reported_conversions": 30
+        },
+        {
+          "category": "Medical Scheduling Software",
+          "clicks": 130,
+          "spend": 546.0,
+          "avg_position": 4.1,
+          "reported_conversions": 4
+        }
+      ]
+    },
+    "ga4_get_report_review_window": {
+      "call": {
+        "action": "get_report",
+        "dimensions": [
+          "sessionSource",
+          "sessionMedium",
+          "sessionCampaignName",
+          "eventName"
+        ],
+        "metrics": [
+          "eventCount"
+        ]
+      },
+      "rows": [
+        {
+          "sessionSource": "capterra",
+          "sessionMedium": "cpc",
+          "sessionCampaignName": "appointment-scheduling",
+          "eventName": "session_start",
+          "eventCount": 452
+        },
+        {
+          "sessionSource": "capterra",
+          "sessionMedium": "cpc",
+          "sessionCampaignName": "appointment-scheduling",
+          "eventName": "sign_up",
+          "eventCount": 38
+        },
+        {
+          "sessionSource": "capterra",
+          "sessionMedium": "cpc",
+          "sessionCampaignName": "salon",
+          "eventName": "session_start",
+          "eventCount": 258
+        },
+        {
+          "sessionSource": "capterra",
+          "sessionMedium": "cpc",
+          "sessionCampaignName": "salon",
+          "eventName": "sign_up",
+          "eventCount": 21
+        },
+        {
+          "sessionSource": "capterra",
+          "sessionMedium": "cpc",
+          "sessionCampaignName": "medical-scheduling",
+          "eventName": "session_start",
+          "eventCount": 70
+        },
+        {
+          "sessionSource": "capterra.com",
+          "sessionMedium": "referral",
+          "sessionCampaignName": "(referral)",
+          "eventName": "session_start",
+          "eventCount": 96
+        },
+        {
+          "sessionSource": "capterra.com",
+          "sessionMedium": "referral",
+          "sessionCampaignName": "(referral)",
+          "eventName": "sign_up",
+          "eventCount": 5
+        },
+        {
+          "sessionSource": "google",
+          "sessionMedium": "organic",
+          "sessionCampaignName": "(organic)",
+          "eventName": "session_start",
+          "eventCount": 9810
+        },
+        {
+          "sessionSource": "google",
+          "sessionMedium": "organic",
+          "sessionCampaignName": "(organic)",
+          "eventName": "sign_up",
+          "eventCount": 212
+        }
+      ]
+    },
+    "ga4_get_report_history_90_days": {
+      "rows": [
+        {
+          "sessionSource": "g2.com",
+          "sessionMedium": "referral",
+          "sessionCampaignName": "(referral)",
+          "eventName": "session_start",
+          "eventCount": 240
+        },
+        {
+          "sessionSource": "g2.com",
+          "sessionMedium": "referral",
+          "sessionCampaignName": "(referral)",
+          "eventName": "sign_up",
+          "eventCount": 14
+        }
+      ]
+    },
+    "search_console_queries_90_days": [
+      {
+        "query": "how to reduce no-shows",
+        "impressions": 3300,
+        "clicks": 140
+      },
+      {
+        "query": "appointment reminder text templates",
+        "impressions": 2900,
+        "clicks": 121
+      },
+      {
+        "query": "appointment scheduling software",
+        "impressions": 2140,
+        "clicks": 18
+      },
+      {
+        "query": "salon booking software",
+        "impressions": 1020,
+        "clicks": 22
+      },
+      {
+        "query": "online appointment scheduling software",
+        "impressions": 880,
+        "clicks": 6
+      },
+      {
+        "query": "salon software",
+        "impressions": 610,
+        "clicks": 9
+      },
+      {
+        "query": "best salon software",
+        "impressions": 240,
+        "clicks": 3
+      },
+      {
+        "query": "clinic scheduling software",
+        "impressions": 150,
+        "clicks": 1
+      }
+    ],
+    "category_pages_pasted": {
+      "g2-appointment-scheduling": [
+        {
+          "name": "Competitor A",
+          "sponsored": true,
+          "reviews": 412,
+          "rating": 4.6
+        },
+        {
+          "name": "Competitor B",
+          "sponsored": true,
+          "reviews": 180,
+          "rating": 4.5
+        },
+        {
+          "name": "Competitor C",
+          "sponsored": false,
+          "reviews": 655,
+          "rating": 4.7
+        },
+        {
+          "name": "Competitor D",
+          "sponsored": false,
+          "reviews": 96,
+          "rating": 4.4
+        },
+        {
+          "name": "Competitor E",
+          "sponsored": false,
+          "reviews": 233,
+          "rating": 4.6
+        }
+      ],
+      "g2-salon": [
+        {
+          "name": "Competitor F",
+          "sponsored": true,
+          "reviews": 38,
+          "rating": 4.6
+        },
+        {
+          "name": "Competitor G",
+          "sponsored": false,
+          "reviews": 22,
+          "rating": 4.5
+        },
+        {
+          "name": "Competitor C",
+          "sponsored": false,
+          "reviews": 61,
+          "rating": 4.7
+        },
+        {
+          "name": "Competitor H",
+          "sponsored": false,
+          "reviews": 9,
+          "rating": 4.3
+        },
+        {
+          "name": "Competitor J",
+          "sponsored": false,
+          "reviews": 17,
+          "rating": 4.4
+        }
+      ]
+    },
+    "destination_pages": {
+      "/features/online-booking/": {
+        "title": "Online booking page",
+        "h1": "Online booking page",
+        "main_button": "Start free trial",
+        "prices_on_page_or_one_click": true
+      },
+      "/industries/salons/": {
+        "title": "Booking software for salons",
+        "h1": "Booking software for salons",
+        "main_button": "Start free trial",
+        "prices_on_page_or_one_click": true
+      },
+      "/": {
+        "title": "Online booking software for small businesses",
+        "h1": "Online booking software for small businesses",
+        "main_button": "Watch the tour",
+        "prices_on_page_or_one_click": true
+      },
+      "/industries/clinics/": {
+        "title": "Appointment scheduling for clinics",
+        "h1": "Appointment scheduling for clinics",
+        "main_button": "Start free trial",
+        "prices_on_page_or_one_click": true
+      }
+    }
+  }
+}

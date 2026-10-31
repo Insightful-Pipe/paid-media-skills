@@ -1,0 +1,670 @@
+{
+  "header": {
+    "business": "Example ergonomic chair store",
+    "currency": "USD",
+    "date_range": "2026-10-14 to 2026-10-27",
+    "target_cpa": 60.0,
+    "campaigns": [
+      {
+        "campaign": "Taboola | US | Desktop | Chair presell",
+        "spend": 6310.0,
+        "clicks": 14190,
+        "conversions": 98,
+        "cpa": 64.39,
+        "cvr_pct": 0.69,
+        "click_gate": 435,
+        "site_report_spend": 6192.0,
+        "coverage_pct": 98.1,
+        "blocked_share_of_judged_spend_pct": 26.8,
+        "too_few_clicks_share_of_site_spend_pct": 4.4,
+        "campaign_native_engagement_rate_pct": 42.9
+      },
+      {
+        "campaign": "Outbrain | US | All devices | Chair presell",
+        "spend": 2120.0,
+        "clicks": 4680,
+        "conversions": 36,
+        "cpa": 58.89,
+        "cvr_pct": 0.77,
+        "click_gate": 390,
+        "site_report_spend": 2079.0,
+        "coverage_pct": 98.1,
+        "blocked_share_of_judged_spend_pct": 36.7,
+        "too_few_clicks_share_of_site_spend_pct": 4.8
+      }
+    ]
+  },
+  "two_weeks": [
+    {
+      "campaign": "Taboola | US | Desktop | Chair presell",
+      "weeks": [
+        {
+          "week": "2026-10-14 to 2026-10-20",
+          "spend": 3020.0,
+          "clicks": 6850,
+          "conversions": 44,
+          "cpa": 68.64
+        },
+        {
+          "week": "2026-10-21 to 2026-10-27",
+          "spend": 3290.0,
+          "clicks": 7340,
+          "conversions": 54,
+          "cpa": 60.93
+        }
+      ],
+      "change": {
+        "spend_pct": 8.9,
+        "conversions_pct": 22.7,
+        "cpa_pct": -11.2
+      }
+    },
+    {
+      "campaign": "Outbrain | US | All devices | Chair presell",
+      "weeks": [
+        {
+          "week": "2026-10-14 to 2026-10-20",
+          "spend": 1000.0,
+          "clicks": 2250,
+          "conversions": 16,
+          "cpa": 62.5
+        },
+        {
+          "week": "2026-10-21 to 2026-10-27",
+          "spend": 1120.0,
+          "clicks": 2430,
+          "conversions": 20,
+          "cpa": 56.0
+        }
+      ],
+      "change": {
+        "spend_pct": 12.0,
+        "conversions_pct": 25.0,
+        "cpa_pct": -10.4
+      }
+    }
+  ],
+  "site_table": {
+    "Taboola | US | Desktop | Chair presell": [
+      {
+        "site": "weekendreader.example",
+        "site_id": "1103",
+        "clicks": 1900,
+        "spend": 817.0,
+        "conversions": 6,
+        "cpa": 136.17,
+        "ga4_sessions": 1690,
+        "landing_rate_pct": 88.9,
+        "engagement_rate_pct": 36.1,
+        "verdict": "Block",
+        "reason": "CPA $136.17 is at least 2 × T ($120)"
+      },
+      {
+        "site": "homefrontnews.example",
+        "site_id": "1105",
+        "clicks": 1400,
+        "spend": 574.0,
+        "conversions": 0,
+        "cpa": null,
+        "ga4_sessions": 1210,
+        "landing_rate_pct": 86.4,
+        "engagement_rate_pct": 15.7,
+        "accidental_clicks": "engagement rate 15.7% is under half the campaign's 42.9%",
+        "verdict": "Block",
+        "reason": "0 conversions after 1,400 clicks. Accidental clicks flag (engagement rate 15.7% is under half the campaign's 42.9%): Block stays Block"
+      },
+      {
+        "site": "northgatewire.example",
+        "site_id": "1109",
+        "clicks": 450,
+        "spend": 198.0,
+        "conversions": 1,
+        "cpa": 198.0,
+        "ga4_sessions": 400,
+        "landing_rate_pct": 88.9,
+        "engagement_rate_pct": 37.5,
+        "verdict": "Block",
+        "reason": "CPA $198.00 is at least 2 × T ($120)"
+      },
+      {
+        "site": "parkviewherald.example",
+        "site_id": "1106",
+        "clicks": 1200,
+        "spend": 552.0,
+        "conversions": 7,
+        "cpa": 78.86,
+        "ga4_sessions": 1070,
+        "landing_rate_pct": 89.2,
+        "engagement_rate_pct": 43.9,
+        "verdict": "Bid down 20%",
+        "reason": "CPA $78.86 is between 1.3 × T ($78) and 2 × T"
+      },
+      {
+        "site": "ridgelinetimes.example",
+        "site_id": "1107",
+        "clicks": 900,
+        "spend": 414.0,
+        "conversions": 9,
+        "cpa": 46.0,
+        "ga4_sessions": 380,
+        "landing_rate_pct": 42.2,
+        "engagement_rate_pct": 31.6,
+        "accidental_clicks": "landing rate 42.2% is under 60%",
+        "verdict": "Bid down 20%",
+        "reason": "CPA $46.00 sits between 0.7 × T and 1.3 × T. Accidental clicks flag (landing rate 42.2% is under 60%): moves Keep to Bid down 20%"
+      },
+      {
+        "site": "fernhollowdaily.example",
+        "site_id": "1101",
+        "clicks": 3200,
+        "spend": 1440.0,
+        "conversions": 30,
+        "cpa": 48.0,
+        "ga4_sessions": 2880,
+        "landing_rate_pct": 90.0,
+        "engagement_rate_pct": 49.0,
+        "verdict": "Keep",
+        "reason": "CPA $48.00 sits between 0.7 × T and 1.3 × T"
+      },
+      {
+        "site": "thecommutepost.example",
+        "site_id": "1104",
+        "clicks": 1500,
+        "spend": 660.0,
+        "conversions": 9,
+        "cpa": 73.33,
+        "ga4_sessions": 1340,
+        "landing_rate_pct": 89.3,
+        "engagement_rate_pct": 47.8,
+        "verdict": "Keep",
+        "reason": "CPA $73.33 sits between 0.7 × T and 1.3 × T"
+      },
+      {
+        "site": "morningcompass.example",
+        "site_id": "1102",
+        "clicks": 2100,
+        "spend": 966.0,
+        "conversions": 24,
+        "cpa": 40.25,
+        "ga4_sessions": 1930,
+        "landing_rate_pct": 91.9,
+        "engagement_rate_pct": 52.3,
+        "verdict": "Boost 20%",
+        "reason": "CPA $40.25 is at most 0.7 × T ($42) with 24 conversions"
+      },
+      {
+        "site": "quietharbor.example",
+        "site_id": "1108",
+        "clicks": 700,
+        "spend": 301.0,
+        "conversions": 8,
+        "cpa": 37.63,
+        "ga4_sessions": 640,
+        "landing_rate_pct": 91.4,
+        "engagement_rate_pct": 56.3,
+        "verdict": "Boost 20%",
+        "reason": "CPA $37.63 is at most 0.7 × T ($42) with 8 conversions"
+      },
+      {
+        "site": "brightsidegazette.example",
+        "site_id": "1110",
+        "clicks": 260,
+        "spend": 117.0,
+        "conversions": 0,
+        "cpa": null,
+        "ga4_sessions": 230,
+        "landing_rate_pct": 88.5,
+        "engagement_rate_pct": 41.3,
+        "verdict": "too few clicks",
+        "reason": "260 clicks is under the gate of 435, and $117 is under 2 × T ($120)"
+      },
+      {
+        "site": "lakeshoredigest.example",
+        "site_id": "1111",
+        "clicks": 180,
+        "spend": 90.0,
+        "conversions": 2,
+        "cpa": 45.0,
+        "ga4_sessions": 160,
+        "landing_rate_pct": 88.9,
+        "engagement_rate_pct": 43.8,
+        "verdict": "too few clicks",
+        "reason": "180 clicks is under the gate of 435, and $90 is under 2 × T ($120)"
+      },
+      {
+        "site": "maplecourier.example",
+        "site_id": "1112",
+        "clicks": 150,
+        "spend": 63.0,
+        "conversions": 0,
+        "cpa": null,
+        "ga4_sessions": 130,
+        "landing_rate_pct": 86.7,
+        "engagement_rate_pct": 38.5,
+        "verdict": "too few clicks",
+        "reason": "150 clicks is under the gate of 435, and $63 is under 2 × T ($120)"
+      }
+    ],
+    "Outbrain | US | All devices | Chair presell": [
+      {
+        "site": "saltmarshjournal.example | Money",
+        "clicks": 900,
+        "spend": 405.0,
+        "conversions": 3,
+        "cpa": 135.0,
+        "verdict": "Block",
+        "reason": "CPA $135.00 is at least 2 × T ($120)"
+      },
+      {
+        "site": "pinecrestdaily.example | Health",
+        "clicks": 700,
+        "spend": 322.0,
+        "conversions": 0,
+        "cpa": null,
+        "verdict": "Block",
+        "reason": "0 conversions after 700 clicks"
+      },
+      {
+        "site": "saltmarshjournal.example | Lifestyle",
+        "clicks": 1300,
+        "spend": 598.0,
+        "conversions": 13,
+        "cpa": 46.0,
+        "verdict": "Keep",
+        "reason": "CPA $46.00 sits between 0.7 × T and 1.3 × T"
+      },
+      {
+        "site": "brackenvalenews.example | Tech",
+        "clicks": 380,
+        "spend": 171.0,
+        "conversions": 4,
+        "cpa": 42.75,
+        "verdict": "Keep",
+        "reason": "CPA $42.75 sits between 0.7 × T and 1.3 × T"
+      },
+      {
+        "site": "pinecrestdaily.example | Home",
+        "clicks": 1100,
+        "spend": 484.0,
+        "conversions": 14,
+        "cpa": 34.57,
+        "verdict": "Boost 20%",
+        "reason": "CPA $34.57 is at most 0.7 × T ($42) with 14 conversions"
+      },
+      {
+        "site": "brackenvalenews.example | Sports",
+        "clicks": 220,
+        "spend": 99.0,
+        "conversions": 0,
+        "cpa": null,
+        "verdict": "too few clicks",
+        "reason": "220 clicks is under the gate of 390, and $99 is under 2 × T ($120)"
+      }
+    ]
+  },
+  "actions": {
+    "Taboola | US | Desktop | Chair presell": {
+      "block": [
+        "weekendreader.example (site ID 1103)",
+        "homefrontnews.example (site ID 1105)",
+        "northgatewire.example (site ID 1109)"
+      ],
+      "bid_down_20_pct": [
+        "parkviewherald.example (site ID 1106)",
+        "ridgelinetimes.example (site ID 1107)"
+      ],
+      "boost_20_pct": [
+        "morningcompass.example (site ID 1102)",
+        "quietharbor.example (site ID 1108)"
+      ]
+    },
+    "Outbrain | US | All devices | Chair presell": {
+      "block": [
+        "saltmarshjournal.example | Money",
+        "pinecrestdaily.example | Health"
+      ],
+      "bid_down_20_pct": [],
+      "boost_20_pct": [
+        "pinecrestdaily.example | Home"
+      ]
+    }
+  },
+  "accidental_clicks": {
+    "Taboola | US | Desktop | Chair presell": {
+      "flagged": [
+        "homefrontnews.example",
+        "ridgelinetimes.example"
+      ],
+      "not_set_sessions_left_out": 120
+    },
+    "Outbrain | US | All devices | Chair presell": "not graded: the site macro didn't fill (see tracking), so GA4 can't tell one Outbrain section from another"
+  },
+  "headlines": {
+    "campaign": "Taboola | US | Desktop | Chair presell",
+    "gate_viewable_impressions": 50000,
+    "campaign_ctr_pct": 0.39,
+    "campaign_cvr_pct": 0.69,
+    "headline_ranking": [
+      {
+        "id": "H5",
+        "viewable_impressions": 440000,
+        "clicks": 1440,
+        "ctr_pct": 0.33,
+        "conversions": 16,
+        "cvr_pct": 1.11,
+        "spend": 640.34,
+        "cpa": 40.02,
+        "headline": "The desk chair that adjusts in 4 places, not 2"
+      },
+      {
+        "id": "H3",
+        "viewable_impressions": 740000,
+        "clicks": 2896,
+        "ctr_pct": 0.39,
+        "conversions": 25,
+        "cvr_pct": 0.86,
+        "spend": 1287.79,
+        "cpa": 51.51,
+        "headline": "3 signs your desk chair is the wrong height for you"
+      },
+      {
+        "id": "H1",
+        "viewable_impressions": 820000,
+        "clicks": 3360,
+        "ctr_pct": 0.41,
+        "conversions": 27,
+        "cvr_pct": 0.8,
+        "spend": 1494.12,
+        "cpa": 55.34,
+        "headline": "Why your back hurts by 4 p.m. at your desk"
+      },
+      {
+        "id": "H4",
+        "viewable_impressions": 470000,
+        "clicks": 1637,
+        "ctr_pct": 0.35,
+        "conversions": 12,
+        "cvr_pct": 0.73,
+        "spend": 727.94,
+        "cpa": 60.66,
+        "headline": "Is your chair the reason your neck aches after work?"
+      },
+      {
+        "id": "H2",
+        "viewable_impressions": 440000,
+        "clicks": 1230,
+        "ctr_pct": 0.28,
+        "conversions": 8,
+        "cvr_pct": 0.65,
+        "spend": 546.96,
+        "cpa": 68.37,
+        "headline": "Office workers are trading in their old chairs for this"
+      },
+      {
+        "id": "H6",
+        "viewable_impressions": 690000,
+        "clicks": 3627,
+        "ctr_pct": 0.53,
+        "conversions": 10,
+        "cvr_pct": 0.28,
+        "spend": 1612.85,
+        "cpa": 161.29,
+        "headline": "This chair fixes your posture in 7 days"
+      }
+    ],
+    "thumbnail_ranking": [
+      {
+        "id": "B",
+        "viewable_impressions": 1320000,
+        "clicks": 4248,
+        "ctr_pct": 0.32,
+        "conversions": 33,
+        "cvr_pct": 0.78,
+        "spend": 1889.0,
+        "cpa": 57.24,
+        "thumbnail": "Product shot: the chair on a plain white background"
+      },
+      {
+        "id": "A",
+        "viewable_impressions": 2280000,
+        "clicks": 9942,
+        "ctr_pct": 0.44,
+        "conversions": 65,
+        "cvr_pct": 0.65,
+        "spend": 4421.0,
+        "cpa": 68.02,
+        "thumbnail": "Photo: a person at a desk pressing a hand to their lower back"
+      }
+    ],
+    "patterns": [
+      {
+        "tag": "contains a number",
+        "with": [
+          "H1",
+          "H3",
+          "H5",
+          "H6"
+        ],
+        "without": [
+          "H2",
+          "H4"
+        ],
+        "ctr_with_pct": 0.42,
+        "ctr_without_pct": 0.32,
+        "ctr_gap_pct": 33.6,
+        "cvr_with_pct": 0.69,
+        "cvr_without_pct": 0.7,
+        "cvr_gap_pct": -1.3,
+        "reported": true
+      },
+      {
+        "tag": "asks a question",
+        "result": "not compared: 1 headline(s) with it and 5 without, at least 2 a side needed"
+      },
+      {
+        "tag": "speaks to the reader (you, your)",
+        "with": [
+          "H1",
+          "H3",
+          "H4",
+          "H6"
+        ],
+        "without": [
+          "H2",
+          "H5"
+        ],
+        "ctr_with_pct": 0.42,
+        "ctr_without_pct": 0.3,
+        "ctr_gap_pct": 39.6,
+        "cvr_with_pct": 0.64,
+        "cvr_without_pct": 0.9,
+        "cvr_gap_pct": -28.5,
+        "reported": true
+      },
+      {
+        "tag": "over 60 characters",
+        "result": "not compared: 0 headline(s) with it and 6 without, at least 2 a side needed"
+      }
+    ],
+    "flags": [
+      {
+        "id": "H6",
+        "flag": "click bait gap",
+        "detail": "CTR 0.53% is 1.34 × the campaign's 0.39%, CVR 0.28% is 0.41 × the campaign's 0.69%"
+      },
+      {
+        "id": "H6",
+        "flag": "promise",
+        "detail": "promises a body result in a set time, which the presell page can't back"
+      },
+      {
+        "id": "H6",
+        "flag": "CPA at least 2 × T",
+        "detail": "CPA $161.29 against T of $60"
+      }
+    ],
+    "read": [
+      "Headlines with a number earned 33.6% more CTR than those without (0.42% against 0.32%) at about the same CVR (0.69% against 0.7%). A hint worth testing, from 6 headlines, not proof.",
+      "Headlines that speak to the reader earned 39.6% more CTR but 28.5% less CVR. Without H6, which carries the click bait gap, the CVR gap shrinks to 9.8%. Two of the new headlines speak to the reader, and all four describe the chair plainly.",
+      "The product shot (B) converts better than the back pain photo (A): CPA $57.24 against $68.02, though A gets more clicks (0.44% CTR against 0.32%). B goes into the next grid as the control thumbnail.",
+      "Retire H6: 'This chair fixes your posture in 7 days' has the click bait gap, a promise flag and a CPA of $161.29."
+    ],
+    "control": {
+      "id": "H5",
+      "headline": "The desk chair that adjusts in 4 places, not 2",
+      "cpa": 40.02
+    },
+    "retire": [
+      "H6"
+    ],
+    "next_grid": [
+      {
+        "headline": "The desk chair that adjusts in 4 places, not 2",
+        "chars": 46,
+        "thumbnail": "Product shot: the chair on a plain white background",
+        "role": "control"
+      },
+      {
+        "headline": "The desk chair that adjusts in 4 places, not 2",
+        "chars": 46,
+        "thumbnail": "Close-up: a hand pulling the seat-depth lever on the chair in a home office",
+        "role": "control headline, new thumbnail"
+      },
+      {
+        "headline": "4 chair settings to check if your back aches by 4 p.m.",
+        "chars": 54,
+        "thumbnail": "Product shot: the chair on a plain white background",
+        "role": "new"
+      },
+      {
+        "headline": "4 chair settings to check if your back aches by 4 p.m.",
+        "chars": 54,
+        "thumbnail": "Close-up: a hand pulling the seat-depth lever on the chair in a home office",
+        "role": "new"
+      },
+      {
+        "headline": "The 4 chair adjustments most desk chairs skip",
+        "chars": 45,
+        "thumbnail": "Product shot: the chair on a plain white background",
+        "role": "new"
+      },
+      {
+        "headline": "The 4 chair adjustments most desk chairs skip",
+        "chars": 45,
+        "thumbnail": "Close-up: a hand pulling the seat-depth lever on the chair in a home office",
+        "role": "new"
+      },
+      {
+        "headline": "Seat depth: the 1 chair setting most people never change",
+        "chars": 56,
+        "thumbnail": "Product shot: the chair on a plain white background",
+        "role": "new"
+      },
+      {
+        "headline": "Seat depth: the 1 chair setting most people never change",
+        "chars": 56,
+        "thumbnail": "Close-up: a hand pulling the seat-depth lever on the chair in a home office",
+        "role": "new"
+      },
+      {
+        "headline": "How to set up your desk chair in 5 minutes, step by step",
+        "chars": 56,
+        "thumbnail": "Product shot: the chair on a plain white background",
+        "role": "new"
+      },
+      {
+        "headline": "How to set up your desk chair in 5 minutes, step by step",
+        "chars": 56,
+        "thumbnail": "Close-up: a hand pulling the seat-depth lever on the chair in a home office",
+        "role": "new"
+      }
+    ]
+  },
+  "tracking": {
+    "Taboola | US | Desktop | Chair presell": {
+      "code": "utm_source=taboola&utm_medium=native&utm_campaign={campaign_name}&utm_term={site}&utm_content={campaign_item_id}",
+      "checks": [
+        {
+          "check": "Format",
+          "result": "pass",
+          "detail": "no leading ? or &"
+        },
+        {
+          "check": "Source",
+          "result": "pass",
+          "detail": "utm_source=taboola present"
+        },
+        {
+          "check": "Site macro",
+          "result": "pass",
+          "detail": "utm_term={site} fills with the site name"
+        },
+        {
+          "check": "Item macro",
+          "result": "pass",
+          "detail": "utm_content={campaign_item_id}"
+        },
+        {
+          "check": "Click ID",
+          "result": "not needed",
+          "detail": "conversions arrive through the network's pixel, not server to server"
+        }
+      ],
+      "corrected_code": null
+    },
+    "Outbrain | US | All devices | Chair presell": {
+      "code": "utm_source=outbrain&utm_medium=native&utm_campaign=chair-presell&utm_term={publisher_name}_{section_name}&utm_content={ad_id}",
+      "checks": [
+        {
+          "check": "Format",
+          "result": "pass",
+          "detail": "no leading ? or &"
+        },
+        {
+          "check": "Source",
+          "result": "pass",
+          "detail": "utm_source=outbrain present"
+        },
+        {
+          "check": "Site macro",
+          "result": "fail",
+          "detail": "{publisher_name} and {section_name} are written with one brace, so Outbrain never fills them. GA4 confirms it: every Outbrain session has the term {publisher_name}_{section_name} as plain text."
+        },
+        {
+          "check": "Item macro",
+          "result": "fail",
+          "detail": "{ad_id} is written with one brace, so it doesn't fill either"
+        },
+        {
+          "check": "Click ID",
+          "result": "not needed",
+          "detail": "conversions arrive through the network's pixel, not server to server"
+        }
+      ],
+      "corrected_code": "utm_source=outbrain&utm_medium=native&utm_campaign=chair-presell&utm_term={{publisher_name}}_{{section_name}}&utm_content={{ad_id}}"
+    },
+    "conversion_count": [
+      {
+        "campaign": "Taboola | US | Desktop | Chair presell",
+        "network_conversions": 98,
+        "ga4_purchases": 91,
+        "ratio": 1.08,
+        "result": "pass",
+        "detail": "within 0.67 to 1.5"
+      },
+      {
+        "campaign": "Outbrain | US | All devices | Chair presell",
+        "network_conversions": 36,
+        "ga4_purchases": 20,
+        "ratio": 1.8,
+        "result": "warn",
+        "detail": "the network counts more purchases than GA4 saw from its sessions. Check whether the Outbrain pixel fires on every load of the order confirmation page, and whether the conversions column includes view-through conversions. Until then the Outbrain CPAs above may be too kind."
+      }
+    ]
+  },
+  "not_graded": [
+    "Accidental clicks on Outbrain: the site macro didn't fill. Paste the corrected tracking code and rerun next week.",
+    "Outbrain headlines: no Outbrain Ads report was given. Export it to add Outbrain to the headline read.",
+    "Presell page brief: not asked for in this run (launch plan only)."
+  ]
+}

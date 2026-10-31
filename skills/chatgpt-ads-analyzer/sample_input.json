@@ -1,0 +1,805 @@
+{
+  "note": "Example data: an invented online booking software company with invented accounts, not a real business. Every number in expected_output.json follows from this input.",
+  "request": "Hey Claude, I just added the \"chatgpt-ads-analyzer\" skill. How are my ChatGPT ads doing over the last 30 days? Check the pixel and audiences too, and compare it with my Google Search Ads.",
+  "account": {
+    "name": "Example Booking Software",
+    "id": "adacct_example0001",
+    "currency": "USD",
+    "time_zone": "America/New_York"
+  },
+  "date_range": "2026-09-28 to 2026-10-27",
+  "previous_range": "2026-08-29 to 2026-09-27",
+  "goal": "paid plans and demo requests (read from the campaigns' bidding_type and event settings)",
+  "target_cpa": {
+    "paid plan (order_created)": 90.0,
+    "demo request (lead_created)": 40.0
+  },
+  "compare_with_google_search": "asked; Google Ads account 1234567890 for the same business is connected",
+  "data_pulled": {
+    "get_ad_account": {
+      "id": "adacct_example0001",
+      "name": "Example Booking Software",
+      "status": "active",
+      "review": {
+        "status": "approved"
+      },
+      "account_integrity_review": {
+        "review": {
+          "status": "approved"
+        }
+      },
+      "currency": "USD",
+      "time_zone": "America/New_York"
+    },
+    "get_campaigns": [
+      {
+        "id": "cmpn_example0001",
+        "name": "Booking software | Paid plans | US",
+        "status": "active",
+        "objective": "conversions",
+        "bidding_type": "conversions",
+        "budget": {
+          "lifetime_spend_limit_micros": 18000000000
+        },
+        "created_at_local_date": "2026-08-24",
+        "end_time_local_date": "2026-11-30",
+        "conversion_event_setting_ids": [
+          "evs_example0002"
+        ]
+      },
+      {
+        "id": "cmpn_example0002",
+        "name": "Salons | Demo requests | US and UK",
+        "status": "active",
+        "objective": "conversions",
+        "bidding_type": "conversions",
+        "budget": {
+          "lifetime_spend_limit_micros": 15000000000
+        },
+        "created_at_local_date": "2026-08-25",
+        "end_time_local_date": null,
+        "conversion_event_setting_ids": [
+          "evs_example0001"
+        ]
+      },
+      {
+        "id": "cmpn_example0003",
+        "name": "Clinics | Paid plans | US",
+        "status": "active",
+        "objective": "conversions",
+        "bidding_type": "conversions",
+        "budget": {
+          "lifetime_spend_limit_micros": 5000000000
+        },
+        "created_at_local_date": "2026-09-15",
+        "end_time_local_date": null,
+        "conversion_event_setting_ids": [
+          "evs_example0003"
+        ]
+      },
+      {
+        "id": "cmpn_example0004",
+        "name": "Fitness studios | Clicks | US",
+        "status": "active",
+        "objective": "clicks",
+        "bidding_type": "clicks",
+        "budget": {
+          "lifetime_spend_limit_micros": 2400000000
+        },
+        "created_at_local_date": "2026-09-20",
+        "end_time_local_date": "2026-12-31",
+        "conversion_event_setting_ids": []
+      },
+      {
+        "id": "cmpn_example0005",
+        "name": "Reminders feature | Reach | US",
+        "status": "paused",
+        "objective": "reach",
+        "bidding_type": "impressions",
+        "budget": {
+          "lifetime_spend_limit_micros": 1500000000
+        },
+        "created_at_local_date": "2026-08-20",
+        "end_time_local_date": null,
+        "conversion_event_setting_ids": []
+      }
+    ],
+    "get_ad_groups": [
+      {
+        "id": "adgrp_example0001",
+        "campaign_id": "cmpn_example0001",
+        "name": "Owners comparing booking software",
+        "status": "active",
+        "bidding_config": {
+          "strategy": "fixed_bid",
+          "max_bid_micros": 1800000,
+          "billing_event_type": "click",
+          "custom_audience_bid_multipliers": [
+            {
+              "custom_audience_id": "caud_example0001",
+              "multiplier": 1.25
+            }
+          ]
+        },
+        "context_hints": [
+          "online booking software for small business",
+          "appointment scheduling app with reminders"
+        ]
+      },
+      {
+        "id": "adgrp_example0002",
+        "campaign_id": "cmpn_example0001",
+        "name": "Moving off a paper diary",
+        "status": "active",
+        "bidding_config": {
+          "strategy": "fixed_bid",
+          "max_bid_micros": 1800000,
+          "billing_event_type": "click",
+          "custom_audience_bid_multipliers": []
+        },
+        "context_hints": [
+          "replace paper appointment book",
+          "move salon bookings online"
+        ]
+      },
+      {
+        "id": "adgrp_example0003",
+        "campaign_id": "cmpn_example0002",
+        "name": "Salon owners",
+        "status": "active",
+        "bidding_config": {
+          "strategy": "fixed_bid",
+          "max_bid_micros": 1500000,
+          "billing_event_type": "click",
+          "custom_audience_bid_multipliers": []
+        },
+        "context_hints": [
+          "salon booking app",
+          "how to reduce salon no-shows"
+        ]
+      },
+      {
+        "id": "adgrp_example0004",
+        "campaign_id": "cmpn_example0003",
+        "name": "Clinic front desk",
+        "status": "active",
+        "bidding_config": {
+          "strategy": "fixed_bid",
+          "max_bid_micros": 1500000,
+          "billing_event_type": "click",
+          "custom_audience_bid_multipliers": []
+        },
+        "context_hints": [
+          "clinic appointment scheduling software",
+          "patient reminder texts"
+        ]
+      },
+      {
+        "id": "adgrp_example0005",
+        "campaign_id": "cmpn_example0004",
+        "name": "Studios and trainers",
+        "status": "active",
+        "bidding_config": {
+          "strategy": "fixed_bid",
+          "max_bid_micros": 900000,
+          "billing_event_type": "click",
+          "custom_audience_bid_multipliers": []
+        },
+        "context_hints": [
+          "class booking for fitness studio",
+          "personal trainer scheduling app"
+        ]
+      },
+      {
+        "id": "adgrp_example0006",
+        "campaign_id": "cmpn_example0005",
+        "name": "Reminder feature awareness",
+        "status": "paused",
+        "bidding_config": {
+          "strategy": "fixed_bid",
+          "max_bid_micros": 10000000,
+          "billing_event_type": "impression",
+          "custom_audience_bid_multipliers": []
+        },
+        "context_hints": [
+          "automatic appointment reminders"
+        ]
+      }
+    ],
+    "get_ads": [
+      {
+        "id": "ad_example0001",
+        "ad_group_id": "adgrp_example0001",
+        "name": "Stop no-shows with automatic reminders",
+        "type": "chat_card",
+        "status": "active",
+        "review_status": "approved"
+      },
+      {
+        "id": "ad_example0002",
+        "ad_group_id": "adgrp_example0001",
+        "name": "Take deposits when clients book",
+        "type": "chat_card",
+        "status": "active",
+        "review_status": "approved"
+      },
+      {
+        "id": "ad_example0003",
+        "ad_group_id": "adgrp_example0002",
+        "name": "Your appointment book, online in a day",
+        "type": "chat_card",
+        "status": "active",
+        "review_status": "approved"
+      },
+      {
+        "id": "ad_example0004",
+        "ad_group_id": "adgrp_example0003",
+        "name": "A booking page your salon clients will use",
+        "type": "chat_card",
+        "status": "active",
+        "review_status": "approved"
+      },
+      {
+        "id": "ad_example0005",
+        "ad_group_id": "adgrp_example0003",
+        "name": "Free salon booking page, no catch",
+        "type": "chat_card",
+        "status": "active",
+        "review_status": "rejected"
+      },
+      {
+        "id": "ad_example0006",
+        "ad_group_id": "adgrp_example0004",
+        "name": "Fewer empty slots at the front desk",
+        "type": "chat_card",
+        "status": "active",
+        "review_status": "approved"
+      },
+      {
+        "id": "ad_example0007",
+        "ad_group_id": "adgrp_example0005",
+        "name": "Fill every class with online booking",
+        "type": "chat_card",
+        "status": "active",
+        "review_status": "approved"
+      },
+      {
+        "id": "ad_example0008",
+        "ad_group_id": "adgrp_example0006",
+        "name": "Reminders that cut no-shows",
+        "type": "chat_card",
+        "status": "paused",
+        "review_status": "approved"
+      }
+    ],
+    "insights_account_window": {
+      "entity_id": "adacct_example0001",
+      "ad_account.impressions": 1000000,
+      "ad_account.clicks": 12380,
+      "ad_account.spend": 13783.0,
+      "ad_account.ctr": 1.24,
+      "ad_account.cpc": 1.11,
+      "ad_account.cpm": 13.78
+    },
+    "insights_account_previous": {
+      "entity_id": "adacct_example0001",
+      "ad_account.impressions": 820000,
+      "ad_account.clicks": 10830,
+      "ad_account.spend": 11340.0,
+      "ad_account.ctr": 1.32,
+      "ad_account.cpc": 1.05,
+      "ad_account.cpm": 13.83
+    },
+    "insights_by_campaign_window": [
+      {
+        "entity_id": "cmpn_example0001",
+        "campaign.impressions": 410000,
+        "campaign.clicks": 6150,
+        "campaign.spend": 7380.0,
+        "campaign.ctr": 1.5,
+        "campaign.cpc": 1.2,
+        "campaign.cpm": 18.0
+      },
+      {
+        "entity_id": "cmpn_example0002",
+        "campaign.impressions": 260000,
+        "campaign.clicks": 3380,
+        "campaign.spend": 3718.0,
+        "campaign.ctr": 1.3,
+        "campaign.cpc": 1.1,
+        "campaign.cpm": 14.3
+      },
+      {
+        "entity_id": "cmpn_example0003",
+        "campaign.impressions": 150000,
+        "campaign.clicks": 1950,
+        "campaign.spend": 2145.0,
+        "campaign.ctr": 1.3,
+        "campaign.cpc": 1.1,
+        "campaign.cpm": 14.3
+      },
+      {
+        "entity_id": "cmpn_example0004",
+        "campaign.impressions": 180000,
+        "campaign.clicks": 900,
+        "campaign.spend": 540.0,
+        "campaign.ctr": 0.5,
+        "campaign.cpc": 0.6,
+        "campaign.cpm": 3.0
+      },
+      {
+        "entity_id": "cmpn_example0005",
+        "campaign.impressions": 0,
+        "campaign.clicks": 0,
+        "campaign.spend": 0.0,
+        "campaign.ctr": 0.0,
+        "campaign.cpc": 0.0,
+        "campaign.cpm": 0.0
+      }
+    ],
+    "insights_by_campaign_previous": [
+      {
+        "entity_id": "cmpn_example0001",
+        "campaign.impressions": 430000,
+        "campaign.clicks": 6300,
+        "campaign.spend": 7050.0,
+        "campaign.ctr": 1.47,
+        "campaign.cpc": 1.12,
+        "campaign.cpm": 16.4
+      },
+      {
+        "entity_id": "cmpn_example0002",
+        "campaign.impressions": 300000,
+        "campaign.clicks": 3600,
+        "campaign.spend": 3350.0,
+        "campaign.ctr": 1.2,
+        "campaign.cpc": 0.93,
+        "campaign.cpm": 11.17
+      },
+      {
+        "entity_id": "cmpn_example0003",
+        "campaign.impressions": 60000,
+        "campaign.clicks": 780,
+        "campaign.spend": 850.0,
+        "campaign.ctr": 1.3,
+        "campaign.cpc": 1.09,
+        "campaign.cpm": 14.17
+      },
+      {
+        "entity_id": "cmpn_example0004",
+        "campaign.impressions": 30000,
+        "campaign.clicks": 150,
+        "campaign.spend": 90.0,
+        "campaign.ctr": 0.5,
+        "campaign.cpc": 0.6,
+        "campaign.cpm": 3.0
+      },
+      {
+        "entity_id": "cmpn_example0005",
+        "campaign.impressions": 0,
+        "campaign.clicks": 0,
+        "campaign.spend": 0.0,
+        "campaign.ctr": 0.0,
+        "campaign.cpc": 0.0,
+        "campaign.cpm": 0.0
+      }
+    ],
+    "insights_by_ad_group_window": [
+      {
+        "entity_id": "adgrp_example0001",
+        "ad_group.impressions": 300000,
+        "ad_group.clicks": 4800,
+        "ad_group.spend": 5760.0,
+        "ad_group.ctr": 1.6,
+        "ad_group.cpc": 1.2,
+        "ad_group.cpm": 19.2
+      },
+      {
+        "entity_id": "adgrp_example0002",
+        "ad_group.impressions": 110000,
+        "ad_group.clicks": 1350,
+        "ad_group.spend": 1620.0,
+        "ad_group.ctr": 1.23,
+        "ad_group.cpc": 1.2,
+        "ad_group.cpm": 14.73
+      },
+      {
+        "entity_id": "adgrp_example0003",
+        "ad_group.impressions": 260000,
+        "ad_group.clicks": 3380,
+        "ad_group.spend": 3718.0,
+        "ad_group.ctr": 1.3,
+        "ad_group.cpc": 1.1,
+        "ad_group.cpm": 14.3
+      },
+      {
+        "entity_id": "adgrp_example0004",
+        "ad_group.impressions": 150000,
+        "ad_group.clicks": 1950,
+        "ad_group.spend": 2145.0,
+        "ad_group.ctr": 1.3,
+        "ad_group.cpc": 1.1,
+        "ad_group.cpm": 14.3
+      },
+      {
+        "entity_id": "adgrp_example0005",
+        "ad_group.impressions": 180000,
+        "ad_group.clicks": 900,
+        "ad_group.spend": 540.0,
+        "ad_group.ctr": 0.5,
+        "ad_group.cpc": 0.6,
+        "ad_group.cpm": 3.0
+      },
+      {
+        "entity_id": "adgrp_example0006",
+        "ad_group.impressions": 0,
+        "ad_group.clicks": 0,
+        "ad_group.spend": 0.0,
+        "ad_group.ctr": 0.0,
+        "ad_group.cpc": 0.0,
+        "ad_group.cpm": 0.0
+      }
+    ],
+    "insights_by_ad_window": [
+      {
+        "entity_id": "ad_example0001",
+        "ad.impressions": 220000,
+        "ad.clicks": 4200,
+        "ad.spend": 5040.0,
+        "ad.ctr": 1.91,
+        "ad.cpc": 1.2,
+        "ad.cpm": 22.91
+      },
+      {
+        "entity_id": "ad_example0002",
+        "ad.impressions": 80000,
+        "ad.clicks": 600,
+        "ad.spend": 720.0,
+        "ad.ctr": 0.75,
+        "ad.cpc": 1.2,
+        "ad.cpm": 9.0
+      },
+      {
+        "entity_id": "ad_example0003",
+        "ad.impressions": 110000,
+        "ad.clicks": 1350,
+        "ad.spend": 1620.0,
+        "ad.ctr": 1.23,
+        "ad.cpc": 1.2,
+        "ad.cpm": 14.73
+      },
+      {
+        "entity_id": "ad_example0004",
+        "ad.impressions": 260000,
+        "ad.clicks": 3380,
+        "ad.spend": 3718.0,
+        "ad.ctr": 1.3,
+        "ad.cpc": 1.1,
+        "ad.cpm": 14.3
+      },
+      {
+        "entity_id": "ad_example0005",
+        "ad.impressions": 0,
+        "ad.clicks": 0,
+        "ad.spend": 0.0,
+        "ad.ctr": 0.0,
+        "ad.cpc": 0.0,
+        "ad.cpm": 0.0
+      },
+      {
+        "entity_id": "ad_example0006",
+        "ad.impressions": 150000,
+        "ad.clicks": 1950,
+        "ad.spend": 2145.0,
+        "ad.ctr": 1.3,
+        "ad.cpc": 1.1,
+        "ad.cpm": 14.3
+      },
+      {
+        "entity_id": "ad_example0007",
+        "ad.impressions": 180000,
+        "ad.clicks": 900,
+        "ad.spend": 540.0,
+        "ad.ctr": 0.5,
+        "ad.cpc": 0.6,
+        "ad.cpm": 3.0
+      },
+      {
+        "entity_id": "ad_example0008",
+        "ad.impressions": 0,
+        "ad.clicks": 0,
+        "ad.spend": 0.0,
+        "ad.ctr": 0.0,
+        "ad.cpc": 0.0,
+        "ad.cpm": 0.0
+      }
+    ],
+    "get_conversion_insights_campaign": [
+      {
+        "entity_id": "cmpn_example0001",
+        "conversions": 96,
+        "view_through_conversions": 21,
+        "order_created_attributed_sales": 26880.0,
+        "currency": "USD"
+      },
+      {
+        "entity_id": "cmpn_example0002",
+        "conversions": 118,
+        "view_through_conversions": 30,
+        "order_created_attributed_sales": 0.0,
+        "currency": "USD"
+      },
+      {
+        "entity_id": "cmpn_example0003",
+        "conversions": 0,
+        "view_through_conversions": 0,
+        "order_created_attributed_sales": 0.0,
+        "currency": "USD"
+      },
+      {
+        "entity_id": "cmpn_example0004",
+        "conversions": 0,
+        "view_through_conversions": 0,
+        "order_created_attributed_sales": 0.0,
+        "currency": "USD"
+      },
+      {
+        "entity_id": "cmpn_example0005",
+        "conversions": 0,
+        "view_through_conversions": 0,
+        "order_created_attributed_sales": 0.0,
+        "currency": "USD"
+      }
+    ],
+    "get_conversion_insights_ad_group": [
+      {
+        "entity_id": "adgrp_example0001",
+        "conversions": 78,
+        "view_through_conversions": 17
+      },
+      {
+        "entity_id": "adgrp_example0002",
+        "conversions": 18,
+        "view_through_conversions": 4
+      },
+      {
+        "entity_id": "adgrp_example0003",
+        "conversions": 118,
+        "view_through_conversions": 30
+      },
+      {
+        "entity_id": "adgrp_example0004",
+        "conversions": 0,
+        "view_through_conversions": 0
+      },
+      {
+        "entity_id": "adgrp_example0005",
+        "conversions": 0,
+        "view_through_conversions": 0
+      },
+      {
+        "entity_id": "adgrp_example0006",
+        "conversions": 0,
+        "view_through_conversions": 0
+      }
+    ],
+    "get_pixels": [
+      {
+        "id": "cds_example0001",
+        "pixel_id": "ExBkWebPixel01",
+        "name": "Website pixel",
+        "kind": "web pixel"
+      },
+      {
+        "id": "cds_example0002",
+        "pixel_id": "ExBkServer02",
+        "name": "Server events (Conversions API)",
+        "kind": "server"
+      }
+    ],
+    "get_conversion_events": {
+      "ExBkWebPixel01": [
+        {
+          "event_type": "page_viewed",
+          "count": 18400,
+          "channel": "pixel"
+        },
+        {
+          "event_type": "lead_created",
+          "count": 131,
+          "channel": "pixel"
+        },
+        {
+          "event_type": "order_created",
+          "count": 104,
+          "channel": "pixel"
+        }
+      ],
+      "ExBkServer02": []
+    },
+    "get_event_settings": [
+      {
+        "id": "evs_example0001",
+        "name": "Demo booked",
+        "event_type": "lead_created",
+        "source": "cds_example0001",
+        "attribution_window_days": 30,
+        "view_through_attribution_window_days": 1,
+        "campaigns": [
+          "cmpn_example0002"
+        ],
+        "status": "active"
+      },
+      {
+        "id": "evs_example0002",
+        "name": "Paid plan started",
+        "event_type": "order_created",
+        "source": "cds_example0001",
+        "attribution_window_days": 30,
+        "view_through_attribution_window_days": 1,
+        "campaigns": [
+          "cmpn_example0001"
+        ],
+        "status": "active"
+      },
+      {
+        "id": "evs_example0003",
+        "name": "Paid plan started (server)",
+        "event_type": "order_created",
+        "source": "cds_example0002",
+        "attribution_window_days": 30,
+        "view_through_attribution_window_days": 1,
+        "campaigns": [
+          "cmpn_example0003"
+        ],
+        "status": "active"
+      },
+      {
+        "id": "evs_example0004",
+        "name": "Pricing page view",
+        "event_type": "page_viewed",
+        "source": "cds_example0001",
+        "attribution_window_days": 7,
+        "view_through_attribution_window_days": 0,
+        "campaigns": [],
+        "status": "active"
+      }
+    ],
+    "get_custom_audiences": [
+      {
+        "id": "caud_example0001",
+        "name": "Trial users, last 90 days",
+        "status": "ready",
+        "matched_user_count_range": "25k_100k",
+        "invalid_identifier_count_range": "none"
+      },
+      {
+        "id": "caud_example0002",
+        "name": "Paying customers",
+        "status": "ready",
+        "matched_user_count_range": "under_25k",
+        "invalid_identifier_count_range": "none"
+      },
+      {
+        "id": "caud_example0003",
+        "name": "Newsletter subscribers",
+        "status": "ready",
+        "matched_user_count_range": "100k_500k",
+        "invalid_identifier_count_range": "none"
+      }
+    ],
+    "get_lead_forms": "403: Business Agent advertiser tools are not enabled.",
+    "get_lead_sync_subscriptions": "403: Lead-sync subscriptions are not enabled for this ad account.",
+    "spend_to_date_by_campaign": {
+      "range": "2026-08-20 to 2026-10-27",
+      "rows": [
+        {
+          "entity_id": "cmpn_example0001",
+          "campaign.spend": 15430.0
+        },
+        {
+          "entity_id": "cmpn_example0002",
+          "campaign.spend": 7468.0
+        },
+        {
+          "entity_id": "cmpn_example0003",
+          "campaign.spend": 2995.0
+        },
+        {
+          "entity_id": "cmpn_example0004",
+          "campaign.spend": 630.0
+        },
+        {
+          "entity_id": "cmpn_example0005",
+          "campaign.spend": 310.0
+        }
+      ]
+    },
+    "last_7_days_daily_by_campaign": {
+      "range": "2026-10-21 to 2026-10-27",
+      "rows": [
+        {
+          "entity_id": "cmpn_example0001",
+          "daily_spend": [
+            263.81,
+            264.97,
+            288.81,
+            224.15,
+            283.17,
+            267.39,
+            241.7
+          ]
+        },
+        {
+          "entity_id": "cmpn_example0002",
+          "daily_spend": [
+            121.49,
+            124.2,
+            127.07,
+            149.27,
+            116.72,
+            114.17,
+            122.08
+          ]
+        },
+        {
+          "entity_id": "cmpn_example0003",
+          "daily_spend": [
+            76.48,
+            81.88,
+            71.42,
+            70.87,
+            68.86,
+            83.1,
+            72.39
+          ]
+        },
+        {
+          "entity_id": "cmpn_example0004",
+          "daily_spend": [
+            17.38,
+            19.44,
+            16.25,
+            18.56,
+            16.9,
+            20.15,
+            17.32
+          ]
+        },
+        {
+          "entity_id": "cmpn_example0005",
+          "daily_spend": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    "google_ads_gaql_search_totals": {
+      "currency_code": "USD",
+      "rows": [
+        {
+          "campaign": "Search | Booking software | US",
+          "impressions": 128000,
+          "clicks": 6100,
+          "cost_micros": 12810000000,
+          "conversions": 141.0,
+          "conversions_value": 22560.0
+        },
+        {
+          "campaign": "Search | Salon booking | US and UK",
+          "impressions": 82000,
+          "clicks": 3350,
+          "cost_micros": 6090000000,
+          "conversions": 64.0,
+          "conversions_value": 8940.0
+        }
+      ]
+    }
+  }
+}

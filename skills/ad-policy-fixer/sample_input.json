@@ -1,0 +1,550 @@
+{
+  "note": "Example data: an invented personal budgeting app and credit-builder card, not a real business. Every id, ad, notice and number is made up, and every number in expected_output.json follows from this input.",
+  "request": "Sweep all our ad accounts outside Google and Meta. Some ads got rejected this week and one TikTok account is restricted. Tell us why, fix what you can, and draft what we need to send.",
+  "run_at_utc": "2026-10-28T19:00:00Z",
+  "business": {
+    "name": "Example Budget App",
+    "website": "https://examplebudget.example",
+    "sells": "a personal budgeting app on a monthly plan, and the Example Builder Card, a secured card for building credit",
+    "countries": [
+      "US"
+    ],
+    "facts_user_confirmed": {
+      "app_users": 140000,
+      "builder_card": "secured card, deposit from 200 USD, no credit check to apply, reports on-time payments to the three major US credit bureaus, no annual fee",
+      "credit_score_results": "not promised and not tracked",
+      "savings_results": "not tracked",
+      "hiring": "remote customer support specialists in the US, any experience level",
+      "app_feature": "sets up a 50/30/20 plan (needs, wants, savings) and shows where money goes"
+    }
+  },
+  "connector_ids": {
+    "workspace_id": 1,
+    "brand_id": 1
+  },
+  "connector": {
+    "linkedin-ads": {
+      "account": {
+        "call": "get_accounts",
+        "id": "500000001",
+        "name": "Example Budget App",
+        "status": "ACTIVE",
+        "reference": "urn:li:organization:90000001"
+      },
+      "creatives": {
+        "call": "get_creatives",
+        "rows": [
+          {
+            "id": "urn:li:sponsoredCreative:700000101",
+            "name": "Hiring | Support specialists | image",
+            "campaign": "urn:li:sponsoredCampaign:600000011",
+            "intendedStatus": "ACTIVE",
+            "isServing": false,
+            "review": {
+              "status": "REJECTED",
+              "rejectionReasons": [
+                "DISCRIMINATION"
+              ]
+            },
+            "servingHoldReasons": [
+              "REJECTED"
+            ],
+            "lastModifiedAt": 1792850400000,
+            "content": {
+              "media": {
+                "id": "urn:li:image:C4E00000000001"
+              }
+            }
+          },
+          {
+            "id": "urn:li:sponsoredCreative:700000102",
+            "name": "Builder Card | document ad",
+            "campaign": "urn:li:sponsoredCampaign:600000012",
+            "intendedStatus": "ACTIVE",
+            "isServing": true,
+            "review": {
+              "status": "APPROVED"
+            },
+            "lastModifiedAt": 1790935200000
+          },
+          {
+            "id": "urn:li:sponsoredCreative:700000103",
+            "name": "Budget app | carousel",
+            "campaign": "urn:li:sponsoredCampaign:600000013",
+            "intendedStatus": "ACTIVE",
+            "isServing": true,
+            "review": {
+              "status": "APPROVED"
+            },
+            "lastModifiedAt": 1789725600000
+          }
+        ]
+      },
+      "campaigns": {
+        "call": "get_campaign",
+        "rows": [
+          {
+            "id": "600000011",
+            "name": "Hiring | Remote support | US",
+            "status": "ACTIVE",
+            "targetingCriteria": {
+              "include": {
+                "and": [
+                  {
+                    "or": {
+                      "urn:li:adTargetingFacet:locations": [
+                        "urn:li:geo:103644278"
+                      ]
+                    }
+                  },
+                  {
+                    "or": {
+                      "urn:li:adTargetingFacet:ageRanges": [
+                        "urn:li:ageRange:(18,24)",
+                        "urn:li:ageRange:(25,34)"
+                      ]
+                    }
+                  },
+                  {
+                    "or": {
+                      "urn:li:adTargetingFacet:jobFunctions": [
+                        "urn:li:function:12"
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    "tiktok-ads": {
+      "advertisers": {
+        "call": "advertiser/info/",
+        "rows": [
+          {
+            "advertiser_id": "7000000000000001",
+            "advertiser_name": "Example Budget App",
+            "status": "STATUS_ENABLE"
+          },
+          {
+            "advertiser_id": "7000000000000002",
+            "advertiser_name": "Example Budget App | Creators test",
+            "status": "STATUS_LIMIT"
+          }
+        ]
+      },
+      "ads": {
+        "call": "ad/get/",
+        "rows": [
+          {
+            "advertiser_id": "7000000000000001",
+            "ad_id": "1800000000000101",
+            "ad_name": "Builder Card | creator hook v3",
+            "adgroup_id": "1700000000000011",
+            "operation_status": "ENABLE",
+            "secondary_status": "AD_STATUS_AUDIT_DENY",
+            "ad_text": "Guaranteed to fix your credit in 30 days. No credit check, no catch!",
+            "landing_page_url": "https://examplebudget.example/builder-card",
+            "modify_time": "2026-10-25 09:30:00"
+          },
+          {
+            "advertiser_id": "7000000000000001",
+            "ad_id": "1800000000000102",
+            "ad_name": "Builder Card | founder story",
+            "adgroup_id": "1700000000000011",
+            "operation_status": "ENABLE",
+            "secondary_status": "AD_STATUS_DELIVERY_OK",
+            "ad_text": "Why we built a card for people starting their credit from zero.",
+            "landing_page_url": "https://examplebudget.example/builder-card",
+            "modify_time": "2026-10-01 12:00:00"
+          },
+          {
+            "advertiser_id": "7000000000000001",
+            "ad_id": "1800000000000103",
+            "ad_name": "Budget app | 50/30/20 explainer",
+            "adgroup_id": "1700000000000012",
+            "operation_status": "ENABLE",
+            "secondary_status": "AD_STATUS_DELIVERY_OK",
+            "ad_text": "Needs, wants, savings. Set up the 50/30/20 plan in minutes.",
+            "landing_page_url": "https://examplebudget.example/",
+            "modify_time": "2026-09-20 12:00:00"
+          },
+          {
+            "advertiser_id": "7000000000000002",
+            "ad_id": "1800000000000201",
+            "ad_name": "Creators | savings challenge",
+            "adgroup_id": "1700000000000021",
+            "operation_status": "ENABLE",
+            "secondary_status": "ADVERTISER_ACCOUNT_PUNISH",
+            "modify_time": "2026-10-09 16:00:00"
+          },
+          {
+            "advertiser_id": "7000000000000002",
+            "ad_id": "1800000000000202",
+            "ad_name": "Creators | card unboxing",
+            "adgroup_id": "1700000000000021",
+            "operation_status": "ENABLE",
+            "secondary_status": "ADVERTISER_ACCOUNT_PUNISH",
+            "modify_time": "2026-10-09 16:00:00"
+          }
+        ]
+      },
+      "adgroups": {
+        "call": "adgroup/get/",
+        "rows": [
+          {
+            "advertiser_id": "7000000000000001",
+            "adgroup_id": "1700000000000011",
+            "adgroup_name": "Builder Card | US | 18 to 34",
+            "age_groups": [
+              "AGE_18_24",
+              "AGE_25_34"
+            ],
+            "gender": "GENDER_UNLIMITED",
+            "location_ids": [
+              "6252001"
+            ],
+            "household_income": []
+          }
+        ]
+      }
+    },
+    "microsoft-ads": {
+      "account": {
+        "call": "search_accounts",
+        "Id": "150000001",
+        "Name": "Example Budget App",
+        "AccountLifeCycleStatus": "Active",
+        "TimeZone": "EasternTimeUSCanada"
+      },
+      "campaigns": {
+        "call": "get_campaigns",
+        "rows": [
+          {
+            "Id": "410000001",
+            "Name": "Search | Builder Card",
+            "Status": "Active"
+          },
+          {
+            "Id": "410000002",
+            "Name": "Search | Budget app",
+            "Status": "Active"
+          }
+        ]
+      },
+      "ad_groups": {
+        "call": "get_ad_groups",
+        "rows": [
+          {
+            "Id": "1300000000001",
+            "CampaignId": "410000001",
+            "Name": "Credit builder card",
+            "Status": "Active"
+          },
+          {
+            "Id": "1300000000002",
+            "CampaignId": "410000002",
+            "Name": "Budget app",
+            "Status": "Active"
+          }
+        ]
+      },
+      "ads": {
+        "call": "get_ads",
+        "rows": [
+          {
+            "Id": "82000000000001",
+            "AdGroupId": "1300000000001",
+            "Type": "ResponsiveSearch",
+            "Status": "Active",
+            "EditorialStatus": "Disapproved",
+            "Headlines": [
+              {
+                "Asset": {
+                  "Text": "BEST CREDIT BUILDER CARD!!!"
+                }
+              },
+              {
+                "Asset": {
+                  "Text": "#1 Card to Build Credit"
+                }
+              },
+              {
+                "Asset": {
+                  "Text": "No Credit Check to Apply"
+                }
+              }
+            ],
+            "Descriptions": [
+              {
+                "Asset": {
+                  "Text": "Build credit with every on-time payment. Reports to all 3 bureaus."
+                }
+              },
+              {
+                "Asset": {
+                  "Text": "Secured card with no annual fee. Apply online in minutes."
+                }
+              }
+            ],
+            "Path1": "builder-card",
+            "FinalUrls": [
+              "https://examplebudget.example/builder-card"
+            ]
+          },
+          {
+            "Id": "82000000000002",
+            "AdGroupId": "1300000000002",
+            "Type": "ResponsiveSearch",
+            "Status": "Active",
+            "EditorialStatus": "Active"
+          }
+        ]
+      },
+      "campaign_criterions": {
+        "call": "get_campaign_criterions",
+        "campaign_id": "410000001",
+        "rows": [
+          {
+            "Type": "LocationCriterion",
+            "LocationId": 190,
+            "DisplayName": "United States"
+          }
+        ]
+      }
+    },
+    "pinterest-ads": {
+      "account": {
+        "call": "get_ad_accounts",
+        "id": "549000000001",
+        "name": "Example Budget App"
+      },
+      "ads": {
+        "call": "get_ads",
+        "rows": [
+          {
+            "id": "687000000101",
+            "name": "Budget app | savings challenge pin",
+            "ad_group_id": "2680000000011",
+            "pin_id": "1100000000000101",
+            "status": "ACTIVE",
+            "review_status": "REJECTED",
+            "rejected_reasons": [
+              "EXAGGERATED_CLAIMS"
+            ],
+            "rejection_labels": [
+              "Exaggerated claims"
+            ],
+            "creative_type": "REGULAR",
+            "destination_url": "https://examplebudget.example/",
+            "updated_time": 1792742400
+          },
+          {
+            "id": "687000000102",
+            "name": "Budget app | categories pin",
+            "ad_group_id": "2680000000011",
+            "pin_id": "1100000000000102",
+            "status": "PAUSED",
+            "review_status": "APPROVED",
+            "rejected_reasons": [],
+            "rejection_labels": [],
+            "creative_type": "REGULAR",
+            "destination_url": "https://examplebudget.example/",
+            "updated_time": 1789200000
+          },
+          {
+            "id": "687000000103",
+            "name": "Builder Card | how it works pin",
+            "ad_group_id": "2680000000012",
+            "pin_id": "1100000000000103",
+            "status": "ACTIVE",
+            "review_status": "APPROVED",
+            "rejected_reasons": [],
+            "rejection_labels": [],
+            "creative_type": "REGULAR",
+            "destination_url": "https://examplebudget.example/builder-card",
+            "updated_time": 1791187200
+          }
+        ]
+      }
+    },
+    "snapchat-ads": {
+      "account": {
+        "call": "get_adaccount",
+        "id": "00000000-0000-4000-8000-000000000101",
+        "name": "Example Budget App",
+        "status": "ACTIVE",
+        "timezone": "America/New_York"
+      },
+      "ads": {
+        "call": "get_ads",
+        "rows": [
+          {
+            "id": "00000000-0000-4000-8000-000000000201",
+            "name": "Budget app | 15s video",
+            "ad_squad_id": "sq-001",
+            "creative_id": "00000000-0000-4000-8000-000000000301",
+            "status": "ACTIVE",
+            "review_status": "PENDING_REVIEW",
+            "updated_at": "2026-10-25T15:00:00.000Z"
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000202",
+            "name": "Budget app | 6s bumper",
+            "ad_squad_id": "sq-001",
+            "creative_id": "00000000-0000-4000-8000-000000000302",
+            "status": "ACTIVE",
+            "review_status": "APPROVED",
+            "updated_at": "2026-10-03T15:00:00.000Z"
+          }
+        ]
+      },
+      "creatives": {
+        "call": "get_creatives",
+        "rows": [
+          {
+            "id": "00000000-0000-4000-8000-000000000301",
+            "headline": "Plan every dollar",
+            "review_status": "PENDING_REVIEW",
+            "review_status_details": ""
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000302",
+            "headline": "Budget in minutes",
+            "review_status": "APPROVED",
+            "review_status_details": ""
+          }
+        ]
+      }
+    },
+    "x-ads": {
+      "account": {
+        "call": "get_account",
+        "id": "18ab00cd1",
+        "name": "Example Budget App",
+        "approval_status": "ACCEPTED",
+        "timezone": "America/New_York"
+      },
+      "promoted_tweets": {
+        "call": "get_promoted_tweets",
+        "rows": [
+          {
+            "id": "pt001",
+            "line_item_id": "li7a1",
+            "tweet_id": "1850000000000000101",
+            "entity_status": "ACTIVE",
+            "approval_status": "REJECTED",
+            "updated_at": "2026-10-26T10:00:00Z"
+          },
+          {
+            "id": "pt002",
+            "line_item_id": "li7a2",
+            "tweet_id": "1850000000000000102",
+            "entity_status": "ACTIVE",
+            "approval_status": "ACCEPTED",
+            "updated_at": "2026-10-04T10:00:00Z"
+          }
+        ]
+      },
+      "line_items": {
+        "call": "get_line_items",
+        "rows": [
+          {
+            "id": "li7a1",
+            "name": "Budget app | promoted post",
+            "entity_status": "ACTIVE"
+          },
+          {
+            "id": "li7a2",
+            "name": "Builder Card | promoted post",
+            "entity_status": "ACTIVE"
+          }
+        ]
+      }
+    },
+    "openai-ads": {
+      "account": {
+        "call": "get_ad_account",
+        "id": "adacct_example0001",
+        "name": "Example Budget App",
+        "status": "active",
+        "review": {
+          "status": "approved"
+        }
+      },
+      "ads": {
+        "call": "get_ads",
+        "rows": [
+          {
+            "id": "ad_example0001",
+            "ad_group_id": "adgrp_example0001",
+            "status": "active",
+            "review_status": "in_review",
+            "review": {
+              "status": "in_review"
+            },
+            "created_at": 1793142000,
+            "creative": {
+              "type": "chat_card",
+              "title": "Plan your month in 5 minutes",
+              "body": "Set up a 50/30/20 budget and see where your money goes.",
+              "target_url": "https://examplebudget.example/"
+            }
+          },
+          {
+            "id": "ad_example0002",
+            "ad_group_id": "adgrp_example0001",
+            "status": "active",
+            "review_status": "approved",
+            "review": {
+              "status": "approved"
+            },
+            "created_at": 1791288000
+          }
+        ]
+      }
+    }
+  },
+  "pasted_by_user": {
+    "linkedin_hiring_ad": {
+      "for": "urn:li:sponsoredCreative:700000101",
+      "intro_text": "We're hiring! Looking for young, energetic digital natives to join our remote support team. Apply today.",
+      "headline": "Join the Example Budget App support team",
+      "image": "three smiling support agents at laptops"
+    },
+    "linkedin_note": "No notice pasted for LinkedIn; the reason comes from the creative's review field.",
+    "tiktok_notice_ad": {
+      "for": "1800000000000101",
+      "text": "Ad rejected. Violation: exaggerated or misleading claims (financial services). Edit the ad and resubmit."
+    },
+    "tiktok_notice_account": {
+      "for": "7000000000000002",
+      "date": "2026-10-09",
+      "text": "Your ad account has been restricted for repeated violations of the TikTok Advertising Policies. You can submit an appeal."
+    },
+    "tiktok_account_history": "Three ads in the Creators test account were rejected in late September for income and savings claims; all three have since been deleted.",
+    "microsoft_notice": {
+      "for": "82000000000001",
+      "text": "Editorial status: Disapproved. Reasons: Excessive capitalization; Superlative claim not supported on landing page."
+    },
+    "pinterest_pin": {
+      "for": "687000000101",
+      "title": "Save $10,000 in 6 months on any salary",
+      "description": "The budgeting method that got me out of debt. Start today.",
+      "image": "phone screenshot of a savings balance jumping from $0 to $10,000"
+    },
+    "x_post": {
+      "for": "1850000000000000101",
+      "text": "Your bank doesn't want you to see this budgeting trick. Tap to find out before it's gone."
+    },
+    "x_note": "No notice pasted for X.",
+    "reddit_ad": {
+      "campaign": "Budget app | r/personalfinance interest",
+      "notice_date": "2026-10-26",
+      "headline": "Join 2 million people who doubled their savings with Example Budget App.",
+      "notice": "Your ad was rejected: Unsubstantiated claims."
+    }
+  }
+}

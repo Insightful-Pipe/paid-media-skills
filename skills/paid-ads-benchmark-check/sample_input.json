@@ -1,0 +1,756 @@
+{
+  "note": "Example data: an invented kitchen and bath remodeling company with invented ad accounts, not a real business. Every number in expected_output.json follows from this input. The published figures are the real rows of the benchmark table in SKILL.md.",
+  "request": "Hey Claude, I just added the \"paid-ads-benchmark-check\" skill. Are my ad numbers good? Compare last month with my own history and with home & home improvement benchmarks.",
+  "business": {
+    "name": "Example Kitchen & Bath Remodeling",
+    "site": "https://www.remodel.example",
+    "industry": "Home & Home Improvement",
+    "main_market": "US",
+    "serves": "homeowners in several metro areas of Ohio, Indiana and Kentucky",
+    "one_city": false,
+    "result": "a consultation request (form or call of 60 seconds or more)",
+    "brand_terms": [
+      "example kitchen",
+      "example remodeling",
+      "examplekb"
+    ]
+  },
+  "run_date": "2026-10-28",
+  "check_month": "2026-09",
+  "baseline_months": [
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08"
+  ],
+  "accounts": {
+    "google-ads": {
+      "customer_id": "123-456-7890",
+      "currency": "USD",
+      "time_zone": "America/New_York"
+    },
+    "microsoft-ads": {
+      "account": "Example Kitchen & Bath (Microsoft Advertising)",
+      "currency": "USD"
+    },
+    "facebook-ads": {
+      "ad_account_id": "act_100000000000002",
+      "currency": "USD"
+    },
+    "pinterest-ads": {
+      "ad_account_id": "100000000004",
+      "currency": "USD"
+    }
+  },
+  "data_pulled": {
+    "google_ads_campaign_months": [
+      {
+        "campaign": "Brand | Search",
+        "advertising_channel_type": "SEARCH",
+        "months": [
+          {
+            "month": "2026-03",
+            "impressions": 9048,
+            "clicks": 2187,
+            "cost": 4337.55,
+            "conversions": 434
+          },
+          {
+            "month": "2026-04",
+            "impressions": 9316,
+            "clicks": 2260,
+            "cost": 4171.34,
+            "conversions": 462
+          },
+          {
+            "month": "2026-05",
+            "impressions": 8826,
+            "clicks": 2096,
+            "cost": 4211.58,
+            "conversions": 422
+          },
+          {
+            "month": "2026-06",
+            "impressions": 8549,
+            "clicks": 1999,
+            "cost": 3877.1,
+            "conversions": 441
+          },
+          {
+            "month": "2026-07",
+            "impressions": 8936,
+            "clicks": 2123,
+            "cost": 3948.54,
+            "conversions": 471
+          },
+          {
+            "month": "2026-08",
+            "impressions": 8982,
+            "clicks": 2128,
+            "cost": 4176.58,
+            "conversions": 430
+          },
+          {
+            "month": "2026-09",
+            "impressions": 9122,
+            "clicks": 2138,
+            "cost": 4260.82,
+            "conversions": 442
+          }
+        ]
+      },
+      {
+        "campaign": "Kitchen Remodel | Search",
+        "advertising_channel_type": "SEARCH",
+        "months": [
+          {
+            "month": "2026-03",
+            "impressions": 21269,
+            "clicks": 1536,
+            "cost": 12642.55,
+            "conversions": 111
+          },
+          {
+            "month": "2026-04",
+            "impressions": 22044,
+            "clicks": 1463,
+            "cost": 11515.55,
+            "conversions": 114
+          },
+          {
+            "month": "2026-05",
+            "impressions": 20248,
+            "clicks": 1335,
+            "cost": 11077.53,
+            "conversions": 98
+          },
+          {
+            "month": "2026-06",
+            "impressions": 20951,
+            "clicks": 1372,
+            "cost": 11675.77,
+            "conversions": 104
+          },
+          {
+            "month": "2026-07",
+            "impressions": 21224,
+            "clicks": 1535,
+            "cost": 12037.99,
+            "conversions": 112
+          },
+          {
+            "month": "2026-08",
+            "impressions": 21599,
+            "clicks": 1567,
+            "cost": 12040.8,
+            "conversions": 128
+          },
+          {
+            "month": "2026-09",
+            "impressions": 20002,
+            "clicks": 1369,
+            "cost": 10781.61,
+            "conversions": 77
+          }
+        ]
+      },
+      {
+        "campaign": "Bathroom Remodel | Search",
+        "advertising_channel_type": "SEARCH",
+        "months": [
+          {
+            "month": "2026-03",
+            "impressions": 14665,
+            "clicks": 1024,
+            "cost": 8075.85,
+            "conversions": 75
+          },
+          {
+            "month": "2026-04",
+            "impressions": 15600,
+            "clicks": 1048,
+            "cost": 7881.37,
+            "conversions": 79
+          },
+          {
+            "month": "2026-05",
+            "impressions": 14578,
+            "clicks": 1028,
+            "cost": 8333.46,
+            "conversions": 78
+          },
+          {
+            "month": "2026-06",
+            "impressions": 14246,
+            "clicks": 1007,
+            "cost": 8045.79,
+            "conversions": 79
+          },
+          {
+            "month": "2026-07",
+            "impressions": 14947,
+            "clicks": 959,
+            "cost": 7770.49,
+            "conversions": 68
+          },
+          {
+            "month": "2026-08",
+            "impressions": 15602,
+            "clicks": 1071,
+            "cost": 8216.13,
+            "conversions": 83
+          },
+          {
+            "month": "2026-09",
+            "impressions": 15844,
+            "clicks": 1113,
+            "cost": 8536.59,
+            "conversions": 64
+          }
+        ]
+      },
+      {
+        "campaign": "Remarketing | Display",
+        "advertising_channel_type": "DISPLAY",
+        "months": [
+          {
+            "month": "2026-03",
+            "impressions": 163930,
+            "clicks": 678,
+            "cost": 750.44,
+            "conversions": 26
+          },
+          {
+            "month": "2026-04",
+            "impressions": 152006,
+            "clicks": 657,
+            "cost": 747.59,
+            "conversions": 27
+          },
+          {
+            "month": "2026-05",
+            "impressions": 167556,
+            "clicks": 692,
+            "cost": 770.96,
+            "conversions": 28
+          },
+          {
+            "month": "2026-06",
+            "impressions": 169449,
+            "clicks": 746,
+            "cost": 887.05,
+            "conversions": 31
+          },
+          {
+            "month": "2026-07",
+            "impressions": 155499,
+            "clicks": 628,
+            "cost": 708.27,
+            "conversions": 24
+          },
+          {
+            "month": "2026-08",
+            "impressions": 156500,
+            "clicks": 697,
+            "cost": 845.59,
+            "conversions": 29
+          },
+          {
+            "month": "2026-09",
+            "impressions": 152809,
+            "clicks": 613,
+            "cost": 675.32,
+            "conversions": 16
+          }
+        ]
+      }
+    ],
+    "google_ads_search_terms_check_month": [
+      {
+        "campaign": "Kitchen Remodel | Search",
+        "search_term": "kitchen remodel near me",
+        "clicks": 161
+      },
+      {
+        "campaign": "Kitchen Remodel | Search",
+        "search_term": "kitchen remodeling contractors",
+        "clicks": 166
+      },
+      {
+        "campaign": "Kitchen Remodel | Search",
+        "search_term": "kitchen cabinet refacing",
+        "clicks": 230
+      },
+      {
+        "campaign": "Kitchen Remodel | Search",
+        "search_term": "kitchen renovation cost",
+        "clicks": 311
+      },
+      {
+        "campaign": "Kitchen Remodel | Search",
+        "search_term": "custom kitchen remodel",
+        "clicks": 177
+      },
+      {
+        "campaign": "Kitchen Remodel | Search",
+        "search_term": "small kitchen remodel",
+        "clicks": 263
+      },
+      {
+        "campaign": "Kitchen Remodel | Search",
+        "search_term": "example kitchen and bath reviews",
+        "clicks": 61
+      },
+      {
+        "campaign": "Bathroom Remodel | Search",
+        "search_term": "bathroom remodel near me",
+        "clicks": 285
+      },
+      {
+        "campaign": "Bathroom Remodel | Search",
+        "search_term": "walk in shower conversion",
+        "clicks": 184
+      },
+      {
+        "campaign": "Bathroom Remodel | Search",
+        "search_term": "bathroom renovation contractors",
+        "clicks": 131
+      },
+      {
+        "campaign": "Bathroom Remodel | Search",
+        "search_term": "tub to shower conversion",
+        "clicks": 191
+      },
+      {
+        "campaign": "Bathroom Remodel | Search",
+        "search_term": "bathroom remodel cost",
+        "clicks": 289
+      },
+      {
+        "campaign": "Bathroom Remodel | Search",
+        "search_term": "example kitchen and bath reviews",
+        "clicks": 33
+      }
+    ],
+    "google_ads_audience_lists": [
+      {
+        "campaign": "Remarketing | Display",
+        "advertising_channel_type": "DISPLAY",
+        "criterion_type": "USER_LIST",
+        "negative": false,
+        "status": "ENABLED"
+      }
+    ],
+    "microsoft_ads_campaign_months": [
+      {
+        "campaign": "Kitchen Remodel | Search",
+        "campaign_type": "Search",
+        "months": [
+          {
+            "month": "2026-03",
+            "impressions": 8512,
+            "clicks": 330,
+            "cost": 1691.47,
+            "conversions": 30
+          },
+          {
+            "month": "2026-04",
+            "impressions": 8568,
+            "clicks": 363,
+            "cost": 1946.77,
+            "conversions": 32
+          },
+          {
+            "month": "2026-05",
+            "impressions": 9150,
+            "clicks": 381,
+            "cost": 1857.56,
+            "conversions": 36
+          },
+          {
+            "month": "2026-06",
+            "impressions": 8700,
+            "clicks": 352,
+            "cost": 1844.18,
+            "conversions": 35
+          },
+          {
+            "month": "2026-07",
+            "impressions": 8674,
+            "clicks": 359,
+            "cost": 1768.57,
+            "conversions": 35
+          },
+          {
+            "month": "2026-08",
+            "impressions": 9399,
+            "clicks": 375,
+            "cost": 1985.99,
+            "conversions": 37
+          },
+          {
+            "month": "2026-09",
+            "impressions": 9142,
+            "clicks": 360,
+            "cost": 1780.6,
+            "conversions": 32
+          }
+        ]
+      },
+      {
+        "campaign": "Bathroom Remodel | Search",
+        "campaign_type": "Search",
+        "months": [
+          {
+            "month": "2026-03",
+            "impressions": 6781,
+            "clicks": 277,
+            "cost": 1428.33,
+            "conversions": 24
+          },
+          {
+            "month": "2026-04",
+            "impressions": 6333,
+            "clicks": 263,
+            "cost": 1256.44,
+            "conversions": 22
+          },
+          {
+            "month": "2026-05",
+            "impressions": 6591,
+            "clicks": 263,
+            "cost": 1267.75,
+            "conversions": 23
+          },
+          {
+            "month": "2026-06",
+            "impressions": 6663,
+            "clicks": 256,
+            "cost": 1283.43,
+            "conversions": 24
+          },
+          {
+            "month": "2026-07",
+            "impressions": 6574,
+            "clicks": 258,
+            "cost": 1212.22,
+            "conversions": 25
+          },
+          {
+            "month": "2026-08",
+            "impressions": 6667,
+            "clicks": 278,
+            "cost": 1282.53,
+            "conversions": 24
+          },
+          {
+            "month": "2026-09",
+            "impressions": 6214,
+            "clicks": 259,
+            "cost": 1202.09,
+            "conversions": 22
+          }
+        ]
+      }
+    ],
+    "meta_campaign_months": [
+      {
+        "campaign": "Leads | Prospecting | Instant form",
+        "objective": "OUTCOME_LEADS",
+        "months": [
+          {
+            "month": "2026-03",
+            "impressions": 179706,
+            "clicks": 4915,
+            "inline_link_clicks": 1715,
+            "spend": 3101.62,
+            "lead": 79
+          },
+          {
+            "month": "2026-04",
+            "impressions": 195300,
+            "clicks": 5742,
+            "inline_link_clicks": 1994,
+            "spend": 3753.88,
+            "lead": 92
+          },
+          {
+            "month": "2026-05",
+            "impressions": 185214,
+            "clicks": 5242,
+            "inline_link_clicks": 1834,
+            "spend": 3341.61,
+            "lead": 81
+          },
+          {
+            "month": "2026-06",
+            "impressions": 198190,
+            "clicks": 5477,
+            "inline_link_clicks": 1839,
+            "spend": 3511.36,
+            "lead": 81
+          },
+          {
+            "month": "2026-07",
+            "impressions": 181159,
+            "clicks": 5203,
+            "inline_link_clicks": 1803,
+            "spend": 3405.65,
+            "lead": 84
+          },
+          {
+            "month": "2026-08",
+            "impressions": 201070,
+            "clicks": 5937,
+            "inline_link_clicks": 1958,
+            "spend": 3594.91,
+            "lead": 90
+          },
+          {
+            "month": "2026-09",
+            "impressions": 193405,
+            "clicks": 5394,
+            "inline_link_clicks": 1826,
+            "spend": 4634.02,
+            "lead": 84
+          }
+        ]
+      },
+      {
+        "campaign": "Leads | Retargeting | Site visitors",
+        "objective": "OUTCOME_LEADS",
+        "months": [
+          {
+            "month": "2026-03",
+            "impressions": 41703,
+            "clicks": 1340,
+            "inline_link_clicks": 511,
+            "spend": 957.56,
+            "lead": 42
+          },
+          {
+            "month": "2026-04",
+            "impressions": 43878,
+            "clicks": 1305,
+            "inline_link_clicks": 504,
+            "spend": 860.45,
+            "lead": 39
+          },
+          {
+            "month": "2026-05",
+            "impressions": 41616,
+            "clicks": 1354,
+            "inline_link_clicks": 519,
+            "spend": 897.68,
+            "lead": 43
+          },
+          {
+            "month": "2026-06",
+            "impressions": 41709,
+            "clicks": 1335,
+            "inline_link_clicks": 499,
+            "spend": 954.73,
+            "lead": 39
+          },
+          {
+            "month": "2026-07",
+            "impressions": 40489,
+            "clicks": 1302,
+            "inline_link_clicks": 507,
+            "spend": 890.06,
+            "lead": 38
+          },
+          {
+            "month": "2026-08",
+            "impressions": 43387,
+            "clicks": 1357,
+            "inline_link_clicks": 515,
+            "spend": 969.67,
+            "lead": 41
+          },
+          {
+            "month": "2026-09",
+            "impressions": 41110,
+            "clicks": 1331,
+            "inline_link_clicks": 521,
+            "spend": 987.39,
+            "lead": 42
+          }
+        ]
+      },
+      {
+        "campaign": "Traffic | Project gallery",
+        "objective": "OUTCOME_TRAFFIC",
+        "months": [
+          {
+            "month": "2026-03",
+            "impressions": 123785,
+            "clicks": 3480,
+            "inline_link_clicks": 1465,
+            "spend": 1095.44
+          },
+          {
+            "month": "2026-04",
+            "impressions": 125042,
+            "clicks": 3562,
+            "inline_link_clicks": 1476,
+            "spend": 1127.22
+          },
+          {
+            "month": "2026-05",
+            "impressions": 120165,
+            "clicks": 3403,
+            "inline_link_clicks": 1361,
+            "spend": 1077.36
+          },
+          {
+            "month": "2026-06",
+            "impressions": 118702,
+            "clicks": 3257,
+            "inline_link_clicks": 1368,
+            "spend": 946.85
+          },
+          {
+            "month": "2026-07",
+            "impressions": 124318,
+            "clicks": 3698,
+            "inline_link_clicks": 1553,
+            "spend": 1114.2
+          },
+          {
+            "month": "2026-08",
+            "impressions": 114347,
+            "clicks": 3454,
+            "inline_link_clicks": 1440,
+            "spend": 1077.72
+          },
+          {
+            "month": "2026-09",
+            "impressions": 124527,
+            "clicks": 3781,
+            "inline_link_clicks": 1576,
+            "spend": 1192.45
+          }
+        ]
+      }
+    ],
+    "meta_adsets": [
+      {
+        "name": "Homeowners 30-65 | 3 metros",
+        "campaign": "Leads | Prospecting | Instant form",
+        "status": "ACTIVE",
+        "custom_audiences": []
+      },
+      {
+        "name": "LAL 1% past leads | 3 metros",
+        "campaign": "Leads | Prospecting | Instant form",
+        "status": "ACTIVE",
+        "custom_audiences": [
+          "Lookalike (US, 1%) - Past leads"
+        ]
+      },
+      {
+        "name": "Site visitors 180d",
+        "campaign": "Leads | Retargeting | Site visitors",
+        "status": "ACTIVE",
+        "custom_audiences": [
+          "Website visitors 180d"
+        ]
+      },
+      {
+        "name": "Gallery | Homeowners",
+        "campaign": "Traffic | Project gallery",
+        "status": "ACTIVE",
+        "custom_audiences": []
+      }
+    ],
+    "pinterest_account_months": [
+      {
+        "month": "2026-08",
+        "impressions": 85592,
+        "clicks": 588,
+        "cost": 618.93
+      },
+      {
+        "month": "2026-09",
+        "impressions": 85520,
+        "clicks": 541,
+        "cost": 564.4
+      }
+    ]
+  },
+  "benchmark_rows_used": [
+    {
+      "source": "S1",
+      "row": "Home & Home Improvement",
+      "metric": "CTR",
+      "value": "6.47%",
+      "definition": "matches"
+    },
+    {
+      "source": "S1",
+      "row": "Home & Home Improvement",
+      "metric": "CPC",
+      "value": "$8.33",
+      "definition": "matches"
+    },
+    {
+      "source": "S1",
+      "row": "Home & Home Improvement",
+      "metric": "conversion rate",
+      "value": "8.05%",
+      "definition": "matches"
+    },
+    {
+      "source": "S1",
+      "row": "Home & Home Improvement",
+      "metric": "cost per lead",
+      "value": "$91",
+      "definition": "matches"
+    },
+    {
+      "source": "S2",
+      "row": "Leads objective, all industries",
+      "metric": "CTR",
+      "value": "2.70%",
+      "definition": "not stated"
+    },
+    {
+      "source": "S2",
+      "row": "Leads objective, Home & Home Improvement",
+      "metric": "CPC",
+      "value": "$2.18",
+      "definition": "not stated"
+    },
+    {
+      "source": "S2",
+      "row": "Leads objective, Home & Home Improvement",
+      "metric": "conversion rate",
+      "value": "5.32%",
+      "definition": "not stated"
+    },
+    {
+      "source": "S2",
+      "row": "Leads objective, Home & Home Improvement",
+      "metric": "cost per lead",
+      "value": "$43",
+      "definition": "matches"
+    },
+    {
+      "source": "S2",
+      "row": "Traffic objective, all industries",
+      "metric": "CTR",
+      "value": "1.93%",
+      "definition": "not stated"
+    },
+    {
+      "source": "S2",
+      "row": "Traffic objective, all industries",
+      "metric": "CPC",
+      "value": "$0.60",
+      "definition": "not stated"
+    }
+  ]
+}

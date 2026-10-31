@@ -1,0 +1,539 @@
+{
+  "note": "Example data: an invented online booking software company with invented ad accounts, apps and sites, not a real business. App bundle IDs use com.example and sites use .example, so none is real. Every number in expected_output.json follows from this input.",
+  "request": "Audit where our TikTok, Microsoft, LinkedIn and DSP ads ran outside the main feeds over the last 30 days. Find the junk placements and anything unsafe for the brand, and give me the block lists.",
+  "business": "Example Booking Software, an online booking and scheduling app for small service businesses (invented example)",
+  "window": {
+    "start": "2026-09-28",
+    "end": "2026-10-27"
+  },
+  "currency": "USD",
+  "target_cost_per_result": {
+    "tiktok-ads": 60.0,
+    "microsoft-ads": 60.0,
+    "linkedin-ads": 100.0,
+    "dsp": 60.0
+  },
+  "target_note": "Result = a sign-up or demo request. Targets given by the user per platform.",
+  "brand_red_lines": [
+    "apps made for children",
+    "gambling and casino",
+    "adult content",
+    "crime and tragedy news"
+  ],
+  "placement_utm_field": "utm_content (TikTok __PLACEMENT__, Microsoft {Network}, the DSP's domain macro; LinkedIn passes no placement)",
+  "tiktok_ads": {
+    "advertiser_id": "7000000000000000001",
+    "adgroups_metadata": [
+      {
+        "adgroup_id": "1800000000000001",
+        "adgroup_name": "Salon owners - interests",
+        "operation_status": "ENABLE",
+        "optimization_goal": "CONVERT",
+        "placement_type": "PLACEMENT_TYPE_AUTOMATIC",
+        "placements": [
+          "PLACEMENT_TIKTOK",
+          "PLACEMENT_GLOBAL_APP_BUNDLE",
+          "PLACEMENT_PANGLE"
+        ],
+        "brand_safety_type": "NO_BRAND_SAFETY",
+        "brand_safety_partner": null,
+        "inventory_filter_enabled": false
+      },
+      {
+        "adgroup_id": "1800000000000002",
+        "adgroup_name": "Clinic managers - broad",
+        "operation_status": "ENABLE",
+        "optimization_goal": "CONVERT",
+        "placement_type": "PLACEMENT_TYPE_AUTOMATIC",
+        "placements": [
+          "PLACEMENT_TIKTOK",
+          "PLACEMENT_GLOBAL_APP_BUNDLE",
+          "PLACEMENT_PANGLE"
+        ],
+        "brand_safety_type": "STANDARD_INVENTORY",
+        "brand_safety_partner": null,
+        "inventory_filter_enabled": true
+      },
+      {
+        "adgroup_id": "1800000000000003",
+        "adgroup_name": "Fitness studios - TikTok only",
+        "operation_status": "ENABLE",
+        "optimization_goal": "CONVERT",
+        "placement_type": "PLACEMENT_TYPE_NORMAL",
+        "placements": [
+          "PLACEMENT_TIKTOK"
+        ],
+        "brand_safety_type": "STANDARD_INVENTORY",
+        "brand_safety_partner": null,
+        "inventory_filter_enabled": true
+      }
+    ],
+    "placement_report": [
+      {
+        "adgroup_id": "1800000000000001",
+        "placement": "PLACEMENT_TIKTOK",
+        "spend": 1500.0,
+        "impressions": 190000,
+        "clicks": 1900,
+        "result": 30
+      },
+      {
+        "adgroup_id": "1800000000000001",
+        "placement": "PLACEMENT_PANGLE",
+        "spend": 700.0,
+        "impressions": 140000,
+        "clicks": 2100,
+        "result": 3
+      },
+      {
+        "adgroup_id": "1800000000000002",
+        "placement": "PLACEMENT_TIKTOK",
+        "spend": 900.0,
+        "impressions": 110000,
+        "clicks": 1100,
+        "result": 18
+      },
+      {
+        "adgroup_id": "1800000000000002",
+        "placement": "PLACEMENT_PANGLE",
+        "spend": 200.0,
+        "impressions": 40000,
+        "clicks": 500,
+        "result": 1
+      },
+      {
+        "adgroup_id": "1800000000000003",
+        "placement": "PLACEMENT_TIKTOK",
+        "spend": 640.0,
+        "impressions": 80000,
+        "clicks": 800,
+        "result": 14
+      }
+    ],
+    "ad_network_delivery_report_export": [
+      {
+        "bundle_id": "com.example.tilematch",
+        "app": "Tile matching puzzle game",
+        "store_category": "Games > Puzzle",
+        "impressions": 30000,
+        "clicks": 1650
+      },
+      {
+        "bundle_id": "com.example.kidscolor",
+        "app": "Coloring game for children",
+        "store_category": "Games > Kids",
+        "impressions": 9000,
+        "clicks": 120
+      },
+      {
+        "bundle_id": "com.example.weatherdaily",
+        "app": "Weather forecast app",
+        "store_category": "Weather",
+        "impressions": 50000,
+        "clicks": 230
+      },
+      {
+        "bundle_id": "com.example.newsbrief",
+        "app": "General news reader",
+        "store_category": "News",
+        "impressions": 35000,
+        "clicks": 250
+      },
+      {
+        "bundle_id": "com.example.slotsfun",
+        "app": "Casino slots game",
+        "store_category": "Games > Casino",
+        "impressions": 6000,
+        "clicks": 60
+      },
+      {
+        "bundle_id": "com.example.cleanerpro",
+        "app": "Phone storage cleaner",
+        "store_category": "Tools",
+        "impressions": 30000,
+        "clicks": 180
+      },
+      {
+        "bundle_id": "com.example.recipebox",
+        "app": "Recipe collection app",
+        "store_category": "Food and Drink",
+        "impressions": 12000,
+        "clicks": 80
+      },
+      {
+        "bundle_id": "com.example.flashlight",
+        "app": "Flashlight utility",
+        "store_category": "Tools",
+        "impressions": 8000,
+        "clicks": 30
+      }
+    ],
+    "export_note": "The delivery report export has impressions and clicks, no spend and no conversions.",
+    "current_block_list": [
+      "com.example.oldwallpaper"
+    ]
+  },
+  "microsoft_ads": {
+    "account_id": "150000001",
+    "campaigns": [
+      {
+        "Id": "410000001",
+        "Name": "Search - Booking software",
+        "CampaignType": "Search",
+        "Status": "Active",
+        "AudienceAdsBidAdjustment": 0,
+        "FinalUrlSuffix": "utm_source=bing&utm_medium=cpc&utm_content={Network}"
+      },
+      {
+        "Id": "410000002",
+        "Name": "Audience - Salon and clinic owners",
+        "CampaignType": "Audience",
+        "Status": "Active",
+        "AudienceAdsBidAdjustment": null,
+        "FinalUrlSuffix": "utm_source=bing&utm_medium=cpc&utm_content={Network}"
+      }
+    ],
+    "network_report": [
+      {
+        "campaign_id": "410000001",
+        "network": "Microsoft sites and select traffic",
+        "impressions": 30000,
+        "clicks": 900,
+        "spend": 1800.0,
+        "conversions": 36
+      },
+      {
+        "campaign_id": "410000001",
+        "network": "Audience",
+        "impressions": 150000,
+        "clicks": 600,
+        "spend": 500.0,
+        "conversions": 2
+      },
+      {
+        "campaign_id": "410000002",
+        "network": "Audience",
+        "impressions": 400000,
+        "clicks": 1400,
+        "spend": 1100.0,
+        "conversions": 14
+      }
+    ],
+    "website_url_publisher_report_export": [
+      {
+        "campaign_id": "410000001",
+        "website": "dailyquizhub.example",
+        "impressions": 50000,
+        "clicks": 420,
+        "spend": 360.0,
+        "conversions": 0
+      },
+      {
+        "campaign_id": "410000001",
+        "website": "weatherwatch.example",
+        "impressions": 100000,
+        "clicks": 180,
+        "spend": 140.0,
+        "conversions": 2
+      },
+      {
+        "campaign_id": "410000002",
+        "website": "dailyquizhub.example",
+        "impressions": 60000,
+        "clicks": 660,
+        "spend": 300.0,
+        "conversions": 0
+      },
+      {
+        "campaign_id": "410000002",
+        "website": "homeservicestoday.example",
+        "impressions": 90000,
+        "clicks": 240,
+        "spend": 260.0,
+        "conversions": 7
+      },
+      {
+        "campaign_id": "410000002",
+        "website": "salonpronews.example",
+        "impressions": 70000,
+        "clicks": 180,
+        "spend": 180.0,
+        "conversions": 5
+      },
+      {
+        "campaign_id": "410000002",
+        "website": "celebgossipdaily.example",
+        "impressions": 80000,
+        "clicks": 150,
+        "spend": 150.0,
+        "conversions": 0
+      },
+      {
+        "campaign_id": "410000002",
+        "website": "smallbizjournal.example",
+        "impressions": 60000,
+        "clicks": 120,
+        "spend": 140.0,
+        "conversions": 2
+      },
+      {
+        "campaign_id": "410000002",
+        "website": "crimeandcrashreports.example",
+        "impressions": 40000,
+        "clicks": 50,
+        "spend": 70.0,
+        "conversions": 0
+      }
+    ],
+    "current_campaign_site_exclusions": {
+      "410000001": [],
+      "410000002": [
+        "oldcouponsite.example"
+      ]
+    },
+    "ad_group_site_exclusions": "none (the user confirmed no ad group has its own site exclusions)"
+  },
+  "linkedin_ads": {
+    "ad_account_id": "500000001",
+    "campaigns": [
+      {
+        "id": "600000001",
+        "name": "Demo - Clinic managers",
+        "status": "ACTIVE",
+        "offsiteDeliveryEnabled": true
+      },
+      {
+        "id": "600000002",
+        "name": "Demo - Salon owners",
+        "status": "ACTIVE",
+        "offsiteDeliveryEnabled": true
+      }
+    ],
+    "placement_report": [
+      {
+        "campaign_id": "600000001",
+        "placement": "LINKEDIN",
+        "spend": 3200.0,
+        "impressions": 160000,
+        "clicks": 800,
+        "results": 40
+      },
+      {
+        "campaign_id": "600000001",
+        "placement": "OFFSITE",
+        "spend": 900.0,
+        "impressions": 120000,
+        "clicks": 700,
+        "results": 1
+      },
+      {
+        "campaign_id": "600000002",
+        "placement": "LINKEDIN",
+        "spend": 1500.0,
+        "impressions": 90000,
+        "clicks": 400,
+        "results": 20
+      },
+      {
+        "campaign_id": "600000002",
+        "placement": "OFFSITE",
+        "spend": 300.0,
+        "impressions": 60000,
+        "clicks": 260,
+        "results": 3
+      }
+    ],
+    "audience_network_publisher_export": [
+      {
+        "publisher": "https://play.google.com/store/apps/details?id=com.example.wordpuzzle",
+        "type": "app",
+        "description": "Word puzzle game",
+        "impressions": 40000,
+        "clicks": 700
+      },
+      {
+        "publisher": "bizinsightsweekly.example",
+        "type": "site",
+        "description": "Business news site",
+        "impressions": 60000,
+        "clicks": 150
+      },
+      {
+        "publisher": "hrleadersdigest.example",
+        "type": "site",
+        "description": "HR and people management site",
+        "impressions": 40000,
+        "clicks": 70
+      },
+      {
+        "publisher": "https://play.google.com/store/apps/details?id=com.example.solitaire",
+        "type": "app",
+        "description": "Card solitaire game",
+        "impressions": 25000,
+        "clicks": 30
+      },
+      {
+        "publisher": "https://play.google.com/store/apps/details?id=com.example.kidsabc",
+        "type": "app",
+        "description": "Alphabet game for children",
+        "impressions": 15000,
+        "clicks": 10
+      }
+    ],
+    "export_note": "Account total for the window; impressions and clicks only."
+  },
+  "dsp": {
+    "domain_report_export": [
+      {
+        "domain": "topfactsdaily.example",
+        "impressions": 200000,
+        "clicks": 900,
+        "spend": 400.0,
+        "conversions": 0,
+        "viewability_pct": 31,
+        "invalid_traffic_pct": 14
+      },
+      {
+        "domain": "clinicmanagerhub.example",
+        "impressions": 80000,
+        "clicks": 160,
+        "spend": 240.0,
+        "conversions": 6,
+        "viewability_pct": 68,
+        "invalid_traffic_pct": 2
+      },
+      {
+        "domain": "beautybizdaily.example",
+        "impressions": 90000,
+        "clicks": 140,
+        "spend": 250.0,
+        "conversions": 4,
+        "viewability_pct": 64,
+        "invalid_traffic_pct": 3
+      },
+      {
+        "domain": "slideshowworld.example",
+        "impressions": 150000,
+        "clicks": 520,
+        "spend": 210.0,
+        "conversions": 0,
+        "viewability_pct": 36,
+        "invalid_traffic_pct": 6
+      },
+      {
+        "domain": "localnewsnow.example",
+        "impressions": 60000,
+        "clicks": 80,
+        "spend": 100.0,
+        "conversions": 1,
+        "viewability_pct": 58,
+        "invalid_traffic_pct": 4
+      }
+    ]
+  },
+  "ga4": {
+    "property_id": "properties/123456789",
+    "rows": [
+      {
+        "sessionSource": "tiktok",
+        "sessionMedium": "paid",
+        "sessionCampaignName": "TikTok - Prospecting",
+        "sessionManualAdContent": "TikTok",
+        "sessions": 3420,
+        "engagedSessions": 2086,
+        "averageSessionDuration": 74.0,
+        "keyEvents": 60
+      },
+      {
+        "sessionSource": "tiktok",
+        "sessionMedium": "paid",
+        "sessionCampaignName": "TikTok - Prospecting",
+        "sessionManualAdContent": "Pangle",
+        "sessions": 702,
+        "engagedSessions": 147,
+        "averageSessionDuration": 9.0,
+        "keyEvents": 4
+      },
+      {
+        "sessionSource": "bing",
+        "sessionMedium": "cpc",
+        "sessionCampaignName": "Search - Booking software",
+        "sessionManualAdContent": "o",
+        "sessions": 830,
+        "engagedSessions": 531,
+        "averageSessionDuration": 81.0,
+        "keyEvents": 34
+      },
+      {
+        "sessionSource": "bing",
+        "sessionMedium": "cpc",
+        "sessionCampaignName": "Search - Booking software",
+        "sessionManualAdContent": "a",
+        "sessions": 240,
+        "engagedSessions": 53,
+        "averageSessionDuration": 12.0,
+        "keyEvents": 2
+      },
+      {
+        "sessionSource": "bing",
+        "sessionMedium": "cpc",
+        "sessionCampaignName": "Audience - Salon and clinic owners",
+        "sessionManualAdContent": "a",
+        "sessions": 770,
+        "engagedSessions": 262,
+        "averageSessionDuration": 31.0,
+        "keyEvents": 13
+      },
+      {
+        "sessionSource": "dsp",
+        "sessionMedium": "display",
+        "sessionCampaignName": "Prospecting - open web",
+        "sessionManualAdContent": "topfactsdaily.example",
+        "sessions": 250,
+        "engagedSessions": 30,
+        "averageSessionDuration": 6.0,
+        "keyEvents": 0
+      },
+      {
+        "sessionSource": "dsp",
+        "sessionMedium": "display",
+        "sessionCampaignName": "Prospecting - open web",
+        "sessionManualAdContent": "clinicmanagerhub.example",
+        "sessions": 140,
+        "engagedSessions": 92,
+        "averageSessionDuration": 88.0,
+        "keyEvents": 6
+      },
+      {
+        "sessionSource": "dsp",
+        "sessionMedium": "display",
+        "sessionCampaignName": "Prospecting - open web",
+        "sessionManualAdContent": "beautybizdaily.example",
+        "sessions": 120,
+        "engagedSessions": 73,
+        "averageSessionDuration": 70.0,
+        "keyEvents": 4
+      },
+      {
+        "sessionSource": "dsp",
+        "sessionMedium": "display",
+        "sessionCampaignName": "Prospecting - open web",
+        "sessionManualAdContent": "slideshowworld.example",
+        "sessions": 130,
+        "engagedSessions": 12,
+        "averageSessionDuration": 5.0,
+        "keyEvents": 0
+      },
+      {
+        "sessionSource": "dsp",
+        "sessionMedium": "display",
+        "sessionCampaignName": "Prospecting - open web",
+        "sessionManualAdContent": "localnewsnow.example",
+        "sessions": 66,
+        "engagedSessions": 36,
+        "averageSessionDuration": 52.0,
+        "keyEvents": 1
+      }
+    ]
+  }
+}

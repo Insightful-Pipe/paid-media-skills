@@ -1,0 +1,1867 @@
+{
+  "note": "Example data: an invented online coffee subscription store, with invented quotes, sellers, regions data and orders, not a real business. Every number in expected_output.json follows from this input.",
+  "request": "Plan a 4-week Spotify and streaming audio test in Colorado, Oregon and Minnesota with $16,000, then read it out after the flight: did it work, and what do we change next time? Target cost per first-time buyer is $75.",
+  "business": {
+    "name": "Quillbrook Coffee Co.",
+    "site": "https://www.quillbrookcoffee.example",
+    "what": "online coffee subscription and single bags, roasted to order",
+    "buyer": "US coffee drinkers 25 to 54 who buy whole-bean coffee at the grocery store",
+    "offer": "20% off a first order",
+    "store": "Shopify",
+    "currency": "USD"
+  },
+  "run_date": "2026-10-28",
+  "targets": {
+    "target_cost_per_first_time_purchaser": 75.0,
+    "budget": 16000.0,
+    "flight": {
+      "start": "2026-09-21",
+      "end": "2026-10-18",
+      "weeks": 4
+    },
+    "read_window_end": "2026-10-25",
+    "weekly_average_frequency": 1.5,
+    "weekly_cap": 3,
+    "line_cap_share": 0.4,
+    "brand_terms": [
+      "quillbrook",
+      "quillbrook coffee"
+    ]
+  },
+  "regions": {
+    "test": [
+      "Colorado",
+      "Oregon",
+      "Minnesota"
+    ],
+    "control_candidates": [
+      "Washington",
+      "Wisconsin",
+      "Utah",
+      "Arizona",
+      "Michigan",
+      "Missouri"
+    ],
+    "metro_areas_shared_with_test_states": {
+      "Washington": "Portland-Vancouver-Hillsboro, OR-WA (with Oregon)",
+      "Wisconsin": "Minneapolis-St. Paul-Bloomington, MN-WI (with Minnesota)"
+    }
+  },
+  "quotes": [
+    {
+      "line": "L1",
+      "seller": "Spotify Ads Manager",
+      "placement": "music",
+      "targeting": "genre: jazz and lo-fi",
+      "media_cpm": 18.0,
+      "data_cpm": 0.0,
+      "platform_fee_pct": 0.0,
+      "minimum_spend": 0.0,
+      "audience_in_test_states": 60000,
+      "targets_test_states_only": true,
+      "reports_reach_and_frequency": true
+    },
+    {
+      "line": "L2",
+      "seller": "Spotify Ads Manager",
+      "placement": "music",
+      "targeting": "interest: food and cooking",
+      "media_cpm": 20.0,
+      "data_cpm": 0.0,
+      "platform_fee_pct": 0.0,
+      "minimum_spend": 0.0,
+      "audience_in_test_states": 410000,
+      "targets_test_states_only": true,
+      "reports_reach_and_frequency": true
+    },
+    {
+      "line": "L3",
+      "seller": "Spotify Ads Manager",
+      "placement": "podcast",
+      "targeting": "interest: food and cooking",
+      "media_cpm": 24.0,
+      "data_cpm": 0.0,
+      "platform_fee_pct": 0.0,
+      "minimum_spend": 0.0,
+      "audience_in_test_states": 150000,
+      "targets_test_states_only": true,
+      "reports_reach_and_frequency": true
+    },
+    {
+      "line": "L4",
+      "seller": "Marlowpine Radio (invented streaming radio seller)",
+      "placement": "streaming radio",
+      "targeting": "adults 25 to 54, food and drink interest",
+      "media_cpm": 25.0,
+      "data_cpm": 0.0,
+      "platform_fee_pct": 10.0,
+      "minimum_spend": 2500.0,
+      "audience_in_test_states": 220000,
+      "targets_test_states_only": true,
+      "reports_reach_and_frequency": true
+    },
+    {
+      "line": "L5",
+      "seller": "Programmatic audio through a DSP (invented agency quote)",
+      "placement": "programmatic audio",
+      "targeting": "third-party coffee buyer segment",
+      "media_cpm": 12.0,
+      "data_cpm": 2.5,
+      "platform_fee_pct": 15.0,
+      "minimum_spend": 10000.0,
+      "audience_in_test_states": 500000,
+      "targets_test_states_only": true,
+      "reports_reach_and_frequency": false
+    }
+  ],
+  "tracking": {
+    "codes": {
+      "L1": "QBJAZZ",
+      "L2": "QBFOOD",
+      "L3": "QBPOD"
+    },
+    "vanity_path": "/listen",
+    "code_settings": "20% off, one use per customer, limited to customers with no past orders (a Shopify customer segment), so repeat buyers can't redeem it"
+  },
+  "data_pulled": {
+    "weeks": {
+      "baseline": [
+        "202631",
+        "202632",
+        "202633",
+        "202634",
+        "202635",
+        "202636",
+        "202637",
+        "202638"
+      ],
+      "read_window": [
+        "202639",
+        "202640",
+        "202641",
+        "202642",
+        "202643"
+      ]
+    },
+    "ga4_new_users_direct_and_organic_search_by_region": {
+      "Colorado": [
+        2117,
+        2078,
+        2198,
+        2074,
+        2016,
+        2168,
+        2320,
+        2231,
+        2468,
+        2725,
+        2579,
+        2559,
+        2600
+      ],
+      "Oregon": [
+        1712,
+        1639,
+        1630,
+        1589,
+        1647,
+        1587,
+        1891,
+        1625,
+        1924,
+        2109,
+        2065,
+        1895,
+        1921
+      ],
+      "Minnesota": [
+        1536,
+        1420,
+        1529,
+        1429,
+        1438,
+        1514,
+        1591,
+        1481,
+        1745,
+        1935,
+        1833,
+        1769,
+        1633
+      ],
+      "Washington": [
+        2162,
+        2361,
+        2193,
+        2317,
+        2253,
+        2218,
+        2370,
+        2180,
+        2435,
+        2476,
+        2124,
+        2556,
+        2428
+      ],
+      "Wisconsin": [
+        1441,
+        1307,
+        1402,
+        1435,
+        1210,
+        1398,
+        1404,
+        1331,
+        1350,
+        1335,
+        1393,
+        1374,
+        1444
+      ],
+      "Utah": [
+        1274,
+        1224,
+        1131,
+        1258,
+        1205,
+        1131,
+        1150,
+        1203,
+        1223,
+        1389,
+        1198,
+        1165,
+        1174
+      ],
+      "Arizona": [
+        2370,
+        2703,
+        2195,
+        2156,
+        2270,
+        1875,
+        2030,
+        1815,
+        2475,
+        2465,
+        2421,
+        2473,
+        2133
+      ],
+      "Michigan": [
+        1739,
+        1826,
+        1832,
+        1699,
+        1766,
+        2082,
+        1896,
+        1867,
+        1783,
+        1898,
+        1907,
+        1751,
+        1882
+      ],
+      "Missouri": [
+        1178,
+        1312,
+        1336,
+        1255,
+        1248,
+        1254,
+        1365,
+        1246,
+        1378,
+        1382,
+        1146,
+        1263,
+        1338
+      ]
+    },
+    "ga4_first_time_purchasers_by_region": {
+      "Colorado": [
+        154,
+        164,
+        179,
+        158,
+        141,
+        148,
+        158,
+        174,
+        167,
+        180,
+        171,
+        196,
+        183
+      ],
+      "Oregon": [
+        123,
+        121,
+        109,
+        121,
+        123,
+        117,
+        132,
+        115,
+        124,
+        157,
+        133,
+        137,
+        136
+      ],
+      "Minnesota": [
+        116,
+        109,
+        123,
+        110,
+        93,
+        116,
+        123,
+        125,
+        137,
+        133,
+        139,
+        137,
+        142
+      ],
+      "Washington": [
+        160,
+        130,
+        181,
+        175,
+        155,
+        159,
+        167,
+        178,
+        175,
+        161,
+        153,
+        202,
+        148
+      ],
+      "Wisconsin": [
+        97,
+        98,
+        100,
+        90,
+        95,
+        113,
+        103,
+        108,
+        115,
+        106,
+        102,
+        113,
+        109
+      ],
+      "Utah": [
+        98,
+        84,
+        82,
+        104,
+        87,
+        104,
+        80,
+        67,
+        100,
+        102,
+        86,
+        84,
+        81
+      ],
+      "Arizona": [
+        141,
+        134,
+        183,
+        154,
+        159,
+        162,
+        133,
+        112,
+        143,
+        172,
+        167,
+        132,
+        160
+      ],
+      "Michigan": [
+        136,
+        110,
+        133,
+        148,
+        118,
+        176,
+        134,
+        133,
+        128,
+        158,
+        146,
+        138,
+        149
+      ],
+      "Missouri": [
+        89,
+        88,
+        100,
+        82,
+        106,
+        101,
+        87,
+        89,
+        99,
+        100,
+        79,
+        86,
+        88
+      ]
+    },
+    "google_ads_brand_campaign_impressions_by_region": {
+      "Colorado": [
+        1229,
+        1162,
+        1287,
+        1232,
+        1207,
+        1221,
+        1396,
+        1303,
+        1423,
+        1661,
+        1599,
+        1541,
+        1515
+      ],
+      "Oregon": [
+        941,
+        896,
+        894,
+        931,
+        888,
+        994,
+        1067,
+        915,
+        1144,
+        1287,
+        1171,
+        1175,
+        1114
+      ],
+      "Minnesota": [
+        863,
+        768,
+        859,
+        821,
+        776,
+        911,
+        962,
+        888,
+        1017,
+        1185,
+        1162,
+        1074,
+        1017
+      ],
+      "Washington": [
+        1260,
+        1275,
+        1325,
+        1356,
+        1227,
+        1244,
+        1263,
+        1319,
+        1389,
+        1377,
+        1242,
+        1410,
+        1500
+      ],
+      "Wisconsin": [
+        755,
+        734,
+        848,
+        794,
+        704,
+        904,
+        806,
+        741,
+        813,
+        800,
+        830,
+        881,
+        843
+      ],
+      "Utah": [
+        824,
+        622,
+        657,
+        703,
+        720,
+        752,
+        663,
+        664,
+        759,
+        767,
+        745,
+        751,
+        675
+      ],
+      "Arizona": [
+        1218,
+        1262,
+        1359,
+        933,
+        1095,
+        1272,
+        1255,
+        1468,
+        1052,
+        1534,
+        1264,
+        1270,
+        1209
+      ],
+      "Michigan": [
+        1041,
+        1136,
+        1050,
+        1037,
+        1005,
+        1118,
+        1186,
+        1064,
+        968,
+        1156,
+        1168,
+        1059,
+        1191
+      ],
+      "Missouri": [
+        784,
+        710,
+        759,
+        664,
+        655,
+        774,
+        822,
+        819,
+        717,
+        776,
+        738,
+        713,
+        812
+      ]
+    },
+    "search_console_brand_clicks_national_weekly": [
+      2265,
+      2332,
+      2270,
+      2296,
+      2139,
+      2451,
+      2542,
+      2312,
+      2525,
+      2533,
+      2585,
+      2477,
+      2531
+    ],
+    "ga4_vanity_path_sessions_read_window": {
+      "Colorado": 91,
+      "Oregon": 63,
+      "Minnesota": 57,
+      "other regions": 64
+    },
+    "delivery_export": [
+      {
+        "line": "L1",
+        "impressions": 267300,
+        "reach": 43200,
+        "spend": 4811.4,
+        "completion_rate_pct": 92.1,
+        "impressions_outside_test_states_pct": 0.4
+      },
+      {
+        "line": "L2",
+        "impressions": 310400,
+        "reach": 54933,
+        "spend": 6208.0,
+        "completion_rate_pct": 90.4,
+        "impressions_outside_test_states_pct": 0.9
+      },
+      {
+        "line": "L3",
+        "impressions": 154050,
+        "reach": 31271,
+        "spend": 3697.2,
+        "completion_rate_pct": 95.6,
+        "impressions_outside_test_states_pct": 3.1
+      }
+    ],
+    "shopify_code_orders": [
+      {
+        "order": "#5168",
+        "created_at": "2026-09-21",
+        "code": "QBJAZZ",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5321",
+        "created_at": "2026-09-22",
+        "code": "QBJAZZ",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5390",
+        "created_at": "2026-09-22",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5686",
+        "created_at": "2026-09-22",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5725",
+        "created_at": "2026-09-22",
+        "code": "QBFOOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5729",
+        "created_at": "2026-09-22",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5163",
+        "created_at": "2026-09-23",
+        "code": "QBJAZZ",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5624",
+        "created_at": "2026-09-23",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5722",
+        "created_at": "2026-09-23",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5830",
+        "created_at": "2026-09-23",
+        "code": "QBFOOD",
+        "shipping_province_code": "CA",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5955",
+        "created_at": "2026-09-23",
+        "code": "QBPOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5984",
+        "created_at": "2026-09-23",
+        "code": "QBPOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5383",
+        "created_at": "2026-09-24",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5438",
+        "created_at": "2026-09-24",
+        "code": "QBFOOD",
+        "shipping_province_code": "MN",
+        "financial_status": "refunded"
+      },
+      {
+        "order": "#5739",
+        "created_at": "2026-09-24",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5814",
+        "created_at": "2026-09-24",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5349",
+        "created_at": "2026-09-25",
+        "code": "QBJAZZ",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5486",
+        "created_at": "2026-09-25",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5547",
+        "created_at": "2026-09-25",
+        "code": "QBFOOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5605",
+        "created_at": "2026-09-25",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5701",
+        "created_at": "2026-09-25",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5882",
+        "created_at": "2026-09-25",
+        "code": "QBFOOD",
+        "shipping_province_code": "NY",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5916",
+        "created_at": "2026-09-25",
+        "code": "QBFOOD",
+        "shipping_province_code": "TX",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5206",
+        "created_at": "2026-09-26",
+        "code": "QBJAZZ",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5255",
+        "created_at": "2026-09-26",
+        "code": "QBJAZZ",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5358",
+        "created_at": "2026-09-26",
+        "code": "QBJAZZ",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5562",
+        "created_at": "2026-09-26",
+        "code": "QBFOOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5578",
+        "created_at": "2026-09-26",
+        "code": "QBFOOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5847",
+        "created_at": "2026-09-26",
+        "code": "QBFOOD",
+        "shipping_province_code": "CA",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5964",
+        "created_at": "2026-09-26",
+        "code": "QBPOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5144",
+        "created_at": "2026-09-27",
+        "code": "QBJAZZ",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5221",
+        "created_at": "2026-09-27",
+        "code": "QBJAZZ",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5329",
+        "created_at": "2026-09-27",
+        "code": "QBJAZZ",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5423",
+        "created_at": "2026-09-27",
+        "code": "QBFOOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5610",
+        "created_at": "2026-09-27",
+        "code": "QBFOOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#6002",
+        "created_at": "2026-09-27",
+        "code": "QBPOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5275",
+        "created_at": "2026-09-28",
+        "code": "QBJAZZ",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5582",
+        "created_at": "2026-09-28",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5632",
+        "created_at": "2026-09-28",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5672",
+        "created_at": "2026-09-28",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5793",
+        "created_at": "2026-09-28",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5839",
+        "created_at": "2026-09-28",
+        "code": "QBFOOD",
+        "shipping_province_code": "CA",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5224",
+        "created_at": "2026-09-29",
+        "code": "QBJAZZ",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5297",
+        "created_at": "2026-09-29",
+        "code": "QBJAZZ",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5507",
+        "created_at": "2026-09-29",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5625",
+        "created_at": "2026-09-29",
+        "code": "QBFOOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5908",
+        "created_at": "2026-09-29",
+        "code": "QBFOOD",
+        "shipping_province_code": "FL",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5264",
+        "created_at": "2026-09-30",
+        "code": "QBJAZZ",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5290",
+        "created_at": "2026-09-30",
+        "code": "QBJAZZ",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5708",
+        "created_at": "2026-09-30",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5897",
+        "created_at": "2026-09-30",
+        "code": "QBFOOD",
+        "shipping_province_code": "FL",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5902",
+        "created_at": "2026-09-30",
+        "code": "QBFOOD",
+        "shipping_province_code": "FL",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5935",
+        "created_at": "2026-09-30",
+        "code": "QBPOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#6031",
+        "created_at": "2026-09-30",
+        "code": "QBPOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5136",
+        "created_at": "2026-10-01",
+        "code": "QBJAZZ",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5499",
+        "created_at": "2026-10-01",
+        "code": "QBFOOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5681",
+        "created_at": "2026-10-01",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5854",
+        "created_at": "2026-10-01",
+        "code": "QBFOOD",
+        "shipping_province_code": "CA",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5714",
+        "created_at": "2026-10-02",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#6043",
+        "created_at": "2026-10-02",
+        "code": "QBPOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5197",
+        "created_at": "2026-10-03",
+        "code": "QBJAZZ",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5235",
+        "created_at": "2026-10-03",
+        "code": "QBJAZZ",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5399",
+        "created_at": "2026-10-03",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5791",
+        "created_at": "2026-10-03",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5872",
+        "created_at": "2026-10-03",
+        "code": "QBFOOD",
+        "shipping_province_code": "CA",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5941",
+        "created_at": "2026-10-03",
+        "code": "QBPOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5973",
+        "created_at": "2026-10-03",
+        "code": "QBPOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5113",
+        "created_at": "2026-10-04",
+        "code": "QBJAZZ",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5243",
+        "created_at": "2026-10-04",
+        "code": "QBJAZZ",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5769",
+        "created_at": "2026-10-04",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5785",
+        "created_at": "2026-10-04",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5104",
+        "created_at": "2026-10-05",
+        "code": "QBJAZZ",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5365",
+        "created_at": "2026-10-05",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5376",
+        "created_at": "2026-10-05",
+        "code": "QBFOOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5455",
+        "created_at": "2026-10-05",
+        "code": "QBFOOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5503",
+        "created_at": "2026-10-05",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5527",
+        "created_at": "2026-10-05",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5586",
+        "created_at": "2026-10-05",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5878",
+        "created_at": "2026-10-05",
+        "code": "QBFOOD",
+        "shipping_province_code": "NY",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5972",
+        "created_at": "2026-10-05",
+        "code": "QBPOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#6035",
+        "created_at": "2026-10-05",
+        "code": "QBPOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5184",
+        "created_at": "2026-10-06",
+        "code": "QBJAZZ",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5223",
+        "created_at": "2026-10-06",
+        "code": "QBJAZZ",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5281",
+        "created_at": "2026-10-06",
+        "code": "QBJAZZ",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5369",
+        "created_at": "2026-10-06",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5472",
+        "created_at": "2026-10-06",
+        "code": "QBFOOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5864",
+        "created_at": "2026-10-06",
+        "code": "QBFOOD",
+        "shipping_province_code": "CA",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5354",
+        "created_at": "2026-10-07",
+        "code": "QBJAZZ",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5557",
+        "created_at": "2026-10-07",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5644",
+        "created_at": "2026-10-07",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5705",
+        "created_at": "2026-10-07",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5875",
+        "created_at": "2026-10-07",
+        "code": "QBFOOD",
+        "shipping_province_code": "NY",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5497",
+        "created_at": "2026-10-08",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5730",
+        "created_at": "2026-10-08",
+        "code": "QBFOOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5852",
+        "created_at": "2026-10-08",
+        "code": "QBFOOD",
+        "shipping_province_code": "CA",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5884",
+        "created_at": "2026-10-08",
+        "code": "QBFOOD",
+        "shipping_province_code": "NY",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5190",
+        "created_at": "2026-10-09",
+        "code": "QBJAZZ",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5429",
+        "created_at": "2026-10-09",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5992",
+        "created_at": "2026-10-09",
+        "code": "QBPOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5193",
+        "created_at": "2026-10-10",
+        "code": "QBJAZZ",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5285",
+        "created_at": "2026-10-10",
+        "code": "QBJAZZ",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5534",
+        "created_at": "2026-10-10",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5619",
+        "created_at": "2026-10-10",
+        "code": "QBFOOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5753",
+        "created_at": "2026-10-10",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5826",
+        "created_at": "2026-10-10",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5869",
+        "created_at": "2026-10-10",
+        "code": "QBFOOD",
+        "shipping_province_code": "CA",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5332",
+        "created_at": "2026-10-11",
+        "code": "QBJAZZ",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5340",
+        "created_at": "2026-10-11",
+        "code": "QBJAZZ",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5518",
+        "created_at": "2026-10-11",
+        "code": "QBFOOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5774",
+        "created_at": "2026-10-11",
+        "code": "QBFOOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5294",
+        "created_at": "2026-10-12",
+        "code": "QBJAZZ",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5509",
+        "created_at": "2026-10-12",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5560",
+        "created_at": "2026-10-12",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5653",
+        "created_at": "2026-10-12",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5671",
+        "created_at": "2026-10-12",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5311",
+        "created_at": "2026-10-13",
+        "code": "QBJAZZ",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5406",
+        "created_at": "2026-10-13",
+        "code": "QBFOOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5496",
+        "created_at": "2026-10-13",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5697",
+        "created_at": "2026-10-13",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5747",
+        "created_at": "2026-10-13",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5913",
+        "created_at": "2026-10-13",
+        "code": "QBFOOD",
+        "shipping_province_code": "FL",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5978",
+        "created_at": "2026-10-13",
+        "code": "QBPOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5116",
+        "created_at": "2026-10-14",
+        "code": "QBJAZZ",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5636",
+        "created_at": "2026-10-14",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5662",
+        "created_at": "2026-10-14",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5304",
+        "created_at": "2026-10-15",
+        "code": "QBJAZZ",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5440",
+        "created_at": "2026-10-15",
+        "code": "QBFOOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5449",
+        "created_at": "2026-10-15",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5541",
+        "created_at": "2026-10-15",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5792",
+        "created_at": "2026-10-15",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5818",
+        "created_at": "2026-10-15",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5956",
+        "created_at": "2026-10-15",
+        "code": "QBPOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5495",
+        "created_at": "2026-10-16",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5779",
+        "created_at": "2026-10-16",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5931",
+        "created_at": "2026-10-16",
+        "code": "QBFOOD",
+        "shipping_province_code": "TX",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5313",
+        "created_at": "2026-10-17",
+        "code": "QBJAZZ",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5492",
+        "created_at": "2026-10-17",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5805",
+        "created_at": "2026-10-17",
+        "code": "QBFOOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5953",
+        "created_at": "2026-10-17",
+        "code": "QBPOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5196",
+        "created_at": "2026-10-18",
+        "code": "QBJAZZ",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5413",
+        "created_at": "2026-10-18",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5634",
+        "created_at": "2026-10-18",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5161",
+        "created_at": "2026-10-19",
+        "code": "QBJAZZ",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5924",
+        "created_at": "2026-10-19",
+        "code": "QBFOOD",
+        "shipping_province_code": "TX",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5177",
+        "created_at": "2026-10-20",
+        "code": "QBJAZZ",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5246",
+        "created_at": "2026-10-20",
+        "code": "QBJAZZ",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5273",
+        "created_at": "2026-10-20",
+        "code": "QBJAZZ",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5569",
+        "created_at": "2026-10-20",
+        "code": "QBFOOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5720",
+        "created_at": "2026-10-20",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5889",
+        "created_at": "2026-10-20",
+        "code": "QBFOOD",
+        "shipping_province_code": "NY",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#6044",
+        "created_at": "2026-10-20",
+        "code": "QBPOD",
+        "shipping_province_code": "WA",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5479",
+        "created_at": "2026-10-21",
+        "code": "QBFOOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5588",
+        "created_at": "2026-10-21",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#6011",
+        "created_at": "2026-10-21",
+        "code": "QBPOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5156",
+        "created_at": "2026-10-22",
+        "code": "QBJAZZ",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5213",
+        "created_at": "2026-10-22",
+        "code": "QBJAZZ",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5228",
+        "created_at": "2026-10-22",
+        "code": "QBJAZZ",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5367",
+        "created_at": "2026-10-22",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5463",
+        "created_at": "2026-10-22",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5857",
+        "created_at": "2026-10-22",
+        "code": "QBFOOD",
+        "shipping_province_code": "CA",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5118",
+        "created_at": "2026-10-23",
+        "code": "QBJAZZ",
+        "shipping_province_code": "CO",
+        "financial_status": "refunded"
+      },
+      {
+        "order": "#5418",
+        "created_at": "2026-10-23",
+        "code": "QBFOOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5691",
+        "created_at": "2026-10-23",
+        "code": "QBFOOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5959",
+        "created_at": "2026-10-23",
+        "code": "QBPOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#6013",
+        "created_at": "2026-10-23",
+        "code": "QBPOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#6022",
+        "created_at": "2026-10-23",
+        "code": "QBPOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5127",
+        "created_at": "2026-10-24",
+        "code": "QBJAZZ",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5599",
+        "created_at": "2026-10-24",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5760",
+        "created_at": "2026-10-24",
+        "code": "QBFOOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5802",
+        "created_at": "2026-10-24",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5876",
+        "created_at": "2026-10-24",
+        "code": "QBFOOD",
+        "shipping_province_code": "NY",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5947",
+        "created_at": "2026-10-24",
+        "code": "QBPOD",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5994",
+        "created_at": "2026-10-24",
+        "code": "QBPOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5147",
+        "created_at": "2026-10-25",
+        "code": "QBJAZZ",
+        "shipping_province_code": "OR",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5360",
+        "created_at": "2026-10-25",
+        "code": "QBJAZZ",
+        "shipping_province_code": "TX",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5401",
+        "created_at": "2026-10-25",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5550",
+        "created_at": "2026-10-25",
+        "code": "QBFOOD",
+        "shipping_province_code": "MN",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5590",
+        "created_at": "2026-10-25",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      },
+      {
+        "order": "#5641",
+        "created_at": "2026-10-25",
+        "code": "QBFOOD",
+        "shipping_province_code": "CO",
+        "financial_status": "paid"
+      }
+    ]
+  },
+  "sources": {
+    "google-analytics": "get_report (3 reports)",
+    "google-ads": "gaql (geographic_view)",
+    "google-search-console": "search_analytics",
+    "shopify": "get_orders",
+    "seller exports": "Spotify Ads Manager report export (pasted)"
+  }
+}

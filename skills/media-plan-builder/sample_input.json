@@ -1,0 +1,814 @@
+{
+  "note": "Example data: an invented staff-scheduling app for restaurants and cafes, with invented planning data, not a real business. Every number in expected_output.json follows from this input.",
+  "request": "Hey Claude, I just added the \"media-plan-builder\" skill. We launch Example Shift Scheduler ads in the US on 4 January with $45,000 for January to March. Build the media plan: which platforms, budget by month, what each line should deliver, the creative we need, and a tracker sheet.",
+  "brief": {
+    "business": "Example Shift Scheduler, staff scheduling, shift swaps and time clock for restaurants and cafes (invented)",
+    "site": "https://www.shiftscheduler.example",
+    "landing_pages": {
+      "search": "https://www.shiftscheduler.example/restaurant-scheduling/",
+      "social": "https://www.shiftscheduler.example/start/"
+    },
+    "country": "United States",
+    "goal": "paying accounts; the ad platforms optimize for sign-ups (account created)",
+    "flight": {
+      "start": "2027-01-04",
+      "end": "2027-03-31"
+    },
+    "budget_total": 45000,
+    "reserve_share": 0.1,
+    "currency": "USD",
+    "economics": {
+      "avg_revenue_per_account_month": 60.0,
+      "gross_margin": 0.85,
+      "payback_months": 12,
+      "signup_to_paid_rate": 0.25,
+      "planning_target_share_of_allowable": 0.8
+    },
+    "audience": "owners and general managers of independent restaurants, cafes and small restaurant groups (1 to 10 sites)",
+    "ads_history": "none; no ad account has spent before",
+    "creative_capacity": "static images and carousels in house; 2 short videos (phone-shot) available, no video budget",
+    "tracking": "GA4 and the Meta pixel installed; sign-up and sign-up-started events fire; Google Ads conversion not yet created",
+    "tracker_spreadsheet": "an existing Google Sheet the user named 'Example Shift Scheduler marketing 2027'"
+  },
+  "assumptions": [
+    {
+      "id": "A1",
+      "line": "Google Search",
+      "item": "Impression share a new account can win on these keywords",
+      "value": 0.45,
+      "source": "assumption: new account, no history"
+    },
+    {
+      "id": "A2",
+      "line": "Google Search",
+      "item": "Click-through rate",
+      "value": 0.055,
+      "source": "assumption: non-brand search, ads written to the keyword"
+    },
+    {
+      "id": "A3",
+      "line": "Google Search",
+      "item": "Click to sign-up rate",
+      "value": 0.07,
+      "source": "user: the scheduling page converts 7% of visitors from organic search today"
+    },
+    {
+      "id": "A4",
+      "line": "Meta",
+      "item": "CPM (cost per 1,000 impressions)",
+      "value": 15.0,
+      "source": "assumption: no Meta history; replace after week 2"
+    },
+    {
+      "id": "A5",
+      "line": "Meta",
+      "item": "Link click-through rate",
+      "value": 0.008,
+      "source": "assumption: cold audience, static and carousel"
+    },
+    {
+      "id": "A6",
+      "line": "Meta",
+      "item": "Click to sign-up-started rate",
+      "value": 0.12,
+      "source": "user: GA4 shows 12% of /start/ visitors open the sign-up form"
+    },
+    {
+      "id": "A7",
+      "line": "Meta",
+      "item": "Click to sign-up rate",
+      "value": 0.025,
+      "source": "user: GA4 shows 2.5% of /start/ visitors finish sign-up"
+    },
+    {
+      "id": "A8",
+      "line": "Meta",
+      "item": "Planned frequency per person over a month",
+      "value": 3.0,
+      "source": "assumption: enough repeats for a new brand without wearing out 2 concepts"
+    },
+    {
+      "id": "A9",
+      "line": "Meta",
+      "item": "Largest share of the audience one line can reach in a month",
+      "value": 0.35,
+      "source": "assumption"
+    },
+    {
+      "id": "A10",
+      "line": "LinkedIn",
+      "item": "Click to sign-up rate",
+      "value": 0.05,
+      "source": "assumption: job-title targeted traffic to the search landing page"
+    },
+    {
+      "id": "A11",
+      "line": "TikTok",
+      "item": "Videos ready at launch",
+      "value": 2,
+      "source": "user"
+    }
+  ],
+  "planning_data": {
+    "google_ads_generate_keyword_ideas": {
+      "geo": "United States",
+      "language": "English",
+      "rows": [
+        {
+          "keyword": "restaurant scheduling software",
+          "avg_monthly_searches": 2900,
+          "competition": "HIGH",
+          "low_top_of_page_bid": 4.1,
+          "high_top_of_page_bid": 12.8,
+          "monthly_search_volumes": [
+            {
+              "year": 2025,
+              "month": "OCTOBER",
+              "monthly_searches": 2760
+            },
+            {
+              "year": 2025,
+              "month": "NOVEMBER",
+              "monthly_searches": 2460
+            },
+            {
+              "year": 2025,
+              "month": "DECEMBER",
+              "monthly_searches": 2180
+            },
+            {
+              "year": 2026,
+              "month": "JANUARY",
+              "monthly_searches": 3600
+            },
+            {
+              "year": 2026,
+              "month": "FEBRUARY",
+              "monthly_searches": 3000
+            },
+            {
+              "year": 2026,
+              "month": "MARCH",
+              "monthly_searches": 3100
+            },
+            {
+              "year": 2026,
+              "month": "APRIL",
+              "monthly_searches": 2900
+            },
+            {
+              "year": 2026,
+              "month": "MAY",
+              "monthly_searches": 3040
+            },
+            {
+              "year": 2026,
+              "month": "JUNE",
+              "monthly_searches": 2760
+            },
+            {
+              "year": 2026,
+              "month": "JULY",
+              "monthly_searches": 2610
+            },
+            {
+              "year": 2026,
+              "month": "AUGUST",
+              "monthly_searches": 2760
+            },
+            {
+              "year": 2026,
+              "month": "SEPTEMBER",
+              "monthly_searches": 2900
+            }
+          ]
+        },
+        {
+          "keyword": "restaurant employee scheduling app",
+          "avg_monthly_searches": 1300,
+          "competition": "HIGH",
+          "low_top_of_page_bid": 3.6,
+          "high_top_of_page_bid": 11.2,
+          "monthly_search_volumes": [
+            {
+              "year": 2025,
+              "month": "OCTOBER",
+              "monthly_searches": 1240
+            },
+            {
+              "year": 2025,
+              "month": "NOVEMBER",
+              "monthly_searches": 1100
+            },
+            {
+              "year": 2025,
+              "month": "DECEMBER",
+              "monthly_searches": 980
+            },
+            {
+              "year": 2026,
+              "month": "JANUARY",
+              "monthly_searches": 1600
+            },
+            {
+              "year": 2026,
+              "month": "FEBRUARY",
+              "monthly_searches": 1300
+            },
+            {
+              "year": 2026,
+              "month": "MARCH",
+              "monthly_searches": 1400
+            },
+            {
+              "year": 2026,
+              "month": "APRIL",
+              "monthly_searches": 1300
+            },
+            {
+              "year": 2026,
+              "month": "MAY",
+              "monthly_searches": 1360
+            },
+            {
+              "year": 2026,
+              "month": "JUNE",
+              "monthly_searches": 1240
+            },
+            {
+              "year": 2026,
+              "month": "JULY",
+              "monthly_searches": 1170
+            },
+            {
+              "year": 2026,
+              "month": "AUGUST",
+              "monthly_searches": 1240
+            },
+            {
+              "year": 2026,
+              "month": "SEPTEMBER",
+              "monthly_searches": 1300
+            }
+          ]
+        },
+        {
+          "keyword": "staff scheduling app",
+          "avg_monthly_searches": 6600,
+          "competition": "MEDIUM",
+          "low_top_of_page_bid": 2.4,
+          "high_top_of_page_bid": 8.9,
+          "monthly_search_volumes": [
+            {
+              "year": 2025,
+              "month": "OCTOBER",
+              "monthly_searches": 6270
+            },
+            {
+              "year": 2025,
+              "month": "NOVEMBER",
+              "monthly_searches": 5610
+            },
+            {
+              "year": 2025,
+              "month": "DECEMBER",
+              "monthly_searches": 4950
+            },
+            {
+              "year": 2026,
+              "month": "JANUARY",
+              "monthly_searches": 7900
+            },
+            {
+              "year": 2026,
+              "month": "FEBRUARY",
+              "monthly_searches": 6800
+            },
+            {
+              "year": 2026,
+              "month": "MARCH",
+              "monthly_searches": 7000
+            },
+            {
+              "year": 2026,
+              "month": "APRIL",
+              "monthly_searches": 6600
+            },
+            {
+              "year": 2026,
+              "month": "MAY",
+              "monthly_searches": 6930
+            },
+            {
+              "year": 2026,
+              "month": "JUNE",
+              "monthly_searches": 6270
+            },
+            {
+              "year": 2026,
+              "month": "JULY",
+              "monthly_searches": 5940
+            },
+            {
+              "year": 2026,
+              "month": "AUGUST",
+              "monthly_searches": 6270
+            },
+            {
+              "year": 2026,
+              "month": "SEPTEMBER",
+              "monthly_searches": 6600
+            }
+          ]
+        },
+        {
+          "keyword": "employee scheduling app",
+          "avg_monthly_searches": 6600,
+          "competition": "MEDIUM",
+          "low_top_of_page_bid": 2.4,
+          "high_top_of_page_bid": 8.9,
+          "monthly_search_volumes": [
+            {
+              "year": 2025,
+              "month": "OCTOBER",
+              "monthly_searches": 6270
+            },
+            {
+              "year": 2025,
+              "month": "NOVEMBER",
+              "monthly_searches": 5610
+            },
+            {
+              "year": 2025,
+              "month": "DECEMBER",
+              "monthly_searches": 4950
+            },
+            {
+              "year": 2026,
+              "month": "JANUARY",
+              "monthly_searches": 7900
+            },
+            {
+              "year": 2026,
+              "month": "FEBRUARY",
+              "monthly_searches": 6800
+            },
+            {
+              "year": 2026,
+              "month": "MARCH",
+              "monthly_searches": 7000
+            },
+            {
+              "year": 2026,
+              "month": "APRIL",
+              "monthly_searches": 6600
+            },
+            {
+              "year": 2026,
+              "month": "MAY",
+              "monthly_searches": 6930
+            },
+            {
+              "year": 2026,
+              "month": "JUNE",
+              "monthly_searches": 6270
+            },
+            {
+              "year": 2026,
+              "month": "JULY",
+              "monthly_searches": 5940
+            },
+            {
+              "year": 2026,
+              "month": "AUGUST",
+              "monthly_searches": 6270
+            },
+            {
+              "year": 2026,
+              "month": "SEPTEMBER",
+              "monthly_searches": 6600
+            }
+          ]
+        },
+        {
+          "keyword": "employee scheduling app for restaurants",
+          "avg_monthly_searches": 880,
+          "competition": "HIGH",
+          "low_top_of_page_bid": 3.9,
+          "high_top_of_page_bid": 12.1,
+          "monthly_search_volumes": [
+            {
+              "year": 2025,
+              "month": "OCTOBER",
+              "monthly_searches": 840
+            },
+            {
+              "year": 2025,
+              "month": "NOVEMBER",
+              "monthly_searches": 750
+            },
+            {
+              "year": 2025,
+              "month": "DECEMBER",
+              "monthly_searches": 660
+            },
+            {
+              "year": 2026,
+              "month": "JANUARY",
+              "monthly_searches": 1100
+            },
+            {
+              "year": 2026,
+              "month": "FEBRUARY",
+              "monthly_searches": 900
+            },
+            {
+              "year": 2026,
+              "month": "MARCH",
+              "monthly_searches": 950
+            },
+            {
+              "year": 2026,
+              "month": "APRIL",
+              "monthly_searches": 880
+            },
+            {
+              "year": 2026,
+              "month": "MAY",
+              "monthly_searches": 920
+            },
+            {
+              "year": 2026,
+              "month": "JUNE",
+              "monthly_searches": 840
+            },
+            {
+              "year": 2026,
+              "month": "JULY",
+              "monthly_searches": 790
+            },
+            {
+              "year": 2026,
+              "month": "AUGUST",
+              "monthly_searches": 840
+            },
+            {
+              "year": 2026,
+              "month": "SEPTEMBER",
+              "monthly_searches": 880
+            }
+          ]
+        },
+        {
+          "keyword": "shift scheduling app",
+          "avg_monthly_searches": 4400,
+          "competition": "MEDIUM",
+          "low_top_of_page_bid": 2.2,
+          "high_top_of_page_bid": 7.6,
+          "monthly_search_volumes": [
+            {
+              "year": 2025,
+              "month": "OCTOBER",
+              "monthly_searches": 4180
+            },
+            {
+              "year": 2025,
+              "month": "NOVEMBER",
+              "monthly_searches": 3740
+            },
+            {
+              "year": 2025,
+              "month": "DECEMBER",
+              "monthly_searches": 3300
+            },
+            {
+              "year": 2026,
+              "month": "JANUARY",
+              "monthly_searches": 5200
+            },
+            {
+              "year": 2026,
+              "month": "FEBRUARY",
+              "monthly_searches": 14800
+            },
+            {
+              "year": 2026,
+              "month": "MARCH",
+              "monthly_searches": 4700
+            },
+            {
+              "year": 2026,
+              "month": "APRIL",
+              "monthly_searches": 4400
+            },
+            {
+              "year": 2026,
+              "month": "MAY",
+              "monthly_searches": 4620
+            },
+            {
+              "year": 2026,
+              "month": "JUNE",
+              "monthly_searches": 4180
+            },
+            {
+              "year": 2026,
+              "month": "JULY",
+              "monthly_searches": 3960
+            },
+            {
+              "year": 2026,
+              "month": "AUGUST",
+              "monthly_searches": 4180
+            },
+            {
+              "year": 2026,
+              "month": "SEPTEMBER",
+              "monthly_searches": 4400
+            }
+          ]
+        },
+        {
+          "keyword": "cafe staff rota app",
+          "avg_monthly_searches": 210,
+          "competition": "MEDIUM",
+          "low_top_of_page_bid": 1.8,
+          "high_top_of_page_bid": 6.2,
+          "monthly_search_volumes": [
+            {
+              "year": 2025,
+              "month": "OCTOBER",
+              "monthly_searches": 200
+            },
+            {
+              "year": 2025,
+              "month": "NOVEMBER",
+              "monthly_searches": 180
+            },
+            {
+              "year": 2025,
+              "month": "DECEMBER",
+              "monthly_searches": 160
+            },
+            {
+              "year": 2026,
+              "month": "JANUARY",
+              "monthly_searches": 260
+            },
+            {
+              "year": 2026,
+              "month": "FEBRUARY",
+              "monthly_searches": 220
+            },
+            {
+              "year": 2026,
+              "month": "MARCH",
+              "monthly_searches": 230
+            },
+            {
+              "year": 2026,
+              "month": "APRIL",
+              "monthly_searches": 210
+            },
+            {
+              "year": 2026,
+              "month": "MAY",
+              "monthly_searches": 220
+            },
+            {
+              "year": 2026,
+              "month": "JUNE",
+              "monthly_searches": 200
+            },
+            {
+              "year": 2026,
+              "month": "JULY",
+              "monthly_searches": 190
+            },
+            {
+              "year": 2026,
+              "month": "AUGUST",
+              "monthly_searches": 200
+            },
+            {
+              "year": 2026,
+              "month": "SEPTEMBER",
+              "monthly_searches": 210
+            }
+          ]
+        },
+        {
+          "keyword": "restaurant time clock app",
+          "avg_monthly_searches": 720,
+          "competition": "HIGH",
+          "low_top_of_page_bid": 2.9,
+          "high_top_of_page_bid": 9.4,
+          "monthly_search_volumes": [
+            {
+              "year": 2025,
+              "month": "OCTOBER",
+              "monthly_searches": 680
+            },
+            {
+              "year": 2025,
+              "month": "NOVEMBER",
+              "monthly_searches": 610
+            },
+            {
+              "year": 2025,
+              "month": "DECEMBER",
+              "monthly_searches": 540
+            },
+            {
+              "year": 2026,
+              "month": "JANUARY",
+              "monthly_searches": 880
+            },
+            {
+              "year": 2026,
+              "month": "FEBRUARY",
+              "monthly_searches": 740
+            },
+            {
+              "year": 2026,
+              "month": "MARCH",
+              "monthly_searches": 760
+            },
+            {
+              "year": 2026,
+              "month": "APRIL",
+              "monthly_searches": 720
+            },
+            {
+              "year": 2026,
+              "month": "MAY",
+              "monthly_searches": 760
+            },
+            {
+              "year": 2026,
+              "month": "JUNE",
+              "monthly_searches": 680
+            },
+            {
+              "year": 2026,
+              "month": "JULY",
+              "monthly_searches": 650
+            },
+            {
+              "year": 2026,
+              "month": "AUGUST",
+              "monthly_searches": 680
+            },
+            {
+              "year": 2026,
+              "month": "SEPTEMBER",
+              "monthly_searches": 720
+            }
+          ]
+        },
+        {
+          "keyword": "free schedule maker",
+          "avg_monthly_searches": 9900,
+          "competition": "LOW",
+          "low_top_of_page_bid": 0.6,
+          "high_top_of_page_bid": 2.4,
+          "monthly_search_volumes": [
+            {
+              "year": 2025,
+              "month": "OCTOBER",
+              "monthly_searches": 9400
+            },
+            {
+              "year": 2025,
+              "month": "NOVEMBER",
+              "monthly_searches": 8420
+            },
+            {
+              "year": 2025,
+              "month": "DECEMBER",
+              "monthly_searches": 7420
+            },
+            {
+              "year": 2026,
+              "month": "JANUARY",
+              "monthly_searches": 12100
+            },
+            {
+              "year": 2026,
+              "month": "FEBRUARY",
+              "monthly_searches": 10200
+            },
+            {
+              "year": 2026,
+              "month": "MARCH",
+              "monthly_searches": 10500
+            },
+            {
+              "year": 2026,
+              "month": "APRIL",
+              "monthly_searches": 9900
+            },
+            {
+              "year": 2026,
+              "month": "MAY",
+              "monthly_searches": 10400
+            },
+            {
+              "year": 2026,
+              "month": "JUNE",
+              "monthly_searches": 9400
+            },
+            {
+              "year": 2026,
+              "month": "JULY",
+              "monthly_searches": 8910
+            },
+            {
+              "year": 2026,
+              "month": "AUGUST",
+              "monthly_searches": 9400
+            },
+            {
+              "year": 2026,
+              "month": "SEPTEMBER",
+              "monthly_searches": 9900
+            }
+          ]
+        }
+      ]
+    },
+    "facebook_ads_estimate_audience_size": {
+      "targeting": "US, 25 to 64, job titles and interests: restaurant owner, restaurant manager, general manager (food and beverage), cafe owner",
+      "users_lower_bound": 1480000,
+      "users_upper_bound": 1740000,
+      "estimate_ready": true
+    },
+    "facebook_ads_get_minimum_budgets": {
+      "currency": "USD",
+      "min_daily_budget_imp": 100,
+      "min_daily_budget_video_views": 100,
+      "min_daily_budget_high_freq": 500,
+      "min_daily_budget_low_freq": 4000
+    },
+    "facebook_ads_get_insights_adaccount": {
+      "date_preset": "last_90d",
+      "data": [],
+      "reading": "no rows: the account has never spent"
+    },
+    "linkedin_ads_get_budget_pricing": {
+      "targeting": "US, job titles: Restaurant Owner, General Manager, Restaurant Manager; company size 1 to 200",
+      "bid_type": "CPC",
+      "campaign_type": "SPONSORED_UPDATES",
+      "match_type": "EXACT",
+      "bidLimits": {
+        "min": {
+          "currencyCode": "USD",
+          "amount": "2.00"
+        },
+        "max": {
+          "currencyCode": "USD",
+          "amount": "100.00"
+        }
+      },
+      "suggestedBid": {
+        "min": {
+          "currencyCode": "USD",
+          "amount": "7.20"
+        },
+        "default": {
+          "currencyCode": "USD",
+          "amount": "9.60"
+        },
+        "max": {
+          "currencyCode": "USD",
+          "amount": "14.40"
+        }
+      },
+      "dailyBudgetLimits": {
+        "min": {
+          "currencyCode": "USD",
+          "amount": "10.00"
+        },
+        "default": {
+          "currencyCode": "USD",
+          "amount": "250.00"
+        },
+        "max": {
+          "currencyCode": "USD",
+          "amount": "100000.00"
+        }
+      }
+    },
+    "tiktok_ads_tool_bid_recommend": {
+      "objective_type": "WEB_CONVERSIONS",
+      "external_action": "ON_WEB_REGISTER",
+      "recommended_bid": 38.0,
+      "currency": "USD"
+    }
+  },
+  "platform_rules_used": {
+    "meta_learning_events_per_7_days": 50,
+    "tiktok_learning_conversions_per_7_days": 50,
+    "google_search_thin_data_conversions_per_30_days": 30
+  }
+}

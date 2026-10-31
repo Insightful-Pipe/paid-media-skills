@@ -1,0 +1,2317 @@
+{
+  "request": "Hey Claude, I just added the \"tiktok-competitor-ads-research\" skill. Look up Northpeak Apparel, Kinetiq Wear and Loopfit Studio in the TikTok ad library for the UK, Ireland, Germany, France and the Netherlands, pull the TikTok top ads for activewear in the US, and compare them with my own TikTok ads.",
+  "business": "Brightlane Activewear (brightlane.example), an invented online activewear store selling leggings, sets and joggers in the UK, Ireland, Germany, France, the Netherlands and the US",
+  "competitors": [
+    {
+      "brand": "Northpeak Apparel",
+      "legal_name": "Northpeak Apparel Ltd",
+      "domain": "northpeak.example",
+      "tiktok_handle": "northpeakapparel"
+    },
+    {
+      "brand": "Kinetiq Wear",
+      "legal_name": "Kinetiq Wear GmbH",
+      "domain": "kinetiqwear.example",
+      "tiktok_handle": "kinetiqwear"
+    },
+    {
+      "brand": "Loopfit Studio",
+      "legal_name": null,
+      "domain": "loopfit.example",
+      "tiktok_handle": "loopfitstudio"
+    }
+  ],
+  "own_brand": {
+    "brand": "Brightlane Activewear",
+    "legal_name": "Brightlane Activewear Ltd",
+    "domain": "brightlane.example",
+    "tiktok_handle": "brightlaneactive"
+  },
+  "run_date": "2026-10-28",
+  "window": {
+    "start_date": "2026-07-30",
+    "end_date": "2026-10-27",
+    "why": "default: the last 90 days"
+  },
+  "library_countries": "GB,IE,DE,FR,NL",
+  "top_ads_filters": {
+    "countries": "US",
+    "period": 30,
+    "industries": "apparel_accessories",
+    "objectives": "conversions",
+    "languages": "en",
+    "sort": "ctr"
+  },
+  "feature_words": [
+    "squat-proof",
+    "pocket",
+    "pockets",
+    "high-waist",
+    "seamless"
+  ],
+  "tiktok_ads_account": {
+    "advertiser_id": "7000000000000000042",
+    "name": "Brightlane Activewear (TikTok ad account)",
+    "currency": "USD"
+  },
+  "data_pulled": {
+    "tiktok_search_ads": {
+      "Northpeak Apparel": {
+        "query": "Northpeak",
+        "countries": "GB,IE,DE,FR,NL",
+        "status": "all",
+        "start_date": "2026-07-30",
+        "end_date": "2026-10-27",
+        "pages": [
+          {
+            "offset": 0,
+            "total": 31,
+            "hasMore": true,
+            "nextOffset": 12,
+            "ads": [
+              {
+                "id": "1880000000000101",
+                "name": "Northpeak Apparel Ltd",
+                "first_shown_date": 1782950400000,
+                "last_shown_date": 1793059200000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "500K-600K",
+                "spent": "",
+                "impression": 0,
+                "title": "I did 50 squats in these and nobody could tell. The Seamless Sculpt legging is squat-proof, promise. #northpeak #gymwear"
+              },
+              {
+                "id": "1880000000000110",
+                "name": "Northpeak Apparel Ltd",
+                "first_shown_date": 1792281600000,
+                "last_shown_date": 1793059200000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "I tested 5 leggings for squat-proofing so you don't have to. #gymtok"
+              },
+              {
+                "id": "1880000000000157",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1786320000000,
+                "last_shown_date": 1786665600000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000166",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1786320000000,
+                "last_shown_date": 1786665600000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000106",
+                "name": "Northpeak Apparel Ltd",
+                "first_shown_date": 1784073600000,
+                "last_shown_date": 1788048000000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "10K-100K",
+                "spent": "",
+                "impression": 0,
+                "title": "Summer drop is here. Shop the new colours. #northpeak"
+              },
+              {
+                "id": "1880000000000153",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1786320000000,
+                "last_shown_date": 1786665600000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000162",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1786320000000,
+                "last_shown_date": 1786665600000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000102",
+                "name": "Northpeak Apparel Ltd",
+                "first_shown_date": 1785542400000,
+                "last_shown_date": 1792972800000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "200K-300K",
+                "spent": "",
+                "impression": 0,
+                "title": "Rated 4.8 by 12,000+ customers. Find out why our high-waist leggings keep selling out. #leggings"
+              },
+              {
+                "id": "1880000000000111",
+                "name": "Northpeak Apparel Ltd",
+                "first_shown_date": 1792627200000,
+                "last_shown_date": 1793059200000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "New: the Trail Pocket jogger. #newin"
+              },
+              {
+                "id": "1880000000000158",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1786320000000,
+                "last_shown_date": 1786665600000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000167",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1786320000000,
+                "last_shown_date": 1786665600000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000107",
+                "name": "Northpeak Apparel Ltd",
+                "first_shown_date": 1790553600000,
+                "last_shown_date": 1793059200000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "10K-100K",
+                "spent": "",
+                "impression": 0,
+                "title": "Is your sports bra really doing its job? Take the 30-second fit quiz. #sportsbra"
+              }
+            ]
+          },
+          {
+            "offset": 12,
+            "total": 31,
+            "hasMore": true,
+            "nextOffset": 24,
+            "ads": [
+              {
+                "id": "1880000000000154",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1786320000000,
+                "last_shown_date": 1786665600000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000163",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1786320000000,
+                "last_shown_date": 1786665600000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000103",
+                "name": "Northpeak Apparel Ltd",
+                "first_shown_date": 1787184000000,
+                "last_shown_date": 1793059200000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "100K-200K",
+                "spent": "",
+                "impression": 0,
+                "title": "POV: you finally found leggings with a phone pocket that holds. #fitcheck #northpeak"
+              },
+              {
+                "id": "1880000000000150",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1786320000000,
+                "last_shown_date": 1786665600000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000159",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1786320000000,
+                "last_shown_date": 1786665600000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000168",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1786320000000,
+                "last_shown_date": 1786665600000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000108",
+                "name": "Northpeak Apparel Ltd",
+                "first_shown_date": 1791590400000,
+                "last_shown_date": 1793059200000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "10K-100K",
+                "spent": "",
+                "impression": 0,
+                "title": "Last chance: the Seamless Sculpt set in plum ends at midnight. #lastchance"
+              },
+              {
+                "id": "1880000000000155",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1786320000000,
+                "last_shown_date": 1786665600000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000164",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1786320000000,
+                "last_shown_date": 1786665600000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000104",
+                "name": "Northpeak Apparel Ltd",
+                "first_shown_date": 1788566400000,
+                "last_shown_date": 1792886400000,
+                "videos": [],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "100K-200K",
+                "spent": "",
+                "impression": 0,
+                "title": "Autumn sale: 20% off all sets with code PEAK20 until Sunday. #sale"
+              },
+              {
+                "id": "1880000000000151",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1786320000000,
+                "last_shown_date": 1786665600000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000160",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1786320000000,
+                "last_shown_date": 1786665600000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              }
+            ]
+          },
+          {
+            "offset": 24,
+            "total": 31,
+            "hasMore": false,
+            "nextOffset": null,
+            "ads": [
+              {
+                "id": "1880000000000169",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1786320000000,
+                "last_shown_date": 1786665600000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000109",
+                "name": "Northpeak Apparel Ltd",
+                "first_shown_date": 1785888000000,
+                "last_shown_date": 1789862400000,
+                "videos": [],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "10K-100K",
+                "spent": "",
+                "impression": 0,
+                "title": "Free returns on every order, so try the size you think fits. #northpeak"
+              },
+              {
+                "id": "1880000000000156",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1786320000000,
+                "last_shown_date": 1786665600000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000165",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1786320000000,
+                "last_shown_date": 1786665600000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000105",
+                "name": "Northpeak Apparel Ltd",
+                "first_shown_date": 1789171200000,
+                "last_shown_date": 1793059200000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "200K-300K",
+                "spent": "",
+                "impression": 0,
+                "title": "My go-to set for early runs. Breathable, seamless and it has pockets. #runningoutfit"
+              },
+              {
+                "id": "1880000000000152",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1786320000000,
+                "last_shown_date": 1786665600000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000161",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1786320000000,
+                "last_shown_date": 1786665600000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              }
+            ]
+          }
+        ]
+      },
+      "Kinetiq Wear": {
+        "query": "Kinetiq",
+        "countries": "GB,IE,DE,FR,NL",
+        "status": "all",
+        "start_date": "2026-07-30",
+        "end_date": "2026-10-27",
+        "pages": [
+          {
+            "offset": 0,
+            "total": 19,
+            "hasMore": true,
+            "nextOffset": 12,
+            "ads": [
+              {
+                "id": "1880000000000201",
+                "name": "Kinetiq Wear GmbH",
+                "first_shown_date": 1781913600000,
+                "last_shown_date": 1793059200000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "200K-300K",
+                "spent": "",
+                "impression": 0,
+                "title": "Ich trage sie jeden Tag ins Studio und sie rutschen nie. Unsere Bestseller-Leggings jetzt in 6 Farben. #kinetiq"
+              },
+              {
+                "id": "1880000000000205",
+                "name": "Kinetiq Wear GmbH",
+                "first_shown_date": 1789862400000,
+                "last_shown_date": 1793059200000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "10K-100K",
+                "spent": "",
+                "impression": 0,
+                "title": "Über 40k Bewertungen. Probier es selbst. #leggings"
+              },
+              {
+                "id": "1880000000000209",
+                "name": "Kinetiq Wear GmbH",
+                "first_shown_date": 1792454400000,
+                "last_shown_date": 1793059200000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "Herbst-Drop. Jetzt entdecken. #newin"
+              },
+              {
+                "id": "1880000000000253",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1788307200000,
+                "last_shown_date": 1788566400000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000257",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1788307200000,
+                "last_shown_date": 1788566400000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000202",
+                "name": "Kinetiq Wear GmbH",
+                "first_shown_date": 1786752000000,
+                "last_shown_date": 1792972800000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "100K-200K",
+                "spent": "",
+                "impression": 0,
+                "title": "20% Rabatt auf alle Sets, nur heute! #angebot"
+              },
+              {
+                "id": "1880000000000206",
+                "name": "Kinetiq Wear GmbH",
+                "first_shown_date": 1791158400000,
+                "last_shown_date": 1792022400000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "Why do your leggings slide down? #fitnesstips"
+              },
+              {
+                "id": "1880000000000250",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1788307200000,
+                "last_shown_date": 1788566400000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000254",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1788307200000,
+                "last_shown_date": 1788566400000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000258",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1788307200000,
+                "last_shown_date": 1788566400000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000203",
+                "name": "Kinetiq Wear GmbH",
+                "first_shown_date": 1788220800000,
+                "last_shown_date": 1793059200000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "100K-200K",
+                "spent": "",
+                "impression": 0,
+                "title": "My honest review after 3 months: still squat-proof, still no pilling. #gymwear"
+              },
+              {
+                "id": "1880000000000207",
+                "name": "Kinetiq Wear GmbH",
+                "first_shown_date": 1787616000000,
+                "last_shown_date": 1793059200000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "10K-100K",
+                "spent": "",
+                "impression": 0,
+                "title": "POV: ich habe endlich das perfekte Gym-Set gefunden. #outfit"
+              }
+            ]
+          },
+          {
+            "offset": 12,
+            "total": 19,
+            "hasMore": false,
+            "nextOffset": null,
+            "ads": [
+              {
+                "id": "1880000000000251",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1788307200000,
+                "last_shown_date": 1788566400000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000255",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1788307200000,
+                "last_shown_date": 1788566400000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000259",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1788307200000,
+                "last_shown_date": 1788566400000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000204",
+                "name": "Kinetiq Wear GmbH",
+                "first_shown_date": 1783641600000,
+                "last_shown_date": 1788220800000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "10K-100K",
+                "spent": "",
+                "impression": 0,
+                "title": "Neue Kollektion: nahtlos, atmungsaktiv, mit Taschen. #kinetiq"
+              },
+              {
+                "id": "1880000000000208",
+                "name": "Kinetiq Wear GmbH",
+                "first_shown_date": 1791763200000,
+                "last_shown_date": 1793059200000,
+                "videos": [],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "Geld-zurück-Garantie: 30 Tage testen. #kinetiq"
+              },
+              {
+                "id": "1880000000000252",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1788307200000,
+                "last_shown_date": 1788566400000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000256",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1788307200000,
+                "last_shown_date": 1788566400000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              }
+            ]
+          }
+        ]
+      },
+      "Loopfit Studio": {
+        "query": "Loopfit",
+        "countries": "GB,IE,DE,FR,NL",
+        "status": "all",
+        "start_date": "2026-07-30",
+        "end_date": "2026-10-27",
+        "pages": [
+          {
+            "offset": 0,
+            "total": 0,
+            "hasMore": false,
+            "nextOffset": null,
+            "ads": []
+          }
+        ],
+        "control_after_empty": {
+          "query": "(the fixed control search in SKILL.md)",
+          "ads_returned": 12,
+          "hasMore": true
+        },
+        "retry": {
+          "offset": 0,
+          "total": 0,
+          "hasMore": false,
+          "ads": []
+        }
+      },
+      "Brightlane Activewear": {
+        "query": "Brightlane",
+        "countries": "GB,IE,DE,FR,NL",
+        "status": "all",
+        "start_date": "2026-07-30",
+        "end_date": "2026-10-27",
+        "pages": [
+          {
+            "offset": 0,
+            "total": 9,
+            "hasMore": false,
+            "nextOffset": null,
+            "ads": [
+              {
+                "id": "1880000000000301",
+                "name": "Brightlane Activewear Ltd",
+                "first_shown_date": 1788220800000,
+                "last_shown_date": 1793059200000,
+                "videos": [],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "10K-100K",
+                "spent": "",
+                "impression": 0,
+                "title": "Meet the Everyday legging. Soft, high-waist and made for long days. #brightlane"
+              },
+              {
+                "id": "1880000000000302",
+                "name": "Brightlane Activewear Ltd",
+                "first_shown_date": 1789430400000,
+                "last_shown_date": 1793059200000,
+                "videos": [],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "10K-100K",
+                "spent": "",
+                "impression": 0,
+                "title": "New colours just landed. Shop the Everyday set. #activewear"
+              },
+              {
+                "id": "1880000000000303",
+                "name": "Brightlane Activewear Ltd",
+                "first_shown_date": 1790812800000,
+                "last_shown_date": 1793059200000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "Leggings with deep pockets? Yes. #brightlane"
+              },
+              {
+                "id": "1880000000000304",
+                "name": "Brightlane Activewear Ltd",
+                "first_shown_date": 1785888000000,
+                "last_shown_date": 1788998400000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "The Everyday legging, now in navy. #newin"
+              },
+              {
+                "id": "1880000000000305",
+                "name": "Brightlane Activewear Ltd",
+                "first_shown_date": 1791763200000,
+                "last_shown_date": 1793059200000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "Built for squats, walks and everything between. #brightlane"
+              },
+              {
+                "id": "1880000000000350",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1789862400000,
+                "last_shown_date": 1790035200000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000351",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1789862400000,
+                "last_shown_date": 1790035200000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000352",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1789862400000,
+                "last_shown_date": 1790035200000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              },
+              {
+                "id": "1880000000000353",
+                "name": "another account (name withheld)",
+                "first_shown_date": 1789862400000,
+                "last_shown_date": 1790035200000,
+                "videos": [
+                  {
+                    "video_url": "(video link)"
+                  }
+                ],
+                "image_urls": [
+                  "(cover image)"
+                ],
+                "estimated_audience": "1K-10K",
+                "spent": "",
+                "impression": 0,
+                "title": "(caption of another account's post)"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "tiktok_ad_details": {
+      "1880000000000101": {
+        "ad": {
+          "id": "1880000000000101",
+          "name": "Northpeak Apparel Ltd",
+          "first_shown_date": 1782950400000,
+          "last_shown_date": 1793059200000,
+          "estimated_audience": "500K-600K",
+          "title": "I did 50 squats in these and nobody could tell. The Seamless Sculpt legging is squat-proof, promise. #northpeak #gymwear",
+          "external_url": "https://northpeak.example/collections/seamless-sculpt?utm_source=tiktok",
+          "call_to_action": "Shop now",
+          "advertising_objective": "Conversions",
+          "subject": "E-Commerce (Non-app)"
+        },
+        "advertiser": {
+          "name": "Northpeak Apparel Ltd",
+          "tt_user": {
+            "username": "northpeakapparel"
+          }
+        },
+        "targeting": {
+          "countries": [
+            "GB",
+            "IE"
+          ],
+          "age": [
+            {
+              "region": "GB",
+              "13-17": false,
+              "18-24": true,
+              "25-34": true,
+              "35-44": true,
+              "45-54": false,
+              "55+": false
+            },
+            {
+              "region": "IE",
+              "13-17": false,
+              "18-24": true,
+              "25-34": true,
+              "35-44": true,
+              "45-54": false,
+              "55+": false
+            }
+          ],
+          "gender": [
+            {
+              "region": "GB",
+              "female": true,
+              "male": false,
+              "unknown": false
+            },
+            {
+              "region": "IE",
+              "female": true,
+              "male": false,
+              "unknown": false
+            }
+          ],
+          "audience": "No",
+          "interest": "Yes",
+          "location": {
+            "data": [
+              {
+                "region": "GB",
+                "impressions": "512K"
+              },
+              {
+                "region": "IE",
+                "impressions": "61K"
+              }
+            ]
+          }
+        }
+      },
+      "1880000000000102": {
+        "ad": {
+          "id": "1880000000000102",
+          "name": "Northpeak Apparel Ltd",
+          "first_shown_date": 1785542400000,
+          "last_shown_date": 1792972800000,
+          "estimated_audience": "200K-300K",
+          "title": "Rated 4.8 by 12,000+ customers. Find out why our high-waist leggings keep selling out. #leggings",
+          "external_url": "https://northpeak.example/collections/leggings?utm_source=tiktok",
+          "call_to_action": "Shop now",
+          "advertising_objective": "Conversions",
+          "subject": "E-Commerce (Non-app)"
+        },
+        "advertiser": {
+          "name": "Northpeak Apparel Ltd",
+          "tt_user": {
+            "username": "northpeakapparel"
+          }
+        },
+        "targeting": {
+          "countries": [
+            "GB",
+            "IE",
+            "NL"
+          ],
+          "age": [
+            {
+              "region": "GB",
+              "13-17": false,
+              "18-24": true,
+              "25-34": true,
+              "35-44": true,
+              "45-54": false,
+              "55+": false
+            },
+            {
+              "region": "IE",
+              "13-17": false,
+              "18-24": true,
+              "25-34": true,
+              "35-44": true,
+              "45-54": false,
+              "55+": false
+            },
+            {
+              "region": "NL",
+              "13-17": false,
+              "18-24": true,
+              "25-34": true,
+              "35-44": true,
+              "45-54": false,
+              "55+": false
+            }
+          ],
+          "gender": [
+            {
+              "region": "GB",
+              "female": true,
+              "male": false,
+              "unknown": false
+            },
+            {
+              "region": "IE",
+              "female": true,
+              "male": false,
+              "unknown": false
+            },
+            {
+              "region": "NL",
+              "female": true,
+              "male": false,
+              "unknown": false
+            }
+          ],
+          "audience": "Yes",
+          "interest": "Yes",
+          "location": {
+            "data": [
+              {
+                "region": "GB",
+                "impressions": "201K"
+              },
+              {
+                "region": "IE",
+                "impressions": "28K"
+              },
+              {
+                "region": "NL",
+                "impressions": "19K"
+              }
+            ]
+          }
+        }
+      },
+      "1880000000000103": {
+        "ad": {
+          "id": "1880000000000103",
+          "name": "Northpeak Apparel Ltd",
+          "first_shown_date": 1787184000000,
+          "last_shown_date": 1793059200000,
+          "estimated_audience": "100K-200K",
+          "title": "POV: you finally found leggings with a phone pocket that holds. #fitcheck #northpeak",
+          "external_url": "https://northpeak.example/collections/seamless-sculpt",
+          "call_to_action": "Shop now",
+          "advertising_objective": "Conversions",
+          "subject": "E-Commerce (Non-app)"
+        },
+        "advertiser": {
+          "name": "Northpeak Apparel Ltd",
+          "tt_user": {
+            "username": "northpeakapparel"
+          }
+        },
+        "targeting": {
+          "countries": [
+            "GB"
+          ],
+          "age": [
+            {
+              "region": "GB",
+              "13-17": false,
+              "18-24": true,
+              "25-34": true,
+              "35-44": false,
+              "45-54": false,
+              "55+": false
+            }
+          ],
+          "gender": [
+            {
+              "region": "GB",
+              "female": true,
+              "male": false,
+              "unknown": false
+            }
+          ],
+          "audience": "No",
+          "interest": "Yes",
+          "location": {
+            "data": [
+              {
+                "region": "GB",
+                "impressions": "168K"
+              }
+            ]
+          }
+        }
+      },
+      "1880000000000104": {
+        "ad": {
+          "id": "1880000000000104",
+          "name": "Northpeak Apparel Ltd",
+          "first_shown_date": 1788566400000,
+          "last_shown_date": 1792886400000,
+          "estimated_audience": "100K-200K",
+          "title": "Autumn sale: 20% off all sets with code PEAK20 until Sunday. #sale",
+          "external_url": "https://northpeak.example/collections/sale?code=PEAK20",
+          "call_to_action": "Shop now",
+          "advertising_objective": "Conversions",
+          "subject": "E-Commerce (Non-app)"
+        },
+        "advertiser": {
+          "name": "Northpeak Apparel Ltd",
+          "tt_user": {
+            "username": "northpeakapparel"
+          }
+        },
+        "targeting": {
+          "countries": [
+            "GB",
+            "IE"
+          ],
+          "age": [
+            {
+              "region": "GB",
+              "13-17": false,
+              "18-24": true,
+              "25-34": true,
+              "35-44": true,
+              "45-54": true,
+              "55+": false
+            },
+            {
+              "region": "IE",
+              "13-17": false,
+              "18-24": true,
+              "25-34": true,
+              "35-44": true,
+              "45-54": true,
+              "55+": false
+            }
+          ],
+          "gender": [
+            {
+              "region": "GB",
+              "female": true,
+              "male": false,
+              "unknown": false
+            },
+            {
+              "region": "IE",
+              "female": true,
+              "male": false,
+              "unknown": false
+            }
+          ],
+          "audience": "Yes",
+          "interest": "",
+          "location": {
+            "data": [
+              {
+                "region": "GB",
+                "impressions": "131K"
+              },
+              {
+                "region": "IE",
+                "impressions": "17K"
+              }
+            ]
+          }
+        }
+      },
+      "1880000000000105": {
+        "ad": {
+          "id": "1880000000000105",
+          "name": "Northpeak Apparel Ltd",
+          "first_shown_date": 1789171200000,
+          "last_shown_date": 1793059200000,
+          "estimated_audience": "200K-300K",
+          "title": "My go-to set for early runs. Breathable, seamless and it has pockets. #runningoutfit",
+          "external_url": "https://northpeak.example/collections/seamless-sculpt?utm_campaign=autumn",
+          "call_to_action": "Shop now",
+          "advertising_objective": "Conversions",
+          "subject": "E-Commerce (Non-app)"
+        },
+        "advertiser": {
+          "name": "Northpeak Apparel Ltd",
+          "tt_user": {
+            "username": "northpeakapparel"
+          }
+        },
+        "targeting": {
+          "countries": [
+            "GB",
+            "IE"
+          ],
+          "age": [
+            {
+              "region": "GB",
+              "13-17": false,
+              "18-24": true,
+              "25-34": true,
+              "35-44": true,
+              "45-54": false,
+              "55+": false
+            },
+            {
+              "region": "IE",
+              "13-17": false,
+              "18-24": true,
+              "25-34": true,
+              "35-44": true,
+              "45-54": false,
+              "55+": false
+            }
+          ],
+          "gender": [
+            {
+              "region": "GB",
+              "female": true,
+              "male": true,
+              "unknown": true
+            },
+            {
+              "region": "IE",
+              "female": true,
+              "male": true,
+              "unknown": true
+            }
+          ],
+          "audience": "No",
+          "interest": "",
+          "location": {
+            "data": [
+              {
+                "region": "GB",
+                "impressions": "214K"
+              },
+              {
+                "region": "IE",
+                "impressions": "33K"
+              }
+            ]
+          }
+        }
+      },
+      "1880000000000201": {
+        "ad": {
+          "id": "1880000000000201",
+          "name": "Kinetiq Wear GmbH",
+          "first_shown_date": 1781913600000,
+          "last_shown_date": 1793059200000,
+          "estimated_audience": "200K-300K",
+          "title": "Ich trage sie jeden Tag ins Studio und sie rutschen nie. Unsere Bestseller-Leggings jetzt in 6 Farben. #kinetiq",
+          "external_url": "https://kinetiqwear.example/de/leggings",
+          "call_to_action": "Jetzt shoppen",
+          "advertising_objective": "Conversions",
+          "subject": "E-Commerce (Non-app)"
+        },
+        "advertiser": {
+          "name": "Kinetiq Wear GmbH",
+          "tt_user": {
+            "username": "kinetiqwear"
+          }
+        },
+        "targeting": {
+          "countries": [
+            "DE"
+          ],
+          "age": [
+            {
+              "region": "DE",
+              "13-17": false,
+              "18-24": true,
+              "25-34": true,
+              "35-44": true,
+              "45-54": false,
+              "55+": false
+            }
+          ],
+          "gender": [
+            {
+              "region": "DE",
+              "female": true,
+              "male": false,
+              "unknown": false
+            }
+          ],
+          "audience": "No",
+          "interest": "Yes",
+          "location": {
+            "data": [
+              {
+                "region": "DE",
+                "impressions": "268K"
+              }
+            ]
+          }
+        }
+      },
+      "1880000000000202": {
+        "ad": {
+          "id": "1880000000000202",
+          "name": "Kinetiq Wear GmbH",
+          "first_shown_date": 1786752000000,
+          "last_shown_date": 1792972800000,
+          "estimated_audience": "100K-200K",
+          "title": "20% Rabatt auf alle Sets, nur heute! #angebot",
+          "external_url": "https://kinetiqwear.example/de/sale?ref=tt",
+          "call_to_action": "Jetzt shoppen",
+          "advertising_objective": "Conversions",
+          "subject": "E-Commerce (Non-app)"
+        },
+        "advertiser": {
+          "name": "Kinetiq Wear GmbH",
+          "tt_user": {
+            "username": "kinetiqwear"
+          }
+        },
+        "targeting": {
+          "countries": [
+            "DE"
+          ],
+          "age": [
+            {
+              "region": "DE",
+              "13-17": false,
+              "18-24": true,
+              "25-34": true,
+              "35-44": false,
+              "45-54": false,
+              "55+": false
+            }
+          ],
+          "gender": [
+            {
+              "region": "DE",
+              "female": true,
+              "male": false,
+              "unknown": false
+            }
+          ],
+          "audience": "Yes",
+          "interest": "",
+          "location": {
+            "data": [
+              {
+                "region": "DE",
+                "impressions": "174K"
+              }
+            ]
+          }
+        }
+      },
+      "1880000000000207": {
+        "ad": {
+          "id": "1880000000000207",
+          "name": "Kinetiq Wear GmbH",
+          "first_shown_date": 1787616000000,
+          "last_shown_date": 1793059200000,
+          "estimated_audience": "10K-100K",
+          "title": "POV: ich habe endlich das perfekte Gym-Set gefunden. #outfit",
+          "external_url": "https://kinetiqwear.example/de/sets",
+          "call_to_action": "Jetzt shoppen",
+          "advertising_objective": "Conversions",
+          "subject": "E-Commerce (Non-app)"
+        },
+        "advertiser": {
+          "name": "Kinetiq Wear GmbH",
+          "tt_user": {
+            "username": "kinetiqwear"
+          }
+        },
+        "targeting": {
+          "countries": [
+            "DE"
+          ],
+          "age": [
+            {
+              "region": "DE",
+              "13-17": false,
+              "18-24": true,
+              "25-34": true,
+              "35-44": false,
+              "45-54": false,
+              "55+": false
+            }
+          ],
+          "gender": [
+            {
+              "region": "DE",
+              "female": true,
+              "male": false,
+              "unknown": false
+            }
+          ],
+          "audience": "No",
+          "interest": "Yes",
+          "location": {
+            "data": [
+              {
+                "region": "DE",
+                "impressions": "73K"
+              }
+            ]
+          }
+        }
+      },
+      "1880000000000203": {
+        "ad": {
+          "id": "1880000000000203",
+          "name": "Kinetiq Wear GmbH",
+          "first_shown_date": 1788220800000,
+          "last_shown_date": 1793059200000,
+          "estimated_audience": "100K-200K",
+          "title": "My honest review after 3 months: still squat-proof, still no pilling. #gymwear",
+          "external_url": "https://kinetiqwear.example/en/leggings",
+          "call_to_action": "Shop now",
+          "advertising_objective": "Conversions",
+          "subject": "E-Commerce (Non-app)"
+        },
+        "advertiser": {
+          "name": "Kinetiq Wear GmbH",
+          "tt_user": {
+            "username": "kinetiqwear"
+          }
+        },
+        "targeting": {
+          "countries": [
+            "NL",
+            "DE"
+          ],
+          "age": [
+            {
+              "region": "NL",
+              "13-17": false,
+              "18-24": true,
+              "25-34": true,
+              "35-44": false,
+              "45-54": false,
+              "55+": false
+            },
+            {
+              "region": "DE",
+              "13-17": false,
+              "18-24": true,
+              "25-34": true,
+              "35-44": false,
+              "45-54": false,
+              "55+": false
+            }
+          ],
+          "gender": [
+            {
+              "region": "NL",
+              "female": true,
+              "male": false,
+              "unknown": false
+            },
+            {
+              "region": "DE",
+              "female": true,
+              "male": false,
+              "unknown": false
+            }
+          ],
+          "audience": "No",
+          "interest": "Yes",
+          "location": {
+            "data": [
+              {
+                "region": "NL",
+                "impressions": "96K"
+              },
+              {
+                "region": "DE",
+                "impressions": "41K"
+              }
+            ]
+          }
+        }
+      },
+      "1880000000000205": {
+        "ad": {
+          "id": "1880000000000205",
+          "name": "Kinetiq Wear GmbH",
+          "first_shown_date": 1789862400000,
+          "last_shown_date": 1793059200000,
+          "estimated_audience": "10K-100K",
+          "title": "Über 40k Bewertungen. Probier es selbst. #leggings",
+          "external_url": "https://kinetiqwear.example/de/leggings?src=tt",
+          "call_to_action": "Mehr erfahren",
+          "advertising_objective": "Traffic",
+          "subject": "E-Commerce (Non-app)"
+        },
+        "advertiser": {
+          "name": "Kinetiq Wear GmbH",
+          "tt_user": {
+            "username": "kinetiqwear"
+          }
+        },
+        "targeting": {
+          "countries": [
+            "DE",
+            "FR"
+          ],
+          "age": [
+            {
+              "region": "DE",
+              "13-17": false,
+              "18-24": false,
+              "25-34": true,
+              "35-44": true,
+              "45-54": false,
+              "55+": false
+            },
+            {
+              "region": "FR",
+              "13-17": false,
+              "18-24": false,
+              "25-34": true,
+              "35-44": true,
+              "45-54": false,
+              "55+": false
+            }
+          ],
+          "gender": [
+            {
+              "region": "DE",
+              "female": true,
+              "male": true,
+              "unknown": true
+            },
+            {
+              "region": "FR",
+              "female": true,
+              "male": true,
+              "unknown": true
+            }
+          ],
+          "audience": "No",
+          "interest": "",
+          "location": {
+            "data": [
+              {
+                "region": "DE",
+                "impressions": "52K"
+              },
+              {
+                "region": "FR",
+                "impressions": "21K"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "tiktok_top_ads": {
+      "total": 1240,
+      "ads": [
+        {
+          "id": "TT-01",
+          "ad_title": "I wore these to a 6am class and a lunch date. Same leggings, zero regrets. #ootd",
+          "brand_name": "",
+          "ctr": 0.03,
+          "cost": 1,
+          "like": 48200,
+          "video_info": {
+            "duration": 21.4
+          },
+          "industry_key": "apparel_accessories",
+          "objective_key": "conversions"
+        },
+        {
+          "id": "TT-02",
+          "ad_title": "POV: your gym bag finally has a place for everything. #gymbag",
+          "brand_name": "Packwell",
+          "ctr": 0.05,
+          "cost": 2,
+          "like": 31800,
+          "video_info": {
+            "duration": 17.9
+          },
+          "industry_key": "apparel_accessories",
+          "objective_key": "conversions"
+        },
+        {
+          "id": "TT-03",
+          "ad_title": "Over 10,000+ five-star reviews can't be wrong. #leggings",
+          "brand_name": "",
+          "ctr": 0.06,
+          "cost": 1,
+          "like": 22400,
+          "video_info": {
+            "duration": 24.6
+          },
+          "industry_key": "apparel_accessories",
+          "objective_key": "conversions"
+        },
+        {
+          "id": "TT-04",
+          "ad_title": "My honest try-on of the softest set I own. #tryonhaul",
+          "brand_name": "",
+          "ctr": 0.06,
+          "cost": 0,
+          "like": 19900,
+          "video_info": {
+            "duration": 28.2
+          },
+          "industry_key": "apparel_accessories",
+          "objective_key": "conversions"
+        },
+        {
+          "id": "TT-05",
+          "ad_title": "Why is nobody talking about this sports bra? #fitness",
+          "brand_name": "",
+          "ctr": 0.08,
+          "cost": 1,
+          "like": 17600,
+          "video_info": {
+            "duration": 13.5
+          },
+          "industry_key": "apparel_accessories",
+          "objective_key": "conversions"
+        },
+        {
+          "id": "TT-06",
+          "ad_title": "Sold out twice, back for the last time. #restock",
+          "brand_name": "Arcline",
+          "ctr": 0.09,
+          "cost": 2,
+          "like": 15100,
+          "video_info": {
+            "duration": 19.7
+          },
+          "industry_key": "apparel_accessories",
+          "objective_key": "conversions"
+        },
+        {
+          "id": "TT-07",
+          "ad_title": "I tested the viral pocket leggings so you don't have to. #review",
+          "brand_name": "",
+          "ctr": 0.1,
+          "cost": 1,
+          "like": 14300,
+          "video_info": {
+            "duration": 33.8
+          },
+          "industry_key": "apparel_accessories",
+          "objective_key": "conversions"
+        },
+        {
+          "id": "TT-08",
+          "ad_title": "Black friday early access starts today. #sale",
+          "brand_name": "Vela Studio",
+          "ctr": 0.11,
+          "cost": 2,
+          "like": 12800,
+          "video_info": {
+            "duration": 9.6
+          },
+          "industry_key": "apparel_accessories",
+          "objective_key": "conversions"
+        },
+        {
+          "id": "TT-09",
+          "ad_title": "3 ways to style one set. #styling",
+          "brand_name": "",
+          "ctr": 0.12,
+          "cost": 0,
+          "like": 11200,
+          "video_info": {
+            "duration": 26.1
+          },
+          "industry_key": "apparel_accessories",
+          "objective_key": "conversions"
+        },
+        {
+          "id": "TT-10",
+          "ad_title": "Our bestseller hoodie, now in 8 colours. #hoodie",
+          "brand_name": "Arcline",
+          "ctr": 0.14,
+          "cost": 1,
+          "like": 9800,
+          "video_info": {
+            "duration": 15.0
+          },
+          "industry_key": "apparel_accessories",
+          "objective_key": "conversions"
+        },
+        {
+          "id": "TT-11",
+          "ad_title": "新作レギンスで毎日のトレーニングを快適に #レギンス",
+          "brand_name": "",
+          "ctr": 0.15,
+          "cost": 1,
+          "like": 9100,
+          "video_info": {
+            "duration": 18.3
+          },
+          "industry_key": "apparel_accessories",
+          "objective_key": "conversions"
+        },
+        {
+          "id": "TT-12",
+          "ad_title": "My morning walk outfit, linked below. #walkingoutfit",
+          "brand_name": "",
+          "ctr": 0.17,
+          "cost": 0,
+          "like": 8700,
+          "video_info": {
+            "duration": 22.9
+          },
+          "industry_key": "apparel_accessories",
+          "objective_key": "conversions"
+        },
+        {
+          "id": "TT-13",
+          "ad_title": "Is this the comfiest jogger ever? #joggers",
+          "brand_name": "",
+          "ctr": 0.19,
+          "cost": 1,
+          "like": 7900,
+          "video_info": {
+            "duration": 45.2
+          },
+          "industry_key": "apparel_accessories",
+          "objective_key": "conversions"
+        },
+        {
+          "id": "TT-14",
+          "ad_title": "Rated 4.9 by runners. Try the Stride short. #running",
+          "brand_name": "",
+          "ctr": 0.21,
+          "cost": 1,
+          "like": 6400,
+          "video_info": {
+            "duration": 16.4
+          },
+          "industry_key": "apparel_accessories",
+          "objective_key": "conversions"
+        }
+      ]
+    },
+    "ads_metadata": [
+      {
+        "ad_id": "1810000000000001",
+        "ad_name": "Everyday legging static",
+        "adgroup_id": "1800000000000011",
+        "ad_format": "SINGLE_IMAGE",
+        "ad_text": "Meet the Everyday legging. Soft, high-waist and made for long days.",
+        "landing_page_url": "https://brightlane.example/",
+        "identity_type": "CUSTOMIZED_USER",
+        "tiktok_item_id": null,
+        "operation_status": "ENABLE",
+        "call_to_action": "SHOP_NOW"
+      },
+      {
+        "ad_id": "1810000000000002",
+        "ad_name": "New colours static",
+        "adgroup_id": "1800000000000011",
+        "ad_format": "SINGLE_IMAGE",
+        "ad_text": "New colours just landed. Shop the Everyday set.",
+        "landing_page_url": "https://brightlane.example/?utm_source=tiktok",
+        "identity_type": "CUSTOMIZED_USER",
+        "tiktok_item_id": null,
+        "operation_status": "ENABLE",
+        "call_to_action": "SHOP_NOW"
+      },
+      {
+        "ad_id": "1810000000000003",
+        "ad_name": "Pockets video",
+        "adgroup_id": "1800000000000011",
+        "ad_format": "SINGLE_VIDEO",
+        "ad_text": "Leggings with deep pockets? Yes.",
+        "landing_page_url": "https://brightlane.example/",
+        "identity_type": "BC_AUTH_TT",
+        "tiktok_item_id": "7400000000000000003",
+        "operation_status": "ENABLE",
+        "call_to_action": "SHOP_NOW"
+      },
+      {
+        "ad_id": "1810000000000004",
+        "ad_name": "Squats video",
+        "adgroup_id": "1800000000000012",
+        "ad_format": "SINGLE_VIDEO",
+        "ad_text": "Built for squats, walks and everything between.",
+        "landing_page_url": "https://brightlane.example/",
+        "identity_type": "BC_AUTH_TT",
+        "tiktok_item_id": "7400000000000000004",
+        "operation_status": "ENABLE",
+        "call_to_action": "SHOP_NOW"
+      },
+      {
+        "ad_id": "1810000000000005",
+        "ad_name": "Navy launch video",
+        "adgroup_id": "1800000000000012",
+        "ad_format": "SINGLE_VIDEO",
+        "ad_text": "The Everyday legging, now in navy.",
+        "landing_page_url": "https://brightlane.example/products/everyday-legging",
+        "identity_type": "CUSTOMIZED_USER",
+        "tiktok_item_id": null,
+        "operation_status": "ENABLE"
+      },
+      {
+        "ad_id": "1810000000000006",
+        "ad_name": "Studio to street video",
+        "adgroup_id": "1800000000000012",
+        "ad_format": "SINGLE_VIDEO",
+        "ad_text": "From studio to street in one high-waist set.",
+        "landing_page_url": "https://brightlane.example/",
+        "identity_type": "BC_AUTH_TT",
+        "tiktok_item_id": "7400000000000000006",
+        "operation_status": "ENABLE",
+        "call_to_action": "SHOP_NOW"
+      },
+      {
+        "ad_id": "1810000000000007",
+        "ad_name": "Blog fabric guide",
+        "adgroup_id": "1800000000000013",
+        "ad_format": "SINGLE_VIDEO",
+        "ad_text": "What is the best fabric for hot yoga?",
+        "landing_page_url": "https://brightlane.example/blog/fabric-guide",
+        "identity_type": "CUSTOMIZED_USER",
+        "tiktok_item_id": null,
+        "operation_status": "ENABLE",
+        "call_to_action": "LEARN_MORE"
+      },
+      {
+        "ad_id": "1810000000000008",
+        "ad_name": "Blog care guide",
+        "adgroup_id": "1800000000000013",
+        "ad_format": "SINGLE_IMAGE",
+        "ad_text": "How to wash leggings so they last.",
+        "landing_page_url": "https://brightlane.example/blog/care-guide",
+        "identity_type": "CUSTOMIZED_USER",
+        "tiktok_item_id": null,
+        "operation_status": "ENABLE",
+        "call_to_action": "LEARN_MORE"
+      }
+    ],
+    "adgroups_metadata": [
+      {
+        "adgroup_id": "1800000000000011",
+        "campaign_id": "1800000000000001",
+        "optimization_goal": "CONVERT"
+      },
+      {
+        "adgroup_id": "1800000000000012",
+        "campaign_id": "1800000000000001",
+        "optimization_goal": "CONVERT"
+      },
+      {
+        "adgroup_id": "1800000000000013",
+        "campaign_id": "1800000000000002",
+        "optimization_goal": "CLICK"
+      }
+    ],
+    "integrated_report_basic": {
+      "data_level": "AUCTION_AD",
+      "start_date": "2026-07-30",
+      "end_date": "2026-10-27",
+      "list": [
+        {
+          "dimensions": {
+            "ad_id": "1810000000000001"
+          },
+          "metrics": {
+            "spend": "2140.00",
+            "impressions": "182000",
+            "clicks": "1310",
+            "ctr": "0.72",
+            "video_watched_2s": "0",
+            "video_watched_6s": "0",
+            "result": "41",
+            "cost_per_result": "52.20"
+          }
+        },
+        {
+          "dimensions": {
+            "ad_id": "1810000000000002"
+          },
+          "metrics": {
+            "spend": "1460.00",
+            "impressions": "121000",
+            "clicks": "830",
+            "ctr": "0.69",
+            "video_watched_2s": "0",
+            "video_watched_6s": "0",
+            "result": "22",
+            "cost_per_result": "66.36"
+          }
+        },
+        {
+          "dimensions": {
+            "ad_id": "1810000000000003"
+          },
+          "metrics": {
+            "spend": "980.00",
+            "impressions": "96000",
+            "clicks": "1150",
+            "ctr": "1.20",
+            "video_watched_2s": "31200",
+            "video_watched_6s": "12400",
+            "result": "29",
+            "cost_per_result": "33.79"
+          }
+        },
+        {
+          "dimensions": {
+            "ad_id": "1810000000000004"
+          },
+          "metrics": {
+            "spend": "1270.00",
+            "impressions": "118000",
+            "clicks": "1290",
+            "ctr": "1.09",
+            "video_watched_2s": "36800",
+            "video_watched_6s": "13100",
+            "result": "36",
+            "cost_per_result": "35.28"
+          }
+        },
+        {
+          "dimensions": {
+            "ad_id": "1810000000000005"
+          },
+          "metrics": {
+            "spend": "410.00",
+            "impressions": "39000",
+            "clicks": "350",
+            "ctr": "0.90",
+            "video_watched_2s": "9800",
+            "video_watched_6s": "3500",
+            "result": "8",
+            "cost_per_result": "51.25"
+          }
+        },
+        {
+          "dimensions": {
+            "ad_id": "1810000000000006"
+          },
+          "metrics": {
+            "spend": "35.00",
+            "impressions": "820",
+            "clicks": "6",
+            "ctr": "0.73",
+            "video_watched_2s": "210",
+            "video_watched_6s": "70",
+            "result": "0",
+            "cost_per_result": "0.00"
+          }
+        },
+        {
+          "dimensions": {
+            "ad_id": "1810000000000007"
+          },
+          "metrics": {
+            "spend": "520.00",
+            "impressions": "64000",
+            "clicks": "1020",
+            "ctr": "1.59",
+            "video_watched_2s": "17900",
+            "video_watched_6s": "6100",
+            "result": "980",
+            "cost_per_result": "0.53"
+          }
+        },
+        {
+          "dimensions": {
+            "ad_id": "1810000000000008"
+          },
+          "metrics": {
+            "spend": "300.00",
+            "impressions": "41000",
+            "clicks": "450",
+            "ctr": "1.10",
+            "video_watched_2s": "0",
+            "video_watched_6s": "0",
+            "result": "430",
+            "cost_per_result": "0.70"
+          }
+        }
+      ]
+    }
+  },
+  "calls": "23 read-only calls: 7 search pages, 1 control and 1 retry for the empty search, 10 detail calls, 1 Top Ads call and 3 TikTok Ads calls.",
+  "note": "Example data: an invented online activewear store with invented competitors and accounts, not a real business. Every number in expected_output.json follows from this input. Posts by other accounts that mention a brand are shown without names, as the skill reports them."
+}

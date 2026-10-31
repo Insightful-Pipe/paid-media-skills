@@ -1,0 +1,490 @@
+{
+  "note": "Example data: an invented online booking software company with invented ad accounts, not a real business. Every number in expected_output.json follows from this input.",
+  "request": "Hey Claude, I just added the \"ad-delivery-troubleshooter\" skill. My new campaigns on LinkedIn, TikTok and Microsoft Ads have barely spent since Monday. Find out why and tell me what to fix first.",
+  "business": "Example Booking Software, an online booking and scheduling app for small service businesses (invented example)",
+  "run_date": "2026-10-30",
+  "launch_date": "2026-10-26",
+  "window": "2026-10-26 to 2026-10-29",
+  "currency": "USD",
+  "connections": {
+    "linkedin-ads": "connected",
+    "tiktok-ads": "connected",
+    "microsoft-ads": "connected"
+  },
+  "data_pulled": {
+    "linkedin-ads": {
+      "account": {
+        "get_accounts": {
+          "id": "500000001",
+          "status": "ACTIVE",
+          "servingStatuses": [
+            "RUNNABLE"
+          ],
+          "currency": "USD"
+        }
+      },
+      "get_campaigns": [
+        {
+          "id": "300000101",
+          "name": "LI | Front desk managers | US | Sponsored Content",
+          "status": "ACTIVE",
+          "servingStatuses": [
+            "RUNNABLE"
+          ],
+          "type": "SPONSORED_UPDATES",
+          "costType": "CPM",
+          "objectiveType": "WEBSITE_VISIT",
+          "unitCost": {
+            "amount": "38.00",
+            "currencyCode": "USD"
+          },
+          "dailyBudget": {
+            "amount": "80.00",
+            "currencyCode": "USD"
+          },
+          "totalBudget": null,
+          "runSchedule": {
+            "start": "2026-10-26",
+            "end": null
+          },
+          "audienceExpansionEnabled": false,
+          "targeting_summary": "United States; job function Administrative; industries Wellness and Fitness, Personal Care Services, Medical Practices; company size 1 to 50"
+        }
+      ],
+      "get_creatives": [
+        {
+          "id": "urn:li:sponsoredCreative:400000201",
+          "campaign": "300000101",
+          "intendedStatus": "ACTIVE",
+          "isServing": true,
+          "servingHoldReasons": [],
+          "review": {
+            "status": "APPROVED"
+          }
+        },
+        {
+          "id": "urn:li:sponsoredCreative:400000202",
+          "campaign": "300000101",
+          "intendedStatus": "ACTIVE",
+          "isServing": true,
+          "servingHoldReasons": [],
+          "review": {
+            "status": "APPROVED"
+          }
+        },
+        {
+          "id": "urn:li:sponsoredCreative:400000203",
+          "campaign": "300000101",
+          "intendedStatus": "ACTIVE",
+          "isServing": true,
+          "servingHoldReasons": [],
+          "review": {
+            "status": "APPROVED"
+          }
+        }
+      ],
+      "get_budget_pricing": {
+        "request": {
+          "bid_type": "CPM",
+          "campaign_type": "SPONSORED_UPDATES",
+          "match_type": "EXACT",
+          "targeting_criteria": "same as the campaign"
+        },
+        "response": {
+          "bidLimits": {
+            "min": {
+              "amount": "2.50",
+              "currencyCode": "USD"
+            },
+            "max": {
+              "amount": "250.00",
+              "currencyCode": "USD"
+            }
+          },
+          "suggestedBid": {
+            "min": {
+              "amount": "52.00",
+              "currencyCode": "USD"
+            },
+            "default": {
+              "amount": "71.40",
+              "currencyCode": "USD"
+            },
+            "max": {
+              "amount": "138.90",
+              "currencyCode": "USD"
+            }
+          },
+          "dailyBudgetLimits": {
+            "min": {
+              "amount": "10.00",
+              "currencyCode": "USD"
+            },
+            "default": {
+              "amount": "150.00",
+              "currencyCode": "USD"
+            },
+            "max": {
+              "amount": "100000.00",
+              "currencyCode": "USD"
+            }
+          }
+        }
+      },
+      "get_campaign_analytics": [
+        {
+          "date": "2026-10-26",
+          "impressions": 151,
+          "clicks": 1,
+          "costInUsd": "5.80"
+        },
+        {
+          "date": "2026-10-27",
+          "impressions": 166,
+          "clicks": 2,
+          "costInUsd": "6.40"
+        },
+        {
+          "date": "2026-10-28",
+          "impressions": 160,
+          "clicks": 1,
+          "costInUsd": "6.10"
+        },
+        {
+          "date": "2026-10-29",
+          "impressions": 154,
+          "clicks": 1,
+          "costInUsd": "5.90"
+        }
+      ]
+    },
+    "tiktok-ads": {
+      "advertisers_metadata": {
+        "advertiser_id": "7000000000000000001",
+        "status": "STATUS_ENABLE",
+        "currency": "USD"
+      },
+      "campaigns_metadata": [
+        {
+          "campaign_id": "1800000000000301",
+          "campaign_name": "TT | Salon owners | Web conversions",
+          "objective_type": "WEB_CONVERSIONS",
+          "operation_status": "ENABLE",
+          "secondary_status": "CAMPAIGN_STATUS_ENABLE",
+          "budget_mode": "BUDGET_MODE_DAY",
+          "budget": 100.0
+        }
+      ],
+      "adgroups_metadata": [
+        {
+          "adgroup_id": "1800000000000401",
+          "adgroup_name": "Salon owners 25 to 44 | US",
+          "campaign_id": "1800000000000301",
+          "operation_status": "ENABLE",
+          "secondary_status": "ADGROUP_STATUS_DELIVERY_OK",
+          "budget_mode": "BUDGET_MODE_DAY",
+          "budget": 70.0,
+          "optimization_goal": "CONVERT",
+          "bid_type": "BID_TYPE_CUSTOM",
+          "conversion_bid_price": 6.0,
+          "schedule_start_time": "2026-10-26 00:00:00",
+          "schedule_end_time": "2027-01-31 23:59:59",
+          "dayparting": null
+        },
+        {
+          "adgroup_id": "1800000000000402",
+          "adgroup_name": "Clinic front desk | US",
+          "campaign_id": "1800000000000301",
+          "operation_status": "ENABLE",
+          "secondary_status": "ADGROUP_STATUS_NOT_START",
+          "budget_mode": "BUDGET_MODE_DAY",
+          "budget": 30.0,
+          "optimization_goal": "CONVERT",
+          "bid_type": "BID_TYPE_NO_BID",
+          "conversion_bid_price": null,
+          "schedule_start_time": "2026-11-02 00:00:00",
+          "schedule_end_time": "2027-01-31 23:59:59",
+          "dayparting": null
+        }
+      ],
+      "ads_metadata": [
+        {
+          "ad_id": "1800000000000501",
+          "adgroup_id": "1800000000000401",
+          "ad_name": "Salon | No-show reminders | 15s",
+          "operation_status": "ENABLE",
+          "secondary_status": "AD_STATUS_DELIVERY_OK"
+        },
+        {
+          "ad_id": "1800000000000502",
+          "adgroup_id": "1800000000000401",
+          "ad_name": "Salon | Deposits at booking | 15s",
+          "operation_status": "ENABLE",
+          "secondary_status": "AD_STATUS_DELIVERY_OK"
+        },
+        {
+          "ad_id": "1800000000000503",
+          "adgroup_id": "1800000000000401",
+          "ad_name": "Salon | Before and after calendar | 20s",
+          "operation_status": "ENABLE",
+          "secondary_status": "AD_STATUS_AUDIT_DENY"
+        },
+        {
+          "ad_id": "1800000000000504",
+          "adgroup_id": "1800000000000402",
+          "ad_name": "Clinic | Front desk saves 6 hours | 15s",
+          "operation_status": "ENABLE",
+          "secondary_status": "AD_STATUS_NOT_START"
+        }
+      ],
+      "tool_bid_recommend": {
+        "request": {
+          "objective_type": "WEB_CONVERSIONS",
+          "location_ids": [
+            "6252001"
+          ]
+        },
+        "bid": 14.5
+      },
+      "integrated_report_basic": {
+        "data_level": "AUCTION_ADGROUP",
+        "rows": [
+          {
+            "stat_time_day": "2026-10-26",
+            "adgroup_id": "1800000000000401",
+            "impressions": 2310,
+            "clicks": 21,
+            "spend": 8.2,
+            "conversion": 0
+          },
+          {
+            "stat_time_day": "2026-10-27",
+            "adgroup_id": "1800000000000401",
+            "impressions": 2694,
+            "clicks": 26,
+            "spend": 9.6,
+            "conversion": 0
+          },
+          {
+            "stat_time_day": "2026-10-28",
+            "adgroup_id": "1800000000000401",
+            "impressions": 2850,
+            "clicks": 27,
+            "spend": 10.1,
+            "conversion": 0
+          },
+          {
+            "stat_time_day": "2026-10-29",
+            "adgroup_id": "1800000000000401",
+            "impressions": 2512,
+            "clicks": 23,
+            "spend": 8.9,
+            "conversion": 0
+          },
+          {
+            "stat_time_day": "2026-10-26",
+            "adgroup_id": "1800000000000402",
+            "impressions": 0,
+            "clicks": 0,
+            "spend": 0.0,
+            "conversion": 0
+          },
+          {
+            "stat_time_day": "2026-10-27",
+            "adgroup_id": "1800000000000402",
+            "impressions": 0,
+            "clicks": 0,
+            "spend": 0.0,
+            "conversion": 0
+          },
+          {
+            "stat_time_day": "2026-10-28",
+            "adgroup_id": "1800000000000402",
+            "impressions": 0,
+            "clicks": 0,
+            "spend": 0.0,
+            "conversion": 0
+          },
+          {
+            "stat_time_day": "2026-10-29",
+            "adgroup_id": "1800000000000402",
+            "impressions": 0,
+            "clicks": 0,
+            "spend": 0.0,
+            "conversion": 0
+          }
+        ]
+      }
+    },
+    "microsoft-ads": {
+      "search_accounts": {
+        "Id": "180000001",
+        "Name": "Example Booking Software",
+        "AccountLifeCycleStatus": "Active",
+        "PauseReason": null
+      },
+      "get_campaigns": [
+        {
+          "Id": "700000601",
+          "Name": "MS | Booking software | Search",
+          "Status": "Active",
+          "DailyBudget": 40.0,
+          "BudgetType": "DailyBudgetStandard",
+          "BiddingScheme": {
+            "Type": "ManualCpc"
+          }
+        }
+      ],
+      "get_ad_groups": [
+        {
+          "Id": "700000701",
+          "Name": "Online booking software",
+          "Status": "Active",
+          "StartDate": "2026-10-26",
+          "EndDate": null,
+          "CpcBid": {
+            "Amount": 3.2
+          },
+          "Network": "OwnedAndOperatedAndSyndicatedSearch"
+        },
+        {
+          "Id": "700000702",
+          "Name": "Appointment scheduling app",
+          "Status": "Active",
+          "StartDate": "2026-10-26",
+          "EndDate": null,
+          "CpcBid": {
+            "Amount": 2.8
+          },
+          "Network": "OwnedAndOperatedAndSyndicatedSearch"
+        }
+      ],
+      "get_ads": [
+        {
+          "Id": "700000801",
+          "AdGroupId": "700000701",
+          "Type": "ResponsiveSearch",
+          "Status": "Active",
+          "EditorialStatus": "Disapproved"
+        },
+        {
+          "Id": "700000802",
+          "AdGroupId": "700000701",
+          "Type": "ResponsiveSearch",
+          "Status": "Active",
+          "EditorialStatus": "Disapproved"
+        },
+        {
+          "Id": "700000803",
+          "AdGroupId": "700000701",
+          "Type": "ResponsiveSearch",
+          "Status": "Active",
+          "EditorialStatus": "Disapproved"
+        },
+        {
+          "Id": "700000804",
+          "AdGroupId": "700000702",
+          "Type": "ResponsiveSearch",
+          "Status": "Active",
+          "EditorialStatus": "Active"
+        },
+        {
+          "Id": "700000805",
+          "AdGroupId": "700000702",
+          "Type": "ResponsiveSearch",
+          "Status": "Active",
+          "EditorialStatus": "Active"
+        }
+      ],
+      "get_keywords": [
+        {
+          "AdGroupId": "700000701",
+          "keywords": 9,
+          "Status_Active": 9,
+          "EditorialStatus_Active": 9
+        },
+        {
+          "AdGroupId": "700000702",
+          "keywords": 7,
+          "Status_Active": 7,
+          "EditorialStatus_Active": 7
+        }
+      ],
+      "campaign_performance_report": {
+        "via": "submit_campaign_performance_report then poll_report_status",
+        "rows": [
+          {
+            "TimePeriod": "2026-10-26",
+            "AdGroupId": "700000701",
+            "Impressions": 0,
+            "Clicks": 0,
+            "Spend": 0.0
+          },
+          {
+            "TimePeriod": "2026-10-27",
+            "AdGroupId": "700000701",
+            "Impressions": 0,
+            "Clicks": 0,
+            "Spend": 0.0
+          },
+          {
+            "TimePeriod": "2026-10-28",
+            "AdGroupId": "700000701",
+            "Impressions": 0,
+            "Clicks": 0,
+            "Spend": 0.0
+          },
+          {
+            "TimePeriod": "2026-10-29",
+            "AdGroupId": "700000701",
+            "Impressions": 0,
+            "Clicks": 0,
+            "Spend": 0.0
+          },
+          {
+            "TimePeriod": "2026-10-26",
+            "AdGroupId": "700000702",
+            "Impressions": 212,
+            "Clicks": 5,
+            "Spend": 13.1
+          },
+          {
+            "TimePeriod": "2026-10-27",
+            "AdGroupId": "700000702",
+            "Impressions": 240,
+            "Clicks": 6,
+            "Spend": 14.8
+          },
+          {
+            "TimePeriod": "2026-10-28",
+            "AdGroupId": "700000702",
+            "Impressions": 205,
+            "Clicks": 5,
+            "Spend": 12.6
+          },
+          {
+            "TimePeriod": "2026-10-29",
+            "AdGroupId": "700000702",
+            "Impressions": 251,
+            "Clicks": 6,
+            "Spend": 15.5
+          }
+        ]
+      }
+    }
+  },
+  "user_screenshots": {
+    "linkedin_audience_estimate": {
+      "source": "screenshot of the LinkedIn targeting panel",
+      "forecasted_audience": 38000,
+      "audience_expansion": "off"
+    },
+    "linkedin_billing": {
+      "source": "screenshot of LinkedIn billing center",
+      "status": "card on file, no failed payments"
+    },
+    "tiktok_events_manager": null,
+    "tiktok_rejection_hover_text": null,
+    "microsoft_disapproval_hover_text": null
+  }
+}

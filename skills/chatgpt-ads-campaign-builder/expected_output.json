@@ -1,0 +1,636 @@
+{
+  "header": {
+    "account": "Example Booking Software",
+    "ad_account_id": "adacct_ex1000000001",
+    "currency": "USD",
+    "time_zone": "America/New_York",
+    "brand_site": "https://www.example.com",
+    "date": "2026-10-28",
+    "access_level": "full",
+    "access_note": "full: every write is granted, so no payload is blocked by the connection",
+    "brief": "US and Canada, conversions (sign-ups), $2,000 lifetime cap, $45.00 target CPA, landing page https://example.com/industries/salons",
+    "created": "nothing: every payload below is marked not run"
+  },
+  "preflight": [
+    {
+      "check": "1. Account ready to serve",
+      "result": "pass",
+      "key_number": "status active, review approved",
+      "changes_in_plan": "None. Ads can serve once each passes OpenAI's ad review."
+    },
+    {
+      "check": "2. Landing page",
+      "result": "warn",
+      "key_number": "HTTP 200 after 2 redirects: https://example.com/industries/salons ends at https://www.example.com/industries/salons/, on the account's own domain (example.com)",
+      "changes_in_plan": "Every ad targets the final URL https://www.example.com/industries/salons/, so the UTM tags survive the redirects. Copy cites only this page: title \"Booking software for salons | Example Booking Software\", H1 \"Online booking for salons that keeps every chair busy\" and its 6 H2 sections. The page's plan price is left out of the copy."
+    },
+    {
+      "check": "3. Names and clutter",
+      "result": "fail",
+      "key_number": "5 campaigns, 6 ad groups, 13 ads; 1 name clash; paused test-named: 2 campaigns, 2 ad groups, 3 ads",
+      "changes_in_plan": "A paused campaign is already named \"salon booking | us, ca | conversions | 2026-10\" (0 ad groups), which matches the planned \"Salon booking | US, CA | Conversions | 2026-10\" when case is ignored. The new campaign is named \"Salon booking | US, CA | Conversions | 2026-10 | 2\". The clashing draft and the test objects are listed only and left alone."
+    },
+    {
+      "check": "4. Bid anchor",
+      "result": "pass",
+      "key_number": "2026-09-28 to 2026-10-27: $4,812.40 spend, 80,200 impressions, 2,238 clicks, CTR 2.79%, CPC $2.15, CPM $60.00",
+      "changes_in_plan": "Your $45.00 target cost per sign-up at the account's $2.15 CPC needs about 1 sign-up per 20.9 clicks (4.8% of clicks). The bid stays yours; this is context, not a change."
+    },
+    {
+      "check": "5. Measurement",
+      "result": "pass",
+      "key_number": "2 pixels: \"Example Booking website\" received 412 registration_completed and 168 appointment_scheduled events in 30 days; \"Spring landing pages (unused)\" received none. 4 event settings, 2 active standard ones on the live pixel",
+      "changes_in_plan": "Conversion bidding is on, with \"Account sign-ups\" (registration_completed, 30-day attribution) as the one event setting. No pixel or event setting is created. The unused pixel is left alone."
+    },
+    {
+      "check": "6. Audiences",
+      "result": "warn",
+      "key_number": "2 audiences (2 ready, 2 test-named); none holds your customer list",
+      "changes_in_plan": "A new empty audience is drafted and your 2,400 emails are uploaded to it as hashes."
+    },
+    {
+      "check": "7. Lead forms",
+      "result": "pass",
+      "key_number": "1 form: \"Newsletter sign-up\" (published, 2 fields)",
+      "changes_in_plan": "Lead forms work on this account, but the existing form collects newsletter sign-ups, not demo requests, so a new form is drafted and published."
+    }
+  ],
+  "plan": {
+    "campaign": {
+      "name": "Salon booking | US, CA | Conversions | 2026-10 | 2",
+      "bidding_type": "conversions",
+      "why_conversions": "You asked for sign-ups, and check 5 passed: \"Account sign-ups\" uses the pixel that receives sign-up events. bidding_type can't be changed after creation.",
+      "conversion_event_setting": {
+        "id": "evs_ex01",
+        "name": "Account sign-ups",
+        "event_type": "registration_completed"
+      },
+      "lifetime_cap": "$2,000",
+      "lifetime_spend_limit_micros": 2000000000,
+      "locations": [
+        {
+          "name": "United States",
+          "type": "country",
+          "id": "3100001"
+        },
+        {
+          "name": "Canada",
+          "type": "country",
+          "id": "3100040"
+        }
+      ],
+      "status_on_create": "paused",
+      "payload_step": 2
+    },
+    "ad_groups": [
+      {
+        "name": "Salon online booking",
+        "intent": "Salon owners asking how to let clients book appointments online instead of by phone",
+        "context_hints": [
+          "how can clients book salon appointments online",
+          "add a book now button to my salon website",
+          "let clients choose their stylist when they book",
+          "booking app for a hair salon",
+          "stop taking salon bookings over the phone",
+          "manage several stylists' appointments in one calendar",
+          "move my salon bookings off a paper diary"
+        ],
+        "hint_count": 7,
+        "billing_event_type": "click",
+        "max_bid": "$45.00 target CPA",
+        "max_bid_micros": 45000000,
+        "payload_step": 3,
+        "ads": [
+          {
+            "angle": "The job",
+            "title": "Let salon clients book online 24/7",
+            "title_chars": 34,
+            "body": "Add a Book now button to your website and social profiles. Clients pick a time and stylist.",
+            "body_chars": 91,
+            "target_url": "https://www.example.com/industries/salons/?utm_source=chatgpt&utm_medium=paid&utm_campaign=salon-booking-us-ca-conversions-2026-10-2&utm_content=online-booking-job",
+            "claims_from_page": [
+              "Clients book 24/7, even when you're with a client",
+              "Add a Book now button to your website and social profiles.",
+              "Clients pick a service, a time and their favourite stylist."
+            ],
+            "payload_step": 5
+          },
+          {
+            "angle": "The proof",
+            "title": "Every stylist's day in one calendar",
+            "title_chars": 35,
+            "body": "See all chairs and stylists at a glance. Two-way calendar sync means no double bookings.",
+            "body_chars": 88,
+            "target_url": "https://www.example.com/industries/salons/?utm_source=chatgpt&utm_medium=paid&utm_campaign=salon-booking-us-ca-conversions-2026-10-2&utm_content=online-booking-proof",
+            "claims_from_page": [
+              "See all chairs and stylists at a glance.",
+              "Two-way calendar sync means no double bookings."
+            ],
+            "payload_step": 6
+          },
+          {
+            "angle": "The friction remover",
+            "title": "Switch booking systems in an afternoon",
+            "title_chars": 38,
+            "body": "Import clients and services from a spreadsheet, and we help you move from your old system.",
+            "body_chars": 90,
+            "target_url": "https://www.example.com/industries/salons/?utm_source=chatgpt&utm_medium=paid&utm_campaign=salon-booking-us-ca-conversions-2026-10-2&utm_content=online-booking-friction",
+            "claims_from_page": [
+              "Switch in an afternoon",
+              "Import your clients and services from a spreadsheet.",
+              "We help you move from your old booking system."
+            ],
+            "payload_step": 7
+          }
+        ]
+      },
+      {
+        "name": "Salon no-shows",
+        "intent": "Salon owners losing money to no-shows and late cancellations",
+        "context_hints": [
+          "how to reduce no-shows at my salon",
+          "salon clients keep missing appointments",
+          "take a deposit when salon clients book",
+          "charge a cancellation fee automatically",
+          "send appointment reminder texts to salon clients",
+          "write a deposit policy for my salon"
+        ],
+        "hint_count": 6,
+        "billing_event_type": "click",
+        "max_bid": "$45.00 target CPA",
+        "max_bid_micros": 45000000,
+        "payload_step": 4,
+        "ads": [
+          {
+            "angle": "The job",
+            "title": "Cut no-shows at your salon",
+            "title_chars": 26,
+            "body": "Automatic SMS and email reminders go out 24 hours and 2 hours before each appointment.",
+            "body_chars": 86,
+            "target_url": "https://www.example.com/industries/salons/?utm_source=chatgpt&utm_medium=paid&utm_campaign=salon-booking-us-ca-conversions-2026-10-2&utm_content=no-shows-job",
+            "claims_from_page": [
+              "Automatic SMS and email reminders go out 24 hours and 2 hours before each appointment."
+            ],
+            "payload_step": 8
+          },
+          {
+            "angle": "The proof",
+            "title": "Take a deposit when clients book",
+            "title_chars": 32,
+            "body": "Take a deposit or card on file at booking, and charge your cancellation fee automatically.",
+            "body_chars": 90,
+            "target_url": "https://www.example.com/industries/salons/?utm_source=chatgpt&utm_medium=paid&utm_campaign=salon-booking-us-ca-conversions-2026-10-2&utm_content=no-shows-proof",
+            "claims_from_page": [
+              "Deposits that stop no-shows",
+              "Take a deposit or card on file when clients book.",
+              "Charge your cancellation fee automatically."
+            ],
+            "payload_step": 9
+          },
+          {
+            "angle": "The friction remover",
+            "title": "Deposits without the awkward talk",
+            "title_chars": 33,
+            "body": "Clients see your deposit policy before they book, so nothing comes as a surprise.",
+            "body_chars": 81,
+            "target_url": "https://www.example.com/industries/salons/?utm_source=chatgpt&utm_medium=paid&utm_campaign=salon-booking-us-ca-conversions-2026-10-2&utm_content=no-shows-friction",
+            "claims_from_page": [
+              "Clients see your deposit policy before they book, so nothing comes as a surprise."
+            ],
+            "payload_step": 10
+          }
+        ]
+      }
+    ],
+    "summary": "1 campaign, 2 ad groups, 6 chat card ads (3 angles per group)"
+  },
+  "measurement": {
+    "result": "pass",
+    "reuse": "pixel \"Example Booking website\" and event setting \"Account sign-ups\" (412 sign-up events in the last 30 days)",
+    "create": "nothing",
+    "left_alone": "\"Spring landing pages (unused)\" (no events) and the archived event setting on it"
+  },
+  "audience": {
+    "result": "drafted",
+    "existing": "2 audiences, all test-named",
+    "create": "\"Current customers (exclusion list)\" with 2,400 hashed emails (steps 11 and 12)",
+    "attach": "The API documents no audience field on campaigns or ad groups. Add it to the campaign as an exclusion in OpenAI Ads Manager."
+  },
+  "lead_form": {
+    "result": "drafted",
+    "existing": "\"Newsletter sign-up\" (published): collects newsletter sign-ups, so not reused",
+    "draft": {
+      "name": "Salon demo request",
+      "privacy_policy_url": "https://www.example.com/privacy/",
+      "fields": [
+        {
+          "field_type": "text",
+          "label": "Your name",
+          "required": true
+        },
+        {
+          "field_type": "text",
+          "label": "Business email",
+          "required": true
+        },
+        {
+          "field_type": "text",
+          "label": "Salon name",
+          "required": true
+        },
+        {
+          "field_type": "choice",
+          "label": "How many stylists work at your salon?",
+          "required": false,
+          "options": [
+            "1 to 3",
+            "4 to 10",
+            "11 or more"
+          ]
+        }
+      ],
+      "privacy_policy_status": "HTTP 200, 0 redirects"
+    },
+    "next": "Steps 13 to 15 create and publish it. Attach the published form to the ads in Ads Manager."
+  },
+  "payloads": [
+    {
+      "step": 1,
+      "tool": "execute_action",
+      "action": "upload_file",
+      "status": "not run",
+      "why": "The ad image: square 1200 x 1200 PNG. Uploaded once, reused by all 6 ads.",
+      "body": {
+        "platform": "openai-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "ad_account_id": "adacct_ex1000000001",
+        "action": "upload_file",
+        "image_url": "https://www.example.com/images/ads/salon-booking-square-1200.png"
+      }
+    },
+    {
+      "step": 2,
+      "tool": "execute_action",
+      "action": "create_campaign",
+      "status": "not run",
+      "why": "Created paused. Bids on conversions with the \"Account sign-ups\" event setting (check 5 passed).",
+      "body": {
+        "platform": "openai-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "ad_account_id": "adacct_ex1000000001",
+        "action": "create_campaign",
+        "name": "Salon booking | US, CA | Conversions | 2026-10 | 2",
+        "budget": {
+          "lifetime_spend_limit_micros": 2000000000
+        },
+        "bidding_type": "conversions",
+        "conversion_event_setting_ids": [
+          "evs_ex01"
+        ],
+        "targeting": {
+          "locations": {
+            "include": [
+              {
+                "id": "3100001"
+              },
+              {
+                "id": "3100040"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "step": 3,
+      "tool": "execute_action",
+      "action": "create_ad_group",
+      "status": "not run",
+      "why": "Created paused. Billing event click, as a conversions campaign needs.",
+      "body": {
+        "platform": "openai-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "ad_account_id": "adacct_ex1000000001",
+        "action": "create_ad_group",
+        "campaign_id": "<FROM step 2: campaign id>",
+        "name": "Salon online booking",
+        "context_hints": [
+          "how can clients book salon appointments online",
+          "add a book now button to my salon website",
+          "let clients choose their stylist when they book",
+          "booking app for a hair salon",
+          "stop taking salon bookings over the phone",
+          "manage several stylists' appointments in one calendar",
+          "move my salon bookings off a paper diary"
+        ],
+        "bidding_config": {
+          "billing_event_type": "click",
+          "max_bid_micros": 45000000
+        }
+      }
+    },
+    {
+      "step": 4,
+      "tool": "execute_action",
+      "action": "create_ad_group",
+      "status": "not run",
+      "why": "Created paused. Billing event click, as a conversions campaign needs.",
+      "body": {
+        "platform": "openai-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "ad_account_id": "adacct_ex1000000001",
+        "action": "create_ad_group",
+        "campaign_id": "<FROM step 2: campaign id>",
+        "name": "Salon no-shows",
+        "context_hints": [
+          "how to reduce no-shows at my salon",
+          "salon clients keep missing appointments",
+          "take a deposit when salon clients book",
+          "charge a cancellation fee automatically",
+          "send appointment reminder texts to salon clients",
+          "write a deposit policy for my salon"
+        ],
+        "bidding_config": {
+          "billing_event_type": "click",
+          "max_bid_micros": 45000000
+        }
+      }
+    },
+    {
+      "step": 5,
+      "tool": "execute_action",
+      "action": "create_ad",
+      "status": "not run",
+      "why": "Created paused; must pass OpenAI review before it can serve.",
+      "body": {
+        "platform": "openai-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "ad_account_id": "adacct_ex1000000001",
+        "action": "create_ad",
+        "ad_group_id": "<FROM step 3: ad group id>",
+        "name": "Salon online booking | The job | v1",
+        "creative": {
+          "type": "chat_card",
+          "title": "Let salon clients book online 24/7",
+          "body": "Add a Book now button to your website and social profiles. Clients pick a time and stylist.",
+          "target_url": "https://www.example.com/industries/salons/?utm_source=chatgpt&utm_medium=paid&utm_campaign=salon-booking-us-ca-conversions-2026-10-2&utm_content=online-booking-job",
+          "file_id": "<FROM step 1: file_id>"
+        }
+      }
+    },
+    {
+      "step": 6,
+      "tool": "execute_action",
+      "action": "create_ad",
+      "status": "not run",
+      "why": "Created paused; must pass OpenAI review before it can serve.",
+      "body": {
+        "platform": "openai-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "ad_account_id": "adacct_ex1000000001",
+        "action": "create_ad",
+        "ad_group_id": "<FROM step 3: ad group id>",
+        "name": "Salon online booking | The proof | v1",
+        "creative": {
+          "type": "chat_card",
+          "title": "Every stylist's day in one calendar",
+          "body": "See all chairs and stylists at a glance. Two-way calendar sync means no double bookings.",
+          "target_url": "https://www.example.com/industries/salons/?utm_source=chatgpt&utm_medium=paid&utm_campaign=salon-booking-us-ca-conversions-2026-10-2&utm_content=online-booking-proof",
+          "file_id": "<FROM step 1: file_id>"
+        }
+      }
+    },
+    {
+      "step": 7,
+      "tool": "execute_action",
+      "action": "create_ad",
+      "status": "not run",
+      "why": "Created paused; must pass OpenAI review before it can serve.",
+      "body": {
+        "platform": "openai-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "ad_account_id": "adacct_ex1000000001",
+        "action": "create_ad",
+        "ad_group_id": "<FROM step 3: ad group id>",
+        "name": "Salon online booking | The friction remover | v1",
+        "creative": {
+          "type": "chat_card",
+          "title": "Switch booking systems in an afternoon",
+          "body": "Import clients and services from a spreadsheet, and we help you move from your old system.",
+          "target_url": "https://www.example.com/industries/salons/?utm_source=chatgpt&utm_medium=paid&utm_campaign=salon-booking-us-ca-conversions-2026-10-2&utm_content=online-booking-friction",
+          "file_id": "<FROM step 1: file_id>"
+        }
+      }
+    },
+    {
+      "step": 8,
+      "tool": "execute_action",
+      "action": "create_ad",
+      "status": "not run",
+      "why": "Created paused; must pass OpenAI review before it can serve.",
+      "body": {
+        "platform": "openai-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "ad_account_id": "adacct_ex1000000001",
+        "action": "create_ad",
+        "ad_group_id": "<FROM step 4: ad group id>",
+        "name": "Salon no-shows | The job | v1",
+        "creative": {
+          "type": "chat_card",
+          "title": "Cut no-shows at your salon",
+          "body": "Automatic SMS and email reminders go out 24 hours and 2 hours before each appointment.",
+          "target_url": "https://www.example.com/industries/salons/?utm_source=chatgpt&utm_medium=paid&utm_campaign=salon-booking-us-ca-conversions-2026-10-2&utm_content=no-shows-job",
+          "file_id": "<FROM step 1: file_id>"
+        }
+      }
+    },
+    {
+      "step": 9,
+      "tool": "execute_action",
+      "action": "create_ad",
+      "status": "not run",
+      "why": "Created paused; must pass OpenAI review before it can serve.",
+      "body": {
+        "platform": "openai-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "ad_account_id": "adacct_ex1000000001",
+        "action": "create_ad",
+        "ad_group_id": "<FROM step 4: ad group id>",
+        "name": "Salon no-shows | The proof | v1",
+        "creative": {
+          "type": "chat_card",
+          "title": "Take a deposit when clients book",
+          "body": "Take a deposit or card on file at booking, and charge your cancellation fee automatically.",
+          "target_url": "https://www.example.com/industries/salons/?utm_source=chatgpt&utm_medium=paid&utm_campaign=salon-booking-us-ca-conversions-2026-10-2&utm_content=no-shows-proof",
+          "file_id": "<FROM step 1: file_id>"
+        }
+      }
+    },
+    {
+      "step": 10,
+      "tool": "execute_action",
+      "action": "create_ad",
+      "status": "not run",
+      "why": "Created paused; must pass OpenAI review before it can serve.",
+      "body": {
+        "platform": "openai-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "ad_account_id": "adacct_ex1000000001",
+        "action": "create_ad",
+        "ad_group_id": "<FROM step 4: ad group id>",
+        "name": "Salon no-shows | The friction remover | v1",
+        "creative": {
+          "type": "chat_card",
+          "title": "Deposits without the awkward talk",
+          "body": "Clients see your deposit policy before they book, so nothing comes as a surprise.",
+          "target_url": "https://www.example.com/industries/salons/?utm_source=chatgpt&utm_medium=paid&utm_campaign=salon-booking-us-ca-conversions-2026-10-2&utm_content=no-shows-friction",
+          "file_id": "<FROM step 1: file_id>"
+        }
+      }
+    },
+    {
+      "step": 11,
+      "tool": "execute_action",
+      "action": "create_custom_audience",
+      "status": "not run",
+      "why": "No existing audience holds your customer list. Created empty.",
+      "body": {
+        "platform": "openai-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "ad_account_id": "adacct_ex1000000001",
+        "action": "create_custom_audience",
+        "name": "Current customers (exclusion list)",
+        "description": "Current Example Booking Software customers, uploaded as hashed emails, for exclusion"
+      }
+    },
+    {
+      "step": 12,
+      "tool": "execute_action",
+      "action": "add_custom_audience_identifiers",
+      "status": "not run",
+      "why": "Sends the 2,400 emails from your list as SHA-256 hashes in one batch. The list itself is never shown.",
+      "body": {
+        "platform": "openai-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "ad_account_id": "adacct_ex1000000001",
+        "action": "add_custom_audience_identifiers",
+        "custom_audience_id": "<FROM step 11: audience id>",
+        "idempotency_key": "current-customers-exclusion-list-2026-10-28-1",
+        "body": {
+          "identifiers": [
+            {
+              "identifier_type": "email_sha256",
+              "identifier": "<SHA-256 of each trimmed, lowercased email from your list>"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "step": 13,
+      "tool": "execute_action",
+      "action": "create_lead_form",
+      "status": "not run",
+      "why": "The existing form collects newsletter sign-ups, not demo requests. The privacy page loads (HTTP 200).",
+      "body": {
+        "platform": "openai-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "ad_account_id": "adacct_ex1000000001",
+        "action": "create_lead_form",
+        "name": "Salon demo request",
+        "privacy_policy_url": "https://www.example.com/privacy/",
+        "fields": [
+          {
+            "field_type": "text",
+            "label": "Your name",
+            "required": true
+          },
+          {
+            "field_type": "text",
+            "label": "Business email",
+            "required": true
+          },
+          {
+            "field_type": "text",
+            "label": "Salon name",
+            "required": true
+          },
+          {
+            "field_type": "choice",
+            "label": "How many stylists work at your salon?",
+            "required": false,
+            "options": [
+              "1 to 3",
+              "4 to 10",
+              "11 or more"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "step": 14,
+      "tool": "query_data",
+      "action": "get_lead_form",
+      "status": "not run",
+      "why": "A read: gets the draft revision to publish.",
+      "body": {
+        "platform": "openai-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "ad_account_id": "adacct_ex1000000001",
+        "action": "get_lead_form",
+        "lead_form_id": "<FROM step 13: lead form id>"
+      }
+    },
+    {
+      "step": 15,
+      "tool": "execute_action",
+      "action": "publish_lead_form",
+      "status": "not run",
+      "why": "Publishes the form so it can be attached to an ad in Ads Manager.",
+      "body": {
+        "platform": "openai-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "ad_account_id": "adacct_ex1000000001",
+        "action": "publish_lead_form",
+        "lead_form_id": "<FROM step 13: lead form id>",
+        "expected_draft_revision_id": "<FROM step 14: draft revision id>"
+      }
+    }
+  ],
+  "payload_counts": {
+    "total_steps": 15,
+    "writes": 14,
+    "reads": 1,
+    "blocked": 0
+  },
+  "after_yes": [
+    "Send steps 1 to 15 in order, stop at the first error, and show each new id.",
+    "After the ads: run get_ad for each new ad and report review_status. Only approved ads can serve.",
+    "Offer preview_ad for any ad you want to see before it goes live.",
+    "After the identifiers: check get_custom_audience_operation, then matched_user_count_range in get_custom_audiences.",
+    "After the form: get_lead_form to confirm it is published, then attach it and the \"Current customers (exclusion list)\" audience in Ads Manager.",
+    "Going live is a separate yes: update_campaign, update_ad_group and update_ad with status active, only when you say to start spending."
+  ],
+  "open_questions": [
+    "Is $45.00 the target cost per sign-up you want? At the account's $2.15 CPC it needs about 1 sign-up per 20.9 clicks.",
+    "The paused campaign \"salon booking | us, ca | conversions | 2026-10\" has no ad groups. Was it an earlier draft of this one? This skill leaves it alone; rename or remove it in Ads Manager if it should go.",
+    "Who should receive the demo requests from the lead form?",
+    "Do you want the 2 paused test campaigns cleaned up in Ads Manager? This skill leaves them alone."
+  ]
+}

@@ -1,0 +1,935 @@
+{
+  "note": "Example data: an invented online booking software company with invented accounts, not a real business. Every number in expected_output.json follows from this input. The InsightfulPipe MCP has no Reddit connector, so the Reddit numbers are three Reddit Ads Manager CSV exports and pastes; GA4 and Search Console are invented rows in the shape the InsightfulPipe MCP returns.",
+  "request": "Hey Claude, I just added the \"reddit-ads-manager\" skill. Here are my Reddit Ads exports for the last 30 days (ad groups, communities, ads) and the ad group export for the 30 days before, plus the comments on three ads, some threads from our buyers, the Events Manager overview and our sign-up count. Review the account, tell me which subreddits to cut, write the monthly read, and draft new ads for the weak ones. Are Reddit Ads worth it for us? Google Ads costs us about $55 a sign up.",
+  "business": {
+    "name": "Example Booking Software",
+    "description": "Example Booking Software, an online booking and scheduling app for small service businesses (invented example)",
+    "site": "https://www.example.com",
+    "product": "online booking, reminders and payments for salons, clinics, studios and personal trainers",
+    "audience": "owners and front-desk managers of small service businesses with 1 to 20 staff, mostly in the US, UK and Canada",
+    "facts_ads_may_use": [
+      "Clients book and pay a deposit online, 24/7",
+      "Automatic SMS and email reminders before every appointment",
+      "Two-way calendar sync with Google and Outlook calendars",
+      "Customers' no-show rate fell from 12% to 5% on average in their first 90 days (the company's own customer data)",
+      "Set-up takes about 20 minutes, and the team imports the client list for you",
+      "Works for salons, clinics, studios and personal trainers with 1 to 20 staff",
+      "The business sets the deposit amount and the cancellation window for each service"
+    ]
+  },
+  "account": {
+    "name": "Example Booking Software (Reddit ad account)",
+    "id": "a2_example0001",
+    "currency": "USD",
+    "time_zone": "America/New_York",
+    "attribution_window": "28-day click, 1-day view"
+  },
+  "settings": {
+    "result_that_counts": "Sign Up (click-through + view-through)",
+    "target_cost_per_result": null,
+    "target_note": "Not given: the skill uses the account's own cost per result over the window.",
+    "other_channel": {
+      "channel": "Google Ads",
+      "cost_per_sign_up": 55,
+      "basis": "the user's own figure, from GA4 sign ups"
+    }
+  },
+  "date_range": {
+    "current": "2026-09-28 to 2026-10-27",
+    "previous": "2026-08-29 to 2026-09-27",
+    "days": 30
+  },
+  "exports": {
+    "ad_group_report": {
+      "file": "reddit_ad_groups_2026-09-28_2026-10-27.csv",
+      "rows": [
+        {
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Salon owners",
+          "objective": "Conversions",
+          "optimization_event": "Sign Up",
+          "bid_strategy": "Lowest cost",
+          "cost_cap": null,
+          "daily_budget": 60,
+          "days_live": 30,
+          "targeting": {
+            "type": "communities",
+            "communities": [
+              "r/hairstylist",
+              "r/Hairdressing",
+              "r/salonowners",
+              "r/EstheticianLife"
+            ]
+          },
+          "spend": 1700,
+          "impressions": 220000,
+          "clicks": 1460,
+          "sign_up_click_through": 39,
+          "sign_up_view_through": 11
+        },
+        {
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Clinic managers",
+          "objective": "Conversions",
+          "optimization_event": "Sign Up",
+          "bid_strategy": "Lowest cost",
+          "cost_cap": null,
+          "daily_budget": 45,
+          "days_live": 30,
+          "targeting": {
+            "type": "communities",
+            "communities": [
+              "r/physicaltherapy",
+              "r/massage",
+              "r/Chiropractic",
+              "r/medicaloffice"
+            ]
+          },
+          "spend": 1170,
+          "impressions": 150000,
+          "clicks": 950,
+          "sign_up_click_through": 18,
+          "sign_up_view_through": 7
+        },
+        {
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Small business owners",
+          "objective": "Conversions",
+          "optimization_event": "Sign Up",
+          "bid_strategy": "Lowest cost",
+          "cost_cap": null,
+          "daily_budget": 50,
+          "days_live": 30,
+          "targeting": {
+            "type": "communities",
+            "communities": [
+              "r/smallbusiness",
+              "r/Entrepreneur",
+              "r/sweatystartup"
+            ]
+          },
+          "spend": 1500,
+          "impressions": 280000,
+          "clicks": 1160,
+          "sign_up_click_through": 24,
+          "sign_up_view_through": 9
+        },
+        {
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Studios and trainers",
+          "objective": "Conversions",
+          "optimization_event": "Sign Up",
+          "bid_strategy": "Cost cap",
+          "cost_cap": 35,
+          "daily_budget": 30,
+          "days_live": 30,
+          "targeting": {
+            "type": "communities",
+            "communities": [
+              "r/personaltraining",
+              "r/yoga",
+              "r/pilates"
+            ]
+          },
+          "spend": 610,
+          "impressions": 72000,
+          "clicks": 430,
+          "sign_up_click_through": 8,
+          "sign_up_view_through": 3
+        },
+        {
+          "campaign": "Sign ups - Interests and keywords",
+          "ad_group": "Interest: Business and finance",
+          "objective": "Conversions",
+          "optimization_event": "Sign Up",
+          "bid_strategy": "Lowest cost",
+          "cost_cap": null,
+          "daily_budget": 45,
+          "days_live": 30,
+          "targeting": {
+            "type": "interests",
+            "interests": [
+              "Business & Finance",
+              "Careers"
+            ],
+            "expansion": true
+          },
+          "spend": 1190,
+          "impressions": 330000,
+          "clicks": 1050,
+          "sign_up_click_through": 8,
+          "sign_up_view_through": 5
+        },
+        {
+          "campaign": "Sign ups - Interests and keywords",
+          "ad_group": "Keywords: booking and no-shows",
+          "objective": "Conversions",
+          "optimization_event": "Sign Up",
+          "bid_strategy": "Lowest cost",
+          "cost_cap": null,
+          "daily_budget": 25,
+          "days_live": 30,
+          "targeting": {
+            "type": "keywords",
+            "keywords": [
+              "appointment booking",
+              "no-shows",
+              "scheduling app",
+              "booking software"
+            ]
+          },
+          "spend": 740,
+          "impressions": 90000,
+          "clicks": 560,
+          "sign_up_click_through": 12,
+          "sign_up_view_through": 3
+        },
+        {
+          "campaign": "Retargeting",
+          "ad_group": "Site visitors, last 30 days",
+          "objective": "Conversions",
+          "optimization_event": "Sign Up",
+          "bid_strategy": "Lowest cost",
+          "cost_cap": null,
+          "daily_budget": 15,
+          "days_live": 30,
+          "targeting": {
+            "type": "audiences",
+            "audiences": [
+              "Website visitors, last 30 days"
+            ]
+          },
+          "spend": 430,
+          "impressions": 52000,
+          "clicks": 390,
+          "sign_up_click_through": 15,
+          "sign_up_view_through": 7
+        }
+      ]
+    },
+    "community_report": {
+      "file": "reddit_communities_2026-09-28_2026-10-27.csv",
+      "breakdown": "Community",
+      "rows": [
+        {
+          "community": "r/hairstylist",
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Salon owners",
+          "spend": 760,
+          "impressions": 97000,
+          "clicks": 650,
+          "sign_up_click_through": 22,
+          "sign_up_view_through": 5
+        },
+        {
+          "community": "r/Hairdressing",
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Salon owners",
+          "spend": 420,
+          "impressions": 56000,
+          "clicks": 340,
+          "sign_up_click_through": 7,
+          "sign_up_view_through": 2
+        },
+        {
+          "community": "r/salonowners",
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Salon owners",
+          "spend": 370,
+          "impressions": 42000,
+          "clicks": 360,
+          "sign_up_click_through": 9,
+          "sign_up_view_through": 3
+        },
+        {
+          "community": "r/EstheticianLife",
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Salon owners",
+          "spend": 140,
+          "impressions": 21000,
+          "clicks": 100,
+          "sign_up_click_through": 1,
+          "sign_up_view_through": 0
+        },
+        {
+          "community": "r/physicaltherapy",
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Clinic managers",
+          "spend": 540,
+          "impressions": 66000,
+          "clicks": 450,
+          "sign_up_click_through": 12,
+          "sign_up_view_through": 4
+        },
+        {
+          "community": "r/massage",
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Clinic managers",
+          "spend": 390,
+          "impressions": 58000,
+          "clicks": 330,
+          "sign_up_click_through": 2,
+          "sign_up_view_through": 1
+        },
+        {
+          "community": "r/Chiropractic",
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Clinic managers",
+          "spend": 170,
+          "impressions": 18000,
+          "clicks": 120,
+          "sign_up_click_through": 3,
+          "sign_up_view_through": 1
+        },
+        {
+          "community": "r/medicaloffice",
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Clinic managers",
+          "spend": 55,
+          "impressions": 7000,
+          "clicks": 45,
+          "sign_up_click_through": 1,
+          "sign_up_view_through": 1
+        },
+        {
+          "community": "r/smallbusiness",
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Small business owners",
+          "spend": 760,
+          "impressions": 140000,
+          "clicks": 640,
+          "sign_up_click_through": 15,
+          "sign_up_view_through": 6
+        },
+        {
+          "community": "r/Entrepreneur",
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Small business owners",
+          "spend": 520,
+          "impressions": 110000,
+          "clicks": 330,
+          "sign_up_click_through": 1,
+          "sign_up_view_through": 2
+        },
+        {
+          "community": "r/sweatystartup",
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Small business owners",
+          "spend": 200,
+          "impressions": 27000,
+          "clicks": 180,
+          "sign_up_click_through": 7,
+          "sign_up_view_through": 1
+        },
+        {
+          "community": "r/personaltraining",
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Studios and trainers",
+          "spend": 330,
+          "impressions": 38000,
+          "clicks": 250,
+          "sign_up_click_through": 6,
+          "sign_up_view_through": 2
+        },
+        {
+          "community": "r/yoga",
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Studios and trainers",
+          "spend": 200,
+          "impressions": 26000,
+          "clicks": 130,
+          "sign_up_click_through": 1,
+          "sign_up_view_through": 1
+        },
+        {
+          "community": "r/pilates",
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Studios and trainers",
+          "spend": 65,
+          "impressions": 7000,
+          "clicks": 45,
+          "sign_up_click_through": 1,
+          "sign_up_view_through": 0
+        },
+        {
+          "community": "r/personalfinance",
+          "campaign": "Sign ups - Interests and keywords",
+          "ad_group": "Interest: Business and finance",
+          "spend": 420,
+          "impressions": 120000,
+          "clicks": 380,
+          "sign_up_click_through": 2,
+          "sign_up_view_through": 1
+        },
+        {
+          "community": "r/investing",
+          "campaign": "Sign ups - Interests and keywords",
+          "ad_group": "Interest: Business and finance",
+          "spend": 300,
+          "impressions": 90000,
+          "clicks": 250,
+          "sign_up_click_through": 1,
+          "sign_up_view_through": 2
+        },
+        {
+          "community": "r/careerguidance",
+          "campaign": "Sign ups - Interests and keywords",
+          "ad_group": "Interest: Business and finance",
+          "spend": 210,
+          "impressions": 60000,
+          "clicks": 190,
+          "sign_up_click_through": 1,
+          "sign_up_view_through": 0
+        },
+        {
+          "community": "r/smallbusiness",
+          "campaign": "Sign ups - Interests and keywords",
+          "ad_group": "Interest: Business and finance",
+          "spend": 140,
+          "impressions": 30000,
+          "clicks": 140,
+          "sign_up_click_through": 3,
+          "sign_up_view_through": 1
+        },
+        {
+          "community": "r/smallbusiness",
+          "campaign": "Sign ups - Interests and keywords",
+          "ad_group": "Keywords: booking and no-shows",
+          "spend": 260,
+          "impressions": 31000,
+          "clicks": 200,
+          "sign_up_click_through": 5,
+          "sign_up_view_through": 1
+        },
+        {
+          "community": "r/hairstylist",
+          "campaign": "Sign ups - Interests and keywords",
+          "ad_group": "Keywords: booking and no-shows",
+          "spend": 180,
+          "impressions": 22000,
+          "clicks": 150,
+          "sign_up_click_through": 4,
+          "sign_up_view_through": 1
+        }
+      ]
+    },
+    "ad_report": {
+      "file": "reddit_ads_2026-09-28_2026-10-27.csv",
+      "rows": [
+        {
+          "ad_id": "ad1",
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Salon owners",
+          "headline": "Salon owners: what actually cut your no-shows? Our customers went from 12% to 5% in their first 90 days once clients paid a deposit at booking",
+          "destination_url": "https://www.example.com/industries/salons/?utm_source=reddit&utm_medium=paid_social&utm_campaign=signups_communities&utm_content=salon_owners",
+          "spend": 1180,
+          "impressions": 151000,
+          "clicks": 1150,
+          "sign_up_click_through": 34,
+          "sign_up_view_through": 8
+        },
+        {
+          "ad_id": "ad2",
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Salon owners",
+          "headline": "The best booking app for salons!! Try it today",
+          "destination_url": "https://www.example.com/industries/salons/?utm_source=reddit&utm_medium=paid_social&utm_campaign=signups_communities&utm_content=salon_owners",
+          "spend": 520,
+          "impressions": 69000,
+          "clicks": 310,
+          "sign_up_click_through": 5,
+          "sign_up_view_through": 3
+        },
+        {
+          "ad_id": "ad3",
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Clinic managers",
+          "headline": "Front desk managers at small clinics: how do you handle late cancellations without losing the patient?",
+          "destination_url": "https://www.example.com/industries/clinics/?utm_source=reddit&utm_medium=paid_social&utm_campaign=signups_communities&utm_content=clinic_managers",
+          "spend": 820,
+          "impressions": 98000,
+          "clicks": 720,
+          "sign_up_click_through": 15,
+          "sign_up_view_through": 5
+        },
+        {
+          "ad_id": "ad4",
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Clinic managers",
+          "headline": "Example Booking Software: online booking, reminders and payments in one place",
+          "destination_url": "https://www.example.com/?utm_source=reddit&utm_medium=paid_social&utm_campaign=signups_communities&utm_content=clinic_managers",
+          "spend": 350,
+          "impressions": 52000,
+          "clicks": 230,
+          "sign_up_click_through": 3,
+          "sign_up_view_through": 2
+        },
+        {
+          "ad_id": "ad5",
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Small business owners",
+          "headline": "Front desk on the phone all day? Clients can book and pay a deposit online, 24/7, and the reminder texts go out by themselves",
+          "destination_url": "https://www.example.com/?utm_source=reddit&utm_medium=paid_social&utm_campaign=signups_communities&utm_content=small_business_owners",
+          "spend": 960,
+          "impressions": 160000,
+          "clicks": 900,
+          "sign_up_click_through": 22,
+          "sign_up_view_through": 7
+        },
+        {
+          "ad_id": "ad6",
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Small business owners",
+          "headline": "Revolutionary all-in-one scheduling platform. Don't miss out!",
+          "destination_url": "https://www.example.com/?utm_source=reddit&utm_medium=paid_social&utm_campaign=signups_communities&utm_content=small_business_owners",
+          "spend": 540,
+          "impressions": 120000,
+          "clicks": 260,
+          "sign_up_click_through": 2,
+          "sign_up_view_through": 2
+        },
+        {
+          "ad_id": "ad7",
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Studios and trainers",
+          "headline": "Studio owners: clients book and pay for classes on their phone, and the reminder texts go out by themselves",
+          "destination_url": "https://www.example.com/industries/fitness/?utm_source=reddit&utm_medium=paid_social&utm_campaign=signups_communities&utm_content=studios_and_trainers",
+          "spend": 610,
+          "impressions": 72000,
+          "clicks": 430,
+          "sign_up_click_through": 8,
+          "sign_up_view_through": 3
+        },
+        {
+          "ad_id": "ad8",
+          "campaign": "Sign ups - Interests and keywords",
+          "ad_group": "Interest: Business and finance",
+          "headline": "Running a small service business? Online booking that sends the reminders for you",
+          "destination_url": "https://www.example.com/?utm_source=reddit&utm_medium=paid_social&utm_campaign=signups_interests_keywords&utm_content=interest_business_and_finance",
+          "spend": 1190,
+          "impressions": 330000,
+          "clicks": 1050,
+          "sign_up_click_through": 8,
+          "sign_up_view_through": 5
+        },
+        {
+          "ad_id": "ad9",
+          "campaign": "Sign ups - Interests and keywords",
+          "ad_group": "Keywords: booking and no-shows",
+          "headline": "Tired of no-shows? Our customers cut theirs from 12% to 5% in 90 days with deposits and text reminders",
+          "destination_url": "https://www.example.com/features/reminders/",
+          "spend": 740,
+          "impressions": 90000,
+          "clicks": 560,
+          "sign_up_click_through": 12,
+          "sign_up_view_through": 3
+        },
+        {
+          "ad_id": "ad10",
+          "campaign": "Retargeting",
+          "ad_group": "Site visitors, last 30 days",
+          "headline": "Still comparing booking apps? See how deposits, reminders and calendar sync work before you choose",
+          "destination_url": "https://www.example.com/features/online-booking/?utm_source=reddit&utm_medium=paid_social&utm_campaign=retargeting&utm_content=site_visitors_last_30_days",
+          "spend": 430,
+          "impressions": 52000,
+          "clicks": 390,
+          "sign_up_click_through": 15,
+          "sign_up_view_through": 7
+        }
+      ]
+    },
+    "ad_group_report_previous": {
+      "file": "reddit_ad_groups_2026-08-29_2026-09-27.csv",
+      "rows": [
+        {
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Salon owners",
+          "spend": 1620,
+          "impressions": 205000,
+          "clicks": 1380,
+          "sign_up_click_through": 33,
+          "sign_up_view_through": 10
+        },
+        {
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Clinic managers",
+          "spend": 1150,
+          "impressions": 140000,
+          "clicks": 900,
+          "sign_up_click_through": 17,
+          "sign_up_view_through": 6
+        },
+        {
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Small business owners",
+          "spend": 1480,
+          "impressions": 260000,
+          "clicks": 1100,
+          "sign_up_click_through": 22,
+          "sign_up_view_through": 8
+        },
+        {
+          "campaign": "Sign ups - Communities",
+          "ad_group": "Studios and trainers",
+          "spend": 640,
+          "impressions": 70000,
+          "clicks": 420,
+          "sign_up_click_through": 9,
+          "sign_up_view_through": 3
+        },
+        {
+          "campaign": "Sign ups - Interests and keywords",
+          "ad_group": "Interest: Business and finance",
+          "spend": 1160,
+          "impressions": 320000,
+          "clicks": 1000,
+          "sign_up_click_through": 9,
+          "sign_up_view_through": 6
+        },
+        {
+          "campaign": "Sign ups - Interests and keywords",
+          "ad_group": "Keywords: booking and no-shows",
+          "spend": 0,
+          "impressions": 0,
+          "clicks": 0,
+          "sign_up_click_through": 0,
+          "sign_up_view_through": 0
+        },
+        {
+          "campaign": "Retargeting",
+          "ad_group": "Site visitors, last 30 days",
+          "spend": 400,
+          "impressions": 50000,
+          "clicks": 360,
+          "sign_up_click_through": 13,
+          "sign_up_view_through": 6
+        }
+      ]
+    },
+    "column_mapping": {
+      "spend": "Amount Spent (USD)",
+      "impressions": "Impressions",
+      "clicks": "Clicks",
+      "sign_up_click_through": "Sign Up (Click-through)",
+      "sign_up_view_through": "Sign Up (View-through)"
+    }
+  },
+  "pastes": {
+    "comments": [
+      {
+        "ad_id": "ad1",
+        "comments": [
+          "How does the deposit part work if a client cancels the day before?",
+          "We started taking deposits last year and it changed everything. Wish we had done it sooner.",
+          "Does it sync with Google Calendar? That's the only thing stopping me from switching.",
+          "Been using this at my salon since spring, the reminder texts alone saved us.",
+          "My clients are older and hate paying online, not sure deposits would fly here.",
+          "Can clients book for two services back to back?",
+          "Nice color work in the photo."
+        ]
+      },
+      {
+        "ad_id": "ad2",
+        "comments": [
+          "Every booking app says it's the best. What does this one do that the others don't?",
+          "Two exclamation marks, must be serious.",
+          "Another ad pretending to be a post. Downvoted.",
+          "Already use a booking app that came with my card reader, switching is a pain.",
+          "Does it work for a solo stylist renting a booth?",
+          "lol the marketing team discovered Reddit"
+        ]
+      },
+      {
+        "ad_id": "ad6",
+        "comments": [
+          "Revolutionary. Sure.",
+          "This reads like it was written by a bot. Spam.",
+          "What does it actually do? The ad doesn't say.",
+          "Don't miss out on what exactly?",
+          "Downvoted. Nobody asked.",
+          "Cringe. Tell me what it costs and what it does.",
+          "Not worth switching for most of us, our current setup is fine.",
+          "Third time this ad has shown up in my feed today."
+        ]
+      }
+    ],
+    "threads": [
+      {
+        "community": "r/hairstylist",
+        "title": "How do you deal with no-shows without sounding rude?",
+        "excerpt": "I lose two or three appointments a week. Clients book, forget, and never text. I don't want to sound like a jerk asking for a deposit."
+      },
+      {
+        "community": "r/salonowners",
+        "title": "Front desk spends half the day on the phone",
+        "excerpt": "Our receptionist answers the phone for bookings all day and still double books. Is online booking worth it for a 6-chair salon?"
+      },
+      {
+        "community": "r/smallbusiness",
+        "title": "Clients who cancel last minute: what is your policy?",
+        "excerpt": "I run a small massage practice. Last-minute cancellations cost me more than slow weeks. Do deposits scare clients off?"
+      },
+      {
+        "community": "r/sweatystartup",
+        "title": "What booking setup do you use for a service business?",
+        "excerpt": "Mobile detailing here. I need clients to pick a slot, pay something up front, and get a reminder the day before."
+      }
+    ],
+    "events_manager": {
+      "event": "Sign Up",
+      "dates": "2026-09-28 to 2026-10-27",
+      "events_received": 2010,
+      "by_source": {
+        "Reddit Pixel": 1240,
+        "Conversions API": 770
+      },
+      "conversion_id_sent": {
+        "Reddit Pixel": true,
+        "Conversions API": false
+      },
+      "attribution_window": "28-day click, 1-day view"
+    },
+    "site_count": {
+      "event": "sign ups (new accounts created)",
+      "source": "the app's own database",
+      "dates": "2026-09-28 to 2026-10-27",
+      "count": 1250
+    }
+  },
+  "connectors": {
+    "google-analytics": {
+      "property_id": "properties/123456789",
+      "key_events": [
+        "sign_up",
+        "book_demo",
+        "purchase"
+      ],
+      "calls": [
+        {
+          "body": {
+            "platform": "google-analytics",
+            "action": "list_key_events",
+            "workspace_id": 1,
+            "brand_id": 1,
+            "property_id": "properties/123456789"
+          }
+        },
+        {
+          "body": {
+            "platform": "google-analytics",
+            "action": "get_report",
+            "workspace_id": 1,
+            "brand_id": 1,
+            "property_id": "properties/123456789",
+            "dimensions": [
+              "sessionSource",
+              "sessionMedium",
+              "sessionCampaignName"
+            ],
+            "metrics": [
+              "sessions",
+              "engagedSessions",
+              "keyEvents",
+              "keyEvents:sign_up"
+            ],
+            "start_date": "2026-09-28",
+            "end_date": "2026-10-27",
+            "dimensionFilter": {
+              "filter": {
+                "fieldName": "sessionSource",
+                "stringFilter": {
+                  "matchType": "CONTAINS",
+                  "value": "reddit",
+                  "caseSensitive": false
+                }
+              }
+            },
+            "limit": 1000
+          },
+          "rows": [
+            {
+              "sessionSource": "reddit",
+              "sessionMedium": "paid_social",
+              "sessionCampaignName": "signups_communities",
+              "sessions": 3240,
+              "engagedSessions": 2010,
+              "keyEvents": 41,
+              "keyEvents:sign_up": 30
+            },
+            {
+              "sessionSource": "reddit",
+              "sessionMedium": "paid_social",
+              "sessionCampaignName": "signups_interests_keywords",
+              "sessions": 830,
+              "engagedSessions": 400,
+              "keyEvents": 5,
+              "keyEvents:sign_up": 3
+            },
+            {
+              "sessionSource": "reddit",
+              "sessionMedium": "paid_social",
+              "sessionCampaignName": "retargeting",
+              "sessions": 330,
+              "engagedSessions": 250,
+              "keyEvents": 8,
+              "keyEvents:sign_up": 6
+            },
+            {
+              "sessionSource": "reddit.com",
+              "sessionMedium": "referral",
+              "sessionCampaignName": "(referral)",
+              "sessions": 940,
+              "engagedSessions": 520,
+              "keyEvents": 9,
+              "keyEvents:sign_up": 6
+            }
+          ]
+        },
+        {
+          "body": {
+            "platform": "google-analytics",
+            "action": "get_report",
+            "workspace_id": 1,
+            "brand_id": 1,
+            "property_id": "properties/123456789",
+            "dimensions": [
+              "sessionSource",
+              "sessionMedium",
+              "sessionCampaignName"
+            ],
+            "metrics": [
+              "sessions",
+              "engagedSessions",
+              "keyEvents",
+              "keyEvents:sign_up"
+            ],
+            "start_date": "2026-08-29",
+            "end_date": "2026-09-27",
+            "dimensionFilter": {
+              "filter": {
+                "fieldName": "sessionSource",
+                "stringFilter": {
+                  "matchType": "CONTAINS",
+                  "value": "reddit",
+                  "caseSensitive": false
+                }
+              }
+            },
+            "limit": 1000
+          },
+          "rows": [
+            {
+              "sessionSource": "reddit",
+              "sessionMedium": "paid_social",
+              "sessionCampaignName": "signups_communities",
+              "sessions": 3010,
+              "engagedSessions": 1880,
+              "keyEvents": 38,
+              "keyEvents:sign_up": 28
+            },
+            {
+              "sessionSource": "reddit",
+              "sessionMedium": "paid_social",
+              "sessionCampaignName": "signups_interests_keywords",
+              "sessions": 790,
+              "engagedSessions": 380,
+              "keyEvents": 4,
+              "keyEvents:sign_up": 3
+            },
+            {
+              "sessionSource": "reddit",
+              "sessionMedium": "paid_social",
+              "sessionCampaignName": "retargeting",
+              "sessions": 300,
+              "engagedSessions": 230,
+              "keyEvents": 7,
+              "keyEvents:sign_up": 6
+            },
+            {
+              "sessionSource": "reddit.com",
+              "sessionMedium": "referral",
+              "sessionCampaignName": "(referral)",
+              "sessions": 410,
+              "engagedSessions": 230,
+              "keyEvents": 4,
+              "keyEvents:sign_up": 3
+            }
+          ]
+        }
+      ]
+    },
+    "google-search-console": {
+      "site_url": "https://www.example.com/",
+      "calls": [
+        {
+          "body": {
+            "platform": "google-search-console",
+            "action": "search_analytics",
+            "workspace_id": 1,
+            "brand_id": 1,
+            "site_url": "https://www.example.com/",
+            "dimensions": [
+              "query"
+            ],
+            "start_date": "2026-09-29",
+            "end_date": "2026-10-26",
+            "row_limit": 1000,
+            "dimension_filter_groups": [
+              {
+                "filters": [
+                  {
+                    "dimension": "query",
+                    "operator": "includingRegex",
+                    "expression": "^(how|what|why|when|which|who|can|should|is|are|does|do)\\b|\\b(vs|versus|alternative|alternatives)\\b"
+                  }
+                ]
+              }
+            ]
+          },
+          "rows": [
+            {
+              "query": "how to reduce no shows at a salon",
+              "impressions": 2400,
+              "clicks": 61
+            },
+            {
+              "query": "how much deposit should a salon charge",
+              "impressions": 1900,
+              "clicks": 44
+            },
+            {
+              "query": "what is a good cancellation policy for appointments",
+              "impressions": 1500,
+              "clicks": 30
+            },
+            {
+              "query": "how to send appointment reminder texts",
+              "impressions": 1300,
+              "clicks": 38
+            },
+            {
+              "query": "example booking software vs competitor a",
+              "impressions": 900,
+              "clicks": 52
+            },
+            {
+              "query": "is online booking worth it for small business",
+              "impressions": 820,
+              "clicks": 15
+            },
+            {
+              "query": "can clients pay a deposit when booking online",
+              "impressions": 610,
+              "clicks": 19
+            },
+            {
+              "query": "how do i stop clients cancelling last minute",
+              "impressions": 540,
+              "clicks": 12
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

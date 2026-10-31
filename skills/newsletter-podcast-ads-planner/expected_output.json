@@ -1,0 +1,668 @@
+{
+  "header": {
+    "business": "Ridgeline Desk Co.",
+    "run_date": "2026-10-28",
+    "currency": "USD",
+    "target_cpa": 120.0,
+    "november_budget": 6500.0,
+    "sources": [
+      "pasted media kits and quotes",
+      "google-analytics",
+      "shopify",
+      "callrail",
+      "google-search-console",
+      "google-ads",
+      "facebook-ads",
+      "youtube"
+    ]
+  },
+  "part_1_readout": {
+    "rule": "rebook when attributed cost per order <= target; retest when only attributed plus the brand-search estimate reaches the target; stop otherwise",
+    "brand_click_conversion_rate": 0.062,
+    "brand_click_rate_basis": "Google Ads 'Brand | Search' 93 conversions / 1,500 clicks, 2026-08-19 to 2026-10-06, applied to organic brand clicks too (an assumption)",
+    "placements": [
+      {
+        "id": "S1",
+        "publication": "The Remote Desk",
+        "type": "newsletter",
+        "drop_date": "2026-09-02",
+        "read_window": "2026-09-02 to 2026-09-08",
+        "price": 1900,
+        "orders_attributed": 17,
+        "orders_by_code": 8,
+        "orders_by_tagged_link_or_vanity_url": 11,
+        "orders_with_both": 2,
+        "ga4_tagged_sessions": 336,
+        "ga4_tagged_purchases": 11,
+        "revenue_attributed": 12896,
+        "publisher_clicks": 410,
+        "sessions_per_click": 0.82,
+        "attributed_total": 17.0,
+        "cpa_attributed": 111.76,
+        "brand_lift": {
+          "graded": true,
+          "baseline_days": "2026-08-19 to 2026-09-01 (14 clean days)",
+          "baseline_mean": 73.86,
+          "baseline_sd": 4.24,
+          "noise_floor": 82.34,
+          "post_window": "2026-09-02 to 2026-09-08",
+          "post_mean": 77.71,
+          "above_floor": false,
+          "extra_brand_clicks": 0,
+          "estimated_orders": 0.0
+        },
+        "cpa_with_lift": 111.76,
+        "roas_attributed": 6.79,
+        "verdict": "rebook",
+        "why": "attributed cost per order $111.76 is at or under the $120 target"
+      },
+      {
+        "id": "S2",
+        "publication": "Desk Setup Radio",
+        "type": "podcast",
+        "drop_date": "2026-09-16",
+        "read_window": "2026-09-16 to 2026-10-15",
+        "price": 1200,
+        "orders_attributed": 8,
+        "orders_by_code": 6,
+        "orders_by_tagged_link_or_vanity_url": 6,
+        "orders_with_both": 4,
+        "ga4_tagged_sessions": 148,
+        "ga4_tagged_purchases": 3,
+        "revenue_attributed": 5212,
+        "ga4_vanity_url_sessions": 162,
+        "ga4_vanity_url_purchases": 3,
+        "calls": 7,
+        "qualified_calls": 5,
+        "orders_from_calls_est": 1.75,
+        "attributed_total": 9.75,
+        "cpa_attributed": 123.08,
+        "brand_lift": {
+          "graded": true,
+          "baseline_days": "2026-09-09 to 2026-09-15 (7 clean days)",
+          "baseline_mean": 72.86,
+          "baseline_sd": 5.87,
+          "noise_floor": 84.6,
+          "post_window": "2026-09-16 to 2026-09-22",
+          "post_mean": 91.14,
+          "above_floor": true,
+          "extra_brand_clicks": 128,
+          "estimated_orders": 7.94
+        },
+        "cpa_with_lift": 67.83,
+        "roas_attributed": 4.34,
+        "verdict": "retest",
+        "why": "attributed cost per order $123.08 misses the target, but with the brand-search estimate it is $67.83; the lift is an estimate, so a second run must confirm it"
+      },
+      {
+        "id": "S3",
+        "publication": "Office Hours Digest",
+        "type": "newsletter",
+        "drop_date": "2026-09-30",
+        "read_window": "2026-09-30 to 2026-10-06",
+        "price": 2200,
+        "orders_attributed": 5,
+        "orders_by_code": 2,
+        "orders_by_tagged_link_or_vanity_url": 4,
+        "orders_with_both": 1,
+        "ga4_tagged_sessions": 297,
+        "ga4_tagged_purchases": 4,
+        "revenue_attributed": 4247,
+        "publisher_clicks": 1150,
+        "sessions_per_click": 0.26,
+        "attributed_total": 5.0,
+        "cpa_attributed": 440.0,
+        "brand_lift": {
+          "graded": true,
+          "baseline_days": "2026-09-23 to 2026-09-29 (7 clean days)",
+          "baseline_mean": 72.14,
+          "baseline_sd": 6.47,
+          "noise_floor": 85.07,
+          "post_window": "2026-09-30 to 2026-10-06",
+          "post_mean": 72.0,
+          "above_floor": false,
+          "extra_brand_clicks": 0,
+          "estimated_orders": 0.0
+        },
+        "cpa_with_lift": 440.0,
+        "roas_attributed": 1.93,
+        "verdict": "stop",
+        "why": "cost per order is $440.00 attributed and $440.00 with any lift, both over the $120 target; only 26% of the publisher's 1,150 clicks became sessions, so most clicks were likely email security scanners"
+      }
+    ]
+  },
+  "part_2_quotes": {
+    "match_floor": 0.2,
+    "own_rates_used": {
+      "newsletter_sessions_per_click": 0.82,
+      "newsletter_orders_per_session": 0.0348,
+      "podcast_orders_per_1000_matched_downloads": 1.11,
+      "based_on": "sessions per click: 1 newsletter send(s), scanner-flagged sends left out; orders per session: 2 newsletter sends; podcast rate: 1 podcast placement, so the podcast estimate is thin and the rule after the buy matters more"
+    },
+    "comparison": [
+      {
+        "id": "N1",
+        "publication": "The Remote Desk",
+        "type": "newsletter",
+        "slot": "primary",
+        "units": 2,
+        "matched_share": 0.43,
+        "price": 3700,
+        "delivered": 96000,
+        "cost_per_k_delivered": 38.54,
+        "cost_per_k_matched": 89.84,
+        "claims": [
+          "claimed open rate 61% is inflated by Apple Mail Privacy Protection; priced on sends, not opens",
+          "clicks per slot: claim 420, proof median 380 (screenshots of the last 5 sponsor slots); priced on 380"
+        ],
+        "claim_status": "proven",
+        "expected_clicks": 760,
+        "cost_per_expected_click": 4.87,
+        "sessions_per_click_used": 0.82,
+        "orders_per_session_used": 0.0506,
+        "rates_from": "The Remote Desk's own September result",
+        "expected_orders": 31.53,
+        "break_even_price": 3783.6,
+        "expected_cpa": 117.35,
+        "make_good_offered": true,
+        "fair_price": 3783.6,
+        "decision": "book test",
+        "why": "price $3,700 is at or under the break-even price $3,783.60"
+      },
+      {
+        "id": "N2",
+        "publication": "Founder Ops Weekly",
+        "type": "newsletter",
+        "slot": "primary",
+        "units": 1,
+        "matched_share": 0.42,
+        "price": 1100,
+        "delivered": 22000,
+        "cost_per_k_delivered": 50.0,
+        "cost_per_k_matched": 119.05,
+        "claims": [
+          "claimed open rate 52% is inflated by Apple Mail Privacy Protection; priced on sends, not opens",
+          "clicks per slot: claim 260, proof median 240 (ESP report export, last 3 sponsor slots); priced on 240"
+        ],
+        "claim_status": "proven",
+        "expected_clicks": 240,
+        "cost_per_expected_click": 4.58,
+        "sessions_per_click_used": 0.82,
+        "orders_per_session_used": 0.0348,
+        "rates_from": "all past newsletter placements",
+        "expected_orders": 6.84,
+        "break_even_price": 820.8,
+        "expected_cpa": 160.82,
+        "make_good_offered": true,
+        "fair_price": 820.8,
+        "decision": "counter",
+        "counter_price": 820,
+        "why": "price $1,100 is over the break-even price $820.80; counter at $820"
+      },
+      {
+        "id": "N3",
+        "publication": "Gadget Drop Daily",
+        "type": "newsletter",
+        "slot": "primary",
+        "units": 1,
+        "matched_share": 0.11,
+        "price": 4500,
+        "delivered": 210000,
+        "cost_per_k_delivered": 21.43,
+        "cost_per_k_matched": 194.81,
+        "claims": [
+          "claimed open rate 68% is inflated by Apple Mail Privacy Protection; priced on sends, not opens",
+          "clicks per slot: claim 1,500 with no proof"
+        ],
+        "claim_status": "unverified",
+        "expected_clicks": null,
+        "cost_per_expected_click": null,
+        "sessions_per_click_used": 0.82,
+        "orders_per_session_used": 0.0348,
+        "rates_from": "all past newsletter placements",
+        "expected_orders": null,
+        "break_even_price": null,
+        "expected_cpa": null,
+        "make_good_offered": false,
+        "decision": "skip",
+        "why": "matched share 11% is under the floor of 20%; the click claim is also unproven and no make-good is offered"
+      },
+      {
+        "id": "P1",
+        "publication": "Hybrid Hours",
+        "type": "podcast",
+        "slot": "mid-roll, host-read",
+        "units": 4,
+        "matched_share": 0.4,
+        "price": 1800.0,
+        "quoted_cpm": 25,
+        "delivered": 59800.0,
+        "cost_per_k_delivered": 30.1,
+        "effective_cpm_on_proven": 30.1,
+        "cost_per_k_matched": 75.25,
+        "claims": [
+          "downloads per episode at 30 days: claim 18,000, proof median 14,950 (host dashboard screenshot, IAB-certified hosting); priced on 14,950"
+        ],
+        "claim_status": "proven",
+        "orders_per_k_matched_used": 1.11,
+        "rates_from": "Desk Setup Radio's September result (attributed orders only, lift left out)",
+        "expected_orders": 26.44,
+        "price_at_quoted_cpm_on_proven": 1495.0,
+        "break_even_price": 3172.8,
+        "expected_cpa": 68.08,
+        "make_good_offered": true,
+        "fair_price": 1495.0,
+        "decision": "counter",
+        "counter_price": 1490,
+        "why": "quoted on 18,000 claimed downloads; their own $25 CPM on proven downloads is $1,495, under the break-even price $3,172.80; counter at $1,490"
+      },
+      {
+        "id": "P2",
+        "publication": "Teamwright Hour",
+        "type": "video podcast",
+        "slot": "mid-roll, host-read",
+        "units": 2,
+        "matched_share": 0.29,
+        "youtube_episodes_used": [
+          "Episode 88 (2026-09-24, 11,400 views)",
+          "Episode 87 (2026-09-17, 9,100 views)",
+          "Episode 86 (2026-09-10, 8,700 views)",
+          "Episode 85 (2026-09-03, 10,200 views)",
+          "Episode 84 (2026-08-27, 9,600 views)",
+          "Episode 83 (2026-08-20, 12,900 views)",
+          "Episode 82 (2026-08-13, 8,200 views)",
+          "Episode 81 (2026-08-06, 10,000 views)"
+        ],
+        "price": 4800.0,
+        "quoted_cpm": null,
+        "delivered": 80000,
+        "cost_per_k_delivered": 60.0,
+        "effective_cpm_on_proven": null,
+        "cost_per_k_matched": 205.13,
+        "claims": [
+          "40,000 per episode is audio downloads plus YouTube views per episode, with no host dashboard or certified count for the audio part",
+          "YouTube views on channel UCexampleTeamwrightHr001 (looked up by id), median of the last 8 full episodes (10 minutes or longer) at least 30 days old: 9,800; that leaves 30,200 audio downloads per episode unproven"
+        ],
+        "claim_status": "unverified",
+        "orders_per_k_matched_used": 1.11,
+        "rates_from": "Desk Setup Radio's September result (attributed orders only, lift left out)",
+        "expected_orders": null,
+        "break_even_price": null,
+        "expected_cpa": null,
+        "make_good_offered": false,
+        "decision": "skip unless proof",
+        "why": "the audience claim has no proof and the deal has no make-good; ask for proof before any price talk"
+      }
+    ]
+  },
+  "budget_plan": {
+    "budget": 6500.0,
+    "committed_if_counters_accepted": 6010.0,
+    "left": 490.0,
+    "order": "book tests by expected cost per order, then counters by expected cost per order at the counter price",
+    "lines": [
+      {
+        "id": "N1",
+        "publication": "The Remote Desk",
+        "spend": 3700,
+        "status": "book"
+      },
+      {
+        "id": "P1",
+        "publication": "Hybrid Hours",
+        "spend": 1490,
+        "status": "book if the counter is accepted"
+      },
+      {
+        "id": "N2",
+        "publication": "Founder Ops Weekly",
+        "spend": 820,
+        "status": "book if the counter is accepted"
+      }
+    ]
+  },
+  "stop_or_rebook_rules": [
+    {
+      "id": "N1",
+      "publication": "The Remote Desk",
+      "price": 3700,
+      "read_window_days": 7,
+      "read_window": "2026-11-10 to 2026-11-30",
+      "break_even_orders": 30.83,
+      "rebook_if": "attributed orders >= 31 (cost per order <= $120)",
+      "retest_if": "under that, but attributed orders plus the brand-search estimate reach it",
+      "stop_if": "attributed orders plus the brand-search estimate stay under it"
+    },
+    {
+      "id": "N2",
+      "publication": "Founder Ops Weekly",
+      "price": 820,
+      "read_window_days": 7,
+      "read_window": "2026-11-18 to 2026-11-24",
+      "break_even_orders": 6.83,
+      "rebook_if": "attributed orders >= 7 (cost per order <= $120)",
+      "retest_if": "under that, but attributed orders plus the brand-search estimate reach it",
+      "stop_if": "attributed orders plus the brand-search estimate stay under it"
+    },
+    {
+      "id": "P1",
+      "publication": "Hybrid Hours",
+      "price": 1490,
+      "read_window_days": 30,
+      "read_window": "2026-11-04 to 2026-12-24",
+      "break_even_orders": 12.42,
+      "rebook_if": "attributed orders >= 13 (cost per order <= $120)",
+      "retest_if": "under that, but attributed orders plus the brand-search estimate reach it",
+      "stop_if": "attributed orders plus the brand-search estimate stay under it"
+    }
+  ],
+  "tracking": [
+    {
+      "placement": "N1-1",
+      "publication": "The Remote Desk",
+      "date": "2026-11-10",
+      "link": "https://www.ridgelinedesk.example/?utm_source=theremotedesk&utm_medium=newsletter&utm_campaign=sponsor-2026-11&utm_content=primary-2026-11-10",
+      "code": "REMOTEDESK11",
+      "survey_option": "The Remote Desk"
+    },
+    {
+      "placement": "N1-2",
+      "publication": "The Remote Desk",
+      "date": "2026-11-24",
+      "link": "https://www.ridgelinedesk.example/?utm_source=theremotedesk&utm_medium=newsletter&utm_campaign=sponsor-2026-11&utm_content=primary-2026-11-24",
+      "code": "REMOTEDESK11",
+      "survey_option": "The Remote Desk"
+    },
+    {
+      "placement": "N2-1",
+      "publication": "Founder Ops Weekly",
+      "date": "2026-11-18",
+      "link": "https://www.ridgelinedesk.example/?utm_source=founderopsweekly&utm_medium=newsletter&utm_campaign=sponsor-2026-11&utm_content=primary-2026-11-18",
+      "code": "FOUNDEROPS11",
+      "survey_option": "Founder Ops Weekly"
+    },
+    {
+      "placement": "P1-1",
+      "publication": "Hybrid Hours",
+      "date": "2026-11-04",
+      "link": "https://www.ridgelinedesk.example/?utm_source=hybridhours&utm_medium=podcast&utm_campaign=sponsor-2026-11&utm_content=midroll-2026-11-04",
+      "code": "HYBRIDHOURS11",
+      "survey_option": "Hybrid Hours",
+      "vanity_url": "ridgelinedesk.example/hybrid",
+      "callrail": "one tracking number for Hybrid Hours, read out in the ad"
+    },
+    {
+      "placement": "P1-2",
+      "publication": "Hybrid Hours",
+      "date": "2026-11-11",
+      "link": "https://www.ridgelinedesk.example/?utm_source=hybridhours&utm_medium=podcast&utm_campaign=sponsor-2026-11&utm_content=midroll-2026-11-11",
+      "code": "HYBRIDHOURS11",
+      "survey_option": "Hybrid Hours",
+      "vanity_url": "ridgelinedesk.example/hybrid",
+      "callrail": "one tracking number for Hybrid Hours, read out in the ad"
+    },
+    {
+      "placement": "P1-3",
+      "publication": "Hybrid Hours",
+      "date": "2026-11-18",
+      "link": "https://www.ridgelinedesk.example/?utm_source=hybridhours&utm_medium=podcast&utm_campaign=sponsor-2026-11&utm_content=midroll-2026-11-18",
+      "code": "HYBRIDHOURS11",
+      "survey_option": "Hybrid Hours",
+      "vanity_url": "ridgelinedesk.example/hybrid",
+      "callrail": "one tracking number for Hybrid Hours, read out in the ad"
+    },
+    {
+      "placement": "P1-4",
+      "publication": "Hybrid Hours",
+      "date": "2026-11-25",
+      "link": "https://www.ridgelinedesk.example/?utm_source=hybridhours&utm_medium=podcast&utm_campaign=sponsor-2026-11&utm_content=midroll-2026-11-25",
+      "code": "HYBRIDHOURS11",
+      "survey_option": "Hybrid Hours",
+      "vanity_url": "ridgelinedesk.example/hybrid",
+      "callrail": "one tracking number for Hybrid Hours, read out in the ad"
+    }
+  ],
+  "copy": {
+    "winning_lines_used": {
+      "rule": "Google Ads: assets with at least half the field's median impressions, at or above the field's median conversions per 1,000 impressions; Meta: ads at or under the target cost per purchase; a line is used only when a ledger fact backs it",
+      "google_ads_bars": {
+        "HEADLINE": {
+          "impression_floor": 17550.0,
+          "median_conv_per_1k_impr": 1.25
+        },
+        "DESCRIPTION": {
+          "impression_floor": 16025.0,
+          "median_conv_per_1k_impr": 0.93
+        }
+      },
+      "google_ads": [
+        {
+          "text": "Desk Up in 10 Minutes",
+          "field": "HEADLINE",
+          "conv_per_1k_impr": 1.48,
+          "fact": "F4"
+        },
+        {
+          "text": "100 Nights to Decide",
+          "field": "HEADLINE",
+          "conv_per_1k_impr": 1.41,
+          "fact": "F2"
+        },
+        {
+          "text": "A 10-year frame warranty, because a desk should outlast your job.",
+          "field": "DESCRIPTION",
+          "conv_per_1k_impr": 1.23,
+          "fact": "F3"
+        }
+      ],
+      "meta": [
+        {
+          "ad": "Video | 10-minute build",
+          "cost_per_purchase": 100.65,
+          "fact": "F4"
+        },
+        {
+          "ad": "Static | 100 nights",
+          "cost_per_purchase": 112.73,
+          "fact": "F2"
+        }
+      ]
+    },
+    "lines_left_out": [
+      "Ships in 2 Days (1.08 conversions per 1,000 impressions, under the headline median 1.25)",
+      "The Last Desk You Will Buy (0.74 conversions per 1,000 impressions, under the headline median 1.25)",
+      "Standing Desks Made Simple (only 6,100 impressions, under half the headline median)",
+      "Award-winning standing desks for every home office. (0.62 conversions per 1,000 impressions, under the description median 0.93)",
+      "Meta 'Carousel | Colors' ($245.56 per purchase, over the $120 target)"
+    ],
+    "facts_used": [
+      "F2",
+      "F3",
+      "F4"
+    ],
+    "pieces": [
+      {
+        "placement": "N1 The Remote Desk, primary",
+        "variant": "A",
+        "leads_with": "Desk Up in 10 Minutes (F4)",
+        "text": "Sponsored by Ridgeline Desk Co. Your new standing desk can be up before your next meeting: a Ridgeline desk goes together in about 10 minutes with the tool in the box. It ships in 2 business days from US warehouses, and the desk frame carries a 10-year warranty. Not sure you will use it standing up? You get 100 nights to decide at home, and we pay the return shipping if it is not for you. Readers of The Remote Desk get 10% off a first order with code REMOTEDESK11 at ridgelinedesk.example.",
+        "words": 92,
+        "spec": "90 to 120 words",
+        "fits": true,
+        "facts": [
+          "F1",
+          "F2",
+          "F3",
+          "F4",
+          "F6"
+        ]
+      },
+      {
+        "placement": "N1 The Remote Desk, primary",
+        "variant": "B",
+        "leads_with": "100 Nights to Decide (F2)",
+        "text": "Sponsored by Ridgeline Desk Co. Not sure a standing desk is for you? Live with a Ridgeline desk for 100 nights at home, and if it is not right, we pay the return shipping. It ships in 2 business days from US warehouses and goes together in about 10 minutes with the included tool. The desk frame has a 10-year warranty. Buying for a team of 5 or more? Our office sales line has volume pricing. Remote Desk readers get 10% off a first order with code REMOTEDESK11 at ridgelinedesk.example.",
+        "words": 90,
+        "spec": "90 to 120 words",
+        "fits": true,
+        "facts": [
+          "F1",
+          "F2",
+          "F3",
+          "F4",
+          "F5",
+          "F6"
+        ]
+      },
+      {
+        "placement": "N2 Founder Ops Weekly, primary (if the counter is accepted)",
+        "variant": "A",
+        "leads_with": "Desk Up in 10 Minutes (F4)",
+        "text": "Sponsored by Ridgeline Desk Co. Furnishing a small office this quarter? Ridgeline standing desks go together in about 10 minutes, ship in 2 business days, and carry a 10-year frame warranty. Every desk comes with 100 nights to decide. Ordering 5 or more? Call our office sales line for volume pricing. For a single desk, code FOUNDEROPS11 takes 10% off a first order at ridgelinedesk.example.",
+        "words": 65,
+        "spec": "60 to 90 words",
+        "fits": true,
+        "facts": [
+          "F1",
+          "F2",
+          "F3",
+          "F4",
+          "F5",
+          "F6"
+        ]
+      },
+      {
+        "placement": "P1 Hybrid Hours, 60-second host read (if the counter is accepted)",
+        "host_read": {
+          "disclosure": "Say it out loud at the start: 'This episode is sponsored by Ridgeline Desk Co.'",
+          "talking_points": [
+            "You build it in about 10 minutes with the tool in the box (F4)",
+            "100 nights to decide at home, and Ridgeline pays the return shipping (F2)",
+            "Ships in 2 business days, with a 10-year warranty on the frame (F1, F3)",
+            "10% off a first order with the code (F6); office orders of 5 or more get volume pricing on the phone (F5)"
+          ],
+          "call_to_action": "Go to ridgelinedesk.example/hybrid or use code HYBRIDHOURS11 for 10% off a first order; office orders of 5 or more can call [the Hybrid Hours CallRail number, read out by the host]",
+          "leave_to_the_host": "their own story of working from home; no script beyond the points, the code and the disclosure",
+          "do_not_say": [
+            "award-winning (no source in the ledger)",
+            "the last desk you will buy (no ledger fact, and it trails in Google Ads)"
+          ]
+        }
+      }
+    ]
+  },
+  "unknowns": [
+    "Teamwright Hour audio downloads: no host dashboard or certified count",
+    "Gadget Drop Daily clicks per sponsor slot: no proof sent"
+  ],
+  "offered_after_confirmation": [
+    {
+      "step": "create the codes FOUNDEROPS11, HYBRIDHOURS11, REMOTEDESK11 (10% off a first order, ledger F6)",
+      "how": "in Shopify admin: the connector has no Shopify action that creates a discount code",
+      "status": "for the user"
+    },
+    {
+      "step": "a CallRail tracking number for Hybrid Hours",
+      "action": "callrail create_tracker",
+      "status": "not run",
+      "warning": "a new number can add to the CallRail bill",
+      "payload": {
+        "platform": "callrail",
+        "action": "create_tracker",
+        "workspace_id": "<WORKSPACE_ID>",
+        "brand_id": "<BRAND_ID>",
+        "body": {
+          "name": "Hybrid Hours podcast",
+          "type": "source",
+          "company_id": "<COMPANY_ID>",
+          "call_flow": "<CALL_FLOW from actions_details, routed to the office sales line>",
+          "source": "<SOURCE from actions_details>",
+          "tracking_number": {
+            "area_code": "720"
+          }
+        }
+      }
+    },
+    {
+      "step": "log the plan in a new, empty placement-log tab (column names read with get_sheet_peak first)",
+      "action": "google-sheets update_cells",
+      "status": "not run",
+      "payload": {
+        "platform": "google-sheets",
+        "action": "update_cells",
+        "workspace_id": "<WORKSPACE_ID>",
+        "brand_id": "<BRAND_ID>",
+        "spreadsheet_id": "<SPREADSHEET_ID>",
+        "sheet_id": "<SHEET_ID>",
+        "range": "A1:F8",
+        "values": [
+          [
+            "Placement",
+            "Publication",
+            "Date",
+            "Code",
+            "Tagged link",
+            "Rebook if"
+          ],
+          [
+            "N1-1",
+            "The Remote Desk",
+            "2026-11-10",
+            "REMOTEDESK11",
+            "https://www.ridgelinedesk.example/?utm_source=theremotedesk&utm_medium=newsletter&utm_campaign=sponsor-2026-11&utm_content=primary-2026-11-10",
+            "attributed orders >= 31 (cost per order <= $120)"
+          ],
+          [
+            "N1-2",
+            "The Remote Desk",
+            "2026-11-24",
+            "REMOTEDESK11",
+            "https://www.ridgelinedesk.example/?utm_source=theremotedesk&utm_medium=newsletter&utm_campaign=sponsor-2026-11&utm_content=primary-2026-11-24",
+            "attributed orders >= 31 (cost per order <= $120)"
+          ],
+          [
+            "N2-1",
+            "Founder Ops Weekly",
+            "2026-11-18",
+            "FOUNDEROPS11",
+            "https://www.ridgelinedesk.example/?utm_source=founderopsweekly&utm_medium=newsletter&utm_campaign=sponsor-2026-11&utm_content=primary-2026-11-18",
+            "attributed orders >= 7 (cost per order <= $120)"
+          ],
+          [
+            "P1-1",
+            "Hybrid Hours",
+            "2026-11-04",
+            "HYBRIDHOURS11",
+            "https://www.ridgelinedesk.example/?utm_source=hybridhours&utm_medium=podcast&utm_campaign=sponsor-2026-11&utm_content=midroll-2026-11-04",
+            "attributed orders >= 13 (cost per order <= $120)"
+          ],
+          [
+            "P1-2",
+            "Hybrid Hours",
+            "2026-11-11",
+            "HYBRIDHOURS11",
+            "https://www.ridgelinedesk.example/?utm_source=hybridhours&utm_medium=podcast&utm_campaign=sponsor-2026-11&utm_content=midroll-2026-11-11",
+            "attributed orders >= 13 (cost per order <= $120)"
+          ],
+          [
+            "P1-3",
+            "Hybrid Hours",
+            "2026-11-18",
+            "HYBRIDHOURS11",
+            "https://www.ridgelinedesk.example/?utm_source=hybridhours&utm_medium=podcast&utm_campaign=sponsor-2026-11&utm_content=midroll-2026-11-18",
+            "attributed orders >= 13 (cost per order <= $120)"
+          ],
+          [
+            "P1-4",
+            "Hybrid Hours",
+            "2026-11-25",
+            "HYBRIDHOURS11",
+            "https://www.ridgelinedesk.example/?utm_source=hybridhours&utm_medium=podcast&utm_campaign=sponsor-2026-11&utm_content=midroll-2026-11-25",
+            "attributed orders >= 13 (cost per order <= $120)"
+          ]
+        ],
+        "value_input_option": "USER_ENTERED"
+      }
+    }
+  ]
+}

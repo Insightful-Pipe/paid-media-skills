@@ -1,0 +1,420 @@
+{
+  "header": {
+    "business": "Quillbrook Coffee Co.",
+    "run_date": "2026-10-28",
+    "currency": "USD",
+    "target_cost_per_first_time_purchaser": 75.0,
+    "budget": 16000.0,
+    "flight": "2026-09-21 to 2026-10-18 (4 weeks)",
+    "read_window": "2026-09-21 to 2026-10-25 (5 weeks: the flight plus 7 days)",
+    "test_regions": [
+      "Colorado",
+      "Oregon",
+      "Minnesota"
+    ],
+    "control_regions": [
+      "Missouri",
+      "Michigan",
+      "Utah"
+    ],
+    "sources": [
+      "GA4",
+      "Google Ads",
+      "Search Console",
+      "Shopify",
+      "Spotify Ads Manager export"
+    ]
+  },
+  "part_1_plan": {
+    "quotes": [
+      {
+        "line": "L1",
+        "seller": "Spotify Ads Manager",
+        "placement": "music",
+        "targeting": "genre: jazz and lo-fi",
+        "effective_cpm": 18.0,
+        "how": "(18.0 + 0.0) x (1 + 0.0%)",
+        "qualified": true,
+        "why_not": null
+      },
+      {
+        "line": "L2",
+        "seller": "Spotify Ads Manager",
+        "placement": "music",
+        "targeting": "interest: food and cooking",
+        "effective_cpm": 20.0,
+        "how": "(20.0 + 0.0) x (1 + 0.0%)",
+        "qualified": true,
+        "why_not": null
+      },
+      {
+        "line": "L3",
+        "seller": "Spotify Ads Manager",
+        "placement": "podcast",
+        "targeting": "interest: food and cooking",
+        "effective_cpm": 24.0,
+        "how": "(24.0 + 0.0) x (1 + 0.0%)",
+        "qualified": true,
+        "why_not": null
+      },
+      {
+        "line": "L4",
+        "seller": "Marlowpine Radio (invented streaming radio seller)",
+        "placement": "streaming radio",
+        "targeting": "adults 25 to 54, food and drink interest",
+        "effective_cpm": 27.5,
+        "how": "(25.0 + 0.0) x (1 + 10.0%)",
+        "qualified": true,
+        "why_not": null
+      },
+      {
+        "line": "L5",
+        "seller": "Programmatic audio through a DSP (invented agency quote)",
+        "placement": "programmatic audio",
+        "targeting": "third-party coffee buyer segment",
+        "effective_cpm": 16.67,
+        "how": "(12.0 + 2.5) x (1 + 15.0%)",
+        "qualified": false,
+        "why_not": [
+          "delivery report has no reach or frequency",
+          "minimum spend $10,000 is above the $6,400 line cap"
+        ]
+      }
+    ],
+    "budget_and_delivery_plan": {
+      "planned_flight_frequency": 6.0,
+      "line_cap": 6400.0,
+      "lines": [
+        {
+          "line": "L1",
+          "status": "funded",
+          "line_budget": 4860.0,
+          "capped_by": "useful impressions (75% of its audience x F)",
+          "effective_cpm": 18.0,
+          "planned_impressions": 270000,
+          "planned_reach": 45000,
+          "planned_frequency": 6.0,
+          "weekly_cap": 3,
+          "audience_in_test_states": 60000,
+          "reach_share_pct": 75.0,
+          "useful_impressions": 270000
+        },
+        {
+          "line": "L2",
+          "status": "funded",
+          "line_budget": 6400.0,
+          "capped_by": "line cap",
+          "effective_cpm": 20.0,
+          "planned_impressions": 320000,
+          "planned_reach": 53333,
+          "planned_frequency": 6.0,
+          "weekly_cap": 3,
+          "audience_in_test_states": 410000,
+          "reach_share_pct": 13.0,
+          "useful_impressions": 1845000
+        },
+        {
+          "line": "L3",
+          "status": "funded",
+          "line_budget": 4740.0,
+          "capped_by": "remaining budget",
+          "effective_cpm": 24.0,
+          "planned_impressions": 197500,
+          "planned_reach": 32917,
+          "planned_frequency": 6.0,
+          "weekly_cap": 3,
+          "audience_in_test_states": 150000,
+          "reach_share_pct": 21.9,
+          "useful_impressions": 675000
+        },
+        {
+          "line": "L4",
+          "status": "qualified, not funded",
+          "line_budget": 0.0,
+          "why": "the budget ran out on cheaper lines; first in line for the next flight"
+        }
+      ],
+      "planned_spend": 16000.0,
+      "left_unplanned": 0.0
+    },
+    "spot": [
+      {
+        "line": "L1",
+        "code": "QBJAZZ",
+        "script_30s": "Quillbrook Coffee here. Stale grocery beans? We roast to order and ship within two days, so your morning cup tastes like the cafe. Go to quillbrookcoffee dot example slash listen and use code QBJAZZ for twenty percent off your first bag. That's quillbrookcoffee dot example slash listen, code QBJAZZ.",
+        "words_30s": 49,
+        "code_said": 2,
+        "vanity_url_said": 2,
+        "script_15s": "Quillbrook Coffee: roasted to order, shipped in two days. Twenty percent off your first bag at quillbrookcoffee dot example slash listen, code QBJAZZ.",
+        "words_15s": 23
+      },
+      {
+        "line": "L2",
+        "code": "QBFOOD",
+        "script_30s": "Quillbrook Coffee here. Stale grocery beans? We roast to order and ship within two days, so your morning cup tastes like the cafe. Go to quillbrookcoffee dot example slash listen and use code QBFOOD for twenty percent off your first bag. That's quillbrookcoffee dot example slash listen, code QBFOOD.",
+        "words_30s": 49,
+        "code_said": 2,
+        "vanity_url_said": 2,
+        "script_15s": "Quillbrook Coffee: roasted to order, shipped in two days. Twenty percent off your first bag at quillbrookcoffee dot example slash listen, code QBFOOD.",
+        "words_15s": 23
+      },
+      {
+        "line": "L3",
+        "code": "QBPOD",
+        "script_30s": "Quillbrook Coffee here. Stale grocery beans? We roast to order and ship within two days, so your morning cup tastes like the cafe. Go to quillbrookcoffee dot example slash listen and use code QBPOD for twenty percent off your first bag. That's quillbrookcoffee dot example slash listen, code QBPOD.",
+        "words_30s": 49,
+        "code_said": 2,
+        "vanity_url_said": 2,
+        "script_15s": "Quillbrook Coffee: roasted to order, shipped in two days. Twenty percent off your first bag at quillbrookcoffee dot example slash listen, code QBPOD.",
+        "words_15s": 23
+      }
+    ],
+    "code_settings": "20% off, one use per customer, limited to customers with no past orders (a Shopify customer segment), so repeat buyers can't redeem it",
+    "companion": {
+      "image": {
+        "L1": "music companion: 1:1, 1080 x 1080 PNG, under 200 KB (meets the 600 x 600 minimum)",
+        "L2": "music companion: 1:1, 1080 x 1080 PNG, under 200 KB (meets the 600 x 600 minimum)",
+        "L3": "podcast call-to-action card: 640 x 640 JPG, under 200 KB"
+      },
+      "tagline": "Roasted to order. 20% off your first bag",
+      "tagline_chars": 40,
+      "tagline_limit": 40,
+      "advertiser_name": "Quillbrook Coffee Co.",
+      "advertiser_name_chars": 21,
+      "advertiser_name_limit": "25 (music), 30 (podcast card)",
+      "click_urls": {
+        "L1": "https://www.quillbrookcoffee.example/listen?utm_source=spotify&utm_medium=audio&utm_campaign=fall-audio-test&utm_content=l1",
+        "L2": "https://www.quillbrookcoffee.example/listen?utm_source=spotify&utm_medium=audio&utm_campaign=fall-audio-test&utm_content=l2",
+        "L3": "https://www.quillbrookcoffee.example/listen?utm_source=spotify&utm_medium=audio&utm_campaign=fall-audio-test&utm_content=l3"
+      }
+    },
+    "controls": {
+      "method": "drop candidates that share a metro area with a test state, then pick the lowest CV of the weekly new-user ratio to the test group, as many as there are test states",
+      "candidates": [
+        {
+          "region": "Missouri",
+          "weekly_new_users_mean": 1274,
+          "ratio_cv_pct": 4.7,
+          "shares_metro_with_test": null,
+          "picked": true
+        },
+        {
+          "region": "Washington",
+          "weekly_new_users_mean": 2257,
+          "ratio_cv_pct": 5.4,
+          "shares_metro_with_test": "Portland-Vancouver-Hillsboro, OR-WA (with Oregon)",
+          "picked": false,
+          "dropped": "shares a metro area with a test state: Portland-Vancouver-Hillsboro, OR-WA (with Oregon)"
+        },
+        {
+          "region": "Wisconsin",
+          "weekly_new_users_mean": 1366,
+          "ratio_cv_pct": 5.7,
+          "shares_metro_with_test": "Minneapolis-St. Paul-Bloomington, MN-WI (with Minnesota)",
+          "picked": false,
+          "dropped": "shares a metro area with a test state: Minneapolis-St. Paul-Bloomington, MN-WI (with Minnesota)"
+        },
+        {
+          "region": "Michigan",
+          "weekly_new_users_mean": 1838,
+          "ratio_cv_pct": 6.5,
+          "shares_metro_with_test": null,
+          "picked": true
+        },
+        {
+          "region": "Utah",
+          "weekly_new_users_mean": 1197,
+          "ratio_cv_pct": 7.4,
+          "shares_metro_with_test": null,
+          "picked": true
+        },
+        {
+          "region": "Arizona",
+          "weekly_new_users_mean": 2177,
+          "ratio_cv_pct": 15.2,
+          "shares_metro_with_test": null,
+          "picked": false
+        }
+      ],
+      "picked": [
+        "Missouri",
+        "Michigan",
+        "Utah"
+      ]
+    },
+    "baseline": {
+      "new_users_direct_and_organic": {
+        "baseline_ratio": 1.2315,
+        "weekly_ratio_cv_pct": 3.9,
+        "noise_floor_pct": 3.5,
+        "test_weekly_mean": 5307.5
+      },
+      "first_time_purchasers": {
+        "baseline_ratio": 1.2429,
+        "weekly_ratio_cv_pct": 11.8,
+        "noise_floor_pct": 10.6,
+        "test_weekly_mean": 394
+      },
+      "brand_campaign_impressions": {
+        "baseline_ratio": 1.2067,
+        "weekly_ratio_cv_pct": 4.0,
+        "noise_floor_pct": 3.5,
+        "test_weekly_mean": 3051.4
+      }
+    },
+    "readability": {
+      "predicted_first_time_purchasers_in_read_window": 1970,
+      "break_even_incremental_purchasers": 213.3,
+      "break_even_lift_pct": 10.8,
+      "first_time_purchaser_noise_floor_pct": 10.6,
+      "readable": true
+    },
+    "rule": {
+      "scale": "first-time purchaser lift above 10.6% and cost per incremental first-time purchaser at or under $75",
+      "retest": "first-time purchaser lift above 10.6% with cost up to $112.50, or new-user lift above 3.5% or brand-impression lift above 3.5% while first-time purchasers stay inside the noise",
+      "stop": "any other result"
+    }
+  },
+  "part_2_readout": {
+    "delivery_vs_plan": [
+      {
+        "line": "L1",
+        "planned_impressions": 270000,
+        "delivered_impressions": 267300,
+        "delivered_pct_of_plan": 99.0,
+        "reach": 43200,
+        "frequency": 6.2,
+        "planned_frequency": 6.0,
+        "completion_rate_pct": 92.1,
+        "spend": 4811.4,
+        "impressions_outside_test_states_pct": 0.4,
+        "flags": null
+      },
+      {
+        "line": "L2",
+        "planned_impressions": 320000,
+        "delivered_impressions": 310400,
+        "delivered_pct_of_plan": 97.0,
+        "reach": 54933,
+        "frequency": 5.7,
+        "planned_frequency": 6.0,
+        "completion_rate_pct": 90.4,
+        "spend": 6208.0,
+        "impressions_outside_test_states_pct": 0.9,
+        "flags": null
+      },
+      {
+        "line": "L3",
+        "planned_impressions": 197500,
+        "delivered_impressions": 154050,
+        "delivered_pct_of_plan": 78.0,
+        "reach": 31271,
+        "frequency": 4.9,
+        "planned_frequency": 6.0,
+        "completion_rate_pct": 95.6,
+        "spend": 3697.2,
+        "impressions_outside_test_states_pct": 3.1,
+        "flags": [
+          "under-delivered: 78.0% of planned impressions (flag under 90%); $1,042.80 unspent, ask why and widen the targeting next time",
+          "3.1% of impressions played outside the test states (flag above 2%); the export doesn't split them by region, so any that played in control states would make the measured lift a little low"
+        ]
+      }
+    ],
+    "delivered_spend": 14716.6,
+    "codes": {
+      "lines": [
+        {
+          "line": "L1",
+          "code": "QBJAZZ",
+          "paid_redemptions": 46,
+          "in_test_states": 45,
+          "outside_test_states": 1,
+          "leakage_pct": 2.2,
+          "line_spend": 4811.4,
+          "cost_per_code_order": 106.92
+        },
+        {
+          "line": "L2",
+          "code": "QBFOOD",
+          "paid_redemptions": 109,
+          "in_test_states": 87,
+          "outside_test_states": 22,
+          "leakage_pct": 20.2,
+          "line_spend": 6208.0,
+          "cost_per_code_order": 71.36
+        },
+        {
+          "line": "L3",
+          "code": "QBPOD",
+          "paid_redemptions": 22,
+          "in_test_states": 21,
+          "outside_test_states": 1,
+          "leakage_pct": 4.5,
+          "line_spend": 3697.2,
+          "cost_per_code_order": 176.06
+        }
+      ],
+      "refunded_or_cancelled_left_out": 2,
+      "in_region_code_orders_total": 153
+    },
+    "vanity_url_sessions": {
+      "test_states": 211,
+      "other_regions": 64
+    },
+    "lift": {
+      "new_users_direct_and_organic": {
+        "test_actual": 31760,
+        "control_actual": 21877,
+        "expected_test": 26942,
+        "incremental": 4818,
+        "lift_pct": 17.9,
+        "noise_floor_pct": 3.5,
+        "above_noise_floor": true
+      },
+      "first_time_purchasers": {
+        "test_actual": 2272,
+        "control_actual": 1624,
+        "expected_test": 2018,
+        "incremental": 254,
+        "lift_pct": 12.6,
+        "noise_floor_pct": 10.6,
+        "above_noise_floor": true
+      },
+      "brand_campaign_impressions": {
+        "test_actual": 19085,
+        "control_actual": 12995,
+        "expected_test": 15681,
+        "incremental": 3404,
+        "lift_pct": 21.7,
+        "noise_floor_pct": 3.5,
+        "above_noise_floor": true
+      }
+    },
+    "cost_per_incremental_first_time_purchaser": 57.94,
+    "cross_check": "153 in-region code orders against 254 incremental first-time purchasers: fewer code orders than the lift estimate, as expected, since many listeners buy without the code",
+    "search_console_brand_clicks_context": {
+      "baseline_weekly_mean": 2325.9,
+      "flight_weekly_mean": 2530,
+      "change_pct": 8.8,
+      "note": "national, so context only, not a test against control"
+    },
+    "verdict": "scale",
+    "why": "first-time purchaser lift is above its noise floor and the cost per incremental buyer is at or under target",
+    "next_flight_changes": [
+      "L3: raise the bid or widen the podcast targeting, and confirm location targeting is set to the test states only before relaunch",
+      "L4: qualified but unfunded this time; fund it in the next flight",
+      "QBFOOD: 20.2% of its redemptions shipped outside the test states, so it was shared; use a fresh code per line in the next flight"
+    ]
+  },
+  "unknowns": [
+    "Lift covers all lines together; it can't be split by line. Codes and delivery show which lines pulled their weight.",
+    "Brand clicks in Search Console are national only; there is no state split to test against control.",
+    "Completion rates are the sellers' own figures; they are reported, not graded."
+  ],
+  "offered_after_confirmation": [
+    {
+      "action": "none run",
+      "why": "the store is on Shopify, where codes are made in Shopify admin; WooCommerce create_coupon is offered only for WooCommerce stores"
+    }
+  ]
+}

@@ -1,0 +1,781 @@
+{
+  "header": {
+    "advertiser": "Example Booking Software (TikTok ad account)",
+    "advertiser_id": "7000000000000000001",
+    "currency": "USD",
+    "time_zone": "America/New_York",
+    "run_date": "2026-10-28",
+    "dates": {
+      "last_7_days": "2026-10-21 to 2026-10-27",
+      "prior_7_days": "2026-10-14 to 2026-10-20",
+      "last_30_days": "2026-09-28 to 2026-10-27",
+      "lifetime": "all time"
+    },
+    "jobs": [
+      "build from a brief",
+      "pause fatigued creatives",
+      "scale winning ad groups"
+    ],
+    "target_cost_per_result": {
+      "CLICK": {
+        "target": 0.39,
+        "from": "$893.89 / 2,318 results over the last 30 days, 1 ad group",
+        "evidence": "enough (30 or more results)"
+      },
+      "CONVERT": {
+        "target": 30.52,
+        "from": "$12,728.11 / 417 results over the last 30 days, 3 ad groups",
+        "evidence": "enough (30 or more results)"
+      }
+    },
+    "target_note": "No target was given, so each optimization goal uses the account's own 30-day cost per result. Clicks and sign-ups are never compared with each other."
+  },
+  "account_read": {
+    "campaigns": 5,
+    "campaigns_with_any_spend": 4,
+    "delivering_now": {
+      "campaigns": 3,
+      "ad_groups": 4,
+      "ads": 7
+    },
+    "lifetime": {
+      "spend": 30257.88,
+      "impressions": 3210594,
+      "pixel_conversions": 904
+    },
+    "last_30_days": {
+      "spend": 13622.0,
+      "results_by_goal": {
+        "CLICK": 2318,
+        "CONVERT": 417
+      }
+    },
+    "balance": {
+      "value": 1840.0,
+      "note": "Positive, so funding is not what decides delivery."
+    },
+    "reading": "Live: 3 campaigns are delivering and spent $13,622.00 in the last 30 days. \"Sign-ups | Fitness studios | Spring\" spent in the spring and is paused; \"TEST | QA build | do not run\" never spent and is a test build, so it is not evidence of anything.",
+    "reusable_pieces": {
+      "identity": {
+        "identity_type": "TT_USER",
+        "identity_id": "5b0e7c2a-1111-4c6e-9d3f-0000000000a1",
+        "used_by_ads": "every ad"
+      },
+      "videos": [
+        {
+          "video_id": "v20000000000000000000000000000001",
+          "cover_image_ids": [
+            "example-cover-0001"
+          ],
+          "from_ad": "Testimonial | Salon owner books from bed",
+          "lifetime_two_second_view_rate_pct": 36.0
+        },
+        {
+          "video_id": "v20000000000000000000000000000003",
+          "cover_image_ids": [
+            "example-cover-0003"
+          ],
+          "from_ad": "Question | Who books your Saturday?",
+          "lifetime_two_second_view_rate_pct": 33.9
+        }
+      ],
+      "videos_why": "The two videos that run in the salon ad group and are not fatigued. \"Demo | Booking page in 20 seconds\" is left out because Step 3 pauses it. 1 video in the account was never shown to anyone (it sits only on the QA ad), so it is not used.",
+      "pixel": {
+        "pixel_id": "7300000000000000011",
+        "on_ad_groups": 4,
+        "lifetime_conversions": 904
+      },
+      "landing_page_url": "https://www.example.com/features/payments/?utm_source=tiktok&utm_medium=paid&utm_id=__CAMPAIGN_ID__&utm_campaign=__CAMPAIGN_NAME__",
+      "landing_page_why": "The brief's deposits page, with the UTM pattern and macros every ad in the account already uses.",
+      "ad_group_settings_copied": {
+        "from": "US | Salon owners 25-54 | Broad",
+        "placement_type": "PLACEMENT_TYPE_NORMAL",
+        "placements": [
+          "PLACEMENT_TIKTOK"
+        ],
+        "age_groups": [
+          "AGE_25_34",
+          "AGE_35_44",
+          "AGE_45_54"
+        ],
+        "gender": "GENDER_UNLIMITED"
+      },
+      "call_to_action": "SIGN_UP, the CTA of the ad that spent the most"
+    },
+    "control_ad": {
+      "ad": "Testimonial | Salon owner books from bed",
+      "caption": "My clients book themselves now, even at midnight.",
+      "impressions": 885675,
+      "ctr_pct": 1.28,
+      "two_second_view_rate_pct": 36.0,
+      "results": 337,
+      "cost_per_result": 25.85,
+      "target": 30.52,
+      "verdict": "the account's biggest spender at $25.85 per sign-up, under the $30.52 target; its caption is the control"
+    }
+  },
+  "build": {
+    "objective": {
+      "objective_type": "CONVERSIONS",
+      "optimization_goal": "CONVERT",
+      "pixel_id": "7300000000000000011",
+      "optimization_event": "ON_WEB_REGISTER",
+      "billing_event": "OCPM",
+      "why": "The goal is sign-ups. Pixel 7300000000000000011 sits on 4 ad groups and has recorded 904 conversions in the account's life, and you confirmed the sign-up event (Complete Registration) in Events Manager, so the campaign optimizes for sign-ups, not clicks.",
+      "untested": "The CONVERSIONS create shape is untested until its first real create; if TikTok returns an error, it is read back to you word for word."
+    },
+    "structure": {
+      "campaigns": 1,
+      "campaign_budget_mode": "BUDGET_MODE_INFINITE",
+      "ad_groups": 1,
+      "why": "One broad ad group: no second audience was named, and TikTok finds buyers through the creative. \"US | Salon owners 25-54 | Broad\" already reaches salon owners; the new campaign differs by message (deposits) and landing page."
+    },
+    "budget_check": {
+      "ad_group_daily_budget": 300,
+      "tiktok_minimum": "at least 20",
+      "passes_minimum": true,
+      "target_cost_per_result": 30.52,
+      "seven_x_target": 213.64,
+      "passes_seven_x": true,
+      "reading": "$300.00 a day is at least 7 x the $30.52 target ($213.64), so it buys about 69 sign-ups a week at the target, enough to leave the learning phase. The target rests on 417 results."
+    },
+    "bidding": "BID_TYPE_NO_BID (lowest cost)",
+    "locations": [
+      {
+        "name": "United States",
+        "geo_id": "6252001",
+        "geo_type": "COUNTRY",
+        "status": "ENABLED",
+        "note": "The search also returned \"United States Minor Outlying Islands\", a look-alike, which is dropped."
+      }
+    ],
+    "interests": {
+      "recommended_categories": 9,
+      "top_level": [
+        "Beauty & Personal Care",
+        "Apparel & Accessories",
+        "Sports & Outdoors"
+      ],
+      "second_level": [
+        "Hair Care",
+        "Skin Care",
+        "Makeup",
+        "Nail Care",
+        "Fitness",
+        "Women's Clothing"
+      ],
+      "decision": "None fits: these describe salon and spa clients, not the owners who buy booking software, so the ad group targets broadly."
+    },
+    "captions": [
+      {
+        "angle": "pain",
+        "text": "A no-show leaves the whole slot empty. Take a deposit when clients book.",
+        "characters": 72,
+        "video": "v20000000000000000000000000000001",
+        "changes_from_control": "names the problem the control leaves out (an empty slot from a no-show) and sells the new deposits feature"
+      },
+      {
+        "angle": "outcome",
+        "text": "Every booking arrives with a deposit already paid. No more chasing.",
+        "characters": 67,
+        "video": "v20000000000000000000000000000003",
+        "changes_from_control": "states one concrete result of deposits instead of the control's convenience promise"
+      },
+      {
+        "angle": "how it works",
+        "text": "Clients pick a time, pay a deposit online, and get a reminder before they come.",
+        "characters": 79,
+        "video": "v20000000000000000000000000000001",
+        "changes_from_control": "walks through the client's three steps; the control only says clients book themselves"
+      },
+      {
+        "angle": "identity",
+        "text": "Salon and spa owners: take deposits at booking, right from your booking page.",
+        "characters": 77,
+        "video": "v20000000000000000000000000000003",
+        "changes_from_control": "calls out salon and spa owners in the first words"
+      },
+      {
+        "angle": "curiosity",
+        "text": "What changes when every client pays something before the appointment?",
+        "characters": 69,
+        "video": "v20000000000000000000000000000001",
+        "changes_from_control": "opens with a question the video has to answer"
+      }
+    ],
+    "caption_note": "The five ads alternate between the two videos above. Neither shows deposits, so add two or three new videos built on the hooks below. The control caption \"My clients book themselves now, even at midnight.\" stays as the baseline.",
+    "call_to_action": "SIGN_UP",
+    "call_to_action_why": "SIGN_UP matches the goal (sign-ups) and is the CTA of the account's best ad.",
+    "video_hooks": [
+      {
+        "angle": "pain",
+        "first_two_seconds": "Another no-show. Another empty chair."
+      },
+      {
+        "angle": "outcome",
+        "first_two_seconds": "Deposit paid before they even arrive."
+      },
+      {
+        "angle": "how it works",
+        "first_two_seconds": "Pick a time. Pay the deposit. Booked."
+      }
+    ],
+    "payloads": [
+      {
+        "step": 1,
+        "tool": "execute_action",
+        "status": "not run",
+        "body": {
+          "platform": "tiktok-ads",
+          "workspace_id": 1,
+          "brand_id": 1,
+          "account_id": "7000000000000000001",
+          "advertiser_id": "7000000000000000001",
+          "action": "campaign_create",
+          "campaign_name": "Example Booking Software | CONVERSIONS | US | 2026-10",
+          "objective_type": "CONVERSIONS",
+          "budget_mode": "BUDGET_MODE_INFINITE"
+        }
+      },
+      {
+        "step": 2,
+        "tool": "execute_action",
+        "status": "not run",
+        "body": {
+          "platform": "tiktok-ads",
+          "workspace_id": 1,
+          "brand_id": 1,
+          "account_id": "7000000000000000001",
+          "advertiser_id": "7000000000000000001",
+          "action": "adgroup_create",
+          "campaign_id": "<FROM CAMPAIGN_CREATE>",
+          "adgroup_name": "US | Salon and spa owners 25-54 | Sign-ups",
+          "promotion_type": "WEBSITE",
+          "placement_type": "PLACEMENT_TYPE_NORMAL",
+          "placements": [
+            "PLACEMENT_TIKTOK"
+          ],
+          "location_ids": [
+            "6252001"
+          ],
+          "age_groups": [
+            "AGE_25_34",
+            "AGE_35_44",
+            "AGE_45_54"
+          ],
+          "gender": "GENDER_UNLIMITED",
+          "budget_mode": "BUDGET_MODE_DAY",
+          "budget": 300,
+          "schedule_type": "SCHEDULE_FROM_NOW",
+          "optimization_goal": "CONVERT",
+          "pixel_id": "7300000000000000011",
+          "optimization_event": "ON_WEB_REGISTER",
+          "billing_event": "OCPM",
+          "bid_type": "BID_TYPE_NO_BID",
+          "pacing": "PACING_MODE_SMOOTH"
+        }
+      },
+      {
+        "step": 3,
+        "tool": "execute_action",
+        "status": "not run",
+        "body": {
+          "platform": "tiktok-ads",
+          "workspace_id": 1,
+          "brand_id": 1,
+          "account_id": "7000000000000000001",
+          "advertiser_id": "7000000000000000001",
+          "action": "ad_create",
+          "adgroup_id": "<FROM ADGROUP_CREATE>",
+          "creatives": [
+            {
+              "ad_name": "Example Booking Software | pain | v1",
+              "ad_format": "SINGLE_VIDEO",
+              "ad_text": "A no-show leaves the whole slot empty. Take a deposit when clients book.",
+              "video_id": "v20000000000000000000000000000001",
+              "image_ids": [
+                "example-cover-0001"
+              ],
+              "identity_id": "5b0e7c2a-1111-4c6e-9d3f-0000000000a1",
+              "identity_type": "TT_USER",
+              "call_to_action": "SIGN_UP",
+              "landing_page_url": "https://www.example.com/features/payments/?utm_source=tiktok&utm_medium=paid&utm_id=__CAMPAIGN_ID__&utm_campaign=__CAMPAIGN_NAME__",
+              "operation_status": "DISABLE"
+            },
+            {
+              "ad_name": "Example Booking Software | outcome | v1",
+              "ad_format": "SINGLE_VIDEO",
+              "ad_text": "Every booking arrives with a deposit already paid. No more chasing.",
+              "video_id": "v20000000000000000000000000000003",
+              "image_ids": [
+                "example-cover-0003"
+              ],
+              "identity_id": "5b0e7c2a-1111-4c6e-9d3f-0000000000a1",
+              "identity_type": "TT_USER",
+              "call_to_action": "SIGN_UP",
+              "landing_page_url": "https://www.example.com/features/payments/?utm_source=tiktok&utm_medium=paid&utm_id=__CAMPAIGN_ID__&utm_campaign=__CAMPAIGN_NAME__",
+              "operation_status": "DISABLE"
+            },
+            {
+              "ad_name": "Example Booking Software | how it works | v1",
+              "ad_format": "SINGLE_VIDEO",
+              "ad_text": "Clients pick a time, pay a deposit online, and get a reminder before they come.",
+              "video_id": "v20000000000000000000000000000001",
+              "image_ids": [
+                "example-cover-0001"
+              ],
+              "identity_id": "5b0e7c2a-1111-4c6e-9d3f-0000000000a1",
+              "identity_type": "TT_USER",
+              "call_to_action": "SIGN_UP",
+              "landing_page_url": "https://www.example.com/features/payments/?utm_source=tiktok&utm_medium=paid&utm_id=__CAMPAIGN_ID__&utm_campaign=__CAMPAIGN_NAME__",
+              "operation_status": "DISABLE"
+            },
+            {
+              "ad_name": "Example Booking Software | identity | v1",
+              "ad_format": "SINGLE_VIDEO",
+              "ad_text": "Salon and spa owners: take deposits at booking, right from your booking page.",
+              "video_id": "v20000000000000000000000000000003",
+              "image_ids": [
+                "example-cover-0003"
+              ],
+              "identity_id": "5b0e7c2a-1111-4c6e-9d3f-0000000000a1",
+              "identity_type": "TT_USER",
+              "call_to_action": "SIGN_UP",
+              "landing_page_url": "https://www.example.com/features/payments/?utm_source=tiktok&utm_medium=paid&utm_id=__CAMPAIGN_ID__&utm_campaign=__CAMPAIGN_NAME__",
+              "operation_status": "DISABLE"
+            },
+            {
+              "ad_name": "Example Booking Software | curiosity | v1",
+              "ad_format": "SINGLE_VIDEO",
+              "ad_text": "What changes when every client pays something before the appointment?",
+              "video_id": "v20000000000000000000000000000001",
+              "image_ids": [
+                "example-cover-0001"
+              ],
+              "identity_id": "5b0e7c2a-1111-4c6e-9d3f-0000000000a1",
+              "identity_type": "TT_USER",
+              "call_to_action": "SIGN_UP",
+              "landing_page_url": "https://www.example.com/features/payments/?utm_source=tiktok&utm_medium=paid&utm_id=__CAMPAIGN_ID__&utm_campaign=__CAMPAIGN_NAME__",
+              "operation_status": "DISABLE"
+            }
+          ]
+        }
+      }
+    ],
+    "after_create": "The InsightfulPipe MCP always creates campaigns, ad groups and ads switched off, for safety. Check the drafts in TikTok Ads Manager and switch them on there; this skill never switches anything on."
+  },
+  "pause_fatigued_creatives": {
+    "result": "1 to pause, 1 to replace first",
+    "rule": "Judged: delivering ads with at least 1,000 impressions in each week that spent at least the target in the last 7 days. Fatigued: CTR down 25% or more (or 2-second view rate down 20% or more) and cost per result up 30% or more and above target.",
+    "judged_ads": [
+      {
+        "ad": "Testimonial | Salon owner books from bed",
+        "ad_id": "1820000000000411",
+        "ad_group": "US | Salon owners 25-54 | Broad",
+        "goal": "CONVERT",
+        "target": 30.52,
+        "impressions": {
+          "prior": 96776,
+          "last": 98127
+        },
+        "ctr_pct": {
+          "prior": 1.29,
+          "last": 1.28,
+          "change_pct": -0.8
+        },
+        "two_second_view_rate_pct": {
+          "prior": 36.1,
+          "last": 35.9,
+          "change_pct": -0.6
+        },
+        "cost_per_result": {
+          "prior": 26.43,
+          "last": 24.1,
+          "change_pct": -8.8
+        },
+        "frequency": {
+          "prior": 1.7,
+          "last": 1.8,
+          "rose": true
+        },
+        "spend_last_7_days": 963.82,
+        "verdict": "holding: keep on"
+      },
+      {
+        "ad": "Demo | Booking page in 20 seconds",
+        "ad_id": "1820000000000412",
+        "ad_group": "US | Salon owners 25-54 | Broad",
+        "goal": "CONVERT",
+        "target": 30.52,
+        "impressions": {
+          "prior": 41250,
+          "last": 39344
+        },
+        "ctr_pct": {
+          "prior": 1.28,
+          "last": 0.87,
+          "change_pct": -32.0
+        },
+        "two_second_view_rate_pct": {
+          "prior": 33.1,
+          "last": 24.2,
+          "change_pct": -26.9
+        },
+        "cost_per_result": {
+          "prior": 28.09,
+          "last": 60.41,
+          "change_pct": 115.1
+        },
+        "frequency": {
+          "prior": 2.2,
+          "last": 3.4,
+          "rose": true
+        },
+        "spend_last_7_days": 422.87,
+        "verdict": "fatigued: pause"
+      },
+      {
+        "ad": "Question | Who books your Saturday?",
+        "ad_id": "1820000000000413",
+        "ad_group": "US | Salon owners 25-54 | Broad",
+        "goal": "CONVERT",
+        "target": 30.52,
+        "impressions": {
+          "prior": 30367,
+          "last": 30803
+        },
+        "ctr_pct": {
+          "prior": 1.2,
+          "last": 1.16,
+          "change_pct": -3.3
+        },
+        "two_second_view_rate_pct": {
+          "prior": 34.3,
+          "last": 32.8,
+          "change_pct": -4.4
+        },
+        "cost_per_result": {
+          "prior": 43.94,
+          "last": 34.21,
+          "change_pct": -22.1
+        },
+        "frequency": {
+          "prior": 1.6,
+          "last": 1.7,
+          "rose": true
+        },
+        "spend_last_7_days": 307.85,
+        "verdict": "holding: keep on"
+      },
+      {
+        "ad": "Barber | Chair always full",
+        "ad_id": "1820000000000414",
+        "ad_group": "US | Barbers | Interest",
+        "goal": "CONVERT",
+        "target": 30.52,
+        "impressions": {
+          "prior": 53952,
+          "last": 51396
+        },
+        "ctr_pct": {
+          "prior": 1.15,
+          "last": 0.83,
+          "change_pct": -27.8
+        },
+        "two_second_view_rate_pct": {
+          "prior": 30.9,
+          "last": 23.1,
+          "change_pct": -25.2
+        },
+        "cost_per_result": {
+          "prior": 42.51,
+          "last": 83.96,
+          "change_pct": 97.5
+        },
+        "frequency": {
+          "prior": 2.4,
+          "last": 3.9,
+          "rose": true
+        },
+        "spend_last_7_days": 587.7,
+        "verdict": "fatigued, but the last delivering ad in its ad group: write a replacement first, then pause"
+      },
+      {
+        "ad": "Clinic | Reminders do the chasing",
+        "ad_id": "1820000000000416",
+        "ad_group": "US | Clinic managers | Broad",
+        "goal": "CONVERT",
+        "target": 30.52,
+        "impressions": {
+          "prior": 77655,
+          "last": 75129
+        },
+        "ctr_pct": {
+          "prior": 1.43,
+          "last": 0.98,
+          "change_pct": -31.5
+        },
+        "two_second_view_rate_pct": {
+          "prior": 34.9,
+          "last": 30.1,
+          "change_pct": -13.8
+        },
+        "cost_per_result": {
+          "prior": 25.76,
+          "last": 28.68,
+          "change_pct": 11.3
+        },
+        "frequency": {
+          "prior": 1.9,
+          "last": 2.6,
+          "rose": true
+        },
+        "spend_last_7_days": 688.21,
+        "verdict": "attention fell, but cost per result is $28.68, at or below the $30.52 target: keep on"
+      },
+      {
+        "ad": "Blog | 9 tactics for no-shows",
+        "ad_id": "1820000000000418",
+        "ad_group": "US | Blog readers | Clicks",
+        "goal": "CLICK",
+        "target": 0.39,
+        "impressions": {
+          "prior": 34058,
+          "last": 34360
+        },
+        "ctr_pct": {
+          "prior": 1.57,
+          "last": 1.58,
+          "change_pct": 0.6
+        },
+        "two_second_view_rate_pct": {
+          "prior": 29.2,
+          "last": 28.9,
+          "change_pct": -1.0
+        },
+        "cost_per_result": {
+          "prior": 0.39,
+          "last": 0.38,
+          "change_pct": -2.6
+        },
+        "frequency": {
+          "prior": 1.8,
+          "last": 1.9,
+          "rose": true
+        },
+        "spend_last_7_days": 208.29,
+        "verdict": "holding: keep on"
+      }
+    ],
+    "too_little_data": [
+      {
+        "ad": "Clinic | Online intake forms",
+        "ad_id": "1820000000000417",
+        "why": "0 impressions in the prior week (launched 2026-10-21)"
+      }
+    ],
+    "findings": [
+      "\"Demo | Booking page in 20 seconds\" is worn out: CTR 1.28% to 0.87% (-32.0%), 2-second view rate 33.1% to 24.2%, cost per sign-up $28.09 to $60.41 (+115.1%), and frequency rose from 2.2 to 3.4, so the same people keep seeing it. Two other ads keep delivering in its ad group, so it can be paused.",
+      "\"Barber | Chair always full\" is fatigued too (CTR -27.8%, cost per sign-up $83.96, frequency 3.9), but it is the last delivering ad in \"US | Barbers | Interest\". It is not paused: the two replacement ads below go in first, and it is paused once they deliver.",
+      "\"Clinic | Reminders do the chasing\" lost 31.5% of its CTR, but its cost per sign-up is $28.68, still under the $30.52 target, so it stays on."
+    ],
+    "replacement_first": {
+      "for_ad": "Barber | Chair always full",
+      "why": "never pause the last delivering ad in an ad group",
+      "video": "v20000000000000000000000000000001, the account's best video by 2-second view rate; a new barber video built on the hooks would be better",
+      "payload": {
+        "tool": "execute_action",
+        "status": "not run",
+        "body": {
+          "platform": "tiktok-ads",
+          "workspace_id": 1,
+          "brand_id": 1,
+          "account_id": "7000000000000000001",
+          "advertiser_id": "7000000000000000001",
+          "action": "ad_create",
+          "adgroup_id": "1810000000000312",
+          "creatives": [
+            {
+              "ad_name": "Example Booking Software | barbers identity | v2",
+              "ad_format": "SINGLE_VIDEO",
+              "ad_text": "Barbers: let clients book the next open chair, any time of day.",
+              "video_id": "v20000000000000000000000000000001",
+              "image_ids": [
+                "example-cover-0001"
+              ],
+              "identity_id": "5b0e7c2a-1111-4c6e-9d3f-0000000000a1",
+              "identity_type": "TT_USER",
+              "call_to_action": "SIGN_UP",
+              "landing_page_url": "https://www.example.com/industries/salons/?utm_source=tiktok&utm_medium=paid&utm_id=__CAMPAIGN_ID__&utm_campaign=__CAMPAIGN_NAME__",
+              "operation_status": "DISABLE"
+            },
+            {
+              "ad_name": "Example Booking Software | barbers how it works | v2",
+              "ad_format": "SINGLE_VIDEO",
+              "ad_text": "Clients pick a barber and a time online, then get a reminder before they come.",
+              "video_id": "v20000000000000000000000000000001",
+              "image_ids": [
+                "example-cover-0001"
+              ],
+              "identity_id": "5b0e7c2a-1111-4c6e-9d3f-0000000000a1",
+              "identity_type": "TT_USER",
+              "call_to_action": "SIGN_UP",
+              "landing_page_url": "https://www.example.com/industries/salons/?utm_source=tiktok&utm_medium=paid&utm_id=__CAMPAIGN_ID__&utm_campaign=__CAMPAIGN_NAME__",
+              "operation_status": "DISABLE"
+            }
+          ]
+        }
+      }
+    },
+    "payload": {
+      "tool": "execute_action",
+      "status": "not run",
+      "body": {
+        "platform": "tiktok-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "7000000000000000001",
+        "advertiser_id": "7000000000000000001",
+        "action": "ad_status_update",
+        "ad_ids": [
+          "1820000000000412"
+        ],
+        "operation_status": "DISABLE"
+      }
+    }
+  },
+  "scale_winning_ad_groups": {
+    "result": "1 winner, 1 campaign budget recommendation",
+    "rule": "A winner has 30 or more results in 30 days, cost per result at or below target over 30 and 7 days, a daily ad group budget, and spends at least 80% of it.",
+    "ad_groups": [
+      {
+        "ad_group": "US | Salon owners 25-54 | Broad",
+        "adgroup_id": "1810000000000311",
+        "goal": "CONVERT",
+        "target": 30.52,
+        "results_30_days": 244,
+        "cost_per_result": {
+          "last_30_days": 29.13,
+          "last_7_days": 30.26
+        },
+        "budget": "$250.00 a day on the ad group",
+        "avg_daily_spend_last_7_days": 242.08,
+        "spend_share_of_budget_pct": 96.8,
+        "verdict": "winner: raise $250.00 to $300.00 a day"
+      },
+      {
+        "ad_group": "US | Barbers | Interest",
+        "adgroup_id": "1810000000000312",
+        "goal": "CONVERT",
+        "target": 30.52,
+        "results_30_days": 53,
+        "cost_per_result": {
+          "last_30_days": 47.23,
+          "last_7_days": 83.96
+        },
+        "budget": "$90.00 a day on the ad group",
+        "avg_daily_spend_last_7_days": 83.96,
+        "spend_share_of_budget_pct": 93.3,
+        "verdict": "not a winner: cost per result above the $30.52 target"
+      },
+      {
+        "ad_group": "US | Clinic managers | Broad",
+        "adgroup_id": "1810000000000313",
+        "goal": "CONVERT",
+        "target": 30.52,
+        "results_30_days": 120,
+        "cost_per_result": {
+          "last_30_days": 25.98,
+          "last_7_days": 27.58
+        },
+        "budget": "none on the ad group; $150.00 a day on the campaign",
+        "avg_daily_spend_last_7_days": 122.13,
+        "spend_share_of_budget_pct": 81.4,
+        "verdict": "beats target, but its budget sits on the campaign (BUDGET_MODE_INFINITE on the ad group): raise campaign \"Sign-ups | Clinics and physio\" from $150.00 to $180.00 a day yourself; this skill doesn't run campaign budget changes"
+      },
+      {
+        "ad_group": "US | Blog readers | Clicks",
+        "adgroup_id": "1810000000000314",
+        "goal": "CLICK",
+        "target": 0.39,
+        "results_30_days": 2318,
+        "cost_per_result": {
+          "last_30_days": 0.39,
+          "last_7_days": 0.38
+        },
+        "budget": "$40.00 a day on the ad group",
+        "avg_daily_spend_last_7_days": 29.76,
+        "spend_share_of_budget_pct": 74.4,
+        "verdict": "not a winner: it spends 74.4% of its budget, so the budget is not what holds it back"
+      }
+    ],
+    "winners": [
+      {
+        "ad_group": "US | Salon owners 25-54 | Broad",
+        "adgroup_id": "1810000000000311",
+        "budget": 250,
+        "new_budget": 300
+      }
+    ],
+    "recommendations_not_run": [
+      {
+        "campaign": "Sign-ups | Clinics and physio",
+        "campaign_id": "1800000000000212",
+        "budget": 150,
+        "suggested_budget": 180
+      }
+    ],
+    "payload": {
+      "tool": "execute_action",
+      "status": "not run",
+      "body": {
+        "platform": "tiktok-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "account_id": "7000000000000000001",
+        "advertiser_id": "7000000000000000001",
+        "action": "adgroup_update",
+        "adgroup_id": "1810000000000311",
+        "budget": 300
+      }
+    },
+    "next_step": "Wait 48 hours after the raise and rerun this step before the next one."
+  },
+  "unknowns": [
+    "Whether any of these ads is a Spark Ad: every ad returns a tiktok_item_id, which doesn't prove it either way. Ask if it matters for the replacement ads.",
+    "Whether the new campaign and the salon ad group compete for the same people: no read call shows audience overlap. Watch the salon ad group's cost per sign-up after launch.",
+    "Whether TikTok accepts the CONVERSIONS create shape: it is untested until the first real create."
+  ],
+  "actions_offered_after_confirmation": [
+    {
+      "action": "campaign_create",
+      "payload": "build step 1"
+    },
+    {
+      "action": "adgroup_create",
+      "payload": "build step 2"
+    },
+    {
+      "action": "ad_create",
+      "payload": "build step 3"
+    },
+    {
+      "action": "ad_create",
+      "payload": "the replacement ads for the flagged barber ad"
+    },
+    {
+      "action": "ad_status_update",
+      "payload": "pause the fatigued ad"
+    },
+    {
+      "action": "adgroup_update",
+      "payload": "raise the winner's daily budget"
+    }
+  ],
+  "go_deeper": [
+    "tiktok-ads-analyzer for a full performance review once the new campaign has spent",
+    "ad-creative-fatigue-detector for fatigue across platforms",
+    "video-ad-script-writer to turn the three hooks into scripts",
+    "ugc-brief-generator for creator briefs"
+  ]
+}

@@ -1,0 +1,901 @@
+{
+  "first_line": "Your ChatGPT ads spent $13,783.00 for 214 conversions in the last 30 days and beat Google Search on cost per conversion ($64.41 vs $92.20), but Clinics | Paid plans | US spent $2,145.00 with 0 conversions because its event source sends nothing.",
+  "header": {
+    "account": "Example Booking Software",
+    "account_id": "adacct_example0001",
+    "status": "active",
+    "currency": "USD",
+    "time_zone": "America/New_York",
+    "date_range": "2026-09-28 to 2026-10-27",
+    "previous_range": "2026-08-29 to 2026-09-27",
+    "totals": {
+      "impressions": 1000000,
+      "clicks": 12380,
+      "spend_usd": 13783.0,
+      "ctr_pct": 1.24,
+      "cpc_usd": 1.11,
+      "conversions": 214,
+      "conversions_by_event": {
+        "order_created": 96,
+        "lead_created": 118
+      },
+      "view_through": 51
+    },
+    "previous_totals": {
+      "impressions": 820000,
+      "clicks": 10830,
+      "spend_usd": 11340.0
+    }
+  },
+  "scorecard": [
+    {
+      "area": "1. Account overview",
+      "result": "pass",
+      "key_number": "spend +21.5% vs the previous 30 days",
+      "why": "Active, review and integrity review approved; 4 campaigns active, 1 paused. Spend rose over 20%, led by Clinics | Paid plans | US (+$1,295.00), which was created on 2026-09-15."
+    },
+    {
+      "area": "2. Campaign performance",
+      "result": "fail",
+      "key_number": "Clinics | Paid plans | US: $2,145.00, 0 conversions",
+      "why": "It took 15.56% of spend with a conversion setting and no conversions. The clicks campaign has weak CTR and no measurement."
+    },
+    {
+      "area": "3. Ad groups and ads",
+      "result": "warn",
+      "key_number": "1 rejected ad, 1 weak ad",
+      "why": "Every campaign has an ad group and every group has an approved ad. One ad was rejected and one has under half its group's CTR."
+    },
+    {
+      "area": "4. Conversions",
+      "result": "pass",
+      "key_number": "paid plan CPA $76.88, demo CPA $31.51",
+      "why": "Both campaigns above the 30-conversion floor are under target (0.85x and 0.79x). ROAS on paid plans is 3.64."
+    },
+    {
+      "area": "5. Pixel and conversion event health",
+      "result": "fail",
+      "key_number": "1 of 2 sources returns no events, and a live campaign uses it",
+      "why": "The website pixel records page views, demo requests and paid plans. The server source sends nothing, and the clinics campaign bids on it."
+    },
+    {
+      "area": "6. Custom audiences",
+      "result": "warn",
+      "key_number": "1 of 3 audiences under 25k",
+      "why": "All ready with no invalid identifiers. Paying customers is too small to target; 2 audiences are used by no ad group."
+    },
+    {
+      "area": "7. Lead forms",
+      "result": "not graded",
+      "key_number": "lead tools not enabled",
+      "why": "get_lead_forms and get_lead_sync_subscriptions returned 403. Demo requests are tracked through the pixel instead."
+    },
+    {
+      "area": "8. ChatGPT Ads vs Google Search Ads",
+      "result": "pass",
+      "key_number": "CPA $64.41 vs $92.20",
+      "why": "Both sides clear every volume floor. ChatGPT Ads wins on CPA, ROAS, CPC and CPM; Google wins on CTR and conversion rate."
+    },
+    {
+      "area": "9. Budget and spend pacing",
+      "result": "warn",
+      "key_number": "Booking software | Paid plans | US reaches its cap about 2026-11-06",
+      "why": "The other active campaigns have 26.7 days or more of runway, or are on pace for their end date. Projections are estimates at the last 7 days' run rate."
+    }
+  ],
+  "ranking_rule": "Fails first, then warns; within each group by spend touched in the window, highest first; ties keep area order.",
+  "top_findings": [
+    {
+      "rank": 1,
+      "severity": "fail",
+      "area": 2,
+      "spend_touched_usd": 2145.0,
+      "finding": "Clinics | Paid plans | US took 15.56% of spend and recorded 0 conversions",
+      "evidence": "get_ad_account_insights: $2,145.00 of $13,783.00, 1,950 clicks; get_conversion_insights: 0 conversions, 0 view-through.",
+      "what_to_do": "Pause it now. The cause is in area 5: its event setting reads a source that returns no events.",
+      "who": "I can do this now"
+    },
+    {
+      "rank": 2,
+      "severity": "fail",
+      "area": 5,
+      "spend_touched_usd": 2145.0,
+      "finding": "Clinics | Paid plans | US bids on conversions from a source that sends no events",
+      "evidence": "get_event_settings: Paid plan started (server) (order_created) reads Server events (Conversions API) (cds_example0002); get_conversion_events for pid ExBkServer02 returned 0 events, while the website pixel returned 104 order_created events in the same window.",
+      "what_to_do": "Fix the server integration so it sends order_created with the same event id as the pixel, and check get_conversion_events again. The setting can't be swapped on this campaign, so if the server events can't be fixed this week, rebuild it on the Paid plan started setting.",
+      "who": "do this on your site, then in ChatGPT Ads Manager"
+    },
+    {
+      "rank": 3,
+      "severity": "warn",
+      "area": 9,
+      "spend_touched_usd": 7380.0,
+      "finding": "Booking software | Paid plans | US is on track to hit its lifetime cap about 2026-11-06, 24 days before its end date",
+      "evidence": "Spend to date $15,430.00 of a $18,000 cap (85.72%); last 7 days average $262.00 a day; 34 days to 2026-11-30. Projection (an estimate at that run rate): $24,338.00.",
+      "what_to_do": "Raise the cap to $24,400 if the campaign should run to its end date, or let it stop and move the money. It is the best-performing campaign (area 4).",
+      "who": "I can do this now"
+    },
+    {
+      "rank": 4,
+      "severity": "warn",
+      "area": 3,
+      "spend_touched_usd": 720.0,
+      "finding": "Ad \"Take deposits when clients book\" has a CTR of 0.75%, under half its ad group's 1.6%",
+      "evidence": "get_ad_account_insights by ad: 80,000 impressions, 600 clicks, $720.00; ad group Owners comparing booking software: 300,000 impressions, 4,800 clicks.",
+      "what_to_do": "Pause it and let the stronger ad in the group take its impressions, then test a new deposits angle against it.",
+      "who": "I can do this now"
+    },
+    {
+      "rank": 5,
+      "severity": "warn",
+      "area": 2,
+      "spend_touched_usd": 540.0,
+      "finding": "Fitness studios | Clicks | US has a CTR of 0.5%, under half the account's 1.24%",
+      "evidence": "get_ad_account_insights by campaign: 180,000 impressions, 900 clicks; account CTR 1.24% on 1,000,000 impressions.",
+      "what_to_do": "Rewrite the ads and context hints toward booking questions people ask in ChatGPT, or move the budget to the paid-plan campaign. This is a clicks campaign, so CTR is its main measure.",
+      "who": "do this in ChatGPT Ads Manager"
+    }
+  ],
+  "other_findings": [
+    {
+      "rank": 6,
+      "severity": "warn",
+      "area": 2,
+      "spend_touched_usd": 540.0,
+      "finding": "Fitness studios | Clicks | US spent $540.00 with no conversion setting",
+      "evidence": "get_campaigns: conversion_event_setting_ids is empty; get_ad_account_insights: $540.00 spend in the window.",
+      "what_to_do": "Settings can't be added to an existing campaign. If these clicks should turn into sign-ups, build its replacement with the Paid plan started setting attached at creation.",
+      "who": "do this in ChatGPT Ads Manager"
+    },
+    {
+      "rank": 7,
+      "severity": "warn",
+      "area": 3,
+      "spend_touched_usd": 0.0,
+      "finding": "Ad \"Free salon booking page, no catch\" was rejected in review",
+      "evidence": "get_ads: review_status rejected in ad group Salon owners, which still has 1 approved ad.",
+      "what_to_do": "The API doesn't return the rejection reason, so open the ad in Ads Manager, rewrite it to fix the stated reason and resubmit it. The group keeps serving on its approved ad meanwhile.",
+      "who": "do this in ChatGPT Ads Manager"
+    },
+    {
+      "rank": 8,
+      "severity": "warn",
+      "area": 5,
+      "spend_touched_usd": 0.0,
+      "finding": "Event setting \"Pricing page view\" is linked to no campaign",
+      "evidence": "get_event_settings: page_viewed on Website pixel, campaigns list empty.",
+      "what_to_do": "Leave it unlinked or archive it in Ads Manager. A page view counts visits, not sign-ups, so it should not be a campaign's goal.",
+      "who": "do this in ChatGPT Ads Manager"
+    },
+    {
+      "rank": 9,
+      "severity": "warn",
+      "area": 6,
+      "spend_touched_usd": 0.0,
+      "finding": "Audience \"Paying customers\" is under 25k matched users",
+      "evidence": "get_custom_audiences: matched_user_count_range under_25k; no ad group bid multiplier uses it.",
+      "what_to_do": "Use it as an exclusion on the paid-plan campaigns, so existing customers stop seeing sign-up ads. It is too small to target or bid on.",
+      "who": "do this in ChatGPT Ads Manager"
+    }
+  ],
+  "area_detail": {
+    "account_overview": {
+      "campaigns_by_status": {
+        "active": 4,
+        "paused": 1,
+        "archived": 0
+      },
+      "period_change": {
+        "impressions": {
+          "window": 1000000,
+          "previous": 820000,
+          "change_pct": 22.0
+        },
+        "clicks": {
+          "window": 12380,
+          "previous": 10830,
+          "change_pct": 14.3
+        },
+        "spend": {
+          "window": 13783.0,
+          "previous": 11340.0,
+          "change_pct": 21.5
+        },
+        "ctr": {
+          "window": 1.24,
+          "previous": 1.32,
+          "change_pct": -6.1
+        },
+        "cpc": {
+          "window": 1.11,
+          "previous": 1.05,
+          "change_pct": 5.7
+        },
+        "cpm": {
+          "window": 13.78,
+          "previous": 13.83,
+          "change_pct": -0.4
+        }
+      },
+      "flagged": "spend +21.5%: Clinics | Paid plans | US added $1,295.00; CTR and CPC moved under 20%"
+    },
+    "campaigns": {
+      "note": "Sorted by spend. The largest campaign has 53.54% of spend, under the 70% concentration line.",
+      "rows": [
+        {
+          "campaign": "Booking software | Paid plans | US",
+          "status": "active",
+          "objective": "conversions",
+          "bidding_type": "conversions",
+          "lifetime_cap_usd": 18000.0,
+          "impressions": 410000,
+          "clicks": 6150,
+          "spend_usd": 7380.0,
+          "share_of_spend_pct": 53.54,
+          "ctr_pct": 1.5,
+          "cpc_usd": 1.2,
+          "cpm_usd": 18.0,
+          "conversions": 96,
+          "cpa_usd": 76.88,
+          "flags": []
+        },
+        {
+          "campaign": "Salons | Demo requests | US and UK",
+          "status": "active",
+          "objective": "conversions",
+          "bidding_type": "conversions",
+          "lifetime_cap_usd": 15000.0,
+          "impressions": 260000,
+          "clicks": 3380,
+          "spend_usd": 3718.0,
+          "share_of_spend_pct": 26.98,
+          "ctr_pct": 1.3,
+          "cpc_usd": 1.1,
+          "cpm_usd": 14.3,
+          "conversions": 118,
+          "cpa_usd": 31.51,
+          "flags": []
+        },
+        {
+          "campaign": "Clinics | Paid plans | US",
+          "status": "active",
+          "objective": "conversions",
+          "bidding_type": "conversions",
+          "lifetime_cap_usd": 5000.0,
+          "impressions": 150000,
+          "clicks": 1950,
+          "spend_usd": 2145.0,
+          "share_of_spend_pct": 15.56,
+          "ctr_pct": 1.3,
+          "cpc_usd": 1.1,
+          "cpm_usd": 14.3,
+          "conversions": 0,
+          "cpa_usd": null,
+          "flags": [
+            "spend without results"
+          ]
+        },
+        {
+          "campaign": "Fitness studios | Clicks | US",
+          "status": "active",
+          "objective": "clicks",
+          "bidding_type": "clicks",
+          "lifetime_cap_usd": 2400.0,
+          "impressions": 180000,
+          "clicks": 900,
+          "spend_usd": 540.0,
+          "share_of_spend_pct": 3.92,
+          "ctr_pct": 0.5,
+          "cpc_usd": 0.6,
+          "cpm_usd": 3.0,
+          "conversions": 0,
+          "cpa_usd": null,
+          "flags": [
+            "weak CTR",
+            "spend without measurement"
+          ]
+        },
+        {
+          "campaign": "Reminders feature | Reach | US",
+          "status": "paused",
+          "objective": "reach",
+          "bidding_type": "impressions",
+          "lifetime_cap_usd": 1500.0,
+          "impressions": 0,
+          "clicks": 0,
+          "spend_usd": 0.0,
+          "share_of_spend_pct": 0.0,
+          "ctr_pct": 0.0,
+          "cpc_usd": 0.0,
+          "cpm_usd": 0.0,
+          "conversions": 0,
+          "cpa_usd": null,
+          "flags": []
+        }
+      ]
+    },
+    "ad_groups_and_ads": [
+      {
+        "campaign": "Booking software | Paid plans | US",
+        "ad_group": "Owners comparing booking software",
+        "status": "active",
+        "bid_strategy": "fixed_bid",
+        "max_bid_usd": 1.8,
+        "billing_event": "click",
+        "actual_cpc_usd": 1.2,
+        "impressions": 300000,
+        "clicks": 4800,
+        "spend_usd": 5760.0,
+        "ctr_pct": 1.6,
+        "context_hints": [
+          "online booking software for small business",
+          "appointment scheduling app with reminders"
+        ],
+        "ads": [
+          {
+            "ad": "Stop no-shows with automatic reminders",
+            "status": "active",
+            "review_status": "approved",
+            "impressions": 220000,
+            "clicks": 4200,
+            "spend_usd": 5040.0,
+            "ctr_pct": 1.91
+          },
+          {
+            "ad": "Take deposits when clients book",
+            "status": "active",
+            "review_status": "approved",
+            "impressions": 80000,
+            "clicks": 600,
+            "spend_usd": 720.0,
+            "ctr_pct": 0.75,
+            "flag": "weak ad"
+          }
+        ]
+      },
+      {
+        "campaign": "Booking software | Paid plans | US",
+        "ad_group": "Moving off a paper diary",
+        "status": "active",
+        "bid_strategy": "fixed_bid",
+        "max_bid_usd": 1.8,
+        "billing_event": "click",
+        "actual_cpc_usd": 1.2,
+        "impressions": 110000,
+        "clicks": 1350,
+        "spend_usd": 1620.0,
+        "ctr_pct": 1.23,
+        "context_hints": [
+          "replace paper appointment book",
+          "move salon bookings online"
+        ],
+        "ads": [
+          {
+            "ad": "Your appointment book, online in a day",
+            "status": "active",
+            "review_status": "approved",
+            "impressions": 110000,
+            "clicks": 1350,
+            "spend_usd": 1620.0,
+            "ctr_pct": 1.23
+          }
+        ]
+      },
+      {
+        "campaign": "Salons | Demo requests | US and UK",
+        "ad_group": "Salon owners",
+        "status": "active",
+        "bid_strategy": "fixed_bid",
+        "max_bid_usd": 1.5,
+        "billing_event": "click",
+        "actual_cpc_usd": 1.1,
+        "impressions": 260000,
+        "clicks": 3380,
+        "spend_usd": 3718.0,
+        "ctr_pct": 1.3,
+        "context_hints": [
+          "salon booking app",
+          "how to reduce salon no-shows"
+        ],
+        "ads": [
+          {
+            "ad": "A booking page your salon clients will use",
+            "status": "active",
+            "review_status": "approved",
+            "impressions": 260000,
+            "clicks": 3380,
+            "spend_usd": 3718.0,
+            "ctr_pct": 1.3
+          },
+          {
+            "ad": "Free salon booking page, no catch",
+            "status": "active",
+            "review_status": "rejected",
+            "impressions": 0,
+            "clicks": 0,
+            "spend_usd": 0.0,
+            "ctr_pct": 0.0,
+            "flag": "rejected"
+          }
+        ]
+      },
+      {
+        "campaign": "Clinics | Paid plans | US",
+        "ad_group": "Clinic front desk",
+        "status": "active",
+        "bid_strategy": "fixed_bid",
+        "max_bid_usd": 1.5,
+        "billing_event": "click",
+        "actual_cpc_usd": 1.1,
+        "impressions": 150000,
+        "clicks": 1950,
+        "spend_usd": 2145.0,
+        "ctr_pct": 1.3,
+        "context_hints": [
+          "clinic appointment scheduling software",
+          "patient reminder texts"
+        ],
+        "ads": [
+          {
+            "ad": "Fewer empty slots at the front desk",
+            "status": "active",
+            "review_status": "approved",
+            "impressions": 150000,
+            "clicks": 1950,
+            "spend_usd": 2145.0,
+            "ctr_pct": 1.3
+          }
+        ]
+      },
+      {
+        "campaign": "Fitness studios | Clicks | US",
+        "ad_group": "Studios and trainers",
+        "status": "active",
+        "bid_strategy": "fixed_bid",
+        "max_bid_usd": 0.9,
+        "billing_event": "click",
+        "actual_cpc_usd": 0.6,
+        "impressions": 180000,
+        "clicks": 900,
+        "spend_usd": 540.0,
+        "ctr_pct": 0.5,
+        "context_hints": [
+          "class booking for fitness studio",
+          "personal trainer scheduling app"
+        ],
+        "ads": [
+          {
+            "ad": "Fill every class with online booking",
+            "status": "active",
+            "review_status": "approved",
+            "impressions": 180000,
+            "clicks": 900,
+            "spend_usd": 540.0,
+            "ctr_pct": 0.5
+          }
+        ]
+      },
+      {
+        "campaign": "Reminders feature | Reach | US",
+        "ad_group": "Reminder feature awareness",
+        "status": "paused",
+        "bid_strategy": "fixed_bid",
+        "max_bid_usd": 10.0,
+        "billing_event": "impression",
+        "actual_cpc_usd": 0.0,
+        "impressions": 0,
+        "clicks": 0,
+        "spend_usd": 0.0,
+        "ctr_pct": 0.0,
+        "context_hints": [
+          "automatic appointment reminders"
+        ],
+        "ads": [
+          {
+            "ad": "Reminders that cut no-shows",
+            "status": "paused",
+            "review_status": "approved",
+            "impressions": 0,
+            "clicks": 0,
+            "spend_usd": 0.0,
+            "ctr_pct": 0.0
+          }
+        ]
+      }
+    ],
+    "context_hints_note": "Best CTR: Owners comparing booking software (1.6%), whose hints name the product outright. Weakest: Studios and trainers (0.5%), on class and trainer scheduling hints.",
+    "conversions": {
+      "rows": [
+        {
+          "campaign": "Booking software | Paid plans | US",
+          "event": "order_created",
+          "clicks": 6150,
+          "spend_usd": 7380.0,
+          "conversions": 96,
+          "view_through": 21,
+          "conversion_rate_pct": 1.56,
+          "cpa_usd": 76.88,
+          "target_usd": 90.0,
+          "cpa_vs_target": 0.85,
+          "result": "pass",
+          "sales_usd": 26880.0,
+          "roas": 3.64
+        },
+        {
+          "campaign": "Salons | Demo requests | US and UK",
+          "event": "lead_created",
+          "clicks": 3380,
+          "spend_usd": 3718.0,
+          "conversions": 118,
+          "view_through": 30,
+          "conversion_rate_pct": 3.49,
+          "cpa_usd": 31.51,
+          "target_usd": 40.0,
+          "cpa_vs_target": 0.79,
+          "result": "pass"
+        },
+        {
+          "campaign": "Clinics | Paid plans | US",
+          "event": "order_created",
+          "clicks": 1950,
+          "spend_usd": 2145.0,
+          "conversions": 0,
+          "view_through": 0,
+          "conversion_rate_pct": 0.0,
+          "cpa_usd": null,
+          "result": "0 recorded; see areas 2 and 5",
+          "sales_usd": 0.0,
+          "roas": 0.0
+        },
+        {
+          "campaign": "Fitness studios | Clicks | US",
+          "event": "no conversion setting",
+          "clicks": 900,
+          "spend_usd": 540.0,
+          "conversions": 0,
+          "view_through": 0
+        }
+      ],
+      "click_through_total": 214,
+      "view_through_total": 51,
+      "order_created_sales_usd": 26880.0,
+      "note": "Conversions are click-through; view-through is shown apart and never added. CPA is graded against your targets, per event."
+    },
+    "pixels": [
+      {
+        "source": "Website pixel",
+        "data_source_id": "cds_example0001",
+        "pixel_id": "ExBkWebPixel01",
+        "kind": "web pixel",
+        "events_returned": 18635,
+        "by_event": {
+          "page_viewed": 18400,
+          "lead_created": 131,
+          "order_created": 104
+        },
+        "channel": [
+          "pixel"
+        ],
+        "event_settings": [
+          "Demo booked",
+          "Paid plan started",
+          "Pricing page view"
+        ]
+      },
+      {
+        "source": "Server events (Conversions API)",
+        "data_source_id": "cds_example0002",
+        "pixel_id": "ExBkServer02",
+        "kind": "server",
+        "events_returned": 0,
+        "by_event": {},
+        "channel": null,
+        "event_settings": [
+          "Paid plan started (server)"
+        ]
+      }
+    ],
+    "event_settings": [
+      {
+        "setting": "Demo booked",
+        "event_type": "lead_created",
+        "source": "Website pixel",
+        "click_window_days": 30,
+        "view_through_window_days": 1,
+        "campaigns": [
+          "Salons | Demo requests | US and UK"
+        ]
+      },
+      {
+        "setting": "Paid plan started",
+        "event_type": "order_created",
+        "source": "Website pixel",
+        "click_window_days": 30,
+        "view_through_window_days": 1,
+        "campaigns": [
+          "Booking software | Paid plans | US"
+        ]
+      },
+      {
+        "setting": "Paid plan started (server)",
+        "event_type": "order_created",
+        "source": "Server events (Conversions API)",
+        "click_window_days": 30,
+        "view_through_window_days": 1,
+        "campaigns": [
+          "Clinics | Paid plans | US"
+        ]
+      },
+      {
+        "setting": "Pricing page view",
+        "event_type": "page_viewed",
+        "source": "Website pixel",
+        "click_window_days": 7,
+        "view_through_window_days": 0,
+        "campaigns": []
+      }
+    ],
+    "event_checks": {
+      "anything_measured": "pass",
+      "silent_source_in_use": "fail",
+      "unlinked_settings": "warn",
+      "outcome_events": "pass",
+      "duplicates": "pass",
+      "windows": "pass"
+    },
+    "event_note": "Paid plan started and Paid plan started (server) both track order_created, but on different sources, so they are not duplicates. When the server source starts sending, its events must carry the same event id as the pixel's, or each sign-up counts twice.",
+    "audiences": {
+      "note": "The API gives audience size only as a range and has no per-audience delivery breakdown.",
+      "rows": [
+        {
+          "audience": "Trial users, last 90 days",
+          "status": "ready",
+          "matched_users": "25k_100k",
+          "invalid_identifiers": "none",
+          "ad_groups_using_it": [
+            "Owners comparing booking software"
+          ],
+          "bid_multiplier": 1.25
+        },
+        {
+          "audience": "Paying customers",
+          "status": "ready",
+          "matched_users": "under_25k",
+          "invalid_identifiers": "none",
+          "ad_groups_using_it": [],
+          "bid_multiplier": null
+        },
+        {
+          "audience": "Newsletter subscribers",
+          "status": "ready",
+          "matched_users": "100k_500k",
+          "invalid_identifiers": "none",
+          "ad_groups_using_it": [],
+          "bid_multiplier": null
+        }
+      ],
+      "unused": [
+        "Paying customers",
+        "Newsletter subscribers"
+      ],
+      "performance": {
+        "audience": "Trial users, last 90 days",
+        "with_it": {
+          "ad_groups": [
+            "Owners comparing booking software"
+          ],
+          "ctr_pct": 1.6,
+          "cpc_usd": 1.2,
+          "conversions": 78,
+          "cpa_usd": 73.85
+        },
+        "without_it_same_campaign": {
+          "ad_groups": [
+            "Moving off a paper diary"
+          ],
+          "ctr_pct": 1.23,
+          "cpc_usd": 1.2,
+          "conversions": 18,
+          "cpa_usd": 90.0
+        },
+        "note": "Compared inside the paid-plan campaign only, so both sides count the same event. Ad groups in other campaigns optimize for other events."
+      }
+    },
+    "lead_forms": {
+      "result": "not graded",
+      "get_lead_forms": "403: Business Agent advertiser tools are not enabled.",
+      "get_lead_sync_subscriptions": "403: Lead-sync subscriptions are not enabled for this ad account."
+    },
+    "comparison": {
+      "dates": "2026-09-28 to 2026-10-27",
+      "currency": "USD on both sides",
+      "chatgpt_ads": {
+        "spend_usd": 13783.0,
+        "share_of_combined_spend_pct": 42.17,
+        "impressions": 1000000,
+        "clicks": 12380,
+        "ctr_pct": 1.24,
+        "cpc_usd": 1.11,
+        "cpm_usd": 13.78,
+        "conversions": 214,
+        "conversion_rate_pct": 1.73,
+        "cpa_usd": 64.41,
+        "roas": 1.95
+      },
+      "google_search": {
+        "spend_usd": 18900.0,
+        "share_of_combined_spend_pct": 57.83,
+        "impressions": 210000,
+        "clicks": 9450,
+        "ctr_pct": 4.5,
+        "cpc_usd": 2.0,
+        "cpm_usd": 90.0,
+        "conversions": 205,
+        "conversion_rate_pct": 2.17,
+        "cpa_usd": 92.2,
+        "roas": 1.67
+      },
+      "winner_by_metric": {
+        "ctr_pct": "Google Search",
+        "conversion_rate_pct": "Google Search",
+        "cpa_usd": "ChatGPT Ads",
+        "roas": "ChatGPT Ads",
+        "cpc_usd": "ChatGPT Ads",
+        "cpm_usd": "ChatGPT Ads"
+      },
+      "notes": [
+        "Both sides count paid plans plus demo requests as conversions.",
+        "ChatGPT Ads counts click-through conversions in each event setting's 30-day window; Google counts by each conversion action's own settings. The two CPAs are close, not identical, measures.",
+        "The ChatGPT side includes Clinics | Paid plans | US: $2,145.00 of spend with 0 conversions recorded, because its source sends no events (area 5)."
+      ]
+    },
+    "pacing": {
+      "note": "Lifetime caps only. Projections are estimates at the last 7 days' average daily spend.",
+      "spend_to_date_range": "2026-08-20 to 2026-10-27",
+      "run_rate_range": "2026-10-21 to 2026-10-27",
+      "rows": [
+        {
+          "campaign": "Booking software | Paid plans | US",
+          "status": "active",
+          "lifetime_cap_usd": 18000.0,
+          "spend_to_date_usd": 15430.0,
+          "used_pct": 85.72,
+          "end_time": "2026-11-30",
+          "run_rate_per_day_usd": 262.0,
+          "runway_days": 9.8,
+          "days_left": 34,
+          "projected_spend_usd": 24338.0,
+          "projected_pct_of_cap": 135.21,
+          "result": "warn: stops early",
+          "cap_reached_about": "2026-11-06"
+        },
+        {
+          "campaign": "Salons | Demo requests | US and UK",
+          "status": "active",
+          "lifetime_cap_usd": 15000.0,
+          "spend_to_date_usd": 7468.0,
+          "used_pct": 49.79,
+          "end_time": null,
+          "run_rate_per_day_usd": 125.0,
+          "runway_days": 60.3,
+          "result": "pass"
+        },
+        {
+          "campaign": "Clinics | Paid plans | US",
+          "status": "active",
+          "lifetime_cap_usd": 5000.0,
+          "spend_to_date_usd": 2995.0,
+          "used_pct": 59.9,
+          "end_time": null,
+          "run_rate_per_day_usd": 75.0,
+          "runway_days": 26.7,
+          "result": "pass"
+        },
+        {
+          "campaign": "Fitness studios | Clicks | US",
+          "status": "active",
+          "lifetime_cap_usd": 2400.0,
+          "spend_to_date_usd": 630.0,
+          "used_pct": 26.25,
+          "end_time": "2026-12-31",
+          "run_rate_per_day_usd": 18.0,
+          "runway_days": 98.3,
+          "days_left": 65,
+          "projected_spend_usd": 1800.0,
+          "projected_pct_of_cap": 75.0,
+          "result": "pass"
+        },
+        {
+          "campaign": "Reminders feature | Reach | US",
+          "status": "paused",
+          "lifetime_cap_usd": 1500.0,
+          "spend_to_date_usd": 310.0,
+          "used_pct": 20.67,
+          "end_time": null,
+          "paced": "no (paused)"
+        }
+      ]
+    }
+  },
+  "not_graded": [
+    {
+      "area": "7. Lead forms",
+      "why": "get_lead_forms: 403: Business Agent advertiser tools are not enabled. get_lead_sync_subscriptions: 403: Lead-sync subscriptions are not enabled for this ad account."
+    }
+  ],
+  "changes_offered": [
+    {
+      "change": "Pause Clinics | Paid plans | US",
+      "action": "update_campaign",
+      "body": {
+        "platform": "openai-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "ad_account_id": "adacct_example0001",
+        "action": "update_campaign",
+        "campaign_id": "cmpn_example0003",
+        "body": {
+          "status": "paused"
+        }
+      },
+      "status": "not run: waiting for your yes"
+    },
+    {
+      "change": "Pause the ad \"Take deposits when clients book\"",
+      "action": "update_ad",
+      "body": {
+        "platform": "openai-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "ad_account_id": "adacct_example0001",
+        "action": "update_ad",
+        "ad_id": "ad_example0002",
+        "body": {
+          "status": "paused"
+        }
+      },
+      "status": "not run: waiting for your yes"
+    },
+    {
+      "change": "Raise the lifetime cap of Booking software | Paid plans | US from $18,000 to $24,400",
+      "action": "update_campaign",
+      "body": {
+        "platform": "openai-ads",
+        "workspace_id": 1,
+        "brand_id": 1,
+        "ad_account_id": "adacct_example0001",
+        "action": "update_campaign",
+        "campaign_id": "cmpn_example0001",
+        "body": {
+          "budget": {
+            "lifetime_spend_limit_micros": 24400000000
+          }
+        }
+      },
+      "runway_after_days": 34.2,
+      "status": "not run: waiting for your yes; at $262.00 a day it buys about 34.2 days of runway"
+    }
+  ],
+  "changes_note": "Switching anything back on is done in ChatGPT Ads Manager; this skill never sends status active. The server event fix, the rejected ad rewrite and the audience exclusion are yours to do.",
+  "go_deeper": [
+    {
+      "area": "Tracking",
+      "skill": "conversion-tracking-auditor",
+      "use_it": "if installed"
+    },
+    {
+      "area": "Google Search side",
+      "skill": "google-ads-account-audit",
+      "use_it": "if installed"
+    },
+    {
+      "area": "Moving budget between channels",
+      "skill": "cross-platform-budget-allocator",
+      "use_it": "if installed"
+    },
+    {
+      "area": "Rebuilding the clinics campaign",
+      "next_step": "If the server events can't be fixed soon, build a new clinics campaign in ChatGPT Ads Manager with the Paid plan started setting attached at creation, copy its ad group and approved ad, and archive the old one there yourself."
+    }
+  ]
+}

@@ -1,0 +1,972 @@
+{
+  "header": {
+    "brand_account": "@lumenandwick.example",
+    "advertiser": "Lumen and Wick (TikTok ad account)",
+    "advertiser_id": "7000000000000000042",
+    "goal": "purchases (optimization_goal CONVERT, event copied from the current conversion ad group)",
+    "budget": "USD 1,400 over 14 days",
+    "run_dates": "2026-11-02 to 2026-11-15",
+    "target_cost_per_result": 24.83,
+    "target_source": "the account's own cost per purchase, last 30 complete days: USD 3,450.80 spend / 139 purchases across the 2 CONVERT ad groups"
+  },
+  "the_bar": {
+    "own_pool": {
+      "posts_last_90_days_3_plus_days_old": 19,
+      "median_views": 5962,
+      "view_floor": 2981,
+      "below_floor": 2,
+      "ranked": 17,
+      "top_quarter_size": 5,
+      "medians_used_pct": {
+        "shares": 0.6,
+        "comments": 0.45,
+        "likes": 5.29,
+        "watched_full": 17.7
+      },
+      "posts_without_studio_export_row": 1
+    },
+    "creator_pools": "each creator's posts are a pool of their own, compared with that creator's usual",
+    "weights_purchases": {
+      "shares": 0.35,
+      "comments": 0.25,
+      "likes": 0.1,
+      "watched_full": 0.3
+    },
+    "index_cap": 3.0,
+    "rule": "Spark = top quarter of its pool and score at least 1.20; Backup = score at least 1.00; Skip = under 1.00 or below the view floor. Drafted: Spark posts with no hold, a held Spark replaced by the next Backup with no hold, at most 5 ads.",
+    "excluded_too_new": [
+      {
+        "post": "7430000000000001000",
+        "posted": "2026-10-26",
+        "caption": "Unboxing the new winter scents, which one first?",
+        "reason": "posted 2 days ago; counts still moving (needs 3 days)"
+      },
+      {
+        "post": "7430000000000001001",
+        "posted": "2026-10-27",
+        "caption": "Restock day at the studio",
+        "reason": "posted 1 day ago; counts still moving (needs 3 days)"
+      }
+    ],
+    "below_view_floor": [
+      {
+        "post": "7430000000000001011",
+        "caption": "Studio tour at 6am",
+        "views": 2871
+      },
+      {
+        "post": "7430000000000001020",
+        "caption": "New jar colours, vote below",
+        "views": 514
+      }
+    ]
+  },
+  "ranked_own_posts": [
+    {
+      "post": "7430000000000001004",
+      "posted": "2026-10-17",
+      "caption": "POV: your apartment smells like a cabin in October",
+      "views": 14867,
+      "share_rate_pct": 1.76,
+      "comment_rate_pct": 0.65,
+      "like_rate_pct": 8.06,
+      "watched_full_pct": 22.2,
+      "index": {
+        "shares": 2.94,
+        "comments": 1.46,
+        "likes": 1.52,
+        "watched_full": 1.25
+      },
+      "score": 1.92,
+      "signals_used": [
+        "shares",
+        "comments",
+        "likes",
+        "watched_full"
+      ],
+      "sound": "popular track",
+      "holds": [
+        "Check sound"
+      ],
+      "rank": 1,
+      "status": "Spark",
+      "drafted": false,
+      "reason": "Clears the bar (score 1.92) but is held: Check sound.",
+      "hold_notes": [
+        "TikTok can refuse or mute this sound in ads. Confirm the sound is cleared, or skip it."
+      ]
+    },
+    {
+      "post": "7430000000000001002",
+      "posted": "2026-10-23",
+      "caption": "How we pour a three-wick candle in 60 seconds",
+      "views": 11104,
+      "share_rate_pct": 1.51,
+      "comment_rate_pct": 0.68,
+      "like_rate_pct": 6.47,
+      "watched_full_pct": 25.2,
+      "index": {
+        "shares": 2.53,
+        "comments": 1.51,
+        "likes": 1.22,
+        "watched_full": 1.42
+      },
+      "score": 1.81,
+      "signals_used": [
+        "shares",
+        "comments",
+        "likes",
+        "watched_full"
+      ],
+      "sound": "original",
+      "holds": [],
+      "rank": 2,
+      "status": "Spark",
+      "drafted": true,
+      "reason": "Clears the bar: top quarter of its pool and score 1.81.",
+      "hold_notes": []
+    },
+    {
+      "post": "7430000000000001003",
+      "posted": "2026-10-20",
+      "caption": "Candle care: trim your wick to stop tunnelling",
+      "views": 8598,
+      "share_rate_pct": 1.24,
+      "comment_rate_pct": 0.91,
+      "like_rate_pct": 6.0,
+      "watched_full_pct": 22.5,
+      "index": {
+        "shares": 2.08,
+        "comments": 2.03,
+        "likes": 1.13,
+        "watched_full": 1.27
+      },
+      "score": 1.73,
+      "signals_used": [
+        "shares",
+        "comments",
+        "likes",
+        "watched_full"
+      ],
+      "sound": "original",
+      "holds": [],
+      "ran_before_as_ad": {
+        "ad_id": "1800000000000003002",
+        "impressions": 61840,
+        "two_second_rate_pct": 34.7,
+        "six_second_rate_pct": 15.9,
+        "results": 17,
+        "cost_per_result": 24.26
+      },
+      "rank": 3,
+      "status": "Spark",
+      "drafted": true,
+      "reason": "Clears the bar: top quarter of its pool and score 1.73.",
+      "hold_notes": []
+    },
+    {
+      "post": "7430000000000001005",
+      "posted": "2026-10-14",
+      "caption": "Rating our scents with my mum, brutally honest",
+      "views": 7028,
+      "share_rate_pct": 0.74,
+      "comment_rate_pct": 1.21,
+      "like_rate_pct": 5.86,
+      "watched_full_pct": 18.2,
+      "index": {
+        "shares": 1.24,
+        "comments": 2.71,
+        "likes": 1.11,
+        "watched_full": 1.03
+      },
+      "score": 1.53,
+      "signals_used": [
+        "shares",
+        "comments",
+        "likes",
+        "watched_full"
+      ],
+      "sound": "original",
+      "holds": [],
+      "rank": 4,
+      "status": "Spark",
+      "drafted": true,
+      "reason": "Clears the bar: top quarter of its pool and score 1.53.",
+      "hold_notes": []
+    },
+    {
+      "post": "7430000000000001007",
+      "posted": "2026-10-06",
+      "caption": "The one scent that sold out in 3 days",
+      "views": 9914,
+      "share_rate_pct": 1.16,
+      "comment_rate_pct": 0.63,
+      "like_rate_pct": 6.3,
+      "watched_full_pct": 22.6,
+      "index": {
+        "shares": 1.94,
+        "comments": 1.4,
+        "likes": 1.19,
+        "watched_full": 1.28
+      },
+      "score": 1.53,
+      "signals_used": [
+        "shares",
+        "comments",
+        "likes",
+        "watched_full"
+      ],
+      "sound": "commercial library",
+      "holds": [
+        "Already running"
+      ],
+      "rank": 5,
+      "status": "Spark",
+      "drafted": false,
+      "reason": "Clears the bar (score 1.53) but is held: Already running.",
+      "hold_notes": [
+        "Already live as ad 1800000000000003001; leave it out of this plan."
+      ]
+    },
+    {
+      "post": "7430000000000001006",
+      "posted": "2026-10-10",
+      "caption": "Fall sale ends Sunday: 20% off every jar",
+      "views": 6494,
+      "share_rate_pct": 0.99,
+      "comment_rate_pct": 0.45,
+      "like_rate_pct": 4.71,
+      "watched_full_pct": 19.8,
+      "index": {
+        "shares": 1.65,
+        "comments": 1.0,
+        "likes": 0.89,
+        "watched_full": 1.12
+      },
+      "score": 1.25,
+      "signals_used": [
+        "shares",
+        "comments",
+        "likes",
+        "watched_full"
+      ],
+      "sound": "original",
+      "holds": [
+        "Check the offer"
+      ],
+      "rank": 6,
+      "status": "Backup",
+      "drafted": false,
+      "reason": "Backup (score 1.25) but held: Check the offer; passed over as a replacement.",
+      "hold_notes": [
+        "Confirm the offer still stands before paying to show it."
+      ]
+    },
+    {
+      "post": "7430000000000001009",
+      "posted": "2026-09-28",
+      "caption": "3 candles that make a small room feel cosy",
+      "views": 8401,
+      "share_rate_pct": 0.87,
+      "comment_rate_pct": 0.44,
+      "like_rate_pct": 5.95,
+      "watched_full_pct": 22.1,
+      "index": {
+        "shares": 1.45,
+        "comments": 0.99,
+        "likes": 1.13,
+        "watched_full": 1.25
+      },
+      "score": 1.24,
+      "signals_used": [
+        "shares",
+        "comments",
+        "likes",
+        "watched_full"
+      ],
+      "sound": "original",
+      "holds": [],
+      "rank": 7,
+      "status": "Backup",
+      "replaces": "7430000000000001004",
+      "drafted": true,
+      "reason": "Backup (score 1.24); drafted in place of held post 7430000000000001004.",
+      "hold_notes": []
+    },
+    {
+      "post": "7430000000000001010",
+      "posted": "2026-09-23",
+      "caption": "Soy vs paraffin, what actually burns cleaner",
+      "views": 5903,
+      "share_rate_pct": 0.66,
+      "comment_rate_pct": 0.54,
+      "like_rate_pct": 4.91,
+      "watched_full_pct": 17.1,
+      "index": {
+        "shares": 1.1,
+        "comments": 1.21,
+        "likes": 0.93,
+        "watched_full": 0.97
+      },
+      "score": 1.07,
+      "signals_used": [
+        "shares",
+        "comments",
+        "likes",
+        "watched_full"
+      ],
+      "sound": "original",
+      "holds": [],
+      "rank": 8,
+      "status": "Backup",
+      "replaces": "7430000000000001007",
+      "over_cap": true,
+      "drafted": false,
+      "reason": "Backup (score 1.07) would replace held post 7430000000000001007, but it is beyond the 5-ad cap; first in line if a drafted post drops out.",
+      "hold_notes": []
+    },
+    {
+      "post": "7430000000000001012",
+      "posted": "2026-09-13",
+      "caption": "Matching candles to your star sign",
+      "views": 6320,
+      "share_rate_pct": 0.55,
+      "comment_rate_pct": 0.51,
+      "like_rate_pct": 6.38,
+      "watched_full_pct": 15.3,
+      "index": {
+        "shares": 0.93,
+        "comments": 1.13,
+        "likes": 1.21,
+        "watched_full": 0.86
+      },
+      "score": 0.99,
+      "signals_used": [
+        "shares",
+        "comments",
+        "likes",
+        "watched_full"
+      ],
+      "sound": "original",
+      "holds": [],
+      "rank": 9,
+      "status": "Skip",
+      "drafted": false,
+      "reason": "Skip: score 0.99 is under 1.00.",
+      "hold_notes": []
+    },
+    {
+      "post": "7430000000000001018",
+      "posted": "2026-08-11",
+      "caption": "Answering your wax questions",
+      "views": 4591,
+      "share_rate_pct": 0.52,
+      "comment_rate_pct": 0.46,
+      "like_rate_pct": 4.6,
+      "watched_full_pct": 15.4,
+      "index": {
+        "shares": 0.87,
+        "comments": 1.02,
+        "likes": 0.87,
+        "watched_full": 0.87
+      },
+      "score": 0.91,
+      "signals_used": [
+        "shares",
+        "comments",
+        "likes",
+        "watched_full"
+      ],
+      "sound": "original",
+      "holds": [],
+      "rank": 10,
+      "status": "Skip",
+      "drafted": false,
+      "reason": "Skip: score 0.91 is under 1.00.",
+      "hold_notes": []
+    },
+    {
+      "post": "7430000000000001015",
+      "posted": "2026-08-29",
+      "caption": "Testing a new pumpkin scent with the team",
+      "views": 4335,
+      "share_rate_pct": 0.48,
+      "comment_rate_pct": 0.44,
+      "like_rate_pct": 5.17,
+      "watched_full_pct": null,
+      "index": {
+        "shares": 0.81,
+        "comments": 0.98,
+        "likes": 0.98
+      },
+      "score": 0.9,
+      "signals_used": [
+        "shares",
+        "comments",
+        "likes"
+      ],
+      "sound": "original",
+      "holds": [],
+      "rank": 11,
+      "status": "Skip",
+      "drafted": false,
+      "reason": "Skip: score 0.90 is under 1.00.",
+      "hold_notes": []
+    },
+    {
+      "post": "7430000000000001014",
+      "posted": "2026-09-03",
+      "caption": "What 1,000 candles look like",
+      "views": 5991,
+      "share_rate_pct": 0.55,
+      "comment_rate_pct": 0.37,
+      "like_rate_pct": 5.14,
+      "watched_full_pct": 15.9,
+      "index": {
+        "shares": 0.92,
+        "comments": 0.82,
+        "likes": 0.97,
+        "watched_full": 0.9
+      },
+      "score": 0.89,
+      "signals_used": [
+        "shares",
+        "comments",
+        "likes",
+        "watched_full"
+      ],
+      "sound": "original",
+      "holds": [],
+      "rank": 12,
+      "status": "Skip",
+      "drafted": false,
+      "reason": "Skip: score 0.89 is under 1.00.",
+      "hold_notes": []
+    },
+    {
+      "post": "7430000000000001013",
+      "posted": "2026-09-08",
+      "caption": "Gift wrapping hack for jars",
+      "views": 4849,
+      "share_rate_pct": 0.6,
+      "comment_rate_pct": 0.27,
+      "like_rate_pct": 4.45,
+      "watched_full_pct": 17.3,
+      "index": {
+        "shares": 1.0,
+        "comments": 0.6,
+        "likes": 0.84,
+        "watched_full": 0.98
+      },
+      "score": 0.88,
+      "signals_used": [
+        "shares",
+        "comments",
+        "likes",
+        "watched_full"
+      ],
+      "sound": "original",
+      "holds": [],
+      "rank": 13,
+      "status": "Skip",
+      "drafted": false,
+      "reason": "Skip: score 0.88 is under 1.00.",
+      "hold_notes": []
+    },
+    {
+      "post": "7430000000000001016",
+      "posted": "2026-08-23",
+      "caption": "Day in the life of a candle maker",
+      "views": 5370,
+      "share_rate_pct": 0.5,
+      "comment_rate_pct": 0.37,
+      "like_rate_pct": 5.29,
+      "watched_full_pct": 16.2,
+      "index": {
+        "shares": 0.84,
+        "comments": 0.83,
+        "likes": 1.0,
+        "watched_full": 0.92
+      },
+      "score": 0.88,
+      "signals_used": [
+        "shares",
+        "comments",
+        "likes",
+        "watched_full"
+      ],
+      "sound": "original",
+      "holds": [],
+      "rank": 14,
+      "status": "Skip",
+      "drafted": false,
+      "reason": "Skip: score 0.88 is under 1.00.",
+      "hold_notes": []
+    },
+    {
+      "post": "7430000000000001008",
+      "posted": "2026-10-02",
+      "caption": "Behind the label: who mixes our fragrance oils",
+      "views": 5962,
+      "share_rate_pct": 0.45,
+      "comment_rate_pct": 0.4,
+      "like_rate_pct": 4.78,
+      "watched_full_pct": 16.4,
+      "index": {
+        "shares": 0.76,
+        "comments": 0.9,
+        "likes": 0.9,
+        "watched_full": 0.93
+      },
+      "score": 0.86,
+      "signals_used": [
+        "shares",
+        "comments",
+        "likes",
+        "watched_full"
+      ],
+      "sound": "original",
+      "holds": [],
+      "rank": 15,
+      "status": "Skip",
+      "drafted": false,
+      "reason": "Skip: score 0.86 is under 1.00.",
+      "hold_notes": []
+    },
+    {
+      "post": "7430000000000001017",
+      "posted": "2026-08-17",
+      "caption": "Our first market stall, two years ago",
+      "views": 3847,
+      "share_rate_pct": 0.49,
+      "comment_rate_pct": 0.36,
+      "like_rate_pct": 4.96,
+      "watched_full_pct": 16.3,
+      "index": {
+        "shares": 0.83,
+        "comments": 0.81,
+        "likes": 0.94,
+        "watched_full": 0.92
+      },
+      "score": 0.86,
+      "signals_used": [
+        "shares",
+        "comments",
+        "likes",
+        "watched_full"
+      ],
+      "sound": "original",
+      "holds": [],
+      "rank": 16,
+      "status": "Skip",
+      "drafted": false,
+      "reason": "Skip: score 0.86 is under 1.00.",
+      "hold_notes": []
+    },
+    {
+      "post": "7430000000000001019",
+      "posted": "2026-08-05",
+      "caption": "Pouring in slow motion",
+      "views": 5813,
+      "share_rate_pct": 0.36,
+      "comment_rate_pct": 0.19,
+      "like_rate_pct": 5.8,
+      "watched_full_pct": 18.1,
+      "index": {
+        "shares": 0.6,
+        "comments": 0.42,
+        "likes": 1.1,
+        "watched_full": 1.02
+      },
+      "score": 0.73,
+      "signals_used": [
+        "shares",
+        "comments",
+        "likes",
+        "watched_full"
+      ],
+      "sound": "original",
+      "holds": [],
+      "rank": 17,
+      "status": "Skip",
+      "drafted": false,
+      "reason": "Skip: score 0.73 is under 1.00.",
+      "hold_notes": []
+    }
+  ],
+  "ranked_creator_posts": [
+    {
+      "creator": "@example_creator_a",
+      "post": "https://www.tiktok.com/@example_creator_a/video/7430000000000200001",
+      "posted": "2026-10-12",
+      "caption": "I tested 5 autumn candles so you don't have to",
+      "views": 48200,
+      "view_floor": 15500,
+      "compared_with": "the creator's own usual",
+      "share_rate_pct": 1.27,
+      "comment_rate_pct": 0.83,
+      "like_rate_pct": 7.49,
+      "watched_full_pct": 21.4,
+      "index": {
+        "shares": 1.79,
+        "comments": 1.6,
+        "likes": 1.13,
+        "watched_full": 1.27
+      },
+      "score": 1.52,
+      "signals_used": [
+        "shares",
+        "comments",
+        "likes",
+        "watched_full"
+      ],
+      "sound": "original",
+      "holds": [],
+      "rank": 1,
+      "status": "Spark",
+      "drafted": true,
+      "reason": "Clears the bar: top quarter of its pool and score 1.52.",
+      "hold_notes": []
+    },
+    {
+      "creator": "@example_creator_b",
+      "post": "https://www.tiktok.com/@example_creator_b/video/7430000000000300001",
+      "posted": "2026-10-18",
+      "caption": "Cosy reading nook makeover on a budget",
+      "views": 22700,
+      "view_floor": 9250,
+      "compared_with": "the creator's own usual",
+      "share_rate_pct": 1.18,
+      "comment_rate_pct": 0.67,
+      "like_rate_pct": 8.72,
+      "watched_full_pct": 19.2,
+      "index": {
+        "shares": 1.44,
+        "comments": 1.36,
+        "likes": 1.23,
+        "watched_full": 1.1
+      },
+      "score": 1.3,
+      "signals_used": [
+        "shares",
+        "comments",
+        "likes",
+        "watched_full"
+      ],
+      "sound": "commercial library",
+      "holds": [
+        "Code runs out"
+      ],
+      "rank": 1,
+      "status": "Spark",
+      "drafted": false,
+      "reason": "Clears the bar (score 1.30) but is held: Code runs out.",
+      "hold_notes": [
+        "The code expires on 2026-10-31, before 2026-11-18; send the renewal message."
+      ]
+    },
+    {
+      "creator": "@example_creator_c",
+      "post": "https://www.tiktok.com/@example_creator_c/video/7430000000000400001",
+      "posted": "2026-10-09",
+      "caption": "Get ready with me: Sunday reset",
+      "views": 9400,
+      "view_floor": 4400,
+      "compared_with": "the creator's own usual",
+      "share_rate_pct": 0.55,
+      "comment_rate_pct": 0.44,
+      "like_rate_pct": 6.81,
+      "watched_full_pct": null,
+      "index": {
+        "shares": 1.11,
+        "comments": 1.04,
+        "likes": 1.0
+      },
+      "score": 1.07,
+      "signals_used": [
+        "shares",
+        "comments",
+        "likes"
+      ],
+      "sound": "original",
+      "holds": [
+        "Needs a code"
+      ],
+      "rank": 1,
+      "status": "Backup",
+      "drafted": false,
+      "reason": "Backup (score 1.07) but held: Needs a code.",
+      "hold_notes": [
+        "No authorization code yet; send the code request."
+      ]
+    }
+  ],
+  "authorization_codes": {
+    "log": [
+      {
+        "creator": "@example_creator_a",
+        "post": "https://www.tiktok.com/@example_creator_a/video/7430000000000200001",
+        "post_status": "Spark",
+        "code_last_6": "Lw7Tz4",
+        "made_on": "2026-10-20",
+        "length_days": 60,
+        "expires": "2026-12-19",
+        "status": "OK",
+        "needed_until": "2026-11-18"
+      },
+      {
+        "creator": "@example_creator_b",
+        "post": "https://www.tiktok.com/@example_creator_b/video/7430000000000300001",
+        "post_status": "Spark",
+        "code_last_6": "Rd1Hs6",
+        "made_on": "2026-10-24",
+        "length_days": 7,
+        "expires": "2026-10-31",
+        "status": "renew",
+        "needed_until": "2026-11-18",
+        "ask_for_days": 30,
+        "why": "21 days from today to 2026-11-18; the shortest option covering it is 30 days."
+      },
+      {
+        "creator": "@example_creator_c",
+        "post": "https://www.tiktok.com/@example_creator_c/video/7430000000000400001",
+        "post_status": "Backup",
+        "code_last_6": null,
+        "made_on": null,
+        "length_days": null,
+        "expires": null,
+        "status": "request",
+        "needed_until": "2026-11-18",
+        "ask_for_days": 30,
+        "why": "21 days from today to 2026-11-18; the shortest option covering it is 30 days.",
+        "note": "Backup post: ask only if a drafted post drops out."
+      }
+    ],
+    "messages_to_send": [
+      {
+        "to": "@example_creator_b",
+        "kind": "renewal",
+        "message": "Hi @example_creator_b, thanks for the Spark code for your post https://www.tiktok.com/@example_creator_b/video/7430000000000300001. It runs out on 2026-10-31, before our Spark Ad ends on 2026-11-15. In TikTok, open the post, tap the three dots, go to Ad settings and extend the authorization to 30 days. If it has already run out, create a new code for 30 days and send it to us. Your post keeps its likes and comments, and you can end the authorization at any time."
+      }
+    ]
+  },
+  "plan": {
+    "ad_groups": [
+      {
+        "name": "Spark | Purchases | US 25-44 | 2026-11-02",
+        "campaign": "Prospecting | Purchases (1800000000000000101)",
+        "optimization_goal": "CONVERT",
+        "optimization_event": "SHOPPING",
+        "audience": "United States, ages 25 to 44, gender unlimited, no interest targeting",
+        "placement": "TikTok only",
+        "daily_budget": 100,
+        "schedule": "2026-11-02 to 2026-11-15",
+        "posts": [
+          {
+            "post": "7430000000000001002",
+            "from": "own account",
+            "score": 1.81,
+            "ready": true
+          },
+          {
+            "post": "7430000000000001003",
+            "from": "own account",
+            "score": 1.73,
+            "ready": true
+          },
+          {
+            "post": "7430000000000001005",
+            "from": "own account",
+            "score": 1.53,
+            "ready": true
+          },
+          {
+            "post": "https://www.tiktok.com/@example_creator_a/video/7430000000000200001",
+            "from": "@example_creator_a",
+            "score": 1.52,
+            "ready": false
+          },
+          {
+            "post": "7430000000000001009",
+            "from": "own account",
+            "score": 1.24,
+            "ready": true
+          }
+        ],
+        "expected_purchases_estimate": 56,
+        "estimate_assumption": "USD 100 a day for 14 days at the account's USD 24.83 cost per purchase"
+      }
+    ],
+    "why_one_ad_group": "Split by summed scores, the own-post group would get USD 80.59 a day and the creator group USD 19.41; neither reaches 50 expected purchases a week and the creator group is under the USD 20 daily minimum, so every drafted post goes in one ad group.",
+    "learning_check": {
+      "expected_purchases_per_week": 28.2,
+      "guidance": 50,
+      "verdict": "below guidance",
+      "ways_out": [
+        "raise the daily budget to USD 178 (50 x 24.83 / 7, rounded up)",
+        "or optimize for an earlier event the pixel already tracks, such as add to cart"
+      ]
+    },
+    "spark_posts_held": [
+      {
+        "post": "7430000000000001004",
+        "holds": [
+          "Check sound"
+        ]
+      },
+      {
+        "post": "7430000000000001007",
+        "holds": [
+          "Already running"
+        ]
+      }
+    ],
+    "beyond_cap": [
+      {
+        "post": "7430000000000001010",
+        "score": 1.07
+      }
+    ]
+  },
+  "payloads": {
+    "status": "not run: drafted for confirmation; the connector creates them disabled",
+    "adgroup_create": {
+      "status": "not run",
+      "body": {
+        "action": "adgroup_create",
+        "advertiser_id": "7000000000000000042",
+        "campaign_id": "1800000000000000101",
+        "adgroup_name": "Spark | Purchases | US 25-44 | 2026-11-02",
+        "promotion_type": "WEBSITE",
+        "placement_type": "PLACEMENT_TYPE_NORMAL",
+        "placements": [
+          "PLACEMENT_TIKTOK"
+        ],
+        "location_ids": [
+          "6252001"
+        ],
+        "age_groups": [
+          "AGE_25_34",
+          "AGE_35_44"
+        ],
+        "gender": "GENDER_UNLIMITED",
+        "budget_mode": "BUDGET_MODE_DAY",
+        "budget": 100,
+        "schedule_type": "SCHEDULE_START_END",
+        "schedule_start_time": "2026-11-02 00:00:00",
+        "schedule_end_time": "2026-11-15 23:59:59",
+        "optimization_goal": "CONVERT",
+        "optimization_event": "SHOPPING",
+        "pixel_id": "7000000000000000777",
+        "billing_event": "OCPM",
+        "bid_type": "BID_TYPE_NO_BID"
+      }
+    },
+    "ad_create": [
+      {
+        "status": "not run",
+        "waits_on": null,
+        "body": {
+          "action": "ad_create",
+          "advertiser_id": "7000000000000000042",
+          "adgroup_id": "<adgroup_id returned by adgroup_create>",
+          "creatives": [
+            {
+              "ad_name": "Spark | own | How we pour a three-wick candle",
+              "ad_format": "SINGLE_VIDEO",
+              "identity_type": "TT_USER",
+              "identity_id": "a1b2c3d4-0000-4000-8000-00000000c0de",
+              "tiktok_item_id": "7430000000000001002",
+              "call_to_action": "SHOP_NOW",
+              "landing_page_url": "https://www.lumenandwick.example/collections/autumn"
+            }
+          ]
+        }
+      },
+      {
+        "status": "not run",
+        "waits_on": null,
+        "body": {
+          "action": "ad_create",
+          "advertiser_id": "7000000000000000042",
+          "adgroup_id": "<adgroup_id returned by adgroup_create>",
+          "creatives": [
+            {
+              "ad_name": "Spark | own | Candle care: trim your wick to s",
+              "ad_format": "SINGLE_VIDEO",
+              "identity_type": "TT_USER",
+              "identity_id": "a1b2c3d4-0000-4000-8000-00000000c0de",
+              "tiktok_item_id": "7430000000000001003",
+              "call_to_action": "SHOP_NOW",
+              "landing_page_url": "https://www.lumenandwick.example/collections/autumn"
+            }
+          ]
+        }
+      },
+      {
+        "status": "not run",
+        "waits_on": null,
+        "body": {
+          "action": "ad_create",
+          "advertiser_id": "7000000000000000042",
+          "adgroup_id": "<adgroup_id returned by adgroup_create>",
+          "creatives": [
+            {
+              "ad_name": "Spark | own | Rating our scents with my mum, b",
+              "ad_format": "SINGLE_VIDEO",
+              "identity_type": "TT_USER",
+              "identity_id": "a1b2c3d4-0000-4000-8000-00000000c0de",
+              "tiktok_item_id": "7430000000000001005",
+              "call_to_action": "SHOP_NOW",
+              "landing_page_url": "https://www.lumenandwick.example/collections/autumn"
+            }
+          ]
+        }
+      },
+      {
+        "status": "not run",
+        "waits_on": "Waits on code ...Lw7Tz4: redeem it in TikTok Ads Manager's TikTok posts library first.",
+        "body": {
+          "action": "ad_create",
+          "advertiser_id": "7000000000000000042",
+          "adgroup_id": "<adgroup_id returned by adgroup_create>",
+          "creatives": [
+            {
+              "ad_name": "Spark | @example_creator_a | I tested 5 autumn candles so you",
+              "ad_format": "SINGLE_VIDEO",
+              "identity_type": "AUTH_CODE",
+              "identity_id": "<identity_id once the code is redeemed in TikTok Ads Manager>",
+              "tiktok_item_id": "7430000000000200001",
+              "call_to_action": "SHOP_NOW",
+              "landing_page_url": "https://www.lumenandwick.example/collections/autumn"
+            }
+          ]
+        }
+      },
+      {
+        "status": "not run",
+        "waits_on": null,
+        "body": {
+          "action": "ad_create",
+          "advertiser_id": "7000000000000000042",
+          "adgroup_id": "<adgroup_id returned by adgroup_create>",
+          "creatives": [
+            {
+              "ad_name": "Spark | own | 3 candles that make a small room",
+              "ad_format": "SINGLE_VIDEO",
+              "identity_type": "TT_USER",
+              "identity_id": "a1b2c3d4-0000-4000-8000-00000000c0de",
+              "tiktok_item_id": "7430000000000001009",
+              "call_to_action": "SHOP_NOW",
+              "landing_page_url": "https://www.lumenandwick.example/collections/autumn"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "next": [
+    "After 7 days, compare these Spark ads with the account's other ads with tiktok-ads-analyzer, if installed.",
+    "Before the next flight, recheck the code log: a creator can end an authorization at any time."
+  ]
+}

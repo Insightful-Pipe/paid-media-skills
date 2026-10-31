@@ -1,0 +1,594 @@
+{
+  "request": "Which of our TikToks and creator posts should we run as Spark Ads next? We want online candle sales, $1,400 over 14 days from November 2, US, ages 25 to 44. Here are three creator posts and the codes we have.",
+  "business": "Lumen and Wick, an online candle shop (invented example)",
+  "run_date": "2026-10-28",
+  "inputs": {
+    "goal": "purchases",
+    "budget_total": 1400,
+    "currency": "USD",
+    "days": 14,
+    "start_date": "2026-11-02",
+    "country": "United States",
+    "age_bands": [
+      "AGE_25_34",
+      "AGE_35_44"
+    ],
+    "target_cost_per_result": null,
+    "landing_page": "https://www.lumenandwick.example/collections/autumn"
+  },
+  "connections": {
+    "tiktok-pages": {
+      "account_id": "-000ExampleOpenId0001",
+      "username": "lumenandwick.example"
+    },
+    "tiktok-ads": {
+      "advertiser_id": "7000000000000000042",
+      "name": "Lumen and Wick (TikTok ad account)",
+      "currency": "USD"
+    }
+  },
+  "data_pulled": {
+    "tiktok-pages list_videos (pages of 20, newest first, read until a post older than 90 days)": [
+      {
+        "id": "7430000000000001000",
+        "create_time": 1793034000,
+        "share_url": "https://www.tiktok.com/@lumenandwick.example/video/7430000000000001000",
+        "video_description": "Unboxing the new winter scents, which one first?",
+        "duration": 31,
+        "view_count": 3746,
+        "like_count": 190,
+        "comment_count": 14,
+        "share_count": 23
+      },
+      {
+        "id": "7430000000000001001",
+        "create_time": 1793120400,
+        "share_url": "https://www.tiktok.com/@lumenandwick.example/video/7430000000000001001",
+        "video_description": "Restock day at the studio",
+        "duration": 22,
+        "view_count": 2486,
+        "like_count": 131,
+        "comment_count": 9,
+        "share_count": 14
+      },
+      {
+        "id": "7430000000000001002",
+        "create_time": 1792774800,
+        "share_url": "https://www.tiktok.com/@lumenandwick.example/video/7430000000000001002",
+        "video_description": "How we pour a three-wick candle in 60 seconds",
+        "duration": 38,
+        "view_count": 11104,
+        "like_count": 718,
+        "comment_count": 75,
+        "share_count": 168
+      },
+      {
+        "id": "7430000000000001003",
+        "create_time": 1792515600,
+        "share_url": "https://www.tiktok.com/@lumenandwick.example/video/7430000000000001003",
+        "video_description": "Candle care: trim your wick to stop tunnelling",
+        "duration": 27,
+        "view_count": 8598,
+        "like_count": 516,
+        "comment_count": 78,
+        "share_count": 107
+      },
+      {
+        "id": "7430000000000001004",
+        "create_time": 1792256400,
+        "share_url": "https://www.tiktok.com/@lumenandwick.example/video/7430000000000001004",
+        "video_description": "POV: your apartment smells like a cabin in October",
+        "duration": 31,
+        "view_count": 14867,
+        "like_count": 1198,
+        "comment_count": 97,
+        "share_count": 261
+      },
+      {
+        "id": "7430000000000001005",
+        "create_time": 1791997200,
+        "share_url": "https://www.tiktok.com/@lumenandwick.example/video/7430000000000001005",
+        "video_description": "Rating our scents with my mum, brutally honest",
+        "duration": 18,
+        "view_count": 7028,
+        "like_count": 412,
+        "comment_count": 85,
+        "share_count": 52
+      },
+      {
+        "id": "7430000000000001006",
+        "create_time": 1791651600,
+        "share_url": "https://www.tiktok.com/@lumenandwick.example/video/7430000000000001006",
+        "video_description": "Fall sale ends Sunday: 20% off every jar",
+        "duration": 18,
+        "view_count": 6494,
+        "like_count": 306,
+        "comment_count": 29,
+        "share_count": 64
+      },
+      {
+        "id": "7430000000000001007",
+        "create_time": 1791306000,
+        "share_url": "https://www.tiktok.com/@lumenandwick.example/video/7430000000000001007",
+        "video_description": "The one scent that sold out in 3 days",
+        "duration": 27,
+        "view_count": 9914,
+        "like_count": 625,
+        "comment_count": 62,
+        "share_count": 115
+      },
+      {
+        "id": "7430000000000001008",
+        "create_time": 1790960400,
+        "share_url": "https://www.tiktok.com/@lumenandwick.example/video/7430000000000001008",
+        "video_description": "Behind the label: who mixes our fragrance oils",
+        "duration": 14,
+        "view_count": 5962,
+        "like_count": 285,
+        "comment_count": 24,
+        "share_count": 27
+      },
+      {
+        "id": "7430000000000001009",
+        "create_time": 1790614800,
+        "share_url": "https://www.tiktok.com/@lumenandwick.example/video/7430000000000001009",
+        "video_description": "3 candles that make a small room feel cosy",
+        "duration": 14,
+        "view_count": 8401,
+        "like_count": 500,
+        "comment_count": 37,
+        "share_count": 73
+      },
+      {
+        "id": "7430000000000001010",
+        "create_time": 1790182800,
+        "share_url": "https://www.tiktok.com/@lumenandwick.example/video/7430000000000001010",
+        "video_description": "Soy vs paraffin, what actually burns cleaner",
+        "duration": 31,
+        "view_count": 5903,
+        "like_count": 290,
+        "comment_count": 32,
+        "share_count": 39
+      },
+      {
+        "id": "7430000000000001011",
+        "create_time": 1789750800,
+        "share_url": "https://www.tiktok.com/@lumenandwick.example/video/7430000000000001011",
+        "video_description": "Studio tour at 6am",
+        "duration": 38,
+        "view_count": 2871,
+        "like_count": 152,
+        "comment_count": 9,
+        "share_count": 12
+      },
+      {
+        "id": "7430000000000001012",
+        "create_time": 1789318800,
+        "share_url": "https://www.tiktok.com/@lumenandwick.example/video/7430000000000001012",
+        "video_description": "Matching candles to your star sign",
+        "duration": 22,
+        "view_count": 6320,
+        "like_count": 403,
+        "comment_count": 32,
+        "share_count": 35
+      },
+      {
+        "id": "7430000000000001013",
+        "create_time": 1788886800,
+        "share_url": "https://www.tiktok.com/@lumenandwick.example/video/7430000000000001013",
+        "video_description": "Gift wrapping hack for jars",
+        "duration": 22,
+        "view_count": 4849,
+        "like_count": 216,
+        "comment_count": 13,
+        "share_count": 29
+      },
+      {
+        "id": "7430000000000001014",
+        "create_time": 1788454800,
+        "share_url": "https://www.tiktok.com/@lumenandwick.example/video/7430000000000001014",
+        "video_description": "What 1,000 candles look like",
+        "duration": 22,
+        "view_count": 5991,
+        "like_count": 308,
+        "comment_count": 22,
+        "share_count": 33
+      },
+      {
+        "id": "7430000000000001015",
+        "create_time": 1788022800,
+        "share_url": "https://www.tiktok.com/@lumenandwick.example/video/7430000000000001015",
+        "video_description": "Testing a new pumpkin scent with the team",
+        "duration": 22,
+        "view_count": 4335,
+        "like_count": 224,
+        "comment_count": 19,
+        "share_count": 21
+      },
+      {
+        "id": "7430000000000001016",
+        "create_time": 1787504400,
+        "share_url": "https://www.tiktok.com/@lumenandwick.example/video/7430000000000001016",
+        "video_description": "Day in the life of a candle maker",
+        "duration": 18,
+        "view_count": 5370,
+        "like_count": 284,
+        "comment_count": 20,
+        "share_count": 27
+      },
+      {
+        "id": "7430000000000001017",
+        "create_time": 1786986000,
+        "share_url": "https://www.tiktok.com/@lumenandwick.example/video/7430000000000001017",
+        "video_description": "Our first market stall, two years ago",
+        "duration": 22,
+        "view_count": 3847,
+        "like_count": 191,
+        "comment_count": 14,
+        "share_count": 19
+      },
+      {
+        "id": "7430000000000001018",
+        "create_time": 1786467600,
+        "share_url": "https://www.tiktok.com/@lumenandwick.example/video/7430000000000001018",
+        "video_description": "Answering your wax questions",
+        "duration": 31,
+        "view_count": 4591,
+        "like_count": 211,
+        "comment_count": 21,
+        "share_count": 24
+      },
+      {
+        "id": "7430000000000001019",
+        "create_time": 1785949200,
+        "share_url": "https://www.tiktok.com/@lumenandwick.example/video/7430000000000001019",
+        "video_description": "Pouring in slow motion",
+        "duration": 18,
+        "view_count": 5813,
+        "like_count": 337,
+        "comment_count": 11,
+        "share_count": 21
+      },
+      {
+        "id": "7430000000000001020",
+        "create_time": 1785603600,
+        "share_url": "https://www.tiktok.com/@lumenandwick.example/video/7430000000000001020",
+        "video_description": "New jar colours, vote below",
+        "duration": 18,
+        "view_count": 514,
+        "like_count": 27,
+        "comment_count": 2,
+        "share_count": 3
+      },
+      {
+        "id": "7430000000000001021",
+        "create_time": 1784998800,
+        "share_url": "https://www.tiktok.com/@lumenandwick.example/video/7430000000000001021",
+        "video_description": "Summer citrus launch",
+        "duration": 22,
+        "view_count": 7455,
+        "like_count": 366,
+        "comment_count": 30,
+        "share_count": 42
+      }
+    ],
+    "tiktok-ads ads_metadata": [
+      {
+        "ad_id": "1800000000000003001",
+        "ad_name": "Spark | sold-out scent",
+        "adgroup_id": "1800000000000002001",
+        "campaign_id": "1800000000000000101",
+        "identity_type": "TT_USER",
+        "identity_id": "a1b2c3d4-0000-4000-8000-00000000c0de",
+        "tiktok_item_id": "7430000000000001007",
+        "dark_post_status": "OFF",
+        "operation_status": "ENABLE"
+      },
+      {
+        "ad_id": "1800000000000003002",
+        "ad_name": "Spark | wick trim",
+        "adgroup_id": "1800000000000002002",
+        "campaign_id": "1800000000000000101",
+        "identity_type": "TT_USER",
+        "identity_id": "a1b2c3d4-0000-4000-8000-00000000c0de",
+        "tiktok_item_id": "7430000000000001003",
+        "dark_post_status": "OFF",
+        "operation_status": "DISABLE"
+      },
+      {
+        "ad_id": "1800000000000003003",
+        "ad_name": "Product video | autumn set",
+        "adgroup_id": "1800000000000002001",
+        "campaign_id": "1800000000000000101",
+        "identity_type": "TT_USER",
+        "identity_id": "a1b2c3d4-0000-4000-8000-00000000c0de",
+        "tiktok_item_id": "7430000000000099001",
+        "dark_post_status": "ON",
+        "operation_status": "ENABLE"
+      }
+    ],
+    "tiktok-ads integrated_report_basic AUCTION_AD lifetime (ads that ran before)": [
+      {
+        "ad_id": "1800000000000003002",
+        "spend": "412.40",
+        "impressions": "61840",
+        "video_watched_2s": "21460",
+        "video_watched_6s": "9830",
+        "video_views_p100": "4120",
+        "result": "17",
+        "cost_per_result": "24.26"
+      }
+    ],
+    "tiktok-ads adgroups_metadata": [
+      {
+        "adgroup_id": "1800000000000002001",
+        "adgroup_name": "Purchases | US 25-44 | broad",
+        "campaign_id": "1800000000000000101",
+        "optimization_goal": "CONVERT",
+        "optimization_event": "SHOPPING",
+        "pixel_id": "7000000000000000777",
+        "promotion_type": "WEBSITE",
+        "billing_event": "OCPM",
+        "location_ids": [
+          "6252001"
+        ],
+        "age_groups": [
+          "AGE_25_34",
+          "AGE_35_44"
+        ],
+        "operation_status": "ENABLE"
+      },
+      {
+        "adgroup_id": "1800000000000002002",
+        "adgroup_name": "Purchases | US 25-44 | candle interests",
+        "campaign_id": "1800000000000000101",
+        "optimization_goal": "CONVERT",
+        "optimization_event": "SHOPPING",
+        "pixel_id": "7000000000000000777",
+        "promotion_type": "WEBSITE",
+        "billing_event": "OCPM",
+        "location_ids": [
+          "6252001"
+        ],
+        "age_groups": [
+          "AGE_25_34",
+          "AGE_35_44"
+        ],
+        "operation_status": "ENABLE"
+      },
+      {
+        "adgroup_id": "1800000000000002003",
+        "adgroup_name": "Traffic | blog",
+        "campaign_id": "1800000000000000102",
+        "optimization_goal": "CLICK",
+        "optimization_event": null,
+        "pixel_id": null,
+        "promotion_type": "WEBSITE",
+        "billing_event": "CPC",
+        "location_ids": [
+          "6252001"
+        ],
+        "age_groups": [],
+        "operation_status": "ENABLE"
+      }
+    ],
+    "tiktok-ads campaigns_metadata": [
+      {
+        "campaign_id": "1800000000000000101",
+        "campaign_name": "Prospecting | Purchases",
+        "objective_type": "CONVERSIONS",
+        "operation_status": "ENABLE"
+      },
+      {
+        "campaign_id": "1800000000000000102",
+        "campaign_name": "Blog traffic",
+        "objective_type": "TRAFFIC",
+        "operation_status": "ENABLE"
+      }
+    ],
+    "tiktok-ads integrated_report_basic AUCTION_ADGROUP 2026-09-28 to 2026-10-27": [
+      {
+        "adgroup_id": "1800000000000002001",
+        "spend": "2140.60",
+        "result": "88"
+      },
+      {
+        "adgroup_id": "1800000000000002002",
+        "spend": "1310.20",
+        "result": "51"
+      },
+      {
+        "adgroup_id": "1800000000000002003",
+        "spend": "640.00",
+        "result": "1210"
+      }
+    ]
+  },
+  "uploaded": {
+    "TikTok Studio post analytics export": [
+      {
+        "video_id": "7430000000000001002",
+        "watched_full_video_pct": 25.2,
+        "average_watch_time_s": 25.6
+      },
+      {
+        "video_id": "7430000000000001003",
+        "watched_full_video_pct": 22.5,
+        "average_watch_time_s": 16.8
+      },
+      {
+        "video_id": "7430000000000001004",
+        "watched_full_video_pct": 22.2,
+        "average_watch_time_s": 18.1
+      },
+      {
+        "video_id": "7430000000000001005",
+        "watched_full_video_pct": 18.2,
+        "average_watch_time_s": 8.8
+      },
+      {
+        "video_id": "7430000000000001006",
+        "watched_full_video_pct": 19.8,
+        "average_watch_time_s": 9.9
+      },
+      {
+        "video_id": "7430000000000001007",
+        "watched_full_video_pct": 22.6,
+        "average_watch_time_s": 17.2
+      },
+      {
+        "video_id": "7430000000000001008",
+        "watched_full_video_pct": 16.4,
+        "average_watch_time_s": 6.2
+      },
+      {
+        "video_id": "7430000000000001009",
+        "watched_full_video_pct": 22.1,
+        "average_watch_time_s": 7.8
+      },
+      {
+        "video_id": "7430000000000001010",
+        "watched_full_video_pct": 17.1,
+        "average_watch_time_s": 14.6
+      },
+      {
+        "video_id": "7430000000000001011",
+        "watched_full_video_pct": 14.7,
+        "average_watch_time_s": 15.7
+      },
+      {
+        "video_id": "7430000000000001012",
+        "watched_full_video_pct": 15.3,
+        "average_watch_time_s": 8.7
+      },
+      {
+        "video_id": "7430000000000001013",
+        "watched_full_video_pct": 17.3,
+        "average_watch_time_s": 9.4
+      },
+      {
+        "video_id": "7430000000000001014",
+        "watched_full_video_pct": 15.9,
+        "average_watch_time_s": 8.9
+      },
+      {
+        "video_id": "7430000000000001016",
+        "watched_full_video_pct": 16.2,
+        "average_watch_time_s": 7.3
+      },
+      {
+        "video_id": "7430000000000001017",
+        "watched_full_video_pct": 16.3,
+        "average_watch_time_s": 9.2
+      },
+      {
+        "video_id": "7430000000000001018",
+        "watched_full_video_pct": 15.4,
+        "average_watch_time_s": 12.4
+      },
+      {
+        "video_id": "7430000000000001019",
+        "watched_full_video_pct": 18.1,
+        "average_watch_time_s": 8.6
+      }
+    ]
+  },
+  "pasted": {
+    "creator_posts": [
+      {
+        "handle": "@example_creator_a",
+        "post_url": "https://www.tiktok.com/@example_creator_a/video/7430000000000200001",
+        "item_id": "7430000000000200001",
+        "caption": "I tested 5 autumn candles so you don't have to",
+        "posted": "2026-10-12",
+        "sound": "original",
+        "views": 48200,
+        "likes": 3610,
+        "comments": 402,
+        "shares": 611,
+        "watched_full_video_pct": 21.4,
+        "usual": {
+          "median_views": 31000,
+          "share_rate": 0.0071,
+          "comment_rate": 0.0052,
+          "like_rate": 0.066,
+          "watched_full_video_pct": 16.8
+        },
+        "code": "#ExCodeA9fQ2mLw7Tz4",
+        "code_made_on": "2026-10-20",
+        "code_length_days": 60
+      },
+      {
+        "handle": "@example_creator_b",
+        "post_url": "https://www.tiktok.com/@example_creator_b/video/7430000000000300001",
+        "item_id": "7430000000000300001",
+        "caption": "Cosy reading nook makeover on a budget",
+        "posted": "2026-10-18",
+        "sound": "commercial library",
+        "views": 22700,
+        "likes": 1980,
+        "comments": 151,
+        "shares": 268,
+        "watched_full_video_pct": 19.2,
+        "usual": {
+          "median_views": 18500,
+          "share_rate": 0.0082,
+          "comment_rate": 0.0049,
+          "like_rate": 0.071,
+          "watched_full_video_pct": 17.5
+        },
+        "code": "#ExCodeB3kV8pRd1Hs6",
+        "code_made_on": "2026-10-24",
+        "code_length_days": 7
+      },
+      {
+        "handle": "@example_creator_c",
+        "post_url": "https://www.tiktok.com/@example_creator_c/video/7430000000000400001",
+        "item_id": "7430000000000400001",
+        "caption": "Get ready with me: Sunday reset",
+        "posted": "2026-10-09",
+        "sound": "original",
+        "views": 9400,
+        "likes": 640,
+        "comments": 41,
+        "shares": 52,
+        "watched_full_video_pct": null,
+        "usual": {
+          "median_views": 8800,
+          "share_rate": 0.005,
+          "comment_rate": 0.0042,
+          "like_rate": 0.068,
+          "watched_full_video_pct": null
+        },
+        "code": null,
+        "code_made_on": null,
+        "code_length_days": null
+      }
+    ],
+    "sounds_of_own_posts": {
+      "7430000000000001000": "original",
+      "7430000000000001001": "original",
+      "7430000000000001002": "original",
+      "7430000000000001003": "original",
+      "7430000000000001004": "popular track",
+      "7430000000000001005": "original",
+      "7430000000000001006": "original",
+      "7430000000000001007": "commercial library",
+      "7430000000000001008": "original",
+      "7430000000000001009": "original",
+      "7430000000000001010": "original",
+      "7430000000000001011": "original",
+      "7430000000000001012": "original",
+      "7430000000000001013": "original",
+      "7430000000000001014": "original",
+      "7430000000000001015": "original",
+      "7430000000000001016": "original",
+      "7430000000000001017": "original",
+      "7430000000000001018": "original",
+      "7430000000000001019": "original",
+      "7430000000000001020": "original",
+      "7430000000000001021": "original"
+    }
+  },
+  "note": "Example data: an invented online candle shop with an invented TikTok account, ad account and creators, not a real business. Every number in expected_output.json follows from this input."
+}

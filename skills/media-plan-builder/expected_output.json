@@ -1,0 +1,720 @@
+{
+  "header": {
+    "business": "Example Shift Scheduler (invented)",
+    "flight": "2027-01-04 to 2027-03-31",
+    "country": "United States",
+    "budget": 45000,
+    "currency": "USD",
+    "goal": "paying accounts; the ad platforms optimize for sign-ups (account created)"
+  },
+  "success_numbers": {
+    "allowable_cost_per_paying_account": 612.0,
+    "allowable_cost_per_signup": 153.0,
+    "planning_target_cost_per_signup": 122.4,
+    "math": "$60 a month x 12 months x 85% margin = $612.00 per paying account; x 25% sign-up to paid = $153.00 per sign-up; plan at 80% of that = $122.40"
+  },
+  "planning_data_read": {
+    "google_keyword_planner": {
+      "keywords_returned": 9,
+      "keywords_planned": 7,
+      "left_out": [
+        {
+          "keyword": "free schedule maker",
+          "why": "people looking for a no-cost tool, not a paid app for a restaurant"
+        }
+      ],
+      "close_variants_counted_once": [
+        {
+          "keyword": "employee scheduling app",
+          "same_numbers_as": "staff scheduling app"
+        }
+      ],
+      "spikes_planned_at_average": [
+        {
+          "keyword": "shift scheduling app",
+          "month": "February 2026",
+          "searches": 14800,
+          "avg_monthly_searches": 4400,
+          "planned_at": 4400
+        }
+      ],
+      "planning_cpc": 6.19,
+      "planning_cpc_rule": "midpoint of each keyword's low and high top-of-page bid, weighted by average monthly searches"
+    },
+    "meta": {
+      "audience": "1,480,000 to 1,740,000 people (the lower bound is used)",
+      "history": "no rows in the last 90 days, so CPM and click rates are assumptions A4 to A7",
+      "minimum_daily_budget": "$1.00 a day for an ad set billed on impressions (the answer is in cents)"
+    },
+    "linkedin": {
+      "suggested_cpc": "$9.60 (range $7.20 to $14.40)",
+      "minimum_daily_budget": "$10.00"
+    },
+    "tiktok": {
+      "recommended_bid": "$38.00 per registration"
+    }
+  },
+  "platform_decisions": [
+    {
+      "line": "Google Search, non-brand",
+      "platform": "Google Ads",
+      "decision": "run",
+      "role": "Catch owners and managers already searching for a scheduling app",
+      "why": "56,040 searches over January to March last year on 7 keywords; cost per sign-up $88.42 at a $6.19 average CPC is under the $122.40 target.",
+      "optimization_event": "sign-up (Google Ads conversion from the GA4 sign_up event)",
+      "flighting": "always-on; budget follows last year's monthly search demand and stops at the reachable clicks"
+    },
+    {
+      "line": "Meta prospecting",
+      "platform": "Meta Ads",
+      "decision": "run",
+      "role": "Reach restaurant owners and managers who are not searching yet",
+      "why": "1,480,000 to 1,740,000 people in the audience; cost per sign-up $75.00 at the assumed CPM and rates, under the target.",
+      "optimization_event": "sign-up started",
+      "flighting": "burst then always-on: January weighted 1.25 to 1 per live day for the launch, then steady"
+    },
+    {
+      "line": "LinkedIn job-title targeting",
+      "platform": "LinkedIn Ads",
+      "decision": "not now",
+      "role": "Reach general managers by job title",
+      "why": "At LinkedIn's suggested $9.60 CPC and a 5% click to sign-up rate, a sign-up costs $192.00, above the $153.00 allowable. It pays back only if 31.4% of LinkedIn sign-ups become paying accounts (plan rate 25%).",
+      "revisit_when": "the first paying accounts show LinkedIn-type buyers convert at 31.4% or better, or the plan moves upmarket to restaurant groups"
+    },
+    {
+      "line": "TikTok",
+      "platform": "TikTok Ads",
+      "decision": "not now",
+      "role": "Reach younger shift managers",
+      "why": "A conversions ad group needs about 50 conversions, counted here over 7 days; at TikTok's recommended $38.00 bid that is $1,900 a week ($8,414 in a 31-day month), and only 2 videos are ready. The line would sit in learning all flight.",
+      "revisit_when": "6 or more videos exist and the reserve is unspent at the week-6 check"
+    }
+  ],
+  "line_floors": [
+    {
+      "line": "Google Search, non-brand",
+      "rule": "30 conversions in 30 days per campaign before Maximize conversions or Target CPA takes over",
+      "planned": "30 to 32 sign-ups a month",
+      "result": "meets on plan",
+      "action": "a new account has no conversion history: start on Maximize clicks with a $9.56 max CPC (the high end of the weighted bid range), then move to Maximize conversions once 30 sign-ups are recorded in 30 days, which the plan reaches in the first month"
+    },
+    {
+      "line": "Meta prospecting",
+      "rule": "about 50 optimization events in 7 days per ad set",
+      "planned": "32.0 to 40.0 sign-ups a week; 153.5 to 192.0 sign-ups started a week",
+      "result": "below on sign-up, meets on sign-up started",
+      "action": "optimize for sign-up started ($15.62 each, floor $781 a week) instead of sign-up ($75.00 each, floor $3,750 a week); one ad set only, and judge it on sign-ups"
+    },
+    {
+      "line": "Meta prospecting",
+      "rule": "Meta's minimum daily budget for an ad set billed on impressions",
+      "planned": "$342.58 to $428.57 a day",
+      "result": "meets",
+      "action": "none"
+    }
+  ],
+  "budget_by_month": {
+    "rows": [
+      {
+        "month": "2027-01",
+        "google_search": 2840,
+        "meta": 12000,
+        "total": 14840
+      },
+      {
+        "month": "2027-02",
+        "google_search": 2660,
+        "meta": 9600,
+        "total": 12260
+      },
+      {
+        "month": "2027-03",
+        "google_search": 2780,
+        "meta": 10620,
+        "total": 13400
+      }
+    ],
+    "reserve": 4500,
+    "reserve_rule": "held back; at the week-6 check it goes to the line with the lowest cost per sign-up that is under the target and still has room (Search: lost to budget; Meta: frequency under 3)",
+    "total_planned": 40500,
+    "grand_total": 45000
+  },
+  "forecast_by_line_and_month": [
+    {
+      "line": "Google Search, non-brand",
+      "month": "2027-01",
+      "budget": 2840,
+      "impressions": 8343,
+      "reach": null,
+      "frequency": null,
+      "clicks": 459,
+      "results": 32,
+      "result": "sign-ups",
+      "cost_per_result": 88.75,
+      "assumptions": [
+        "Keyword Planner searches and bids",
+        "A1",
+        "A2",
+        "A3"
+      ]
+    },
+    {
+      "line": "Google Search, non-brand",
+      "month": "2027-02",
+      "budget": 2660,
+      "impressions": 7814,
+      "reach": null,
+      "frequency": null,
+      "clicks": 430,
+      "results": 30,
+      "result": "sign-ups",
+      "cost_per_result": 88.67,
+      "assumptions": [
+        "Keyword Planner searches and bids",
+        "A1",
+        "A2",
+        "A3"
+      ]
+    },
+    {
+      "line": "Google Search, non-brand",
+      "month": "2027-03",
+      "budget": 2780,
+      "impressions": 8166,
+      "reach": null,
+      "frequency": null,
+      "clicks": 449,
+      "results": 31,
+      "result": "sign-ups",
+      "cost_per_result": 89.68,
+      "assumptions": [
+        "Keyword Planner searches and bids",
+        "A1",
+        "A2",
+        "A3"
+      ]
+    },
+    {
+      "line": "Meta prospecting",
+      "month": "2027-01",
+      "budget": 12000,
+      "impressions": 800000,
+      "reach": 266667,
+      "frequency": 3.0,
+      "clicks": 6400,
+      "results": 160,
+      "result": "sign-ups",
+      "cost_per_result": 75.0,
+      "optimization_events": 768,
+      "assumptions": [
+        "Meta audience estimate",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9"
+      ]
+    },
+    {
+      "line": "Meta prospecting",
+      "month": "2027-02",
+      "budget": 9600,
+      "impressions": 640000,
+      "reach": 213333,
+      "frequency": 3.0,
+      "clicks": 5120,
+      "results": 128,
+      "result": "sign-ups",
+      "cost_per_result": 75.0,
+      "optimization_events": 614,
+      "assumptions": [
+        "Meta audience estimate",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9"
+      ]
+    },
+    {
+      "line": "Meta prospecting",
+      "month": "2027-03",
+      "budget": 10620,
+      "impressions": 708000,
+      "reach": 236000,
+      "frequency": 3.0,
+      "clicks": 5664,
+      "results": 142,
+      "result": "sign-ups",
+      "cost_per_result": 74.79,
+      "optimization_events": 680,
+      "assumptions": [
+        "Meta audience estimate",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9"
+      ]
+    }
+  ],
+  "totals": {
+    "planned_spend": 40500,
+    "signups": 523,
+    "cost_per_signup": 77.44,
+    "paying_accounts": 131,
+    "cost_per_paying_account": 309.75,
+    "vs_allowable": "51% of the $612.00 allowable"
+  },
+  "creative": [
+    {
+      "line": "Google Search, non-brand",
+      "needs": [
+        "2 ad groups: restaurant scheduling (restaurant and cafe keywords) and scheduling app (generic app keywords)",
+        "1 responsive search ad per ad group: 15 headlines (30 characters each at most) and 4 descriptions (90 at most)",
+        "4 sitelinks, 4 callouts and 1 structured snippet at campaign level",
+        "Exact and phrase match only; add 'free schedule maker' and 'free' as negatives at launch"
+      ],
+      "due": "2026-12-21"
+    },
+    {
+      "line": "Meta prospecting",
+      "needs": [
+        "3 concepts at launch (shift-swap chaos, labour cost per week, time clock on the phone), each as a 4:5 feed image and a 9:16 Stories and Reels version",
+        "the 2 existing phone-shot videos cut to 9:16 and 4:5 with captions",
+        "2 new concepts due for February and 2 for March: at a planned monthly frequency of 3, the same ads would be seen again every month"
+      ],
+      "due": "2026-12-21"
+    }
+  ],
+  "launch_gates": [
+    {
+      "when": "day 3",
+      "check": "spend is pacing and every conversion event fires (sign-up in Google Ads, sign-up started and sign-up in Meta Events Manager)",
+      "if_not": "pause the line and fix tracking before more spend"
+    },
+    {
+      "when": "week 2 (2027-01-17)",
+      "check": "each line has spent at least $459.00 (3 x the allowable cost per sign-up)",
+      "then": "replace assumptions A1 to A9 with the real CPM, CTR, CPC and rates in the tracker and rerun the forecast"
+    },
+    {
+      "when": "week 4 (2027-01-31)",
+      "check": "cost per sign-up by line",
+      "scale": "at or under $122.40: keep, and the line is first in line for the reserve",
+      "hold": "between $122.40 and $153.00: change creative or keywords, no budget change",
+      "cut": "over $153.00 after $459.00 spent: cut the line's budget in half and fix"
+    },
+    {
+      "when": "week 6 (2027-02-14)",
+      "check": "sign-up to paid rate of January sign-ups by line",
+      "then": "release the $4,500 reserve by the reserve rule; revisit LinkedIn and TikTok by their revisit conditions"
+    }
+  ],
+  "assumptions": [
+    {
+      "id": "A1",
+      "line": "Google Search",
+      "item": "Impression share a new account can win on these keywords",
+      "value": 0.45,
+      "source": "assumption: new account, no history"
+    },
+    {
+      "id": "A2",
+      "line": "Google Search",
+      "item": "Click-through rate",
+      "value": 0.055,
+      "source": "assumption: non-brand search, ads written to the keyword"
+    },
+    {
+      "id": "A3",
+      "line": "Google Search",
+      "item": "Click to sign-up rate",
+      "value": 0.07,
+      "source": "user: the scheduling page converts 7% of visitors from organic search today"
+    },
+    {
+      "id": "A4",
+      "line": "Meta",
+      "item": "CPM (cost per 1,000 impressions)",
+      "value": 15.0,
+      "source": "assumption: no Meta history; replace after week 2"
+    },
+    {
+      "id": "A5",
+      "line": "Meta",
+      "item": "Link click-through rate",
+      "value": 0.008,
+      "source": "assumption: cold audience, static and carousel"
+    },
+    {
+      "id": "A6",
+      "line": "Meta",
+      "item": "Click to sign-up-started rate",
+      "value": 0.12,
+      "source": "user: GA4 shows 12% of /start/ visitors open the sign-up form"
+    },
+    {
+      "id": "A7",
+      "line": "Meta",
+      "item": "Click to sign-up rate",
+      "value": 0.025,
+      "source": "user: GA4 shows 2.5% of /start/ visitors finish sign-up"
+    },
+    {
+      "id": "A8",
+      "line": "Meta",
+      "item": "Planned frequency per person over a month",
+      "value": 3.0,
+      "source": "assumption: enough repeats for a new brand without wearing out 2 concepts"
+    },
+    {
+      "id": "A9",
+      "line": "Meta",
+      "item": "Largest share of the audience one line can reach in a month",
+      "value": 0.35,
+      "source": "assumption"
+    },
+    {
+      "id": "A10",
+      "line": "LinkedIn",
+      "item": "Click to sign-up rate",
+      "value": 0.05,
+      "source": "assumption: job-title targeted traffic to the search landing page"
+    },
+    {
+      "id": "A11",
+      "line": "TikTok",
+      "item": "Videos ready at launch",
+      "value": 2,
+      "source": "user"
+    }
+  ],
+  "tracker_sheet": {
+    "spreadsheet": "an existing Google Sheet the user named 'Example Shift Scheduler marketing 2027'",
+    "tabs": [
+      {
+        "name": "Media plan Q1 2027",
+        "rows": 8,
+        "columns": 15
+      },
+      {
+        "name": "Assumptions",
+        "rows": 12,
+        "columns": 5
+      }
+    ],
+    "formulas": "Actual cost per sign-up is spend divided by sign-ups. Status reads planned until spend is entered, learning until the line has spent $459.00 (3 x the allowable cost per sign-up), then on target, hold or cut against the $122.40 target and $153.00 allowable; a line past that spend with no sign-ups reads cut. The sheet grades itself as actuals go in",
+    "payloads_not_run": [
+      {
+        "step": 0,
+        "action": "list_sheets",
+        "platform": "google-sheets",
+        "status": "not run (read: checks the tab names are free)",
+        "body": {
+          "action": "list_sheets",
+          "workspace_id": "<workspace_id>",
+          "brand_id": "<brand_id>",
+          "spreadsheet_id": "<spreadsheet id from the user's link>"
+        }
+      },
+      {
+        "step": 1,
+        "action": "create_sheet",
+        "platform": "google-sheets",
+        "status": "not run",
+        "body": {
+          "action": "create_sheet",
+          "workspace_id": "<workspace_id>",
+          "brand_id": "<brand_id>",
+          "spreadsheet_id": "<spreadsheet id from the user's link>",
+          "title": "Media plan Q1 2027",
+          "row_count": 50,
+          "column_count": 15
+        }
+      },
+      {
+        "step": 2,
+        "action": "update_cells",
+        "platform": "google-sheets",
+        "status": "not run",
+        "body": {
+          "action": "update_cells",
+          "workspace_id": "<workspace_id>",
+          "brand_id": "<brand_id>",
+          "spreadsheet_id": "<spreadsheet id from the user's link>",
+          "sheet_id": "<sheet_id returned by step 1>",
+          "range": "A1:O8",
+          "values": [
+            [
+              "Line",
+              "Platform",
+              "Month",
+              "Optimization event",
+              "Planned budget",
+              "Planned impressions",
+              "Planned reach",
+              "Planned frequency",
+              "Planned clicks",
+              "Planned sign-ups",
+              "Planned cost per sign-up",
+              "Actual spend",
+              "Actual sign-ups",
+              "Actual cost per sign-up",
+              "Status"
+            ],
+            [
+              "Google Search, non-brand",
+              "Google Ads",
+              "2027-01",
+              "sign-up",
+              2840,
+              8343,
+              "",
+              "",
+              459,
+              32,
+              88.75,
+              "",
+              "",
+              "=IF(M2>0,L2/M2,\"\")",
+              "=IF(L2=\"\",\"planned\",IF(L2<459.0,\"learning\",IF(M2=0,\"cut\",IF(N2<=122.4,\"on target\",IF(N2<=153.0,\"hold\",\"cut\")))))"
+            ],
+            [
+              "Google Search, non-brand",
+              "Google Ads",
+              "2027-02",
+              "sign-up",
+              2660,
+              7814,
+              "",
+              "",
+              430,
+              30,
+              88.67,
+              "",
+              "",
+              "=IF(M3>0,L3/M3,\"\")",
+              "=IF(L3=\"\",\"planned\",IF(L3<459.0,\"learning\",IF(M3=0,\"cut\",IF(N3<=122.4,\"on target\",IF(N3<=153.0,\"hold\",\"cut\")))))"
+            ],
+            [
+              "Google Search, non-brand",
+              "Google Ads",
+              "2027-03",
+              "sign-up",
+              2780,
+              8166,
+              "",
+              "",
+              449,
+              31,
+              89.68,
+              "",
+              "",
+              "=IF(M4>0,L4/M4,\"\")",
+              "=IF(L4=\"\",\"planned\",IF(L4<459.0,\"learning\",IF(M4=0,\"cut\",IF(N4<=122.4,\"on target\",IF(N4<=153.0,\"hold\",\"cut\")))))"
+            ],
+            [
+              "Meta prospecting",
+              "Meta Ads",
+              "2027-01",
+              "sign-up started",
+              12000,
+              800000,
+              266667,
+              3.0,
+              6400,
+              160,
+              75.0,
+              "",
+              "",
+              "=IF(M5>0,L5/M5,\"\")",
+              "=IF(L5=\"\",\"planned\",IF(L5<459.0,\"learning\",IF(M5=0,\"cut\",IF(N5<=122.4,\"on target\",IF(N5<=153.0,\"hold\",\"cut\")))))"
+            ],
+            [
+              "Meta prospecting",
+              "Meta Ads",
+              "2027-02",
+              "sign-up started",
+              9600,
+              640000,
+              213333,
+              3.0,
+              5120,
+              128,
+              75.0,
+              "",
+              "",
+              "=IF(M6>0,L6/M6,\"\")",
+              "=IF(L6=\"\",\"planned\",IF(L6<459.0,\"learning\",IF(M6=0,\"cut\",IF(N6<=122.4,\"on target\",IF(N6<=153.0,\"hold\",\"cut\")))))"
+            ],
+            [
+              "Meta prospecting",
+              "Meta Ads",
+              "2027-03",
+              "sign-up started",
+              10620,
+              708000,
+              236000,
+              3.0,
+              5664,
+              142,
+              74.79,
+              "",
+              "",
+              "=IF(M7>0,L7/M7,\"\")",
+              "=IF(L7=\"\",\"planned\",IF(L7<459.0,\"learning\",IF(M7=0,\"cut\",IF(N7<=122.4,\"on target\",IF(N7<=153.0,\"hold\",\"cut\")))))"
+            ],
+            [
+              "Reserve",
+              "",
+              "2027-02",
+              "",
+              4500,
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "held"
+            ]
+          ],
+          "value_input_option": "USER_ENTERED"
+        }
+      },
+      {
+        "step": 3,
+        "action": "create_sheet",
+        "platform": "google-sheets",
+        "status": "not run",
+        "body": {
+          "action": "create_sheet",
+          "workspace_id": "<workspace_id>",
+          "brand_id": "<brand_id>",
+          "spreadsheet_id": "<spreadsheet id from the user's link>",
+          "title": "Assumptions",
+          "row_count": 50,
+          "column_count": 5
+        }
+      },
+      {
+        "step": 4,
+        "action": "update_cells",
+        "platform": "google-sheets",
+        "status": "not run",
+        "body": {
+          "action": "update_cells",
+          "workspace_id": "<workspace_id>",
+          "brand_id": "<brand_id>",
+          "spreadsheet_id": "<spreadsheet id from the user's link>",
+          "sheet_id": "<sheet_id returned by step 3>",
+          "range": "A1:E12",
+          "values": [
+            [
+              "Id",
+              "Line",
+              "Assumption",
+              "Value",
+              "Source"
+            ],
+            [
+              "A1",
+              "Google Search",
+              "Impression share a new account can win on these keywords",
+              0.45,
+              "assumption: new account, no history"
+            ],
+            [
+              "A2",
+              "Google Search",
+              "Click-through rate",
+              0.055,
+              "assumption: non-brand search, ads written to the keyword"
+            ],
+            [
+              "A3",
+              "Google Search",
+              "Click to sign-up rate",
+              0.07,
+              "user: the scheduling page converts 7% of visitors from organic search today"
+            ],
+            [
+              "A4",
+              "Meta",
+              "CPM (cost per 1,000 impressions)",
+              15.0,
+              "assumption: no Meta history; replace after week 2"
+            ],
+            [
+              "A5",
+              "Meta",
+              "Link click-through rate",
+              0.008,
+              "assumption: cold audience, static and carousel"
+            ],
+            [
+              "A6",
+              "Meta",
+              "Click to sign-up-started rate",
+              0.12,
+              "user: GA4 shows 12% of /start/ visitors open the sign-up form"
+            ],
+            [
+              "A7",
+              "Meta",
+              "Click to sign-up rate",
+              0.025,
+              "user: GA4 shows 2.5% of /start/ visitors finish sign-up"
+            ],
+            [
+              "A8",
+              "Meta",
+              "Planned frequency per person over a month",
+              3.0,
+              "assumption: enough repeats for a new brand without wearing out 2 concepts"
+            ],
+            [
+              "A9",
+              "Meta",
+              "Largest share of the audience one line can reach in a month",
+              0.35,
+              "assumption"
+            ],
+            [
+              "A10",
+              "LinkedIn",
+              "Click to sign-up rate",
+              0.05,
+              "assumption: job-title targeted traffic to the search landing page"
+            ],
+            [
+              "A11",
+              "TikTok",
+              "Videos ready at launch",
+              2,
+              "user"
+            ]
+          ],
+          "value_input_option": "RAW"
+        }
+      }
+    ]
+  },
+  "unknowns": [
+    "Meta CPM and click rates are assumptions until week 2 (no Meta history).",
+    "Google Ads has no conversion action yet: create it from the GA4 sign_up event before 4 January, or Search has nothing to optimize to.",
+    "Sign-up to paid by line is unknown until the first cohort finishes its first month (around week 6)."
+  ],
+  "go_deeper": [
+    "cross-platform-budget-allocator (if installed): rebalance between Search and Meta from week 6, once there is history",
+    "google-ads-campaign-builder (if installed): build the Search campaign from this plan",
+    "measurement-plan-builder (if installed): the conversion setup the gates depend on"
+  ]
+}

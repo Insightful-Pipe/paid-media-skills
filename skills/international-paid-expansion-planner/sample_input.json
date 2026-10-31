@@ -1,0 +1,865 @@
+{
+  "note": "Example data: an invented online store selling lightweight hiking and camping gear (Example Hiking Gear Store, hikinggear.example) with invented accounts, not a real business. Every number in expected_output.json follows from this input.",
+  "request": "Hey Claude, I just added the \"international-paid-expansion-planner\" skill. We sell hiking gear from the US. Which countries should our Google Ads and Meta ads open next, and how should we test them? We can put $6,000 a month into new markets and our target ROAS is 3.0.",
+  "business": "Example Hiking Gear Store, an invented US online store selling lightweight backpacks, tents, sleeping bags and cooking gear",
+  "date_ranges": {
+    "ga4_and_ads": [
+      "2026-08-01",
+      "2026-10-29"
+    ],
+    "search_console": [
+      "2026-07-29",
+      "2026-10-26"
+    ],
+    "orders": [
+      "2025-10-30",
+      "2026-10-29"
+    ]
+  },
+  "from_the_user": {
+    "home_market": "US",
+    "account_currency": "USD",
+    "result": "purchase",
+    "target_roas": 3.0,
+    "monthly_test_budget": 6000.0,
+    "can_ship_to": [
+      "US",
+      "CA",
+      "GB",
+      "AU",
+      "DE",
+      "NL",
+      "FR",
+      "SE"
+    ],
+    "cannot_ship_to": {
+      "BR": "no carrier contract; customs returns not set up"
+    },
+    "checkout_currencies": [
+      "USD",
+      "CAD",
+      "GBP",
+      "EUR"
+    ],
+    "team_languages": {
+      "English": "in house",
+      "German": "paid native translator",
+      "French": "paid native translator"
+    },
+    "shipping_confirmed_for": [
+      "US",
+      "CA",
+      "GB",
+      "DE",
+      "NL",
+      "FR",
+      "SE"
+    ],
+    "fix_days": 21,
+    "test_day_1": "2026-11-16",
+    "candidates_named": [
+      "GB",
+      "DE",
+      "AU"
+    ],
+    "core_terms_home": [
+      "ultralight backpack",
+      "lightweight tent",
+      "backpacking stove",
+      "hiking sleeping bag",
+      "trekking poles",
+      "ultralight sleeping pad"
+    ],
+    "core_terms_native_speaker": {
+      "German": [
+        "ultraleicht rucksack",
+        "leichtes zelt",
+        "trekking kocher",
+        "schlafsack wandern",
+        "trekkingstöcke",
+        "isomatte ultraleicht"
+      ],
+      "French": [
+        "sac à dos ultra léger",
+        "tente légère",
+        "réchaud randonnée",
+        "sac de couchage randonnée",
+        "bâtons de randonnée",
+        "matelas ultra léger"
+      ]
+    }
+  },
+  "data_pulled": {
+    "ga4_country_language": [
+      {
+        "country": "United States",
+        "language": "English",
+        "sessions": 112800,
+        "keyEvents:purchase": 2256,
+        "purchaseRevenue": 270720.0
+      },
+      {
+        "country": "United States",
+        "language": "Spanish",
+        "sessions": 7200,
+        "keyEvents:purchase": 144,
+        "purchaseRevenue": 17280.0
+      },
+      {
+        "country": "Canada",
+        "language": "English",
+        "sessions": 5456,
+        "keyEvents:purchase": 93,
+        "purchaseRevenue": 10974.0
+      },
+      {
+        "country": "Canada",
+        "language": "French",
+        "sessions": 744,
+        "keyEvents:purchase": 12,
+        "purchaseRevenue": 1416.0
+      },
+      {
+        "country": "United Kingdom",
+        "language": "English",
+        "sessions": 5100,
+        "keyEvents:purchase": 84,
+        "purchaseRevenue": 10584.0
+      },
+      {
+        "country": "Australia",
+        "language": "English",
+        "sessions": 3300,
+        "keyEvents:purchase": 50,
+        "purchaseRevenue": 6550.0
+      },
+      {
+        "country": "Germany",
+        "language": "German",
+        "sessions": 1932,
+        "keyEvents:purchase": 15,
+        "purchaseRevenue": 1680.0
+      },
+      {
+        "country": "Germany",
+        "language": "English",
+        "sessions": 868,
+        "keyEvents:purchase": 10,
+        "purchaseRevenue": 1120.0
+      },
+      {
+        "country": "Brazil",
+        "language": "Portuguese",
+        "sessions": 1520,
+        "keyEvents:purchase": 6,
+        "purchaseRevenue": 588.0
+      },
+      {
+        "country": "Brazil",
+        "language": "English",
+        "sessions": 380,
+        "keyEvents:purchase": 2,
+        "purchaseRevenue": 196.0
+      },
+      {
+        "country": "Netherlands",
+        "language": "English",
+        "sessions": 594,
+        "keyEvents:purchase": 9,
+        "purchaseRevenue": 1035.0
+      },
+      {
+        "country": "Netherlands",
+        "language": "Dutch",
+        "sessions": 306,
+        "keyEvents:purchase": 4,
+        "purchaseRevenue": 460.0
+      },
+      {
+        "country": "France",
+        "language": "French",
+        "sessions": 560,
+        "keyEvents:purchase": 3,
+        "purchaseRevenue": 363.0
+      },
+      {
+        "country": "France",
+        "language": "English",
+        "sessions": 140,
+        "keyEvents:purchase": 1,
+        "purchaseRevenue": 121.0
+      },
+      {
+        "country": "Sweden",
+        "language": "English",
+        "sessions": 145,
+        "keyEvents:purchase": 2,
+        "purchaseRevenue": 234.0
+      },
+      {
+        "country": "Sweden",
+        "language": "Swedish",
+        "sessions": 105,
+        "keyEvents:purchase": 1,
+        "purchaseRevenue": 117.0
+      }
+    ],
+    "search_console_country": [
+      {
+        "country": "USA",
+        "impressions": 912000,
+        "clicks": 18240
+      },
+      {
+        "country": "GBR",
+        "impressions": 61000,
+        "clicks": 1098
+      },
+      {
+        "country": "CAN",
+        "impressions": 48000,
+        "clicks": 912
+      },
+      {
+        "country": "DEU",
+        "impressions": 39000,
+        "clicks": 351
+      },
+      {
+        "country": "AUS",
+        "impressions": 27000,
+        "clicks": 513
+      },
+      {
+        "country": "FRA",
+        "impressions": 12500,
+        "clicks": 88
+      },
+      {
+        "country": "BRA",
+        "impressions": 9100,
+        "clicks": 64
+      },
+      {
+        "country": "NLD",
+        "impressions": 6200,
+        "clicks": 81
+      },
+      {
+        "country": "SWE",
+        "impressions": 3800,
+        "clicks": 34
+      }
+    ],
+    "shopify_orders_by_shipping_country": [
+      {
+        "shipping_country_code": "US",
+        "orders": 9420,
+        "total_price_usd": 1130400.0,
+        "orders_presentment_in_local_currency": 9420
+      },
+      {
+        "shipping_country_code": "CA",
+        "orders": 380,
+        "total_price_usd": 44840.0,
+        "orders_presentment_in_local_currency": 352
+      },
+      {
+        "shipping_country_code": "GB",
+        "orders": 290,
+        "total_price_usd": 36540.0,
+        "orders_presentment_in_local_currency": 271
+      },
+      {
+        "shipping_country_code": "AU",
+        "orders": 140,
+        "total_price_usd": 18340.0,
+        "orders_presentment_in_local_currency": 0
+      },
+      {
+        "shipping_country_code": "DE",
+        "orders": 70,
+        "total_price_usd": 7840.0,
+        "orders_presentment_in_local_currency": 64
+      },
+      {
+        "shipping_country_code": "NL",
+        "orders": 26,
+        "total_price_usd": 2990.0,
+        "orders_presentment_in_local_currency": 23
+      },
+      {
+        "shipping_country_code": "FR",
+        "orders": 9,
+        "total_price_usd": 1089.0,
+        "orders_presentment_in_local_currency": 8
+      },
+      {
+        "shipping_country_code": "SE",
+        "orders": 6,
+        "total_price_usd": 702.0,
+        "orders_presentment_in_local_currency": 0
+      },
+      {
+        "shipping_country_code": "BR",
+        "orders": 0,
+        "total_price_usd": 0.0,
+        "orders_presentment_in_local_currency": 0
+      }
+    ],
+    "google_ads_geographic_view": [
+      {
+        "campaign": "Search - Backpacks",
+        "channel": "SEARCH",
+        "country_criterion_id": "2840",
+        "location_type": "LOCATION_OF_PRESENCE",
+        "impressions": 310000,
+        "clicks": 10400,
+        "cost": 11232.0,
+        "conversions": 318,
+        "conversions_value": 38160.0
+      },
+      {
+        "campaign": "Search - Tents",
+        "channel": "SEARCH",
+        "country_criterion_id": "2840",
+        "location_type": "LOCATION_OF_PRESENCE",
+        "impressions": 255000,
+        "clicks": 9100,
+        "cost": 10101.0,
+        "conversions": 264,
+        "conversions_value": 32472.0
+      },
+      {
+        "campaign": "Search - Sleep Systems",
+        "channel": "SEARCH",
+        "country_criterion_id": "2840",
+        "location_type": "LOCATION_OF_PRESENCE",
+        "impressions": 214000,
+        "clicks": 7500,
+        "cost": 8367.0,
+        "conversions": 228,
+        "conversions_value": 26568.0
+      },
+      {
+        "campaign": "Search - Brand",
+        "channel": "SEARCH",
+        "country_criterion_id": "2840",
+        "location_type": "LOCATION_OF_PRESENCE",
+        "impressions": 41000,
+        "clicks": 6200,
+        "cost": 1860.0,
+        "conversions": 620,
+        "conversions_value": 74400.0
+      },
+      {
+        "campaign": "Search - Tents",
+        "channel": "SEARCH",
+        "country_criterion_id": "2124",
+        "location_type": "LOCATION_OF_PRESENCE",
+        "impressions": 4100,
+        "clicks": 140,
+        "cost": 151.2,
+        "conversions": 3,
+        "conversions_value": 354.0
+      },
+      {
+        "campaign": "Search - Backpacks",
+        "channel": "SEARCH",
+        "country_criterion_id": "2826",
+        "location_type": "AREA_OF_INTEREST",
+        "impressions": 1900,
+        "clicks": 60,
+        "cost": 66.0,
+        "conversions": 1,
+        "conversions_value": 126.0
+      }
+    ],
+    "google_ads_landing_page_view": [
+      {
+        "campaign": "Search - Backpacks",
+        "unexpanded_final_url": "https://www.hikinggear.example/collections/ultralight-backpacks{ignore}?campaignid={campaignid}&keyword={keyword}",
+        "clicks": 8100,
+        "cost": 8748.0,
+        "conversions": 248,
+        "conversions_value": 29760.0
+      },
+      {
+        "campaign": "Search - Backpacks",
+        "unexpanded_final_url": "https://www.hikinggear.example/products/40l-ultralight-pack{ignore}?campaignid={campaignid}&keyword={keyword}",
+        "clicks": 2300,
+        "cost": 2484.0,
+        "conversions": 70,
+        "conversions_value": 8400.0
+      },
+      {
+        "campaign": "Search - Tents",
+        "unexpanded_final_url": "https://www.hikinggear.example/collections/tents{ignore}?campaignid={campaignid}&keyword={keyword}",
+        "clicks": 8200,
+        "cost": 9102.0,
+        "conversions": 241,
+        "conversions_value": 29647.0
+      },
+      {
+        "campaign": "Search - Tents",
+        "unexpanded_final_url": "https://www.hikinggear.example/collections/ultralight-backpacks{ignore}?campaignid={campaignid}&keyword={keyword}",
+        "clicks": 900,
+        "cost": 999.0,
+        "conversions": 23,
+        "conversions_value": 2825.0
+      },
+      {
+        "campaign": "Search - Sleep Systems",
+        "unexpanded_final_url": "https://www.hikinggear.example/collections/sleeping-bags{ignore}?campaignid={campaignid}&keyword={keyword}",
+        "clicks": 4700,
+        "cost": 5264.0,
+        "conversions": 133,
+        "conversions_value": 15561.0
+      },
+      {
+        "campaign": "Search - Sleep Systems",
+        "unexpanded_final_url": "https://www.hikinggear.example/collections/sleeping-pads{ignore}?campaignid={campaignid}&keyword={keyword}",
+        "clicks": 1800,
+        "cost": 1998.0,
+        "conversions": 41,
+        "conversions_value": 4797.0
+      },
+      {
+        "campaign": "Search - Sleep Systems",
+        "unexpanded_final_url": "https://www.hikinggear.example/collections/ultralight-backpacks{ignore}?campaignid={campaignid}&keyword={keyword}",
+        "clicks": 300,
+        "cost": 320.0,
+        "conversions": 25,
+        "conversions_value": 2935.0
+      },
+      {
+        "campaign": "Search - Sleep Systems",
+        "unexpanded_final_url": "https://www.hikinggear.example/collections/cook-systems{ignore}?campaignid={campaignid}&keyword={keyword}",
+        "clicks": 700,
+        "cost": 785.0,
+        "conversions": 29,
+        "conversions_value": 3275.0
+      },
+      {
+        "campaign": "Search - Brand",
+        "unexpanded_final_url": "https://www.hikinggear.example/{ignore}?campaignid={campaignid}&keyword={keyword}",
+        "clicks": 6200,
+        "cost": 1860.0,
+        "conversions": 620,
+        "conversions_value": 74400.0
+      }
+    ],
+    "keyword_data": {
+      "US": {
+        "source": "keyword_planner",
+        "language": "English",
+        "location": "US",
+        "terms": [
+          {
+            "keyword": "ultralight backpack",
+            "avg_monthly_searches": 24300,
+            "low_top_of_page_bid": 0.7,
+            "high_top_of_page_bid": 2.42
+          },
+          {
+            "keyword": "lightweight tent",
+            "avg_monthly_searches": 19800,
+            "low_top_of_page_bid": 0.63,
+            "high_top_of_page_bid": 2.18
+          },
+          {
+            "keyword": "backpacking stove",
+            "avg_monthly_searches": 10800,
+            "low_top_of_page_bid": 0.47,
+            "high_top_of_page_bid": 1.62
+          },
+          {
+            "keyword": "hiking sleeping bag",
+            "avg_monthly_searches": 15300,
+            "low_top_of_page_bid": 0.54,
+            "high_top_of_page_bid": 1.84
+          },
+          {
+            "keyword": "trekking poles",
+            "avg_monthly_searches": 11700,
+            "low_top_of_page_bid": 0.46,
+            "high_top_of_page_bid": 1.61
+          },
+          {
+            "keyword": "ultralight sleeping pad",
+            "avg_monthly_searches": 8100,
+            "low_top_of_page_bid": 0.64,
+            "high_top_of_page_bid": 2.2
+          }
+        ]
+      },
+      "CA": {
+        "source": "keyword_planner",
+        "language": "English",
+        "location": "CA",
+        "terms": [
+          {
+            "keyword": "ultralight backpack",
+            "avg_monthly_searches": 2970,
+            "low_top_of_page_bid": 0.45,
+            "high_top_of_page_bid": 1.56
+          },
+          {
+            "keyword": "lightweight tent",
+            "avg_monthly_searches": 2420,
+            "low_top_of_page_bid": 0.47,
+            "high_top_of_page_bid": 1.63
+          },
+          {
+            "keyword": "backpacking stove",
+            "avg_monthly_searches": 1320,
+            "low_top_of_page_bid": 0.39,
+            "high_top_of_page_bid": 1.35
+          },
+          {
+            "keyword": "hiking sleeping bag",
+            "avg_monthly_searches": 1870,
+            "low_top_of_page_bid": 0.6,
+            "high_top_of_page_bid": 2.08
+          },
+          {
+            "keyword": "trekking poles",
+            "avg_monthly_searches": 1430,
+            "low_top_of_page_bid": 0.52,
+            "high_top_of_page_bid": 1.79
+          },
+          {
+            "keyword": "ultralight sleeping pad",
+            "avg_monthly_searches": 990,
+            "low_top_of_page_bid": 0.58,
+            "high_top_of_page_bid": 2.01
+          }
+        ]
+      },
+      "GB": {
+        "source": "keyword_planner",
+        "language": "English",
+        "location": "GB",
+        "terms": [
+          {
+            "keyword": "ultralight backpack",
+            "avg_monthly_searches": 4320,
+            "low_top_of_page_bid": 0.46,
+            "high_top_of_page_bid": 1.58
+          },
+          {
+            "keyword": "lightweight tent",
+            "avg_monthly_searches": 3520,
+            "low_top_of_page_bid": 0.45,
+            "high_top_of_page_bid": 1.54
+          },
+          {
+            "keyword": "backpacking stove",
+            "avg_monthly_searches": 1920,
+            "low_top_of_page_bid": 0.5,
+            "high_top_of_page_bid": 1.74
+          },
+          {
+            "keyword": "hiking sleeping bag",
+            "avg_monthly_searches": 2720,
+            "low_top_of_page_bid": 0.48,
+            "high_top_of_page_bid": 1.66
+          },
+          {
+            "keyword": "trekking poles",
+            "avg_monthly_searches": 2080,
+            "low_top_of_page_bid": 0.37,
+            "high_top_of_page_bid": 1.28
+          },
+          {
+            "keyword": "ultralight sleeping pad",
+            "avg_monthly_searches": 1440,
+            "low_top_of_page_bid": 0.41,
+            "high_top_of_page_bid": 1.41
+          }
+        ]
+      },
+      "AU": {
+        "source": "keyword_planner",
+        "language": "English",
+        "location": "AU",
+        "terms": [
+          {
+            "keyword": "ultralight backpack",
+            "avg_monthly_searches": 2300,
+            "low_top_of_page_bid": 0.47,
+            "high_top_of_page_bid": 1.61
+          },
+          {
+            "keyword": "lightweight tent",
+            "avg_monthly_searches": 1870,
+            "low_top_of_page_bid": 0.46,
+            "high_top_of_page_bid": 1.6
+          },
+          {
+            "keyword": "backpacking stove",
+            "avg_monthly_searches": 1020,
+            "low_top_of_page_bid": 0.57,
+            "high_top_of_page_bid": 1.94
+          },
+          {
+            "keyword": "hiking sleeping bag",
+            "avg_monthly_searches": 1440,
+            "low_top_of_page_bid": 0.49,
+            "high_top_of_page_bid": 1.67
+          },
+          {
+            "keyword": "trekking poles",
+            "avg_monthly_searches": 1100,
+            "low_top_of_page_bid": 0.5,
+            "high_top_of_page_bid": 1.74
+          },
+          {
+            "keyword": "ultralight sleeping pad",
+            "avg_monthly_searches": 770,
+            "low_top_of_page_bid": 0.56,
+            "high_top_of_page_bid": 1.93
+          }
+        ]
+      },
+      "DE": {
+        "source": "keyword_planner",
+        "language": "German",
+        "location": "DE",
+        "terms": [
+          {
+            "keyword": "ultraleicht rucksack",
+            "avg_monthly_searches": 5670,
+            "low_top_of_page_bid": 0.27,
+            "high_top_of_page_bid": 0.95
+          },
+          {
+            "keyword": "leichtes zelt",
+            "avg_monthly_searches": 4620,
+            "low_top_of_page_bid": 0.34,
+            "high_top_of_page_bid": 1.18
+          },
+          {
+            "keyword": "trekking kocher",
+            "avg_monthly_searches": 2520,
+            "low_top_of_page_bid": 0.34,
+            "high_top_of_page_bid": 1.19
+          },
+          {
+            "keyword": "schlafsack wandern",
+            "avg_monthly_searches": 3570,
+            "low_top_of_page_bid": 0.38,
+            "high_top_of_page_bid": 1.32
+          },
+          {
+            "keyword": "trekkingstöcke",
+            "avg_monthly_searches": 2730,
+            "low_top_of_page_bid": 0.37,
+            "high_top_of_page_bid": 1.27
+          },
+          {
+            "keyword": "isomatte ultraleicht",
+            "avg_monthly_searches": 1890,
+            "low_top_of_page_bid": 0.37,
+            "high_top_of_page_bid": 1.29
+          }
+        ]
+      },
+      "NL": {
+        "source": "keyword_planner",
+        "language": "English",
+        "location": "NL",
+        "terms": [
+          {
+            "keyword": "ultralight backpack",
+            "avg_monthly_searches": 650,
+            "low_top_of_page_bid": 0.32,
+            "high_top_of_page_bid": 1.1
+          },
+          {
+            "keyword": "lightweight tent",
+            "avg_monthly_searches": 530,
+            "low_top_of_page_bid": 0.4,
+            "high_top_of_page_bid": 1.4
+          },
+          {
+            "keyword": "backpacking stove",
+            "avg_monthly_searches": 290,
+            "low_top_of_page_bid": 0.37,
+            "high_top_of_page_bid": 1.26
+          },
+          {
+            "keyword": "hiking sleeping bag",
+            "avg_monthly_searches": 410,
+            "low_top_of_page_bid": 0.46,
+            "high_top_of_page_bid": 1.58
+          },
+          {
+            "keyword": "trekking poles",
+            "avg_monthly_searches": 310,
+            "low_top_of_page_bid": 0.48,
+            "high_top_of_page_bid": 1.67
+          },
+          {
+            "keyword": "ultralight sleeping pad",
+            "avg_monthly_searches": 210,
+            "low_top_of_page_bid": 0.5,
+            "high_top_of_page_bid": 1.71
+          }
+        ]
+      },
+      "FR": {
+        "source": "keyword_planner",
+        "language": "French",
+        "location": "FR",
+        "terms": [
+          {
+            "keyword": "sac à dos ultra léger",
+            "avg_monthly_searches": 3780,
+            "low_top_of_page_bid": 0.42,
+            "high_top_of_page_bid": 1.44
+          },
+          {
+            "keyword": "tente légère",
+            "avg_monthly_searches": 3080,
+            "low_top_of_page_bid": 0.44,
+            "high_top_of_page_bid": 1.52
+          },
+          {
+            "keyword": "réchaud randonnée",
+            "avg_monthly_searches": 1680,
+            "low_top_of_page_bid": 0.58,
+            "high_top_of_page_bid": 1.98
+          },
+          {
+            "keyword": "sac de couchage randonnée",
+            "avg_monthly_searches": 2380,
+            "low_top_of_page_bid": 0.45,
+            "high_top_of_page_bid": 1.54
+          },
+          {
+            "keyword": "bâtons de randonnée",
+            "avg_monthly_searches": 1820,
+            "low_top_of_page_bid": 0.56,
+            "high_top_of_page_bid": 1.93
+          },
+          {
+            "keyword": "matelas ultra léger",
+            "avg_monthly_searches": 1260,
+            "low_top_of_page_bid": 0.49,
+            "high_top_of_page_bid": 1.7
+          }
+        ]
+      },
+      "SE": {
+        "source": "dataforseo",
+        "language": "English",
+        "location": 2752,
+        "terms": [
+          {
+            "keyword": "ultralight backpack",
+            "search_volume": 300,
+            "cpc": 0.94
+          },
+          {
+            "keyword": "lightweight tent",
+            "search_volume": 240,
+            "cpc": 0.8
+          },
+          {
+            "keyword": "backpacking stove",
+            "search_volume": 130,
+            "cpc": 0.67
+          },
+          {
+            "keyword": "hiking sleeping bag",
+            "search_volume": 190,
+            "cpc": 1.01
+          },
+          {
+            "keyword": "trekking poles",
+            "search_volume": 140,
+            "cpc": 0.81
+          },
+          {
+            "keyword": "ultralight sleeping pad",
+            "search_volume": 100,
+            "cpc": 0.68
+          }
+        ]
+      }
+    },
+    "meta_home_ad_set": {
+      "ad_set": "US - Hikers 25-60 - Advantage+ audience",
+      "targeting_spec": {
+        "geo_locations": {
+          "countries": [
+            "US"
+          ]
+        },
+        "age_min": 25,
+        "age_max": 60
+      },
+      "spend": 14400.0,
+      "purchases": 288,
+      "purchase_value": 37440.0
+    },
+    "meta_country_breakdown": [
+      {
+        "country": "US",
+        "spend": 14400.0,
+        "impressions": 1440000,
+        "cpm": 10.0,
+        "clicks": 19200,
+        "cpc": 0.75,
+        "actions": [
+          {
+            "action_type": "purchase",
+            "value": 288
+          }
+        ],
+        "action_values": [
+          {
+            "action_type": "purchase",
+            "value": 37440.0
+          }
+        ]
+      }
+    ],
+    "meta_estimate_audience_size": {
+      "CA": {
+        "users_lower_bound": 18100000,
+        "users_upper_bound": 21300000
+      },
+      "GB": {
+        "users_lower_bound": 32200000,
+        "users_upper_bound": 37900000
+      },
+      "AU": {
+        "users_lower_bound": 12100000,
+        "users_upper_bound": 14200000
+      },
+      "DE": {
+        "users_lower_bound": 40300000,
+        "users_upper_bound": 47400000
+      },
+      "NL": {
+        "users_lower_bound": 8900000,
+        "users_upper_bound": 10500000
+      },
+      "FR": {
+        "users_lower_bound": 33100000,
+        "users_upper_bound": 38900000
+      },
+      "SE": {
+        "users_lower_bound": 4600000,
+        "users_upper_bound": 5400000
+      }
+    },
+    "meta_minimum_budgets": {
+      "currency": "USD",
+      "min_daily_budget_imp": 100,
+      "min_daily_budget_low_freq": 4000
+    }
+  }
+}

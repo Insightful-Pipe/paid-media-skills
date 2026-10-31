@@ -1,0 +1,2019 @@
+{
+  "note": "Example data: an invented online booking software company with invented accounts, not a real business. Every number in expected_output.json follows from this input. The Snapchat account, its campaigns, ads, audiences, pixel and ids are invented too.",
+  "request": "Hey Claude, I just added the \"snapchat-ads-manager\" skill. Review my Snapchat Ads account for the last 30 days, tell me what to fix first and which ads to pause, write fresh headlines from my best ad, and draft a new sign-up campaign for our lookalike audience at $40 a day, starting next Monday, that sends people to example.com/signup/. Don't run anything yet.",
+  "run_date": "2026-10-28",
+  "account": {
+    "name": "Example Booking Software (Snapchat ad account)",
+    "business": "Example Booking Software, an online booking and scheduling app for small service businesses (invented example)",
+    "currency": "USD",
+    "time_zone": "America/New_York",
+    "status": "ACTIVE"
+  },
+  "date_range": {
+    "window": "2026-09-28 to 2026-10-27 (last 30 complete days in the account's time zone)",
+    "previous_period": "2026-08-29 to 2026-09-27"
+  },
+  "target_cost_per_result": "not given, so each campaign's own cost per result in the window is used",
+  "brief": {
+    "goal": "sign-ups",
+    "audience": "the account's lookalike audience of people who signed up",
+    "daily_budget": "$40",
+    "landing_page": "https://www.example.com/signup/",
+    "start": "next Monday"
+  },
+  "data_pulled": {
+    "get_adaccount": {
+      "id": "5ad0acc7-0000-4000-8000-000000000001",
+      "name": "Example Booking Software (Snapchat ad account)",
+      "status": "ACTIVE",
+      "currency": "USD",
+      "timezone": "America/New_York"
+    },
+    "get_campaigns": [
+      {
+        "id": "ca300000-0000-4000-8000-000000000001",
+        "name": "Sign-ups | Prospecting",
+        "status": "ACTIVE",
+        "objective": "WEB_CONVERSION",
+        "objective_v2_properties": {
+          "objective_v2_type": "SALES"
+        },
+        "start_time": "2026-06-01T04:00:00.000Z",
+        "buy_model": "AUCTION",
+        "delivery_status": [
+          "VALID"
+        ],
+        "updated_at": "2026-09-14T15:22:41.000Z"
+      },
+      {
+        "id": "ca300000-0000-4000-8000-000000000002",
+        "name": "Sign-ups | Retargeting",
+        "status": "ACTIVE",
+        "objective": "WEB_CONVERSION",
+        "objective_v2_properties": {
+          "objective_v2_type": "SALES"
+        },
+        "start_time": "2026-06-01T04:00:00.000Z",
+        "buy_model": "AUCTION",
+        "delivery_status": [
+          "VALID"
+        ],
+        "updated_at": "2026-08-30T10:05:12.000Z"
+      },
+      {
+        "id": "ca300000-0000-4000-8000-000000000003",
+        "name": "Traffic | Salon industry page",
+        "status": "ACTIVE",
+        "objective": "WEB_VIEW",
+        "objective_v2_properties": {
+          "objective_v2_type": "TRAFFIC"
+        },
+        "start_time": "2026-08-17T04:00:00.000Z",
+        "buy_model": "AUCTION",
+        "delivery_status": [
+          "VALID"
+        ],
+        "updated_at": "2026-08-17T13:40:09.000Z"
+      }
+    ],
+    "get_adsquads": [
+      {
+        "id": "5a0d0000-0000-4000-8000-000000000001",
+        "campaign_id": "ca300000-0000-4000-8000-000000000001",
+        "name": "Interests | Automatic placements",
+        "status": "ACTIVE",
+        "type": "SNAP_ADS",
+        "billing_event": "IMPRESSION",
+        "bid_strategy": "AUTO_BID",
+        "optimization_goal": "PIXEL_SIGNUP",
+        "daily_budget_micro": 85000000,
+        "placement_v2": {
+          "config": "AUTOMATIC"
+        },
+        "targeting": {
+          "geos": [
+            {
+              "country_code": "us",
+              "operation": "INCLUDE"
+            }
+          ],
+          "demographics": [
+            {
+              "min_age": "21",
+              "max_age": "34"
+            }
+          ],
+          "interests": [
+            {
+              "category_id": [
+                "SLC_71",
+                "SLC_84"
+              ],
+              "operation": "INCLUDE"
+            }
+          ],
+          "enable_targeting_expansion": true
+        },
+        "child_ad_type": "REMOTE_WEBPAGE",
+        "start_time": "2026-06-01T04:00:00.000Z",
+        "delivery_status": [
+          "VALID"
+        ],
+        "pixel_id": "91c5e100-0000-4000-8000-000000000001"
+      },
+      {
+        "id": "5a0d0000-0000-4000-8000-000000000002",
+        "campaign_id": "ca300000-0000-4000-8000-000000000001",
+        "name": "Interests | Between Stories only",
+        "status": "ACTIVE",
+        "type": "SNAP_ADS",
+        "billing_event": "IMPRESSION",
+        "bid_strategy": "AUTO_BID",
+        "optimization_goal": "PIXEL_SIGNUP",
+        "daily_budget_micro": 55000000,
+        "placement_v2": {
+          "config": "CUSTOM",
+          "platforms": [
+            "SNAPCHAT"
+          ],
+          "snapchat_positions": [
+            "INTERSTITIAL_USER"
+          ]
+        },
+        "targeting": {
+          "geos": [
+            {
+              "country_code": "us",
+              "operation": "INCLUDE"
+            }
+          ],
+          "demographics": [
+            {
+              "min_age": "21",
+              "max_age": "34"
+            }
+          ],
+          "interests": [
+            {
+              "category_id": [
+                "SLC_71",
+                "SLC_84"
+              ],
+              "operation": "INCLUDE"
+            }
+          ],
+          "enable_targeting_expansion": true
+        },
+        "child_ad_type": "REMOTE_WEBPAGE",
+        "start_time": "2026-09-14T04:00:00.000Z",
+        "delivery_status": [
+          "VALID"
+        ],
+        "pixel_id": "91c5e100-0000-4000-8000-000000000001"
+      },
+      {
+        "id": "5a0d0000-0000-4000-8000-000000000003",
+        "campaign_id": "ca300000-0000-4000-8000-000000000002",
+        "name": "Website visitors 30 days",
+        "status": "ACTIVE",
+        "type": "SNAP_ADS",
+        "billing_event": "IMPRESSION",
+        "bid_strategy": "AUTO_BID",
+        "optimization_goal": "PIXEL_SIGNUP",
+        "daily_budget_micro": 30000000,
+        "placement_v2": {
+          "config": "AUTOMATIC"
+        },
+        "targeting": {
+          "geos": [
+            {
+              "country_code": "us",
+              "operation": "INCLUDE"
+            }
+          ],
+          "segments": [
+            {
+              "segment_id": [
+                "5e6e0000-0000-4000-8000-000000000001"
+              ],
+              "operation": "INCLUDE"
+            },
+            {
+              "segment_id": [
+                "5e6e0000-0000-4000-8000-000000000002"
+              ],
+              "operation": "EXCLUDE"
+            }
+          ]
+        },
+        "child_ad_type": "REMOTE_WEBPAGE",
+        "start_time": "2026-06-01T04:00:00.000Z",
+        "delivery_status": [
+          "VALID"
+        ],
+        "pixel_id": "91c5e100-0000-4000-8000-000000000001"
+      },
+      {
+        "id": "5a0d0000-0000-4000-8000-000000000004",
+        "campaign_id": "ca300000-0000-4000-8000-000000000003",
+        "name": "Salon pros | Landing page views",
+        "status": "ACTIVE",
+        "type": "SNAP_ADS",
+        "billing_event": "IMPRESSION",
+        "bid_strategy": "AUTO_BID",
+        "optimization_goal": "LANDING_PAGE_VIEW",
+        "daily_budget_micro": 20000000,
+        "placement_v2": {
+          "config": "AUTOMATIC"
+        },
+        "targeting": {
+          "geos": [
+            {
+              "country_code": "us",
+              "operation": "INCLUDE"
+            }
+          ],
+          "demographics": [
+            {
+              "min_age": "21",
+              "max_age": "34"
+            }
+          ],
+          "interests": [
+            {
+              "category_id": [
+                "SLC_71"
+              ],
+              "operation": "INCLUDE"
+            }
+          ],
+          "enable_targeting_expansion": false
+        },
+        "child_ad_type": "REMOTE_WEBPAGE",
+        "start_time": "2026-08-17T04:00:00.000Z",
+        "delivery_status": [
+          "VALID"
+        ]
+      }
+    ],
+    "get_ads": [
+      {
+        "id": "ad000000-0000-4000-8000-000000000001",
+        "ad_squad_id": "5a0d0000-0000-4000-8000-000000000001",
+        "creative_id": "c7ea0000-0000-4000-8000-000000000001",
+        "name": "Video | Booked while you work",
+        "type": "REMOTE_WEBPAGE",
+        "status": "ACTIVE",
+        "review_status": "APPROVED",
+        "delivery_status": [
+          "VALID"
+        ]
+      },
+      {
+        "id": "ad000000-0000-4000-8000-000000000002",
+        "ad_squad_id": "5a0d0000-0000-4000-8000-000000000001",
+        "creative_id": "c7ea0000-0000-4000-8000-000000000002",
+        "name": "Video | No-show reminders",
+        "type": "REMOTE_WEBPAGE",
+        "status": "ACTIVE",
+        "review_status": "APPROVED",
+        "delivery_status": [
+          "VALID"
+        ]
+      },
+      {
+        "id": "ad000000-0000-4000-8000-000000000003",
+        "ad_squad_id": "5a0d0000-0000-4000-8000-000000000001",
+        "creative_id": "c7ea0000-0000-4000-8000-000000000003",
+        "name": "Image | Feature list",
+        "type": "REMOTE_WEBPAGE",
+        "status": "ACTIVE",
+        "review_status": "APPROVED",
+        "delivery_status": [
+          "VALID"
+        ]
+      },
+      {
+        "id": "ad000000-0000-4000-8000-000000000004",
+        "ad_squad_id": "5a0d0000-0000-4000-8000-000000000002",
+        "creative_id": "c7ea0000-0000-4000-8000-000000000001",
+        "name": "Video | Booked while you work | Stories",
+        "type": "REMOTE_WEBPAGE",
+        "status": "ACTIVE",
+        "review_status": "APPROVED",
+        "delivery_status": [
+          "VALID"
+        ]
+      },
+      {
+        "id": "ad000000-0000-4000-8000-000000000005",
+        "ad_squad_id": "5a0d0000-0000-4000-8000-000000000003",
+        "creative_id": "c7ea0000-0000-4000-8000-000000000001",
+        "name": "Video | Booked while you work | Retargeting",
+        "type": "REMOTE_WEBPAGE",
+        "status": "ACTIVE",
+        "review_status": "APPROVED",
+        "delivery_status": [
+          "VALID"
+        ]
+      },
+      {
+        "id": "ad000000-0000-4000-8000-000000000006",
+        "ad_squad_id": "5a0d0000-0000-4000-8000-000000000003",
+        "creative_id": "c7ea0000-0000-4000-8000-000000000004",
+        "name": "Image | Booking page ready",
+        "type": "REMOTE_WEBPAGE",
+        "status": "ACTIVE",
+        "review_status": "APPROVED",
+        "delivery_status": [
+          "VALID"
+        ]
+      },
+      {
+        "id": "ad000000-0000-4000-8000-000000000007",
+        "ad_squad_id": "5a0d0000-0000-4000-8000-000000000004",
+        "creative_id": "c7ea0000-0000-4000-8000-000000000005",
+        "name": "Image | Built for salons",
+        "type": "REMOTE_WEBPAGE",
+        "status": "ACTIVE",
+        "review_status": "APPROVED",
+        "delivery_status": [
+          "VALID"
+        ]
+      }
+    ],
+    "get_creatives": [
+      {
+        "id": "c7ea0000-0000-4000-8000-000000000001",
+        "name": "Booked while you work | video",
+        "type": "WEB_VIEW",
+        "headline": "Get booked while you work",
+        "brand_name": "Example Booking Software",
+        "call_to_action": "SIGN_UP",
+        "top_snap_media_id": "3ed1a000-0000-4000-8000-000000000001",
+        "profile_properties": {
+          "profile_id": "9f0f11e0-0000-4000-8000-000000000001"
+        },
+        "web_view_properties": {
+          "url": "https://www.example.com/signup/?utm_source=snapchat&utm_medium=paid_social&utm_campaign=signups"
+        },
+        "review_status": "APPROVED"
+      },
+      {
+        "id": "c7ea0000-0000-4000-8000-000000000002",
+        "name": "No-show reminders | video",
+        "type": "WEB_VIEW",
+        "headline": "Reminders that cut no-shows",
+        "brand_name": "Example Booking Software",
+        "call_to_action": "SIGN_UP",
+        "top_snap_media_id": "3ed1a000-0000-4000-8000-000000000002",
+        "profile_properties": {
+          "profile_id": "9f0f11e0-0000-4000-8000-000000000001"
+        },
+        "web_view_properties": {
+          "url": "https://www.example.com/signup/?utm_source=snapchat&utm_medium=paid_social&utm_campaign=signups"
+        },
+        "review_status": "APPROVED"
+      },
+      {
+        "id": "c7ea0000-0000-4000-8000-000000000003",
+        "name": "Feature list | image",
+        "type": "WEB_VIEW",
+        "headline": "Booking, reminders and payments",
+        "brand_name": "Example Booking Software",
+        "call_to_action": "SIGN_UP",
+        "top_snap_media_id": "3ed1a000-0000-4000-8000-000000000003",
+        "profile_properties": {
+          "profile_id": "9f0f11e0-0000-4000-8000-000000000001"
+        },
+        "web_view_properties": {
+          "url": "https://www.example.com/signup/?utm_source=snapchat&utm_medium=paid_social&utm_campaign=signups"
+        },
+        "review_status": "APPROVED"
+      },
+      {
+        "id": "c7ea0000-0000-4000-8000-000000000004",
+        "name": "Booking page ready | image",
+        "type": "WEB_VIEW",
+        "headline": "Your own booking page, today",
+        "brand_name": "Example Booking Software",
+        "call_to_action": "SIGN_UP",
+        "top_snap_media_id": "3ed1a000-0000-4000-8000-000000000004",
+        "profile_properties": {
+          "profile_id": "9f0f11e0-0000-4000-8000-000000000001"
+        },
+        "web_view_properties": {
+          "url": "https://www.example.com/signup/?utm_source=snapchat&utm_medium=paid_social&utm_campaign=retargeting"
+        },
+        "review_status": "APPROVED"
+      },
+      {
+        "id": "c7ea0000-0000-4000-8000-000000000005",
+        "name": "Built for salons | image",
+        "type": "WEB_VIEW",
+        "headline": "Booking built for salons",
+        "brand_name": "Example Booking Software",
+        "call_to_action": "MORE",
+        "top_snap_media_id": "3ed1a000-0000-4000-8000-000000000005",
+        "profile_properties": {
+          "profile_id": "9f0f11e0-0000-4000-8000-000000000001"
+        },
+        "web_view_properties": {
+          "url": "https://www.example.com/industries/salons/?utm_source=snapchat&utm_medium=paid_social&utm_campaign=salon_page"
+        },
+        "review_status": "APPROVED"
+      }
+    ],
+    "get_media": [
+      {
+        "id": "3ed1a000-0000-4000-8000-000000000001",
+        "name": "booked-while-you-work-20s.mp4",
+        "type": "VIDEO",
+        "media_status": "READY",
+        "duration_secs": 20.0,
+        "video_metadata": {
+          "width_px": 1080,
+          "height_px": 1920
+        }
+      },
+      {
+        "id": "3ed1a000-0000-4000-8000-000000000002",
+        "name": "no-show-reminders-12s.mp4",
+        "type": "VIDEO",
+        "media_status": "READY",
+        "duration_secs": 12.0,
+        "video_metadata": {
+          "width_px": 1080,
+          "height_px": 1920
+        }
+      },
+      {
+        "id": "3ed1a000-0000-4000-8000-000000000003",
+        "name": "feature-list.png",
+        "type": "IMAGE",
+        "media_status": "READY",
+        "image_metadata": {
+          "width_px": 1080,
+          "height_px": 1920
+        }
+      },
+      {
+        "id": "3ed1a000-0000-4000-8000-000000000004",
+        "name": "booking-page-ready.png",
+        "type": "IMAGE",
+        "media_status": "READY",
+        "image_metadata": {
+          "width_px": 1080,
+          "height_px": 1920
+        }
+      },
+      {
+        "id": "3ed1a000-0000-4000-8000-000000000005",
+        "name": "built-for-salons.png",
+        "type": "IMAGE",
+        "media_status": "READY",
+        "image_metadata": {
+          "width_px": 1080,
+          "height_px": 1920
+        }
+      }
+    ],
+    "get_segments": [
+      {
+        "id": "5e6e0000-0000-4000-8000-000000000001",
+        "name": "Website visitors 30 days",
+        "source_type": "PIXEL",
+        "approximate_number_users": 41000,
+        "targetable_status": "READY",
+        "retention_in_days": 30,
+        "status": "ACTIVE"
+      },
+      {
+        "id": "5e6e0000-0000-4000-8000-000000000002",
+        "name": "Customer list: paying accounts",
+        "source_type": "FIRST_PARTY",
+        "approximate_number_users": 3800,
+        "targetable_status": "READY",
+        "retention_in_days": 9999,
+        "status": "ACTIVE"
+      },
+      {
+        "id": "5e6e0000-0000-4000-8000-000000000003",
+        "name": "Lookalike: sign-ups, US",
+        "source_type": "LOOKALIKE",
+        "approximate_number_users": 1600000,
+        "targetable_status": "READY",
+        "retention_in_days": 9999,
+        "status": "ACTIVE"
+      }
+    ],
+    "get_adaccount_stats": {
+      "window": {
+        "start_time": "2026-09-28T04:00:00.000Z",
+        "end_time": "2026-10-28T04:00:00.000Z",
+        "spend": 4768228650
+      },
+      "previous_period": {
+        "start_time": "2026-08-29T04:00:00.000Z",
+        "end_time": "2026-09-28T04:00:00.000Z",
+        "spend": 3749219276
+      },
+      "last_12_months_by_campaign": {
+        "start_time": "2025-10-28T04:00:00.000Z",
+        "end_time": "2026-10-28T04:00:00.000Z",
+        "breakdown": [
+          {
+            "id": "ca300000-0000-4000-8000-000000000001",
+            "type": "CAMPAIGN",
+            "stats": {
+              "spend": 11406164518
+            }
+          },
+          {
+            "id": "ca300000-0000-4000-8000-000000000002",
+            "type": "CAMPAIGN",
+            "stats": {
+              "spend": 3645706474
+            }
+          },
+          {
+            "id": "ca300000-0000-4000-8000-000000000003",
+            "type": "CAMPAIGN",
+            "stats": {
+              "spend": 1057877154
+            }
+          }
+        ]
+      }
+    },
+    "get_campaign_stats_breakdown_ad": {
+      "granularity": "TOTAL",
+      "swipe_up_attribution_window": "28_DAY",
+      "view_attribution_window": "1_DAY",
+      "start_time": "2026-09-28T04:00:00.000Z",
+      "end_time": "2026-10-28T04:00:00.000Z",
+      "finalized_data_end_time": "2026-10-26T04:00:00.000Z",
+      "campaigns": {
+        "Sign-ups | Prospecting": [
+          {
+            "id": "ad000000-0000-4000-8000-000000000001",
+            "type": "AD",
+            "stats": {
+              "impressions": 110433,
+              "spend": 703614532,
+              "swipes": 1226,
+              "landing_page_views": 993,
+              "conversion_page_views": 904,
+              "conversion_sign_ups": 78,
+              "video_views": 48591,
+              "video_views_15s": 17979,
+              "quartile_1": 30612,
+              "quartile_2": 22838,
+              "quartile_3": 18465,
+              "view_completion": 14091,
+              "uniques": 57879,
+              "frequency": 1.91,
+              "swipe_up_percent": 0.011102,
+              "avg_screen_time_millis": 2900
+            }
+          },
+          {
+            "id": "ad000000-0000-4000-8000-000000000002",
+            "type": "AD",
+            "stats": {
+              "impressions": 70379,
+              "spend": 450991143,
+              "swipes": 669,
+              "landing_page_views": 535,
+              "conversion_page_views": 487,
+              "conversion_sign_ups": 38,
+              "video_views": 28855,
+              "video_views_15s": 0,
+              "quartile_1": 19044,
+              "quartile_2": 15005,
+              "quartile_3": 12408,
+              "view_completion": 10099,
+              "uniques": 36886,
+              "frequency": 1.91,
+              "swipe_up_percent": 0.009506,
+              "avg_screen_time_millis": 2600
+            }
+          },
+          {
+            "id": "ad000000-0000-4000-8000-000000000003",
+            "type": "AD",
+            "stats": {
+              "impressions": 152965,
+              "spend": 935170870,
+              "swipes": 558,
+              "landing_page_views": 435,
+              "conversion_page_views": 396,
+              "conversion_sign_ups": 19,
+              "video_views": 0,
+              "video_views_15s": 0,
+              "quartile_1": 0,
+              "quartile_2": 0,
+              "quartile_3": 0,
+              "view_completion": 0,
+              "uniques": 80170,
+              "frequency": 1.91,
+              "swipe_up_percent": 0.003648,
+              "avg_screen_time_millis": 1300
+            }
+          },
+          {
+            "id": "ad000000-0000-4000-8000-000000000004",
+            "type": "AD",
+            "stats": {
+              "impressions": 133010,
+              "spend": 1411330616,
+              "swipes": 1131,
+              "landing_page_views": 893,
+              "conversion_page_views": 813,
+              "conversion_sign_ups": 52,
+              "video_views": 58524,
+              "video_views_15s": 21654,
+              "quartile_1": 36870,
+              "quartile_2": 27506,
+              "quartile_3": 22239,
+              "view_completion": 16972,
+              "uniques": 84936,
+              "frequency": 1.57,
+              "swipe_up_percent": 0.008503,
+              "avg_screen_time_millis": 2400
+            }
+          }
+        ],
+        "Sign-ups | Retargeting": [
+          {
+            "id": "ad000000-0000-4000-8000-000000000005",
+            "type": "AD",
+            "stats": {
+              "impressions": 58719,
+              "spend": 482245715,
+              "swipes": 910,
+              "landing_page_views": 764,
+              "conversion_page_views": 695,
+              "conversion_sign_ups": 111,
+              "video_views": 25836,
+              "video_views_15s": 9559,
+              "quartile_1": 16277,
+              "quartile_2": 12143,
+              "quartile_3": 9818,
+              "view_completion": 7492,
+              "uniques": 14122,
+              "frequency": 4.16,
+              "swipe_up_percent": 0.015498,
+              "avg_screen_time_millis": 3100
+            }
+          },
+          {
+            "id": "ad000000-0000-4000-8000-000000000006",
+            "type": "AD",
+            "stats": {
+              "impressions": 39749,
+              "spend": 324997986,
+              "swipes": 477,
+              "landing_page_views": 396,
+              "conversion_page_views": 360,
+              "conversion_sign_ups": 52,
+              "video_views": 0,
+              "video_views_15s": 0,
+              "quartile_1": 0,
+              "quartile_2": 0,
+              "quartile_3": 0,
+              "view_completion": 0,
+              "uniques": 9560,
+              "frequency": 4.16,
+              "swipe_up_percent": 0.012,
+              "avg_screen_time_millis": 1900
+            }
+          }
+        ],
+        "Traffic | Salon industry page": [
+          {
+            "id": "ad000000-0000-4000-8000-000000000007",
+            "type": "AD",
+            "stats": {
+              "impressions": 94009,
+              "spend": 459877788,
+              "swipes": 757,
+              "landing_page_views": 553,
+              "conversion_page_views": 0,
+              "conversion_sign_ups": 0,
+              "video_views": 0,
+              "video_views_15s": 0,
+              "quartile_1": 0,
+              "quartile_2": 0,
+              "quartile_3": 0,
+              "view_completion": 0,
+              "uniques": 68271,
+              "frequency": 1.38,
+              "swipe_up_percent": 0.008052,
+              "avg_screen_time_millis": 1700
+            }
+          }
+        ]
+      }
+    },
+    "get_campaign_stats_breakdown_adsquad": {
+      "granularity": "TOTAL",
+      "swipe_up_attribution_window": "28_DAY",
+      "view_attribution_window": "1_DAY",
+      "start_time": "2026-09-28T04:00:00.000Z",
+      "end_time": "2026-10-28T04:00:00.000Z",
+      "finalized_data_end_time": "2026-10-26T04:00:00.000Z",
+      "campaigns": {
+        "Sign-ups | Prospecting": [
+          {
+            "id": "5a0d0000-0000-4000-8000-000000000001",
+            "type": "AD_SQUAD",
+            "stats": {
+              "impressions": 333777,
+              "spend": 2089776545,
+              "swipes": 2453,
+              "landing_page_views": 1963,
+              "conversion_page_views": 1787,
+              "conversion_sign_ups": 135,
+              "video_views": 77446,
+              "video_views_15s": 17979,
+              "quartile_1": 49656,
+              "quartile_2": 37843,
+              "quartile_3": 30873,
+              "view_completion": 24190,
+              "uniques": 157442,
+              "frequency": 2.12,
+              "swipe_up_percent": 0.007349,
+              "avg_screen_time_millis": 2103
+            }
+          },
+          {
+            "id": "5a0d0000-0000-4000-8000-000000000002",
+            "type": "AD_SQUAD",
+            "stats": {
+              "impressions": 133010,
+              "spend": 1411330616,
+              "swipes": 1131,
+              "landing_page_views": 893,
+              "conversion_page_views": 813,
+              "conversion_sign_ups": 52,
+              "video_views": 58524,
+              "video_views_15s": 21654,
+              "quartile_1": 36870,
+              "quartile_2": 27506,
+              "quartile_3": 22239,
+              "view_completion": 16972,
+              "uniques": 76443,
+              "frequency": 1.74,
+              "swipe_up_percent": 0.008503,
+              "avg_screen_time_millis": 2400
+            }
+          }
+        ],
+        "Sign-ups | Retargeting": [
+          {
+            "id": "5a0d0000-0000-4000-8000-000000000003",
+            "type": "AD_SQUAD",
+            "stats": {
+              "impressions": 98468,
+              "spend": 807243701,
+              "swipes": 1387,
+              "landing_page_views": 1160,
+              "conversion_page_views": 1055,
+              "conversion_sign_ups": 163,
+              "video_views": 25836,
+              "video_views_15s": 9559,
+              "quartile_1": 16277,
+              "quartile_2": 12143,
+              "quartile_3": 9818,
+              "view_completion": 7492,
+              "uniques": 21313,
+              "frequency": 4.62,
+              "swipe_up_percent": 0.014086,
+              "avg_screen_time_millis": 2616
+            }
+          }
+        ],
+        "Traffic | Salon industry page": [
+          {
+            "id": "5a0d0000-0000-4000-8000-000000000004",
+            "type": "AD_SQUAD",
+            "stats": {
+              "impressions": 94009,
+              "spend": 459877788,
+              "swipes": 757,
+              "landing_page_views": 553,
+              "conversion_page_views": 0,
+              "conversion_sign_ups": 0,
+              "video_views": 0,
+              "video_views_15s": 0,
+              "quartile_1": 0,
+              "quartile_2": 0,
+              "quartile_3": 0,
+              "view_completion": 0,
+              "uniques": 61444,
+              "frequency": 1.53,
+              "swipe_up_percent": 0.008052,
+              "avg_screen_time_millis": 1700
+            }
+          }
+        ]
+      }
+    },
+    "get_campaign_stats_breakdown_adsquad_previous_period": {
+      "granularity": "TOTAL",
+      "start_time": "2026-08-29T04:00:00.000Z",
+      "end_time": "2026-09-28T04:00:00.000Z",
+      "campaigns": {
+        "Sign-ups | Prospecting": [
+          {
+            "id": "5a0d0000-0000-4000-8000-000000000001",
+            "type": "AD_SQUAD",
+            "stats": {
+              "impressions": 311170,
+              "spend": 1947153816,
+              "swipes": 2289,
+              "landing_page_views": 1833,
+              "conversion_page_views": 1669,
+              "conversion_sign_ups": 127,
+              "video_views": 72380,
+              "video_views_15s": 16767,
+              "quartile_1": 46412,
+              "quartile_2": 35372,
+              "quartile_3": 28857,
+              "view_completion": 22614,
+              "uniques": 146778,
+              "frequency": 2.12,
+              "swipe_up_percent": 0.007356,
+              "avg_screen_time_millis": 2105
+            }
+          },
+          {
+            "id": "5a0d0000-0000-4000-8000-000000000002",
+            "type": "AD_SQUAD",
+            "stats": {
+              "impressions": 57955,
+              "spend": 617098376,
+              "swipes": 493,
+              "landing_page_views": 389,
+              "conversion_page_views": 354,
+              "conversion_sign_ups": 23,
+              "video_views": 25500,
+              "video_views_15s": 9435,
+              "quartile_1": 16065,
+              "quartile_2": 11985,
+              "quartile_3": 9690,
+              "view_completion": 7395,
+              "uniques": 33307,
+              "frequency": 1.74,
+              "swipe_up_percent": 0.008507,
+              "avg_screen_time_millis": 2400
+            }
+          }
+        ],
+        "Sign-ups | Retargeting": [
+          {
+            "id": "5a0d0000-0000-4000-8000-000000000003",
+            "type": "AD_SQUAD",
+            "stats": {
+              "impressions": 91343,
+              "spend": 750902320,
+              "swipes": 1441,
+              "landing_page_views": 1206,
+              "conversion_page_views": 1098,
+              "conversion_sign_ups": 170,
+              "video_views": 23949,
+              "video_views_15s": 8861,
+              "quartile_1": 15088,
+              "quartile_2": 11256,
+              "quartile_3": 9101,
+              "view_completion": 6945,
+              "uniques": 19771,
+              "frequency": 4.62,
+              "swipe_up_percent": 0.015776,
+              "avg_screen_time_millis": 2615
+            }
+          }
+        ],
+        "Traffic | Salon industry page": [
+          {
+            "id": "5a0d0000-0000-4000-8000-000000000004",
+            "type": "AD_SQUAD",
+            "stats": {
+              "impressions": 88537,
+              "spend": 434064764,
+              "swipes": 713,
+              "landing_page_views": 520,
+              "conversion_page_views": 0,
+              "conversion_sign_ups": 0,
+              "video_views": 0,
+              "video_views_15s": 0,
+              "quartile_1": 0,
+              "quartile_2": 0,
+              "quartile_3": 0,
+              "view_completion": 0,
+              "uniques": 57867,
+              "frequency": 1.53,
+              "swipe_up_percent": 0.008053,
+              "avg_screen_time_millis": 1700
+            }
+          }
+        ]
+      }
+    },
+    "get_campaign_stats_day": {
+      "granularity": "DAY",
+      "finalized_data_end_time": "2026-10-26T04:00:00.000Z",
+      "campaigns": {
+        "Sign-ups | Prospecting": [
+          {
+            "start_time": "2026-09-28T04:00:00.000Z",
+            "stats": {
+              "impressions": 15364,
+              "spend": 115342897,
+              "swipes": 119,
+              "landing_page_views": 94,
+              "conversion_sign_ups": 7,
+              "conversion_page_views": 85,
+              "video_views": 4465
+            }
+          },
+          {
+            "start_time": "2026-09-29T04:00:00.000Z",
+            "stats": {
+              "impressions": 14965,
+              "spend": 113207684,
+              "swipes": 117,
+              "landing_page_views": 94,
+              "conversion_sign_ups": 5,
+              "conversion_page_views": 86,
+              "video_views": 4425
+            }
+          },
+          {
+            "start_time": "2026-09-30T04:00:00.000Z",
+            "stats": {
+              "impressions": 14640,
+              "spend": 110342413,
+              "swipes": 114,
+              "landing_page_views": 91,
+              "conversion_sign_ups": 7,
+              "conversion_page_views": 82,
+              "video_views": 4291
+            }
+          },
+          {
+            "start_time": "2026-10-01T04:00:00.000Z",
+            "stats": {
+              "impressions": 15299,
+              "spend": 114018035,
+              "swipes": 118,
+              "landing_page_views": 93,
+              "conversion_sign_ups": 5,
+              "conversion_page_views": 86,
+              "video_views": 4396
+            }
+          },
+          {
+            "start_time": "2026-10-02T04:00:00.000Z",
+            "stats": {
+              "impressions": 15712,
+              "spend": 118580234,
+              "swipes": 121,
+              "landing_page_views": 97,
+              "conversion_sign_ups": 6,
+              "conversion_page_views": 88,
+              "video_views": 4568
+            }
+          },
+          {
+            "start_time": "2026-10-03T04:00:00.000Z",
+            "stats": {
+              "impressions": 16911,
+              "spend": 128194500,
+              "swipes": 133,
+              "landing_page_views": 107,
+              "conversion_sign_ups": 8,
+              "conversion_page_views": 97,
+              "video_views": 4998
+            }
+          },
+          {
+            "start_time": "2026-10-04T04:00:00.000Z",
+            "stats": {
+              "impressions": 15945,
+              "spend": 120048942,
+              "swipes": 121,
+              "landing_page_views": 95,
+              "conversion_sign_ups": 5,
+              "conversion_page_views": 87,
+              "video_views": 4589
+            }
+          },
+          {
+            "start_time": "2026-10-05T04:00:00.000Z",
+            "stats": {
+              "impressions": 15595,
+              "spend": 116964076,
+              "swipes": 120,
+              "landing_page_views": 96,
+              "conversion_sign_ups": 7,
+              "conversion_page_views": 86,
+              "video_views": 4535
+            }
+          },
+          {
+            "start_time": "2026-10-06T04:00:00.000Z",
+            "stats": {
+              "impressions": 14923,
+              "spend": 109580821,
+              "swipes": 115,
+              "landing_page_views": 93,
+              "conversion_sign_ups": 8,
+              "conversion_page_views": 85,
+              "video_views": 4317
+            }
+          },
+          {
+            "start_time": "2026-10-07T04:00:00.000Z",
+            "stats": {
+              "impressions": 14622,
+              "spend": 109973955,
+              "swipes": 114,
+              "landing_page_views": 89,
+              "conversion_sign_ups": 4,
+              "conversion_page_views": 81,
+              "video_views": 4277
+            }
+          },
+          {
+            "start_time": "2026-10-08T04:00:00.000Z",
+            "stats": {
+              "impressions": 15588,
+              "spend": 117197867,
+              "swipes": 119,
+              "landing_page_views": 96,
+              "conversion_sign_ups": 7,
+              "conversion_page_views": 88,
+              "video_views": 4500
+            }
+          },
+          {
+            "start_time": "2026-10-09T04:00:00.000Z",
+            "stats": {
+              "impressions": 16327,
+              "spend": 120199686,
+              "swipes": 124,
+              "landing_page_views": 99,
+              "conversion_sign_ups": 6,
+              "conversion_page_views": 90,
+              "video_views": 4699
+            }
+          },
+          {
+            "start_time": "2026-10-10T04:00:00.000Z",
+            "stats": {
+              "impressions": 16817,
+              "spend": 127100080,
+              "swipes": 132,
+              "landing_page_views": 105,
+              "conversion_sign_ups": 7,
+              "conversion_page_views": 96,
+              "video_views": 4943
+            }
+          },
+          {
+            "start_time": "2026-10-11T04:00:00.000Z",
+            "stats": {
+              "impressions": 15936,
+              "spend": 118593920,
+              "swipes": 122,
+              "landing_page_views": 97,
+              "conversion_sign_ups": 6,
+              "conversion_page_views": 88,
+              "video_views": 4692
+            }
+          },
+          {
+            "start_time": "2026-10-12T04:00:00.000Z",
+            "stats": {
+              "impressions": 15329,
+              "spend": 114913383,
+              "swipes": 118,
+              "landing_page_views": 95,
+              "conversion_sign_ups": 7,
+              "conversion_page_views": 87,
+              "video_views": 4457
+            }
+          },
+          {
+            "start_time": "2026-10-13T04:00:00.000Z",
+            "stats": {
+              "impressions": 14702,
+              "spend": 108598554,
+              "swipes": 113,
+              "landing_page_views": 89,
+              "conversion_sign_ups": 5,
+              "conversion_page_views": 80,
+              "video_views": 4270
+            }
+          },
+          {
+            "start_time": "2026-10-14T04:00:00.000Z",
+            "stats": {
+              "impressions": 15101,
+              "spend": 111688761,
+              "swipes": 115,
+              "landing_page_views": 92,
+              "conversion_sign_ups": 7,
+              "conversion_page_views": 85,
+              "video_views": 4405
+            }
+          },
+          {
+            "start_time": "2026-10-15T04:00:00.000Z",
+            "stats": {
+              "impressions": 15459,
+              "spend": 115948910,
+              "swipes": 118,
+              "landing_page_views": 95,
+              "conversion_sign_ups": 5,
+              "conversion_page_views": 85,
+              "video_views": 4477
+            }
+          },
+          {
+            "start_time": "2026-10-16T04:00:00.000Z",
+            "stats": {
+              "impressions": 16309,
+              "spend": 122533985,
+              "swipes": 125,
+              "landing_page_views": 99,
+              "conversion_sign_ups": 7,
+              "conversion_page_views": 90,
+              "video_views": 4751
+            }
+          },
+          {
+            "start_time": "2026-10-17T04:00:00.000Z",
+            "stats": {
+              "impressions": 16668,
+              "spend": 126436497,
+              "swipes": 128,
+              "landing_page_views": 101,
+              "conversion_sign_ups": 8,
+              "conversion_page_views": 93,
+              "video_views": 4903
+            }
+          },
+          {
+            "start_time": "2026-10-18T04:00:00.000Z",
+            "stats": {
+              "impressions": 15911,
+              "spend": 118180986,
+              "swipes": 121,
+              "landing_page_views": 98,
+              "conversion_sign_ups": 5,
+              "conversion_page_views": 88,
+              "video_views": 4603
+            }
+          },
+          {
+            "start_time": "2026-10-19T04:00:00.000Z",
+            "stats": {
+              "impressions": 15000,
+              "spend": 110104628,
+              "swipes": 116,
+              "landing_page_views": 91,
+              "conversion_sign_ups": 6,
+              "conversion_page_views": 83,
+              "video_views": 4418
+            }
+          },
+          {
+            "start_time": "2026-10-20T04:00:00.000Z",
+            "stats": {
+              "impressions": 14850,
+              "spend": 112815804,
+              "swipes": 115,
+              "landing_page_views": 93,
+              "conversion_sign_ups": 7,
+              "conversion_page_views": 85,
+              "video_views": 4374
+            }
+          },
+          {
+            "start_time": "2026-10-21T04:00:00.000Z",
+            "stats": {
+              "impressions": 14486,
+              "spend": 108584939,
+              "swipes": 110,
+              "landing_page_views": 88,
+              "conversion_sign_ups": 5,
+              "conversion_page_views": 80,
+              "video_views": 4246
+            }
+          },
+          {
+            "start_time": "2026-10-22T04:00:00.000Z",
+            "stats": {
+              "impressions": 15265,
+              "spend": 115036207,
+              "swipes": 116,
+              "landing_page_views": 91,
+              "conversion_sign_ups": 7,
+              "conversion_page_views": 83,
+              "video_views": 4506
+            }
+          },
+          {
+            "start_time": "2026-10-23T04:00:00.000Z",
+            "stats": {
+              "impressions": 15982,
+              "spend": 121121624,
+              "swipes": 122,
+              "landing_page_views": 99,
+              "conversion_sign_ups": 5,
+              "conversion_page_views": 89,
+              "video_views": 4627
+            }
+          },
+          {
+            "start_time": "2026-10-24T04:00:00.000Z",
+            "stats": {
+              "impressions": 16683,
+              "spend": 124297566,
+              "swipes": 125,
+              "landing_page_views": 98,
+              "conversion_sign_ups": 7,
+              "conversion_page_views": 91,
+              "video_views": 4763
+            }
+          },
+          {
+            "start_time": "2026-10-25T04:00:00.000Z",
+            "stats": {
+              "impressions": 16054,
+              "spend": 121970772,
+              "swipes": 123,
+              "landing_page_views": 99,
+              "conversion_sign_ups": 7,
+              "conversion_page_views": 89,
+              "video_views": 4627
+            }
+          },
+          {
+            "start_time": "2026-10-26T04:00:00.000Z",
+            "stats": {
+              "impressions": 15338,
+              "spend": 118127126,
+              "swipes": 115,
+              "landing_page_views": 91,
+              "conversion_sign_ups": 5,
+              "conversion_page_views": 83,
+              "video_views": 4436
+            }
+          },
+          {
+            "start_time": "2026-10-27T04:00:00.000Z",
+            "stats": {
+              "impressions": 15006,
+              "spend": 111402309,
+              "swipes": 115,
+              "landing_page_views": 91,
+              "conversion_sign_ups": 6,
+              "conversion_page_views": 84,
+              "video_views": 4412
+            }
+          }
+        ],
+        "Sign-ups | Retargeting": [
+          {
+            "start_time": "2026-09-28T04:00:00.000Z",
+            "stats": {
+              "impressions": 3276,
+              "spend": 26516363,
+              "swipes": 50,
+              "landing_page_views": 42,
+              "conversion_sign_ups": 6,
+              "conversion_page_views": 38,
+              "video_views": 863
+            }
+          },
+          {
+            "start_time": "2026-09-29T04:00:00.000Z",
+            "stats": {
+              "impressions": 3169,
+              "spend": 26329183,
+              "swipes": 48,
+              "landing_page_views": 40,
+              "conversion_sign_ups": 6,
+              "conversion_page_views": 37,
+              "video_views": 849
+            }
+          },
+          {
+            "start_time": "2026-09-30T04:00:00.000Z",
+            "stats": {
+              "impressions": 3129,
+              "spend": 25889149,
+              "swipes": 47,
+              "landing_page_views": 40,
+              "conversion_sign_ups": 6,
+              "conversion_page_views": 36,
+              "video_views": 801
+            }
+          },
+          {
+            "start_time": "2026-10-01T04:00:00.000Z",
+            "stats": {
+              "impressions": 3225,
+              "spend": 26912856,
+              "swipes": 49,
+              "landing_page_views": 41,
+              "conversion_sign_ups": 4,
+              "conversion_page_views": 37,
+              "video_views": 833
+            }
+          },
+          {
+            "start_time": "2026-10-02T04:00:00.000Z",
+            "stats": {
+              "impressions": 3378,
+              "spend": 27196299,
+              "swipes": 51,
+              "landing_page_views": 42,
+              "conversion_sign_ups": 7,
+              "conversion_page_views": 39,
+              "video_views": 887
+            }
+          },
+          {
+            "start_time": "2026-10-03T04:00:00.000Z",
+            "stats": {
+              "impressions": 3585,
+              "spend": 29947327,
+              "swipes": 53,
+              "landing_page_views": 44,
+              "conversion_sign_ups": 6,
+              "conversion_page_views": 39,
+              "video_views": 954
+            }
+          },
+          {
+            "start_time": "2026-10-04T04:00:00.000Z",
+            "stats": {
+              "impressions": 3235,
+              "spend": 26362526,
+              "swipes": 48,
+              "landing_page_views": 41,
+              "conversion_sign_ups": 6,
+              "conversion_page_views": 38,
+              "video_views": 841
+            }
+          },
+          {
+            "start_time": "2026-10-05T04:00:00.000Z",
+            "stats": {
+              "impressions": 3083,
+              "spend": 25103046,
+              "swipes": 45,
+              "landing_page_views": 37,
+              "conversion_sign_ups": 5,
+              "conversion_page_views": 34,
+              "video_views": 806
+            }
+          },
+          {
+            "start_time": "2026-10-06T04:00:00.000Z",
+            "stats": {
+              "impressions": 3098,
+              "spend": 25748627,
+              "swipes": 45,
+              "landing_page_views": 37,
+              "conversion_sign_ups": 6,
+              "conversion_page_views": 33,
+              "video_views": 798
+            }
+          },
+          {
+            "start_time": "2026-10-07T04:00:00.000Z",
+            "stats": {
+              "impressions": 3134,
+              "spend": 25851919,
+              "swipes": 46,
+              "landing_page_views": 40,
+              "conversion_sign_ups": 4,
+              "conversion_page_views": 36,
+              "video_views": 830
+            }
+          },
+          {
+            "start_time": "2026-10-08T04:00:00.000Z",
+            "stats": {
+              "impressions": 3261,
+              "spend": 26938458,
+              "swipes": 47,
+              "landing_page_views": 39,
+              "conversion_sign_ups": 6,
+              "conversion_page_views": 36,
+              "video_views": 847
+            }
+          },
+          {
+            "start_time": "2026-10-09T04:00:00.000Z",
+            "stats": {
+              "impressions": 3443,
+              "spend": 28048417,
+              "swipes": 50,
+              "landing_page_views": 41,
+              "conversion_sign_ups": 6,
+              "conversion_page_views": 37,
+              "video_views": 915
+            }
+          },
+          {
+            "start_time": "2026-10-10T04:00:00.000Z",
+            "stats": {
+              "impressions": 3606,
+              "spend": 29573541,
+              "swipes": 52,
+              "landing_page_views": 44,
+              "conversion_sign_ups": 6,
+              "conversion_page_views": 41,
+              "video_views": 945
+            }
+          },
+          {
+            "start_time": "2026-10-11T04:00:00.000Z",
+            "stats": {
+              "impressions": 3365,
+              "spend": 27774868,
+              "swipes": 48,
+              "landing_page_views": 40,
+              "conversion_sign_ups": 6,
+              "conversion_page_views": 35,
+              "video_views": 870
+            }
+          },
+          {
+            "start_time": "2026-10-12T04:00:00.000Z",
+            "stats": {
+              "impressions": 3212,
+              "spend": 26464605,
+              "swipes": 45,
+              "landing_page_views": 38,
+              "conversion_sign_ups": 6,
+              "conversion_page_views": 35,
+              "video_views": 857
+            }
+          },
+          {
+            "start_time": "2026-10-13T04:00:00.000Z",
+            "stats": {
+              "impressions": 3216,
+              "spend": 26516840,
+              "swipes": 45,
+              "landing_page_views": 37,
+              "conversion_sign_ups": 4,
+              "conversion_page_views": 34,
+              "video_views": 847
+            }
+          },
+          {
+            "start_time": "2026-10-14T04:00:00.000Z",
+            "stats": {
+              "impressions": 3162,
+              "spend": 25870210,
+              "swipes": 45,
+              "landing_page_views": 38,
+              "conversion_sign_ups": 6,
+              "conversion_page_views": 35,
+              "video_views": 829
+            }
+          },
+          {
+            "start_time": "2026-10-15T04:00:00.000Z",
+            "stats": {
+              "impressions": 3321,
+              "spend": 26940877,
+              "swipes": 46,
+              "landing_page_views": 39,
+              "conversion_sign_ups": 6,
+              "conversion_page_views": 35,
+              "video_views": 867
+            }
+          },
+          {
+            "start_time": "2026-10-16T04:00:00.000Z",
+            "stats": {
+              "impressions": 3362,
+              "spend": 26781760,
+              "swipes": 45,
+              "landing_page_views": 37,
+              "conversion_sign_ups": 4,
+              "conversion_page_views": 34,
+              "video_views": 861
+            }
+          },
+          {
+            "start_time": "2026-10-17T04:00:00.000Z",
+            "stats": {
+              "impressions": 3498,
+              "spend": 28215413,
+              "swipes": 48,
+              "landing_page_views": 40,
+              "conversion_sign_ups": 6,
+              "conversion_page_views": 36,
+              "video_views": 928
+            }
+          },
+          {
+            "start_time": "2026-10-18T04:00:00.000Z",
+            "stats": {
+              "impressions": 3263,
+              "spend": 27111593,
+              "swipes": 45,
+              "landing_page_views": 38,
+              "conversion_sign_ups": 6,
+              "conversion_page_views": 35,
+              "video_views": 862
+            }
+          },
+          {
+            "start_time": "2026-10-19T04:00:00.000Z",
+            "stats": {
+              "impressions": 3204,
+              "spend": 26396454,
+              "swipes": 43,
+              "landing_page_views": 36,
+              "conversion_sign_ups": 4,
+              "conversion_page_views": 32,
+              "video_views": 839
+            }
+          },
+          {
+            "start_time": "2026-10-20T04:00:00.000Z",
+            "stats": {
+              "impressions": 3140,
+              "spend": 26053227,
+              "swipes": 42,
+              "landing_page_views": 35,
+              "conversion_sign_ups": 6,
+              "conversion_page_views": 32,
+              "video_views": 834
+            }
+          },
+          {
+            "start_time": "2026-10-21T04:00:00.000Z",
+            "stats": {
+              "impressions": 3150,
+              "spend": 25560604,
+              "swipes": 42,
+              "landing_page_views": 35,
+              "conversion_sign_ups": 5,
+              "conversion_page_views": 32,
+              "video_views": 811
+            }
+          },
+          {
+            "start_time": "2026-10-22T04:00:00.000Z",
+            "stats": {
+              "impressions": 3235,
+              "spend": 26104612,
+              "swipes": 44,
+              "landing_page_views": 36,
+              "conversion_sign_ups": 4,
+              "conversion_page_views": 33,
+              "video_views": 862
+            }
+          },
+          {
+            "start_time": "2026-10-23T04:00:00.000Z",
+            "stats": {
+              "impressions": 3340,
+              "spend": 27098523,
+              "swipes": 43,
+              "landing_page_views": 37,
+              "conversion_sign_ups": 6,
+              "conversion_page_views": 34,
+              "video_views": 888
+            }
+          },
+          {
+            "start_time": "2026-10-24T04:00:00.000Z",
+            "stats": {
+              "impressions": 3620,
+              "spend": 29873720,
+              "swipes": 49,
+              "landing_page_views": 41,
+              "conversion_sign_ups": 6,
+              "conversion_page_views": 37,
+              "video_views": 952
+            }
+          },
+          {
+            "start_time": "2026-10-25T04:00:00.000Z",
+            "stats": {
+              "impressions": 3402,
+              "spend": 28134243,
+              "swipes": 44,
+              "landing_page_views": 37,
+              "conversion_sign_ups": 4,
+              "conversion_page_views": 33,
+              "video_views": 903
+            }
+          },
+          {
+            "start_time": "2026-10-26T04:00:00.000Z",
+            "stats": {
+              "impressions": 3288,
+              "spend": 26902565,
+              "swipes": 42,
+              "landing_page_views": 35,
+              "conversion_sign_ups": 6,
+              "conversion_page_views": 32,
+              "video_views": 853
+            }
+          },
+          {
+            "start_time": "2026-10-27T04:00:00.000Z",
+            "stats": {
+              "impressions": 3068,
+              "spend": 25025876,
+              "swipes": 40,
+              "landing_page_views": 33,
+              "conversion_sign_ups": 4,
+              "conversion_page_views": 30,
+              "video_views": 804
+            }
+          }
+        ],
+        "Traffic | Salon industry page": [
+          {
+            "start_time": "2026-09-28T04:00:00.000Z",
+            "stats": {
+              "impressions": 3060,
+              "spend": 14671781,
+              "swipes": 25,
+              "landing_page_views": 18,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-09-29T04:00:00.000Z",
+            "stats": {
+              "impressions": 2999,
+              "spend": 14419211,
+              "swipes": 24,
+              "landing_page_views": 18,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-09-30T04:00:00.000Z",
+            "stats": {
+              "impressions": 2962,
+              "spend": 14443433,
+              "swipes": 24,
+              "landing_page_views": 17,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-01T04:00:00.000Z",
+            "stats": {
+              "impressions": 3036,
+              "spend": 14595221,
+              "swipes": 25,
+              "landing_page_views": 19,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-02T04:00:00.000Z",
+            "stats": {
+              "impressions": 3343,
+              "spend": 16014301,
+              "swipes": 27,
+              "landing_page_views": 19,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-03T04:00:00.000Z",
+            "stats": {
+              "impressions": 3368,
+              "spend": 16839029,
+              "swipes": 27,
+              "landing_page_views": 20,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-04T04:00:00.000Z",
+            "stats": {
+              "impressions": 3239,
+              "spend": 15909928,
+              "swipes": 26,
+              "landing_page_views": 19,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-05T04:00:00.000Z",
+            "stats": {
+              "impressions": 3210,
+              "spend": 15924223,
+              "swipes": 26,
+              "landing_page_views": 19,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-06T04:00:00.000Z",
+            "stats": {
+              "impressions": 3022,
+              "spend": 15234559,
+              "swipes": 24,
+              "landing_page_views": 17,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-07T04:00:00.000Z",
+            "stats": {
+              "impressions": 2971,
+              "spend": 14559537,
+              "swipes": 24,
+              "landing_page_views": 18,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-08T04:00:00.000Z",
+            "stats": {
+              "impressions": 3168,
+              "spend": 15079665,
+              "swipes": 26,
+              "landing_page_views": 19,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-09T04:00:00.000Z",
+            "stats": {
+              "impressions": 3355,
+              "spend": 16613607,
+              "swipes": 27,
+              "landing_page_views": 20,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-10T04:00:00.000Z",
+            "stats": {
+              "impressions": 3356,
+              "spend": 16614333,
+              "swipes": 27,
+              "landing_page_views": 19,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-11T04:00:00.000Z",
+            "stats": {
+              "impressions": 3157,
+              "spend": 15148238,
+              "swipes": 25,
+              "landing_page_views": 19,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-12T04:00:00.000Z",
+            "stats": {
+              "impressions": 3177,
+              "spend": 15671996,
+              "swipes": 26,
+              "landing_page_views": 19,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-13T04:00:00.000Z",
+            "stats": {
+              "impressions": 2951,
+              "spend": 14246254,
+              "swipes": 24,
+              "landing_page_views": 17,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-14T04:00:00.000Z",
+            "stats": {
+              "impressions": 2893,
+              "spend": 14043837,
+              "swipes": 23,
+              "landing_page_views": 17,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-15T04:00:00.000Z",
+            "stats": {
+              "impressions": 3023,
+              "spend": 14830276,
+              "swipes": 24,
+              "landing_page_views": 17,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-16T04:00:00.000Z",
+            "stats": {
+              "impressions": 3212,
+              "spend": 15667788,
+              "swipes": 26,
+              "landing_page_views": 19,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-17T04:00:00.000Z",
+            "stats": {
+              "impressions": 3381,
+              "spend": 16225182,
+              "swipes": 27,
+              "landing_page_views": 20,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-18T04:00:00.000Z",
+            "stats": {
+              "impressions": 3146,
+              "spend": 15840578,
+              "swipes": 26,
+              "landing_page_views": 19,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-19T04:00:00.000Z",
+            "stats": {
+              "impressions": 3078,
+              "spend": 14667020,
+              "swipes": 24,
+              "landing_page_views": 18,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-20T04:00:00.000Z",
+            "stats": {
+              "impressions": 2924,
+              "spend": 13985882,
+              "swipes": 24,
+              "landing_page_views": 17,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-21T04:00:00.000Z",
+            "stats": {
+              "impressions": 3057,
+              "spend": 14902823,
+              "swipes": 24,
+              "landing_page_views": 18,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-22T04:00:00.000Z",
+            "stats": {
+              "impressions": 3067,
+              "spend": 15129577,
+              "swipes": 25,
+              "landing_page_views": 18,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-23T04:00:00.000Z",
+            "stats": {
+              "impressions": 3196,
+              "spend": 15722901,
+              "swipes": 25,
+              "landing_page_views": 18,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-24T04:00:00.000Z",
+            "stats": {
+              "impressions": 3347,
+              "spend": 16818504,
+              "swipes": 27,
+              "landing_page_views": 20,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-25T04:00:00.000Z",
+            "stats": {
+              "impressions": 3133,
+              "spend": 15370324,
+              "swipes": 25,
+              "landing_page_views": 18,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-26T04:00:00.000Z",
+            "stats": {
+              "impressions": 3123,
+              "spend": 15384440,
+              "swipes": 25,
+              "landing_page_views": 18,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          },
+          {
+            "start_time": "2026-10-27T04:00:00.000Z",
+            "stats": {
+              "impressions": 3055,
+              "spend": 15303340,
+              "swipes": 25,
+              "landing_page_views": 19,
+              "conversion_sign_ups": 0,
+              "conversion_page_views": 0,
+              "video_views": 0
+            }
+          }
+        ]
+      }
+    },
+    "fields_left_out": "These requested fields are 0 on every row, so they are left out: conversion_add_cart, conversion_purchases, conversion_purchases_value, native_leads, saves, shares, story_completes, story_opens, total_installs",
+    "get_ad_stats_position_stats": "skipped: no ad has type STORY, so there are no Discover tile positions to read"
+  }
+}

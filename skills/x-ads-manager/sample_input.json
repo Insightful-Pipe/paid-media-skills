@@ -1,0 +1,822 @@
+{
+  "note": "Example data: an invented online booking software company with invented accounts, not a real business. Every number in expected_output.json follows from this input. Each read below is shown as the totals the skill adds up from its 7-day get_stats windows.",
+  "request": "Hey Claude, I just added the \"x-ads-manager\" skill. Review my X Ads account for the last 30 days, then draft a website-clicks campaign for US fitness studio owners and personal trainers at $20 a day, starting Monday, that sends people to https://www.example.com/industries/fitness/. Target class booking, personal trainer software and studio scheduling, plus people talking about personal training and group classes, and write three post variations based on our best salons post. Its text: \"Every no-show is an empty chair you already paid for. Example Booking Software sends automatic SMS and email reminders before every appointment. Plans start at $19 a month. https://www.example.com/industries/salons/\" Don't run anything.",
+  "account": {
+    "name": "Example Booking Software (X Ads account)",
+    "id": "x1a2b3c4d5",
+    "time_zone": "America/New_York",
+    "currency": "USD",
+    "approval_status": "ACCEPTED"
+  },
+  "date_range": {
+    "window": "2026-09-28 to 2026-10-27",
+    "utc": "2026-09-28T04:00:00Z to 2026-10-28T04:00:00Z",
+    "stats_windows": [
+      {
+        "label": "W1",
+        "first_day": "2026-09-28",
+        "last_day": "2026-10-04",
+        "days": 7,
+        "start_time": "2026-09-28T04:00:00Z",
+        "end_time": "2026-10-05T04:00:00Z"
+      },
+      {
+        "label": "W2",
+        "first_day": "2026-10-05",
+        "last_day": "2026-10-11",
+        "days": 7,
+        "start_time": "2026-10-05T04:00:00Z",
+        "end_time": "2026-10-12T04:00:00Z"
+      },
+      {
+        "label": "W3",
+        "first_day": "2026-10-12",
+        "last_day": "2026-10-18",
+        "days": 7,
+        "start_time": "2026-10-12T04:00:00Z",
+        "end_time": "2026-10-19T04:00:00Z"
+      },
+      {
+        "label": "W4",
+        "first_day": "2026-10-19",
+        "last_day": "2026-10-25",
+        "days": 7,
+        "start_time": "2026-10-19T04:00:00Z",
+        "end_time": "2026-10-26T04:00:00Z"
+      },
+      {
+        "label": "W5",
+        "first_day": "2026-10-26",
+        "last_day": "2026-10-27",
+        "days": 2,
+        "start_time": "2026-10-26T04:00:00Z",
+        "end_time": "2026-10-28T04:00:00Z"
+      }
+    ]
+  },
+  "brief": {
+    "goal": "website visits",
+    "audience": "US fitness studio owners and personal trainers, English",
+    "daily_budget": 20,
+    "landing_page": "https://www.example.com/industries/fitness/",
+    "start": "next Monday",
+    "keywords": [
+      "class booking",
+      "personal trainer software",
+      "studio scheduling"
+    ],
+    "facts": "the user's pasted salons post and the brand's own site: automatic SMS and email reminders before every appointment, plans from $19 a month. Nothing else is claimed"
+  },
+  "data_pulled": [
+    "get_account",
+    "get_funding_instruments (1)",
+    "get_campaigns (3 live), get_line_items (6 live), get_promoted_tweets (12 live), get_media_creatives (2 live), get_promoted_accounts (0)",
+    "get_active_entities for CAMPAIGN, LINE_ITEM and PROMOTED_TWEET over the 30 days",
+    "get_stats on PROMOTED_TWEET and LINE_ITEM (TOTAL), CAMPAIGN (DAY) and the funding instrument, each in the 5 windows",
+    "get_targeting_criteria for the 6 line items",
+    "get_features, get_promotable_users",
+    "get_targeting_locations (COUNTRIES), get_targeting_languages, get_targeting_interests",
+    "get_targeting_conversations: pages of 1,000 with a cursor; the topics used are on pages 4, 6"
+  ],
+  "data_returned": {
+    "account": {
+      "id": "x1a2b3c4d5",
+      "name": "Example Booking Software (X Ads account)",
+      "timezone": "America/New_York",
+      "currency": "USD",
+      "approval_status": "ACCEPTED",
+      "created_at": "2026-03-16T14:20:00Z",
+      "deleted": false
+    },
+    "funding_instruments": [
+      {
+        "id": "f1e2d3",
+        "type": "CREDIT_CARD",
+        "entity_status": "ACTIVE",
+        "able_to_fund": true,
+        "currency": "USD",
+        "deleted": false
+      }
+    ],
+    "promotable_users": [
+      {
+        "user_id": "1000000000000000101",
+        "promotable_user_type": "FULL"
+      }
+    ],
+    "campaigns": [
+      {
+        "id": "c01ex",
+        "name": "Salons | Website clicks | US | 2026-09",
+        "entity_status": "ACTIVE",
+        "servable": true,
+        "reasons_not_servable": [],
+        "budget_optimization": "CAMPAIGN",
+        "daily_budget_amount_local_micro": 55000000,
+        "funding_instrument_id": "f1e2d3",
+        "start_time": "2026-09-08T04:00:00Z"
+      },
+      {
+        "id": "c02ex",
+        "name": "Clinics | Site visits | US | 2026-08",
+        "entity_status": "ACTIVE",
+        "servable": true,
+        "reasons_not_servable": [],
+        "budget_optimization": "CAMPAIGN",
+        "daily_budget_amount_local_micro": 35000000,
+        "funding_instrument_id": "f1e2d3",
+        "start_time": "2026-08-17T04:00:00Z"
+      },
+      {
+        "id": "c03ex",
+        "name": "Brand | Video views | US | 2026-09",
+        "entity_status": "ACTIVE",
+        "servable": true,
+        "reasons_not_servable": [],
+        "budget_optimization": "CAMPAIGN",
+        "daily_budget_amount_local_micro": 18000000,
+        "funding_instrument_id": "f1e2d3",
+        "start_time": "2026-09-14T04:00:00Z"
+      }
+    ],
+    "line_items": [
+      {
+        "id": "li11ex",
+        "campaign_id": "c01ex",
+        "name": "Salons | Keywords | US-EN",
+        "objective": "WEBSITE_CLICKS",
+        "product_type": "PROMOTED_TWEETS",
+        "goal": "LINK_CLICKS",
+        "placements": [
+          "ALL_ON_TWITTER"
+        ],
+        "entity_status": "ACTIVE",
+        "primary_web_event_tag": null,
+        "audience_expansion": "DEFINED",
+        "start_time": "2026-09-08T04:00:00Z"
+      },
+      {
+        "id": "li12ex",
+        "campaign_id": "c01ex",
+        "name": "Salons | Follower lookalikes | US-EN",
+        "objective": "WEBSITE_CLICKS",
+        "product_type": "PROMOTED_TWEETS",
+        "goal": "LINK_CLICKS",
+        "placements": [
+          "ALL_ON_TWITTER"
+        ],
+        "entity_status": "ACTIVE",
+        "primary_web_event_tag": null,
+        "audience_expansion": "EXPANDED",
+        "start_time": "2026-09-08T04:00:00Z"
+      },
+      {
+        "id": "li13ex",
+        "campaign_id": "c01ex",
+        "name": "Salons | Conversations | US-EN",
+        "objective": "WEBSITE_CLICKS",
+        "product_type": "PROMOTED_TWEETS",
+        "goal": "LINK_CLICKS",
+        "placements": [
+          "ALL_ON_TWITTER"
+        ],
+        "entity_status": "ACTIVE",
+        "primary_web_event_tag": null,
+        "audience_expansion": "DEFINED",
+        "start_time": "2026-09-08T04:00:00Z"
+      },
+      {
+        "id": "li21ex",
+        "campaign_id": "c02ex",
+        "name": "Clinics | Keywords | US-EN",
+        "objective": "WEBSITE_CONVERSIONS",
+        "product_type": "PROMOTED_TWEETS",
+        "goal": "SITE_VISITS",
+        "placements": [
+          "ALL_ON_TWITTER"
+        ],
+        "entity_status": "ACTIVE",
+        "primary_web_event_tag": "tag01ex",
+        "audience_expansion": "DEFINED",
+        "start_time": "2026-08-17T04:00:00Z"
+      },
+      {
+        "id": "li22ex",
+        "campaign_id": "c02ex",
+        "name": "Clinics | Trial users list | US",
+        "objective": "WEBSITE_CONVERSIONS",
+        "product_type": "PROMOTED_TWEETS",
+        "goal": "WEBSITE_CONVERSIONS",
+        "placements": [
+          "ALL_ON_TWITTER"
+        ],
+        "entity_status": "ACTIVE",
+        "primary_web_event_tag": null,
+        "audience_expansion": "DEFINED",
+        "start_time": "2026-10-19T04:00:00Z"
+      },
+      {
+        "id": "li31ex",
+        "campaign_id": "c03ex",
+        "name": "Brand | Interests | US-EN",
+        "objective": "VIDEO_VIEWS",
+        "product_type": "PROMOTED_TWEETS",
+        "goal": "VIDEO_VIEW",
+        "placements": [
+          "ALL_ON_TWITTER"
+        ],
+        "entity_status": "ACTIVE",
+        "primary_web_event_tag": null,
+        "audience_expansion": "DEFINED",
+        "start_time": "2026-09-14T04:00:00Z"
+      }
+    ],
+    "targeting_criteria": [
+      {
+        "line_item_id": "li11ex",
+        "targeting_type": "LOCATION",
+        "targeting_value": "96683cc9126741d1",
+        "name": "United States"
+      },
+      {
+        "line_item_id": "li11ex",
+        "targeting_type": "LANGUAGE",
+        "targeting_value": "en",
+        "name": "English"
+      },
+      {
+        "line_item_id": "li12ex",
+        "targeting_type": "LOCATION",
+        "targeting_value": "96683cc9126741d1",
+        "name": "United States"
+      },
+      {
+        "line_item_id": "li12ex",
+        "targeting_type": "LANGUAGE",
+        "targeting_value": "en",
+        "name": "English"
+      },
+      {
+        "line_item_id": "li13ex",
+        "targeting_type": "LOCATION",
+        "targeting_value": "96683cc9126741d1",
+        "name": "United States"
+      },
+      {
+        "line_item_id": "li13ex",
+        "targeting_type": "LANGUAGE",
+        "targeting_value": "en",
+        "name": "English"
+      },
+      {
+        "line_item_id": "li21ex",
+        "targeting_type": "LOCATION",
+        "targeting_value": "96683cc9126741d1",
+        "name": "United States"
+      },
+      {
+        "line_item_id": "li21ex",
+        "targeting_type": "LANGUAGE",
+        "targeting_value": "en",
+        "name": "English"
+      },
+      {
+        "line_item_id": "li22ex",
+        "targeting_type": "LOCATION",
+        "targeting_value": "96683cc9126741d1",
+        "name": "United States"
+      },
+      {
+        "line_item_id": "li31ex",
+        "targeting_type": "LOCATION",
+        "targeting_value": "96683cc9126741d1",
+        "name": "United States"
+      },
+      {
+        "line_item_id": "li31ex",
+        "targeting_type": "LANGUAGE",
+        "targeting_value": "en",
+        "name": "English"
+      },
+      {
+        "line_item_id": "li11ex",
+        "targeting_type": "BROAD_KEYWORD",
+        "targeting_value": "salon booking",
+        "name": "salon booking"
+      },
+      {
+        "line_item_id": "li11ex",
+        "targeting_type": "BROAD_KEYWORD",
+        "targeting_value": "salon no shows",
+        "name": "salon no shows"
+      },
+      {
+        "line_item_id": "li11ex",
+        "targeting_type": "PHRASE_KEYWORD",
+        "targeting_value": "hair salon software",
+        "name": "hair salon software"
+      },
+      {
+        "line_item_id": "li12ex",
+        "targeting_type": "SIMILAR_TO_FOLLOWERS_OF_USER",
+        "targeting_value": "1000000000000000201",
+        "name": "Followers like Competitor A (a booking software rival)"
+      },
+      {
+        "line_item_id": "li12ex",
+        "targeting_type": "SIMILAR_TO_FOLLOWERS_OF_USER",
+        "targeting_value": "1000000000000000202",
+        "name": "Followers like Competitor B (a booking software rival)"
+      },
+      {
+        "line_item_id": "li13ex",
+        "targeting_type": "CONVERSATION",
+        "targeting_value": "e7k",
+        "name": "Business - Small business"
+      },
+      {
+        "line_item_id": "li13ex",
+        "targeting_type": "CONVERSATION",
+        "targeting_value": "e9p",
+        "name": "Beauty - Hair care"
+      },
+      {
+        "line_item_id": "li13ex",
+        "targeting_type": "BROAD_KEYWORD",
+        "targeting_value": "salon owner",
+        "name": "salon owner"
+      },
+      {
+        "line_item_id": "li21ex",
+        "targeting_type": "BROAD_KEYWORD",
+        "targeting_value": "clinic scheduling",
+        "name": "clinic scheduling"
+      },
+      {
+        "line_item_id": "li21ex",
+        "targeting_type": "BROAD_KEYWORD",
+        "targeting_value": "patient reminders",
+        "name": "patient reminders"
+      },
+      {
+        "line_item_id": "li22ex",
+        "targeting_type": "CUSTOM_AUDIENCE",
+        "targeting_value": "a1b2c",
+        "name": "Trial users, last 180 days (customer list)"
+      },
+      {
+        "line_item_id": "li31ex",
+        "targeting_type": "INTEREST",
+        "targeting_value": "1900000000000000011",
+        "name": "Business / Small business"
+      }
+    ],
+    "media_creatives": [
+      {
+        "id": "mc01ex",
+        "tweet_id": "1000000000000001015",
+        "approval_status": "ACCEPTED"
+      },
+      {
+        "id": "mc02ex",
+        "tweet_id": "1000000000000001016",
+        "approval_status": "ACCEPTED"
+      }
+    ],
+    "promoted_posts_30d": [
+      {
+        "id": "pt01ex",
+        "line_item_id": "li11ex",
+        "tweet_id": "1000000000000001011",
+        "media": "image",
+        "approval_status": "ACCEPTED",
+        "entity_status": "ACTIVE",
+        "impressions": 27000,
+        "engagements": 664,
+        "link_clicks": 282,
+        "billed_charge_local_micro": 338140000
+      },
+      {
+        "id": "pt02ex",
+        "line_item_id": "li11ex",
+        "tweet_id": "1000000000000001012",
+        "media": "image",
+        "approval_status": "ACCEPTED",
+        "entity_status": "ACTIVE",
+        "impressions": 21000,
+        "engagements": 440,
+        "link_clicks": 182,
+        "billed_charge_local_micro": 263000000
+      },
+      {
+        "id": "pt03ex",
+        "line_item_id": "li11ex",
+        "tweet_id": "1000000000000001013",
+        "media": "text",
+        "approval_status": "ACCEPTED",
+        "entity_status": "ACTIVE",
+        "impressions": 13500,
+        "engagements": 111,
+        "link_clicks": 39,
+        "billed_charge_local_micro": 176420000
+      },
+      {
+        "id": "pt04ex",
+        "line_item_id": "li12ex",
+        "tweet_id": "1000000000000001011",
+        "media": "image",
+        "approval_status": "ACCEPTED",
+        "entity_status": "ACTIVE",
+        "impressions": 12000,
+        "engagements": 207,
+        "link_clicks": 87,
+        "billed_charge_local_micro": 274430000
+      },
+      {
+        "id": "pt05ex",
+        "line_item_id": "li12ex",
+        "tweet_id": "1000000000000001012",
+        "media": "image",
+        "approval_status": "ACCEPTED",
+        "entity_status": "ACTIVE",
+        "impressions": 10500,
+        "engagements": 164,
+        "link_clicks": 66,
+        "billed_charge_local_micro": 240130000
+      },
+      {
+        "id": "pt06ex",
+        "line_item_id": "li13ex",
+        "tweet_id": "1000000000000001011",
+        "media": "image",
+        "approval_status": "ACCEPTED",
+        "entity_status": "ACTIVE",
+        "impressions": 15000,
+        "engagements": 342,
+        "link_clicks": 145,
+        "billed_charge_local_micro": 171520000
+      },
+      {
+        "id": "pt07ex",
+        "line_item_id": "li13ex",
+        "tweet_id": "1000000000000001014",
+        "media": "image",
+        "approval_status": "ACCEPTED",
+        "entity_status": "ACTIVE",
+        "impressions": 760,
+        "engagements": 13,
+        "link_clicks": 6,
+        "billed_charge_local_micro": 9420000
+      },
+      {
+        "id": "pt08ex",
+        "line_item_id": "li21ex",
+        "tweet_id": "1000000000000001017",
+        "media": "image",
+        "approval_status": "ACCEPTED",
+        "entity_status": "ACTIVE",
+        "impressions": 36000,
+        "engagements": 703,
+        "link_clicks": 317,
+        "billed_charge_local_micro": 484370000,
+        "conversions": {
+          "conversion_site_visits": {
+            "metric": 174,
+            "post_engagement": 136,
+            "post_view": 38,
+            "assisted": 21,
+            "sale_amount": 0
+          },
+          "conversion_sign_ups": {
+            "metric": 13,
+            "post_engagement": 10,
+            "post_view": 3,
+            "assisted": 2,
+            "sale_amount": 0
+          }
+        }
+      },
+      {
+        "id": "pt09ex",
+        "line_item_id": "li21ex",
+        "tweet_id": "1000000000000001018",
+        "media": "image",
+        "approval_status": "ACCEPTED",
+        "entity_status": "ACTIVE",
+        "impressions": 27000,
+        "engagements": 474,
+        "link_clicks": 211,
+        "billed_charge_local_micro": 363290000,
+        "conversions": {
+          "conversion_site_visits": {
+            "metric": 116,
+            "post_engagement": 90,
+            "post_view": 26,
+            "assisted": 14,
+            "sale_amount": 0
+          },
+          "conversion_sign_ups": {
+            "metric": 8,
+            "post_engagement": 6,
+            "post_view": 2,
+            "assisted": 1,
+            "sale_amount": 0
+          }
+        }
+      },
+      {
+        "id": "pt10ex",
+        "line_item_id": "li31ex",
+        "tweet_id": "1000000000000001015",
+        "media": "video",
+        "approval_status": "ACCEPTED",
+        "entity_status": "ACTIVE",
+        "impressions": 33000,
+        "engagements": 493,
+        "link_clicks": 64,
+        "billed_charge_local_micro": 234700000,
+        "video_total_views": 8250,
+        "video_content_starts": 9900,
+        "video_views_25": 5743,
+        "video_views_50": 4059,
+        "video_views_75": 2970,
+        "video_views_100": 2177,
+        "video_6s_views": 3566,
+        "video_15s_views": 2477
+      },
+      {
+        "id": "pt11ex",
+        "line_item_id": "li31ex",
+        "tweet_id": "1000000000000001016",
+        "media": "video",
+        "approval_status": "ACCEPTED",
+        "entity_status": "ACTIVE",
+        "impressions": 27000,
+        "engagements": 431,
+        "link_clicks": 47,
+        "billed_charge_local_micro": 192020000,
+        "video_total_views": 7020,
+        "video_content_starts": 8370,
+        "video_views_25": 5524,
+        "video_views_50": 4354,
+        "video_views_75": 3600,
+        "video_views_100": 3013,
+        "video_6s_views": 3934,
+        "video_15s_views": 2931
+      },
+      {
+        "id": "pt12ex",
+        "line_item_id": "li22ex",
+        "tweet_id": "1000000000000001017",
+        "media": "image",
+        "approval_status": "ACCEPTED",
+        "entity_status": "ACTIVE",
+        "impressions": 3600,
+        "engagements": 51,
+        "link_clicks": 29,
+        "billed_charge_local_micro": 57780000,
+        "conversions": {
+          "conversion_sign_ups": {
+            "metric": 0,
+            "post_engagement": 0,
+            "post_view": 0,
+            "assisted": 0,
+            "sale_amount": 0
+          }
+        }
+      }
+    ],
+    "line_items_30d": [
+      {
+        "line_item_id": "li11ex",
+        "impressions": 61500,
+        "engagements": 1215,
+        "link_clicks": 503,
+        "billed_charge_local_micro": 777560000
+      },
+      {
+        "line_item_id": "li12ex",
+        "impressions": 22500,
+        "engagements": 371,
+        "link_clicks": 153,
+        "billed_charge_local_micro": 514560000
+      },
+      {
+        "line_item_id": "li13ex",
+        "impressions": 15760,
+        "engagements": 355,
+        "link_clicks": 151,
+        "billed_charge_local_micro": 180940000
+      },
+      {
+        "line_item_id": "li21ex",
+        "impressions": 63000,
+        "engagements": 1177,
+        "link_clicks": 528,
+        "billed_charge_local_micro": 847660000,
+        "conversions": {
+          "conversion_site_visits": {
+            "metric": 290,
+            "post_engagement": 226,
+            "post_view": 64,
+            "assisted": 35,
+            "sale_amount": 0
+          },
+          "conversion_sign_ups": {
+            "metric": 21,
+            "post_engagement": 16,
+            "post_view": 5,
+            "assisted": 3,
+            "sale_amount": 0
+          }
+        }
+      },
+      {
+        "line_item_id": "li22ex",
+        "impressions": 3600,
+        "engagements": 51,
+        "link_clicks": 29,
+        "billed_charge_local_micro": 57780000,
+        "conversions": {
+          "conversion_sign_ups": {
+            "metric": 0,
+            "post_engagement": 0,
+            "post_view": 0,
+            "assisted": 0,
+            "sale_amount": 0
+          }
+        }
+      },
+      {
+        "line_item_id": "li31ex",
+        "impressions": 60000,
+        "engagements": 924,
+        "link_clicks": 111,
+        "billed_charge_local_micro": 426720000,
+        "video_total_views": 15270,
+        "video_content_starts": 18270,
+        "video_views_25": 11267,
+        "video_views_50": 8413,
+        "video_views_75": 6570,
+        "video_views_100": 5190,
+        "video_6s_views": 7500,
+        "video_15s_views": 5408
+      }
+    ],
+    "campaigns_by_window": [
+      {
+        "campaign_id": "c01ex",
+        "window": "W1",
+        "impressions": 23100,
+        "engagements": 494,
+        "link_clicks": 205,
+        "billed_charge_local_micro": 313600000
+      },
+      {
+        "campaign_id": "c01ex",
+        "window": "W2",
+        "impressions": 23100,
+        "engagements": 470,
+        "link_clicks": 195,
+        "billed_charge_local_micro": 329280000
+      },
+      {
+        "campaign_id": "c01ex",
+        "window": "W3",
+        "impressions": 23100,
+        "engagements": 438,
+        "link_clicks": 182,
+        "billed_charge_local_micro": 348100000
+      },
+      {
+        "campaign_id": "c01ex",
+        "window": "W4",
+        "impressions": 23100,
+        "engagements": 411,
+        "link_clicks": 171,
+        "billed_charge_local_micro": 366930000
+      },
+      {
+        "campaign_id": "c01ex",
+        "window": "W5",
+        "impressions": 7360,
+        "engagements": 128,
+        "link_clicks": 54,
+        "billed_charge_local_micro": 115150000
+      },
+      {
+        "campaign_id": "c02ex",
+        "window": "W1",
+        "impressions": 14700,
+        "engagements": 281,
+        "link_clicks": 126,
+        "billed_charge_local_micro": 191100000
+      },
+      {
+        "campaign_id": "c02ex",
+        "window": "W2",
+        "impressions": 14700,
+        "engagements": 278,
+        "link_clicks": 125,
+        "billed_charge_local_micro": 194920000
+      },
+      {
+        "campaign_id": "c02ex",
+        "window": "W3",
+        "impressions": 14700,
+        "engagements": 273,
+        "link_clicks": 122,
+        "billed_charge_local_micro": 198750000
+      },
+      {
+        "campaign_id": "c02ex",
+        "window": "W4",
+        "impressions": 17500,
+        "engagements": 308,
+        "link_clicks": 143,
+        "billed_charge_local_micro": 249410000
+      },
+      {
+        "campaign_id": "c02ex",
+        "window": "W5",
+        "impressions": 5000,
+        "engagements": 88,
+        "link_clicks": 41,
+        "billed_charge_local_micro": 71260000
+      },
+      {
+        "campaign_id": "c03ex",
+        "window": "W1",
+        "impressions": 14000,
+        "engagements": 217,
+        "link_clicks": 26,
+        "billed_charge_local_micro": 98000000
+      },
+      {
+        "campaign_id": "c03ex",
+        "window": "W2",
+        "impressions": 14000,
+        "engagements": 217,
+        "link_clicks": 26,
+        "billed_charge_local_micro": 98980000
+      },
+      {
+        "campaign_id": "c03ex",
+        "window": "W3",
+        "impressions": 14000,
+        "engagements": 214,
+        "link_clicks": 26,
+        "billed_charge_local_micro": 99960000
+      },
+      {
+        "campaign_id": "c03ex",
+        "window": "W4",
+        "impressions": 14000,
+        "engagements": 214,
+        "link_clicks": 26,
+        "billed_charge_local_micro": 100940000
+      },
+      {
+        "campaign_id": "c03ex",
+        "window": "W5",
+        "impressions": 4000,
+        "engagements": 62,
+        "link_clicks": 7,
+        "billed_charge_local_micro": 28840000
+      }
+    ],
+    "funding_instrument_30d": {
+      "id": "f1e2d3",
+      "billed_charge_local_micro": 2805220000
+    },
+    "build_lookups": {
+      "location": {
+        "name": "United States",
+        "targeting_value": "96683cc9126741d1"
+      },
+      "language": {
+        "name": "English",
+        "targeting_value": "en"
+      },
+      "conversation_topics": [
+        {
+          "name": "Fitness - Personal training",
+          "targeting_value": "f3m",
+          "page": 4
+        },
+        {
+          "name": "Fitness - Group fitness classes",
+          "targeting_value": "f8q",
+          "page": 6
+        }
+      ],
+      "conversation_pages_read": 6,
+      "interests": [
+        {
+          "name": "Health / Exercise and fitness",
+          "targeting_value": "1900000000000000027"
+        }
+      ]
+    }
+  }
+}

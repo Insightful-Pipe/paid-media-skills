@@ -1,0 +1,306 @@
+{
+  "note": "Example data: an invented online e-bike store, with invented DSPs, publishers and accounts, not real businesses. Every number in expected_output.json follows from this input.",
+  "request": "Hey Claude, I just added the \"programmatic-display-planner\" skill. Review our September DSP pilot from this export, then plan the holiday flight: $36,000 from November 3 to December 14, US only, goal is online orders. Here are the three DSPs we were quoted.",
+  "business": {
+    "name": "Halvarra E-Bikes",
+    "site": "https://www.halvarra.example",
+    "sells": "commuter and cargo e-bikes sold online, average order about $1,850",
+    "buyer": "US adults buying an e-bike for commuting or family errands",
+    "currency": "USD",
+    "time_zone": "America/Chicago"
+  },
+  "run_date": "2026-10-28",
+  "brief": {
+    "goal": "conversions",
+    "budget": 36000,
+    "flight_start": "2026-11-03",
+    "flight_end": "2026-12-14",
+    "weeks": 6,
+    "geo": "United States",
+    "target_cpa": null,
+    "creative": {
+      "display_sizes": [
+        "300x250",
+        "728x90",
+        "160x600",
+        "320x50",
+        "300x600"
+      ],
+      "video_lengths_s": [
+        6,
+        15
+      ]
+    },
+    "crm_customers": 6400,
+    "brand_safety_avoid": [
+      "news about accidents and injuries",
+      "adult",
+      "illegal drugs",
+      "hate speech"
+    ],
+    "dsp_pixel_match_share": 0.45,
+    "dsp_pixel_match_share_source": "DSP A's pixel report for September: share of site users it could match"
+  },
+  "plan_settings": {
+    "note": "the user kept every default",
+    "retargeting_share": 0.25,
+    "test_reserve_share": 0.1,
+    "prospecting_split": {
+      "pmp_display": 0.5,
+      "oa_allowlist_display": 0.3,
+      "pmp_video": 0.2
+    },
+    "weekly_cap": {
+      "prospecting": 5,
+      "retargeting": 10
+    },
+    "viewability_target": 0.7,
+    "min_measured_share": 0.5,
+    "ivt_ceiling": 0.02,
+    "completion_target": 0.7,
+    "readable_line_cpas": 20,
+    "review_min_spend_cpas": 3
+  },
+  "dsp_options": [
+    {
+      "name": "DSP A",
+      "service": "self-serve",
+      "monthly_minimum": 5000,
+      "platform_fee_share": 0.15,
+      "addon_cpm": {
+        "verification": 0.15,
+        "contextual_data": 0.4
+      },
+      "deal_types": [
+        "open auction",
+        "private marketplace",
+        "preferred deal",
+        "programmatic guaranteed"
+      ],
+      "pre_bid_ivt_and_viewability": true,
+      "buys_on_viewable_impressions": false,
+      "forecast_media_cpm": {
+        "retargeting_oa_allowlist": 5.0,
+        "pmp_display": 5.0,
+        "oa_allowlist_display": 2.8,
+        "pmp_video": 10.0
+      },
+      "forecast_source": "DSP A account rep, US, November to December"
+    },
+    {
+      "name": "DSP B",
+      "service": "managed",
+      "monthly_minimum": 30000,
+      "platform_fee_share": 0.25,
+      "addon_cpm": {
+        "verification": 0.1,
+        "contextual_data": 0.3
+      },
+      "deal_types": [
+        "open auction",
+        "private marketplace",
+        "programmatic guaranteed"
+      ],
+      "pre_bid_ivt_and_viewability": true,
+      "buys_on_viewable_impressions": true
+    },
+    {
+      "name": "DSP C",
+      "service": "self-serve",
+      "monthly_minimum": 1000,
+      "platform_fee_share": 0.12,
+      "addon_cpm": {
+        "verification": 0.2,
+        "contextual_data": 0.5
+      },
+      "deal_types": [
+        "open auction"
+      ],
+      "pre_bid_ivt_and_viewability": false,
+      "buys_on_viewable_impressions": false
+    }
+  ],
+  "baselines": {
+    "window": "2026-07-30 to 2026-10-27 (90 days)",
+    "google_ads_campaigns": [
+      {
+        "channel_type": "SEARCH",
+        "name": "Brand | Search",
+        "impressions": 61000,
+        "clicks": 9800,
+        "cost": 9000.0,
+        "conversions": 150.0
+      },
+      {
+        "channel_type": "SEARCH",
+        "name": "Non-brand | Search",
+        "impressions": 410000,
+        "clicks": 21500,
+        "cost": 48000.0,
+        "conversions": 140.0
+      },
+      {
+        "channel_type": "PERFORMANCE_MAX",
+        "name": "PMax | All bikes",
+        "impressions": 2900000,
+        "clicks": 26000,
+        "cost": 30000.0,
+        "conversions": 95.0
+      },
+      {
+        "channel_type": "DISPLAY",
+        "name": "Display | Remarketing",
+        "impressions": 2400000,
+        "clicks": 3100,
+        "cost": 6000.0,
+        "conversions": 14.0,
+        "active_view_measurable_impressions": 2050000,
+        "active_view_impressions": 1271000
+      }
+    ],
+    "meta_account": {
+      "spend": 54000.0,
+      "impressions": 3600000,
+      "inline_link_clicks": 36000,
+      "purchases": 120
+    },
+    "ga4_users_last_30_days": {
+      "window": "2026-09-28 to 2026-10-27",
+      "all_users": 41200,
+      "by_event": {
+        "view_item": 18900,
+        "add_to_cart": 3050,
+        "begin_checkout": 1180,
+        "purchase": 212
+      }
+    }
+  },
+  "pilot": {
+    "dsp": "DSP A",
+    "window": "2026-09-01 to 2026-09-28 (4 weeks)",
+    "weeks": 4,
+    "spend_is": "total cost including platform fee and add-ons",
+    "lines": [
+      {
+        "line": "RT-OA-allowlist",
+        "purpose": "conversions",
+        "audience": "site visitors, last 30 days, buyers excluded",
+        "deal_type": "open auction",
+        "inventory": "allow list of 400 domains and apps",
+        "weekly_cap": 10,
+        "spend": 2400.0,
+        "impressions": 380000,
+        "measured": 350000,
+        "viewable": 266000,
+        "ivt": 3800,
+        "clicks": 950,
+        "ct_conversions": 11,
+        "vt_conversions": 19,
+        "reach": 31000,
+        "ga4_sessions": 870,
+        "ga4_engaged_sessions": 560,
+        "ga4_purchases": 10
+      },
+      {
+        "line": "PR-OA-open",
+        "purpose": "conversions",
+        "audience": "in-market cycling segment (third party)",
+        "deal_type": "open auction",
+        "inventory": "run of exchange, no allow list",
+        "weekly_cap": 5,
+        "spend": 3000.0,
+        "impressions": 1050000,
+        "measured": 900000,
+        "viewable": 405000,
+        "ivt": 46200,
+        "clicks": 2900,
+        "ct_conversions": 2,
+        "vt_conversions": 31,
+        "reach": 40000,
+        "ga4_sessions": 980,
+        "ga4_engaged_sessions": 210,
+        "ga4_purchases": 1
+      },
+      {
+        "line": "PR-PMP-context",
+        "purpose": "conversions",
+        "audience": "contextual: cycling, commuting, outdoor family",
+        "deal_type": "private marketplace",
+        "inventory": "curated cycling and outdoor publishers",
+        "weekly_cap": 5,
+        "spend": 2600.0,
+        "impressions": 398000,
+        "measured": 372000,
+        "viewable": 290160,
+        "ivt": 2400,
+        "clicks": 760,
+        "ct_conversions": 10,
+        "vt_conversions": 9,
+        "reach": 95000,
+        "ga4_sessions": 690,
+        "ga4_engaged_sessions": 470,
+        "ga4_purchases": 10
+      },
+      {
+        "line": "PR-PMP-video15",
+        "purpose": "awareness",
+        "audience": "contextual: cycling and commuting video",
+        "deal_type": "private marketplace",
+        "inventory": "in-stream video on curated publishers",
+        "weekly_cap": 5,
+        "spend": 1500.0,
+        "impressions": 120000,
+        "measured": 114000,
+        "viewable": 85500,
+        "ivt": 600,
+        "video_starts": 120000,
+        "video_completes": 79200,
+        "clicks": 140,
+        "ct_conversions": 0,
+        "vt_conversions": 6,
+        "reach": 52000,
+        "ga4_sessions": 118,
+        "ga4_engaged_sessions": 71,
+        "ga4_purchases": 0
+      }
+    ],
+    "top_domains_pr_oa_open": [
+      {
+        "domain": "dailyquizfun.example",
+        "spend": 520.0,
+        "impressions": 236000,
+        "verification_flag": "made for advertising"
+      },
+      {
+        "domain": "slideshowworld.example",
+        "spend": 410.0,
+        "impressions": 171000,
+        "verification_flag": "made for advertising"
+      },
+      {
+        "domain": "recipesinfinite.example",
+        "spend": 210.0,
+        "impressions": 88000,
+        "verification_flag": "made for advertising"
+      },
+      {
+        "domain": "commutergear.example",
+        "spend": 360.0,
+        "impressions": 92000,
+        "verification_flag": null
+      },
+      {
+        "domain": "citycyclist.example",
+        "spend": 300.0,
+        "impressions": 76000,
+        "verification_flag": null
+      },
+      {
+        "domain": "other domains (1,140)",
+        "spend": 1200.0,
+        "impressions": 387000,
+        "verification_flag": "not reported"
+      }
+    ]
+  }
+}
